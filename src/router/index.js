@@ -1,12 +1,26 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import HelloWorld from '@/components/HelloWorld.vue';
+
+// Import components for different routes
+import HomePage from '../views/HomePage.vue';
+import StoriesPage from '../views/StoriesPage.vue';
+import SagaPage from '../views/SagaPage.vue';
 
 const routes = [
     {
         path: '/',
         name: 'Home',
-        component: HelloWorld
+        component: HomePage
     },
+    {
+        path: '/stories',
+        name: 'Stories',
+        component: StoriesPage
+    },
+    {
+        path: '/sagas/:id',
+        name: 'Saga',
+        component: SagaPage
+    }
 ];
 
 const router = createRouter({
