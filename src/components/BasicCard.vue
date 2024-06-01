@@ -47,6 +47,7 @@ export default {
   },
   setup(props) {
     const getImage = (key, isSaga) => {
+        console.log(key)
         const imageSrc = `${isSaga ? "sagas": "stories"}/${key}.png`;
         return images[imageSrc] || images['sagas/default.png'];
     }
@@ -54,7 +55,6 @@ export default {
     const linkType = ref(props.linkType);
     const { link } = useYoutubeLink(youtube, linkType);
 
-    console.log({entry: props.entry});
     const imageSrc = computed(() => getImage(props.entry.key, props.isSaga));
 
     return { link, imageSrc };
@@ -64,8 +64,7 @@ export default {
 
 <style scoped>
 .basic-card {
-  border: 3px solid var(--primary-color);
-  border-radius: 15px;
+  border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   width: 200px;

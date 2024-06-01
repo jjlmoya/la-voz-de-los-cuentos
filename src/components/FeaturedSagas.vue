@@ -26,7 +26,7 @@ export default {
 
     const sortedSagas = computed(() => {
       return Object.entries(sagas.value)
-        .map(([key, data]) => ({ key, data: {...data, key} }))
+        .map(([key, data]) => ({ key, data }))
         .sort((a, b) => a.data.order - b.data.order);
     });
 

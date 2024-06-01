@@ -5,14 +5,12 @@ export const LinkType = {
     VIDEO: 'VIDEO',
 };
 
-export default function useYoutubeLink(id, linkType) {
+export default function useYoutubeLink(id, linkType){
     const link = ref('');
-
-    if (linkType.value === LinkType.PLAYLIST) {
-        link.value = `https://www.youtube.com/playlist?list=${id.value}`;
-    } else if (linkType.value === LinkType.VIDEO) {
-        link.value = `https://www.youtube.com/watch?v=${id.value}`;
+    if (linkType.value === LinkType.PLAYLIST || linkType === LinkType.PLAYLIST) {
+        link.value = `https://www.youtube.com/playlist?list=${id.value || id}`;
+    } else if (linkType.value === LinkType.VIDEO || linkType === LinkType.VIDEO) {
+        link.value = `https://www.youtube.com/watch?v=${id.value || id}`;
     }
-
     return { link };
 }

@@ -1,37 +1,65 @@
-{
-  "relojmedio": {
-    "name": "RelojMedio", 
-    "youtube": "PLzsS-UEHQNA80toIwj7OE-h80Sa9qWPO7",
-    "order": 1
-  },
-  "sdg": {
-    "name": "SDG", 
-    "youtube": "PLzsS-UEHQNA8aUGFmoDtcG12NXmsCVbOz",
-    "order": 2
-  },
-  "llamarada": {
-    "name": "Llamarada", 
-    "youtube": "PLzsS-UEHQNA8uSXzhvoVvIjDMwnJMEeLE",
-    "order": 3
-  },
-  "carlota": {
-    "name": "Carlota Cucaracha", 
-    "youtube": "PLzsS-UEHQNA-peAF_B8s9raYAm1vq9889",
-    "order": 4
-  },
-  "finalizador": {
-    "name": "El Finalizador", 
-    "youtube": "PLzsS-UEHQNA-VElQvTM-9l2zmHWWfmAjw",
-    "order": 5
-  },
-  "458": {
-    "name": "458", 
+[
+  {
+    "order": "1",
+    "name": "458",
+    "key": "458",
     "youtube": "PLzsS-UEHQNA9pXayeQsa5sFvsFux57zQ5",
-    "order": 6
+    "enlace": "https://www.youtube.com/playlist?list=PLzsS-UEHQNA9pXayeQsa5sFvsFux57zQ5"
   },
-  "luna": {
-    "name": "Luna y la Física", 
+  {
+    "order": "2",
+    "name": "SDG",
+    "key": "sdg",
+    "youtube": "PLzsS-UEHQNA8aUGFmoDtcG12NXmsCVbOz",
+    "enlace": "https://www.youtube.com/playlist?list=PLzsS-UEHQNA8aUGFmoDtcG12NXmsCVbOz"
+  },
+  {
+    "order": "3",
+    "name": "Llamarada",
+    "key": "llamarada",
+    "youtube": "PLzsS-UEHQNA8uSXzhvoVvIjDMwnJMEeLE",
+    "enlace": "https://www.youtube.com/playlist?list=PLzsS-UEHQNA8uSXzhvoVvIjDMwnJMEeLE"
+  },
+  {
+    "order": "4",
+    "name": "Carlota Cucaracha",
+    "key": "carlota-cucaracha",
+    "youtube": "PLzsS-UEHQNA-peAF_B8s9raYAm1vq9889",
+    "enlace": "https://www.youtube.com/playlist?list=PLzsS-UEHQNA-peAF_B8s9raYAm1vq9889"
+  },
+  {
+    "order": "5",
+    "name": "El Finalizador",
+    "key": "el-finalizador",
+    "youtube": "PLzsS-UEHQNA-VElQvTM-9l2zmHWWfmAjw",
+    "enlace": "https://www.youtube.com/playlist?list=PLzsS-UEHQNA-VElQvTM-9l2zmHWWfmAjw"
+  },
+  {
+    "order": "6",
+    "name": "Luna y la física",
+    "key": "luna-y-la-fisica",
     "youtube": "PLzsS-UEHQNA-orn2hgsCP31wv69x7iDAg",
-    "order": 7
+    "enlace": "https://www.youtube.com/playlist?list=PLzsS-UEHQNA-orn2hgsCP31wv69x7iDAg"
+  },
+  {
+    "order": "7",
+    "name": "Relojmedio",
+    "key": "relojmedio",
+    "youtube": "PLzsS-UEHQNA80toIwj7OE-h80Sa9qWPO7",
+    "enlace": "https://www.youtube.com/playlist?list=PLzsS-UEHQNA80toIwj7OE-h80Sa9qWPO7"
+  },
+  {
+    "order": "8",
+    "name": "Paco el Cacahuete Soñador",
+    "key": "paco-el-cacahuete-sonador",
+    "youtube": "PLzsS-UEHQNA_zKSrlDzCHgMMJdCT32uzZ",
+    "enlace": "https://www.youtube.com/playlist?list=PLzsS-UEHQNA_zKSrlDzCHgMMJdCT32uzZ"
+  },
+  {
+    "order": "9",
+    "name": "El Tragaluces",
+    "key": "el-tragaluces",
+    "youtube": "PLzsS-UEHQNA8c77mOZAOwVVV85eKyOssV",
+    "enlace": "https://www.youtube.com/playlist?list=PLzsS-UEHQNA8c77mOZAOwVVV85eKyOssV"
   }
-}
+]

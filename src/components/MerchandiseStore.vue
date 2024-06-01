@@ -1,6 +1,6 @@
 <template>
   <section class="merchandise-store">
-    <h2>Merchandise Store</h2>
+    <h2></h2>
     <!-- Teaser content for merchandise store -->
   </section>
 </template>

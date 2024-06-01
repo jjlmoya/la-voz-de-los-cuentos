@@ -56,7 +56,6 @@ export default {
 }
 .stories-list {
   display: flex;
-  gap: 1rem;
   overflow-x: auto;
   padding-bottom: 1rem;
 }
