@@ -8,6 +8,7 @@
     <LatestSagas />
     <MerchandiseTeaser />
     <SelectionBannerSagas />
+    <MainFooter />
 
   </div>
 </template>
@@ -20,6 +21,7 @@ import HeroBanner from '@/components/HeroBanner.vue';
 import FeaturedStories from '@/components/FeaturedStories.vue';
 import LatestSagas from '@/components/FeaturedSagas.vue';
 import MerchandiseTeaser from '@/components/MerchandiseStore.vue';
+import MainFooter from '@/components/MainFooter.vue';
 
 export default {
   name: 'HomePage',
@@ -30,7 +32,8 @@ export default {
     LatestSagas,
     MerchandiseTeaser,
     SelectionBannerSagas,
-    SelectionBannerStories
+    SelectionBannerStories,
+    MainFooter
   },
 };
 </script>

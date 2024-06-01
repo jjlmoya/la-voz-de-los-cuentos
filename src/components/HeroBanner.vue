@@ -70,10 +70,10 @@ export default {
 /* Media query para pantallas móviles (hasta 300px) */
 @media (max-width: 900px) {
     .hero-banner .parallax-layer.owl img {
-        object-fit: contain;
-        width: 300px;
-        right: calc(50% - 150px);
-        height: auto;
+      object-fit: contain;
+      width: 460px;
+      right: calc(50% - 220px);
+      height: auto;
     }
 }
 

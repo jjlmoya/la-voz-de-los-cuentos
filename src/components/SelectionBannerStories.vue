@@ -29,9 +29,7 @@
             <h2 class="text-secondary">{{ selectedStory.name }}</h2>
             <div class="button-group">
               <button @click="retryRecommendation" class="retry-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                  <path d="M12 2a10 10 0 0 0-10 10h2a8 8 0 1 1 8 8v-3l-5 5 5 5v-3a10 10 0 0 0 0-20z"/>
-                </svg>
+                <img src="@/assets/icons/retry.svg" alt="retry">
               </button>
               <a :href="youtubeLink.value" target="_blank" class="play-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -168,7 +166,7 @@ export default {
   flex-direction: column;
 }
 
-.story-banner img {
+.story-banner .image-container img {
   width: 250px;
   height: 250px;
   border-radius: 10px 0 0px 10px;
@@ -222,7 +220,6 @@ export default {
 .retry-btn svg, .play-btn svg {
   width: 24px;
   height: 24px;
-  fill: white;
 }
 
 .button-group {
