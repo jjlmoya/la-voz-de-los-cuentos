@@ -5,7 +5,7 @@
     </h2>
     <div class="stories-list">
       <BasicCard
-       linkType="PLAYLIST" 
+       linkType="VIDEO" 
        v-for="story in sortedstories" 
        :key="story.key" 
        :entry="story.data" />
