@@ -46,13 +46,17 @@ export default {
       }
 
       try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbz6dcHDgsuJzmVmE4iI6zk8YrR33n2JvhIAD0ZAfleEATHQ-HPpi6w-lpk7d_n1f_6l/exec', {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbyQQWpj1xASWGshNc0lKq4mfNAEH0HYeK5RTT3O-4xE2_wDZEMiho7mIVwjHbJD2Rmz/exec', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({ email: this.email })
         });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
 
         const result = await response.json();
         if (result.result === 'success') {
