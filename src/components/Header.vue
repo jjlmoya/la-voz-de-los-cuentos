@@ -53,7 +53,7 @@ export default {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.1); /* Fondo transparente */
+  background-color: rgba(255, 255, 255, 0.6); /* Fondo transparente */
   padding: 1rem;
   z-index: 10; /* Para asegurarse de que esté encima del hero banner */
   backdrop-filter: blur(10px); /* Opcional: Añade un desenfoque para mejor legibilidad */
@@ -82,7 +82,7 @@ export default {
   content: '';
   width: 16px;
   height: 2px;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   position: absolute;
   top: 0;
 }
@@ -108,7 +108,7 @@ export default {
   width: 100vw;
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: center; /* Centra los elementos del menú */
 }
 .main-header__nav-list--open {
@@ -127,8 +127,8 @@ export default {
 }
 .main-header__nav-link {
   text-decoration: none;
-  color: var(--primary-color);
-  font-weight: 600;
+  color: var(--secondary-color);
+  font-weight: 500;
 }
 .main-header__nav-link:hover {
   color: var(--secondary-color);

@@ -2,10 +2,13 @@
   <div class="hero-banner">
     <div class="parallax">
       <div class="parallax-layer sky" id="layer-back">
-        <img src="@/assets/owl-bg.webp" alt="Background">
+        <img src="@/assets/owl-bg.png" alt="Background">
       </div>
       <div class="parallax-layer forest" id="layer-middle">
         <img src="@/assets/owl-layer.png" alt="Middle Layer">
+      </div>
+       <div class="parallax-layer title" id="layer-middle">
+        <img src="@/assets/title.png" alt="Top Layer">
       </div>
       <div class="parallax-layer owl" id="layer-front">
         <img src="@/assets/owl.png" alt="Front Layer">
@@ -74,12 +77,42 @@ export default {
     }
 }
 
+
+
 /* Media query para pantallas de escritorio (a partir de 600px) */
 @media (min-width: 900px) {
     .hero-banner .parallax-layer.owl img {
         object-fit: contain;
         right: calc(50% - 300px);
         width: 600px;
+        height: auto;
+
+    }
+}
+
+.hero-banner .parallax-layer.title img {
+    position: absolute;
+    top: 0;
+}
+
+/* Media query para pantallas móviles (hasta 300px) */
+@media (max-width: 900px) {
+    .hero-banner .parallax-layer.title img {
+        object-fit: contain;
+        width: 400px;
+        right: calc(50% - 200px);
+        height: auto;
+    }
+}
+
+
+
+/* Media query para pantallas de escritorio (a partir de 600px) */
+@media (min-width: 900px) {
+    .hero-banner .parallax-layer.title img {
+        object-fit: contain;
+        right: calc(50% - 200px);
+        width: 400px;
         height: auto;
 
     }
