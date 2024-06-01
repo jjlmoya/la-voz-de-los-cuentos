@@ -129,6 +129,9 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+* {
+        box-sizing: border-box;
+}
 
 /* Custom Reset */
 /* Add custom reset styles here */

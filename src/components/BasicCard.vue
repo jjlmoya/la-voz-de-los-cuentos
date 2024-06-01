@@ -93,14 +93,15 @@ export default {
   bottom: 0;
   width: 100%;
   background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
-  color: var(--primary-color);
+  backdrop-filter: blur(8px);
+  color: var(--secondary-color);
   text-align: center;
-  padding: 0.5rem 0;
+  padding: 8px;
 }
 .basic-info h3 {
+  width: 100%;
   font-size: 1.25rem;
-  font-weight: bold;
+  font-weight: 500;
   margin: 0;
 }
 </style>
