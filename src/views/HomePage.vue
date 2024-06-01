@@ -2,16 +2,20 @@
   <div>
     <Header />
     <HeroBanner />
-    <SelectionBanner />
+    <SelectionBannerStories />
+
     <FeaturedStories />
     <LatestSagas />
     <MerchandiseTeaser />
+    <SelectionBannerSagas />
+
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header.vue';
-import SelectionBanner from '@/components/SelectionBanner.vue';
+import SelectionBannerSagas from '@/components/SelectionBannerSagas.vue';
+import SelectionBannerStories from '@/components/SelectionBannerStories.vue';
 import HeroBanner from '@/components/HeroBanner.vue';
 import FeaturedStories from '@/components/FeaturedStories.vue';
 import LatestSagas from '@/components/FeaturedSagas.vue';
@@ -25,7 +29,8 @@ export default {
     FeaturedStories,
     LatestSagas,
     MerchandiseTeaser,
-    SelectionBanner
+    SelectionBannerSagas,
+    SelectionBannerStories
   },
 };
 </script>

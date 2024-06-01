@@ -47,14 +47,14 @@
 </template>
 
 <script>
-import sagas from '@/assets/sagas.json';
+import stories from '@/assets/stories.json';
 import useYoutubeLink, { LinkType } from '@/hooks/useYoutubeLink';
 import { ref } from 'vue';
 
 export default {
   data() {
     return {
-      sagas: sagas,
+      stories: stories,
       selectedStory: null,
       loading: false,
       currentRandomStory: null,
@@ -77,7 +77,7 @@ export default {
       this.loading = true;
       let count = 0;
       this.intervalId = setInterval(() => {
-        this.currentRandomStory = this.sagas[Math.floor(Math.random() * this.sagas.length)];
+        this.currentRandomStory = this.stories[Math.floor(Math.random() * this.stories.length)];
         count++;
         if (count >= 10) {
           clearInterval(this.intervalId);
@@ -87,8 +87,8 @@ export default {
     },
     finalizeSelection() {
       setTimeout(() => {
-        const randomIndex = Math.floor(Math.random() * this.sagas.length);
-        this.selectedStory = this.sagas[randomIndex];
+        const randomIndex = Math.floor(Math.random() * this.stories.length);
+        this.selectedStory = this.stories[randomIndex];
         this.currentRandomStory = null;
         this.loading = false;
 
@@ -106,14 +106,14 @@ export default {
     },
     getImageSrc(key) {
       try {
-        return require(`@/assets/sagas/${key}.png`);
+        return require(`@/assets/stories/${key}.png`);
       } catch (e) {
-        return require('@/assets/sagas/default.png');
+        return require('@/assets/stories/default.png');
       }
     },
     getRandomStory() {
-      const randomIndex = Math.floor(Math.random() * this.sagas.length);
-      return this.sagas[randomIndex];
+      const randomIndex = Math.floor(Math.random() * this.stories.length);
+      return this.stories[randomIndex];
     }
   },
 };
