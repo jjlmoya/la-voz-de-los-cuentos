@@ -145,6 +145,12 @@ export default {
   gap: 20px;
 }
 
+@media (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Cambia las columnas a una sola en móviles */
+  }
+}
+
 .grid-item {
   display: flex;
   justify-content: center;
