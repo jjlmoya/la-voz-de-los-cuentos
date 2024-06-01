@@ -18,7 +18,7 @@
             <img :src="getImageSrc(currentRandomStory?.key)" v-if="currentRandomStory" :alt="currentRandomStory?.name" class="story-image" />
           </div>
           <div class="grid-item">
-            <p>Buscando el cuento ideal...</p>
+            <p>Buscando...</p>
           </div>
         </div>
         <div v-else-if="selectedStory" class="grid-container">
@@ -150,7 +150,6 @@ export default {
     grid-template-columns: 1fr; /* Cambia las columnas a una sola en móviles */
   }
 }
-
 .grid-item {
   display: flex;
   justify-content: center;
@@ -167,9 +166,6 @@ export default {
 
 .loading {
   font-size: 1.5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .recommend-btn {
