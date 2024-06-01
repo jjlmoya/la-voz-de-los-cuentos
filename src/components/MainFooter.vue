@@ -3,7 +3,7 @@
     <img :src="require('@/assets/clouds.png')" alt="Clouds background" class="background-image">
     <div class="footer-spacing"></div>
     <ul>
-      <li><router-link to="/cuento-request">Pedirnos un cuento</router-link></li>
+      <li><router-link to="/cuento-request">Pedirnos un cuento 1</router-link></li>
       <li><router-link to="/unsubscribe">Eliminar de la newsletter</router-link></li>
     </ul>
     <div class="column">
