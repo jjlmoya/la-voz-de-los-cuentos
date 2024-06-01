@@ -94,7 +94,7 @@ export default {
 
         // Set YouTube link
 
-        const { link } = useYoutubeLink( this.selectedStory?.youtube, LinkType.PLAYLIST);
+        const { link } = useYoutubeLink( this.selectedStory?.youtube, LinkType.VIDEO);
         this.youtubeLink.value = link
 
       }, 200); // Short delay before final selection
