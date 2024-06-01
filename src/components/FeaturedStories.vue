@@ -1,15 +1,20 @@
-<!-- src/components/Featuredstories.vue -->
 <template>
   <section class="featured-stories">
-    <h2>Nuestros Cuentos</h2>
+    <h2> 
+        Descubre Nuestros <span class="stories-list-number">{{sortedstories.length }}</span> Cuentos
+    </h2>
     <div class="stories-list">
-      <BasicCard linkType="VIDEO" v-for="(saga, key) in stories" :key="key" :saga="saga" />
+      <BasicCard
+       linkType="PLAYLIST" 
+       v-for="story in sortedstories" 
+       :key="story.key" 
+       :entry="story.data" />
     </div>
   </section>
 </template>
 
 <script>
-import { ref, onMounted } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 import storiesData from '@/assets/stories.json';
 import BasicCard from '@/components/BasicCard.vue';
 
@@ -25,12 +30,19 @@ export default {
       stories.value = storiesData;
     });
 
+    const sortedstories = computed(() => {
+      return Object.entries(stories.value)
+        .map(([key, data]) => ({ key, data }))
+        .sort((a, b) => a.data.order - b.data.order);
+    });
+
     return {
-      stories
+      sortedstories
     };
   }
 };
 </script>
+
 
 <style scoped>
 .featured-stories {
@@ -47,5 +59,9 @@ export default {
   gap: 1rem;
   overflow-x: auto;
   padding-bottom: 1rem;
+}
+.stories-list-number {
+  color:var(--secondary-color);
+  font-weight: 500;
 }
 </style>

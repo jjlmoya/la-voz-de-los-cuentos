@@ -1,8 +1,8 @@
 <template>
   <section class="featured-sagas">
-    <h2>Nuestras Sagas</h2>
+    <h2> Descubre Nuestras <span class="sagas-list-number">{{sortedSagas.length }}</span> Sagas</h2>
     <div class="sagas-list">
-      <BasicCard linkType="PLAYLIST" v-for="saga in sortedSagas" :key="saga.key" :saga="saga.data" />
+      <BasicCard isSaga linkType="PLAYLIST" v-for="saga in sortedSagas" :key="saga.key" :entry="saga.data" />
     </div>
   </section>
 </template>
@@ -26,7 +26,7 @@ export default {
 
     const sortedSagas = computed(() => {
       return Object.entries(sagas.value)
-        .map(([key, data]) => ({ key, data }))
+        .map(([key, data]) => ({ key, data: {...data, key} }))
         .sort((a, b) => a.data.order - b.data.order);
     });
 
@@ -53,5 +53,9 @@ export default {
   gap: 1rem;
   overflow-x: auto;
   padding-bottom: 1rem;
+}
+.sagas-list-number {
+  color:var(--secondary-color);
+  font-weight: 500;
 }
 </style>

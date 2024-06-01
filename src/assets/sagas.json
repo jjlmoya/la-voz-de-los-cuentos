@@ -1,43 +1,36 @@
 {
   "relojmedio": {
     "name": "RelojMedio", 
-    "image": "relojmedio.png",
     "youtube": "PLzsS-UEHQNA80toIwj7OE-h80Sa9qWPO7",
     "order": 1
   },
   "sdg": {
     "name": "SDG", 
-    "image": "sdg.png",
     "youtube": "PLzsS-UEHQNA8aUGFmoDtcG12NXmsCVbOz",
     "order": 2
   },
   "llamarada": {
     "name": "Llamarada", 
-    "image": "llamarada.png",
     "youtube": "PLzsS-UEHQNA8uSXzhvoVvIjDMwnJMEeLE",
     "order": 3
   },
   "carlota": {
     "name": "Carlota Cucaracha", 
-    "image": "carlota.png",
     "youtube": "PLzsS-UEHQNA-peAF_B8s9raYAm1vq9889",
     "order": 4
   },
   "finalizador": {
     "name": "El Finalizador", 
-    "image": "finalizador.png",
     "youtube": "PLzsS-UEHQNA-VElQvTM-9l2zmHWWfmAjw",
     "order": 5
   },
   "458": {
     "name": "458", 
-    "image": "458.png",
     "youtube": "PLzsS-UEHQNA9pXayeQsa5sFvsFux57zQ5",
     "order": 6
   },
   "luna": {
     "name": "Luna y la Física", 
-    "image": "luna.png",
     "youtube": "PLzsS-UEHQNA-orn2hgsCP31wv69x7iDAg",
     "order": 7
   }

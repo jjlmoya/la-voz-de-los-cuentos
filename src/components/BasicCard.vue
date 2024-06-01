@@ -2,10 +2,12 @@
   <a :href="link" target="_blank">
     <div class="basic-card">
       <div class="basic-image">
-        <img :src="require(`@/assets/sagas/${saga.image}`)" :alt="saga.name" />
+        <img 
+          :src="imageSrc" 
+          :alt="entry.name" 
+        />
         <div class="basic-info">
-          <h3>{{ saga.name }}</h3>
-         
+          <h3>{{ entry.name }}</h3>
         </div>
       </div>
     </div>
@@ -13,13 +15,22 @@
 </template>
 
 <script>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import useYoutubeLink from '../hooks/useYoutubeLink';
+
+// Crear un contexto que cargue todas las imágenes dentro de @/assets
+const requireContext = require.context('@/assets', true, /\.png$/);
+
+// Crear un mapeo de las rutas de las imágenes
+const images = {};
+requireContext.keys().forEach((key) => {
+  images[key.replace('./', '')] = requireContext(key);
+});
 
 export default {
   name: 'BasicCard',
   props: {
-    saga: {
+    entry: {
       type: Object,
       required: true
     },
@@ -27,15 +38,26 @@ export default {
       type: String,
       required: true,
       default: 'VIDEO'
+    },
+    isSaga: {
+      type: Boolean,
+      required: false,
+      default: false
     }
   },
   setup(props) {
-    const youtube = ref(props.saga.youtube);
+    const getImage = (key, isSaga) => {
+        const imageSrc = `${isSaga ? "sagas": "stories"}/${key}.png`;
+        return images[imageSrc] || images['sagas/default.png'];
+    }
+    const youtube = ref(props.entry.youtube);
     const linkType = ref(props.linkType);
-    console.log({youtube})
     const { link } = useYoutubeLink(youtube, linkType);
 
-    return { link };
+    console.log({entry: props.entry});
+    const imageSrc = computed(() => getImage(props.entry.key, props.isSaga));
+
+    return { link, imageSrc };
   },
 };
 </script>
