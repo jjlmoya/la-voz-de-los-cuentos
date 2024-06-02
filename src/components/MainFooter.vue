@@ -3,7 +3,7 @@
     <img :src="require('@/assets/clouds.png')" alt="Clouds background" class="background-image">
     <div class="footer-spacing"></div>
     <ul>
-      <li><router-link to="/cuento-request">Pedirnos un cuento 2</router-link></li>
+      <li><router-link to="/cuento-request">Pedirnos un cuento</router-link></li>
       <li><router-link to="/unsubscribe">Eliminar de la newsletter</router-link></li>
     </ul>
     <div class="column">
@@ -46,13 +46,16 @@ export default {
       }
 
       try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbzJ1Rk7hh7x6sylJ9C3gjTLG-QkIPtN7Fz-oBPsd2Vw-iNBkMZJXfLKyNfuV8xwNdUK/exec', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ email: this.email })
-        });
+
+       const response =  await fetch('https://script.google.com/macros/s/AKfycbxzhVGv1wPrLwYU9Inq0Pbx9Bm76LBl8RX9oyWSdaEcaCWyschEyNgJbMNS8XUYj7Pi/exec', {
+        redirect: "follow",
+        method: "POST",
+        body: JSON.stringify({ email: this.email }),
+        headers: {
+            "Content-Type": "text/plain;charset=utf-8",
+            },
+        })
+
 
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
