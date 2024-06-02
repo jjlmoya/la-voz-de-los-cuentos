@@ -3,7 +3,7 @@
     <img :src="require('@/assets/clouds.png')" alt="Clouds background" class="background-image">
     <div class="footer-spacing"></div>
     <ul>
-      <li><router-link to="/cuento-request">Pedirnos un cuento 1</router-link></li>
+      <li><router-link to="/cuento-request">Pedirnos un cuento 2</router-link></li>
       <li><router-link to="/unsubscribe">Eliminar de la newsletter</router-link></li>
     </ul>
     <div class="column">
@@ -46,7 +46,7 @@ export default {
       }
 
       try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbzyMsUUpyZsHSKhwL0csdcvYz-AyP4P3FAfBXRnKHVaNRnmnKIT7fybPR7wKabVbPxh/exec', {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbzJ1Rk7hh7x6sylJ9C3gjTLG-QkIPtN7Fz-oBPsd2Vw-iNBkMZJXfLKyNfuV8xwNdUK/exec', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
