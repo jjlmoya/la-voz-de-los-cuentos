@@ -47,7 +47,6 @@ export default {
   },
   setup(props) {
     const getImage = (key, isSaga) => {
-        console.log(key)
         const imageSrc = `${isSaga ? "sagas": "stories"}/${key}.png`;
         return images[imageSrc] || images['sagas/default.png'];
     }

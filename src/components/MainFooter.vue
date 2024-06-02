@@ -7,18 +7,22 @@
       <li><router-link to="/unsubscribe">Eliminar de la newsletter</router-link></li>
     </ul>
     <div class="column">
-      <h2>¿Quieres que te enviemos cuentos nuevos?</h2>
-      <form @submit.prevent="subscribe" class="newsletter-form">
-        <input 
-          type="email" 
-          placeholder="Tu correo electrónico" 
-          v-model="email" 
-          class="input-email" 
-          :class="{ 'is-invalid': submitAttempted && emailError }" 
-        />
-        <span v-if="submitAttempted && emailError" class="error-message">Por favor, introduce un correo electrónico válido.</span>
-        <button type="submit" class="btn-submit" :disabled="emailError">Suscribirse</button>
-      </form>
+      <div v-if="!successMessage">
+        <h2>¿Quieres que te enviemos cuentos nuevos por correo?</h2>
+        <form @submit.prevent="subscribe" class="newsletter-form">
+            <input 
+            type="email" 
+            placeholder="Tu correo electrónico" 
+            v-model="email" 
+            class="input-email" 
+            :class="{ 'is-invalid': submitAttempted && emailError }" 
+            />
+            <span v-if="submitAttempted && emailError" class="error-message">Por favor, introduce un correo electrónico válido.</span>
+            <button type="submit" class="btn-submit">¡Sí!</button>
+        </form>
+      </div>
+      <p v-if="successMessage" class="success-message">{{ successMessage }}</p>
+      <p v-if="errorMessage" class="error-message">{{ errorMessage }}</p>
     </div>
   </footer>
 </template>
@@ -29,7 +33,9 @@ export default {
     return {
       email: '',
       emailError: false,
-      submitAttempted: false
+      submitAttempted: false,
+      successMessage: '',
+      errorMessage: ''
     };
   },
   methods: {
@@ -46,16 +52,14 @@ export default {
       }
 
       try {
-
-       const response =  await fetch('https://script.google.com/macros/s/AKfycbxzhVGv1wPrLwYU9Inq0Pbx9Bm76LBl8RX9oyWSdaEcaCWyschEyNgJbMNS8XUYj7Pi/exec', {
-        redirect: "follow",
-        method: "POST",
-        body: JSON.stringify({ email: this.email }),
-        headers: {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbxzhVGv1wPrLwYU9Inq0Pbx9Bm76LBl8RX9oyWSdaEcaCWyschEyNgJbMNS8XUYj7Pi/exec', {
+          redirect: "follow",
+          method: "POST",
+          body: JSON.stringify({ email: this.email }),
+          headers: {
             "Content-Type": "text/plain;charset=utf-8",
-            },
-        })
-
+          },
+        });
 
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -63,15 +67,16 @@ export default {
 
         const result = await response.json();
         if (result.result === 'success') {
-          console.log('Subscription successful');
-          alert('¡Suscripción exitosa!');
+          this.successMessage = '¡Te enviaremos los cuentos!';
+          this.errorMessage = '';
         } else {
-          console.error('Subscription failed');
-          alert('Hubo un problema con la suscripción.');
+          this.errorMessage = 'Hubo un problema con la suscripción.';
+          this.successMessage = '';
         }
       } catch (error) {
         console.error('Error:', error);
-        alert('Hubo un problema con la suscripción.');
+        this.errorMessage = 'Hubo un problema con la suscripción.';
+        this.successMessage = '';
       }
     }
   }
@@ -160,6 +165,14 @@ h2 {
 .error-message {
   color: red;
   font-size: 0.9rem;
+  padding-bottom: 16px;
+}
+
+.success-message {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin-top: 10px;
+  padding: 32px;
 }
 
 .btn-submit {
