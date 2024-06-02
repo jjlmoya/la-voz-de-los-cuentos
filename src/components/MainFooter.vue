@@ -3,8 +3,8 @@
     <img :src="require('@/assets/clouds.png')" alt="Clouds background" class="background-image">
     <div class="footer-spacing"></div>
     <ul>
-      <li><router-link to="/cuento-request">Pedirnos un cuento</router-link></li>
-      <li><router-link to="/unsubscribe">Eliminar de la newsletter</router-link></li>
+      <li><router-link to="/cuento-personalizado">Pedirnos un cuento único</router-link></li>
+      <li><router-link to="/quitarse">Eliminar envíos de cuentos mágicos</router-link></li>
     </ul>
     <div class="column">
       <div v-if="!successMessage">
@@ -21,7 +21,12 @@
             <button type="submit" class="btn-submit">¡Sí!</button>
         </form>
       </div>
-      <p v-if="successMessage" class="success-message">{{ successMessage }}</p>
+      <div v-if="successMessage" class="success-message">
+        <div class="image-container">
+          <p class="success-message">{{ successMessage }}</p>
+          <img class="image-success" src="@/assets/happy.png" alt="Imagen de despedida" />
+        </div>
+      </div>
       <p v-if="errorMessage" class="error-message">{{ errorMessage }}</p>
     </div>
   </footer>
@@ -101,7 +106,10 @@ export default {
   object-fit: contain;
   z-index: -1;
 }
-
+.image-success {
+    border-radius: 25px;
+    width: 50%;
+}
 .footer-spacing {
   height: 450px;
 }
@@ -171,8 +179,7 @@ h2 {
 .success-message {
   color: var(--primary-color);
   font-size: 1.3rem;
-  margin-top: 10px;
-  padding: 32px;
+  padding: 12px;
 }
 
 .btn-submit {

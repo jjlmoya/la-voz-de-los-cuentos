@@ -1,7 +1,7 @@
 <template>
   <div>
     <MainLayout>
-    <h1>Página de Saga</h1>
+    <h1>Pagina del Cuento</h1>
     <!-- Your saga page content here -->
     </MainLayout>
   </div>
@@ -11,7 +11,7 @@
 import MainLayout from '@/layout/MainLayout.vue';
 
 export default {
-  name: 'SagaPage',
+  name: 'StoryPage',
   components: {
     MainLayout
   }

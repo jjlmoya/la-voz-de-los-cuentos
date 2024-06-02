@@ -3,7 +3,13 @@ import { createRouter, createWebHistory } from 'vue-router';
 // Import components for different routes
 import HomePage from '../views/HomePage.vue';
 import StoriesPage from '../views/StoriesPage.vue';
+import StoryPage from '../views/StoryPage.vue';
+
 import SagaPage from '../views/SagaPage.vue';
+import SagasPage from '../views/SagasPage.vue';
+
+import CustomStoryPage from '../views/CustomStoryPage.vue';
+import UnfollowPage from '../views/UnfollowPage.vue';
 
 const routes = [
     {
@@ -12,14 +18,34 @@ const routes = [
         component: HomePage
     },
     {
-        path: '/stories',
+        path: '/cuentos/',
         name: 'Stories',
         component: StoriesPage
     },
     {
-        path: '/sagas/:id',
+        path: '/cuento/:id',
+        name: 'Story',
+        component: StoryPage
+    },
+    {
+        path: '/sagas/',
+        name: 'Sagas',
+        component: SagasPage
+    },
+    {
+        path: '/saga/:id',
         name: 'Saga',
         component: SagaPage
+    },
+    {
+        path: '/cuento-personalizado',
+        name: 'CustomStyory',
+        component: CustomStoryPage
+    },
+    {
+        path: '/quitarse',
+        name: 'UnfollowPage',
+        component: UnfollowPage
     }
 ];
 

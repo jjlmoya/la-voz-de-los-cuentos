@@ -1,22 +1,23 @@
 <template>
   <div>
-    <Menu />
-    <h1>Stories</h1>
-    <!-- Your stories page content here -->
+    <MainLayout>
+    <h1>Página de cuentos</h1>
+    <!-- Your saga page content here -->
+    </MainLayout>
   </div>
 </template>
 
 <script>
-import Menu from '@/components/Menu.vue';
+import MainLayout from '@/layout/MainLayout.vue';
 
 export default {
   name: 'StoriesPage',
   components: {
-    Menu
+    MainLayout
   }
 };
 </script>
 
 <style scoped>
-/* Your stories page styles here */
+/* Your saga page styles here */
 </style>

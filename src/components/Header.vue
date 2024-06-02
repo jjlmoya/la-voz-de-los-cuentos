@@ -12,7 +12,7 @@
         <li class="main-header__nav-item"><router-link class="main-header__nav-link" to="/" @click="closeMenu">Inicio</router-link></li>
         <li class="main-header__nav-item"><router-link class="main-header__nav-link" to="/cuentos" @click="closeMenu">Cuentos</router-link></li>
         <li class="main-header__nav-item"><router-link class="main-header__nav-link" to="/sagas" @click="closeMenu">Sagas</router-link></li>
-        <li class="main-header__nav-item"><router-link class="main-header__nav-link" to="/personalizado" @click="closeMenu">Cuento Personalizado</router-link></li>
+        <li class="main-header__nav-item"><router-link class="main-header__nav-link" to="/cuento-personalizado" @click="closeMenu">Cuento Personalizado</router-link></li>
         <li class="main-header__nav-item"><router-link class="main-header__nav-link" to="/tienda" @click="closeMenu">Tienda</router-link></li>
       </ul>
       <div :class="['backdrop', { 'backdrop--visible': isMenuOpen }]" @click="closeMenu"></div>
