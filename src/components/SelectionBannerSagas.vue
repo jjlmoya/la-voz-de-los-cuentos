@@ -23,10 +23,14 @@
         </div>
         <div v-else-if="selectedStory" class="grid-container">
           <div class="grid-item image-container">
-            <img :src="getImageSrc(selectedStory?.key)" :alt="selectedStory?.name" class="story-image" />
+            <a class="link-image" :href="youtubeLink.value" target="_blank">
+              <img :src="getImageSrc(selectedStory?.key)" :alt="selectedStory?.name" class="story-image" />
+            </a>
           </div>
           <div class="grid-item">
-            <h2 class="text-secondary">{{ selectedStory.name }}</h2>
+            <a :href="youtubeLink.value" class="link"  target="_blank">
+             <h2 class="text-secondary">{{ selectedStory.name }}</h2>
+            </a>
             <div class="button-group">
               <button @click="retryRecommendation" class="retry-btn">
                 <img src="@/assets/icons/retry.svg" alt="retry">
@@ -118,6 +122,10 @@ export default {
 </script>
 
 <style scoped>
+.grid-item .link {
+  text-decoration: none;
+  border-bottom: 1px solid var(--secondary-color);
+}
 .story-banner__title {
   color: var(--primary-color);
 }
@@ -141,11 +149,6 @@ export default {
   justify-content: center;
   align-items: center;
   gap: 20px;
-}
-
-.retry-btn svg, .play-btn svg {
-  width: 24px;
-  height: 24px;
 }
 
 @media (max-width: 800px) {
@@ -197,11 +200,9 @@ export default {
 }
 
 .retry-btn {
-  background-color: var(--primary-color);
-  opacity: 0.5;
-  width: 24px;
-  height: 24px;
+  opacity: 0.3;
 }
+
 .retry-btn svg {
   fill:white;
 }
@@ -210,11 +211,6 @@ export default {
   color: var(--secondary-color);
 }
 
-.retry-btn svg, .play-btn svg {
-  width: 24px;
-  height: 24px;
-  fill: white;
-}
 
 .button-group {
   display: flex;

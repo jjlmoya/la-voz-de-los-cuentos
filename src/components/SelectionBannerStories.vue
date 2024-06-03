@@ -23,10 +23,14 @@
         </div>
         <div v-else-if="selectedStory" class="grid-container">
           <div class="grid-item image-container">
-            <img :src="getImageSrc(selectedStory?.key)" :alt="selectedStory?.name" class="story-image" />
+            <a :href="youtubeLink.value" target="_blank" class="link-image">
+              <img :src="getImageSrc(selectedStory?.key)" :alt="selectedStory?.name" class="story-image" />
+            </a>
           </div>
           <div class="grid-item">
-            <h2 class="text-secondary">{{ selectedStory.name }}</h2>
+            <a :href="youtubeLink.value" target="_blank" class="link">
+              <h2 class="text-secondary">{{ selectedStory.name }}</h2>
+            </a>
             <div class="button-group">
               <button @click="retryRecommendation" class="retry-btn">
                 <img src="@/assets/icons/retry.svg" alt="retry">
@@ -118,6 +122,11 @@ export default {
 </script>
 
 <style scoped>
+.grid-item .link {
+  text-decoration: none;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
 .story-banner__title {
   color: var(--primary-color);
 }
@@ -209,17 +218,11 @@ export default {
   height: 48px;
 }
 .retry-btn {
-    background-color: var(--primary-color);
     opacity: 0.5;
 }
 
 .retry-btn:hover, .play-btn:hover {
   color: var(--secondary-color);
-}
-
-.retry-btn svg, .play-btn svg {
-  width: 24px;
-  height: 24px;
 }
 
 .button-group {
