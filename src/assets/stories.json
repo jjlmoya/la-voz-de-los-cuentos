@@ -56,7 +56,7 @@
     "youtube": "MH59CKJ5Yyw",
     "tiktok": "",
     "spotify": "",
-    "saga": "el-tragaluces",
+    "saga": "",
     "enlace": "https://youtu.be/MH59CKJ5Yyw"
   },
   {
@@ -990,7 +990,7 @@
     "enlace": "https://youtu.be/_01k31ejRrU"
   },
   {
-    "order": "100",
+    "order": "101",
     "name": "La leyenda de la insomne sombra",
     "key": "la-leyenda-de-la-insomne-sombra",
     "youtube": "Xf7El1B1WCA",
@@ -1000,7 +1000,7 @@
     "enlace": "https://youtu.be/Xf7El1B1WCA"
   },
   {
-    "order": "101",
+    "order": "102",
     "name": "El Problema de Transparencia",
     "key": "el-problema-de-transparencia",
     "youtube": "NKdCLy-ZHlg",
@@ -1008,5 +1008,15 @@
     "spotify": "",
     "saga": "",
     "enlace": "https://youtu.be/NKdCLy-ZHlg"
+  },
+  {
+    "order": "103",
+    "name": "Antoñov, el domador de loros",
+    "key": "antonov-el-domador-de-loros",
+    "youtube": "",
+    "tiktok": "https://www.tiktok.com/@lavozdetuscuentos/video/7376336582506204448",
+    "spotify": "https://podcasters.spotify.com/pod/show/lavozdeloscuentos/episodes/Antoov--el-domador-de-loros-e2kermr",
+    "saga": "",
+    "enlace": "https://youtu.be/POeKNiIwwqA"
   }
 ]
