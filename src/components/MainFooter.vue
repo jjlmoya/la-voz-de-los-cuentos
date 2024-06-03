@@ -24,7 +24,7 @@
       <div v-if="successMessage" class="success-message">
         <div class="image-container">
           <p class="success-message">{{ successMessage }}</p>
-          <img class="image-success" src="@/assets/happy.png" alt="Imagen de despedida" />
+          <img class="image-success" src="@/assets/emotes/happy.png" alt="Imagen de despedida" />
         </div>
       </div>
       <p v-if="errorMessage" class="error-message">{{ errorMessage }}</p>

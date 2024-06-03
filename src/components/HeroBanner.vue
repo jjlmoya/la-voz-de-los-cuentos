@@ -2,16 +2,16 @@
   <div class="hero-banner">
     <div class="parallax">
       <div class="parallax-layer sky" id="layer-back">
-        <img src="@/assets/owl-bg.png" alt="Background">
+        <img src="@/assets/hero/owl-bg.png" alt="Background">
       </div>
       <div class="parallax-layer forest" id="layer-middle">
-        <img src="@/assets/owl-layer.png" alt="Middle Layer">
+        <img src="@/assets/hero/owl-layer.png" alt="Middle Layer">
       </div>
        <div class="parallax-layer title" id="layer-middle">
-        <img src="@/assets/title.png" alt="Top Layer">
+        <img src="@/assets/hero/title.png" alt="Top Layer">
       </div>
       <div class="parallax-layer owl" id="layer-front">
-        <img src="@/assets/owl.png" alt="Front Layer">
+        <img src="@/assets/hero/owl.png" alt="Front Layer">
       </div>
     </div>
   </div>

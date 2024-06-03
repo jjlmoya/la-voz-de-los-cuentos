@@ -10,7 +10,7 @@
         <p>En <span class="text-secondary">La Voz de los Cuentos</span> nos ponemos tristes cuando alguien se va, pero entendemos tus motivos. Agradecemos todo el tiempo mágico que has pasado con nosotros. ¡Siempre serás parte de nuestra familia de cuentos!</p>
 
         <div class="image-container">
-          <img src="@/assets/sad.png" alt="Imagen de despedida" />
+          <img src="@/assets/emotes/sad.png" alt="Imagen de despedida" />
         </div>
       </div>
     </MainLayout>

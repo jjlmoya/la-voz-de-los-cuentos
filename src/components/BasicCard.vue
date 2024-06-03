@@ -93,7 +93,7 @@ export default {
   width: 100%;
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(8px);
-  color: var(--secondary-color);
+  color: #450505;
   text-align: center;
   padding: 8px;
 }
