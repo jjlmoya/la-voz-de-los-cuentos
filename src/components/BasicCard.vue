@@ -66,12 +66,18 @@ export default {
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 200px;
-  height: 200px;
+
   flex: 0 0 auto;
   margin: 0.5rem;
   transition: transform 0.3s;
   position: relative;
+}
+
+@media (max-width: 900px) {
+    .basic-card {
+      width: 150px;
+      height: 150px;
+    }
 }
 .basic-card:hover {
   transform: translateY(-8px);
@@ -99,7 +105,6 @@ export default {
 }
 .basic-info h3 {
   width: 100%;
-  font-size: 1.25rem;
   font-weight: 500;
   margin: 0;
 }
