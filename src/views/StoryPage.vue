@@ -89,7 +89,7 @@ export default {
   text-align: center;
   font-size: 2em;
   margin-bottom: 20px;
-  color: #333;
+  color: var(--secondary-color);
 }
 
 .youtube-embed {
@@ -114,7 +114,7 @@ export default {
 .story-content {
   font-size: 1.3em;
   line-height: 1.8;
-  color: #444;
+  color: black;
 }
 
 .story-content p {
@@ -129,7 +129,7 @@ export default {
 .related-stories h2 {
   font-size: 1.5em;
   margin-bottom: 20px;
-  color: #333;
+  color: var(--secondary-color);
 }
 
 .related-stories-list {
@@ -170,7 +170,6 @@ a {
 .loading-message {
   text-align: center;
   font-size: 1.5em;
-  color: #888;
   padding: 50px 0;
 }
 
