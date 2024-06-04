@@ -20,7 +20,7 @@ async function authenticateGoogleSheets() {
 
 async function readStoriesSpreedsheet() {
     const spreadsheetId = '1stmw3Uy70JloMCnQpCG5wjLtAFbaIFN1Aqe1gK9JM7A';
-    const range = 'Cuentos!A1:H999'; 
+    const range = 'Cuentos!A1:I999'; 
     const sheets = await authenticateGoogleSheets();
 
     const response = await sheets.spreadsheets.values.get({
@@ -46,7 +46,7 @@ async function readStoriesSpreedsheet() {
 }
 async function readSagasSpreedsheet() {
     const spreadsheetId = '1stmw3Uy70JloMCnQpCG5wjLtAFbaIFN1Aqe1gK9JM7A';
-    const range = 'Sagas!A1:H999';
+    const range = 'Sagas!A1:I999';
     const sheets = await authenticateGoogleSheets();
 
     const response = await sheets.spreadsheets.values.get({

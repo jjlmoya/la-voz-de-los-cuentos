@@ -1,17 +1,32 @@
 <template>
-  <a :href="link" target="_blank">
-    <div class="basic-card">
-      <div class="basic-image">
-        <img 
-          :src="imageSrc" 
-          :alt="entry.name" 
-        />
-        <div class="basic-info">
-          <h3>{{ entry.name }}</h3>
+  <div>
+    <router-link v-if="linkType === 'VIDEO'" :to="linkTo" class="basic-card-link">
+      <div class="basic-card">
+        <div class="basic-image">
+          <img 
+            :src="imageSrc" 
+            :alt="entry.name" 
+          />
+          <div class="basic-info">
+            <h3>{{ entry.name }}</h3>
+          </div>
         </div>
       </div>
-    </div>
-  </a>
+    </router-link>
+    <a v-else :href="linkHref" target="_blank" class="basic-card-link">
+      <div class="basic-card">
+        <div class="basic-image">
+          <img 
+            :src="imageSrc" 
+            :alt="entry.name" 
+          />
+          <div class="basic-info">
+            <h3>{{ entry.name }}</h3>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
 </template>
 
 <script>
@@ -47,21 +62,30 @@ export default {
   },
   setup(props) {
     const getImage = (key, isSaga) => {
-        const imageSrc = `${isSaga ? "sagas": "stories"}/${key}.png`;
-        return images[imageSrc] || images['sagas/default.png'];
-    }
+      const imageSrc = `${isSaga ? "sagas" : "stories"}/${key}.png`;
+      return images[imageSrc] || images['sagas/default.png'];
+    };
+
     const youtube = ref(props.entry.youtube);
     const linkType = ref(props.linkType);
     const { link } = useYoutubeLink(youtube, linkType);
 
     const imageSrc = computed(() => getImage(props.entry.key, props.isSaga));
 
-    return { link, imageSrc };
+    const linkTo = computed(() => ({ name: 'StoryPage', params: { id: props.entry.key } }));
+    const linkHref = computed(() => link.value);
+
+    return { link, imageSrc, linkTo, linkHref };
   },
 };
 </script>
 
 <style scoped>
+.basic-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .basic-card {
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -75,10 +99,10 @@ export default {
 }
 
 @media (max-width: 900px) {
-    .basic-card {
-        width: 150px;
-        height: 150px;
-    }
+  .basic-card {
+    width: 150px;
+    height: 150px;
+  }
 }
 .basic-card:hover {
   transform: translateY(-8px);
