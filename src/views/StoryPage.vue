@@ -70,7 +70,7 @@ export default {
     };
 
     const formattedStory = computed(() => {
-      return story.value ? story.value.story.split('\r\n').filter((p, index) => p.trim() !== '' && index > 0) : [];
+      return story.value ? story.value.story.split('\n').filter(p => p.trim() !== '') : [];
     });
 
     const setRelatedStories = () => {
