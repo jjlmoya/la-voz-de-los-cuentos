@@ -3,6 +3,10 @@
     <MainLayout>
       <div v-if="story" class="story-container" id="story-container">
         <h1 class="story-title">{{ story.name }}</h1>
+        
+        <!-- Font Size Selector -->
+        
+        
         <div v-if="story.youtube" class="youtube-embed">
           <iframe :src="`https://www.youtube.com/embed/${story.youtube}`" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
@@ -12,8 +16,14 @@
             scrolling="no">
           </iframe>
         </div>
-        <button @click="printPDF" class="download-button">PDF</button>
-        <div class="story-content">
+        <div class="font-size-selector">
+          <label for="font-size">Tamaño del texto</label>
+          <input type="range" id="font-size" min="20" max="36" v-model="fontSize">
+          <span>{{ fontSize }}px</span>
+        </div>
+        <button @click="printPDF" class="download-button">.pdf</button>
+      
+        <div class="story-content" :style="{ fontSize: fontSize + 'px' }">
           <p v-for="(paragraph, index) in formattedStory" :key="index">{{ paragraph }}</p>
         </div>
         
@@ -51,6 +61,7 @@ export default {
     const route = useRoute();
     const story = ref(null);
     const relatedStories = ref([]);
+    const fontSize = ref(localStorage.getItem('fontSize') || 16); // Load font size from localStorage or set default
 
     const loadStory = () => {
       const storyKey = route.params.id;
@@ -72,6 +83,11 @@ export default {
       window.print();
     };
 
+    // Watch for changes in fontSize to update localStorage
+    watch(fontSize, (newFontSize) => {
+      localStorage.setItem('fontSize', newFontSize);
+    });
+
     // Watch for changes in route parameters to reload the story
     watch(route, loadStory);
 
@@ -82,6 +98,7 @@ export default {
       story,
       formattedStory,
       relatedStories,
+      fontSize,
       printPDF
     };
   }
@@ -185,7 +202,7 @@ export default {
 
 .download-button {
   display: block;
-  margin: 20px auto;
+  margin: 8px auto;
   padding: 10px 20px;
   font-size: 1.2em;
   color: #fff;
@@ -198,6 +215,27 @@ export default {
 
 .download-button:hover {
   background-color: var(--primary-color);
+}
+
+.font-size-selector {
+  display: grid;
+  justify-content: center;
+  padding: 8px;
+}
+
+.font-size-selector label {
+  margin-right: 10px;
+  font-size: 1.2em;
+  color: var(--secondary-color);
+}
+
+.font-size-selector span {
+  font-size: 1.2em;
+  color: var(--secondary-color);
+}
+
+.font-size-selector input {
+  margin-right: 10px;
 }
 
 a {
@@ -227,7 +265,7 @@ a {
 }
 
 @media print {
-  .youtube-embed, .spotify-embed, .related-stories, .download-button, footer {
+  .youtube-embed, .spotify-embed, .related-stories, .download-button, .font-size-selector, footer {
     display: none !important;
   }
 
