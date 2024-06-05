@@ -6,6 +6,12 @@
         <div v-if="story.youtube" class="youtube-embed">
           <iframe :src="`https://www.youtube.com/embed/${story.youtube}`" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
+        <div v-if="story.spotify" class="spotify-embed">
+          <iframe 
+            :src="`https://podcasters.spotify.com/pod/show/lavozdeloscuentos/embed/episodes/${story.spotify}`" frameborder="0" 
+            scrolling="no">
+          </iframe>
+        </div>
         <button @click="printPDF" class="download-button">PDF</button>
         <div class="story-content">
           <p v-for="(paragraph, index) in formattedStory" :key="index">{{ paragraph }}</p>
@@ -99,17 +105,23 @@ export default {
   color: var(--secondary-color);
 }
 
-.youtube-embed {
+.youtube-embed, .spotify-embed {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
-.youtube-embed iframe {
+.youtube-embed iframe, .spotify-embed iframe {
   width: 100%;
-  height: 400px;
   border-radius: 8px;
 }
 
+.spotify-embed iframe {
+  height: 100px;
+}
+
+.youtube-embed iframe {
+  height: 400px;
+}
 .story-image {
   width: 100%;
   height: auto;
@@ -215,8 +227,8 @@ a {
 }
 
 @media print {
-  .youtube-embed, .related-stories, .download-button, footer {
-    display: none;
+  .youtube-embed, .spotify-embed, .related-stories, .download-button, footer {
+    display: none !important;
   }
 
   .story-container {
