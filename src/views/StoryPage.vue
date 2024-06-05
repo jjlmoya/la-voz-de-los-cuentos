@@ -1,14 +1,16 @@
 <template>
   <div>
     <MainLayout>
-      <div v-if="story" class="story-container">
+      <div v-if="story" class="story-container" id="story-container">
         <h1 class="story-title">{{ story.name }}</h1>
         <div v-if="story.youtube" class="youtube-embed">
           <iframe :src="`https://www.youtube.com/embed/${story.youtube}`" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
+        <button @click="printPDF" class="download-button">PDF</button>
         <div class="story-content">
           <p v-for="(paragraph, index) in formattedStory" :key="index">{{ paragraph }}</p>
         </div>
+        
         <div class="related-stories">
           <h2>Cuentos Relacionados</h2>
           <div class="related-stories-list">
@@ -60,6 +62,10 @@ export default {
       relatedStories.value = otherStories.sort(() => 0.5 - Math.random()).slice(0, 6);
     };
 
+    const printPDF = () => {
+      window.print();
+    };
+
     // Watch for changes in route parameters to reload the story
     watch(route, loadStory);
 
@@ -69,13 +75,14 @@ export default {
     return {
       story,
       formattedStory,
-      relatedStories
+      relatedStories,
+      printPDF
     };
   }
 };
 </script>
 
-<style scoped>
+<style>
 .story-container {
   padding: 20px;
   max-width: 800px;
@@ -163,6 +170,24 @@ export default {
   font-size: 1.1em;
   color: var(--title-color);
 }
+
+.download-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: var(--primary-color);
+}
+
 a {
     text-decoration: none;
 }
@@ -186,6 +211,23 @@ a {
 
   .story-content {
     font-size: 1em;
+  }
+}
+
+@media print {
+  .youtube-embed, .related-stories, .download-button, footer {
+    display: none;
+  }
+
+  .story-container {
+    box-shadow: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .story-title, .story-content {
+    color: black;
   }
 }
 </style>
