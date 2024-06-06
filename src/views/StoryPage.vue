@@ -32,7 +32,7 @@
           <div class="related-stories-list">
             <div v-for="relatedStory in relatedStories" :key="relatedStory.key" class="related-story-card">
               <router-link :to="`/cuento/${relatedStory.key}`">
-                <img :src="require(`@/assets/stories/${relatedStory.key}.png`)" alt="Imagen del cuento" class="related-story-image"/>
+                <img :src="getImage(relatedStory.key)" alt="Imagen del cuento" class="related-story-image"/>
                 <p class="related-story-title">{{ relatedStory.name }}</p>
               </router-link>
             </div>
@@ -79,6 +79,14 @@ export default {
       relatedStories.value = otherStories.sort(() => 0.5 - Math.random()).slice(0, 6);
     };
 
+    const getImage = (key) => {
+      try {
+        return require(`@/assets/stories/${key}.png`);
+      } catch (error) {
+        return require('@/assets/stories/default.png');
+      }
+    };
+
     const printPDF = () => {
       window.print();
     };
@@ -99,7 +107,8 @@ export default {
       formattedStory,
       relatedStories,
       fontSize,
-      printPDF
+      printPDF,
+      getImage
     };
   }
 };
