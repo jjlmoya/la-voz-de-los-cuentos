@@ -9,6 +9,9 @@
           />
           <div class="basic-info">
             <h3>{{ entry.name }}</h3>
+            <span class="basic-time">
+              {{ `${(Math.ceil(parseInt(entry.time)/60))}min`}}</span>
+
           </div>
         </div>
       </div>
@@ -127,6 +130,9 @@ export default {
   color: #450505;
   text-align: center;
   padding: 8px;
+}
+.basic-time {
+  font-size: 16px;
 }
 .basic-info h3 {
   width: 100%;
