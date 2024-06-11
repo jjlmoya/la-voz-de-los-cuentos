@@ -34,7 +34,7 @@
           <p>Creando tu cuento mágico...</p>
         </div>
         <div v-if="success" class="success-message">
-          <p>¡Tu cuento ha sido creado con éxito y será enviado pronto!</p>
+          <p>¡Tu petición se ha enviado con éxito y nos pondremos a ello pronto!</p>
         </div>
         <div v-if="error" class="error-message">
           <p>Lo sentimos, hubo un error al crear tu cuento. Por favor, intenta nuevamente.</p>
@@ -71,10 +71,7 @@ export default {
       this.success = false;
       this.error = false;
       try {
-        console.log({
-          a: this.form
-        })
-        const response = await fetch('https://script.google.com/macros/s/AKfycbwul-TEGP_OmdIn5GUz398pZQC13mYx_98GSbLQz0ruboKi43Sr3NaG16-6OwZ14jDP/exec', {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbyXxWrBmQDXCDIg5v-bc4YnkDU5YHu43a8HeGVNdoknYDK50bBnLg9gcAbP4Myw14lr/exec', {
           redirect: "follow",
           method: "POST",
           body: JSON.stringify(this.form),
