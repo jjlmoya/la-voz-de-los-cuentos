@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-link v-if="linkType === 'VIDEO'" :to="linkTo" class="basic-card-link">
+    <router-link :to="linkTo" class="basic-card-link">
       <div class="basic-card">
         <div class="basic-image">
           <img 
@@ -9,26 +9,13 @@
           />
           <div class="basic-info">
             <h3>{{ entry.name }}</h3>
-            <span class="basic-time">
-              {{ `${(Math.ceil(parseInt(entry.time)/60))}min`}}</span>
-
           </div>
+          <span v-if="entry.time" class="basic-time">
+            {{ `${(Math.ceil(parseInt(entry.time)/60))} min`}}
+          </span>
         </div>
       </div>
     </router-link>
-    <a v-else :href="linkHref" target="_blank" class="basic-card-link">
-      <div class="basic-card">
-        <div class="basic-image">
-          <img 
-            :src="imageSrc" 
-            :alt="entry.name" 
-          />
-          <div class="basic-info">
-            <h3>{{ entry.name }}</h3>
-          </div>
-        </div>
-      </div>
-    </a>
   </div>
 </template>
 
@@ -36,10 +23,8 @@
 import { ref, computed } from 'vue';
 import useYoutubeLink from '../hooks/useYoutubeLink';
 
-// Crear un contexto que cargue todas las imágenes dentro de @/assets
 const requireContext = require.context('@/assets', true, /\.png$/);
 
-// Crear un mapeo de las rutas de las imágenes
 const images = {};
 requireContext.keys().forEach((key) => {
   images[key.replace('./', '')] = requireContext(key);
@@ -75,7 +60,7 @@ export default {
 
     const imageSrc = computed(() => getImage(props.entry.key, props.isSaga));
 
-    const linkTo = computed(() => ({ name: 'StoryPage', params: { id: props.entry.key } }));
+    const linkTo = computed(() => ({ name: props.isSaga ? "SagaPage" : "StoryPage", params: { id: props.entry.key } }));
     const linkHref = computed(() => link.value);
 
     return { link, imageSrc, linkTo, linkHref };
@@ -132,7 +117,15 @@ export default {
   padding: 8px;
 }
 .basic-time {
-  font-size: 16px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background:var(--secondary-color);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 400;
 }
 .basic-info h3 {
   width: 100%;

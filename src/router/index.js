@@ -34,7 +34,7 @@ const routes = [
     },
     {
         path: '/saga/:id',
-        name: 'Saga',
+        name: 'SagaPage',
         component: SagaPage
     },
     {
