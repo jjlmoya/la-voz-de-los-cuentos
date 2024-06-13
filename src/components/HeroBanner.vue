@@ -5,7 +5,7 @@
         <img src="@/assets/hero/owl-bg.png" alt="Background">
       </div>
       <div class="parallax-layer forest" id="layer-middle">
-        <img src="@/assets/hero/owl-layer.png" alt="Middle Layer">
+        <img src="@/assets/hero/owl-layer.png">
       </div>
        <div class="parallax-layer title" id="layer-middle">
         <img src="@/assets/hero/title.png" alt="Top Layer">
