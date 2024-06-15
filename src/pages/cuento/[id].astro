@@ -1,97 +1,126 @@
 ---
-import MainLayout from '../../layouts/MainLayout.astro';
-import BasicCard from '../../components/BasicCard.astro';
-import stories from '../../data/stories.json';
-import '../../styles/StoryPage.css';
+import MainLayout from "../../layouts/MainLayout.astro";
+import stories from "../../data/stories.json";
+import "../../styles/StoryPage.css";
 
 // Obtener el ID de la URL
 const { id } = Astro.params;
-const story = stories.find(story => story.key === id);
-const relatedStories = stories.filter(s => s.key !== id && s.saga === story.saga).sort(() => 0.5 - Math.random()).slice(0, 6);
+const story = stories.find((story) => story.key === id);
+const relatedStories = stories
+  .filter((s) => s.key !== id && s.saga === story.saga)
+  .sort(() => 0.5 - Math.random())
+  .slice(0, 6);
+
+const firstParagraph = story.story
+  .split("\n")
+  .filter((p) => p.trim() !== "")[0];
 
 // getStaticPaths para generar las rutas dinámicas en tiempo de compilación
 export async function getStaticPaths() {
-  return stories.map(story => ({
-    params: { id: story.key }
+  return stories.map((story) => ({
+    params: { id: story.key },
   }));
 }
 ---
 
-<MainLayout>
-  {story ? (
-    <div class="story-container" id="story-container">
-      <h1 class="story-title">{story.name}</h1>
-      
-      {story.youtube && (
-        <div class="youtube-embed">
-          <iframe 
-            src={`https://www.youtube.com/embed/${story.youtube}`} 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-          </iframe>
+<MainLayout
+  title={story.name}
+  description={firstParagraph}
+  image={"/assets/stories/" + story.key + ".png"}
+  url={"/cuento/" + story.key}
+>
+  {
+    story ? (
+      <div class="story-container" id="story-container">
+        <h1 class="story-title">{story.name}</h1>
+
+        {story.youtube && (
+          <div class="youtube-embed">
+            <iframe
+              src={`https://www.youtube.com/embed/${story.youtube}`}
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            />
+          </div>
+        )}
+        {story.spotify && (
+          <div class="spotify-embed">
+            <iframe
+              src={`https://podcasters.spotify.com/pod/show/lavozdeloscuentos/embed/episodes/${story.spotify}`}
+              frameborder="0"
+              scrolling="no"
+            />
+          </div>
+        )}
+
+        <div class="font-size-selector">
+          <label for="font-size">Tamaño del texto</label>
+          <input
+            type="range"
+            id="font-size"
+            min="20"
+            max="36"
+            value="16"
+            oninput="updateFontSize(this.value)"
+          />
+          <span id="font-size-value">16px</span>
         </div>
-      )}
-      {story.spotify && (
-        <div class="spotify-embed">
-          <iframe 
-            src={`https://podcasters.spotify.com/pod/show/lavozdeloscuentos/embed/episodes/${story.spotify}`} 
-            frameborder="0" 
-            scrolling="no">
-          </iframe>
+        <button onclick="printPDF()" class="download-button">
+          .pdf
+        </button>
+
+        <div class="story-content" id="story-content">
+          {story.story
+            .split("\n")
+            .filter((p) => p.trim() !== "")
+            .map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
         </div>
-      )}
-      
-      <div class="font-size-selector">
-        <label for="font-size">Tamaño del texto</label>
-        <input type="range" id="font-size" min="20" max="36" value="16" oninput="updateFontSize(this.value)">
-        <span id="font-size-value">16px</span>
-      </div>
-      <button onclick="printPDF()" class="download-button">.pdf</button>
-    
-      <div class="story-content" id="story-content">
-        {story.story.split('\n').filter(p => p.trim() !== '').map((paragraph, index) => (
-          <p key={index}>{paragraph}</p>
-        ))}
-      </div>
-      
-      <div class="related-stories">
-        <h2>Cuentos Relacionados</h2>
-        <div class="related-stories-list">
-          {relatedStories.map(relatedStory => (
-            <div key={relatedStory.key} class="related-story-card">
-              <a href={`/cuento/${relatedStory.key}`}>
-                <img src={`/assets/stories/${relatedStory.key}.png`} alt="Imagen del cuento" class="related-story-image"/>
-                <p class="related-story-title">{relatedStory.name}</p>
-              </a>
-            </div>
-          ))}
+
+        <div class="related-stories">
+          <h2>Cuentos Relacionados</h2>
+          <div class="related-stories-list">
+            {relatedStories.map((relatedStory) => (
+              <div key={relatedStory.key} class="related-story-card">
+                <a href={`/cuento/${relatedStory.key}`}>
+                  <img
+                    src={`/assets/stories/${relatedStory.key}.png`}
+                    alt="Imagen del cuento"
+                    class="related-story-image"
+                  />
+                  <p class="related-story-title">{relatedStory.name}</p>
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
-  ) : (
-    <div class="loading-message">
-      <p>Error 404, cuento no disponible</p>
-    </div>
-  )}
+    ) : (
+      <div class="loading-message">
+        <p>Error 404, cuento no disponible</p>
+      </div>
+    )
+  }
 </MainLayout>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener("DOMContentLoaded", () => {
     function updateFontSize(size) {
-      const fontSizeValue = document.getElementById('font-size-value');
-      const storyContent = document.getElementById('story-content');
+      const fontSizeValue = document.getElementById("font-size-value");
+      const storyContent = document.getElementById("story-content");
       fontSizeValue.textContent = `${size}px`;
       storyContent.style.fontSize = `${size}px`;
-      localStorage.setItem('fontSize', size);
+      localStorage.setItem("fontSize", size);
     }
 
     function printPDF() {
       window.print();
     }
 
-    const savedFontSize = localStorage.getItem('fontSize') || 16;
-    const fontSizeSelector = document.getElementById('font-size');
+    const savedFontSize = localStorage.getItem("fontSize") || 16;
+    const fontSizeSelector = document.getElementById("font-size");
     fontSizeSelector.value = savedFontSize;
     updateFontSize(savedFontSize);
 
