@@ -1,25 +1,52 @@
 ---
-import sagas from '../data/sagas.json';
-import '../styles/SelectionBanner.css'; 
+import sagas from "../data/sagas.json";
+import "../styles/SelectionBanner.css";
+import { Image } from "astro:assets";
 ---
 
 <section class="saga-banner">
   <div class="saga-initial-view">
     <div class="grid-container">
       <div class="grid-item image-container">
-        <img src="" alt="Random saga" class="js-sagas-random-saga-img" id="random-saga-img" />
+        <Image
+          src="/assets/sagas/paco-el-cacahuete-sonador.png"
+          alt="Random saga"
+          class="js-sagas-random-saga-img"
+          id="random-saga-img"
+          width="512"
+          height="512"
+          layout="constrained"
+          loading="eager"
+        />
       </div>
       <div class="grid-item">
         <h2 class="saga-banner__title">
-          <span class="text-secondary"></span>Te ayudo a elegir <span class="text-secondary">tu saga ideal</span>
+          <span class="text-secondary"></span>Te ayudo a elegir <span
+            class="text-secondary">tu saga ideal</span
+          >
         </h2>
-        <button class="recommend-btn js-sagas-recommend-btn" id="recommend-btn">¡ADELANTE!</button>
+        <button class="recommend-btn js-sagas-recommend-btn" id="recommend-btn"
+          >¡ADELANTE!</button
+        >
       </div>
     </div>
   </div>
-  <div class="grid-container loading" id="saga-loading-view" style="display: none;">
+  <div
+    class="grid-container loading"
+    id="saga-loading-view"
+    style="display: none;"
+  >
     <div class="grid-item image-container">
-      <img src="/assets/sagas/paco-el-cacahuete-sonador.png"  class="saga-image js-sagas-loading-saga-img" id="loading-saga-img" />
+      <Image
+        alt="Random Sagas"
+        src="/assets/sagas/paco-el-cacahuete-sonador.png"
+        class="saga-image js-sagas-loading-saga-img"
+        id="loading-saga-img"
+        width="512"
+        height="512"
+        layout="constrained"
+        loading="eager"
+      />
     </div>
     <div class="grid-item">
       <p>Buscando...</p>
@@ -27,21 +54,57 @@ import '../styles/SelectionBanner.css';
   </div>
   <div class="grid-container" id="selected-saga-view" style="display: none;">
     <div class="grid-item image-container">
-      <a class="link-image js-sagas-selected-saga-link" href="" target="_blank" id="selected-saga-link">
-        <img src="" alt="Selected saga" class="saga-image js-sagas-selected-saga-img" id="selected-saga-img" />
+      <a
+        class="link-image js-sagas-selected-saga-link"
+        href=""
+        target="_blank"
+        id="selected-saga-link"
+      >
+        <Image
+          src="/assets/sagas/paco-el-cacahuete-sonador.png"
+          alt="Selected saga"
+          class="saga-image js-sagas-selected-saga-img"
+          id="selected-saga-img"
+          width="25"
+          height="25"
+          layout="constrained"
+          loading="eager"
+        />
       </a>
     </div>
     <div class="grid-item">
-      <a href="" class="link js-sagas-selected-saga-title-link" target="_blank" id="selected-saga-title-link">
+      <a
+        href=""
+        class="link js-sagas-selected-saga-title-link"
+        target="_blank"
+        id="selected-saga-title-link"
+      >
         <h2 class="text-secondary" id="selected-saga-title"></h2>
       </a>
       <div class="button-group">
         <button class="retry-btn js-sagas-retry-btn" id="retry-btn">
-          <img src="/assets/icons/retry.svg" alt="retry" />
+          <Image
+            src="/assets/icons/retry.svg"
+            alt="retry"
+            width="25"
+            height="25"
+            layout="constrained"
+            loading="eager"
+          />
         </button>
-        <a href="" target="_blank" class="play-btn js-sagas-selected-saga-play-btn" id="selected-saga-play-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-            <path d="M8 5v14l11-7z" />
+        <a
+          href=""
+          target="_blank"
+          class="play-btn js-sagas-selected-saga-play-btn"
+          id="selected-saga-play-btn"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path d="M8 5v14l11-7z"></path>
           </svg>
         </a>
       </div>
@@ -53,27 +116,35 @@ import '../styles/SelectionBanner.css';
 </section>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const recommendBtn = document.querySelector('.js-sagas-recommend-btn');
-    const retryBtn = document.querySelector('.js-sagas-retry-btn');
-    const initialView = document.querySelector('.saga-initial-view');
-    const loadingView = document.getElementById('saga-loading-view');
-    const selectedsagaView = document.getElementById('selected-saga-view');
+  document.addEventListener("DOMContentLoaded", () => {
+    const recommendBtn = document.querySelector(".js-sagas-recommend-btn");
+    const retryBtn = document.querySelector(".js-sagas-retry-btn");
+    const initialView = document.querySelector(".saga-initial-view");
+    const loadingView = document.getElementById("saga-loading-view");
+    const selectedsagaView = document.getElementById("selected-saga-view");
 
-    const randomsagaImg = document.querySelector('.js-sagas-random-saga-img');
-    const loadingsagaImg = document.querySelector('.js-sagas-loading-saga-img');
-    const selectedsagaLink = document.querySelector('.js-sagas-selected-saga-link');
-    const selectedsagaImg = document.querySelector('.js-sagas-selected-saga-img');
-    const selectedsagaTitleLink = document.querySelector('.js-sagas-selected-saga-title-link');
-    const selectedsagaTitle = document.getElementById('selected-saga-title');
-    const selectedsagaPlayBtn = document.querySelector('.js-sagas-selected-saga-play-btn');
+    const randomsagaImg = document.querySelector(".js-sagas-random-saga-img");
+    const loadingsagaImg = document.querySelector(".js-sagas-loading-saga-img");
+    const selectedsagaLink = document.querySelector(
+      ".js-sagas-selected-saga-link"
+    );
+    const selectedsagaImg = document.querySelector(
+      ".js-sagas-selected-saga-img"
+    );
+    const selectedsagaTitleLink = document.querySelector(
+      ".js-sagas-selected-saga-title-link"
+    );
+    const selectedsagaTitle = document.getElementById("selected-saga-title");
+    const selectedsagaPlayBtn = document.querySelector(
+      ".js-sagas-selected-saga-play-btn"
+    );
 
     let intervalId = null;
     let currentRandomsaga = null;
     let selectedsaga = null;
 
     // Recuperar el JSON del div
-    const sagasDiv = document.getElementById('sagas-data');
+    const sagasDiv = document.getElementById("sagas-data");
     const sagas = JSON.parse(sagasDiv.textContent);
 
     function getRandomsaga() {
@@ -82,9 +153,9 @@ import '../styles/SelectionBanner.css';
     }
 
     function selectRandomsaga() {
-      if (loadingView.style.display === 'block') return;
-      initialView.style.display = 'none';
-      loadingView.style.display = 'block';
+      if (loadingView.style.display === "block") return;
+      initialView.style.display = "none";
+      loadingView.style.display = "block";
       let count = 0;
       intervalId = setInterval(() => {
         currentRandomsaga = getRandomsaga();
@@ -100,8 +171,8 @@ import '../styles/SelectionBanner.css';
     function finalizeSelection() {
       setTimeout(() => {
         selectedsaga = getRandomsaga();
-        loadingView.style.display = 'none';
-        selectedsagaView.style.display = 'block';
+        loadingView.style.display = "none";
+        selectedsagaView.style.display = "block";
         selectedsagaImg.src = `/assets/sagas/${selectedsaga.key}.png`;
         selectedsagaTitle.textContent = selectedsaga.name;
         const sagaUrl = `/saga/${selectedsaga.key}`;
@@ -112,12 +183,12 @@ import '../styles/SelectionBanner.css';
     }
 
     function retryRecommendation() {
-      selectedsagaView.style.display = 'none';
+      selectedsagaView.style.display = "none";
       selectRandomsaga();
     }
 
-    recommendBtn.addEventListener('click', selectRandomsaga);
-    retryBtn.addEventListener('click', retryRecommendation);
+    recommendBtn.addEventListener("click", selectRandomsaga);
+    retryBtn.addEventListener("click", retryRecommendation);
 
     const randomsaga = getRandomsaga();
     randomsagaImg.src = `/assets/sagas/${randomsaga.key}.png`;

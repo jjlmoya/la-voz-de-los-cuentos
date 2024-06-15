@@ -1,25 +1,53 @@
 ---
-import stories from '../data/stories.json';
-import '../styles/SelectionBanner.css'; 
+import stories from "../data/stories.json";
+import "../styles/SelectionBanner.css";
+import { Image } from "astro:assets";
 ---
 
 <section class="story-banner">
   <div class="story-initial-view">
     <div class="grid-container">
       <div class="grid-item image-container">
-        <img src="" alt="Random Story" class="js-stories-random-story-img" id="random-story-img" />
+        <Image
+          src="/assets/stories/antes-de-las-sombras-la-llamarada-del-traga-luces.png"
+          alt="Random Story"
+          class="js-stories-random-story-img"
+          id="random-story-img"
+          width="512"
+          height="512"
+          layout="constrained"
+          loading="eager"
+        />
       </div>
       <div class="grid-item">
         <h2 class="story-banner__title">
-          <span class="text-secondary"></span>Te ayudo a elegir <span class="text-secondary">tu cuento ideal</span>
+          <span class="text-secondary"></span>Te ayudo a elegir <span
+            class="text-secondary">tu cuento ideal</span
+          >
         </h2>
-        <button class="recommend-btn js-stories-recommend-btn" id="recommend-btn">¡ADELANTE!</button>
+        <button
+          class="recommend-btn js-stories-recommend-btn"
+          id="recommend-btn">¡ADELANTE!</button
+        >
       </div>
     </div>
   </div>
-  <div class="grid-container loading" id="story-loading-view" style="display: none;">
+  <div
+    class="grid-container loading"
+    id="story-loading-view"
+    style="display: none;"
+  >
     <div class="grid-item image-container">
-      <img src="/assets/stories/antes-de-las-sombras-la-llamarada-del-traga-luces.png"  class="story-image js-stories-loading-story-img" id="loading-story-img" />
+      <Image
+        alt="Random Stories"
+        src="/assets/stories/antes-de-las-sombras-la-llamarada-del-traga-luces.png"
+        class="story-image js-stories-loading-story-img"
+        id="loading-story-img"
+        width="512"
+        height="512"
+        layout="constrained"
+        loading="eager"
+      />
     </div>
     <div class="grid-item">
       <p>Buscando...</p>
@@ -27,21 +55,57 @@ import '../styles/SelectionBanner.css';
   </div>
   <div class="grid-container" id="selected-story-view" style="display: none;">
     <div class="grid-item image-container">
-      <a class="link-image js-stories-selected-story-link" href="" target="_blank" id="selected-story-link">
-        <img src="" alt="Selected Story" class="story-image js-stories-selected-story-img" id="selected-story-img" />
+      <a
+        class="link-image js-stories-selected-story-link"
+        href=""
+        target="_blank"
+        id="selected-story-link"
+      >
+        <Image
+          src="/assets/icons/retry.svg"
+          alt="Selected Story"
+          class="story-image js-stories-selected-story-img"
+          id="selected-story-img"
+          width="25"
+          height="25"
+          layout="constrained"
+          loading="eager"
+        />
       </a>
     </div>
     <div class="grid-item">
-      <a href="" class="link js-stories-selected-story-title-link" target="_blank" id="selected-story-title-link">
+      <a
+        href=""
+        class="link js-stories-selected-story-title-link"
+        target="_blank"
+        id="selected-story-title-link"
+      >
         <h2 class="text-secondary" id="selected-story-title"></h2>
       </a>
       <div class="button-group">
         <button class="retry-btn js-stories-retry-btn" id="retry-btn">
-          <img src="/assets/icons/retry.svg" alt="retry" />
+          <Image
+            src="/assets/icons/retry.svg"
+            alt="retry"
+            width="25"
+            height="25"
+            layout="constrained"
+            loading="eager"
+          />
         </button>
-        <a href="" target="_blank" class="play-btn js-stories-selected-story-play-btn" id="selected-story-play-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-            <path d="M8 5v14l11-7z" />
+        <a
+          href=""
+          target="_blank"
+          class="play-btn js-stories-selected-story-play-btn"
+          id="selected-story-play-btn"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path d="M8 5v14l11-7z"></path>
           </svg>
         </a>
       </div>
@@ -53,27 +117,39 @@ import '../styles/SelectionBanner.css';
 </section>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const recommendBtn = document.querySelector('.js-stories-recommend-btn');
-    const retryBtn = document.querySelector('.js-stories-retry-btn');
-    const initialView = document.querySelector('.story-initial-view');
-    const loadingView = document.getElementById('story-loading-view');
-    const selectedStoryView = document.getElementById('selected-story-view');
+  document.addEventListener("DOMContentLoaded", () => {
+    const recommendBtn = document.querySelector(".js-stories-recommend-btn");
+    const retryBtn = document.querySelector(".js-stories-retry-btn");
+    const initialView = document.querySelector(".story-initial-view");
+    const loadingView = document.getElementById("story-loading-view");
+    const selectedStoryView = document.getElementById("selected-story-view");
 
-    const randomStoryImg = document.querySelector('.js-stories-random-story-img');
-    const loadingStoryImg = document.querySelector('.js-stories-loading-story-img');
-    const selectedStoryLink = document.querySelector('.js-stories-selected-story-link');
-    const selectedStoryImg = document.querySelector('.js-stories-selected-story-img');
-    const selectedStoryTitleLink = document.querySelector('.js-stories-selected-story-title-link');
-    const selectedStoryTitle = document.getElementById('selected-story-title');
-    const selectedStoryPlayBtn = document.querySelector('.js-stories-selected-story-play-btn');
+    const randomStoryImg = document.querySelector(
+      ".js-stories-random-story-img"
+    );
+    const loadingStoryImg = document.querySelector(
+      ".js-stories-loading-story-img"
+    );
+    const selectedStoryLink = document.querySelector(
+      ".js-stories-selected-story-link"
+    );
+    const selectedStoryImg = document.querySelector(
+      ".js-stories-selected-story-img"
+    );
+    const selectedStoryTitleLink = document.querySelector(
+      ".js-stories-selected-story-title-link"
+    );
+    const selectedStoryTitle = document.getElementById("selected-story-title");
+    const selectedStoryPlayBtn = document.querySelector(
+      ".js-stories-selected-story-play-btn"
+    );
 
     let intervalId = null;
     let currentRandomStory = null;
     let selectedStory = null;
 
     // Recuperar el JSON del div
-    const storiesDiv = document.getElementById('stories-data');
+    const storiesDiv = document.getElementById("stories-data");
     const stories = JSON.parse(storiesDiv.textContent);
 
     function getRandomStory() {
@@ -82,9 +158,9 @@ import '../styles/SelectionBanner.css';
     }
 
     function selectRandomStory() {
-      if (loadingView.style.display === 'block') return;
-      initialView.style.display = 'none';
-      loadingView.style.display = 'block';
+      if (loadingView.style.display === "block") return;
+      initialView.style.display = "none";
+      loadingView.style.display = "block";
       let count = 0;
       intervalId = setInterval(() => {
         currentRandomStory = getRandomStory();
@@ -100,8 +176,8 @@ import '../styles/SelectionBanner.css';
     function finalizeSelection() {
       setTimeout(() => {
         selectedStory = getRandomStory();
-        loadingView.style.display = 'none';
-        selectedStoryView.style.display = 'block';
+        loadingView.style.display = "none";
+        selectedStoryView.style.display = "block";
         selectedStoryImg.src = `/assets/stories/${selectedStory.key}.png`;
         selectedStoryTitle.textContent = selectedStory.name;
         const storyUrl = `/cuento/${selectedStory.key}`;
@@ -112,12 +188,12 @@ import '../styles/SelectionBanner.css';
     }
 
     function retryRecommendation() {
-      selectedStoryView.style.display = 'none';
+      selectedStoryView.style.display = "none";
       selectRandomStory();
     }
 
-    recommendBtn.addEventListener('click', selectRandomStory);
-    retryBtn.addEventListener('click', retryRecommendation);
+    recommendBtn.addEventListener("click", selectRandomStory);
+    retryBtn.addEventListener("click", retryRecommendation);
 
     const randomStory = getRandomStory();
     randomStoryImg.src = `/assets/stories/${randomStory.key}.png`;

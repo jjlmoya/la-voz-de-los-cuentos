@@ -2,6 +2,7 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import stories from "../../data/stories.json";
 import "../../styles/StoryPage.css";
+import { Image } from "astro:assets";
 
 // Obtener el ID de la URL
 const { id } = Astro.params;
@@ -85,10 +86,14 @@ export async function getStaticPaths() {
             {relatedStories.map((relatedStory) => (
               <div key={relatedStory.key} class="related-story-card">
                 <a href={`/cuento/${relatedStory.key}`}>
-                  <img
+                  <Image
                     src={`/assets/stories/${relatedStory.key}.png`}
                     alt="Imagen del cuento"
                     class="related-story-image"
+                    width="512"
+                    height="512"
+                    layout="constrained"
+                    loading="eager"
                   />
                   <p class="related-story-title">{relatedStory.name}</p>
                 </a>

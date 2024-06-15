@@ -1,38 +1,70 @@
 ---
-import '../styles/HeroBanner.css';
+import { Image } from "astro:assets";
+import "../styles/HeroBanner.css";
 ---
 
 <div class="hero-banner">
   <div class="parallax">
     <div class="parallax-layer sky" id="layer-back">
-      <img src="/assets/hero/owl-bg.png" alt="Background">
+      <Image
+        src="/assets/hero/owl-bg.png"
+        alt="Background"
+        width="500"
+        height="500"
+        layout="constrained"
+        loading="eager"
+      />
     </div>
     <div class="parallax-layer forest" id="layer-middle">
-      <img src="/assets/hero/owl-layer.png">
+      <Image
+        src="/assets/hero/owl-layer.png"
+        alt="Owl Layer"
+        width="500"
+        height="500"
+        layout="constrained"
+        loading="eager"
+      />
     </div>
     <div class="parallax-layer title" id="layer-middle">
-      <img src="/assets/hero/title.png" alt="Top Layer">
+      <Image
+        src="/assets/hero/title.png"
+        alt="Title"
+        width="500"
+        height="500"
+        layout="constrained"
+        loading="eager"
+      />
     </div>
     <div class="parallax-layer owl" id="layer-front">
-      <img src="/assets/hero/owl.png" alt="Front Layer">
+      <Image
+        src="/assets/hero/owl.png"
+        alt="Owl"
+        width="500"
+        height="500"
+        layout="constrained"
+        loading="eager"
+      />
     </div>
   </div>
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    window.addEventListener('scroll', handleScroll);
+  document.addEventListener("DOMContentLoaded", () => {
+    window.addEventListener("scroll", handleScroll);
   });
 
   function handleScroll() {
     const scrollPosition = window.pageYOffset;
-    document.getElementById('layer-back').style.transform = `translateY(${scrollPosition * 0.2}px)`;
-    document.getElementById('layer-middle').style.transform = `translateY(${scrollPosition * 0.5}px)`;
-    document.getElementById('layer-front').style.transform = `translateY(${scrollPosition * 0.8}px)`;
+    document.getElementById("layer-back").style.transform =
+      `translateY(${scrollPosition * 0.2}px)`;
+    document.getElementById("layer-middle").style.transform =
+      `translateY(${scrollPosition * 0.5}px)`;
+    document.getElementById("layer-front").style.transform =
+      `translateY(${scrollPosition * 0.8}px)`;
   }
 
   // Clean up the event listener
-  document.addEventListener('beforeunload', () => {
-    window.removeEventListener('scroll', handleScroll);
+  document.addEventListener("beforeunload", () => {
+    window.removeEventListener("scroll", handleScroll);
   });
 </script>

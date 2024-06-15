@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import "../../styles/CustomStoryPage.css";
+import { Image } from "astro:assets";
 ---
 
 <MainLayout
@@ -9,33 +10,49 @@ import "../../styles/CustomStoryPage.css";
   url="/personalizado/cuento"
 >
   <div class="custom-story">
-    <img
+    <Image
       id="statusImage"
       class="image-success"
       src="/assets/emotes/salute.png"
       alt="Imagen de despedida"
       style="display: none;"
+      width="512"
+      height="512"
+      layout="constrained"
+      loading="eager"
     />
-    <img
+    <Image
       id="loadingImage"
       class="image-success"
       src="/assets/emotes/thinking.png"
       alt="Imagen de despedida"
       style="display: none;"
+      width="512"
+      height="512"
+      layout="constrained"
+      loading="eager"
     />
-    <img
+    <Image
       id="successImage"
       class="image-success"
       src="/assets/emotes/happy.png"
       alt="Imagen de despedida"
       style="display: none;"
+      width="512"
+      height="512"
+      layout="constrained"
+      loading="eager"
     />
-    <img
+    <Image
       id="errorImage"
       class="image-success"
       src="/assets/emotes/sad.png"
       alt="Imagen de despedida"
       style="display: none;"
+      width="512"
+      height="512"
+      layout="constrained"
+      loading="eager"
     />
 
     <p id="description" class="description">
