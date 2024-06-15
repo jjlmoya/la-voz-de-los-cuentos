@@ -159,3 +159,7 @@ a {
 .content-layout {
     margin-top: 40px
 }
+
+body {
+    color: var(--primary-color);
+}
