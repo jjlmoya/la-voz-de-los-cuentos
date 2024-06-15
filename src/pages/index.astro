@@ -1,0 +1,20 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import HeroBanner from "../components/HeroBanner.astro";
+import FeaturedStories from "../components/FeaturedStories.astro";
+import FeaturedSagas from "../components/FeaturedSagas.astro";
+import SelectionBannerSagas from "../components/SelectionBannerSagas.astro";
+import SelectionBannerStories from "../components/SelectionBannerStories.astro";
+---
+
+<MainLayout
+  title="La Voz de los Cuentos"
+  description="Bienvenido a La Voz de los Cuentos, un rincón mágico donde los sueños cobran vida a través de cuentos infantiles encantados. Aquí, cada historia es una puerta a un mundo de fantasía, donde príncipes, hadas, dragones y criaturas maravillosas esperan ser descubiertos. Con ilustraciones vibrantes y narraciones cautivadoras, este sitio es un refugio para la imaginación y la creatividad, diseñado para deleitar a los más pequeños y a los que conservan el corazón de niño. ¡Déjate llevar por la magia de las palabras y vive aventuras inolvidables!"
+  url={"/"}
+>
+  <HeroBanner />
+  <SelectionBannerStories />
+  <FeaturedStories />
+  <FeaturedSagas />
+  <SelectionBannerSagas />
+</MainLayout>

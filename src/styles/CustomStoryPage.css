@@ -1,0 +1,102 @@
+.custom-story {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin-top: 80px;
+
+    img {
+        max-height: 250px;
+        border-radius: 15px;
+        margin: 16px;
+        object-fit: contain;
+    }
+
+    .description {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        max-width: 600px;
+    }
+
+    .custom-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-group-checkbox input {
+        width: 16px;
+    }
+
+    label {
+        margin-bottom: 5px;
+        font-size: 1.2em;
+    }
+
+    .mandatory {
+        color: var(--secondary-color);
+    }
+
+    input,
+    textarea {
+        padding: 10px;
+        border: 1px solid var(--secondary-color);
+        border-radius: 5px;
+        width: 100%;
+        max-width: 400px;
+        font-size: 1em;
+    }
+
+    textarea {
+        height: 120px;
+        resize: vertical;
+    }
+
+    .submit-button {
+        padding: 10px 20px;
+        background-color: var(--secondary-color);
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        align-self: center;
+        font-size: 1.2em;
+    }
+
+    .loader,
+    .success-message,
+    .error-message {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .loader img,
+    .success-message img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .loader p,
+    .success-message p,
+    .error-message p {
+        margin-top: 10px;
+        font-size: 1.3em;
+        color: var(--primary-color);
+    }
+
+    .error-message {
+        color: red;
+    }
+}

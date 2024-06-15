@@ -1,0 +1,22 @@
+.featured-sagas {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.featured-sagas h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.sagas-list {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+}
+
+.sagas-list-number {
+    color: var(--secondary-color);
+    font-weight: 500;
+}

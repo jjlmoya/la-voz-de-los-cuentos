@@ -1,0 +1,143 @@
+ .main-footer {
+     min-height: 300px;
+     position: relative;
+     width: 100dvw;
+     height: auto;
+     text-align: center;
+     color: var(--secondary-color);
+
+     ul {
+         list-style: none;
+         padding: 0;
+     }
+
+     ul li {
+         margin: 10px 0;
+         text-decoration: underline;
+     }
+
+     ul li a {
+         color: var(--secondary-color);
+         text-decoration: none;
+         font-weight: 400;
+     }
+
+     input {
+         border-radius: 12px;
+         padding: 8px;
+         border: 1px solid var(--secondary-color);
+     }
+
+     button {
+         background-color: var(--secondary-color);
+         color: white;
+         border: none;
+         padding: 8px 10px;
+         ;
+         border-radius: 10px;
+         font-size: 16px;
+         font-weight: 600;
+     }
+ }
+
+ #newsletter-footer {
+     grid: gap;
+     grid-gap: 20px;
+
+     h2 {
+         padding: 8px;
+     }
+ }
+
+ .background-image {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     object-fit: contain;
+     z-index: -1;
+ }
+
+ .image-success {
+     height: 150px;
+     object-fit: contain;
+     border-radius: 25px;
+     width: 50%;
+ }
+
+ .footer-spacing {
+     height: 450px;
+ }
+
+ @media (max-width: 700px) {
+     .footer-spacing {
+         height: 150px;
+     }
+ }
+
+ .column {
+     flex: 1 1 300px;
+     padding: 16px;
+ }
+
+ @media (max-width: 700px) {
+     .column {
+         background-color: white;
+     }
+
+     h2 {
+         margin-top: 32px;
+         font-weight: bold;
+     }
+
+     .newsletter-form {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+
+     .input-email {
+         padding: 10px;
+         margin: 10px 0;
+         border: 2px solid #ccc;
+         border-radius: 5px;
+         font-size: 1rem;
+     }
+
+     .is-invalid {
+         border-color: red;
+     }
+
+     .error-message {
+         color: red;
+         font-size: 0.9rem;
+         padding-bottom: 16px;
+     }
+
+     .success-message {
+         color: var(--primary-color);
+         font-size: 1.3rem;
+         padding: 12px;
+     }
+
+     .btn-submit {
+         background-color: var(--secondary-color);
+         color: white;
+         border: none;
+         font-weight: 500;
+         padding: 10px 20px;
+         border-radius: 5px;
+         cursor: pointer;
+         font-size: 1rem;
+         transition: background-color 0.3s ease;
+     }
+
+     .btn-submit:disabled {
+         background-color: gray;
+         cursor: not-allowed;
+     }
+
+     .btn-submit:hover {
+         background-color: var(--primary-color);
+     }
+}
