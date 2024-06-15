@@ -1,0 +1,29 @@
+---
+import '../styles/BasicCard.css';
+
+const { entry, isSaga, linkType } = Astro.props;
+
+function getImage(key, isSaga) {
+  const imageSrc = `${isSaga ? 'sagas' : 'stories'}/${key}.png`;
+  return `/assets/${imageSrc}`;
+}
+
+const linkTo = isSaga ? `/saga/${entry.key}` : `/cuento/${entry.key}`;
+const imageSrc = getImage(entry.key, isSaga);
+---
+
+<a href={linkTo} class="basic-card-link">
+  <div class="basic-card">
+    <div class="basic-image">
+      <img src={imageSrc} alt={entry.name} />
+      <div class="basic-info">
+        <h3>{entry.name}</h3>
+      </div>
+      {entry.time && (
+        <span class="basic-time">
+          {(Math.ceil(parseInt(entry.time) / 60))} min
+        </span>
+      )}
+    </div>
+  </div>
+</a>

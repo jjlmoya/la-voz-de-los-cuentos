@@ -1,0 +1,26 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import BasicCard from '../components/BasicCard.astro';
+import storiesData from '../data/stories.json';
+import '../styles/StoriesPage.css'
+const stories = Object.entries(storiesData).map(([key, data]) => ({ key, data }));
+const totalStories = stories.length;
+const storyCountMessage = `Tenemos <span class="text-secondary">${totalStories}</span> cuentos mágicos para ti`;
+
+---
+
+<MainLayout>
+  <div class="stories-content">
+    <h1 class="page-title">Nuestros Cuentos Mágicos</h1>
+    <p class="story-count" innerHTML={storyCountMessage}></p>
+    <div class="stories-grid">
+      {stories.map(story => (
+        <BasicCard
+          linkType="VIDEO"
+          key={story.key}
+          entry={story.data}
+        />
+      ))}
+    </div>
+  </div>
+</MainLayout>

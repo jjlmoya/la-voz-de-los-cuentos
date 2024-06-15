@@ -1,0 +1,27 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import BasicCard from '../components/BasicCard.astro';
+import sagasData from '../data/sagas.json';
+import '../styles/SagasPage.css'
+const sagas = Object.entries(sagasData).map(([key, data]) => ({ key, data }));
+const totalsagas = sagas.length;
+const sagaCountMessage = `Tenemos <span class="text-secondary">${totalsagas}</span> cuentos mágicos para ti`;
+
+---
+
+<MainLayout>
+  <div class="sagas-content">
+    <h1 class="page-title">Nuestras Sagas Mágicas</h1>
+    <p class="saga-count" innerHTML={sagaCountMessage}></p>
+    <div class="sagas-grid">
+      {sagas.map(saga => (
+        <BasicCard
+          linkType="VIDEO"
+          isSaga
+          key={saga.key}
+          entry={saga.data}
+        />
+      ))}
+    </div>
+  </div>
+</MainLayout>

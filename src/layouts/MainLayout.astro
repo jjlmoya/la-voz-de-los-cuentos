@@ -1,0 +1,56 @@
+---
+import Header from "../components/commons/Header/Header.astro";
+import MainFooter from "../components/commons/Footer/Footer.astro";
+import "./layout.css";
+const {
+  title,
+  description,
+  image = "/img/icons/32x32.png",
+  twitterCard = "summary_large_image",
+  type = "website",
+  url,
+} = Astro.props;
+const pageTitle = title
+  ? `${title} | La Voz de los Cuentos`
+  : "La Voz de los Cuentos";
+---
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/img/icons/32x32.png" sizes="32x32" />
+    <link rel="icon" href="/img/icons/32x32.png" sizes="16x16" />
+    <link rel="apple-touch-icon" href="/img/icons/152x152.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#4DBA87" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- SEO -->
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:alt" content={title} />
+    <meta property="og:url" content={url} />
+    <meta name="twitter:card" content={twitterCard} />
+    <meta property="og:type" content={type} />
+  </head>
+
+  <body>
+    <Header />
+    <div class="content-layout">
+      <slot />
+    </div>
+    <MainFooter />
+    <style>
+      body {
+        font-family: "Fredoka", sans-serif;
+      }
+    </style>
+  </body>
+</html>

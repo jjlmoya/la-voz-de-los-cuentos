@@ -1,0 +1,24 @@
+---
+import '../styles/FeaturedStories.css';
+import BasicCard from './BasicCard.astro';
+import storiesData from '../data/stories.json';
+
+const sortedStories = Object.entries(storiesData)
+  .map(([key, data]) => ({ key, data }))
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<section class="featured-stories">
+  <h2> 
+    Descubre Nuestros <span class="stories-list-number">{sortedStories.length}</span> Cuentos
+  </h2>
+  <div class="stories-list">
+    {sortedStories.map(story => (
+      <BasicCard
+        linkType="VIDEO"
+        key={story.key}
+        entry={story.data}
+      />
+    ))}
+  </div>
+</section>
