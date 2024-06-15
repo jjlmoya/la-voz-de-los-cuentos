@@ -1,54 +1,66 @@
-# Astro Starter Kit: Basics
+# La Voz de los Cuentos
 
-```sh
-npm create astro@latest -- --template basics
+[www.lavozdeloscuentos.es](https://www.lavozdeloscuentos.es)
+
+Bienvenidos a **La Voz de los Cuentos**, un lugar mágico donde cada historia cobra vida y la magia de la narración te envuelve. Descubre relatos antiguos y nuevos, llenos de fantasía, misterio y maravillas, en un reino donde la imaginación no tiene límites.
+
+## 🌟 Descripción
+
+La Voz de los Cuentos es un sitio web dedicado a ofrecer cuentos personalizados y clásicos para niños y adultos. Embárcate en un viaje encantado a través de nuestras historias y déjate llevar por la magia de la narración.
+
+## 🚀 Tecnologías Utilizadas
+
+- **Astro**: Framework estático moderno para la construcción del sitio web.
+- **JavaScript Vanilla**: Para interactividad y lógica del lado del cliente.
+- **CSS**: Estilos personalizados para una experiencia mágica.
+- **GitHub Pages**: Para el despliegue del sitio web.
+
+## 📄 Manifest PWA
+
+El sitio está optimizado como una Progressive Web App (PWA), permitiendo a los usuarios instalar la web en sus dispositivos y disfrutar de una experiencia nativa.
+
+
+## 📦 Instalación
+
+Sigue estos pasos para instalar y ejecutar el proyecto localmente:
+
+1. Clona el repositorio:
+
+   ```bash
+   git clone https://github.com/jjlmoya/la-voz-de-los-cuentos.git
+   ```
+
+2. Clona el repositorio:
+
+```bash
+cd la-voz-de-los-cuentos
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+3. Instala las dependencias:
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+npm install
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+4. Inicia el servidor de desarrollo:
+```bash
+npm run dev
+```
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 🌐 Despliegue
 
-Any static assets, like images, can be placed in the `public/` directory.
+Este proyecto está configurado para desplegarse automáticamente en GitHub Pages al hacer push a la rama `main`. El flujo de trabajo de GitHub Actions está definido en `.github/workflows/deploy.yml`.
 
-## 🧞 Commands
+## 🤝 Contribuciones
 
-All commands are run from the root of the project, from a terminal:
+Las contribuciones son bienvenidas. Si deseas contribuir, por favor haz un fork del repositorio, crea una rama con tus cambios y envía un pull request.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 📄 Licencia
 
-## 👀 Want to learn more?
+Este proyecto está protegido por derechos de autor. Todos los cuentos y contenidos dentro del sitio son propiedad exclusiva del autor y no pueden ser copiados ni redistribuidos sin permiso expreso. 
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Las contribuciones al código del proyecto son bienvenidas y se permiten bajo los términos de la Licencia MIT, siempre y cuando no incluyan contenidos protegidos por derechos de autor. Para más detalles, revisa el archivo `LICENSE`.
+
+---
+
+¡Gracias por visitar **La Voz de los Cuentos**! Esperamos que disfrutes de nuestros cuentos tanto como nosotros disfrutamos creándolos para ti.
