@@ -33,13 +33,14 @@ export async function getStaticPaths() {
           height="600"
           frameborder="0"
           allowfullscreen
-        ></iframe>
+        />
       ) : (
         <div class="no-playlist">
           <p>No hay playlist disponible para esta saga.</p>
         </div>
       )
     }
+    <p class="saga-description">{saga.description}</p>
     <h2 class="stories-title">Cuentos en esta saga</h2>
     <div class="stories-grid">
       {
@@ -72,8 +73,16 @@ export async function getStaticPaths() {
   .stories-title {
     font-size: 2rem;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 20px;
+  }
+
+  .saga-description {
+    font-size: 1.6rem;
+    padding: 32px;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 16px;
+    margin-top: 16px ;
   }
 
   .stories-grid {
