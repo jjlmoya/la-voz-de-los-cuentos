@@ -2,7 +2,7 @@ import os
 from PIL import Image
 
 # Rutas de las carpetas con las imágenes
-carpetas_imagenes = ['./public/assets/sagas']
+carpetas_imagenes = ['./public/assets/stories']
 
 # Nueva resolución
 nueva_resolucion = (896, 512)
