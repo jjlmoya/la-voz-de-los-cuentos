@@ -42,6 +42,7 @@ export async function getStaticPaths() {
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
+              loading="lazy"
             />
           </div>
         )}
@@ -51,6 +52,7 @@ export async function getStaticPaths() {
               src={`https://podcasters.spotify.com/pod/show/lavozdeloscuentos/embed/episodes/${story.spotify}`}
               frameborder="0"
               scrolling="no"
+              loading="lazy"
             />
           </div>
         )}
