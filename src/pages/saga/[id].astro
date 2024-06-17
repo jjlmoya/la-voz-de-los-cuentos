@@ -78,7 +78,7 @@ export async function getStaticPaths() {
   }
 
   .saga-description {
-    font-size: 1.6rem;
+    font-size: 1.1rem;
     padding: 32px;
     background-color: rgba(255,255,255,0.5);
     border-radius: 16px;
@@ -96,5 +96,8 @@ export async function getStaticPaths() {
     .stories-grid {
       grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
+  }
+  .saga-container iframe {
+    max-height: 50dvh;
   }
 </style>
