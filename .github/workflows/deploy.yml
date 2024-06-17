@@ -28,7 +28,7 @@ jobs:
         run: npm run build
 
       - name: Add CNAME file
-        run: echo "www.lavozdeloscuentos.es" > ./dist/CNAME
+        run: echo "lavozdeloscuentos.es" > ./dist/CNAME
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

@@ -1,6 +1,6 @@
 # La Voz de los Cuentos
 
-[www.lavozdeloscuentos.es](https://www.lavozdeloscuentos.es)
+[lavozdeloscuentos.es](https://lavozdeloscuentos.es)
 
 Bienvenidos a **La Voz de los Cuentos**, un lugar mágico donde cada historia cobra vida y la magia de la narración te envuelve. Descubre relatos antiguos y nuevos, llenos de fantasía, misterio y maravillas, en un reino donde la imaginación no tiene límites.
 
