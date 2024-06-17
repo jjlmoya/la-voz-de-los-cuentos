@@ -10,7 +10,7 @@ nueva_resolucion = (896, 512)
 for carpeta in carpetas_imagenes:
     # Recorrer todas las imágenes en la carpeta
     for nombre_imagen in os.listdir(carpeta):
-        if nombre_imagen.endswith(('jpg', 'jpeg', 'png', 'bmp', 'gif')):
+        if nombre_imagen.endswith(('jpg', 'jpeg', 'png', 'bmp', 'gif', 'webp')):
             ruta_imagen = os.path.join(carpeta, nombre_imagen)
             
             # Abrir la imagen
