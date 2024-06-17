@@ -22,14 +22,13 @@ const imageDimensions = {
 <a href={linkTo} class="basic-card-link">
   <div class="basic-card">
     <div class="basic-image">
-      <Image
-        loading="lazy"
-        src={imageSrc}
+      <img
+        data-key={entry.key}
+        data-src={imageSrc}
         alt={entry.name}
         width={imageDimensions.width}
         height={imageDimensions.height}
-        layout="constrained"
-        loading="eager"
+        class="lazy"
       />
       <div class="basic-info">
         <h3>{entry.name}</h3>
@@ -44,3 +43,26 @@ const imageDimensions = {
     </div>
   </div>
 </a>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const lazyImages = document.querySelectorAll(".lazy");
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.classList.add("visible");
+            observer.unobserve(img);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    lazyImages.forEach((image) => {
+      observer.observe(image);
+    });
+  });
+</script>
