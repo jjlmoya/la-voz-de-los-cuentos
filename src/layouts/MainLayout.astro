@@ -8,7 +8,7 @@ const {
   image = "/img/icons/512x512.png",
   twitterCard = "summary_large_image",
   type = "website",
-  url,
+  url = "/",
 } = Astro.props;
 const pageTitle = title
   ? `${title} | La Voz de los Cuentos`
@@ -49,12 +49,17 @@ const pageTitle = title
     </noscript>
     <!-- SEO -->
     <title>{pageTitle}</title>
+    <link rel="canonical" href={`https://www.lavozdeloscuentos.es${url}`} />
+
     <meta name="description" content={description} />
     <meta property="og:description" content={description} />
     <meta property="og:title" content={title} />
     <meta property="og:image" content={image} />
     <meta property="og:image:alt" content={title} />
-    <meta property="og:url" content={url} />
+    <meta
+      property="og:url"
+      content={`https://www.lavozdeloscuentos.es${url}`}
+    />
     <meta name="twitter:card" content={twitterCard} />
     <meta property="og:type" content={type} />
     <link rel="sitemap" href="/sitemap-index.xml" />
