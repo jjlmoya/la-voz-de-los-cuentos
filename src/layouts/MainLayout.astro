@@ -54,7 +54,10 @@ const pageTitle = title
     <meta name="description" content={description} />
     <meta property="og:description" content={description} />
     <meta property="og:title" content={title} />
-    <meta property="og:image" content={image} />
+    <meta
+      property="og:image"
+      content={`https://lavozdeloscuentos.es${image}`}
+    />
     <meta property="og:image:alt" content={title} />
     <meta property="og:url" content={`https://lavozdeloscuentos.es${url}`} />
     <meta property="og:type" content={type} />
@@ -65,7 +68,10 @@ const pageTitle = title
     <meta name="twitter:card" content={twitterCard} />
     <meta name="twitter:site" content="@TusAudioCuentos" />
     <meta name="twitter:creator" content="@TusAudioCuentos" />
-    <meta name="twitter:image" content={image} />
+    <meta
+      name="twitter:image"
+      content={`https://lavozdeloscuentos.es${image}`}
+    />
   </head>
 
   <body>
