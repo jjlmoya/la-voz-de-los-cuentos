@@ -1,0 +1,24 @@
+---
+import "../styles/404.css";
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Página no encontrada"
+  description="Página no encontrada en La Voz De Los Cuentos. Descubre más cuentos mágicos en nuestro sitio."
+  url="/404"
+>
+  <div class="voz-cuentos-body">
+    <div class="voz-cuentos-container">
+      <div class="voz-cuentos-owl">
+        <img src="/assets/emotes/sad.png" alt="Lechuza mágica" />
+      </div>
+      <h1 class="voz-cuentos-title">404 - Página no encontrada</h1>
+      <p class="voz-cuentos-message">
+        ¡Oh no! Parece que la página que buscas se ha perdido en un cuento
+        mágico.
+      </p>
+      <a href="/" class="voz-cuentos-link">Volver a la página principal</a>
+    </div>
+  </div>
+</MainLayout>
