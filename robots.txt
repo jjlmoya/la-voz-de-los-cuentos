@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.lavozdeloscuentos.es/sitemap-index.xml
+Sitemap: https://lavozdeloscuentos.es/sitemap-index.xml
