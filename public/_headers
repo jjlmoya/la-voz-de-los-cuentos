@@ -1,0 +1,6 @@
+# Configuración de caché para todos los archivos en assets y CSS
+/
+  Cache-Control: max-age=3600, public
+  
+/assets/*
+  Cache-Control: max-age=31536000, public

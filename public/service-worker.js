@@ -1,4 +1,4 @@
-const CACHE_NAME = 'my-site-cache-v1';
+const CACHE_NAME = 'la-voz-de-los-cuentos';
 
 // Intercept fetch requests and serve cached files if available
 self.addEventListener('fetch', event => {

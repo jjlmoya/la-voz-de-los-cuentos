@@ -3,7 +3,16 @@ import { VitePWA } from 'vite-plugin-pwa';
 import astro from '@astrojs/vite-plugin-astro';
 
 export default defineConfig({
-    plugins: [
+    build: {
+        rollupOptions: {
+            output: {
+                entryFileNames: '*/[name].[hash].js',
+                chunkFileNames: 'assets/[name].[hash].js',
+                assetFileNames: 'assets/[name].[hash].[ext]'
+            }
+        }
+    },
+    plugins: [  
         astro(),
         VitePWA({
             registerType: 'autoUpdate',
