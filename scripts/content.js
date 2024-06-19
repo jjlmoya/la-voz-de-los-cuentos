@@ -45,7 +45,7 @@ async function readStoriesSpreedsheet() {
                 obj[header] = row[index] || '';
             });
             return obj;
-        });
+        }).filter(e => e.order && e.name);
         return data;
     } else {
         console.log('No se encontró data en la hoja.');
