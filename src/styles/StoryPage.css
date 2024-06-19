@@ -10,6 +10,7 @@
 .story-title {
     text-align: center;
     font-size: 2em;
+    margin-top: 60px;
     margin-bottom: 20px;
     color: var(--secondary-color);
 }
@@ -160,7 +161,6 @@ a {
 }
 
 @media print {
-
     .youtube-embed,
     .spotify-embed,
     .related-stories,
@@ -169,8 +169,27 @@ a {
     footer {
         display: none !important;
     }
-
     .story-container {
         box-shadow: none;
         background: none;
         padding: 0;
+    }
+    .story-title {
+        text-align: center;
+        font-size: 2em;
+        margin-top: 100px;
+    }
+    .image-heading {
+        display: block !important;
+    }
+}
+
+.image-heading {
+    width: 100%;
+    margin: 16px 0;
+    img {
+        border-radius: 16px;
+        width: 100%;
+        height: auto;
+    }
+}
