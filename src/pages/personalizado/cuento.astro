@@ -104,16 +104,17 @@ import { Image } from "astro:assets";
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("customForm");
+    const loader = document.getElementById("loader");
+    const successMessage = document.getElementById("successMessage");
+    const errorMessage = document.getElementById("errorMessage");
+    const statusImage = document.getElementById("statusImage");
+    const loadingImage = document.getElementById("loadingImage");
+    const successImage = document.getElementById("successImage");
+    const errorImage = document.getElementById("errorImage");
+    const description = document.getElementById("description");
+
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
-      const loader = document.getElementById("loader");
-      const successMessage = document.getElementById("successMessage");
-      const errorMessage = document.getElementById("errorMessage");
-      const statusImage = document.getElementById("statusImage");
-      const loadingImage = document.getElementById("loadingImage");
-      const successImage = document.getElementById("successImage");
-      const errorImage = document.getElementById("errorImage");
-      const description = document.getElementById("description");
 
       const formData = {
         name: form.name.value,
@@ -122,6 +123,8 @@ import { Image } from "astro:assets";
         receiveAll: form.receiveAll.checked,
       };
 
+      // Ocultar el formulario y mostrar el loader
+      form.style.display = "none";
       loader.style.display = "flex";
       description.style.display = "none";
       successMessage.style.display = "none";
@@ -144,20 +147,22 @@ import { Image } from "astro:assets";
         );
 
         if (response.ok) {
+          // Mostrar el mensaje de éxito y la imagen correspondiente
           successMessage.style.display = "flex";
           successImage.style.display = "block";
-          loadingImage.style.display = "none";
         } else {
+          // Mostrar el mensaje de error y la imagen correspondiente
           errorMessage.style.display = "flex";
           errorImage.style.display = "block";
-          loadingImage.style.display = "none";
         }
       } catch (error) {
+        // Mostrar el mensaje de error y la imagen correspondiente en caso de excepción
         errorMessage.style.display = "flex";
         errorImage.style.display = "block";
-        loadingImage.style.display = "none";
       } finally {
+        // Ocultar el loader
         loader.style.display = "none";
+        loadingImage.style.display = "none";
       }
     });
   });
