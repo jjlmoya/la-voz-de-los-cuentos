@@ -77,14 +77,19 @@ export async function getStaticPaths() {
       <input
         type="range"
         id="font-size"
-        min="20"
+        min="16"
         max="36"
-        value="16"
+        value="20"
         oninput="updateFontSize(this.value)"
       />
       <span id="font-size-value">16px</span>
     </div>
-    <button onclick="printPDF()" class="download-button"> .pdf </button>
+    <div class="story-tool-wrapper">
+      <button onclick="printPDF()" class="download-button">.pdf</button>
+      <button id="favorite-button" class="favorite-button"
+        ><div>&#9825;</div></button
+      >
+    </div>
 
     <div class="story-content" id="story-content">
       {
@@ -117,14 +122,28 @@ export async function getStaticPaths() {
         }
       </div>
     </div>
+    <div
+      id="story-data"
+      data-story={JSON.stringify(story)}
+      style="display:none"
+    >
+    </div>
   </div>
 </MainLayout>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
+    const story =
+      JSON.parse(
+        document.getElementById("story-data").getAttribute("data-story")
+      ) ?? {};
+    const storyKey = story.key; // El key del cuento actual
+    const fontSizeSelector = document.getElementById("font-size");
+    const fontSizeValue = document.getElementById("font-size-value");
+    const storyContent = document.getElementById("story-content");
+    const favoriteButton = document.getElementById("favorite-button");
+
     function updateFontSize(size) {
-      const fontSizeValue = document.getElementById("font-size-value");
-      const storyContent = document.getElementById("story-content");
       fontSizeValue.textContent = `${size}px`;
       storyContent.style.fontSize = `${size}px`;
       localStorage.setItem("fontSize", size);
@@ -134,12 +153,115 @@ export async function getStaticPaths() {
       window.print();
     }
 
-    const savedFontSize = localStorage.getItem("fontSize") || 16;
-    const fontSizeSelector = document.getElementById("font-size");
+    // Recuperar el tamaño de fuente guardado en localStorage
+    const savedFontSize = localStorage.getItem("fontSize") || 20;
     fontSizeSelector.value = savedFontSize;
     updateFontSize(savedFontSize);
+
+    // Función para obtener la lista de historias guardadas en localStorage
+    function getStoriesData() {
+      return JSON.parse(localStorage.getItem("storiesData")) || [];
+    }
+
+    // Función para guardar la lista de historias en localStorage
+    function setStoriesData(storiesData) {
+      localStorage.setItem("storiesData", JSON.stringify(storiesData));
+    }
+
+    // Función para añadir o actualizar la historia actual en localStorage
+    function updateStoryData() {
+      let storiesData = getStoriesData();
+      let storyIndex = storiesData.findIndex((s) => s.key === storyKey);
+
+      if (storyIndex === -1) {
+        storiesData.push({
+          key: storyKey,
+          spentTime: 0,
+          totalTime: storyTime,
+          finished: false,
+          like: false,
+        });
+      }
+
+      setStoriesData(storiesData);
+    }
+    updateStoryData();
+
+    // Función para actualizar el estado del botón de favoritos
+    function updateFavoriteButton() {
+      let storiesData = getStoriesData();
+      let storyIndex = storiesData.findIndex((s) => s.key === storyKey);
+
+      if (storyIndex !== -1 && storiesData[storyIndex].like) {
+        favoriteButton.classList.add("liked");
+      } else {
+        favoriteButton.classList.remove("liked");
+      }
+    }
+
+    // Función para añadir o quitar el cuento actual de favoritos
+    function toggleFavorite() {
+      let storiesData = getStoriesData();
+      let storyIndex = storiesData.findIndex((s) => s.key === storyKey);
+
+      if (storyIndex !== -1) {
+        storiesData[storyIndex].like = !storiesData[storyIndex].like;
+        setStoriesData(storiesData);
+        updateFavoriteButton();
+      }
+    }
+
+    // Evento para el botón de añadir a favoritos
+    favoriteButton.addEventListener("click", toggleFavorite);
+
+    // Función para actualizar el tiempo invertido en la página
+    function updateTimeSpent() {
+      let storiesData = getStoriesData();
+      let storyIndex = storiesData.findIndex((s) => s.key === storyKey);
+
+      if (storyIndex !== -1) {
+        storiesData[storyIndex].spentTime += 30;
+        if (storiesData[storyIndex].spentTime >= storyTime) {
+          storiesData[storyIndex].finished = true;
+        }
+        setStoriesData(storiesData);
+      }
+    }
+
+    // Ejecutar updateTimeSpent cada 30 segundos
+    setInterval(updateTimeSpent, 30000);
+
+    // Inicializar el estado del botón de favoritos
+    updateFavoriteButton();
 
     window.updateFontSize = updateFontSize;
     window.printPDF = printPDF;
   });
 </script>
+
+<style>
+  .favorite-button {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: none;
+    font-size: 28px;
+    cursor: pointer;
+    background-color: white;
+    padding: 3px 16px;
+    border-radius: 8px;
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  .favorite-button.liked {
+    display: none;
+  }
+  .story-tool-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+  }
+</style>
