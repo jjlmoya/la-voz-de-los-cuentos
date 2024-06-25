@@ -137,7 +137,9 @@ export async function getStaticPaths() {
       JSON.parse(
         document.getElementById("story-data").getAttribute("data-story")
       ) ?? {};
-    const storyKey = story.key; // El key del cuento actual
+    const storyKey = story.key; 
+    const storyTime = parseInt(story.time); 
+
     const fontSizeSelector = document.getElementById("font-size");
     const fontSizeValue = document.getElementById("font-size-value");
     const storyContent = document.getElementById("story-content");
@@ -153,22 +155,18 @@ export async function getStaticPaths() {
       window.print();
     }
 
-    // Recuperar el tamaño de fuente guardado en localStorage
     const savedFontSize = localStorage.getItem("fontSize") || 20;
     fontSizeSelector.value = savedFontSize;
     updateFontSize(savedFontSize);
 
-    // Función para obtener la lista de historias guardadas en localStorage
     function getStoriesData() {
       return JSON.parse(localStorage.getItem("storiesData")) || [];
     }
 
-    // Función para guardar la lista de historias en localStorage
     function setStoriesData(storiesData) {
       localStorage.setItem("storiesData", JSON.stringify(storiesData));
     }
 
-    // Función para añadir o actualizar la historia actual en localStorage
     function updateStoryData() {
       let storiesData = getStoriesData();
       let storyIndex = storiesData.findIndex((s) => s.key === storyKey);
@@ -187,7 +185,6 @@ export async function getStaticPaths() {
     }
     updateStoryData();
 
-    // Función para actualizar el estado del botón de favoritos
     function updateFavoriteButton() {
       let storiesData = getStoriesData();
       let storyIndex = storiesData.findIndex((s) => s.key === storyKey);
@@ -199,7 +196,6 @@ export async function getStaticPaths() {
       }
     }
 
-    // Función para añadir o quitar el cuento actual de favoritos
     function toggleFavorite() {
       let storiesData = getStoriesData();
       let storyIndex = storiesData.findIndex((s) => s.key === storyKey);
@@ -211,10 +207,8 @@ export async function getStaticPaths() {
       }
     }
 
-    // Evento para el botón de añadir a favoritos
     favoriteButton.addEventListener("click", toggleFavorite);
 
-    // Función para actualizar el tiempo invertido en la página
     function updateTimeSpent() {
       let storiesData = getStoriesData();
       let storyIndex = storiesData.findIndex((s) => s.key === storyKey);
