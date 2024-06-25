@@ -1,6 +1,5 @@
 const CACHE_NAME = 'la-voz-de-los-cuentos';
 
-// Intercept fetch requests and serve cached files if available
 self.addEventListener('fetch', event => {
     event.respondWith(
         caches.match(event.request)
@@ -9,7 +8,6 @@ self.addEventListener('fetch', event => {
                     return response;
                 }
 
-                // Clone the request to use it for fetching and caching
                 const fetchRequest = event.request.clone();
 
                 return fetch(fetchRequest).then(
@@ -18,12 +16,10 @@ self.addEventListener('fetch', event => {
                             return response;
                         }
 
-                        // Clone the response to use it for caching
                         const responseToCache = response.clone();
 
                         caches.open(CACHE_NAME)
                             .then(cache => {
-                                // Check if the request URL contains "/assets/" and cache it
                                 if (event.request.url.includes('/assets/')) {
                                     cache.put(event.request, responseToCache);
                                 }
@@ -36,7 +32,6 @@ self.addEventListener('fetch', event => {
     );
 });
 
-// Activate the service worker and clean up old caches
 self.addEventListener('activate', event => {
     const cacheWhitelist = [CACHE_NAME];
 
