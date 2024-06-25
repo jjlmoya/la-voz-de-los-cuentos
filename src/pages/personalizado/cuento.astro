@@ -123,7 +123,6 @@ import { Image } from "astro:assets";
         receiveAll: form.receiveAll.checked,
       };
 
-      // Ocultar el formulario y mostrar el loader
       form.style.display = "none";
       loader.style.display = "flex";
       description.style.display = "none";
@@ -147,20 +146,16 @@ import { Image } from "astro:assets";
         );
 
         if (response.ok) {
-          // Mostrar el mensaje de éxito y la imagen correspondiente
           successMessage.style.display = "flex";
           successImage.style.display = "block";
         } else {
-          // Mostrar el mensaje de error y la imagen correspondiente
           errorMessage.style.display = "flex";
           errorImage.style.display = "block";
         }
       } catch (error) {
-        // Mostrar el mensaje de error y la imagen correspondiente en caso de excepción
         errorMessage.style.display = "flex";
         errorImage.style.display = "block";
       } finally {
-        // Ocultar el loader
         loader.style.display = "none";
         loadingImage.style.display = "none";
       }

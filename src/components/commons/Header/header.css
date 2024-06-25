@@ -3,12 +3,9 @@
     top: 0;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.6);
-    /* Fondo transparente */
     padding: 1rem;
     z-index: 10;
-    /* Para asegurarse de que esté encima del hero banner */
     backdrop-filter: blur(10px);
-    /* Opcional: Añade un desenfoque para mejor legibilidad */
 }
 
 .main-header__nav {
@@ -69,7 +66,6 @@
     display: flex;
     gap: 2rem;
     justify-content: center;
-    /* Centra los elementos del menú */
 }
 
 .main-header__nav-list--open {

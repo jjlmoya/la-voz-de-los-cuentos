@@ -4,7 +4,6 @@ import stories from "../../data/stories.json";
 import "../../styles/StoryPage.css";
 import { Image } from "astro:assets";
 
-// Obtener el ID de la URL
 const { id } = Astro.params;
 const story = stories.find((story) => story.key === id);
 const relatedStories = stories
@@ -16,7 +15,6 @@ const firstParagraph = story.story
   .split("\n")
   .filter((p) => p.trim() !== "")[0];
 
-// getStaticPaths para generar las rutas dinámicas en tiempo de compilación
 export async function getStaticPaths() {
   return stories.map((story) => ({
     params: { id: story.key },
@@ -221,11 +219,7 @@ export async function getStaticPaths() {
         setStoriesData(storiesData);
       }
     }
-
-    // Ejecutar updateTimeSpent cada 30 segundos
     setInterval(updateTimeSpent, 30000);
-
-    // Inicializar el estado del botón de favoritos
     updateFavoriteButton();
 
     window.updateFontSize = updateFontSize;

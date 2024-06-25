@@ -17,7 +17,6 @@
     padding: 20px;
     min-width: 200px;
     overflow: hidden;
-    /* Prevents content from shifting during transitions */
 }
 
 .grid-container {
@@ -32,7 +31,6 @@
 @media (max-width: 800px) {
     .grid-container {
         grid-template-columns: 1fr;
-        /* Cambia las columnas a una sola en móviles */
     }
 }
 

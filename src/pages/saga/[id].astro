@@ -4,12 +4,10 @@ import BasicCard from "../../components/BasicCard.astro";
 import sagaData from "../../data/sagas.json";
 import storyData from "../../data/stories.json";
 
-// Obtener el ID de la URL
 const { id } = Astro.params;
 const saga = sagaData.find((s) => s.key === id);
 const filteredStories = storyData.filter((story) => story.saga === id);
 
-// Generar rutas dinámicas
 export async function getStaticPaths() {
   return sagaData.map((saga) => ({
     params: { id: saga.key },

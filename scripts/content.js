@@ -4,13 +4,9 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
-// Inicializar __filename y __dirname al inicio
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-
-// Usar require para cargar el archivo JSON
 const KEYFILEPATH = path.join(__dirname, 'credentials.json');
-
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
 
 async function authenticateGoogleSheets() {
@@ -82,7 +78,6 @@ async function readSagasSpreedsheet() {
 
 async function writeJsonToFile(data, filePath) {
     return new Promise((resolve, reject) => {
-        // Crear los directorios necesarios
         const dir = path.dirname(filePath);
         fs.mkdirSync(dir, { recursive: true });
 

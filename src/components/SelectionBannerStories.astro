@@ -148,7 +148,6 @@ import { Image } from "astro:assets";
     let currentRandomStory = null;
     let selectedStory = null;
 
-    // Recuperar el JSON del div
     const storiesDiv = document.getElementById("stories-data");
     const stories = JSON.parse(storiesDiv.textContent);
 
@@ -170,7 +169,7 @@ import { Image } from "astro:assets";
           clearInterval(intervalId);
           finalizeSelection();
         }
-      }, 200); // Change story every 200ms
+      }, 200);
     }
 
     function finalizeSelection() {
@@ -184,7 +183,7 @@ import { Image } from "astro:assets";
         selectedStoryLink.href = storyUrl;
         selectedStoryTitleLink.href = storyUrl;
         selectedStoryPlayBtn.href = storyUrl;
-      }, 200); // Short delay before final selection
+      }, 200);
     }
 
     function retryRecommendation() {

@@ -25,13 +25,11 @@
     object-fit: cover;
 }
 
-/* Estilos comunes para la imagen */
 .hero-banner .parallax-layer.owl img {
     position: absolute;
     bottom: 0;
 }
 
-/* Media query para pantallas móviles (hasta 900px) */
 @media (max-width: 900px) {
     .hero-banner .parallax-layer.owl img {
         object-fit: contain;
@@ -41,7 +39,6 @@
     }
 }
 
-/* Media query para pantallas de escritorio (a partir de 900px) */
 @media (min-width: 900px) {
     .hero-banner .parallax-layer.owl img {
         object-fit: contain;
@@ -56,7 +53,6 @@
     top: 0;
 }
 
-/* Media query para pantallas móviles (hasta 900px) */
 @media (max-width: 900px) {
     .hero-banner .parallax-layer.title img {
         object-fit: contain;
@@ -66,7 +62,6 @@
     }
 }
 
-/* Media query para pantallas de escritorio (a partir de 900px) */
 @media (min-width: 900px) {
     .hero-banner .parallax-layer.title img {
         object-fit: contain;

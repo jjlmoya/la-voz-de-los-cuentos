@@ -143,7 +143,6 @@ import { Image } from "astro:assets";
     let currentRandomsaga = null;
     let selectedsaga = null;
 
-    // Recuperar el JSON del div
     const sagasDiv = document.getElementById("sagas-data");
     const sagas = JSON.parse(sagasDiv.textContent);
 
@@ -165,7 +164,7 @@ import { Image } from "astro:assets";
           clearInterval(intervalId);
           finalizeSelection();
         }
-      }, 200); // Change saga every 200ms
+      }, 200);
     }
 
     function finalizeSelection() {
@@ -179,7 +178,7 @@ import { Image } from "astro:assets";
         selectedsagaLink.href = sagaUrl;
         selectedsagaTitleLink.href = sagaUrl;
         selectedsagaPlayBtn.href = sagaUrl;
-      }, 200); // Short delay before final selection
+      }, 200);
     }
 
     function retryRecommendation() {
