@@ -20,6 +20,42 @@ export async function getStaticPaths() {
     params: { id: story.key },
   }));
 }
+
+const schema = JSON.stringify({
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  name: story.name,
+  author: {
+    "@type": "Person",
+    name: "LaVozDeLosCuentos",
+  },
+  datePublished: story.date,
+  image: `https://lavozdeloscuentos.es/assets/stories/${story.key}.png`,
+  description: firstParagraph,
+  genre: "Literatura Infantil",
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": `https://lavozdeloscuentos.es/cuento/${story.key}`,
+  },
+  video: {
+    "@type": "VideoObject",
+    name: `${story.name} - Video`,
+    description: firstParagraph,
+    thumbnailUrl: `https://lavozdeloscuentos.es/assets/stories/${story.key}.png`,
+    uploadDate: story.date,
+    contentUrl: `https://www.youtube.com/embed/${story.youtube}`,
+    embedUrl: `https://www.youtube.com/embed/${story.youtube}`,
+  },
+  audio: {
+    "@type": "AudioObject",
+    name: `${story.name} - Audio`,
+    description: `${firstParagraph}`,
+    thumbnailUrl: `https://lavozdeloscuentos.es/assets/stories/${story.key}.png`,
+    uploadDate: story.date,
+    contentUrl: story.spotifyLink,
+    embedUrl: story.spotifyLink,
+  },
+});
 ---
 
 <MainLayout
@@ -127,6 +163,7 @@ export async function getStaticPaths() {
     >
     </div>
   </div>
+  <script type="application/ld+json" set:html={schema} />
 </MainLayout>
 
 <script>
@@ -135,8 +172,8 @@ export async function getStaticPaths() {
       JSON.parse(
         document.getElementById("story-data").getAttribute("data-story")
       ) ?? {};
-    const storyKey = story.key; 
-    const storyTime = parseInt(story.time); 
+    const storyKey = story.key;
+    const storyTime = parseInt(story.time);
 
     const fontSizeSelector = document.getElementById("font-size");
     const fontSizeValue = document.getElementById("font-size-value");

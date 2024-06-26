@@ -24,7 +24,7 @@ async function authenticateGoogleSheets() {
 
 async function readStoriesSpreedsheet() {
     const spreadsheetId = '1stmw3Uy70JloMCnQpCG5wjLtAFbaIFN1Aqe1gK9JM7A';
-    const range = 'Cuentos!A1:J999';
+    const range = 'Cuentos!A1:L999';
     const sheets = await authenticateGoogleSheets();
 
     const response = await sheets.spreadsheets.values.get({
