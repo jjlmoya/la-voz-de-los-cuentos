@@ -69,13 +69,7 @@ const schema = JSON.stringify({
     {
       story.youtube && (
         <div class="youtube-embed">
-          <iframe
-            src={`https://www.youtube.com/embed/${story.youtube}`}
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy"
-          />
+          <lite-youtube videoid={story.youtube} playlabel={story.name} />
         </div>
       )
     }
