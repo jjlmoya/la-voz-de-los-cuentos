@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "content": "node ./scripts/content.js",
-    "redimension": "python ./scripts/redimension.py"
+    "redimension": "python ./scripts/redimension.py",
+    "characters": "node ./scripts/characters.js"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.1.5",
