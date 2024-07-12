@@ -21,7 +21,6 @@ const shuffledCards = [...initialCards, ...initialCards].sort(
             key={card.id + Math.random()}
             card={card}
             isFlipped={false}
-            client:load
           />
         ))
       }
@@ -31,7 +30,6 @@ const shuffledCards = [...initialCards, ...initialCards].sort(
       let matchedCards = [];
 
       const handleCardClick = (cardElement) => {
-        console.log("hola");
         if (
           flippedCards.length < 2 &&
           !flippedCards.includes(cardElement) &&
