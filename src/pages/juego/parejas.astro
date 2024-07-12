@@ -1,81 +1,16 @@
 ---
-import initialCards from "../../data/characters.json";
-import Card from "../../components/games/pair/index.astro";
+// src/pages/index.astro
 import MainLayout from "../../layouts/MainLayout.astro";
-const shuffledCards = [...initialCards, ...initialCards].sort(
-  () => Math.random() - 0.5
-);
+import CardGame from "../../games/CardGame.astro";
+import "../../styles/CardGame.css"
 ---
 
 <MainLayout
   title="Desafía tu Memoria con Personajes Encantadores"
   description="Disfruta del Juego de Parejas de 'La Voz de los Cuentos' y desafía tu memoria encontrando todas las parejas de cartas de tus personajes favoritos. Sumérgete en un mundo de historias encantadoras mientras mejoras tu concentración y habilidades mentales. ¡Juega ahora y descubre la magia de los cuentos!"
   url="/juego/parejas"
+  isGame
 >
-  <main class="game-content">
-    <h1>Juego de Parejas</h1>
-    <div class="card-grid" id="card-grid">
-      {
-        shuffledCards.map((card) => (
-          <Card
-            key={card.id + Math.random()}
-            card={card}
-            isFlipped={false}
-          />
-        ))
-      }
-    </div>
-    <script type="module" client:load>
-      let flippedCards = [];
-      let matchedCards = [];
+  <CardGame />
 
-      const handleCardClick = (cardElement) => {
-        if (
-          flippedCards.length < 2 &&
-          !flippedCards.includes(cardElement) &&
-          !matchedCards.includes(cardElement)
-        ) {
-          cardElement.classList.add("flipped");
-          flippedCards.push(cardElement);
-
-          if (flippedCards.length === 2) {
-            const [firstCard, secondCard] = flippedCards;
-
-            if (firstCard.dataset.id === secondCard.dataset.id) {
-              matchedCards.push(firstCard, secondCard);
-              flippedCards = [];
-            } else {
-              setTimeout(() => {
-                firstCard.classList.remove("flipped");
-                secondCard.classList.remove("flipped");
-                flippedCards = [];
-              }, 1000);
-            }
-          }
-        }
-      };
-
-      const initializeGame = () => {
-        document.querySelectorAll(".card").forEach((card) => {
-          card.addEventListener("click", () => handleCardClick(card));
-        });
-      };
-
-      if (typeof window !== "undefined") {
-        window.addEventListener("DOMContentLoaded", initializeGame);
-      }
-    </script>
-  </main>
-
-  <style>
-    .game-content {
-      padding: 32px;
-      min-height: 60dvh;
-    }
-    .card-grid {
-      display: grid;
-      grid-auto-flow: column;
-      gap: 16px;
-    }
-  </style>
 </MainLayout>

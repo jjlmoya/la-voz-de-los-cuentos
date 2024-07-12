@@ -9,6 +9,8 @@ const {
   twitterCard = "summary_large_image",
   type = "website",
   url = "/",
+  isGame = false,
+  hasVideo = false,
 } = Astro.props;
 const pageTitle = title
   ? `${title} | La Voz de los Cuentos`
@@ -107,7 +109,8 @@ const pageTitle = title
         });
       }
     </script>
-    <script src="/third/lite-youtube-embed/src/lite-yt-embed.js" is:inline
-    ></script>
+    {hasVideo ? <script src="/third/lite-youtube-embed/src/lite-yt-embed.js" is:inline
+    ></script> : ''}
+    {isGame ? <script src="/third/phaser.min.js" is:inline /> : ''}
   </body>
 </html>

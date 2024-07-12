@@ -1,0 +1,16 @@
+  .game-content {
+      padding: 32px;
+      min-height: 60dvh;
+  }
+
+  .controls {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+  }
+
+  .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+  }

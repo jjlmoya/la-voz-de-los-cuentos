@@ -20,6 +20,7 @@ export async function getStaticPaths() {
   description={saga.description}
   image={"/assets/sagas/" + saga.key + ".png"}
   url={"/saga/" + saga.key}
+  hasVideo
 >
   <div class="saga-container">
     <h1 class="saga-title">{saga.name}</h1>
@@ -78,9 +79,9 @@ export async function getStaticPaths() {
   .saga-description {
     font-size: 1.1rem;
     padding: 32px;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 16px;
-    margin-top: 16px ;
+    margin-top: 16px;
   }
 
   .stories-grid {
