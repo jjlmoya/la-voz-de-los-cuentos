@@ -9,7 +9,6 @@ const {
   twitterCard = "summary_large_image",
   type = "website",
   url = "/",
-  isGame = false,
   hasVideo = false,
 } = Astro.props;
 const pageTitle = title
@@ -111,6 +110,5 @@ const pageTitle = title
     </script>
     {hasVideo ? <script src="/third/lite-youtube-embed/src/lite-yt-embed.js" is:inline
     ></script> : ''}
-    {isGame ? <script src="/third/phaser.min.js" is:inline /> : ''}
   </body>
 </html>
