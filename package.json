@@ -23,7 +23,6 @@
   "devDependencies": {
     "googleapis": "^137.1.0",
     "mkdirp": "^3.0.1",
-    "ncp": "^2.0.0",
-    "vite-plugin-rewrite-all": "^1.0.2"
+    "ncp": "^2.0.0"
   }
 }
