@@ -10,5 +10,9 @@ import "../../styles/CardGame.css";
   description="Disfruta del Juego de Parejas de 'La Voz de los Cuentos' y desafía tu memoria encontrando todas las parejas de cartas de tus personajes favoritos. Sumérgete en un mundo de historias encantadoras mientras mejoras tu concentración y habilidades mentales. ¡Juega ahora y descubre la magia de los cuentos!"
   url="/juego/parejas"
 >
-  <CardGame />
+  <div id="game-container"></div>
+  <script>
+    import {Pair} from "la-voz-de-los-cuentos-games";
+    window.game = new Pair();
+  </script>
 </MainLayout>

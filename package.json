@@ -3,22 +3,26 @@
   "type": "module",
   "version": "0.1.0",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "npm run copy-assets && astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": " npm run copy-assets && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "content": "node ./scripts/content.js",
     "redimension": "python ./scripts/redimension.py",
-    "characters": "node ./scripts/characters.js"
+    "characters": "node ./scripts/characters.js",
+    "copy-assets": "ncp ./node_modules/la-voz-de-los-cuentos-games/dist/ public/assets"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.1.5",
     "astro": "^4.10.2",
+    "la-voz-de-los-cuentos-games": "^0.11.0",
     "sharp": "^0.33.4",
     "vite-plugin-pwa": "^0.20.0"
   },
   "devDependencies": {
-    "googleapis": "^137.1.0"
+    "googleapis": "^137.1.0",
+    "ncp": "^2.0.0",
+    "vite-plugin-rewrite-all": "^1.0.2"
   }
 }

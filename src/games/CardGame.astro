@@ -1,23 +1,6 @@
 ---
-import initialCards from "../data/characters.json";
-import Card from "./components/Card.astro";
-const shuffledCards = [...initialCards, ...initialCards].sort(
-  () => Math.random() - 0.5
-);
 ---
 
 <div class="card-game">
-  <div id="card-game-container"></div>
+  hola
 </div>
-
-<style>
-  .card-game {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    min-height: 60dvh;
-    canvas {
-      border-radius: 16px;
-    }
-  }
-</style>
