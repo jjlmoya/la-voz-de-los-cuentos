@@ -1,22 +1,14 @@
 [
   {
     "order": "1",
-    "name": "458",
-    "key": "458",
-    "youtube": "PLzsS-UEHQNA9pXayeQsa5sFvsFux57zQ5",
-    "link": "https://www.youtube.com/playlist?list=PLzsS-UEHQNA9pXayeQsa5sFvsFux57zQ5",
-    "description": "Sumérgete en el maravilloso y emotivo mundo de la saga \"458\" donde conocerás a un pequeño robot con un corazón especial. En un futuro donde la humanidad ha desaparecido, 458 y sus amigos robóticos descubren secretos del pasado y aprenden a vivir en armonía con la naturaleza. Desde rescatar un pájaro herido hasta resolver enigmas antiguos, cada cuento está lleno de descubrimientos y lecciones sobre amistad, valentía y la capacidad de transformar el mundo para mejor."
+    "name": "La Vida de Eloy",
+    "key": "la-vida-de-eloy",
+    "youtube": "PLzsS-UEHQNA-zzbUZFaTCKX6Rlo7aFxwN",
+    "link": "https://www.youtube.com/playlist?list=PLzsS-UEHQNA-zzbUZFaTCKX6Rlo7aFxwN",
+    "description": "¡Hola a todos y todas! Bienvenidos a la maravillosa colección de historias de \"La vida de Eloy\", donde lo imposible se vuelve realidad gracias a nuestro querido abuelo Eloy. Con su carismática sonrisa y su inconfundible sombrero lleno de plumas y medallas de todos los colores, Eloy nos transporta a tiempos y lugares increíbles junto a sus nietos curiosos.\r\n\r\nCada noche, alrededor de la chispeante chimenea, Eloy nos narra sus fantásticas aventuras con tal convicción que es imposible no creer que realmente las vivió. En su mundo, la historia cobra vida de una manera asombrosa y siempre está llena de momentos divertidos y sorprendentes"
   },
   {
     "order": "2",
-    "name": "SDG",
-    "key": "sdg",
-    "youtube": "PLzsS-UEHQNA8aUGFmoDtcG12NXmsCVbOz",
-    "link": "https://www.youtube.com/playlist?list=PLzsS-UEHQNA8aUGFmoDtcG12NXmsCVbOz",
-    "description": "¡Descubre la magia y el misterio con la saga \"SDG\"! Sumérgete en las emocionantes aventuras del \"Sistema de Distribución de Gatos\", donde cada misión es una mezcla de desafíos increíbles y sorpresas mágicas. Desde rescatar a un jaguar perdido hasta desentrañar secretos en mansiones abandonadas, nuestros valientes agentes se aseguran de que cada felino encuentre su hogar perfecto. Ideal para amantes de los gatos, la fantasía y los enigmas. Únete al SDG y vive historias inolvidables que te mantendrán al borde de tu asiento."
-  },
-  {
-    "order": "3",
     "name": "Llamarada",
     "key": "llamarada",
     "youtube": "PLzsS-UEHQNA8uSXzhvoVvIjDMwnJMEeLE",
@@ -24,12 +16,20 @@
     "description": "La saga de Llamarada narra las emocionantes aventuras de una llama con pelaje azul eléctrico y poderes mágicos. En un mundo lleno de criaturas mágicas, Llamarada enfrenta desafíos que ponen a prueba su valentía y determinación. A lo largo de su viaje, se encuentra con seres fantásticos como hadas, sirenas y unicornios, mientras lucha contra fuerzas oscuras que amenazan con robar colores, sueños y alegrías. La serie celebra la amistad, el coraje y la magia, llevándonos a través de mundos llenos de maravillas y misterios."
   },
   {
+    "order": "3",
+    "name": "Luna y la física",
+    "key": "luna-y-la-fisica",
+    "youtube": "PLzsS-UEHQNA-orn2hgsCP31wv69x7iDAg",
+    "link": "https://www.youtube.com/playlist?list=PLzsS-UEHQNA-orn2hgsCP31wv69x7iDAg",
+    "description": "Acompaña a Luna en la saga \"Luna y la Física\", donde esta joven aventurera utiliza su amor por la física para enseñar a los más pequeños conceptos científicos de manera divertida y accesible. Desde su taller secreto donde inventa estrellas hasta desentrañar los misterios de la Isla Cuántica, Luna convierte la ciencia en un mundo mágico lleno de descubrimientos y aprendizaje. Ideal para niños curiosos y futuros científicos."
+  },
+  {
     "order": "4",
-    "name": "Carlota Cucaracha",
-    "key": "carlota-cucaracha",
-    "youtube": "PLzsS-UEHQNA-peAF_B8s9raYAm1vq9889",
-    "link": "https://www.youtube.com/playlist?list=PLzsS-UEHQNA-peAF_B8s9raYAm1vq9889",
-    "description": "Descubre las emocionantes aventuras de Carlota Cucaracha, una intrépida exploradora que transforma su pequeño mundo con valentía y curiosidad. Desde resolver misterios en un sótano lleno de secretos hasta enfrentarse a una mágica lluvia de barro, Carlota demuestra que, con un poco de coraje, cualquier cucaracha puede ser una heroína. ¡Únete a Carlota en sus inolvidables y mágicas aventuras!"
+    "name": "SDG",
+    "key": "sdg",
+    "youtube": "PLzsS-UEHQNA8aUGFmoDtcG12NXmsCVbOz",
+    "link": "https://www.youtube.com/playlist?list=PLzsS-UEHQNA8aUGFmoDtcG12NXmsCVbOz",
+    "description": "¡Descubre la magia y el misterio con la saga \"SDG\"! Sumérgete en las emocionantes aventuras del \"Sistema de Distribución de Gatos\", donde cada misión es una mezcla de desafíos increíbles y sorpresas mágicas. Desde rescatar a un jaguar perdido hasta desentrañar secretos en mansiones abandonadas, nuestros valientes agentes se aseguran de que cada felino encuentre su hogar perfecto. Ideal para amantes de los gatos, la fantasía y los enigmas. Únete al SDG y vive historias inolvidables que te mantendrán al borde de tu asiento."
   },
   {
     "order": "5",
@@ -40,28 +40,36 @@
     "description": "Adéntrate en la saga \"El Finalizador\", donde Gregorio, con su don único, da cierre a proyectos inacabados en una ciudad plagada de miedos y desorden. Enseñando a superar el miedo al fracaso, transforma vidas y celebra cada final como un nuevo comienzo. ¡Acompaña a Gregorio y siente el poder de los finales felices!"
   },
   {
-    "order": "6",
-    "name": "Luna y la física",
-    "key": "luna-y-la-fisica",
-    "youtube": "PLzsS-UEHQNA-orn2hgsCP31wv69x7iDAg",
-    "link": "https://www.youtube.com/playlist?list=PLzsS-UEHQNA-orn2hgsCP31wv69x7iDAg",
-    "description": "Acompaña a Luna en la saga \"Luna y la Física\", donde esta joven aventurera utiliza su amor por la física para enseñar a los más pequeños conceptos científicos de manera divertida y accesible. Desde su taller secreto donde inventa estrellas hasta desentrañar los misterios de la Isla Cuántica, Luna convierte la ciencia en un mundo mágico lleno de descubrimientos y aprendizaje. Ideal para niños curiosos y futuros científicos."
-  },
-  {
-    "order": "7",
-    "name": "Relojmedio",
-    "key": "relojmedio",
-    "youtube": "PLzsS-UEHQNA80toIwj7OE-h80Sa9qWPO7",
-    "link": "https://www.youtube.com/playlist?list=PLzsS-UEHQNA80toIwj7OE-h80Sa9qWPO7",
-    "description": "En la saga \"Relojmedio\", acompaña a Lucas y Mateo, dos amigos decididos a desvelar el misterio del reloj de su pueblo que nunca marca la medianoche. Su curiosidad los lleva a descubrir secretos ocultos, enfrentarse a guardianes del tiempo y buscar la legendaria llave del tiempo que puede desbloquear portales hacia otros mundos. Cada aventura está llena de misterio, valentía y lecciones sobre la importancia de la amistad y la determinación."
-  },
-  {
-    "order": "8",
+    "order": "5",
     "name": "Paco el Cacahuete Soñador",
     "key": "paco-el-cacahuete-sonador",
     "youtube": "PLzsS-UEHQNA_zKSrlDzCHgMMJdCT32uzZ",
     "link": "https://www.youtube.com/playlist?list=PLzsS-UEHQNA_zKSrlDzCHgMMJdCT32uzZ",
     "description": "En la saga \"Paco el Cacahuete Soñador\", sigue las maravillosas aventuras de Paco, un cacahuete con una imaginación sin límites. Paco descubre el poder de los sueños gracias a la Luna Cantarina, embarcándose en increíbles viajes nocturnos donde explora mares de manteca, islas de galletas doradas y se enfrenta a dragones de jengibre. A través de sus sueños, Paco aprende a valorar tanto las aventuras oníricas como la belleza de la vida real, encontrando el equilibrio perfecto entre ambos mundos."
+  },
+  {
+    "order": "6",
+    "name": "Carlota Cucaracha",
+    "key": "carlota-cucaracha",
+    "youtube": "PLzsS-UEHQNA-peAF_B8s9raYAm1vq9889",
+    "link": "https://www.youtube.com/playlist?list=PLzsS-UEHQNA-peAF_B8s9raYAm1vq9889",
+    "description": "Descubre las emocionantes aventuras de Carlota Cucaracha, una intrépida exploradora que transforma su pequeño mundo con valentía y curiosidad. Desde resolver misterios en un sótano lleno de secretos hasta enfrentarse a una mágica lluvia de barro, Carlota demuestra que, con un poco de coraje, cualquier cucaracha puede ser una heroína. ¡Únete a Carlota en sus inolvidables y mágicas aventuras!"
+  },
+  {
+    "order": "7",
+    "name": "Vuestras Peticiones",
+    "key": "vuestras-peticiones",
+    "youtube": "PLzsS-UEHQNA87Efrv1R3R2xokjBNPXDAp",
+    "link": "https://www.youtube.com/playlist?list=PLzsS-UEHQNA87Efrv1R3R2xokjBNPXDAp",
+    "description": "Bienvenidos a \"Vuestras Peticiones\", una saga única que recopila todos los cuentos personalizados solicitados por los usuarios de nuestra comunidad. Cada historia es un reflejo de vuestros sueños, deseos y aventuras, transformados en narrativas mágicas y emocionantes. Desde héroes valientes hasta mundos encantados, estos cuentos celebran la creatividad y la imaginación de nuestra comunidad."
+  },
+  {
+    "order": "8",
+    "name": "Leyendas",
+    "key": "leyendas",
+    "youtube": "PLzsS-UEHQNA_hAYFXzXX2cAZdAU1-MpuU",
+    "link": "https://www.youtube.com/playlist?list=PLzsS-UEHQNA_hAYFXzXX2cAZdAU1-MpuU",
+    "description": "¿Has oído hablar alguna vez de esas leyendas que se van pasando de boca en boca? Esas historias antiguas y misteriosas que, con cada narrador, cambian y evolucionan hasta convertirse en algo completamente nuevo y mágico. En esta saga, descubrirás relatos que cobran vida, donde héroes y villanos, criaturas fantásticas y reinos olvidados, te transportarán a mundos llenos de encanto y maravilla. Cada cuento es una ventana a lo desconocido, una invitación a soñar y a dejarse llevar por la magia de las palabras. Sumérgete en  las \"Leyendas\" y déjate encantar por historias que trascienden el tiempo y la realidad."
   },
   {
     "order": "9",
@@ -73,26 +81,18 @@
   },
   {
     "order": "10",
-    "name": "Vuestras Peticiones",
-    "key": "vuestras-peticiones",
-    "youtube": "PLzsS-UEHQNA87Efrv1R3R2xokjBNPXDAp",
-    "link": "https://www.youtube.com/playlist?list=PLzsS-UEHQNA87Efrv1R3R2xokjBNPXDAp",
-    "description": "Bienvenidos a \"Vuestras Peticiones\", una saga única que recopila todos los cuentos personalizados solicitados por los usuarios de nuestra comunidad. Cada historia es un reflejo de vuestros sueños, deseos y aventuras, transformados en narrativas mágicas y emocionantes. Desde héroes valientes hasta mundos encantados, estos cuentos celebran la creatividad y la imaginación de nuestra comunidad."
+    "name": "Relojmedio",
+    "key": "relojmedio",
+    "youtube": "PLzsS-UEHQNA80toIwj7OE-h80Sa9qWPO7",
+    "link": "https://www.youtube.com/playlist?list=PLzsS-UEHQNA80toIwj7OE-h80Sa9qWPO7",
+    "description": "En la saga \"Relojmedio\", acompaña a Lucas y Mateo, dos amigos decididos a desvelar el misterio del reloj de su pueblo que nunca marca la medianoche. Su curiosidad los lleva a descubrir secretos ocultos, enfrentarse a guardianes del tiempo y buscar la legendaria llave del tiempo que puede desbloquear portales hacia otros mundos. Cada aventura está llena de misterio, valentía y lecciones sobre la importancia de la amistad y la determinación."
   },
   {
     "order": "11",
-    "name": "Leyendas",
-    "key": "leyendas",
-    "youtube": "PLzsS-UEHQNA_hAYFXzXX2cAZdAU1-MpuU",
-    "link": "https://www.youtube.com/playlist?list=PLzsS-UEHQNA_hAYFXzXX2cAZdAU1-MpuU",
-    "description": "¿Has oído hablar alguna vez de esas leyendas que se van pasando de boca en boca? Esas historias antiguas y misteriosas que, con cada narrador, cambian y evolucionan hasta convertirse en algo completamente nuevo y mágico. En esta saga, descubrirás relatos que cobran vida, donde héroes y villanos, criaturas fantásticas y reinos olvidados, te transportarán a mundos llenos de encanto y maravilla. Cada cuento es una ventana a lo desconocido, una invitación a soñar y a dejarse llevar por la magia de las palabras. Sumérgete en  las \"Leyendas\" y déjate encantar por historias que trascienden el tiempo y la realidad."
-  },
-  {
-    "order": "12",
-    "name": "La Vida de Eloy",
-    "key": "la-vida-de-eloy",
-    "youtube": "PLzsS-UEHQNA-zzbUZFaTCKX6Rlo7aFxwN",
-    "link": "https://www.youtube.com/playlist?list=PLzsS-UEHQNA-zzbUZFaTCKX6Rlo7aFxwN",
-    "description": "¡Hola a todos y todas! Bienvenidos a la maravillosa colección de historias de \"La vida de Eloy\", donde lo imposible se vuelve realidad gracias a nuestro querido abuelo Eloy. Con su carismática sonrisa y su inconfundible sombrero lleno de plumas y medallas de todos los colores, Eloy nos transporta a tiempos y lugares increíbles junto a sus nietos curiosos.\r\n\r\nCada noche, alrededor de la chispeante chimenea, Eloy nos narra sus fantásticas aventuras con tal convicción que es imposible no creer que realmente las vivió. En su mundo, la historia cobra vida de una manera asombrosa y siempre está llena de momentos divertidos y sorprendentes"
+    "name": "458",
+    "key": "458",
+    "youtube": "PLzsS-UEHQNA9pXayeQsa5sFvsFux57zQ5",
+    "link": "https://www.youtube.com/playlist?list=PLzsS-UEHQNA9pXayeQsa5sFvsFux57zQ5",
+    "description": "Sumérgete en el maravilloso y emotivo mundo de la saga \"458\" donde conocerás a un pequeño robot con un corazón especial. En un futuro donde la humanidad ha desaparecido, 458 y sus amigos robóticos descubren secretos del pasado y aprenden a vivir en armonía con la naturaleza. Desde rescatar un pájaro herido hasta resolver enigmas antiguos, cada cuento está lleno de descubrimientos y lecciones sobre amistad, valentía y la capacidad de transformar el mundo para mejor."
   }
 ]
