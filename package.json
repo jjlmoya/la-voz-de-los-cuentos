@@ -17,7 +17,7 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.1.5",
     "astro": "^4.10.2",
-    "la-voz-de-los-cuentos-games": "^0.16.0",
+    "la-voz-de-los-cuentos-games": "^0.19.0",
     "sharp": "^0.33.4",
     "vite-plugin-pwa": "^0.20.0"
   },
