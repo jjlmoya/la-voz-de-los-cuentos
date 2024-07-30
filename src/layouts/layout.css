@@ -103,7 +103,6 @@ section {
 
 body {
     line-height: 1;
-    font-family: "Fredoka", sans-serif;
 }
 
 ol,
@@ -142,6 +141,7 @@ table {
 
 body {
     background-color: var(--background-color);
+    font-family: "Fredoka", sans-serif;
 }
 
 .text-secondary {
