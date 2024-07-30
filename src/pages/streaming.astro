@@ -27,7 +27,7 @@ function shuffle(array) {
 
 const shuffledStories = shuffle(stories);
 const initialStory = shuffledStories[0];
-console.log(shuffledStories.length)
+console.log(shuffledStories.length);
 ---
 
 <StreamingLayout
@@ -62,44 +62,45 @@ console.log(shuffledStories.length)
         document.getElementById("stories-data").textContent
       );
       let currentStoryIndex = 0;
+      let player;
 
       const currentElement = document.getElementById("streaming-current");
       const videoTitleElement = document.querySelector(
         ".streaming-video-title"
       );
-      const youtubeEmbedElement = document.getElementById("youtube-embed");
 
       function getEntry(index, position) {
         let _index = (index + position) % stories.length;
         const _story = stories[_index];
         return `
-        <div class="streaming-entry ${position === 0 ? "streaming-entry--active" : ""}" style="opacity:${100 - 50 - 7 * position}%">
-           <img class="streaming-entry-image" src="/assets/stories/${_story.data.key}.png" alt"${_story.data.name}"/>
-        </div>
-        `;
+      <div class="streaming-entry ${position === 0 ? "streaming-entry--active" : ""}" style="opacity:${100 - 50 - 7 * position}%">
+         <img class="streaming-entry-image" src="/assets/stories/${_story.data.key}.png" alt"${_story.data.name}"/>
+      </div>
+      `;
       }
+
       function updateCurrentStory() {
         currentStoryIndex = (currentStoryIndex + 1) % stories.length;
         const currentStory = stories[currentStoryIndex];
         videoTitleElement.textContent = currentStory.data.name;
-        youtubeEmbedElement.src = `https://www.youtube.com/embed/${currentStory.data.youtube}?autoplay=1&controls=1&rel=0&fs=0&enablejsapi=1`;
+        player.loadVideoById(currentStory.data.youtube); // Carga el nuevo video en el reproductor existente
         renderCurrentStory(currentStory);
       }
 
       function renderCurrentStory(currentStory) {
         currentElement.textContent = currentStory.data.name;
         currentElement.innerHTML = `
-          ${getEntry(currentStoryIndex, 0)}
-          ${getEntry(currentStoryIndex, 1)}
-          ${getEntry(currentStoryIndex, 2)}
-          ${getEntry(currentStoryIndex, 3)}
-          ${getEntry(currentStoryIndex, 4)}
-          ${getEntry(currentStoryIndex, 5)}
-        `;
+        ${getEntry(currentStoryIndex, 0)}
+        ${getEntry(currentStoryIndex, 1)}
+        ${getEntry(currentStoryIndex, 2)}
+        ${getEntry(currentStoryIndex, 3)}
+        ${getEntry(currentStoryIndex, 4)}
+        ${getEntry(currentStoryIndex, 5)}
+      `;
       }
 
       function onYouTubeIframeAPIReady() {
-        new YT.Player("youtube-embed", {
+        player = new YT.Player("youtube-embed", {
           events: {
             onStateChange: (event) => {
               if (event.data === YT.PlayerState.ENDED) {
