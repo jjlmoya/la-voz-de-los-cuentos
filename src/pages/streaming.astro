@@ -1,12 +1,20 @@
 ---
+// Filtrar historias que tengan un campo de YouTube
 import StreamingLayout from "../layouts/StreamingLayout.astro";
 import storiesData from "../data/stories.json";
 import "../styles/StreamingPage.css";
 
-// Filtrar historias que tengan un campo de YouTube
+// Obtener la fecha de hoy
+const today = new Date();
+today.setHours(0, 0, 0, 0); // Poner la hora a 00:00:00 para comparaciones precisas
+
+// Filtrar historias que tengan un campo de YouTube y que sean de ayer o del pasado
 const stories = Object.entries(storiesData)
   .map(([key, data]) => ({ key, data }))
-  .filter((story) => story.data.youtube);
+  .filter((story) => {
+    const storyDate = new Date(story.data.date.split("/").reverse().join("-")); // Convertir la fecha al formato ISO
+    return story.data.youtube && storyDate < today;
+  });
 
 // Función para mezclar el array de historias
 function shuffle(array) {
@@ -19,7 +27,7 @@ function shuffle(array) {
 
 const shuffledStories = shuffle(stories);
 const initialStory = shuffledStories[0];
-
+console.log(shuffledStories.length)
 ---
 
 <StreamingLayout
@@ -65,7 +73,7 @@ const initialStory = shuffledStories[0];
         let _index = (index + position) % stories.length;
         const _story = stories[_index];
         return `
-        <div class="streaming-entry ${position === 0 ? 'streaming-entry--active': ''}" style="opacity:${100 -50 - 7 * position}%">
+        <div class="streaming-entry ${position === 0 ? "streaming-entry--active" : ""}" style="opacity:${100 - 50 - 7 * position}%">
            <img class="streaming-entry-image" src="/assets/stories/${_story.data.key}.png" alt"${_story.data.name}"/>
         </div>
         `;
