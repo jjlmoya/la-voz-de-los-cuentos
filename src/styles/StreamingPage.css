@@ -11,6 +11,8 @@ body {
 .streaming-url {
     font-size: 42px;
     padding: 0 16px;
+    color: var(--secondary-color);
+    font-weight: 500;
 }
 
  .streaming-video-title {
