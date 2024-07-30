@@ -1,0 +1,119 @@
+---
+import StreamingLayout from "../layouts/StreamingLayout.astro";
+import storiesData from "../data/stories.json";
+import "../styles/StreamingPage.css";
+
+// Filtrar historias que tengan un campo de YouTube
+const stories = Object.entries(storiesData)
+  .map(([key, data]) => ({ key, data }))
+  .filter((story) => story.data.youtube);
+
+// Función para mezclar el array de historias
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+const shuffledStories = shuffle(stories);
+const initialStory = shuffledStories[0];
+
+---
+
+<StreamingLayout
+  title="Listado de Cuentos"
+  description="Nuestra colección de cuentos mágicos, cientos de cuentos esperando a ser descubiertos"
+  url="/cuentos"
+>
+  <div class="streaming-content">
+    <div class="streaming-current" id="streaming-current"></div>
+    <div class="streaming-video">
+      <div class="streaming-video-title">{initialStory.data.name}</div>
+      <div class="streaming-video-content">
+        <div class="youtube-embed">
+          <iframe
+            id="youtube-embed"
+            width="560"
+            height="315"
+            frameborder="0"
+            src={`https://www.youtube.com/embed/${initialStory.data.youtube}?autoplay=1&controls=1&rel=0&fs=0&enablejsapi=1`}
+            allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
+        </div>
+        <img src="/assets/marca.png" />
+      </div>
+      <div class="streaming-url">LaVozDeLosCuentos.es</div>
+    </div>
+  </div>
+
+  <script type="module">
+    document.addEventListener("DOMContentLoaded", () => {
+      const stories = JSON.parse(
+        document.getElementById("stories-data").textContent
+      );
+      let currentStoryIndex = 0;
+
+      const currentElement = document.getElementById("streaming-current");
+      const videoTitleElement = document.querySelector(
+        ".streaming-video-title"
+      );
+      const youtubeEmbedElement = document.getElementById("youtube-embed");
+
+      function getEntry(index, position) {
+        let _index = (index + position) % stories.length;
+        const _story = stories[_index];
+        return `
+        <div class="streaming-entry ${position === 0 ? 'streaming-entry--active': ''}" style="opacity:${100 -50 - 7 * position}%">
+           <img class="streaming-entry-image" src="/assets/stories/${_story.data.key}.png" alt"${_story.data.name}"/>
+        </div>
+        `;
+      }
+      function updateCurrentStory() {
+        currentStoryIndex = (currentStoryIndex + 1) % stories.length;
+        const currentStory = stories[currentStoryIndex];
+        videoTitleElement.textContent = currentStory.data.name;
+        youtubeEmbedElement.src = `https://www.youtube.com/embed/${currentStory.data.youtube}?autoplay=1&controls=1&rel=0&fs=0&enablejsapi=1`;
+        renderCurrentStory(currentStory);
+      }
+
+      function renderCurrentStory(currentStory) {
+        currentElement.textContent = currentStory.data.name;
+        currentElement.innerHTML = `
+          ${getEntry(currentStoryIndex, 0)}
+          ${getEntry(currentStoryIndex, 1)}
+          ${getEntry(currentStoryIndex, 2)}
+          ${getEntry(currentStoryIndex, 3)}
+          ${getEntry(currentStoryIndex, 4)}
+          ${getEntry(currentStoryIndex, 5)}
+        `;
+      }
+
+      function onYouTubeIframeAPIReady() {
+        new YT.Player("youtube-embed", {
+          events: {
+            onStateChange: (event) => {
+              if (event.data === YT.PlayerState.ENDED) {
+                updateCurrentStory();
+              }
+            },
+          },
+        });
+      }
+
+      renderCurrentStory(stories[0]);
+
+      const tag = document.createElement("script");
+      tag.src = "https://www.youtube.com/iframe_api";
+      const firstScriptTag = document.getElementsByTagName("script")[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
+    });
+  </script>
+
+  <div id="stories-data" style="display: none;">
+    {JSON.stringify(shuffledStories)}
+  </div>
+</StreamingLayout>

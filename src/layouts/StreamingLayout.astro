@@ -1,0 +1,112 @@
+---
+import Header from "../components/commons/Header/Header.astro";
+import MainFooter from "../components/commons/Footer/Footer.astro";
+import "./layout.css";
+const {
+  title,
+  description,
+  image = "/img/icons/512x512.png",
+  twitterCard = "summary_large_image",
+  type = "website",
+  url = "/",
+} = Astro.props;
+const pageTitle =" Streaming | La Voz de los Cuentos";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="max-age=14400, public" />
+    <link rel="icon" href="/img/icons/32x32.png" sizes="32x32" />
+    <link rel="icon" href="/img/icons/32x32.png" sizes="16x16" />
+    <link rel="icon" href="/img/icons/favicon.ico" />
+    <link rel="apple-touch-icon" href="/img/icons/152x152.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#4DBA87" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="/third/lite-youtube-embed/src/lite-yt-embed.css"
+    />
+
+    <!-- Preload the specific font styles -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+
+    <!-- Fallback for browsers that do not support onload -->
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <!-- SEO -->
+    <title>{pageTitle}</title>
+    <link rel="canonical" href={`https://lavozdeloscuentos.es${url}`} />
+
+    <meta name="description" content={description} />
+    <meta property="og:description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta
+      property="og:image"
+      content={`https://lavozdeloscuentos.es${image}`}
+    />
+    <meta property="og:image:alt" content={title} />
+    <meta property="og:url" content={`https://lavozdeloscuentos.es${url}`} />
+    <meta property="og:type" content={type} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="msvalidate.01" content="F4F378590719CB3FE7C00F6916621727" />
+    <meta name="robots" content="index, follow" />
+    <meta property="fb:app:id" content="792207913054384" />
+    <meta name="twitter:card" content={twitterCard} />
+    <meta name="twitter:site" content="@TusAudioCuentos" />
+    <meta name="twitter:creator" content="@TusAudioCuentos" />
+    <meta
+      name="twitter:image"
+      content={`https://lavozdeloscuentos.es${image}`}
+    />
+    <meta property="twitter:description" content={description} />
+  </head>
+
+  <body>
+    <div class="streaming-content">
+      <slot />
+    </div>
+    <style>
+      body {
+        font-family: "Fredoka", sans-serif;
+      }
+    </style>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js").then(
+            (registration) => {
+              console.log(
+                "ServiceWorker registration successful with scope: ",
+                registration.scope
+              );
+            },
+            (err) => {
+              console.log("ServiceWorker registration failed: ", err);
+            }
+          );
+        });
+      }
+    </script>
+    <script
+      src="/third/lite-youtube-embed/src/lite-yt-embed.js"
+      is:inline
+    />
+  </body>
+</html>
