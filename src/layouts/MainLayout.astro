@@ -108,7 +108,28 @@ const pageTitle = title
         });
       }
     </script>
-    {hasVideo ? <script src="/third/lite-youtube-embed/src/lite-yt-embed.js" is:inline
-    ></script> : ''}
+    {
+      hasVideo ? (
+        <script
+          src="/third/lite-youtube-embed/src/lite-yt-embed.js"
+          is:inline
+        />
+      ) : (
+        ""
+      )
+    }
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXYY4HM36E"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-PXYY4HM36E");
+    </script>
   </body>
 </html>
