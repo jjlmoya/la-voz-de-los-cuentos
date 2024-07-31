@@ -120,6 +120,51 @@ const pageTitle = title
     }
 
     <!-- Google tag (gtag.js) -->
+    <style>
+      .cookie-consent {
+        position: fixed;
+        bottom: 0;
+        left: 10px;
+        right: 10px;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        border-radius: 5px;
+        display: none; /* Oculto por defecto */
+      }
+      .cookie-consent p {
+        padding: 8px;
+      }
+
+      .cookie-consent button {
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        margin-top: 10px;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 5px;
+        font-weight: bold;
+        margin: 0 5px; /* Espacio entre botones */
+      }
+      .cookie-consent-button {
+        background-color: var(--secondary-color);
+      }
+      .cookie-consent-reject-button {
+        opacity: 0.6;
+        background-color: var(--primary-color);
+      }
+    </style>
+
+    <div class="cookie-consent">
+      <p>
+        Para mejorar la experiencia necesitamos cookies de terceros, <br /> sólo
+        usamos Google Analytics ¿Aceptas las cookies?
+      </p>
+      <button class="cookie-consent-button">Aceptar</button>
+      <button class="cookie-consent-reject-button">No</button>
+    </div>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXYY4HM36E"
     ></script>
     <script>
@@ -128,8 +173,38 @@ const pageTitle = title
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-PXYY4HM36E");
+
+      var allConsentGranted = function () {
+        gtag("consent", "update", {
+          analytics_storage: "granted",
+        });
+        localStorage.setItem("cookieConsent", "granted");
+        document.querySelector(".cookie-consent").style.display = "none";
+      };
+
+      var allConsentRejected = function () {
+        localStorage.setItem("cookieConsent", "rejected");
+        document.querySelector(".cookie-consent").style.display = "none";
+      };
+
+      document
+        .querySelector(".cookie-consent-button")
+        .addEventListener("click", () => {
+          allConsentGranted();
+        });
+
+      document
+        .querySelector(".cookie-consent-reject-button")
+        .addEventListener("click", () => {
+          allConsentRejected();
+        });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        if (!localStorage.getItem("cookieConsent")) {
+          document.querySelector(".cookie-consent").style.display = "block";
+        }
+      });
     </script>
   </body>
 </html>
