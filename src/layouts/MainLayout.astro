@@ -64,7 +64,7 @@ const pageTitle = title
       content={`https://lavozdeloscuentos.es${image}`}
     />
     <meta property="og:image:alt" content={title} />
-    <meta property="og:url" content={`https://lavozdeloscuentos.es${url}`} />
+    <meta property="og:url" content={`https://lavozdeloscuentos.es${url}/`} />
     <meta property="og:type" content={type} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="msvalidate.01" content="F4F378590719CB3FE7C00F6916621727" />
@@ -82,23 +82,21 @@ const pageTitle = title
       (function () {
         const isProduction =
           window.location.hostname === "lavozdeloscuentos.es";
-        if (!isProduction) return
-        var currentUrl = window.location.href;
-
+        if (!isProduction) return;
+        const currentUrl = window.location.href;
+        let newUrl = "";
         if (currentUrl.startsWith("http://")) {
-          var httpsUrl = currentUrl.replace("http://", "https://");
-          window.location.replace(httpsUrl);
-        } else {
-          if (currentUrl.endsWith("/")) {
-            currentUrl = currentUrl.slice(0, -1);
-          }
-
-          var url = new URL(currentUrl);
-          if (url.hostname.startsWith("www.")) {
-            var nonWwwUrl = currentUrl.replace("www.", "");
-            window.location.replace(nonWwwUrl);
-          }
+          newUrl = currentUrl.replace("http://", "https://");
         }
+        if (currentUrl.endsWith("/")) {
+          newUrl = newUrl.slice(0, -1);
+        }
+
+        var url = new URL(newUrl);
+        if (url.hostname.startsWith("www.")) {
+          newUrl = newUrl.replace("www.", "");
+        }
+        window.location.replace(newUrl);
       })();
     </script>
   </head>
