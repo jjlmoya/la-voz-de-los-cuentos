@@ -1,0 +1,1 @@
+import"./hoisted.CBniHvUD.js";document.addEventListener("DOMContentLoaded",function(){const o=document.querySelectorAll(".lazy"),r=new IntersectionObserver((t,n)=>{t.forEach(s=>{if(s.isIntersecting){const e=s.target;e.src=e.dataset.src,e.classList.add("visible"),n.unobserve(e)}})},{threshold:.1});o.forEach(t=>{r.observe(t)})});
