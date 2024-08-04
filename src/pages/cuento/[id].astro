@@ -21,6 +21,19 @@ export async function getStaticPaths() {
   }));
 }
 
+const formatDate = (dateStr) => {
+  // Asumiendo que dateStr está en formato "DD/MM/YY"
+
+  const [day, month, year] = dateStr.split("/");
+  console.log({
+    day,
+    month,
+    year,
+  });
+  const fullYear = `${year}`;
+  return `${fullYear}-${month}-${day}`;
+};
+
 const schema = JSON.stringify({
   "@context": "http://schema.org",
   "@type": "CreativeWork",
@@ -29,7 +42,7 @@ const schema = JSON.stringify({
     "@type": "Person",
     name: "LaVozDeLosCuentos",
   },
-  datePublished: story.date,
+  datePublished: formatDate(story.date),
   image: `https://lavozdeloscuentos.es/assets/stories/${story.key}.png`,
   description: firstParagraph,
   genre: "Literatura Infantil",
@@ -42,7 +55,7 @@ const schema = JSON.stringify({
     name: `${story.name} - Video`,
     description: firstParagraph,
     thumbnailUrl: `https://lavozdeloscuentos.es/assets/stories/${story.key}.png`,
-    uploadDate: story.date,
+    uploadDate: formatDate(story.date),
     contentUrl: `https://www.youtube.com/embed/${story.youtube}`,
     embedUrl: `https://www.youtube.com/embed/${story.youtube}`,
   },
@@ -51,7 +64,7 @@ const schema = JSON.stringify({
     name: `${story.name} - Audio`,
     description: `${firstParagraph}`,
     thumbnailUrl: `https://lavozdeloscuentos.es/assets/stories/${story.key}.png`,
-    uploadDate: story.date,
+    uploadDate: formatDate(story.date),
     contentUrl: story.spotifyLink,
     embedUrl: story.spotifyLink,
   },
