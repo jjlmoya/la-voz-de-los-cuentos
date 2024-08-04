@@ -85,18 +85,24 @@ const pageTitle = title
         if (!isProduction) return;
         const currentUrl = window.location.href;
         let newUrl = "";
+        let hasRedirect = false;
         if (currentUrl.startsWith("http://")) {
           newUrl = currentUrl.replace("http://", "https://");
+          hasRedirect = true;
         }
         if (currentUrl.endsWith("/")) {
           newUrl = newUrl.slice(0, -1);
+          hasRedirect = true;
         }
 
         var url = new URL(newUrl);
         if (url.hostname.startsWith("www.")) {
           newUrl = newUrl.replace("www.", "");
+          hasRedirect = true;
         }
-        window.location.replace(newUrl);
+        if (hasRedirect) {
+          window.location.replace(newUrl);
+        }
       })();
     </script>
   </head>
