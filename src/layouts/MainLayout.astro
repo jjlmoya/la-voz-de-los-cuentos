@@ -8,7 +8,7 @@ const {
   image = "/img/icons/512x512.png",
   twitterCard = "summary_large_image",
   type = "website",
-  url = "/",
+  url = "",
   hasVideo = false,
 } = Astro.props;
 const pageTitle = title
@@ -78,6 +78,29 @@ const pageTitle = title
       content={`https://lavozdeloscuentos.es${image}`}
     />
     <meta property="twitter:description" content={description} />
+    <script>
+      (function () {
+        const isProduction =
+          window.location.hostname === "lavozdeloscuentos.es";
+        if (!isProduction) return
+        var currentUrl = window.location.href;
+
+        if (currentUrl.startsWith("http://")) {
+          var httpsUrl = currentUrl.replace("http://", "https://");
+          window.location.replace(httpsUrl);
+        } else {
+          if (currentUrl.endsWith("/")) {
+            currentUrl = currentUrl.slice(0, -1);
+          }
+
+          var url = new URL(currentUrl);
+          if (url.hostname.startsWith("www.")) {
+            var nonWwwUrl = currentUrl.replace("www.", "");
+            window.location.replace(nonWwwUrl);
+          }
+        }
+      })();
+    </script>
   </head>
 
   <body>
