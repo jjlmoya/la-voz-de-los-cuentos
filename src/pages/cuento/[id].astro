@@ -24,7 +24,7 @@ export async function getStaticPaths() {
 const formatDate = (dateStr) => {
   const [day, month, year] = dateStr.split("/");
   const fullYear = `${year}`;
-  return `${fullYear}-${month}-${day}T19:00:00Z`;
+  return `${fullYear}-${month}-${day}T00:00:00Z`;
 };
 
 const schema = JSON.stringify({
