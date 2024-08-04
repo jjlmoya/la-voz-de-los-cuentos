@@ -8,7 +8,7 @@ const {
   image = "/img/icons/512x512.png",
   twitterCard = "summary_large_image",
   type = "website",
-  url = "",
+  url = "/",
   hasVideo = false,
 } = Astro.props;
 const pageTitle = title
@@ -90,11 +90,6 @@ const pageTitle = title
           newUrl = currentUrl.replace("http://", "https://");
           hasRedirect = true;
         }
-        if (currentUrl.endsWith("/")) {
-          newUrl = newUrl.slice(0, -1);
-          hasRedirect = true;
-        }
-
         var url = new URL(newUrl);
         if (url.hostname.startsWith("www.")) {
           newUrl = newUrl.replace("www.", "");

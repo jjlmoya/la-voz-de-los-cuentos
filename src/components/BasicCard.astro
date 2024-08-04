@@ -9,7 +9,7 @@ function getImage(key, isSaga) {
   return `/assets/${imageSrc}`;
 }
 
-const linkTo = isSaga ? `/saga/${entry.key}` : `/cuento/${entry.key}`;
+const linkTo = isSaga ? `/saga/${entry.key}/` : `/cuento/${entry.key}/`;
 const imageSrc = getImage(entry.key, isSaga);
 
 const imageDimensions = {

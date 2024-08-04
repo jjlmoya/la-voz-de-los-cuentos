@@ -179,7 +179,7 @@ import { Image } from "astro:assets";
         selectedStoryView.style.display = "block";
         selectedStoryImg.src = `/assets/stories/${selectedStory.key}.png`;
         selectedStoryTitle.textContent = selectedStory.name;
-        const storyUrl = `/cuento/${selectedStory.key}`;
+        const storyUrl = `/cuento/${selectedStory.key}/`;
         selectedStoryLink.href = storyUrl;
         selectedStoryTitleLink.href = storyUrl;
         selectedStoryPlayBtn.href = storyUrl;

@@ -174,7 +174,7 @@ import { Image } from "astro:assets";
         selectedsagaView.style.display = "block";
         selectedsagaImg.src = `/assets/sagas/${selectedsaga.key}.png`;
         selectedsagaTitle.textContent = selectedsaga.name;
-        const sagaUrl = `/saga/${selectedsaga.key}`;
+        const sagaUrl = `/saga/${selectedsaga.key}/`;
         selectedsagaLink.href = sagaUrl;
         selectedsagaTitleLink.href = sagaUrl;
         selectedsagaPlayBtn.href = sagaUrl;
