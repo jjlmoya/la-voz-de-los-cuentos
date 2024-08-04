@@ -90,7 +90,7 @@ const pageTitle = title
           newUrl = currentUrl.replace("http://", "https://");
           hasRedirect = true;
         }
-        var url = new URL(newUrl);
+        var url = new URL(currentUrl);
         if (url.hostname.startsWith("www.")) {
           newUrl = newUrl.replace("www.", "");
           hasRedirect = true;
