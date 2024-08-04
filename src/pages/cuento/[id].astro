@@ -22,14 +22,7 @@ export async function getStaticPaths() {
 }
 
 const formatDate = (dateStr) => {
-  // Asumiendo que dateStr está en formato "DD/MM/YY"
-
   const [day, month, year] = dateStr.split("/");
-  console.log({
-    day,
-    month,
-    year,
-  });
   const fullYear = `${year}`;
   return `${fullYear}-${month}-${day}`;
 };
