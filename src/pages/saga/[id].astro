@@ -1,25 +1,25 @@
 ---
-import MainLayout from "../../layouts/MainLayout.astro";
-import BasicCard from "../../components/BasicCard.astro";
-import sagaData from "../../data/sagas.json";
-import storyData from "../../data/stories.json";
+import MainLayout from '../../layouts/MainLayout.astro'
+import BasicCard from '../../components/BasicCard.astro'
+import sagaData from '../../data/sagas.json'
+import storyData from '../../data/stories.json'
 
-const { id } = Astro.params;
-const saga = sagaData.find((s) => s.key === id);
-const filteredStories = storyData.filter((story) => story.saga === id);
+const { id } = Astro.params
+const saga = sagaData.find(s => s.key === id)
+const filteredStories = storyData.filter(story => story.saga === id)
 
 export async function getStaticPaths() {
-  return sagaData.map((saga) => ({
-    params: { id: saga.key },
-  }));
+  return sagaData.map(saga => ({
+    params: { id: saga.key }
+  }))
 }
 ---
 
 <MainLayout
-  title={"Saga: " + saga.name}
+  title={'Saga: ' + saga.name}
   description={saga.description}
-  image={"/assets/sagas/" + saga.key + ".png"}
-  url={"/saga/" + saga.key + "/"}
+  image={'/assets/sagas/' + saga.key + '.png'}
+  url={'/saga/' + saga.key + '/'}
   hasVideo
 >
   <div class="saga-container">
@@ -43,7 +43,7 @@ export async function getStaticPaths() {
     <h2 class="stories-title">Cuentos en esta saga</h2>
     <div class="stories-grid">
       {
-        filteredStories.map((story) => (
+        filteredStories.map(story => (
           <BasicCard key={story.key} entry={story} />
         ))
       }

@@ -12,18 +12,33 @@
     "content": "node ./scripts/content.js",
     "redimension": "python ./scripts/redimension.py",
     "characters": "node ./scripts/characters.js",
-    "copy-assets": "mkdirp ./public/la-voz-de-los-cuentos-games/assets && ncp ./node_modules/la-voz-de-los-cuentos-games/dist/la-voz-de-los-cuentos-games/assets ./public/la-voz-de-los-cuentos-games/assets"
+    "copy-assets": "mkdirp ./public/la-voz-de-los-cuentos-games/assets && ncp ./node_modules/la-voz-de-los-cuentos-games/dist/la-voz-de-los-cuentos-games/assets ./public/la-voz-de-los-cuentos-games/assets",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"src/**/*.{js,vue,css,html,md,astro}\""
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.1.5",
+    "@astrojs/vue": "^4.5.0",
+    "@vue/compiler-sfc": "^3.4.36",
     "astro": "^4.10.2",
+    "eslint-plugin-vue": "^9.27.0",
     "la-voz-de-los-cuentos-games": "^0.19.0",
     "sharp": "^0.33.4",
     "vite-plugin-pwa": "^0.20.0"
   },
   "devDependencies": {
+    "eslint": "^9.8.0",
+    "eslint-define-config": "^2.1.0",
+    "eslint-plugin-astro": "^1.2.3",
     "googleapis": "^137.1.0",
     "mkdirp": "^3.0.1",
-    "ncp": "^2.0.0"
+    "ncp": "^2.0.0",
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "stylelint": "^16.8.1",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-recommended": "^14.0.1",
+    "stylelint-config-recommended-vue": "^1.5.0"
   }
 }

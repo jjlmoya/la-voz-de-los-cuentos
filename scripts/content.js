@@ -103,6 +103,34 @@ async function readNewsLetterSpreedsheet() {
     }
 }
 
+async function readCharactersSpreedsheet() {
+    const spreadsheetId = '1stmw3Uy70JloMCnQpCG5wjLtAFbaIFN1Aqe1gK9JM7A';
+    const range = 'Characters!A1:N999';
+    const sheets = await authenticateGoogleSheets();
+
+    const response = await sheets.spreadsheets.values.get({
+        spreadsheetId: spreadsheetId,
+        range: range,
+    });
+
+    const rows = response.data.values;
+    if (rows.length) {
+        const headers = rows[0];
+        const data = rows.slice(1).map(row => {
+            let obj = {};
+            headers.forEach((header, index) => {
+                obj[header] = row[index] || '';
+            });
+            return obj;
+        });
+        return data.filter(entry => entry.name);
+    } else {
+        console.log('No se encontró data en la hoja.');
+        return [];
+    }
+}
+
+
 async function writeJsonToFile(data, filePath) {
     return new Promise((resolve, reject) => {
         const dir = path.dirname(filePath);
@@ -144,3 +172,13 @@ readNewsLetterSpreedsheet()
         console.log('JSON created newsletters.json');
     })
     .catch(err => console.error('Error Creating newsletters.json', err));
+
+
+readCharactersSpreedsheet()
+    .then(data => {
+        return writeJsonToFile(data, path.join(__dirname, '../src/data/characters.json'));
+    })
+    .then(() => {
+        console.log('JSON created characters.json');
+    })
+    .catch(err => console.error('Error Creating characters.json', err));

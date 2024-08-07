@@ -1,12 +1,12 @@
 ---
-import "../styles/FeaturedStories.css";
-import BasicCard from "./BasicCard.astro";
-import storiesData from "../data/stories.json";
-import { Image } from "astro:assets";
+import '../styles/FeaturedStories.css'
+import BasicCard from './BasicCard.astro'
+import storiesData from '../data/stories.json'
+import { Image } from 'astro:assets'
 
 const sortedStories = Object.entries(storiesData)
   .map(([key, data]) => ({ key, data }))
-  .sort((a, b) => b.data.order - a.data.order);
+  .sort((a, b) => b.data.order - a.data.order)
 ---
 
 <section class="featured-stories">
@@ -19,7 +19,7 @@ const sortedStories = Object.entries(storiesData)
     {
       sortedStories
         .slice(0, 10)
-        .map((story) => (
+        .map(story => (
           <BasicCard linkType="VIDEO" key={story.key} entry={story.data} />
         ))
     }

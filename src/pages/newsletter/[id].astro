@@ -1,28 +1,28 @@
 ---
-import MainLayout from "../../layouts/MainLayout.astro";
-import newsletters from "../../data/newsletters.json";
-import "../../styles/NewsLetterPage.css";
+import MainLayout from '../../layouts/MainLayout.astro'
+import newsletters from '../../data/newsletters.json'
+import '../../styles/NewsLetterPage.css'
 
-const { id } = Astro.params;
-const newsletter = newsletters.find((newsletter) => newsletter.id === id);
+const { id } = Astro.params
+const newsletter = newsletters.find(newsletter => newsletter.id === id)
 
 const firstParagraph = newsletter.html
-  .split("\n")
-  .filter((p) => p.trim() !== "")[0]
-  .replace(/<\/?[^>]+(>|$)/g, ""); 
+  .split('\n')
+  .filter(p => p.trim() !== '')[0]
+  .replace(/<\/?[^>]+(>|$)/g, '')
 
 export async function getStaticPaths() {
-  return newsletters.map((newsletter) => ({
-    params: { id: newsletter.id },
-  }));
+  return newsletters.map(newsletter => ({
+    params: { id: newsletter.id }
+  }))
 }
 ---
 
 <MainLayout
   title={newsletter.title}
   description={firstParagraph}
-  image={"/assets/stories/newsletter.png"}
-  url={"/newsletter/" + newsletter.id + "/"}
+  image={'/assets/stories/newsletter.png'}
+  url={'/newsletter/' + newsletter.id + '/'}
   hasVideo
 >
   <div class="newsletter-container" id="newsletter-container">

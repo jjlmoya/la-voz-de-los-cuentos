@@ -1,9 +1,9 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
-import newsletters from "../data/newsletters.json";
-import "../styles/NewsLetterPage.css";
+import MainLayout from '../layouts/MainLayout.astro'
+import newsletters from '../data/newsletters.json'
+import '../styles/NewsLetterPage.css'
 
-console.log({ newsletters });
+console.log({ newsletters })
 ---
 
 <MainLayout
@@ -15,7 +15,7 @@ console.log({ newsletters });
     <div class="newsletters-grid">
       <h1 class="newsletters-title">Nuestras newsletters</h1>
       {
-        newsletters.map((newletter) => (
+        newsletters.map(newletter => (
           <a href={`/newsletter/${newletter.id}`}>{newletter.title}</a>
         ))
       }

@@ -1,42 +1,40 @@
 ---
 // Filtrar historias que tengan un campo de YouTube
-import StreamingLayout from "../layouts/StreamingLayout.astro";
-import storiesData from "../data/stories.json";
-import "../styles/StreamingPage.css";
+import StreamingLayout from '../layouts/StreamingLayout.astro'
+import storiesData from '../data/stories.json'
+import '../styles/StreamingPage.css'
 
 // Obtener la fecha de hoy
 
-const cutArray = (array) => {
-  const [first, ...rest] = array;
-  return rest.slice(-50);
-};
-const today = new Date();
-today.setHours(0, 0, 0, 0); // Poner la hora a 00:00:00 para comparaciones precisas
+const cutArray = array => {
+  const [first, ...rest] = array
+  return rest.slice(-50)
+}
+const today = new Date()
+today.setHours(0, 0, 0, 0) // Poner la hora a 00:00:00 para comparaciones precisas
 
 // Filtrar historias que tengan un campo de YouTube y que sean de ayer o del pasado
 const stories = cutArray(
   Object.entries(storiesData)
     .map(([key, data]) => ({ key, data }))
-    .filter((story) => {
-      const storyDate = new Date(
-        story.data.date.split("/").reverse().join("-")
-      ); // Convertir la fecha al formato ISO
-      return story.data.youtube && storyDate < today;
+    .filter(story => {
+      const storyDate = new Date(story.data.date.split('/').reverse().join('-')) // Convertir la fecha al formato ISO
+      return story.data.youtube && storyDate < today
     })
-);
+)
 
 // Función para mezclar el array de historias
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[array[i], array[j]] = [array[j], array[i]]
   }
-  return array;
+  return array
 }
 
-const shuffledStories = shuffle(stories);
-const initialStory = shuffledStories[0];
-console.log(shuffledStories.length);
+const shuffledStories = shuffle(stories)
+const initialStory = shuffledStories[0]
+console.log(shuffledStories.length)
 ---
 
 <StreamingLayout
@@ -70,56 +68,54 @@ console.log(shuffledStories.length);
   </div>
 
   <script type="module">
-    document.addEventListener("DOMContentLoaded", () => {
-      let _current = {};
+    document.addEventListener('DOMContentLoaded', () => {
+      let _current = {}
       const stories = JSON.parse(
-        document.getElementById("stories-data").textContent
-      );
-      let currentStoryIndex = 0;
-      let player;
-      let currentEntryElement;
-      const currentElement = document.getElementById("streaming-current");
-      const videoTitleElement = document.querySelector(
-        ".streaming-video-title"
-      );
+        document.getElementById('stories-data').textContent
+      )
+      let currentStoryIndex = 0
+      let player
+      let currentEntryElement
+      const currentElement = document.getElementById('streaming-current')
+      const videoTitleElement = document.querySelector('.streaming-video-title')
 
       function _getTextByPosition(position) {
         switch (position) {
           case 0:
-            return "LIVE";
+            return 'LIVE'
           case 1:
-            return "NEXT";
+            return 'NEXT'
         }
       }
       function getEntry(index, position) {
-        let _index = (index + position) % stories.length;
-        const _story = stories[_index];
-        const text = _getTextByPosition(position);
-        console.log({ text });
+        let _index = (index + position) % stories.length
+        const _story = stories[_index]
+        const text = _getTextByPosition(position)
+        console.log({ text })
         return `
-          <div class="streaming-entry ${position === 0 ? "streaming-entry--active" : ""}">
+          <div class="streaming-entry ${position === 0 ? 'streaming-entry--active' : ''}">
             <img  style="opacity:${100 - 50 - 7 * position}%" class="streaming-entry-image" src="/assets/stories/${_story.data.key}.png" alt"${_story.data.name}"/>
-            ${text ? `<span class="streaming-entry-label">${text}</span>` : ""}
+            ${text ? `<span class="streaming-entry-label">${text}</span>` : ''}
           </div>
-      `;
+      `
       }
 
       function updateCurrentStory() {
-        currentStoryIndex = (currentStoryIndex + 1) % stories.length;
-        const currentStory = stories[currentStoryIndex];
-        videoTitleElement.textContent = currentStory.data.name;
-        animateTitle();
-        player.loadVideoById(currentStory.data.youtube); // Carga el nuevo video en el reproductor existente
-        renderCurrentStory(currentStory);
+        currentStoryIndex = (currentStoryIndex + 1) % stories.length
+        const currentStory = stories[currentStoryIndex]
+        videoTitleElement.textContent = currentStory.data.name
+        animateTitle()
+        player.loadVideoById(currentStory.data.youtube) // Carga el nuevo video en el reproductor existente
+        renderCurrentStory(currentStory)
         _current = {
           ..._current,
           index: currentStoryIndex,
-          ...currentStory,
-        };
+          ...currentStory
+        }
       }
 
       function renderCurrentStory(currentStory) {
-        currentElement.textContent = currentStory.data.name;
+        currentElement.textContent = currentStory.data.name
         currentElement.innerHTML = `
         ${getEntry(currentStoryIndex, 0)}
         ${getEntry(currentStoryIndex, 1)}
@@ -127,105 +123,103 @@ console.log(shuffledStories.length);
         ${getEntry(currentStoryIndex, 3)}
         ${getEntry(currentStoryIndex, 4)}
         ${getEntry(currentStoryIndex, 5)}
-      `;
-        currentEntryElement = document.querySelector(
-          ".streaming-entry--active"
-        );
+      `
+        currentEntryElement = document.querySelector('.streaming-entry--active')
       }
 
       function onPlayerReady(event) {
-        console.log("Player is ready");
-        const duration = player.getDuration();
+        console.log('Player is ready')
+        const duration = player.getDuration()
         _current = {
           ..._current,
-          duration,
-        };
-        console.log("Video duration: " + duration + " seconds");
+          duration
+        }
+        console.log('Video duration: ' + duration + ' seconds')
       }
 
       function onPlayerStateChange(event) {
-        console.log("Player state changed to: " + event.data);
+        console.log('Player state changed to: ' + event.data)
         if (event.data === YT.PlayerState.ENDED) {
-          updateCurrentStory();
+          updateCurrentStory()
         } else if (event.data === YT.PlayerState.PLAYING) {
           setInterval(() => {
-            const currentTime = player.getCurrentTime();
+            const currentTime = player.getCurrentTime()
             _current = {
               ..._current,
               currentTime,
-              progress: (currentTime / _current.duration) * 100,
-            };
+              progress: (currentTime / _current.duration) * 100
+            }
             currentEntryElement.querySelector(
-              ".streaming-entry-label"
-            ).innerText = Math.round(_current.progress) + " %";
-          }, 1000);
+              '.streaming-entry-label'
+            ).innerText = Math.round(_current.progress) + ' %'
+          }, 1000)
         }
-        console.log(_current);
+        console.log(_current)
       }
 
       function animateTitle() {
-        console.log("animate");
-        const swiftUpElements = document.querySelectorAll(".swift-up-text");
-        swiftUpElements.forEach((elem) => {
-          const words = elem.textContent.split(" ");
-          elem.innerHTML = "";
+        console.log('animate')
+        const swiftUpElements = document.querySelectorAll('.swift-up-text')
+        swiftUpElements.forEach(elem => {
+          const words = elem.textContent.split(' ')
+          elem.innerHTML = ''
 
           words.forEach((el, index) => {
-            words[index] = `<span class="span"><i>${words[index]}</i></span>`;
-          });
+            words[index] = `<span class="span"><i>${words[index]}</i></span>`
+          })
 
-          elem.innerHTML = words.join(" ");
+          elem.innerHTML = words.join(' ')
 
-          const children = document.querySelectorAll("span > i");
+          const children = document.querySelectorAll('span > i')
           children.forEach((node, index) => {
-            node.style.animationDelay = `${index * 0.2}s`;
-          });
-        });
+            node.style.animationDelay = `${index * 0.2}s`
+          })
+        })
       }
-      animateTitle();
+      animateTitle()
 
       function onPlayerPlaybackQualityChange(event) {
-        console.log("Playback quality changed to: " + event.data);
+        console.log('Playback quality changed to: ' + event.data)
       }
 
       function onPlayerPlaybackRateChange(event) {
-        console.log("Playback rate changed to: " + event.data);
+        console.log('Playback rate changed to: ' + event.data)
       }
 
       function onPlayerError(event) {
-        console.error("Error occurred: " + event.data);
+        console.error('Error occurred: ' + event.data)
       }
 
       function onPlayerApiChange(event) {
-        console.log("API changed");
+        console.log('API changed')
       }
 
       function onYouTubeIframeAPIReady() {
-        player = new YT.Player("youtube-embed", {
+        player = new YT.Player('youtube-embed', {
           events: {
             onStateChange: onPlayerStateChange,
             onReady: onPlayerReady,
             onPlaybackQualityChange: onPlayerPlaybackQualityChange,
             onPlaybackRateChange: onPlayerPlaybackRateChange,
             onError: onPlayerError,
-            onApiChange: onPlayerApiChange,
-          },
-        });
+            onApiChange: onPlayerApiChange
+          }
+        })
       }
 
-      renderCurrentStory(stories[0]);
+      renderCurrentStory(stories[0])
       _current = {
         ..._current,
         index: 0,
-        ...stories[0],
-      };
-      const tag = document.createElement("script");
-      tag.src = "https://www.youtube.com/iframe_api";
-      const firstScriptTag = document.getElementsByTagName("script")[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        ...stories[0]
+      }
+      const tag = document.createElement('script')
+      tag.src = 'https://www.youtube.com/iframe_api'
+      const firstScriptTag = document.getElementsByTagName('script')[0]
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
 
-      window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
-    });
+      window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady
+    })
   </script>
 
   <div id="stories-data" style="display: none;">

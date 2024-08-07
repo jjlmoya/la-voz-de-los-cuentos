@@ -1,6 +1,6 @@
 ---
-import { Image } from "astro:assets";
-import "../styles/HeroBanner.css";
+import { Image } from 'astro:assets'
+import '../styles/HeroBanner.css'
 ---
 
 <div class="hero-banner">
@@ -49,21 +49,21 @@ import "../styles/HeroBanner.css";
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    window.addEventListener("scroll", handleScroll);
-  });
+  document.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('scroll', handleScroll)
+  })
 
   function handleScroll() {
-    const scrollPosition = window.pageYOffset;
-    document.getElementById("layer-back").style.transform =
-      `translateY(${scrollPosition * 0.2}px)`;
-    document.getElementById("layer-middle").style.transform =
-      `translateY(${scrollPosition * 0.5}px)`;
-    document.getElementById("layer-front").style.transform =
-      `translateY(${scrollPosition * 0.8}px)`;
+    const scrollPosition = window.pageYOffset
+    document.getElementById('layer-back').style.transform =
+      `translateY(${scrollPosition * 0.2}px)`
+    document.getElementById('layer-middle').style.transform =
+      `translateY(${scrollPosition * 0.5}px)`
+    document.getElementById('layer-front').style.transform =
+      `translateY(${scrollPosition * 0.8}px)`
   }
 
-  document.addEventListener("beforeunload", () => {
-    window.removeEventListener("scroll", handleScroll);
-  });
+  document.addEventListener('beforeunload', () => {
+    window.removeEventListener('scroll', handleScroll)
+  })
 </script>

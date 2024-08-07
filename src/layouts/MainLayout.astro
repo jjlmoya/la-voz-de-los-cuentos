@@ -1,19 +1,19 @@
 ---
-import Header from "../components/commons/Header/Header.astro";
-import MainFooter from "../components/commons/Footer/Footer.astro";
-import "./layout.css";
+import Header from '../components/commons/Header/Header.astro'
+import MainFooter from '../components/commons/Footer/Footer.astro'
+import './layout.css'
 const {
   title,
   description,
-  image = "/img/icons/512x512.png",
-  twitterCard = "summary_large_image",
-  type = "website",
-  url = "/",
-  hasVideo = false,
-} = Astro.props;
+  image = '/img/icons/512x512.png',
+  twitterCard = 'summary_large_image',
+  type = 'website',
+  url = '/',
+  hasVideo = false
+} = Astro.props
 const pageTitle = title
   ? `${title} | La Voz de los Cuentos`
-  : "La Voz de los Cuentos";
+  : 'La Voz de los Cuentos'
 ---
 
 <html lang="es">
@@ -79,26 +79,25 @@ const pageTitle = title
     />
     <meta property="twitter:description" content={description} />
     <script>
-      (function () {
-        const isProduction =
-          window.location.hostname === "lavozdeloscuentos.es";
-        if (!isProduction) return;
-        const currentUrl = window.location.href;
-        let newUrl = "";
-        let hasRedirect = false;
-        if (currentUrl.startsWith("http://")) {
-          newUrl = currentUrl.replace("http://", "https://");
-          hasRedirect = true;
+      ;(function () {
+        const isProduction = window.location.hostname === 'lavozdeloscuentos.es'
+        if (!isProduction) return
+        const currentUrl = window.location.href
+        let newUrl = ''
+        let hasRedirect = false
+        if (currentUrl.startsWith('http://')) {
+          newUrl = currentUrl.replace('http://', 'https://')
+          hasRedirect = true
         }
-        var url = new URL(currentUrl);
-        if (url.hostname.startsWith("www.")) {
-          newUrl = newUrl.replace("www.", "");
-          hasRedirect = true;
+        var url = new URL(currentUrl)
+        if (url.hostname.startsWith('www.')) {
+          newUrl = newUrl.replace('www.', '')
+          hasRedirect = true
         }
         if (hasRedirect) {
-          window.location.replace(newUrl);
+          window.location.replace(newUrl)
         }
-      })();
+      })()
     </script>
   </head>
 
@@ -110,24 +109,24 @@ const pageTitle = title
     <MainFooter />
     <style>
       html {
-        font-family: "Fredoka", sans-serif;
+        font-family: 'Fredoka', sans-serif;
       }
     </style>
     <script>
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker.register("/service-worker.js").then(
-            (registration) => {
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js').then(
+            registration => {
               console.log(
-                "ServiceWorker registration successful with scope: ",
+                'ServiceWorker registration successful with scope: ',
                 registration.scope
-              );
+              )
             },
-            (err) => {
-              console.log("ServiceWorker registration failed: ", err);
+            err => {
+              console.log('ServiceWorker registration failed: ', err)
             }
-          );
-        });
+          )
+        })
       }
     </script>
     {
@@ -137,7 +136,7 @@ const pageTitle = title
           is:inline
         />
       ) : (
-        ""
+        ''
       )
     }
 
@@ -190,43 +189,43 @@ const pageTitle = title
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXYY4HM36E"
     ></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || []
       function gtag() {
-        dataLayer.push(arguments);
+        dataLayer.push(arguments)
       }
-      gtag("js", new Date());
-      gtag("config", "G-PXYY4HM36E");
+      gtag('js', new Date())
+      gtag('config', 'G-PXYY4HM36E')
 
       var allConsentGranted = function () {
-        gtag("consent", "update", {
-          analytics_storage: "granted",
-        });
-        localStorage.setItem("cookieConsent", "granted");
-        document.querySelector(".cookie-consent").style.display = "none";
-      };
+        gtag('consent', 'update', {
+          analytics_storage: 'granted'
+        })
+        localStorage.setItem('cookieConsent', 'granted')
+        document.querySelector('.cookie-consent').style.display = 'none'
+      }
 
       var allConsentRejected = function () {
-        localStorage.setItem("cookieConsent", "rejected");
-        document.querySelector(".cookie-consent").style.display = "none";
-      };
+        localStorage.setItem('cookieConsent', 'rejected')
+        document.querySelector('.cookie-consent').style.display = 'none'
+      }
 
       document
-        .querySelector(".cookie-consent-button")
-        .addEventListener("click", () => {
-          allConsentGranted();
-        });
+        .querySelector('.cookie-consent-button')
+        .addEventListener('click', () => {
+          allConsentGranted()
+        })
 
       document
-        .querySelector(".cookie-consent-reject-button")
-        .addEventListener("click", () => {
-          allConsentRejected();
-        });
+        .querySelector('.cookie-consent-reject-button')
+        .addEventListener('click', () => {
+          allConsentRejected()
+        })
 
-      document.addEventListener("DOMContentLoaded", function () {
-        if (!localStorage.getItem("cookieConsent")) {
-          document.querySelector(".cookie-consent").style.display = "block";
+      document.addEventListener('DOMContentLoaded', function () {
+        if (!localStorage.getItem('cookieConsent')) {
+          document.querySelector('.cookie-consent').style.display = 'block'
         }
-      });
+      })
     </script>
   </body>
 </html>

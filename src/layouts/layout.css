@@ -79,12 +79,12 @@ time,
 mark,
 audio,
 video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 article,
@@ -98,63 +98,62 @@ hgroup,
 menu,
 nav,
 section {
-    display: block;
+  display: block;
 }
 
 body {
-    line-height: 1;
+  line-height: 1;
 }
 
 ol,
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 blockquote,
 q {
-    quotes: none;
+  quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: '';
-    content: none;
+  content: '';
+  content: none;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 :root {
-    --primary-color: #187e58;
-    --secondary-color: #FF6F61;
-    --background-color: #d2eef5;
-    --title-color: #450505;
-
+  --primary-color: #187e58;
+  --secondary-color: #ff6f61;
+  --background-color: #d2eef5;
+  --title-color: #450505;
 }
 
 body {
-    background-color: var(--background-color);
-    font-family: "Fredoka", sans-serif;
+  background-color: var(--background-color);
+  font-family: 'Fredoka', sans-serif;
 }
 
 .text-secondary {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 a {
-    text-decoration-line: none;
+  text-decoration-line: none;
 }
 .content-layout {
-    margin-top: 40px
+  margin-top: 40px;
 }
 
 body {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }

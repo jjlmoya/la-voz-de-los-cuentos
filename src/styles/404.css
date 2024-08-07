@@ -1,50 +1,48 @@
-
 .voz-cuentos-body {
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60vh;
-    margin: 0;
-    font-family: "Fredoka", sans-serif;
-    img {
-        border-radius: 16px;
-    }
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  margin: 0;
+  font-family: 'Fredoka', sans-serif;
+  img {
+    border-radius: 16px;
+  }
 }
 
 .voz-cuentos-container {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    margin: 40px 16px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  margin: 40px 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .voz-cuentos-owl img {
-    width: 100px;
-    margin-bottom: 20px;
+  width: 100px;
+  margin-bottom: 20px;
 }
 
 .voz-cuentos-title {
-    margin-bottom: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .voz-cuentos-message {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 .voz-cuentos-link {
-    display: inline-block;
-    margin-top: 1em;
-    padding: 0.5em 1em;
-    color: #ffffff;
-    background-color: var(--secondary-color);
-    text-decoration: none;
-    border-radius: 5px;
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  color: #ffffff;
+  background-color: var(--secondary-color);
+  text-decoration: none;
+  border-radius: 5px;
 }
 
 .voz-cuentos-link:hover {
-    background-color: #795548;
+  background-color: #795548;
 }
-

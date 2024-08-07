@@ -1,5 +1,5 @@
 ---
-import "./header.css";
+import './header.css'
 ---
 
 <header class="main-header">
@@ -18,27 +18,32 @@ import "./header.css";
     <ul class="main-header__nav-list" id="nav-list">
       <li class="main-header__nav-item">
         <a href="/" class="main-header__nav-link" onclick="closeMenu()"
-          >Inicio</a>
+          >Inicio</a
+        >
       </li>
       <li class="main-header__nav-item">
         <a href="/cuentos/" class="main-header__nav-link" onclick="closeMenu()"
-          >Cuentos</a>
+          >Cuentos</a
+        >
       </li>
       <li class="main-header__nav-item">
         <a href="/sagas/" class="main-header__nav-link" onclick="closeMenu()"
-          >Sagas</a>
+          >Sagas</a
+        >
       </li>
       <li class="main-header__nav-item">
         <a
           href="/personalizado/cuento/"
           class="main-header__nav-link"
-          onclick="closeMenu()">Cuento Personalizado</a>
+          onclick="closeMenu()">Cuento Personalizado</a
+        >
       </li>
       <li class="main-header__nav-item">
         <a
           href="/newsletters/"
           class="main-header__nav-link"
-          onclick="closeMenu()">NewsLetters</a>
+          onclick="closeMenu()">NewsLetters</a
+        >
       </li>
     </ul>
     <div class="backdrop" id="backdrop" onclick="closeMenu()"></div>
@@ -46,32 +51,32 @@ import "./header.css";
 </header>
 
 <script>
-  let isMenuOpen = false;
+  let isMenuOpen = false
 
   document
-    .getElementById("hamburger-menu")
-    .addEventListener("click", toggleMenu);
+    .getElementById('hamburger-menu')
+    .addEventListener('click', toggleMenu)
   document
-    .getElementById("nav-list")
-    .classList.toggle("main-header__nav-list--open", isMenuOpen);
+    .getElementById('nav-list')
+    .classList.toggle('main-header__nav-list--open', isMenuOpen)
 
   function toggleMenu() {
-    isMenuOpen = !isMenuOpen;
+    isMenuOpen = !isMenuOpen
     document
-      .getElementById("nav-list")
-      .classList.toggle("main-header__nav-list--open", isMenuOpen);
+      .getElementById('nav-list')
+      .classList.toggle('main-header__nav-list--open', isMenuOpen)
     document
-      .getElementById("backdrop")
-      .classList.toggle("backdrop--visible", isMenuOpen);
-    document.body.classList.toggle("no-scroll", isMenuOpen);
+      .getElementById('backdrop')
+      .classList.toggle('backdrop--visible', isMenuOpen)
+    document.body.classList.toggle('no-scroll', isMenuOpen)
   }
 
   function closeMenu() {
-    isMenuOpen = false;
+    isMenuOpen = false
     document
-      .getElementById("nav-list")
-      .classList.remove("main-header__nav-list--open");
-    document.getElementById("backdrop").classList.remove("backdrop--visible");
-    document.body.classList.remove("no-scroll");
+      .getElementById('nav-list')
+      .classList.remove('main-header__nav-list--open')
+    document.getElementById('backdrop').classList.remove('backdrop--visible')
+    document.body.classList.remove('no-scroll')
   }
 </script>

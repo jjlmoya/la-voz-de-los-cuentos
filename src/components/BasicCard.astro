@@ -1,21 +1,21 @@
 ---
-import "../styles/BasicCard.css";
-import { Image } from "astro:assets";
+import '../styles/BasicCard.css'
+import { Image } from 'astro:assets'
 
-const { entry, isSaga, linkType } = Astro.props;
+const { entry, isSaga, linkType } = Astro.props
 
 function getImage(key, isSaga) {
-  const imageSrc = `${isSaga ? "sagas" : "stories"}/${key}.png`;
-  return `/assets/${imageSrc}`;
+  const imageSrc = `${isSaga ? 'sagas' : 'stories'}/${key}.png`
+  return `/assets/${imageSrc}`
 }
 
-const linkTo = isSaga ? `/saga/${entry.key}/` : `/cuento/${entry.key}/`;
-const imageSrc = getImage(entry.key, isSaga);
+const linkTo = isSaga ? `/saga/${entry.key}/` : `/cuento/${entry.key}/`
+const imageSrc = getImage(entry.key, isSaga)
 
 const imageDimensions = {
   width: 512,
-  height: 512,
-};
+  height: 512
+}
 ---
 
 <a href={linkTo} class="basic-card-link">
@@ -24,7 +24,7 @@ const imageDimensions = {
       <img
         data-key={entry.key}
         data-src={imageSrc}
-        alt={"Enlace a " + entry.name}
+        alt={'Enlace a ' + entry.name}
         width={imageDimensions.width}
         height={imageDimensions.height}
         class="lazy"
@@ -44,24 +44,24 @@ const imageDimensions = {
 </a>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const lazyImages = document.querySelectorAll(".lazy");
+  document.addEventListener('DOMContentLoaded', function () {
+    const lazyImages = document.querySelectorAll('.lazy')
     const observer = new IntersectionObserver(
       (entries, observer) => {
-        entries.forEach((entry) => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
-            const img = entry.target;
-            img.src = img.dataset.src;
-            img.classList.add("visible");
-            observer.unobserve(img);
+            const img = entry.target
+            img.src = img.dataset.src
+            img.classList.add('visible')
+            observer.unobserve(img)
           }
-        });
+        })
       },
       { threshold: 0.1 }
-    );
+    )
 
-    lazyImages.forEach((image) => {
-      observer.observe(image);
-    });
-  });
+    lazyImages.forEach(image => {
+      observer.observe(image)
+    })
+  })
 </script>

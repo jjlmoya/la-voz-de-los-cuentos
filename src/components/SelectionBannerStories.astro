@@ -1,7 +1,7 @@
 ---
-import stories from "../data/stories.json";
-import "../styles/SelectionBanner.css";
-import { Image } from "astro:assets";
+import stories from '../data/stories.json'
+import '../styles/SelectionBanner.css'
+import { Image } from 'astro:assets'
 ---
 
 <section class="story-banner">
@@ -117,84 +117,84 @@ import { Image } from "astro:assets";
 </section>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const recommendBtn = document.querySelector(".js-stories-recommend-btn");
-    const retryBtn = document.querySelector(".js-stories-retry-btn");
-    const initialView = document.querySelector(".story-initial-view");
-    const loadingView = document.getElementById("story-loading-view");
-    const selectedStoryView = document.getElementById("selected-story-view");
+  document.addEventListener('DOMContentLoaded', () => {
+    const recommendBtn = document.querySelector('.js-stories-recommend-btn')
+    const retryBtn = document.querySelector('.js-stories-retry-btn')
+    const initialView = document.querySelector('.story-initial-view')
+    const loadingView = document.getElementById('story-loading-view')
+    const selectedStoryView = document.getElementById('selected-story-view')
 
     const randomStoryImg = document.querySelector(
-      ".js-stories-random-story-img"
-    );
+      '.js-stories-random-story-img'
+    )
     const loadingStoryImg = document.querySelector(
-      ".js-stories-loading-story-img"
-    );
+      '.js-stories-loading-story-img'
+    )
     const selectedStoryLink = document.querySelector(
-      ".js-stories-selected-story-link"
-    );
+      '.js-stories-selected-story-link'
+    )
     const selectedStoryImg = document.querySelector(
-      ".js-stories-selected-story-img"
-    );
+      '.js-stories-selected-story-img'
+    )
     const selectedStoryTitleLink = document.querySelector(
-      ".js-stories-selected-story-title-link"
-    );
-    const selectedStoryTitle = document.getElementById("selected-story-title");
+      '.js-stories-selected-story-title-link'
+    )
+    const selectedStoryTitle = document.getElementById('selected-story-title')
     const selectedStoryPlayBtn = document.querySelector(
-      ".js-stories-selected-story-play-btn"
-    );
+      '.js-stories-selected-story-play-btn'
+    )
 
-    let intervalId = null;
-    let currentRandomStory = null;
-    let selectedStory = null;
+    let intervalId = null
+    let currentRandomStory = null
+    let selectedStory = null
 
-    const storiesDiv = document.getElementById("stories-data");
-    const stories = JSON.parse(storiesDiv.textContent);
+    const storiesDiv = document.getElementById('stories-data')
+    const stories = JSON.parse(storiesDiv.textContent)
 
     function getRandomStory() {
-      const randomIndex = Math.floor(Math.random() * stories.length);
-      return stories[randomIndex];
+      const randomIndex = Math.floor(Math.random() * stories.length)
+      return stories[randomIndex]
     }
 
     function selectRandomStory() {
-      if (loadingView.style.display === "block") return;
-      initialView.style.display = "none";
-      loadingView.style.display = "block";
-      let count = 0;
+      if (loadingView.style.display === 'block') return
+      initialView.style.display = 'none'
+      loadingView.style.display = 'block'
+      let count = 0
       intervalId = setInterval(() => {
-        currentRandomStory = getRandomStory();
-        loadingStoryImg.src = `/assets/stories/${currentRandomStory.key}.png`;
-        count++;
+        currentRandomStory = getRandomStory()
+        loadingStoryImg.src = `/assets/stories/${currentRandomStory.key}.png`
+        count++
         if (count >= 10) {
-          clearInterval(intervalId);
-          finalizeSelection();
+          clearInterval(intervalId)
+          finalizeSelection()
         }
-      }, 200);
+      }, 200)
     }
 
     function finalizeSelection() {
       setTimeout(() => {
-        selectedStory = getRandomStory();
-        loadingView.style.display = "none";
-        selectedStoryView.style.display = "block";
-        selectedStoryImg.src = `/assets/stories/${selectedStory.key}.png`;
-        selectedStoryTitle.textContent = selectedStory.name;
-        const storyUrl = `/cuento/${selectedStory.key}/`;
-        selectedStoryLink.href = storyUrl;
-        selectedStoryTitleLink.href = storyUrl;
-        selectedStoryPlayBtn.href = storyUrl;
-      }, 200);
+        selectedStory = getRandomStory()
+        loadingView.style.display = 'none'
+        selectedStoryView.style.display = 'block'
+        selectedStoryImg.src = `/assets/stories/${selectedStory.key}.png`
+        selectedStoryTitle.textContent = selectedStory.name
+        const storyUrl = `/cuento/${selectedStory.key}/`
+        selectedStoryLink.href = storyUrl
+        selectedStoryTitleLink.href = storyUrl
+        selectedStoryPlayBtn.href = storyUrl
+      }, 200)
     }
 
     function retryRecommendation() {
-      selectedStoryView.style.display = "none";
-      selectRandomStory();
+      selectedStoryView.style.display = 'none'
+      selectRandomStory()
     }
 
-    recommendBtn.addEventListener("click", selectRandomStory);
-    retryBtn.addEventListener("click", retryRecommendation);
+    recommendBtn.addEventListener('click', selectRandomStory)
+    retryBtn.addEventListener('click', retryRecommendation)
 
-    const randomStory = getRandomStory();
-    randomStoryImg.src = `/assets/stories/${randomStory.key}.png`;
-  });
+    const randomStory = getRandomStory()
+    randomStoryImg.src = `/assets/stories/${randomStory.key}.png`
+  })
 </script>

@@ -1,14 +1,14 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
-import BasicCard from "../components/BasicCard.astro";
-import storiesData from "../data/stories.json";
-import "../styles/StoriesPage.css";
+import MainLayout from '../layouts/MainLayout.astro'
+import BasicCard from '../components/BasicCard.astro'
+import storiesData from '../data/stories.json'
+import '../styles/StoriesPage.css'
 const stories = Object.entries(storiesData).map(([key, data]) => ({
   key,
-  data,
-}));
-const totalStories = stories.length;
-const storyCountMessage = `Tenemos <span class="text-secondary">${totalStories}</span> cuentos mágicos para ti`;
+  data
+}))
+const totalStories = stories.length
+const storyCountMessage = `Tenemos <span class="text-secondary">${totalStories}</span> cuentos mágicos para ti`
 ---
 
 <MainLayout
@@ -21,7 +21,7 @@ const storyCountMessage = `Tenemos <span class="text-secondary">${totalStories}<
     <p class="story-count" innerHTML={storyCountMessage}></p>
     <div class="stories-grid">
       {
-        stories.map((story) => (
+        stories.map(story => (
           <BasicCard linkType="VIDEO" key={story.key} entry={story.data} />
         ))
       }

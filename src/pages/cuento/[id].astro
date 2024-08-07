@@ -1,74 +1,72 @@
 ---
-import MainLayout from "../../layouts/MainLayout.astro";
-import stories from "../../data/stories.json";
-import "../../styles/StoryPage.css";
-import { Image } from "astro:assets";
+import MainLayout from '../../layouts/MainLayout.astro'
+import stories from '../../data/stories.json'
+import '../../styles/StoryPage.css'
+import { Image } from 'astro:assets'
 
-const { id } = Astro.params;
-const story = stories.find((story) => story.key === id);
+const { id } = Astro.params
+const story = stories.find(story => story.key === id)
 const relatedStories = stories
-  .filter((s) => s.key !== id && s.saga === story.saga)
+  .filter(s => s.key !== id && s.saga === story.saga)
   .sort(() => 0.5 - Math.random())
-  .slice(0, 6);
+  .slice(0, 6)
 
-const firstParagraph = story.story
-  .split("\n")
-  .filter((p) => p.trim() !== "")[0];
+const firstParagraph = story.story.split('\n').filter(p => p.trim() !== '')[0]
 
 export async function getStaticPaths() {
-  return stories.map((story) => ({
-    params: { id: story.key },
-  }));
+  return stories.map(story => ({
+    params: { id: story.key }
+  }))
 }
 
-const formatDate = (dateStr) => {
-  const [day, month, year] = dateStr.split("/");
-  const fullYear = `${year}`;
-  return `${fullYear}-${month}-${day}T00:00:00Z`;
-};
+const formatDate = dateStr => {
+  const [day, month, year] = dateStr.split('/')
+  const fullYear = `${year}`
+  return `${fullYear}-${month}-${day}T00:00:00Z`
+}
 
 const schema = JSON.stringify({
-  "@context": "http://schema.org",
-  "@type": "CreativeWork",
+  '@context': 'http://schema.org',
+  '@type': 'CreativeWork',
   name: story.name,
   author: {
-    "@type": "Person",
-    name: "LaVozDeLosCuentos",
+    '@type': 'Person',
+    name: 'LaVozDeLosCuentos'
   },
   datePublished: formatDate(story.date),
   image: `https://lavozdeloscuentos.es/assets/stories/${story.key}.png`,
   description: firstParagraph,
-  genre: "Literatura Infantil",
+  genre: 'Literatura Infantil',
   mainEntityOfPage: {
-    "@type": "WebPage",
-    "@id": `https://lavozdeloscuentos.es/cuento/${story.key}`,
+    '@type': 'WebPage',
+    '@id': `https://lavozdeloscuentos.es/cuento/${story.key}`
   },
   video: {
-    "@type": "VideoObject",
+    '@type': 'VideoObject',
     name: `${story.name} - Video`,
     description: firstParagraph,
     thumbnailUrl: `https://lavozdeloscuentos.es/assets/stories/${story.key}.png`,
     uploadDate: formatDate(story.date),
     contentUrl: `https://www.youtube.com/embed/${story.youtube}`,
-    embedUrl: `https://www.youtube.com/embed/${story.youtube}`,
+    embedUrl: `https://www.youtube.com/embed/${story.youtube}`
   },
   audio: {
-    "@type": "AudioObject",
+    '@type': 'AudioObject',
     name: `${story.name} - Audio`,
     description: `${firstParagraph}`,
     thumbnailUrl: `https://lavozdeloscuentos.es/assets/stories/${story.key}.png`,
     uploadDate: formatDate(story.date),
     contentUrl: story.spotifyLink,
-    embedUrl: story.spotifyLink,
-  },
-});
+    embedUrl: story.spotifyLink
+  }
+})
 ---
 
 <MainLayout
   title={story.name}
   description={firstParagraph}
-  image={"/assets/stories/" + story.key + ".png"}
-  url={"/cuento/" + story.key + "/"}
+  image={'/assets/stories/' + story.key + '.png'}
+  url={'/cuento/' + story.key + '/'}
   hasVideo
 >
   <div class="story-container" id="story-container">
@@ -82,7 +80,7 @@ const schema = JSON.stringify({
     }
     <div
       class="image-heading"
-      style={`${story.youtube ? "display:none" : "display:block"}`}
+      style={`${story.youtube ? 'display:none' : 'display:block'}`}
     >
       <Image
         alt="Background"
@@ -129,8 +127,8 @@ const schema = JSON.stringify({
     <div class="story-content" id="story-content">
       {
         story.story
-          .split("\n")
-          .filter((p) => p.trim() !== "")
+          .split('\n')
+          .filter(p => p.trim() !== '')
           .map((paragraph, index) => <p key={index}>{paragraph}</p>)
       }
     </div>
@@ -138,7 +136,7 @@ const schema = JSON.stringify({
       <h2>Cuentos Relacionados</h2>
       <div class="related-stories-list">
         {
-          relatedStories.map((relatedStory) => (
+          relatedStories.map(relatedStory => (
             <div key={relatedStory.key} class="related-story-card">
               <a href={`/cuento/${relatedStory.key}`}>
                 <Image
@@ -168,44 +166,44 @@ const schema = JSON.stringify({
 </MainLayout>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener('DOMContentLoaded', () => {
     const story =
       JSON.parse(
-        document.getElementById("story-data").getAttribute("data-story")
-      ) ?? {};
-    const storyKey = story.key;
-    const storyTime = parseInt(story.time);
+        document.getElementById('story-data').getAttribute('data-story')
+      ) ?? {}
+    const storyKey = story.key
+    const storyTime = parseInt(story.time)
 
-    const fontSizeSelector = document.getElementById("font-size");
-    const fontSizeValue = document.getElementById("font-size-value");
-    const storyContent = document.getElementById("story-content");
-    const favoriteButton = document.getElementById("favorite-button");
+    const fontSizeSelector = document.getElementById('font-size')
+    const fontSizeValue = document.getElementById('font-size-value')
+    const storyContent = document.getElementById('story-content')
+    const favoriteButton = document.getElementById('favorite-button')
 
     function updateFontSize(size) {
-      fontSizeValue.textContent = `${size}px`;
-      storyContent.style.fontSize = `${size}px`;
-      localStorage.setItem("fontSize", size);
+      fontSizeValue.textContent = `${size}px`
+      storyContent.style.fontSize = `${size}px`
+      localStorage.setItem('fontSize', size)
     }
 
     function printPDF() {
-      window.print();
+      window.print()
     }
 
-    const savedFontSize = localStorage.getItem("fontSize") || 20;
-    fontSizeSelector.value = savedFontSize;
-    updateFontSize(savedFontSize);
+    const savedFontSize = localStorage.getItem('fontSize') || 20
+    fontSizeSelector.value = savedFontSize
+    updateFontSize(savedFontSize)
 
     function getStoriesData() {
-      return JSON.parse(localStorage.getItem("storiesData")) || [];
+      return JSON.parse(localStorage.getItem('storiesData')) || []
     }
 
     function setStoriesData(storiesData) {
-      localStorage.setItem("storiesData", JSON.stringify(storiesData));
+      localStorage.setItem('storiesData', JSON.stringify(storiesData))
     }
 
     function updateStoryData() {
-      let storiesData = getStoriesData();
-      let storyIndex = storiesData.findIndex((s) => s.key === storyKey);
+      let storiesData = getStoriesData()
+      let storyIndex = storiesData.findIndex(s => s.key === storyKey)
 
       if (storyIndex === -1) {
         storiesData.push({
@@ -213,54 +211,54 @@ const schema = JSON.stringify({
           spentTime: 0,
           totalTime: storyTime,
           finished: false,
-          like: false,
-        });
+          like: false
+        })
       }
 
-      setStoriesData(storiesData);
+      setStoriesData(storiesData)
     }
-    updateStoryData();
+    updateStoryData()
 
     function updateFavoriteButton() {
-      let storiesData = getStoriesData();
-      let storyIndex = storiesData.findIndex((s) => s.key === storyKey);
+      let storiesData = getStoriesData()
+      let storyIndex = storiesData.findIndex(s => s.key === storyKey)
 
       if (storyIndex !== -1 && storiesData[storyIndex].like) {
-        favoriteButton.classList.add("liked");
+        favoriteButton.classList.add('liked')
       } else {
-        favoriteButton.classList.remove("liked");
+        favoriteButton.classList.remove('liked')
       }
     }
 
     function toggleFavorite() {
-      let storiesData = getStoriesData();
-      let storyIndex = storiesData.findIndex((s) => s.key === storyKey);
+      let storiesData = getStoriesData()
+      let storyIndex = storiesData.findIndex(s => s.key === storyKey)
 
       if (storyIndex !== -1) {
-        storiesData[storyIndex].like = !storiesData[storyIndex].like;
-        setStoriesData(storiesData);
-        updateFavoriteButton();
+        storiesData[storyIndex].like = !storiesData[storyIndex].like
+        setStoriesData(storiesData)
+        updateFavoriteButton()
       }
     }
 
-    favoriteButton.addEventListener("click", toggleFavorite);
+    favoriteButton.addEventListener('click', toggleFavorite)
 
     function updateTimeSpent() {
-      let storiesData = getStoriesData();
-      let storyIndex = storiesData.findIndex((s) => s.key === storyKey);
+      let storiesData = getStoriesData()
+      let storyIndex = storiesData.findIndex(s => s.key === storyKey)
 
       if (storyIndex !== -1) {
-        storiesData[storyIndex].spentTime += 30;
+        storiesData[storyIndex].spentTime += 30
         if (storiesData[storyIndex].spentTime >= storyTime) {
-          storiesData[storyIndex].finished = true;
+          storiesData[storyIndex].finished = true
         }
-        setStoriesData(storiesData);
+        setStoriesData(storiesData)
       }
     }
-    setInterval(updateTimeSpent, 30000);
-    updateFavoriteButton();
+    setInterval(updateTimeSpent, 30000)
+    updateFavoriteButton()
 
-    window.updateFontSize = updateFontSize;
-    window.printPDF = printPDF;
-  });
+    window.updateFontSize = updateFontSize
+    window.printPDF = printPDF
+  })
 </script>
