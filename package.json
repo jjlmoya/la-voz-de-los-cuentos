@@ -3,9 +3,9 @@
   "type": "module",
   "version": "0.1.0",
   "scripts": {
-    "dev": "npm run copy-assets && astro dev",
+    "dev": "npm run copy-assets && npm run copy-vicius && astro dev",
     "start": "astro dev",
-    "build": " npm run copy-assets && astro build",
+    "build": " npm run copy-assets && copy-vicius && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "games": "npm i la-voz-de-los-cuentos-games@latest && npm run copy-assets",
@@ -13,6 +13,7 @@
     "redimension": "python ./scripts/redimension.py",
     "characters": "node ./scripts/characters.js",
     "copy-assets": "mkdirp ./public/la-voz-de-los-cuentos-games/assets && ncp ./node_modules/la-voz-de-los-cuentos-games/dist/la-voz-de-los-cuentos-games/assets ./public/la-voz-de-los-cuentos-games/assets",
+    "copy-vicius": "mkdirp ./public/third/vicius && ncp ./node_modules/@overgaming/vicius/dist/style.css ./public/third/vicius/style.css",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write \"src/**/*.{js,vue,css,html,md,astro}\""
@@ -20,6 +21,7 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.1.5",
     "@astrojs/vue": "^4.5.0",
+    "@overgaming/vicius": "^0.5.0",
     "@vue/compiler-sfc": "^3.4.36",
     "astro": "^4.10.2",
     "eslint-plugin-vue": "^9.27.0",
