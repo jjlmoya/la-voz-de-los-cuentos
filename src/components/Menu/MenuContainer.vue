@@ -31,6 +31,7 @@
     position: sticky;
     display: grid;
     height: 100vh;
+    background-color: var(--v-color-surface-mod);
   }
 
   .menu-container-content {
