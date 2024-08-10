@@ -35,8 +35,11 @@
         <div v-if="iframe" class="story-page__audio-hide"></div>
     </div>
 
-    <div class="story-page_font-selector">
-      <label for="font-size">Tamaño del texto</label>
+    <VContainer class="story-page_font-selector" size="xs">
+      <label for="font-size">
+        <span style="fontSize:24px">A</span>
+        <span style="fontSize:16px">a</span>
+        </label>
       <VInput
         type="range"
         id="font-size"
@@ -45,8 +48,7 @@
         :value="fontSize"
         @input="updateFontSize"
       />
-      <span id="font-size-value">{{ fontSize }}px</span>
-    </div>
+    </VContainer>
     <div class="story-page__title">
         <VText variant="header" :style="{ fontSize: `${fontSize}px`, 'line-height': `${fontSize >= 20 ? '1.5': '1'}` }">
             {{ story.name }}
@@ -65,7 +67,7 @@
 </template>
 
 <script setup>
-  import { VImage, VText, VButton, VInput } from '@overgaming/vicius'
+  import { VImage, VText, VButton, VInput, VContainer } from '@overgaming/vicius'
   import { ref, onMounted } from 'vue'
 
   const fontSize = ref(16)
@@ -102,6 +104,17 @@
 <style>
  
   .story-page {
+  }
+  .story-page_font-selector {
+    font-weight: bold;
+    padding: var(--v-unit-4);
+    display: grid;
+    justify-content: center;
+    grid-gap: var(--v-unit-1);
+    text-align: center;
+    .v-input {
+        min-height: 0;
+    }
   }
 
   .story-page__image {
