@@ -12,15 +12,17 @@
           allowfullscreen>
         </iframe>
     </div>
-    <div class="saga-page__title">
-        <VText as="h1" variant="header">
-            {{ saga.name }}
+    <VContainer class="saga-page__content">
+        <div class="saga-page__title">
+            <VText as="h1" variant="header">
+                {{ saga.name }}
+            </VText>
+        </div>
+        <VText>
+          <div v-html="descriptionHtml"></div>
         </VText>
-    </div>
-    <div class="saga-page__content">
-        <VText>{{ saga.description }}</VText>
-    </div>
-    <SectionsDefault class="saga-page__related" client:load title="Cuentos Relacionados">
+    </VContainer>
+    <SectionsDefault client:load :title="`Cuentos De La Saga (${totalTime})`">
       <SagaStories client:load :saga="saga" />
     </SectionsDefault>
   </VContainer>
@@ -34,16 +36,23 @@
     }
   })
 
+  import useSaga from '../../composables/useSaga'
   import { VText, VContainer } from '@overgaming/vicius'
   import SagaStories from '../Sections/SagaStories.vue'
   import SectionsDefault from '../Sections/Default.vue'
+  const { getTime, html } = useSaga(props.saga)
+  const totalTime = getTime()
+  const descriptionHtml = html()
 
 </script>
 
 <style>
  
   .saga-page {
-    padding: 0 var(--v-unit-2)
+    padding: 0 var(--v-unit-2);
+    iframe{
+      width: 100%;
+    }
   }
   .saga-page_font-selector {
     font-weight: bold;
@@ -80,73 +89,14 @@
     }
   }
 
-  .saga-page__content, .saga-page__title {
-    padding: var(--v-unit-2) 0;
-  }
-
-  .saga-page__audio {
+  .saga-page__content {
+    display: grid;
+    grid-gap: var(--v-unit-2);
+    padding: var(--v-unit-4);
+    background-color: var(--v-color-surface-mod);
     border-radius: var(--v-unit-2);
-    overflow: hidden;
-    position: relative;
-    height: 150px;
-    iframe {
-      width: 100%;
-    }
   }
+  
 
-  .saga-page__audio-hide {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 150px;
-    width: 100%; 
-    bottom: 0;
-    background-color: white;
-    z-index: 10;
-    animation: fold 0.9s ease-in forwards;
-  }
-
-  .saga-page__audio-loading {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    content: " ";
-    z-index: 10;
-  }
-
-  @keyframes fold {
-    0% {
-      width: 100%;
-    }
-    99% {
-      width: 150px;
-    }
-    100% {
-      width: 150px;
-    }
-  }
-
-  @media print {
-     body {
-        background: white !important;
-        color: black !important;
-    }
-
-    .main-layout-menu {
-        width: 0px !important;
-        opacity: 0;
-    }
-    img {
-        display: none;
-    }
-    .main-layout {
-        grid-template-columns: 0px 1fr !important;
-    }
-    .saga-page__image, .saga-page__related, .saga-page__audio, .saga-page_font-selector {
-        display: none !important;
-    }
-  }
 </style>
 

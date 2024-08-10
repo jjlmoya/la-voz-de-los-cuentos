@@ -28,7 +28,7 @@
 <style scoped>
   .sections-new {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    grid-template-columns: repeat(auto-fill,minmax(min(600px, 100%), 1fr));
     grid-gap: var(--v-unit-8);
   }
 </style>

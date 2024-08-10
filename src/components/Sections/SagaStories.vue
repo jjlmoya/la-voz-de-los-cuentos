@@ -22,7 +22,6 @@
   })
   const { getStories } = useSaga(props.saga)
   const stories = getStories()
-  console.log(stories)
 </script>
 
 <style scoped>

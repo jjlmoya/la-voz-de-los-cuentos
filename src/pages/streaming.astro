@@ -33,7 +33,6 @@ function shuffle(array) {
 
 const shuffledStories = shuffle(stories)
 const initialStory = shuffledStories[0]
-console.log(shuffledStories.length)
 ---
 
 <StreamingLayout
@@ -126,7 +125,6 @@ console.log(shuffledStories.length)
       }
 
       function onPlayerReady(event) {
-        console.log('Player is ready')
         const duration = player.getDuration()
         _current = {
           ..._current,
