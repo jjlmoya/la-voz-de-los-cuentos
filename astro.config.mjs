@@ -6,4 +6,7 @@ export default defineConfig({
     site: 'https://lavozdeloscuentos.es',
     integrations: [sitemap(), vue()],
     trailingSlash: 'always',
+    customElement: {
+        include: ['lite-youtube'],
+    },
 });

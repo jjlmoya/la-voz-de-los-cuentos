@@ -1,7 +1,10 @@
 <template>
-  <div class="basic-card">
+  <a class="basic-card" :href="`/${isStory ? 'cuento' : 'saga'}/${slug}/`">
     <div class="basic-card__image">
-      <VImage aspectRatio="1/1" :src="`/assets/${isStory ? 'stories' : 'sagas'}/${slug}.png`"></VImage>
+      <VImage
+        aspectRatio="1/1"
+        :src="`/assets/${isStory ? 'stories' : 'sagas'}/${slug}.png`"
+      ></VImage>
     </div>
     <div class="card-hero__content">
       <div class="card-hero__article">
@@ -14,7 +17,7 @@
         >
       </div>
     </div>
-  </div>
+  </a>
 </template>
 
 <script setup>

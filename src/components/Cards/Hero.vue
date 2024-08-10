@@ -5,12 +5,12 @@
       :src="`/assets/stories/${story.key}.png`"
     ></VImage>
     <div class="card-hero__content">
-      <div class="card-hero__article">
-        <VText class="card-hero__title" variant="header" color="primary">{{
+      <a class="card-hero__article" :href="`/cuento/${story.key}/`">
+        <VText  class="card-hero__title" variant="header" color="primary">{{
           story.name
         }}</VText>
         <VText max-lines="2">{{ story.story }}</VText>
-      </div>
+      </a>
     </div>
   </div>
 </template>

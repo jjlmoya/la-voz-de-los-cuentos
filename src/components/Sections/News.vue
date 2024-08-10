@@ -5,7 +5,7 @@
       :slug="story.key"
       :key="story.key"
       :title="story.name"
-       isStory
+      isStory
     />
   </div>
 </template>

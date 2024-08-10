@@ -1,4 +1,3 @@
-// src/composables/useStories.js
 import { ref } from 'vue'
 import stories from '../data/stories.json'
 
@@ -9,6 +8,10 @@ export default function useStories() {
 
   const getFirstStory = () => {
     return allStories.value[0]
+  }
+
+  const getStoryBySlug = () => {
+    return allStories.find(entry => entry.key == slug)
   }
 
   const getLastStory = () => {
