@@ -1,22 +1,18 @@
 <template>
-  <VNavigation class="menu-container">
+  <VNavigation class="navigation">
     <template #header>
       <VImage
         src="/assets/hero/title.png"
         aspectRatio="1/1"
         loading="lazy"
         alt="Logo"
-      ></VImage>
+      />
     </template>
-    <div class="menu-container-content">
-      <slot></slot>
-    </div>
+
+    <slot />
+
     <template #footer>
-      <VImage
-        src="/assets/hero/owl-layer.png"
-        loading="lazy"
-        alt="Logo"
-      ></VImage>
+      <VImage src="/assets/hero/owl-layer.png" loading="lazy" alt="Logo" />
     </template>
   </VNavigation>
 </template>
@@ -26,15 +22,7 @@
 </script>
 
 <style scoped>
-  .menu-container {
-    top: 0;
-    position: sticky;
-    display: grid;
-    height: 100vh;
-    background-color: var(--v-color-surface-mod);
-  }
-
-  .menu-container-content {
-    padding: var(--v-unit-4);
+  .navigation {
+    height: 100dvh;
   }
 </style>

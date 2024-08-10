@@ -1,9 +1,8 @@
 ---
 import '@overgaming/vicius/styles'
+import '../assets/css/fonts.css'
+import '../assets/css/styles.css'
 import CMP from '../components/commons/Legal/CMP.vue'
-import MenuContainer from '../components/Menu/MenuContainer.vue'
-import Menu from '../components/Menu/Menu.vue'
-import { VContainer } from '@overgaming/vicius'
 const {
   title,
   description,
@@ -32,8 +31,6 @@ const pageTitle = title
     <meta name="theme-color" content="#4DBA87" />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="/assets/styles/fonts.css" />
-
     <link
       rel="stylesheet"
       href="/third/lite-youtube-embed/src/lite-yt-embed.css"
@@ -92,17 +89,10 @@ const pageTitle = title
   </head>
 
   <body>
-    <div class="main-layout">
-      <div class="main-layout-menu">
-        <MenuContainer>
-          <Menu client:load />
-        </MenuContainer>
-      </div>
-      <VContainer class="main-layout-content" size="lg">
-        <slot />
-      </VContainer>
-    </div>
+    <slot />
+
     <CMP client:load />
+
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
@@ -130,24 +120,5 @@ const pageTitle = title
         ''
       )
     }
-    <style>
-      .main-layout {
-        display: grid;
-        grid-template-columns: 288px auto;
-        grid-gap: var(--v-unit-4);
-      }
-
-      .main-layout-menu {
-        position: sticky;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 288px;
-        overflow-y: auto;
-      }
-      .main-layout-content {
-        padding-top: var(--v-unit-4);
-      }
-    </style>
   </body>
 </html>

@@ -1,19 +1,13 @@
 <template>
   <VMenu class="menu">
-    <VLink
-      class="menu-link"
-      v-for="entry in menu"
-      variant="header"
-      :color="!entry.active ? 'primary' : ''"
-      :href="entry.link"
-    >
+    <VMenuItem v-for="entry in menu" :active="entry.active" :href="entry.link">
       {{ entry.label }}
-    </VLink>
+    </VMenuItem>
   </VMenu>
 </template>
 
 <script setup>
-  import { VMenu, VLink } from '@overgaming/vicius'
+  import { VMenu, VMenuItem } from '@overgaming/vicius'
   import { ref, onMounted } from 'vue'
 
   const menu = ref([
@@ -38,11 +32,11 @@
       link: '/newsletters/'
     }
   ])
+
   onMounted(() => {
     const current = window.location.pathname
     menu.value = menu.value.map(entry => {
       if (current === entry.link) {
-        console.log('active')
         return {
           ...entry,
           active: true
@@ -52,9 +46,3 @@
     })
   })
 </script>
-
-<style scoped>
-  .menu-link {
-    padding: var(--v-unit-1) 0;
-  }
-</style>
