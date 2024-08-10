@@ -37,23 +37,23 @@
 
     <div class="story-page_font-selector">
       <label for="font-size">Tamaño del texto</label>
-      <input
+      <VInput
         type="range"
         id="font-size"
-        min="16"
-        max="36"
+        min="14"
+        max="28"
         :value="fontSize"
         @input="updateFontSize"
       />
       <span id="font-size-value">{{ fontSize }}px</span>
     </div>
     <div class="story-page__title">
-        <VText variant="header" :style="{ fontSize: `${fontSize}px` }">
+        <VText variant="header" :style="{ fontSize: `${fontSize}px`, 'line-height': `${fontSize >= 20 ? '1.5': '1'}` }">
             {{ story.name }}
         </VText>
     </div>
     <div class="story-page__content">
-        <div :style="{ fontSize: `${fontSize}px` }" v-html ="story.story
+        <div :style="{ fontSize: `${fontSize}px`, 'line-height': `${fontSize >= 20 ? '1.5': '1.2'}` }" v-html ="story.story
                     .split('\n')
                     .filter(p => p.trim() !== '')
                     .map((paragraph, index) => `<p key=${index}>${paragraph}</p>`)
@@ -65,7 +65,7 @@
 </template>
 
 <script setup>
-  import { VImage, VText, VButton } from '@overgaming/vicius'
+  import { VImage, VText, VButton, VInput } from '@overgaming/vicius'
   import { ref, onMounted } from 'vue'
 
   const fontSize = ref(16)
