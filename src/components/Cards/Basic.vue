@@ -4,6 +4,7 @@
       <VImage
         aspectRatio="1/1"
         :src="`/assets/${isStory ? 'stories' : 'sagas'}/${slug}.png`"
+        loading="eager"
       ></VImage>
     </div>
     <div class="basic-card__content">
@@ -62,9 +63,9 @@
     position: absolute;
     padding: var(--v-unit-2);
     font-size: 14px;
-    right: -4px;
-    top: -3px;
-    border: 4px solid var(--v-color-surface-mod);
+    right: -5px;
+    top: -4px;
+    border: 4px solid var(--v-color-primary);
     border-left: none;
     border-bottom: none;
     background-color: var(--v-color-surface);
