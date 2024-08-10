@@ -1,7 +1,8 @@
 ---
-import Header from '../components/commons/Header/Header.astro'
-import MainFooter from '../components/commons/Footer/Footer.astro'
-import './layout.css'
+import CMP from '../components/commons/Legal/CMP.vue'
+import MenuContainer from '../components/Menu/MenuContainer.vue'
+import Menu from '../components/Menu/Menu.vue'
+import { VContainer } from '@overgaming/vicius'
 const {
   title,
   description,
@@ -78,6 +79,8 @@ const pageTitle = title
       content={`https://lavozdeloscuentos.es${image}`}
     />
     <meta property="twitter:description" content={description} />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXYY4HM36E"
+    ></script>
     <script>
       ;(function () {
         const isProduction = window.location.hostname === 'lavozdeloscuentos.es'
@@ -102,16 +105,17 @@ const pageTitle = title
   </head>
 
   <body>
-    <Header />
-    <div class="content-layout">
-      <slot />
+    <div class="main-layout">
+      <div class="main-layout-menu">
+        <MenuContainer>
+          <Menu client:load />
+        </MenuContainer>
+      </div>
+      <VContainer class="main-layout-content" size="lg">
+        <slot />
+      </VContainer>
     </div>
-    <MainFooter />
-    <style>
-      html {
-        font-family: 'Fredoka', sans-serif;
-      }
-    </style>
+    <CMP client:load />
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
@@ -139,94 +143,25 @@ const pageTitle = title
         ''
       )
     }
-
-    <!-- Google tag (gtag.js) -->
+    <link rel="stylesheet" href="/third/vicius/style.css" />
     <style>
-      .cookie-consent {
-        position: fixed;
-        bottom: 0;
-        left: 10px;
-        right: 10px;
-        background-color: rgba(0, 0, 0, 0.3);
-        color: #fff;
-        padding: 10px;
-        text-align: center;
-        border-radius: 5px;
-        display: none; /* Oculto por defecto */
-      }
-      .cookie-consent p {
-        padding: 8px;
+      .main-layout {
+        display: grid;
+        grid-template-columns: 288px auto;
+        grid-gap: var(--v-unit-4);
       }
 
-      .cookie-consent button {
-        color: white;
-        border: none;
-        padding: 5px 10px;
-        margin-top: 10px;
-        cursor: pointer;
-        font-size: 14px;
-        border-radius: 5px;
-        font-weight: bold;
-        margin: 0 5px; /* Espacio entre botones */
+      .main-layout-menu {
+        position: sticky;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 288px;
+        overflow-y: auto;
       }
-      .cookie-consent-button {
-        background-color: var(--secondary-color);
-      }
-      .cookie-consent-reject-button {
-        opacity: 0.6;
-        background-color: var(--primary-color);
+      .main-layout-content {
+        padding-top: var(--v-unit-4);
       }
     </style>
-
-    <div class="cookie-consent">
-      <p>
-        Para mejorar la experiencia necesitamos cookies de terceros, <br /> sólo
-        usamos Google Analytics ¿Aceptas las cookies?
-      </p>
-      <button class="cookie-consent-button">Aceptar</button>
-      <button class="cookie-consent-reject-button">No</button>
-    </div>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXYY4HM36E"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || []
-      function gtag() {
-        dataLayer.push(arguments)
-      }
-      gtag('js', new Date())
-      gtag('config', 'G-PXYY4HM36E')
-
-      var allConsentGranted = function () {
-        gtag('consent', 'update', {
-          analytics_storage: 'granted'
-        })
-        localStorage.setItem('cookieConsent', 'granted')
-        document.querySelector('.cookie-consent').style.display = 'none'
-      }
-
-      var allConsentRejected = function () {
-        localStorage.setItem('cookieConsent', 'rejected')
-        document.querySelector('.cookie-consent').style.display = 'none'
-      }
-
-      document
-        .querySelector('.cookie-consent-button')
-        .addEventListener('click', () => {
-          allConsentGranted()
-        })
-
-      document
-        .querySelector('.cookie-consent-reject-button')
-        .addEventListener('click', () => {
-          allConsentRejected()
-        })
-
-      document.addEventListener('DOMContentLoaded', function () {
-        if (!localStorage.getItem('cookieConsent')) {
-          document.querySelector('.cookie-consent').style.display = 'block'
-        }
-      })
-    </script>
-    <!--  <link rel="stylesheet" href="/third/vicius/style.css" />-->
   </body>
 </html>

@@ -1,0 +1,28 @@
+<template>
+  <div class="sections-new">
+    <DescriptionCard
+      v-for="saga in sagas"
+      :image="saga.key"
+      path="sagas"
+      :key="saga.key"
+      :title="saga.name"
+      :content="saga.description"
+    />
+  </div>
+</template>
+
+<script setup>
+  import DescriptionCard from '../Cards/Description.vue'
+  import useSagas from '../../composables/useSagas'
+
+  const { getLastNSagas } = useSagas()
+  const sagas = getLastNSagas(7)
+</script>
+
+<style scoped>
+  .sections-new {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    grid-gap: var(--v-unit-8);
+  }
+</style>

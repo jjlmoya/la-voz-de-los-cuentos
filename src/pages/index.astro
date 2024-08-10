@@ -1,11 +1,9 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro'
-import HeroBanner from '../components/HeroBanner.astro'
-import FeaturedStories from '../components/FeaturedStories.astro'
-import FeaturedSagas from '../components/FeaturedSagas.astro'
-import SelectionBannerSagas from '../components/SelectionBannerSagas.astro'
-import SelectionBannerStories from '../components/SelectionBannerStories.astro'
-import HelloWold from '../components/HelloWold.vue'
+import Hero from '../components/Cards/Hero.vue'
+import SectionsDefault from '../components/Sections/Default.vue'
+import NewSection from '../components/Sections/News.vue'
+import SagasSection from '../components/Sections/Sagas.vue'
 ---
 
 <MainLayout
@@ -13,10 +11,11 @@ import HelloWold from '../components/HelloWold.vue'
   description="Embárcate en un viaje encantado a través de La Voz de los Cuentos, donde cada historia cobra vida y la magia de la narración te envuelve. Descubre relatos antiguos y nuevos, llenos de fantasía, misterio y maravillas, en un reino donde la imaginación no tiene límites."
   url={'/'}
 >
-  <HeroBanner />
-  <HelloWold />
-  <SelectionBannerStories />
-  <FeaturedStories />
-  <FeaturedSagas />
-  <SelectionBannerSagas />
+  <Hero client:load />
+  <SectionsDefault client:load title="Novedades" moreLink="/cuentos/">
+    <NewSection client:load />
+  </SectionsDefault>
+  <SectionsDefault client:load title="Sagas Destacadas" moreLink="/sagas/">
+    <SagasSection client:load />
+  </SectionsDefault>
 </MainLayout>

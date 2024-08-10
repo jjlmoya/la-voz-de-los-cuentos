@@ -1,7 +1,6 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro'
 import newsletters from '../../data/newsletters.json'
-import '../../styles/NewsLetterPage.css'
 
 const { id } = Astro.params
 const newsletter = newsletters.find(newsletter => newsletter.id === id)
