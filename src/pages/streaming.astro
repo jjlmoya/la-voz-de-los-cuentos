@@ -90,7 +90,6 @@ console.log(shuffledStories.length)
         let _index = (index + position) % stories.length
         const _story = stories[_index]
         const text = _getTextByPosition(position)
-        console.log({ text })
         return `
           <div class="streaming-entry ${position === 0 ? 'streaming-entry--active' : ''}">
             <img  style="opacity:${100 - 50 - 7 * position}%" class="streaming-entry-image" src="/assets/stories/${_story.data.key}.png" alt"${_story.data.name}"/>

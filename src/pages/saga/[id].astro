@@ -1,5 +1,5 @@
 ---
-import MainLayout from '../../layouts/MainLayout.astro'
+import NavLayout from '../../layouts/NavLayout.astro'
 import BasicCard from '../../components/BasicCard.astro'
 import sagaData from '../../data/sagas.json'
 import storyData from '../../data/stories.json'
@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 }
 ---
 
-<MainLayout
+<NavLayout
   title={'Saga: ' + saga.name}
   description={saga.description}
   image={'/assets/sagas/' + saga.key + '.png'}
@@ -49,4 +49,4 @@ export async function getStaticPaths() {
       }
     </div>
   </div>
-</MainLayout>
+</NavLayout>

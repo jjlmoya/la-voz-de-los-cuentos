@@ -1,5 +1,5 @@
 ---
-import MainLayout from '../../layouts/MainLayout.astro'
+import NavLayout from '../../layouts/NavLayout.astro'
 import stories from '../../data/stories.json'
 import { Image } from 'astro:assets'
 import StoryPage from '../../components/Page/StoryPage.vue'
@@ -61,7 +61,7 @@ const schema = JSON.stringify({
 })
 ---
 
-<MainLayout
+<NavLayout
   title={story.name}
   description={firstParagraph}
   image={'/assets/stories/' + story.key + '.png'}
@@ -69,11 +69,11 @@ const schema = JSON.stringify({
   hasVideo
 >
   <StoryPage story={story} client:load />
-  
+
   <div id="story-data" data-story={JSON.stringify(story)} style="display:none">
   </div>
   <script type="application/ld+json" set:html={schema} />
-</MainLayout>
+</NavLayout>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {

@@ -21,7 +21,7 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.1.5",
     "@astrojs/vue": "^4.5.0",
-    "@overgaming/vicius": "0.7.0",
+    "@overgaming/vicius": "^0.7.0",
     "@vue/compiler-sfc": "^3.4.36",
     "astro": "^4.10.2",
     "eslint-plugin-vue": "^9.27.0",

@@ -1,5 +1,5 @@
 <template>
-  <div class="story-page">
+  <VContainer size="xl" class="story-page">
     <div class="story-page__image">
         <VImage
             v-if="!story.youtube"
@@ -55,24 +55,37 @@
         </VText>
     </div>
     <div class="story-page__content">
-        <div :style="{ fontSize: `${fontSize}px`, 'line-height': `${fontSize >= 20 ? '1.5': '1.2'}` }" v-html ="story.story
-                    .split('\n')
-                    .filter(p => p.trim() !== '')
-                    .map((paragraph, index) => `<p key=${index}>${paragraph}</p>`)
-                    .join('<br>')">
-        </div>
+        <div :style="{ fontSize: `${fontSize}px`, 'line-height': `${fontSize >= 20 ? '1.5': '1.2'}` }" v-html ="storyHTML" />
     </div>
+    <SectionsDefault class="story-page__related" client:load title="Cuentos Relacionados">
+      <RelatedStoriesSection client:load :story="story" />
+    </SectionsDefault>
 
-  </div>
+  </VContainer>
 </template>
 
 <script setup>
-  import { VImage, VText, VButton, VInput, VContainer } from '@overgaming/vicius'
-  import { ref, onMounted } from 'vue'
+  const props = defineProps({
+    story: {
+      type: Object,
+      default: {}
+    }
+  })
 
+  import { VImage, VText, VButton, VInput, VContainer } from '@overgaming/vicius'
+  import RelatedStoriesSection from '../Sections/RelatedStories.vue'
+  import SectionsDefault from '../Sections/Default.vue'
+
+  SectionsDefault
+  import { ref, onMounted } from 'vue'
+  import useStory from '../../composables/useStory'
+
+  const storyHTML = ref('')
   const fontSize = ref(16)
   const iframe = ref(false)
 
+  const { html } = useStory(props.story)
+  storyHTML.value = html()
   const printPdf = () => {
     window.print()
   }
@@ -93,17 +106,13 @@
     }
   })
 
-  defineProps({
-    story: {
-      type: Object,
-      default: {}
-    }
-  })
+
 </script>
 
 <style>
  
   .story-page {
+    padding: 0 var(--v-unit-2)
   }
   .story-page_font-selector {
     font-weight: bold;
@@ -204,8 +213,8 @@
     .main-layout {
         grid-template-columns: 0px 1fr !important;
     }
-    .story-page__image, .story-page__audio, .story-page_font-selector {
-        display: none
+    .story-page__image, .story-page__related, .story-page__audio, .story-page_font-selector {
+        display: none !important;
     }
   }
 </style>

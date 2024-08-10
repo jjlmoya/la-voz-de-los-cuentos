@@ -5,9 +5,8 @@
         <VIcon name="Menu" />
       </button>
     </div>
-
     <div
-      class="navigation-layout__nav"
+      class="navigation-layout__nav"  
       :class="{ 'navigation-layout__nav--open': isOpen }"
     >
       <div class="navigation-layout__inner">

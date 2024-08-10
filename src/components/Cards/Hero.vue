@@ -9,7 +9,9 @@
         <VText  class="card-hero__title" variant="header" color="primary">{{
           story.name
         }}</VText>
-        <VText max-lines="2">{{ story.story }}</VText>
+        <VText max-lines="3" variant="body">
+          <div v-html="first"></div>
+        </VText>
       </a>
     </div>
   </div>
@@ -17,9 +19,12 @@
 
 <script setup>
   import useStories from '../../composables/useStories'
+  import useStory from '../../composables/useStory'
   import { VImage, VText } from '@overgaming/vicius'
   const { getLastStory } = useStories()
   const story = getLastStory()
+  const { firstParagraph } = useStory(getLastStory())
+  const first = firstParagraph()
 </script>
 
 <style scoped>

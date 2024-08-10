@@ -52,6 +52,7 @@
 
 <style scoped>
   .cookie-consent {
+    z-index: 1000;
     position: fixed;
     display: grid;
     justify-content: center;
@@ -71,5 +72,10 @@
     grid-auto-flow: row;
     justify-content: center;
     align-items: center;
+  }
+  @media print {
+    .cookie-consent {
+      display: none;
+    }
   }
 </style>

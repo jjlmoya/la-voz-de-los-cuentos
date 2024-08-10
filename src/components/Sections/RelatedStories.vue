@@ -1,10 +1,10 @@
 <template>
-  <div class="sections-new">
+  <div class="sections-related">
     <BasicCard
-      v-for="story in stories"
-      :slug="story.key"
-      :key="story.key"
-      :title="story.name"
+      v-for="_story in stories"
+      :slug="_story.key"
+      :key="_story.key"
+      :title="_story.name"
       :time="parseInt(story.time)"
       isStory
     />
@@ -14,13 +14,18 @@
 <script setup>
   import BasicCard from '../Cards/Basic.vue'
   import useStories from '../../composables/useStories'
-
-  const { getLastNStories } = useStories()
-  const stories = getLastNStories(10)
+  const props = defineProps({
+    story: {
+      default: {},
+      type: Object
+    }
+  })
+  const { getRelatedStories } = useStories()
+  const stories = getRelatedStories(props.story)
 </script>
 
 <style scoped>
-  .sections-new {
+  .sections-related {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: var(--v-unit-8);

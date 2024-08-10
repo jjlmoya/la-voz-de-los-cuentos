@@ -1,11 +1,12 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro'
+import NavLayout from '../layouts/NavLayout.astro'
+import StoriesPage from '../components/Page/StoriesPage.vue'
 ---
 
-<MainLayout
+<NavLayout
   title="Listado de Cuentos"
   description="Nuestra colección de cuentos mágicos, cientos de cuentos esperando a ser descubiertos"
   url="/cuentos/"
 >
-  Cuentos
-</MainLayout>
+  <StoriesPage client:load />
+</NavLayout>

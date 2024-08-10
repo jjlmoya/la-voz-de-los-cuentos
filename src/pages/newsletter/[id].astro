@@ -1,5 +1,5 @@
 ---
-import MainLayout from '../../layouts/MainLayout.astro'
+import NavLayout from '../../layouts/NavLayout.astro'
 import newsletters from '../../data/newsletters.json'
 
 const { id } = Astro.params
@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 }
 ---
 
-<MainLayout
+<NavLayout
   title={newsletter.title}
   description={firstParagraph}
   image={'/assets/stories/newsletter.png'}
@@ -40,4 +40,4 @@ export async function getStaticPaths() {
     }
     <div class="newsletter-html" set:html={newsletter.html} />
   </div>
-</MainLayout>
+</NavLayout>

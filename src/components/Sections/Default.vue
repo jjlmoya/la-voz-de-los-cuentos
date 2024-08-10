@@ -1,7 +1,7 @@
 <template>
   <div class="section-default">
     <div class="section-default__header">
-      <VText class="section-default__title" variant="header" v-if="title">
+      <VText as="h2" class="section-default__title" variant="header" v-if="title">
         {{ title }}
       </VText>
       <VLink
@@ -35,7 +35,7 @@
 
 <style scoped>
   .section-default {
-    padding-top: var(--v-unit-10);
+    padding-top: var(--v-unit-4);
     position: relative;
     display: grid;
     grid-gap: var(--v-unit-2) 0;
@@ -49,5 +49,7 @@
   }
   .section-default__more {
     justify-self: flex-end;
+    align-self: center;
+    font-size: 14px;
   }
 </style>
