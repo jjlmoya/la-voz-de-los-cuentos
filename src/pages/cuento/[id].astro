@@ -69,98 +69,8 @@ const schema = JSON.stringify({
   hasVideo
 >
   <StoryPage story={story} client:load />
-  <div class="story-container" id="story-container">
-    <h1 class="story-title">{story.name}</h1>
-    {
-      story.youtube && (
-        <div class="youtube-embed">
-          <lite-youtube videoid={story.youtube} playlabel={story.name} />
-        </div>
-      )
-    }
-    <div
-      class="image-heading"
-      style={`${story.youtube ? 'display:none' : 'display:block'}`}
-    >
-      <Image
-        alt="Background"
-        width="500"
-        height="500"
-        layout="constrained"
-        loading="eager"
-        src={`/assets/stories/${story.key}.png`}
-        alt={`Imagen de cabecera de ${story.name}`}
-      />
-    </div>
-    {
-      story.spotify && (
-        <div class="spotify-embed">
-          <iframe
-            src={`https://podcasters.spotify.com/pod/show/lavozdeloscuentos/embed/episodes/${story.spotify}`}
-            frameborder="0"
-            scrolling="no"
-            loading="lazy"
-          />
-        </div>
-      )
-    }
-
-    <div class="font-size-selector">
-      <label for="font-size">Tamaño del texto</label>
-      <input
-        type="range"
-        id="font-size"
-        min="16"
-        max="36"
-        value="20"
-        oninput="updateFontSize(this.value)"
-      />
-      <span id="font-size-value">16px</span>
-    </div>
-    <div class="story-tool-wrapper">
-      <button onclick="printPDF()" class="download-button">.pdf</button>
-      <button id="favorite-button" class="favorite-button"
-        ><div>&#9825;</div></button
-      >
-    </div>
-
-    <div class="story-content" id="story-content">
-      {
-        story.story
-          .split('\n')
-          .filter(p => p.trim() !== '')
-          .map((paragraph, index) => <p key={index}>{paragraph}</p>)
-      }
-    </div>
-    <div class="related-stories">
-      <h2>Cuentos Relacionados</h2>
-      <div class="related-stories-list">
-        {
-          relatedStories.map(relatedStory => (
-            <div key={relatedStory.key} class="related-story-card">
-              <a href={`/cuento/${relatedStory.key}`}>
-                <Image
-                  src={`/assets/stories/${relatedStory.key}.png`}
-                  alt="Imagen del cuento"
-                  class="related-story-image"
-                  width="512"
-                  height="512"
-                  layout="constrained"
-                  loading="eager"
-                />
-                <p class="related-story-title">{relatedStory.name}</p>
-              </a>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-    <div
-      id="story-data"
-      data-story={JSON.stringify(story)}
-      style="display:none"
-    >
-    </div>
+  
+  <div id="story-data" data-story={JSON.stringify(story)} style="display:none">
   </div>
   <script type="application/ld+json" set:html={schema} />
 </MainLayout>
@@ -173,25 +83,6 @@ const schema = JSON.stringify({
       ) ?? {}
     const storyKey = story.key
     const storyTime = parseInt(story.time)
-
-    const fontSizeSelector = document.getElementById('font-size')
-    const fontSizeValue = document.getElementById('font-size-value')
-    const storyContent = document.getElementById('story-content')
-    const favoriteButton = document.getElementById('favorite-button')
-
-    function updateFontSize(size) {
-      fontSizeValue.textContent = `${size}px`
-      storyContent.style.fontSize = `${size}px`
-      localStorage.setItem('fontSize', size)
-    }
-
-    function printPDF() {
-      window.print()
-    }
-
-    const savedFontSize = localStorage.getItem('fontSize') || 20
-    fontSizeSelector.value = savedFontSize
-    updateFontSize(savedFontSize)
 
     function getStoriesData() {
       return JSON.parse(localStorage.getItem('storiesData')) || []
@@ -219,30 +110,6 @@ const schema = JSON.stringify({
     }
     updateStoryData()
 
-    function updateFavoriteButton() {
-      let storiesData = getStoriesData()
-      let storyIndex = storiesData.findIndex(s => s.key === storyKey)
-
-      if (storyIndex !== -1 && storiesData[storyIndex].like) {
-        favoriteButton.classList.add('liked')
-      } else {
-        favoriteButton.classList.remove('liked')
-      }
-    }
-
-    function toggleFavorite() {
-      let storiesData = getStoriesData()
-      let storyIndex = storiesData.findIndex(s => s.key === storyKey)
-
-      if (storyIndex !== -1) {
-        storiesData[storyIndex].like = !storiesData[storyIndex].like
-        setStoriesData(storiesData)
-        updateFavoriteButton()
-      }
-    }
-
-    favoriteButton.addEventListener('click', toggleFavorite)
-
     function updateTimeSpent() {
       let storiesData = getStoriesData()
       let storyIndex = storiesData.findIndex(s => s.key === storyKey)
@@ -256,9 +123,5 @@ const schema = JSON.stringify({
       }
     }
     setInterval(updateTimeSpent, 30000)
-    updateFavoriteButton()
-
-    window.updateFontSize = updateFontSize
-    window.printPDF = printPDF
   })
 </script>
