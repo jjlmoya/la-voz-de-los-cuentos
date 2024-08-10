@@ -2,9 +2,10 @@
   <div class="sections-new">
     <BasicCard
       v-for="story in stories"
-      :image="story.key"
+      :slug="story.key"
       :key="story.key"
       :title="story.name"
+       isStory
     />
   </div>
 </template>

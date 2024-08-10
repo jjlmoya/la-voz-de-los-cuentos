@@ -1,7 +1,7 @@
 <template>
   <div class="basic-card">
     <div class="basic-card__image">
-      <VImage aspectRatio="1/1" :src="`/assets/${path}/${image}.png`"></VImage>
+      <VImage aspectRatio="1/1" :src="`/assets/${isStory ? 'stories' : 'sagas'}/${slug}.png`"></VImage>
     </div>
     <div class="card-hero__content">
       <div class="card-hero__article">
@@ -24,13 +24,13 @@
       type: String,
       default: ''
     },
-    image: {
+    slug: {
       type: String,
       default: ''
     },
-    path: {
-      type: String,
-      default: 'stories'
+    isStory: {
+      type: Boolean,
+      default: true
     }
   })
 </script>

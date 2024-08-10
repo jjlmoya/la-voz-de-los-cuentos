@@ -1,15 +1,15 @@
 <template>
-  <div class="description-card">
+  <a class="description-card" :href="`/${isStory ? 'story' : 'saga'}/${slug}/`">
     <div class="description-card__wrapper">
         <div class="description-card__content">
             <VText variant="header">{{ title }}</VText>
             <VText max-lines="4" variant="body">{{ content }}</VText>
         </div>
         <div class="description-card__image">
-            <VImage aspectRation="1/1" :src="`/assets/${path}/${image}.png`" />
+            <VImage aspectRation="1/1" :src="`/assets/${isStory ? 'stories' : 'sagas'}/${slug}.png`" />
         </div>
     </div>
-  </div>
+  </a>
 </template>
 
 <script setup>
@@ -19,13 +19,13 @@
       type: String,
       default: ''
     },
-    image: {
+    slug: {
       type: String,
       default: ''
     },
-    path: {
-      type: String,
-      default: 'stories'
+    isStory: {
+      type: Boolean,
+      default: true
     },
     content: {
       type: String,
@@ -36,8 +36,7 @@
 
 <style scoped>
   .description-card {
-    background-color: white;
-    color: black;
+    background-color: var(--v-color-surface-mod);
     border-radius: var(--v-unit-2);
     overflow: hidden;
     min-height: 250px;

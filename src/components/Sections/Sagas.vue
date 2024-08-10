@@ -2,8 +2,8 @@
   <div class="sections-new">
     <DescriptionCard
       v-for="saga in sagas"
-      :image="saga.key"
-      path="sagas"
+      :slug="saga.key"
+      :isStory="false"
       :key="saga.key"
       :title="saga.name"
       :content="saga.description"
