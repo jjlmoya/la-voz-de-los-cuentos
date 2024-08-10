@@ -1,14 +1,9 @@
 ---
 import NavLayout from '../../layouts/NavLayout.astro'
 import stories from '../../data/stories.json'
-import { Image } from 'astro:assets'
 import StoryPage from '../../components/Page/StoryPage.vue'
 const { id } = Astro.params
 const story = stories.find(story => story.key === id)
-const relatedStories = stories
-  .filter(s => s.key !== id && s.saga === story.saga)
-  .sort(() => 0.5 - Math.random())
-  .slice(0, 6)
 
 const firstParagraph = story.story.split('\n').filter(p => p.trim() !== '')[0]
 

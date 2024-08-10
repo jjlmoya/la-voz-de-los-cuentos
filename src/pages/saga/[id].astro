@@ -1,12 +1,10 @@
 ---
 import NavLayout from '../../layouts/NavLayout.astro'
-import BasicCard from '../../components/BasicCard.astro'
 import sagaData from '../../data/sagas.json'
 import storyData from '../../data/stories.json'
-
+import SagaPage from '../../components/Page/SagaPage.vue'
 const { id } = Astro.params
 const saga = sagaData.find(s => s.key === id)
-const filteredStories = storyData.filter(story => story.saga === id)
 
 export async function getStaticPaths() {
   return sagaData.map(saga => ({
@@ -22,31 +20,5 @@ export async function getStaticPaths() {
   url={'/saga/' + saga.key + '/'}
   hasVideo
 >
-  <div class="saga-container">
-    <h1 class="saga-title">{saga.name}</h1>
-    {
-      saga.youtube ? (
-        <iframe
-          src={`https://www.youtube.com/embed/videoseries?list=${saga.youtube}`}
-          width="100%"
-          height="600"
-          frameborder="0"
-          allowfullscreen
-        />
-      ) : (
-        <div class="no-playlist">
-          <p>No hay playlist disponible para esta saga.</p>
-        </div>
-      )
-    }
-    <p class="saga-description">{saga.description}</p>
-    <h2 class="stories-title">Cuentos en esta saga</h2>
-    <div class="stories-grid">
-      {
-        filteredStories.map(story => (
-          <BasicCard key={story.key} entry={story} />
-        ))
-      }
-    </div>
-  </div>
+  <SagaPage saga={saga} client:load />
 </NavLayout>

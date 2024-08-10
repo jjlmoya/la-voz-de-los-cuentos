@@ -29,7 +29,7 @@ export default function useSagas() {
   }
 
   const getLastNSagas = n => {
-    return allSagas.value.slice(0, 8)
+    return allSagas.value.slice(0, n)
   }
   return {
     getFirstSaga,

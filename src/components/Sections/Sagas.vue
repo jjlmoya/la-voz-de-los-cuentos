@@ -12,11 +12,17 @@
 </template>
 
 <script setup>
+  const props = defineProps({
+    amount: {
+      type: Number,
+      default: 7
+    }
+  })
   import DescriptionCard from '../Cards/Description.vue'
   import useSagas from '../../composables/useSagas'
 
   const { getLastNSagas } = useSagas()
-  const sagas = getLastNSagas(7)
+  const sagas = getLastNSagas(props.amount)
 </script>
 
 <style scoped>

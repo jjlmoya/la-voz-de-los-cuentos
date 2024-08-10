@@ -51,7 +51,7 @@
   }
   .description-card__wrapper {
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 1fr 1fr;
     height: 100%;
   }
 

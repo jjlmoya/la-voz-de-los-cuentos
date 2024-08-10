@@ -50,7 +50,7 @@
       />
     </VContainer>
     <div class="story-page__title">
-        <VText variant="header" :style="{ fontSize: `${fontSize}px`, 'line-height': `${fontSize >= 20 ? '1.5': '1'}` }">
+        <VText as="h1" variant="header" :style="{ fontSize: `${fontSize}px`, 'line-height': `${fontSize >= 20 ? '1.5': '1'}` }">
             {{ story.name }}
         </VText>
     </div>
