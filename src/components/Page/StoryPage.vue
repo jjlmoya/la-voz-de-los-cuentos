@@ -257,7 +257,10 @@
     .story-page__image,
     .story-page__related,
     .story-page__audio,
-    .story-page_font-selector {
+    .footer,
+    .navigation-layout__mobile,
+    .story-page_font-selector,
+    astro-dev-toolbar {
       display: none !important;
     }
   }
