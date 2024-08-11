@@ -4,7 +4,7 @@
 
             class="spotify__iframe"
            :class="{'spotify__iframe--active': iframe}"
-            name="Reproductor de Spotify"
+            title="Reproductor de Spotify"
             frameborder="0"
             scrolling="no"
             loading="lazy"
