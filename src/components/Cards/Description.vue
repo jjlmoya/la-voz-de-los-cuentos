@@ -7,7 +7,7 @@
       <div class="description-card__content">
         <VText variant="header">{{ title }}</VText>
         <VText max-lines="4" variant="body">
-          <div  v-html="content"></div>
+          <div v-html="content"></div>
         </VText>
       </div>
       <div class="description-card__image">

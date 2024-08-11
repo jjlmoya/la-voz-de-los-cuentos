@@ -1,6 +1,6 @@
 ---
+import CustomPage from '../../components/Page/CustomPage.vue'
 import NavLayout from '../../layouts/NavLayout.astro'
-import { Image } from 'astro:assets'
 ---
 
 <NavLayout
@@ -8,67 +8,5 @@ import { Image } from 'astro:assets'
   description="Bienvenido a nuestra página mágica de creación de cuentos infantiles. Aquí puedes pedir un cuento personalizado de forma gratuita. ¡Deja volar tu imaginación y permítenos crear una historia especial solo para ti!"
   url="/personalizado/cuento/"
 >
-  Personaliazdo
+  <CustomPage client:load />
 </NavLayout>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('customForm')
-    const loader = document.getElementById('loader')
-    const successMessage = document.getElementById('successMessage')
-    const errorMessage = document.getElementById('errorMessage')
-    const statusImage = document.getElementById('statusImage')
-    const loadingImage = document.getElementById('loadingImage')
-    const successImage = document.getElementById('successImage')
-    const errorImage = document.getElementById('errorImage')
-    const description = document.getElementById('description')
-
-    form.addEventListener('submit', async event => {
-      event.preventDefault()
-
-      const formData = {
-        name: form.name.value,
-        story: form.story.value,
-        email: form.email.value,
-        receiveAll: form.receiveAll.checked
-      }
-
-      form.style.display = 'none'
-      loader.style.display = 'flex'
-      description.style.display = 'none'
-      successMessage.style.display = 'none'
-      errorMessage.style.display = 'none'
-      statusImage.style.display = 'none'
-      loadingImage.style.display = 'block'
-      successImage.style.display = 'none'
-      errorImage.style.display = 'none'
-
-      try {
-        const response = await fetch(
-          'https://script.google.com/macros/s/AKfycbyXxWrBmQDXCDIg5v-bc4YnkDU5YHu43a8HeGVNdoknYDK50bBnLg9gcAbP4Myw14lr/exec',
-          {
-            method: 'POST',
-            body: JSON.stringify(formData),
-            headers: {
-              'Content-Type': 'text/plain;charset=utf-8'
-            }
-          }
-        )
-
-        if (response.ok) {
-          successMessage.style.display = 'flex'
-          successImage.style.display = 'block'
-        } else {
-          errorMessage.style.display = 'flex'
-          errorImage.style.display = 'block'
-        }
-      } catch (error) {
-        errorMessage.style.display = 'flex'
-        errorImage.style.display = 'block'
-      } finally {
-        loader.style.display = 'none'
-        loadingImage.style.display = 'none'
-      }
-    })
-  })
-</script>

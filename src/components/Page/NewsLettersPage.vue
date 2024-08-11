@@ -1,6 +1,8 @@
 <template>
   <VContainer size="xl" class="newsletters-page">
-    <VText class="newsletters-page__title" as="h1" variant="header">News Audio Letters</VText>
+    <VText class="newsletters-page__title" as="h1" variant="header"
+      >News Audio Letters</VText
+    >
     <SectionsDefault>
       <NewsLetters />
     </SectionsDefault>
@@ -14,11 +16,10 @@
 
 <style>
   .newsletters-page {
-    padding: var(--v-unit-4)
+    padding: var(--v-unit-4);
   }
   .newsletters-page__title {
     font-size: 24px;
     text-align: center;
   }
 </style>
-

@@ -1,23 +1,22 @@
 <template>
   <VContainer size="xl" class="newsletter-page">
     <VText class="newsletter-page__title">
-        {{ newsletter.title }}
+      {{ newsletter.title }}
     </VText>
     <div class="newsletter-page__audio" v-if="newsletter.spotify">
-       <iframe
+      <iframe
         frameborder="0"
         scrolling="no"
-        loading="lazy" 
+        loading="lazy"
         @load="iframeLoaded"
         :src="`https://podcasters.spotify.com/pod/show/lavozdeloscuentos/embed/episodes/${newsletter.spotify}`"
-        />
-        <div v-if="!iframe" class="newsletter-page__audio-loading"></div>
-        <div v-if="iframe" class="newsletter-page__audio-hide"></div>
+      />
+      <div v-if="!iframe" class="newsletter-page__audio-loading"></div>
+      <div v-if="iframe" class="newsletter-page__audio-hide"></div>
     </div>
-     <VText>
-        <div class="newsletter-page__html" v-html="newsletter.html">
-        </div>
-     </VText>
+    <VText>
+      <div class="newsletter-page__html" v-html="newsletter.html"></div>
+    </VText>
   </VContainer>
 </template>
 
@@ -26,12 +25,12 @@
   import { ref } from 'vue'
   defineProps({
     newsletter: {
-        type: Object,
-        default: {}
+      type: Object,
+      default: {}
     }
   })
   const iframe = ref(false)
-  const iframeLoaded = ()  => {
+  const iframeLoaded = () => {
     console.log('load')
     iframe.value = true
   }
@@ -42,34 +41,35 @@
     padding: var(--v-unit-8);
     display: grid;
     grid-gap: var(--v-unit-8);
-   
   }
   .newsletter-page__title {
     font-size: 24px;
   }
 
   .newsletter-page__html {
-     display: grid;
-     grid-gap: var(--v-unit-4);
-     h2, h3, h4, h5, h6 {
-     padding-top: var(--v-unit-4);
-     font-weight: bold;
-     }
+    display: grid;
+    grid-gap: var(--v-unit-4);
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      padding-top: var(--v-unit-4);
+      font-weight: bold;
+    }
     h2 {
       text-align: center;
       font-size: 24px;
-     }
-     h3 {
+    }
+    h3 {
       font-size: 20px;
-     }
-     a {
+    }
+    a {
       text-decoration: underline;
       color: var(--v-color-primary);
-     }
-
+    }
   }
 
-  
   .newsletter-page__audio {
     border-radius: var(--v-unit-2);
     overflow: hidden;
@@ -86,7 +86,7 @@
     top: 0;
     right: 0;
     height: 150px;
-    width: 100%; 
+    width: 100%;
     bottom: 0;
     background-color: white;
     z-index: 10;
@@ -99,7 +99,7 @@
     right: 0;
     width: 100%;
     height: 100%;
-    content: " ";
+    content: ' ';
     z-index: 10;
   }
   @keyframes fold {
@@ -114,4 +114,3 @@
     }
   }
 </style>
-

@@ -18,7 +18,9 @@
         >
       </div>
     </div>
-    <VText variant="body" v-if="time" class="basic-card__time">{{ renderedTime }}</VText>
+    <VText variant="body" v-if="time" class="basic-card__time">{{
+      renderedTime
+    }}</VText>
   </a>
 </template>
 
@@ -45,8 +47,6 @@
   })
   const { getTime } = useStory({ time: props.time })
   const renderedTime = getTime()
-
-
 </script>
 
 <style scoped>
@@ -69,6 +69,6 @@
     border-left: none;
     border-bottom: none;
     background-color: var(--v-color-surface);
-    border-radius: var(--v-unit-2) 0 var(--v-unit-2)  0;
+    border-radius: var(--v-unit-2) 0 var(--v-unit-2) 0;
   }
 </style>

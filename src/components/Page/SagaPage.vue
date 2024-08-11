@@ -1,26 +1,27 @@
 <template>
   <VContainer size="xl" class="saga-page">
     <div class="saga-page__image">
-         <iframe 
-          v-if="saga.youtube"
-          width="560" 
-          height="315" 
-          :src="`https://www.youtube.com/embed/videoseries?list=${saga.youtube}`" 
-          :title="`Playlist de la saga: ${saga.name}`" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
-        </iframe>
+      <iframe
+        v-if="saga.youtube"
+        width="560"
+        height="315"
+        :src="`https://www.youtube.com/embed/videoseries?list=${saga.youtube}`"
+        :title="`Playlist de la saga: ${saga.name}`"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      >
+      </iframe>
     </div>
     <VContainer class="saga-page__content">
-        <div class="saga-page__title">
-            <VText as="h1" variant="header">
-                {{ saga.name }}
-            </VText>
-        </div>
-        <VText>
-          <div v-html="descriptionHtml"></div>
+      <div class="saga-page__title">
+        <VText as="h1" variant="header">
+          {{ saga.name }}
         </VText>
+      </div>
+      <VText>
+        <div v-html="descriptionHtml"></div>
+      </VText>
     </VContainer>
     <SectionsDefault client:load :title="`Cuentos De La Saga (${totalTime})`">
       <SagaStories client:load :saga="saga" />
@@ -43,14 +44,12 @@
   const { getTime, html } = useSaga(props.saga)
   const totalTime = getTime()
   const descriptionHtml = html()
-
 </script>
 
 <style>
- 
   .saga-page {
     padding: 0 var(--v-unit-2);
-    iframe{
+    iframe {
       width: 100%;
       min-height: 40dvh;
     }
@@ -63,7 +62,7 @@
     grid-gap: var(--v-unit-1);
     text-align: center;
     .v-input {
-        min-height: 0;
+      min-height: 0;
     }
   }
 
@@ -72,21 +71,21 @@
     border-radius: var(--v-unit-3);
     overflow: hidden;
   }
- .saga-page__pdf {
+  .saga-page__pdf {
     top: 0;
     right: 0;
     position: absolute;
     z-index: 100;
     svg {
-        height: 60px;
-        width: auto;
-        padding: 4px;
-        fill: white;
+      height: 60px;
+      width: auto;
+      padding: 4px;
+      fill: white;
     }
     &:hover {
-        svg {
-            fill: black;
-        }
+      svg {
+        fill: black;
+      }
     }
   }
 
@@ -97,7 +96,4 @@
     background-color: var(--v-color-surface-mod);
     border-radius: var(--v-unit-2);
   }
-  
-
 </style>
-

@@ -13,13 +13,13 @@
 
   const { getAll } = useNewsLetters()
   const newsletters = getAll()
-  console.log({newsletters})
+  console.log({ newsletters })
 </script>
 
 <style scoped>
   .sections-newsletters {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(min(600px, 100%), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(600px, 100%), 1fr));
     grid-gap: var(--v-unit-8);
   }
 </style>

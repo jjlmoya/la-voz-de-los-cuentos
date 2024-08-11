@@ -1,7 +1,12 @@
 <template>
   <div class="section-default">
     <div class="section-default__header">
-      <VText as="h2" class="section-default__title" variant="header" v-if="title">
+      <VText
+        as="h2"
+        class="section-default__title"
+        variant="header"
+        v-if="title"
+      >
         {{ title }}
       </VText>
       <VLink
