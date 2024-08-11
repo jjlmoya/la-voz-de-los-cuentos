@@ -9,7 +9,7 @@
         <VText class="card-hero__title" variant="header" color="primary">{{
           story.name
         }}</VText>
-        <VText max-lines="3" variant="body">
+        <VText max-lines="3" variant="label">
           <div v-html="first"></div>
         </VText>
       </a>
@@ -30,13 +30,15 @@
 <style scoped>
   .card-hero {
     position: relative;
+    border-radius: 16px;
+    overflow: hidden;
   }
 
   .card-hero__content {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1));
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
     top: 0;
     left: 0;
     display: grid;
