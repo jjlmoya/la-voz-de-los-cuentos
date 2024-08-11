@@ -13,7 +13,6 @@
 
   const { getAll } = useNewsLetters()
   const newsletters = getAll()
-  console.log({ newsletters })
 </script>
 
 <style scoped>

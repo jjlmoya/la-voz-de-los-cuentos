@@ -20,7 +20,7 @@
         </VText>
       </div>
       <VText>
-        <div v-html="descriptionHtml"></div>
+        <article v-html="descriptionHtml"></article>
       </VText>
     </VContainer>
     <SectionsDefault client:load :title="`Cuentos De La Saga (${totalTime})`">

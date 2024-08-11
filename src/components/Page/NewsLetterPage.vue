@@ -1,6 +1,6 @@
 <template>
   <VContainer size="xl" class="newsletter-page">
-    <VText class="newsletter-page__title">
+    <VText class="newsletter-page__title" as="h1">
       {{ newsletter.title }}
     </VText>
     <div class="newsletter-page__audio" v-if="newsletter.spotify">
@@ -31,7 +31,6 @@
   })
   const iframe = ref(false)
   const iframeLoaded = () => {
-    console.log('load')
     iframe.value = true
   }
 </script>

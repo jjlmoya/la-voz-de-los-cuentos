@@ -81,7 +81,7 @@
         {{ story.name }}
       </VText>
     </div>
-    <div class="story-page__content">
+    <article class="story-page__content">
       <div
         :style="{
           fontSize: `${fontSize}px`,
@@ -89,7 +89,7 @@
         }"
         v-html="storyHTML"
       />
-    </div>
+    </article>
     <SectionsDefault
       class="story-page__related"
       client:load

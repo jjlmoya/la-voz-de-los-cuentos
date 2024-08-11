@@ -34,7 +34,6 @@
         </VField>
       </div>
     </VContainer>
-    <VDivider class="footer-divider">Enlaces de Interés</VDivider>
     <div class="footer-wrapper">
       <div class="footer-links">
         <VDivider>Sagas</VDivider>

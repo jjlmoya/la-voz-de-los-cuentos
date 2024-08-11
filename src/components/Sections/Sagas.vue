@@ -1,5 +1,5 @@
 <template>
-  <div class="sections-new">
+  <section class="sections-new">
     <DescriptionCard
       v-for="saga in sagas"
       :slug="saga.key"
@@ -8,7 +8,7 @@
       :title="saga.name"
       :content="saga.description"
     />
-  </div>
+  </section>
 </template>
 
 <script setup>

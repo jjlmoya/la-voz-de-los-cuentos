@@ -1,5 +1,5 @@
 <template>
-  <div class="card-hero">
+  <article class="card-hero">
     <VImage
       aspectRatio="16/9"
       :src="`/assets/stories/${story.key}.png`"
@@ -14,7 +14,7 @@
         </VText>
       </a>
     </div>
-  </div>
+  </article>
 </template>
 
 <script setup>
