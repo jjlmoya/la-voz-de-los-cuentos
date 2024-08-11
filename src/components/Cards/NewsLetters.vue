@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-  import { VText } from '@overgaming/vicius'
+  import { VLink } from '@overgaming/vicius'
   defineProps({
     newsletter: {
       type: Object,
@@ -18,7 +18,6 @@
 
 <style scoped>
   .newsletter-card {
-    min-height: 60vh;
     display: grid;
     grid-template-columns: 4fr 2fr 50px;
     padding: var(--v-unit-2);

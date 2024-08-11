@@ -2,7 +2,11 @@
   <VContainer size="xs" class="custom-page">
     <div class="custom-page-step" v-if="currentStep === 1">
       <h2>Nombre del protagonista</h2>
-      <VInput type="text" v-model="form.name" />
+      <VInput         
+        aria-label="Input para el nombre del protagonista"
+        type="text" 
+        v-model="form.name" 
+      />
       <div class="custom-page-step__buttons">
         <VButton @click="nextStep" :disabled="!form.name">Siguiente</VButton>
       </div>
@@ -12,7 +16,7 @@
       <h2>
         ¿De qué va el cuento? <span class="custom-page-mandatory">*</span>
       </h2>
-      <textarea v-model="form.story" required></textarea>
+      <textarea aria-label="Area de texto para describir el cuento" v-model="form.story" required></textarea>
       <div class="custom-page-step__buttons">
         <VButton @click="prevStep">Anterior</VButton>
         <VButton @click="nextStep" :disabled="!form.story">Siguiente</VButton>
@@ -22,6 +26,7 @@
     <div class="custom-page-step" v-if="currentStep === 3">
       <h2>¿Dónde enviarlo?</h2>
       <VInput
+        aria-label="Email para enviar el cuento"
         type="email"
         v-model="form.email"
         placeholder="ejemplo@email.com"

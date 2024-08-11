@@ -3,17 +3,7 @@
     <VText class="newsletter-page__title" as="h1">
       {{ newsletter.title }}
     </VText>
-    <div class="newsletter-page__audio" v-if="newsletter.spotify">
-      <iframe
-        frameborder="0"
-        scrolling="no"
-        loading="lazy"
-        @load="iframeLoaded"
-        :src="`https://podcasters.spotify.com/pod/show/lavozdeloscuentos/embed/episodes/${newsletter.spotify}`"
-      />
-      <div v-if="!iframe" class="newsletter-page__audio-loading"></div>
-      <div v-if="iframe" class="newsletter-page__audio-hide"></div>
-    </div>
+    <Spotify v-if="newsletter.spotify" :spotify="newsletter.spotify" />
     <VText>
       <div class="newsletter-page__html" v-html="newsletter.html"></div>
     </VText>
@@ -22,6 +12,7 @@
 
 <script setup>
   import { VText, VContainer } from '@overgaming/vicius'
+  import Spotify from '../Media/Spotify.vue'
   import { ref } from 'vue'
   defineProps({
     newsletter: {
@@ -66,50 +57,6 @@
     a {
       text-decoration: underline;
       color: var(--v-color-primary);
-    }
-  }
-
-  .newsletter-page__audio {
-    border-radius: var(--v-unit-2);
-    overflow: hidden;
-    position: relative;
-    height: 150px;
-    iframe {
-      width: 100%;
-      min-height: 600px;
-    }
-  }
-
-  .newsletter-page__audio-hide {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 150px;
-    width: 100%;
-    bottom: 0;
-    background-color: white;
-    z-index: 10;
-    animation: fold 0.9s ease-in forwards;
-  }
-
-  .newsletter-page__audio-loading {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    content: ' ';
-    z-index: 10;
-  }
-  @keyframes fold {
-    0% {
-      width: 100%;
-    }
-    99% {
-      width: 150px;
-    }
-    100% {
-      width: 150px;
     }
   }
 </style>

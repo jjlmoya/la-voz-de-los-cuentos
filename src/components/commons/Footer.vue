@@ -11,6 +11,7 @@
         <VField>
           <VInput
             v-if="!successMessage"
+            aria-label="Input Email de Newsletter"
             type="email"
             name="email"
             v-model="email"

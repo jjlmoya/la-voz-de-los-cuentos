@@ -12,7 +12,7 @@
         :playlabel="story.name"
       />
       <div class="story-page__pdf">
-        <VButton color="primary" @click="printPdf">
+        <VButton color="primary" @click="printPdf" aria-label="Descargar en PDF">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -43,17 +43,8 @@
       </div>
     </div>
 
-    <div class="story-page__audio" v-if="story.spotify">
-      <iframe
-        frameborder="0"
-        scrolling="no"
-        loading="lazy"
-        @load="iframeLoaded"
-        :src="`https://podcasters.spotify.com/pod/show/lavozdeloscuentos/embed/episodes/${story.spotify}`"
-      />
-      <div v-if="!iframe" class="story-page__audio-loading"></div>
-      <div v-if="iframe" class="story-page__audio-hide"></div>
-    </div>
+    <Spotify v-if="story.spotify" :spotify="story.spotify" />
+
 
     <VContainer class="story-page_font-selector" size="xs">
       <label for="font-size">
@@ -62,6 +53,8 @@
       </label>
       <VInput
         type="range"
+        name="font-Size"
+        aria-label="Tamaño de Fuente"
         id="font-size"
         min="14"
         max="28"
@@ -101,6 +94,8 @@
 </template>
 
 <script setup>
+  import Spotify from '../Media/Spotify.vue'
+
   const props = defineProps({
     story: {
       type: Object,

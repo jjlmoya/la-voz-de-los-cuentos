@@ -61,6 +61,7 @@
     right: var(--v-unit-2);
     background-color: var(--v-color-surface);
     padding: var(--v-unit-2);
+    padding-bottom: var(--v-unit-8);
     text-align: center;
     border-radius: var(--v-unit-1);
     opacity: 0.9;
@@ -73,6 +74,9 @@
     grid-auto-flow: row;
     justify-content: center;
     align-items: center;
+  }
+  .cookie-consent-button {
+    color: white;
   }
   @media print {
     .cookie-consent {

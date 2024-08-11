@@ -12,10 +12,12 @@
 <script setup>
   import SectionsDefault from '../../components/Sections/NewsLetters.vue'
   import { VText, VContainer } from '@overgaming/vicius'
+  import NewsLetters from '../Sections/NewsLetters.vue'
 </script>
 
 <style>
   .newsletters-page {
+    min-height: 70vh;
     padding: var(--v-unit-4);
   }
   .newsletters-page__title {
