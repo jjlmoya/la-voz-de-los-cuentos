@@ -6,7 +6,7 @@
     ></VImage>
     <div class="card-hero__content">
       <a class="card-hero__article" :href="`/cuento/${story.key}/`">
-        <VText class="card-hero__title" variant="header" color="primary">{{
+        <VText class="card-hero__title" variant="header">{{
           story.name
         }}</VText>
         <VText max-lines="3" variant="label">
@@ -38,7 +38,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3));
     top: 0;
     left: 0;
     display: grid;
@@ -51,5 +51,7 @@
   }
   .card-hero__title {
     font-size: 24px;
+    text-shadow: 0px 0px 10px white;
   }
+  
 </style>
