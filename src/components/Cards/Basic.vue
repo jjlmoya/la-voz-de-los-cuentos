@@ -6,6 +6,7 @@
   >
     <div class="basic-card__image">
       <img
+        :alt="`Imagen de ${title}`"
         v-if="isIntersecting"
         class="basic-card__img"
         :aspectRatio="1/1"
