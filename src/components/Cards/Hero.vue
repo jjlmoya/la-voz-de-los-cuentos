@@ -2,7 +2,7 @@
   <article class="card-hero">
     <VImage
       aspectRatio="16/9"
-      :src="`/assets/stories/${story.key}.png`"
+      :src="`/assets/stories/${story.key}.webp`"
     ></VImage>
     <div class="card-hero__content">
       <a class="card-hero__article" :href="`/cuento/${story.key}/`">

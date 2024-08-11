@@ -9,7 +9,7 @@
         v-if="isIntersecting"
         class="basic-card__img"
         :aspectRatio="1/1"
-        :src="`/assets/${isStory ? 'stories' : 'sagas'}/${slug}.png`"
+        :src="`/assets/${isStory ? 'stories' : 'sagas'}/${slug}.webp`"
         loading="lazy"
       />
     </div>

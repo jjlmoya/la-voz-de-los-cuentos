@@ -28,7 +28,7 @@ const schema = JSON.stringify({
     name: 'LaVozDeLosCuentos'
   },
   datePublished: formatDate(story.date),
-  image: `https://lavozdeloscuentos.es/assets/stories/${story.key}.png`,
+  image: `https://lavozdeloscuentos.es/assets/stories/${story.key}.webp`,
   description: firstParagraph,
   genre: 'Literatura Infantil',
   mainEntityOfPage: {
@@ -39,7 +39,7 @@ const schema = JSON.stringify({
     '@type': 'VideoObject',
     name: `${story.name} - Video`,
     description: firstParagraph,
-    thumbnailUrl: `https://lavozdeloscuentos.es/assets/stories/${story.key}.png`,
+    thumbnailUrl: `https://lavozdeloscuentos.es/assets/stories/${story.key}.webp`,
     uploadDate: formatDate(story.date),
     contentUrl: `https://www.youtube.com/embed/${story.youtube}`,
     embedUrl: `https://www.youtube.com/embed/${story.youtube}`
@@ -48,7 +48,7 @@ const schema = JSON.stringify({
     '@type': 'AudioObject',
     name: `${story.name} - Audio`,
     description: `${firstParagraph}`,
-    thumbnailUrl: `https://lavozdeloscuentos.es/assets/stories/${story.key}.png`,
+    thumbnailUrl: `https://lavozdeloscuentos.es/assets/stories/${story.key}.webp`,
     uploadDate: formatDate(story.date),
     contentUrl: story.spotifyLink,
     embedUrl: story.spotifyLink
@@ -59,7 +59,7 @@ const schema = JSON.stringify({
 <NavLayout
   title={story.name}
   description={firstParagraph}
-  image={'/assets/stories/' + story.key + '.png'}
+  image={'/assets/stories/' + story.key + '.webp'}
   url={'/cuento/' + story.key + '/'}
   hasVideo
 >

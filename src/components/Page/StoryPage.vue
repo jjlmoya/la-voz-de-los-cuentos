@@ -3,7 +3,7 @@
     <div class="story-page__image">
       <VImage
         v-if="!story.youtube"
-        :src="`/assets/stories/${story.key}.png`"
+        :src="`/assets/stories/${story.key}.webp`"
         :alt="`Imagen de portada del cuento ${story.name}`"
       />
       <lite-youtube

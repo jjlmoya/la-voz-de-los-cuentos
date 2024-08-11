@@ -91,7 +91,7 @@ const initialStory = shuffledStories[0]
         const text = _getTextByPosition(position)
         return `
           <div class="streaming-entry ${position === 0 ? 'streaming-entry--active' : ''}">
-            <img  style="opacity:${100 - 50 - 7 * position}%" class="streaming-entry-image" src="/assets/stories/${_story.data.key}.png" alt"${_story.data.name}"/>
+            <img  style="opacity:${100 - 50 - 7 * position}%" class="streaming-entry-image" src="/assets/stories/${_story.data.key}.webp" alt"${_story.data.name}"/>
             ${text ? `<span class="streaming-entry-label">${text}</span>` : ''}
           </div>
       `
