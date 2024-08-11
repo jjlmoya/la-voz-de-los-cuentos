@@ -61,6 +61,8 @@ defineProps ({
 
   .spotify__iframe {
     opacity: 0;
+    background-color: white;
+
   }
   
    .spotify__iframe--active {
@@ -86,11 +88,8 @@ defineProps ({
     0% {
       width: 100%;
     }
-    99% {
-      width: 150px;
-    }
     100% {
-      width: 150px;
+      width: 130px;
     }
   }
 
@@ -113,6 +112,7 @@ defineProps ({
     }
     .spotify iframe {
         height: 96px;
+        
     }
    }
 </style>

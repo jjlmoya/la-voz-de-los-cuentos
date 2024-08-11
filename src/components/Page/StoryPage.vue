@@ -220,19 +220,6 @@
     content: ' ';
     z-index: 10;
   }
-
-  @keyframes fold {
-    0% {
-      width: 100%;
-    }
-    99% {
-      width: 150px;
-    }
-    100% {
-      width: 150px;
-    }
-  }
-
   @media print {
     body {
       background: white !important;
