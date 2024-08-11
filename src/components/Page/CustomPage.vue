@@ -42,7 +42,7 @@
 
     <div
       class="custom-page-step"
-      v-if="currentStep === 4 && !loading && !successMessage && errorMessage"
+      v-if="currentStep === 4 && !loading && !successMessage"
     >
       <VText
         >Te enviaremos el cuento al correo electrónico, ¿Quieres suscribirte
