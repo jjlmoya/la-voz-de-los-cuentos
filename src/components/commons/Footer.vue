@@ -12,12 +12,13 @@
           <VInput
             v-if="!successMessage"
             type="email"
+            name="email"
             v-model="email"
             :invalid="emailError"
             @input="validateEmail"
           />
           <template #label v-if="!successMessage">
-            <VFieldLabel>Email:</VFieldLabel>
+            <VFieldLabel for="email">Email:</VFieldLabel>
           </template>
           <template #message>
             <VText v-if="successMessage">¡Gracias por la suscripción!</VText>
