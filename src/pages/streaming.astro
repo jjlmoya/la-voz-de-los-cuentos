@@ -2,7 +2,6 @@
 // Filtrar historias que tengan un campo de YouTube
 import StreamingLayout from '../layouts/StreamingLayout.astro'
 import storiesData from '../data/stories.json'
-import '../styles/StreamingPage.css'
 
 // Obtener la fecha de hoy
 
@@ -34,7 +33,6 @@ function shuffle(array) {
 
 const shuffledStories = shuffle(stories)
 const initialStory = shuffledStories[0]
-console.log(shuffledStories.length)
 ---
 
 <StreamingLayout
@@ -91,7 +89,6 @@ console.log(shuffledStories.length)
         let _index = (index + position) % stories.length
         const _story = stories[_index]
         const text = _getTextByPosition(position)
-        console.log({ text })
         return `
           <div class="streaming-entry ${position === 0 ? 'streaming-entry--active' : ''}">
             <img  style="opacity:${100 - 50 - 7 * position}%" class="streaming-entry-image" src="/assets/stories/${_story.data.key}.png" alt"${_story.data.name}"/>
@@ -128,7 +125,6 @@ console.log(shuffledStories.length)
       }
 
       function onPlayerReady(event) {
-        console.log('Player is ready')
         const duration = player.getDuration()
         _current = {
           ..._current,

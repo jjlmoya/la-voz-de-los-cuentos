@@ -1,0 +1,12 @@
+---
+import MainLayout from './MainLayout.astro'
+import NavigationLayout from './NavigationLayout.vue'
+
+const props = Astro.props
+---
+
+<MainLayout {...props}>
+  <NavigationLayout client:load>
+    <slot />
+  </NavigationLayout>
+</MainLayout>

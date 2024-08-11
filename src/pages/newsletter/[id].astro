@@ -1,8 +1,7 @@
 ---
-import MainLayout from '../../layouts/MainLayout.astro'
+import NavLayout from '../../layouts/NavLayout.astro'
 import newsletters from '../../data/newsletters.json'
-import '../../styles/NewsLetterPage.css'
-
+import NewsLetterPage from '../../components/Page/NewsLetterPage.vue'
 const { id } = Astro.params
 const newsletter = newsletters.find(newsletter => newsletter.id === id)
 
@@ -18,27 +17,12 @@ export async function getStaticPaths() {
 }
 ---
 
-<MainLayout
+<NavLayout
   title={newsletter.title}
   description={firstParagraph}
   image={'/assets/stories/newsletter.png'}
   url={'/newsletter/' + newsletter.id + '/'}
   hasVideo
 >
-  <div class="newsletter-container" id="newsletter-container">
-    <h1 class="newsletter-title">{newsletter.title}</h1>
-    {
-      newsletter.spotify && (
-        <div class="newsletter-spotify-embed">
-          <iframe
-            src={`https://podcasters.spotify.com/pod/show/lavozdeloscuentos/embed/episodes/${newsletter.spotify}`}
-            frameborder="0"
-            scrolling="no"
-            loading="lazy"
-          />
-        </div>
-      )
-    }
-    <div class="newsletter-html" set:html={newsletter.html} />
-  </div>
-</MainLayout>
+  <NewsLetterPage newsletter={newsletter} client:load />
+</NavLayout>

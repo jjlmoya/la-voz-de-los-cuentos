@@ -1,7 +1,6 @@
 ---
 import Header from '../components/commons/Header/Header.astro'
 import MainFooter from '../components/commons/Footer/Footer.astro'
-import './layout.css'
 const {
   title,
   description,
@@ -82,11 +81,6 @@ const pageTitle = ' Streaming | La Voz de los Cuentos'
     <div class="streaming-content">
       <slot />
     </div>
-    <style>
-      body {
-        font-family: 'Fredoka', sans-serif;
-      }
-    </style>
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {

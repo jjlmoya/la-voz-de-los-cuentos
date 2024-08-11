@@ -1,24 +1,12 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro'
-import newsletters from '../data/newsletters.json'
-import '../styles/NewsLetterPage.css'
-
-console.log({ newsletters })
+import NavLayout from '../layouts/NavLayout.astro'
+import NewsLettersPage from '../components/Page/NewsLettersPage.vue'
 ---
 
-<MainLayout
+<NavLayout
   title="Listado de News Audio Letter"
   description="Las novedades y lo que está por venir, para que conozcas más de los entresijos de La Voz de los Cuentos"
   url="/newsletters/"
 >
-  <div class="newsletter-content">
-    <div class="newsletters-grid">
-      <h1 class="newsletters-title">Nuestras newsletters</h1>
-      {
-        newsletters.map(newletter => (
-          <a href={`/newsletter/${newletter.id}`}>{newletter.title}</a>
-        ))
-      }
-    </div>
-  </div>
-</MainLayout>
+  <NewsLettersPage client:load />
+</NavLayout>
