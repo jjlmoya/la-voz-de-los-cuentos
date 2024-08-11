@@ -18,6 +18,7 @@
 
     <div class="navigation-layout__content">
       <slot />
+      <Footer />
     </div>
 
     <Teleport to="body">
@@ -37,7 +38,7 @@
   import { VIcon } from '@overgaming/vicius'
   import MenuContainer from '../components/Menu/MenuContainer.vue'
   import Menu from '../components/Menu/Menu.vue'
-
+  import Footer from '../components/commons/Footer.vue'
   const isOpen = ref(false)
 
   const toggle = () => {

@@ -4,7 +4,7 @@
       <VInput
         type="text"
         v-model="searchQuery"
-        placeholder="Buscar historia..."
+        placeholder="Buscar cuento..."
         class="search-input"
       />
     </VContainer>
@@ -57,8 +57,8 @@
         :time="parseInt(story.time)"
         isStory
       />
-      <VContainer class="sections-filtered__content-list">
-        <PlainCard v-if="isListView" v-for="story in filteredAndSortedStories" :key="story.key" :story="story" />
+      <VContainer class="sections-filtered__content-list" v-if="isListView" >
+        <PlainCard v-for="story in filteredAndSortedStories" :key="story.key" :story="story" />
       </VContainer>
     </div>
   </div>
