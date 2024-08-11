@@ -11,8 +11,8 @@
         @load="iframeLoaded"
         :src="`https://podcasters.spotify.com/pod/show/lavozdeloscuentos/embed/episodes/${newsletter.spotify}`"
         />
-        <div v-if="!iframe" class="story-page__audio-loading"></div>
-        <div v-if="iframe" class="story-page__audio-hide"></div>
+        <div v-if="!iframe" class="newsletter-page__audio-loading"></div>
+        <div v-if="iframe" class="newsletter-page__audio-hide"></div>
     </div>
      <VText>
         <div class="newsletter-page__html" v-html="newsletter.html">
@@ -37,7 +37,7 @@
   }
 </script>
 
-<style>
+<style scoped>
   .newsletter-page {
     padding: var(--v-unit-8);
     display: grid;
