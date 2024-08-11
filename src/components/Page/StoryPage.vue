@@ -160,6 +160,7 @@
     height: 150px;
     iframe {
       width: 100%;
+      min-height: 600px;
     }
   }
 

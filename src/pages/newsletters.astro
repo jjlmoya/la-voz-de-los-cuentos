@@ -1,5 +1,6 @@
 ---
 import NavLayout from '../layouts/NavLayout.astro'
+import NewsLettersPage from '../components/Page/NewsLettersPage.vue'
 ---
 
 <NavLayout
@@ -7,5 +8,5 @@ import NavLayout from '../layouts/NavLayout.astro'
   description="Las novedades y lo que está por venir, para que conozcas más de los entresijos de La Voz de los Cuentos"
   url="/newsletters/"
 >
-  newsletters
+  <NewsLettersPage client:load />
 </NavLayout>

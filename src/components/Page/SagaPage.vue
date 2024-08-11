@@ -52,6 +52,7 @@
     padding: 0 var(--v-unit-2);
     iframe{
       width: 100%;
+      min-height: 40dvh;
     }
   }
   .saga-page_font-selector {

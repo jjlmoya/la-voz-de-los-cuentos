@@ -70,9 +70,10 @@
             </div>
             <div class="footer-links">
                <VLink href="/personalizado/cuento/">Cuento Personalizado</VLink>
-               <VLink href="/contacto/">Contactar</VLink>
-               <VLink href="/legal/cookies/">Política de Cookies</VLink>
-               <VLink href="/legal/privacidad/">Política de Privacidad</VLink>
+               <!--<VLink href="/contacto/">Contactar</VLink>-->
+               <VLink href="/newsletters/">Pasadas NewsLetters</VLink>
+               <!--<VLink href="/legal/cookies/">Política de Cookies</VLink>-->
+               <!--<VLink href="/legal/privacidad/">Política de Privacidad</VLink>-->
             </div>
         </div>
                       
