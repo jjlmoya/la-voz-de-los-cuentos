@@ -41,7 +41,7 @@ defineProps ({
     border-radius: var(--v-unit-2);
     overflow: hidden;
     position: relative;
-    height: 150px;
+    max-height: 150px;
     iframe {
       width: 100%;
       min-height: 600px;
@@ -105,6 +105,9 @@ defineProps ({
 
 
    @media (max-width: 831px) {
+    .spotify {
+        max-height: 96px;
+    }
     .spotify__mask {
         height: 96px;
     }

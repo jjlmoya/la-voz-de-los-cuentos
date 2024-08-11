@@ -26,7 +26,7 @@
   }
 </script>
 
-<style scoped>
+<style >
   .newsletter-page {
     padding: var(--v-unit-8);
     display: grid;
@@ -39,24 +39,28 @@
   .newsletter-page__html {
     display: grid;
     grid-gap: var(--v-unit-4);
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+   
+  }
+   .newsletter-page h2,
+    .newsletter-page h3,
+    .newsletter-page h4,
+    .newsletter-page h5,
+    .newsletter-page h6 {
       padding-top: var(--v-unit-4);
       font-weight: bold;
     }
-    h2 {
+
+    .newsletter-page h2 {
       text-align: center;
       font-size: 24px;
     }
-    h3 {
+    .newsletter-page h3 {
       font-size: 20px;
     }
-    a {
+    .newsletter-page a {
       text-decoration: underline;
       color: var(--v-color-primary);
     }
-  }
+
+   
 </style>
