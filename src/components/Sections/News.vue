@@ -17,7 +17,7 @@
 
   const { getLastNStories } = useStories()
   const _stories = getLastNStories(11).reverse()
-  const stories = _stories.slice(1,11)
+  const stories = _stories.slice(1, _stories.length)
 </script>
 
 <style scoped>
