@@ -169,16 +169,14 @@
 
   .custom-page-loader {
     text-align: center;
-    margin-top: 20px;
   }
 
   .custom-page-mandatory {
-    color: red;
+    color: var(--v-color-error);
   }
 
   .custom-page-success-message,
   .custom-page-error-message {
     text-align: center;
-    margin-top: 20px;
   }
 </style>
