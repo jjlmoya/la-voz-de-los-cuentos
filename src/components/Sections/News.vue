@@ -16,7 +16,8 @@
   import useStories from '../../composables/useStories'
 
   const { getLastNStories } = useStories()
-  const stories = getLastNStories(10)
+  const _stories = getLastNStories(11).reverse()
+  const stories = _stories.slice(1,11)
 </script>
 
 <style scoped>
