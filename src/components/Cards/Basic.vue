@@ -20,6 +20,7 @@
           variant="header"
           color="primary"
           maxLines="2"
+          :as="as"
         >
           {{ title }}
         </VText>
@@ -53,12 +54,15 @@ const props = defineProps({
     type: Boolean,
     default: true,
   },
+  as :{
+    type: String,
+    default: 'div'
+  }
 });
 
 const { getTime } = useStory({ time: props.time });
 const renderedTime = getTime();
 
-// Referencia para el elemento de la tarjeta
 const cardRef = ref(null);
 const isIntersecting = ref(false);
 
@@ -94,20 +98,26 @@ onUnmounted(() => {
 .basic-card {
   position: relative;
   display: grid;
-  grid-gap: var(--v-unit-2);
+  background-color: var(--v-color-surface-mod);
+  border-radius: var(--v-unit-4);
 }
+.basic-card__content {
+  text-align: center;
 
+  .v-text {
+    line-height: 1;
+  }
+}
 .basic-card__image {
   border-radius: var(--v-unit-2);
   overflow: hidden;
-  min-width: 160px;
-  min-height:160px;
+  min-height: 100px;
   background-color: var(--v-color-surface-dark);
 }
 
 .basic-card__img {
   aspect-ratio: 1 / 1;
-  opacity: 0; /* Inicialmente invisible */
+  opacity: 0; 
   animation: fade-in 1s ease-in-out forwards;
 }
 

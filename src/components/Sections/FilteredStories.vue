@@ -40,6 +40,7 @@
         </VText>
       </VButton>
       <VButton
+        aria-label="Cambiar a vista lista"
         variant="text"
         :class="{ active: isListView }"
         @click="toggleViewMode"
@@ -52,6 +53,7 @@
       :class="{ 'list-view': isListView }"
     >
       <BasicCard
+        as="h2"
         v-if="!isListView"
         v-for="story in filteredAndSortedStories"
         :slug="story.key"
@@ -161,8 +163,8 @@
 
   .sections-filtered__content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    grid-gap: var(--v-unit-4);
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-gap: var(--v-unit-6);
   }
 
   .sections-filtered__content-list {
