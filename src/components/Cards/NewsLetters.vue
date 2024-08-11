@@ -1,6 +1,6 @@
 <template>
     <a class="newsletter-card" :href="`/newsletter/${newsletter.id}/`">
-        <VText ellipsis class="plan-card__element">{{ newsletter.title }}</VText>
+        <VLink class="newsletter-card__element">#{{newsletter.id}} - {{ newsletter.title }}</VLink>
     </a>
 </template>
 
@@ -21,9 +21,6 @@ defineProps({
         padding: var(--v-unit-2);
         border-radius: var(--v-unit-2);
         grid-gap: var(--v-unit-8);
+        text-decoration: underline;
     }
-
-    .newsletter-card:nth-child(even) {
-        background-color: var(--v-color-surface-mod);
-     }
 </style>

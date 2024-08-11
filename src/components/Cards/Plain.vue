@@ -1,8 +1,8 @@
 <template>
     <a class="plain-card" :href="`/cuento/${story.key}/`">
-        <VText ellipsis class="plan-card__element">{{ story.name }}</VText>
-        <VText ellipsis class="plan-card__element">{{ saga }}</VText>
-        <VText ellipsis class="plan-card__element">{{ time }}</VText>
+        <VText ellipsis class="plain-card__element">{{ story.name }}</VText>
+        <VText ellipsis class="plain-card__element">{{ saga }}</VText>
+        <VText ellipsis class="plain-card__element">{{ time }}</VText>
     </a>
 </template>
 

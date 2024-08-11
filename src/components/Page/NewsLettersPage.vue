@@ -1,6 +1,6 @@
 <template>
   <VContainer size="xl" class="newsletters-page">
-    <VText class="stories-page__title" as="h1" variant="header">News Audio Letters</VText>
+    <VText class="newsletters-page__title" as="h1" variant="header">News Audio Letters</VText>
     <SectionsDefault>
       <NewsLetters />
     </SectionsDefault>
