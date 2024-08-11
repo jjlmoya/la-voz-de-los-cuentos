@@ -100,8 +100,8 @@ onUnmounted(() => {
 .basic-card__image {
   border-radius: var(--v-unit-2);
   overflow: hidden;
-  width: 160px;
-  height:160px;
+  min-width: 160px;
+  min-height:160px;
   background-color: var(--v-color-surface-dark);
 }
 
