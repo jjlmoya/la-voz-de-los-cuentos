@@ -5,7 +5,7 @@
       sólo usamos Google Analytics ¿Aceptas las cookies?
     </VText>
     <div class="cookie-consent-buttons">
-      <VButton size="xs" @click="acceptCookies" class="cookie-consent-button"
+      <VButton color="primary" size="xs" @click="acceptCookies" class="cookie-consent-button"
         >Aceptar Cookies</VButton
       >
       <VButton
@@ -59,10 +59,11 @@
     bottom: 0;
     left: var(--v-unit-2);
     right: var(--v-unit-2);
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--v-color-surface);
     padding: var(--v-unit-2);
     text-align: center;
     border-radius: var(--v-unit-1);
+    opacity: 0.9;
   }
 
   .cookie-consent-buttons {
