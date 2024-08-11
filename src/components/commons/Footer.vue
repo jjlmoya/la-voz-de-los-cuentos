@@ -3,25 +3,26 @@
         <div class="footer-header">
             <VText class="footer-title" variant="header" as="h3">La Voz De Los Cuentos</VText>
         </div>
-        <VDivider class="footer-divider">NewsLetter</VDivider>
+        <VDivider class="footer-divider">NewsLetter Mensual</VDivider>
         <VContainer size="xs" class="footer-newsletter">
             <div class="footer-newsletter__content">
                   <VField>
                     <VInput 
-                        v-if="successMessage"
+                        v-if="!successMessage"
                         type="email" 
                         v-model="email"
                         :invalid="emailError"
                         @input="validateEmail" 
                     />
-                    <template #label>
+                    <template #label v-if="!successMessage">
                         <VFieldLabel>Email:</VFieldLabel>
                     </template>
                     <template #message>
-                        <VFieldHelp v-if="successMessage">¡Gracias por la suscripción!</VFieldHelp>
-                        <VFieldError v-if="emailError">Correo no válido</VFieldError>
+                        <VText v-if="successMessage">¡Gracias por la suscripción!</VText>
+                        <VText v-if="emailError">Correo no válido</VText>
                     </template>
                     <VButton 
+                        v-if="!successMessage"
                         color="primary" 
                         :disabled="!isEmailValid || isSubmitting" 
                         @click="submitForm"
@@ -80,7 +81,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import { VText, VLink, VDivider, VInput, VContainer, VFieldLabel, VField, VButton } from '@overgaming/vicius'
+import { VText, VLink, VDivider, VInput, VContainer, VFieldLabel, VFieldHelp, VField, VButton } from '@overgaming/vicius'
 
 const email = ref('');
 const emailError = ref(false);
