@@ -3,7 +3,7 @@
     <div class="story-page__image">
       <VImage
         v-if="!story.youtube"
-        :src="`/assets/stories/${story.key}.webp`"
+        :src="`/assets/stories/${lang}/${story.key}.webp`"
         :alt="`Imagen de portada del cuento ${story.name}`"
       />
       <lite-youtube
@@ -95,7 +95,8 @@
 
 <script setup>
   import Spotify from '../Media/Spotify.vue'
-
+  const lang = import.meta.env.PUBLIC_LANG;
+ 
   const props = defineProps({
     story: {
       type: Object,

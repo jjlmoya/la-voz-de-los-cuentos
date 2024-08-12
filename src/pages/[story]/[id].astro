@@ -2,15 +2,44 @@
 import NavLayout from '../../layouts/NavLayout.astro'
 import stories from '../../data/stories.json'
 import StoryPage from '../../components/Page/StoryPage.vue'
+const siteUrl = import.meta.env.PUBLIC_SITE_URL
+const lang = import.meta.env.PUBLIC_LANG
+
+console.log(Astro.params)
 const { id } = Astro.params
 const story = stories.find(story => story.key === id)
 
 const firstParagraph = story.story.split('\n').filter(p => p.trim() !== '')[0]
 
 export async function getStaticPaths() {
-  return stories.map(story => ({
-    params: { id: story.key }
+  console.log('staticPaths')
+
+  const paths = stories.map(story => ({
+    params: {
+      story: import.meta.env.PUBLIC_LANG === 'en' ? 'story' : 'cuento',
+      id: story.key
+    }
   }))
+
+  return paths
+}
+
+export async function getStaticProps({ params }) {
+  console.log('staticProps')
+  const { type, slug } = params
+  if (type !== 'story' || !stories[slug]) {
+    return {
+      notFound: true
+    }
+  }
+
+  const content = stories[slug]
+
+  return {
+    props: {
+      content
+    }
+  }
 }
 
 const formatDate = dateStr => {
@@ -28,18 +57,18 @@ const schema = JSON.stringify({
     name: 'LaVozDeLosCuentos'
   },
   datePublished: formatDate(story.date),
-  image: `https://lavozdeloscuentos.es/assets/stories/${story.key}.webp`,
+  image: `${siteUrl}/assets/stories/${lang}/${story.key}.webp`,
   description: firstParagraph,
   genre: 'Literatura Infantil',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': `https://lavozdeloscuentos.es/cuento/${story.key}`
+    '@id': `${siteUrl}/cuento/${story.key}`
   },
   video: {
     '@type': 'VideoObject',
     name: `${story.name} - Video`,
     description: firstParagraph,
-    thumbnailUrl: `https://lavozdeloscuentos.es/assets/stories/${story.key}.webp`,
+    thumbnailUrl: `${siteUrl}/assets/stories/${lang}/${story.key}.webp`,
     uploadDate: formatDate(story.date),
     contentUrl: `https://www.youtube.com/embed/${story.youtube}`,
     embedUrl: `https://www.youtube.com/embed/${story.youtube}`
@@ -48,7 +77,7 @@ const schema = JSON.stringify({
     '@type': 'AudioObject',
     name: `${story.name} - Audio`,
     description: `${firstParagraph}`,
-    thumbnailUrl: `https://lavozdeloscuentos.es/assets/stories/${story.key}.webp`,
+    thumbnailUrl: `${siteUrl}/assets/stories/${lang}${story.key}.webp`,
     uploadDate: formatDate(story.date),
     contentUrl: story.spotifyLink,
     embedUrl: story.spotifyLink
@@ -59,14 +88,14 @@ const schema = JSON.stringify({
 <NavLayout
   title={story.name}
   description={firstParagraph}
-  image={'/assets/stories/' + story.key + '.webp'}
+  image={`/assets/stories/${lang}/${story.key}.webp`}
   url={'/cuento/' + story.key + '/'}
   hasVideo
 >
   <StoryPage
     story={story}
     client:load
-    url={'https://lavozdeloscuentos.es/cuento/' + story.key + '/'}
+    url={`${siteUrl}/cuento/${story.key}/`}
     title={story.name}
   />
 

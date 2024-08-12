@@ -20,6 +20,8 @@
 </template>
 
 <script setup>
+  const gaID = import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID;
+
   import { ref, onMounted } from 'vue'
   import { VButton, VText } from '@overgaming/vicius'
   const showCookieConsent = ref(false)
@@ -30,7 +32,7 @@
       window.dataLayer.push(arguments)
     }
     gtag('js', new Date())
-    gtag('config', 'G-PXYY4HM36E')
+    gtag('config', gaID)
     gtag('consent', 'update', {
       analytics_storage: 'granted'
     })

@@ -15,9 +15,15 @@ const {
 const pageTitle = title
   ? `${title} | La Voz de los Cuentos`
   : 'La Voz de los Cuentos'
+const siteUrl = import.meta.env.PUBLIC_SITE_URL
+const lang = import.meta.env.PUBLIC_LANG
+const gaId = import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID
+const bingValidate = import.meta.env.PUBLIC_BING_VALIDATE
+const fbAppId = import.meta.env.PUBLIC_FB_APP_ID
+const twitterUser = import.meta.env.PUBLIC_TWITTER_USER
 ---
 
-<html lang="es">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -27,7 +33,6 @@ const pageTitle = title
     <link rel="icon" href="/img/icons/32x32.png" sizes="16x16" />
     <link rel="icon" href="/img/icons/favicon.ico" />
     <link rel="apple-touch-icon" href="/img/icons/152x152.png" />
-    <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#4DBA87" />
 
     <!-- Styles -->
@@ -39,35 +44,31 @@ const pageTitle = title
 
     <!-- SEO -->
     <title>{pageTitle}</title>
-    <link rel="canonical" href={`https://lavozdeloscuentos.es${url}`} />
+    <link rel="canonical" href={`${siteUrl}${url}`} />
 
     <meta name="description" content={description} />
     <meta property="og:description" content={description} />
     <meta property="og:title" content={title} />
-    <meta
-      property="og:image"
-      content={`https://lavozdeloscuentos.es${image}`}
-    />
+    <meta property="og:image" content={`${siteUrl}${image}`} />
     <meta property="og:image:alt" content={title} />
-    <meta property="og:url" content={`https://lavozdeloscuentos.es${url}/`} />
+    <meta property="og:url" content={`${siteUrl}${url}/`} />
     <meta property="og:type" content={type} />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <meta name="msvalidate.01" content="F4F378590719CB3FE7C00F6916621727" />
+    <meta name="msvalidate.01" content={bingValidate} />
     <meta name="robots" content="index, follow" />
-    <meta property="fb:app:id" content="792207913054384" />
+    <meta property="fb:app:id" content={fbAppId} />
     <meta name="twitter:card" content={twitterCard} />
-    <meta name="twitter:site" content="@TusAudioCuentos" />
-    <meta name="twitter:creator" content="@TusAudioCuentos" />
-    <meta
-      name="twitter:image"
-      content={`https://lavozdeloscuentos.es${image}`}
-    />
+    <meta name="twitter:site" content={twitterUser} />
+    <meta name="twitter:creator" content={twitterUser} />
+    <meta name="twitter:image" content={`${siteUrl}${image}`} />
     <meta property="twitter:description" content={description} />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXYY4HM36E"
+    <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
     ></script>
     <script>
       ;(function () {
-        const isProduction = window.location.hostname === 'lavozdeloscuentos.es'
+        const isProduction =
+          window.location.hostname === 'lavozdeloscuentos.es' ||
+          window.location.hostname === 'buboboo.com'
         if (!isProduction) return
         const currentUrl = window.location.href
         let newUrl = ''

@@ -5,12 +5,13 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "npm run statics && astro build",
+    "build": "npm run statics && astro build && npm run robots",
     "preview": "astro preview",
     "astro": "astro",
     "statics": "npm run copy-assets",
     "games": "npm i la-voz-de-los-cuentos-games@latest && npm run copy-assets",
     "content": "node ./scripts/content.js",
+    "robots": "node ./scripts/generate-robots.js",
     "redimension": "python ./scripts/redimension.py",
     "characters": "node ./scripts/characters.js",
     "copy-assets": "mkdirp ./public/la-voz-de-los-cuentos-games/assets && ncp ./node_modules/la-voz-de-los-cuentos-games/dist/la-voz-de-los-cuentos-games/assets ./public/la-voz-de-los-cuentos-games/assets",
@@ -30,6 +31,7 @@
     "vite-plugin-pwa": "^0.20.0"
   },
   "devDependencies": {
+    "dotenv": "^16.4.5",
     "eslint": "^9.8.0",
     "eslint-define-config": "^2.1.0",
     "eslint-plugin-astro": "^1.2.3",

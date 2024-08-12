@@ -10,7 +10,7 @@
         v-if="isIntersecting"
         class="basic-card__img"
         :aspectRatio="1/1"
-        :src="`/assets/${isStory ? 'stories' : 'sagas'}/${slug}.webp`"
+        :src="`/assets/${isStory ? 'stories' : 'sagas'}/${lang}/${slug}.webp`"
         loading="lazy"
       />
     </div>
@@ -34,6 +34,8 @@
 </template>
 
 <script setup>
+const lang = import.meta.env.PUBLIC_LANG;
+
 import { ref, onMounted, onUnmounted } from 'vue';
 import { VText } from '@overgaming/vicius';
 import useStory from '../../composables/useStory';

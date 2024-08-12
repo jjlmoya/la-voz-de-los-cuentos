@@ -2,7 +2,7 @@
   <div class="footer">
     <div class="footer-header">
       <VText class="footer-title" variant="header" as="h3"
-        >La Voz De Los Cuentos</VText
+        >{{siteName}}</VText
       >
     </div>
     <VDivider class="footer-divider">NewsLetter Mensual</VDivider>
@@ -91,6 +91,7 @@
 </template>
 
 <script setup>
+  const siteName = import.meta.env.PUBLIC_SITE_NAME;
   import { ref } from 'vue'
   import {
     VText,

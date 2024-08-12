@@ -7,28 +7,29 @@
 </template>
 
 <script setup>
+  import t from '../../translations'
   import { VMenu, VMenuItem } from '@overgaming/vicius'
   import { ref, onMounted } from 'vue'
 
   const menu = ref([
     {
-      label: 'Inicio',
+      label: t('menu.home'),
       link: '/'
     },
     {
-      label: 'Cuentos',
+      label: t('menu.stories'),
       link: '/cuentos/'
     },
     {
-      label: 'Sagas',
+      label: t('menu.sagas'),
       link: '/sagas/'
     },
     {
-      label: 'Cuento Personalizado',
+      label: t('menu.custom'),
       link: '/personalizado/cuento/'
     },
     {
-      label: 'NewsLetter',
+      label: t('menu.newsletter'),
       link: '/newsletters/'
     }
   ])
