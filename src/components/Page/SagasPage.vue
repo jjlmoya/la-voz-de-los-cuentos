@@ -3,15 +3,12 @@
     <VText class="stories-page__title" as="h1" variant="header"
       >Listado de Sagas</VText
     >
-    <SectionsDefault>
-      <Sagas :amount="99" />
-    </SectionsDefault>
+    <slot />
   </VContainer>
 </template>
 
 <script setup>
-  import SectionsDefault from '../../components/Sections/Default.vue'
-  import Sagas from '../../components/Sections/Sagas.vue'
+
 
   const props = defineProps({
     story: {
@@ -25,7 +22,7 @@
 
 <style>
   .stories-page {
-    padding: var(--v-unit-4);
+    padding: var(--v-unit-8);
   }
   .stories-page__title {
     font-size: 24px;

@@ -1,6 +1,8 @@
 ---
 import NavLayout from '../layouts/NavLayout.astro'
 import StoriesPage from '../components/Page/StoriesPage.vue'
+import SectionsDefault from '../components/Sections/Default.vue'
+import FilteredStories from '../components/Sections/FilteredStories.vue'
 ---
 
 <NavLayout
@@ -8,5 +10,9 @@ import StoriesPage from '../components/Page/StoriesPage.vue'
   description="Nuestra colección de cuentos mágicos, cientos de cuentos esperando a ser descubiertos"
   url="/cuentos/"
 >
-  <StoriesPage client:load />
+  <StoriesPage>
+    <SectionsDefault>
+      <FilteredStories client:load />
+    </SectionsDefault>
+  </StoriesPage>
 </NavLayout>

@@ -25,12 +25,11 @@
   .plain-card {
     display: grid;
     grid-template-columns: 4fr 2fr 50px;
-    padding: var(--v-unit-2);
-    border-radius: var(--v-unit-2);
+    padding: var(--v-unit-4);
     grid-gap: var(--v-unit-8);
   }
 
   .plain-card:nth-child(even) {
-    background-color: var(--v-color-surface-mod);
+    background-color: var(--v-color-surface);
   }
 </style>

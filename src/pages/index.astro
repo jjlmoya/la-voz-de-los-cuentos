@@ -14,12 +14,12 @@ import { VContainer } from '@overgaming/vicius'
 >
   <div class="homepage">
     <VContainer size="xl">
-      <Hero client:load />
-      <SectionsDefault client:load title="Novedades" moreLink="/cuentos/">
+      <Hero />
+      <SectionsDefault title="Novedades" moreLink="/cuentos/">
         <NewSection client:load />
       </SectionsDefault>
-      <SectionsDefault client:load title="Sagas Destacadas" moreLink="/sagas/">
-        <SagasSection client:load />
+      <SectionsDefault title="Sagas Destacadas" moreLink="/sagas/">
+        <SagasSection />
       </SectionsDefault>
     </VContainer>
   </div>
@@ -27,6 +27,6 @@ import { VContainer } from '@overgaming/vicius'
 
 <style>
   .homepage {
-    padding: var(--v-unit-6);
+    padding: var(--v-unit-8);
   }
 </style>

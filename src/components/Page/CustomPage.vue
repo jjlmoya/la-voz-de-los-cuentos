@@ -78,7 +78,7 @@
 
 <script setup>
   import { ref } from 'vue'
-  import { VButton, VInput, VContainer } from '@overgaming/vicius'
+  import { VButton, VInput, VContainer, VText } from '@overgaming/vicius'
 
   const currentStep = ref(1)
   const form = ref({
@@ -135,6 +135,7 @@
 
 <style scoped>
   .custom-page {
+    padding: var(--v-unit-8);
     text-align: center;
     display: grid;
     align-items: center;

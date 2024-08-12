@@ -42,26 +42,27 @@
         </VButton>
       </div>
     </div>
-
     <Spotify v-if="story.spotify" :spotify="story.spotify" />
-
-
-    <VContainer class="story-page_font-selector" size="xs">
-      <label for="font-size">
-        <span style="fontsize: 24px">A</span>
-        <span style="fontsize: 16px">a</span>
-      </label>
-      <VInput
-        type="range"
-        name="font-Size"
-        aria-label="Tamaño de Fuente"
-        id="font-size"
-        min="14"
-        max="28"
-        :value="fontSize"
-        @input="updateFontSize"
-      />
-    </VContainer>
+    <div class="story-page__tool">
+      <VContainer class="story-page_font-selector" size="xs">
+        <label for="font-size">
+          <span style="fontsize: 24px">A</span>
+          <span style="fontsize: 16px">a</span>
+        </label>
+        <VInput
+          type="range"
+          name="font-Size"
+          aria-label="Tamaño de Fuente"
+          id="font-size"
+          min="14"
+          max="28"
+          :value="fontSize"
+          @input="updateFontSize"
+        />
+      </VContainer>
+      <SocialShare :url="url" :title="title" />
+      
+    </div>
     <div class="story-page__title">
       <VText
         as="h1"
@@ -85,10 +86,9 @@
     </article>
     <SectionsDefault
       class="story-page__related"
-      client:load
       title="Cuentos Relacionados"
     >
-      <RelatedStoriesSection client:load :story="story" />
+      <RelatedStoriesSection :story="story" />
     </SectionsDefault>
   </VContainer>
 </template>
@@ -100,6 +100,14 @@
     story: {
       type: Object,
       default: {}
+    },
+    url :{
+      type: String,
+      default: ''
+    },
+    title :{
+      type: String,
+      default: ''
     }
   })
 
@@ -112,6 +120,7 @@
   } from '@overgaming/vicius'
   import RelatedStoriesSection from '../Sections/RelatedStories.vue'
   import SectionsDefault from '../Sections/Default.vue'
+  import SocialShare from '../Social/Share.vue'
 
   SectionsDefault
   import { ref, onMounted } from 'vue'
@@ -146,11 +155,11 @@
 
 <style>
   .story-page {
-    padding: 0 var(--v-unit-2);
+    padding: var(--v-unit-8);
   }
   .story-page_font-selector {
     font-weight: bold;
-    padding: var(--v-unit-4);
+    padding: var(--v-unit-2);
     display: grid;
     justify-content: center;
     grid-gap: var(--v-unit-1);
@@ -158,6 +167,11 @@
     .v-input {
       min-height: 0;
     }
+  }
+  .story-page__tool {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: var(--v-unit-4);
   }
 
   .story-page__image {
@@ -188,38 +202,6 @@
     padding: var(--v-unit-2) 0;
   }
 
-  .story-page__audio {
-    border-radius: var(--v-unit-2);
-    overflow: hidden;
-    position: relative;
-    height: 150px;
-    iframe {
-      width: 100%;
-      min-height: 600px;
-    }
-  }
-
-  .story-page__audio-hide {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 150px;
-    width: 100%;
-    bottom: 0;
-    background-color: white;
-    z-index: 10;
-    animation: fold 0.9s ease-in forwards;
-  }
-
-  .story-page__audio-loading {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    content: ' ';
-    z-index: 10;
-  }
   @media print {
     body {
       background: white !important;
@@ -238,10 +220,11 @@
     }
     .story-page__image,
     .story-page__related,
-    .story-page__audio,
     .footer,
     .navigation-layout__mobile,
     .story-page_font-selector,
+    .spotify,
+    .social-share,
     astro-dev-toolbar {
       display: none !important;
     }

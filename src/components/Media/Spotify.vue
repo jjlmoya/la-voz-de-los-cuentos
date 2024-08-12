@@ -112,7 +112,6 @@ defineProps ({
     }
     .spotify iframe {
         height: 96px;
-        
     }
    }
 </style>

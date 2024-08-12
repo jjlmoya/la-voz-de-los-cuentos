@@ -24,6 +24,6 @@
   .sections-new {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: var(--v-unit-8);
+    grid-gap: var(--v-unit-10);
   }
 </style>

@@ -164,14 +164,14 @@
   .sections-filtered__content {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    grid-gap: var(--v-unit-6);
+    grid-gap: var(--v-unit-10);
   }
 
   .sections-filtered__content-list {
     display: grid;
-    background-color: var(--v-color-surface-mod);
-    padding: 0 var(--v-unit-4);
-    border-radius: var(--v-unit-2) var(--v-unit-4);
+    background-color: var(--v-color-surface-high);
+    border-radius: var(--v-unit-4);
+    grid-gap: var(--v-unit-2);
   }
 
   .sections-filtered__content.list-view {

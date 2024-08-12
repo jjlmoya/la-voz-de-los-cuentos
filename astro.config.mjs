@@ -4,7 +4,15 @@ import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
     site: 'https://lavozdeloscuentos.es',
-    integrations: [sitemap(), vue()],
+    integrations: [sitemap(), vue({
+        template: {
+            compilerOptions: {
+                isCustomElement: (tag) => {
+                    return tag.startsWith('lite') // (return true)
+                }
+            }
+        }
+    })],
     trailingSlash: 'always',
     customElement: {
         include: ['lite-youtube'],

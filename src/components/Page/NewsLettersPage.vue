@@ -18,7 +18,7 @@
 <style>
   .newsletters-page {
     min-height: 70vh;
-    padding: var(--v-unit-4);
+    padding: var(--v-unit-8);
   }
   .newsletters-page__title {
     font-size: 24px;

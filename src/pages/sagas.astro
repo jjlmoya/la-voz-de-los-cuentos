@@ -1,6 +1,8 @@
 ---
 import NavLayout from '../layouts/NavLayout.astro'
 import SagasPage from '../components/Page/SagasPage.vue'
+import SectionsDefault from '../components/Sections/Default.vue'
+import Sagas from '../components/Sections/Sagas.vue'
 ---
 
 <NavLayout
@@ -8,5 +10,9 @@ import SagasPage from '../components/Page/SagasPage.vue'
   description="Descubre todas nuestras mágicas sagas"
   url={'/sagas/'}
 >
-  <SagasPage />
+  <SagasPage>
+    <SectionsDefault>
+      <Sagas :amount="99" />
+    </SectionsDefault>
+  </SagasPage>
 </NavLayout>

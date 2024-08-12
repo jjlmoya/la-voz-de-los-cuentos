@@ -25,7 +25,6 @@
       <Footer />
     </div>
 
-    <Teleport to="body">
       <div
         class="navigation-layout__backdrop"
         :class="{
@@ -33,7 +32,6 @@
         }"
         @click="toggle"
       />
-    </Teleport>
   </div>
 </template>
 
