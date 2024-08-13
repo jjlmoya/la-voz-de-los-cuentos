@@ -3236,75 +3236,76 @@ La noche se acercaba, y los insectos comenzaron a regresar a sus hogares, satisf
 Con eso, Carlota recogió sus cosas y se dirigió a su hogar bajo una hoja, sintiendo que, a pesar de los fallos, había logrado algo mucho más valioso: la felicidad compartida con sus amigos. Y así, en el cálido resplandor de la luna, Carlota se preparó para soñar con nuevas aventuras y, tal vez, con un nuevo show de magia que, sin duda, sería aún más divertido.
 Y mientras el jardín volvía a su calma nocturna, la pequeña cucaracha aventurera se acurrucó en su cama de hojas, sabiendo que el verdadero encanto de la magia estaba en la alegría y la amistad compartida, y no solo en los trucos que salían bien.
 
-`,time:"419,7",spotifyLink:"https://podcasters.spotify.com/pod/show/lavozdeloscuentos/episodes/El-Show-de-Magia-de-Carlota-Cucaracha-e2n554k/a-abfr8tm",date:"13/08/2024"},{order:"175",name:"El Enigma de Mishi, el Gato Alpinista",key:"el-enigma-de-mishi-el-gato-alpinista",youtube:"",tiktok:"",spotify:"",saga:"",link:"",story:`Me presenté ante Doña Elena, la jefa de la Oficina Central del SDG (Servicio de Detectives Gatos).\r
-\r
-"Tengo un caso especial para ti", me dijo. "Un gato alpinista llamado Mishi ha desaparecido mientras subía a la Montaña del Cielo".\r
-\r
-"¿Qué sabemos sobre él?", le pregunté.\r
-\r
-"No mucho", respondió Doña Elena. "Pero parece que ha sido secuestrado por un grupo de ladrones que buscan gatos para venderlos en el mercado negro".\r
-\r
-Me emocioné con la idea de resolver el caso y decidí investigar.\r
-\r
-Comencé a buscar pistas sobre Mishi, pero no había mucho que encontrar. No había testigos ni huellas de los ladrones. Pero tenía una intuición de que algo estaba mal en la montaña.\r
-\r
-Me reuní con Juan, un experto en escalada y guía de montañismo, para pedirle su ayuda.\r
-\r
-"¿Podemos subir a la Montaña del Cielo?", le pregunté.\r
-\r
-"Sí", respondió. "Pero debes saber que es una ascensión peligrosa".\r
-\r
-Me emocioné con la idea de subir a la montaña en busca de Mishi. Era un desafío emocionante.\r
-\r
-\r
-Subimos la montaña con Juan, quien me enseñó cómo caminar por el terreno rocoso y cómo usar los instrumentos de escalada. La montaña era impresionante: altas paredes de roca negra y niebla que se elevaba desde abajo.\r
-\r
-Después de varias horas de subir, llegamos a un punto en el que la niebla se hacía más espesa. Juan me dijo que éramos cerca del vértice de la montaña, pero no podía ver nada.\r
-\r
-"¿Qué pasa si el viento es fuerte?", le pregunté.\r
-\r
-"No te preocupes", respondió. "Tengo una linterna para guiarnos".\r
-\r
-Pero cuando intentamos avanzar, el viento se volvió demasiado fuerte y la niebla se hizo casi impenetrable.\r
-\r
-"¿Qué hacemos?", le pregunté a Juan.\r
-\r
-"Tenemos que esperar", respondió. "La niebla pasará pronto".\r
-\r
-Esperamos durante lo que pareció una eternidad, pero finalmente, la niebla comenzó a disiparse y vimos algo en la distancia.\r
-\r
-"¿Qué es eso?", le pregunté a Juan.\r
-\r
-"No lo sé", respondió. "Pero parece un gato".\r
-\r
-\r
-Me emocioné con la idea de que pudiera ser Mishi, pero cuando nos acercamos más, vi que era un gato diferente al de Mishi.\r
-\r
-"¿Quién es este gato?", le pregunté a Juan.\r
-\r
-"No lo sé", respondió. "Pero parece que está herido".\r
-\r
-Me acerqué al gato y lo toqué con suavidad. Estaba muy débil, pero me parecía que estaba vivo.\r
-\r
-"Parece que necesitamos ayudarlo", le dije a Juan.\r
-\r
-"¡Exacto!", respondió. "Vamos a cuidar de él".\r
-\r
-Pero justo cuando estábamos llevando al gato hacia nosotros, escuché un ruido en la distancia.\r
-\r
-"¿Qué es eso?", preguntó Juan.\r
-\r
-No lo sabíamos, pero pronto descubriríamos que era Mishi, quien había estado siguiendo nuestras huellas durante todo el tiempo.\r
-\r
-Mishi se acercó a nosotros con una mirada curiosa en los ojos. Estaba un poco más débil que antes, pero parecía estar bien.\r
-\r
-Me emocioné con la idea de haber encontrado a Mishi y decidí llevarlo de regreso a su dueño.\r
-\r
-Después de devolver a Mishi a su dueño, recibí una nota de felicitaciones de Doña Elena en la Oficina Central.\r
-\r
-"¡Bien hecho, Agente!", decía. "Has demostrado que eres uno de los mejores agentes del SDG".\r
-\r
-Me sentí orgulloso de haber resuelto el caso y de haber ayudado a Mishi a volver a casa.\r`,time:"198,5",spotifyLink:"",date:"14/08/2024"}],G=[{order:"1",name:"La Vida de Eloy",key:"la-vida-de-eloy",youtube:"PLzsS-UEHQNA-zzbUZFaTCKX6Rlo7aFxwN",link:"https://www.youtube.com/playlist?list=PLzsS-UEHQNA-zzbUZFaTCKX6Rlo7aFxwN",description:`¡Hola a todos y todas! Bienvenidos a la maravillosa colección de historias de "La vida de Eloy", donde lo imposible se vuelve realidad gracias a nuestro querido abuelo Eloy. Con su carismática sonrisa y su inconfundible sombrero lleno de plumas y medallas de todos los colores, Eloy nos transporta a tiempos y lugares increíbles junto a sus nietos curiosos.\r
+`,time:"419,7",spotifyLink:"https://podcasters.spotify.com/pod/show/lavozdeloscuentos/episodes/El-Show-de-Magia-de-Carlota-Cucaracha-e2n554k/a-abfr8tm",date:"13/08/2024"},{order:"175",name:"El Enigma de Mishi, el Gato Alpinista",key:"el-enigma-de-mishi-el-gato-alpinista",youtube:"",tiktok:"",spotify:"",saga:"",link:"",story:`Me presenté ante Doña Elena, la jefa de la Oficina Central del SDG (Sistema de Distribución de Gatos).
+
+"Tengo un caso especial para ti", me dijo. "Un gato alpinista llamado Mishi ha desaparecido mientras subía a la Montaña del Cielo".
+
+"¿Qué sabemos sobre él?", le pregunté.
+
+"No mucho", respondió Doña Elena. "Pero parece que ha sido secuestrado por un grupo de ladrones que buscan gatos para venderlos en el mercado negro".
+
+Me emocioné con la idea de resolver el caso y decidí investigar.
+
+Comencé a buscar pistas sobre Mishi, pero no había mucho que encontrar. No había testigos ni huellas de los ladrones. Pero tenía una intuición de que algo estaba mal en la montaña.
+
+Me reuní con Juan, un experto en escalada y guía de montañismo, para pedirle su ayuda.
+
+"¿Podemos subir a la Montaña del Cielo?", le pregunté.
+
+"Sí", respondió. "Pero debes saber que es una ascensión peligrosa".
+
+Me emocioné con la idea de subir a la montaña en busca de Mishi. Era un desafío emocionante.
+
+
+Subimos la montaña con Juan, quien me enseñó cómo caminar por el terreno rocoso y cómo usar los instrumentos de escalada. La montaña era impresionante: altas paredes de roca negra y niebla que se elevaba desde abajo.
+
+Después de varias horas de subir, llegamos a un punto en el que la niebla se hacía más espesa. Juan me dijo que éramos cerca del vértice de la montaña, pero no podía ver nada.
+
+"¿Qué pasa si el viento es fuerte?", le pregunté.
+
+"No te preocupes", respondió. "Tengo una linterna para guiarnos".
+
+Pero cuando intentamos avanzar, el viento se volvió demasiado fuerte y la niebla se hizo casi impenetrable.
+
+"¿Qué hacemos?", le pregunté a Juan.
+
+"Tenemos que esperar", respondió. "La niebla pasará pronto".
+
+Esperamos durante lo que pareció una eternidad, pero finalmente, la niebla comenzó a disiparse y vimos algo en la distancia.
+
+"¿Qué es eso?", le pregunté a Juan.
+
+"No lo sé", respondió. "Pero parece un gato".
+
+
+Me emocioné con la idea de que pudiera ser Mishi, pero cuando nos acercamos más, vi que era un gato diferente al de Mishi.
+
+"¿Quién es este gato?", le pregunté a Juan.
+
+"No lo sé", respondió. "Pero parece que está herido".
+
+Me acerqué al gato y lo toqué con suavidad. Estaba muy débil, pero me parecía que estaba vivo.
+
+"Parece que necesitamos ayudarlo", le dije a Juan.
+
+"¡Exacto!", respondió. "Vamos a cuidar de él".
+
+Pero justo cuando estábamos llevando al gato hacia nosotros, escuché un ruido en la distancia.
+
+"¿Qué es eso?", preguntó Juan.
+
+No lo sabíamos, pero pronto descubriríamos que era Mishi, quien había estado siguiendo nuestras huellas durante todo el tiempo.
+
+Mishi se acercó a nosotros con una mirada curiosa en los ojos. Estaba un poco más débil que antes, pero parecía estar bien.
+
+Me emocioné con la idea de haber encontrado a Mishi y decidí llevarlo de regreso a su dueño.
+
+Después de devolver a Mishi a su dueño, recibí una nota de felicitaciones de Doña Elena en la Oficina Central.
+
+"¡Bien hecho, Agente!", decía. "Has demostrado que eres uno de los mejores agentes del SDG".
+
+Me sentí orgulloso de haber resuelto el caso y de haber ayudado a Mishi a volver a casa.
+`,time:"198,9",spotifyLink:"",date:"14/08/2024"}],G=[{order:"1",name:"La Vida de Eloy",key:"la-vida-de-eloy",youtube:"PLzsS-UEHQNA-zzbUZFaTCKX6Rlo7aFxwN",link:"https://www.youtube.com/playlist?list=PLzsS-UEHQNA-zzbUZFaTCKX6Rlo7aFxwN",description:`¡Hola a todos y todas! Bienvenidos a la maravillosa colección de historias de "La vida de Eloy", donde lo imposible se vuelve realidad gracias a nuestro querido abuelo Eloy. Con su carismática sonrisa y su inconfundible sombrero lleno de plumas y medallas de todos los colores, Eloy nos transporta a tiempos y lugares increíbles junto a sus nietos curiosos.\r
 \r
 Cada noche, alrededor de la chispeante chimenea, Eloy nos narra sus fantásticas aventuras con tal convicción que es imposible no creer que realmente las vivió. En su mundo, la historia cobra vida de una manera asombrosa y siempre está llena de momentos divertidos y sorprendentes`},{order:"2",name:"Llamarada",key:"llamarada",youtube:"PLzsS-UEHQNA8uSXzhvoVvIjDMwnJMEeLE",link:"https://www.youtube.com/playlist?list=PLzsS-UEHQNA8uSXzhvoVvIjDMwnJMEeLE",description:"La saga de Llamarada narra las emocionantes aventuras de una llama con pelaje azul eléctrico y poderes mágicos. En un mundo lleno de criaturas mágicas, Llamarada enfrenta desafíos que ponen a prueba su valentía y determinación. A lo largo de su viaje, se encuentra con seres fantásticos como hadas, sirenas y unicornios, mientras lucha contra fuerzas oscuras que amenazan con robar colores, sueños y alegrías. La serie celebra la amistad, el coraje y la magia, llevándonos a través de mundos llenos de maravillas y misterios."},{order:"3",name:"Luna y la física",key:"luna-y-la-fisica",youtube:"PLzsS-UEHQNA-orn2hgsCP31wv69x7iDAg",link:"https://www.youtube.com/playlist?list=PLzsS-UEHQNA-orn2hgsCP31wv69x7iDAg",description:'Acompaña a Luna en la saga "Luna y la Física", donde esta joven aventurera utiliza su amor por la física para enseñar a los más pequeños conceptos científicos de manera divertida y accesible. Desde su taller secreto donde inventa estrellas hasta desentrañar los misterios de la Isla Cuántica, Luna convierte la ciencia en un mundo mágico lleno de descubrimientos y aprendizaje. Ideal para niños curiosos y futuros científicos.'},{order:"4",name:"SDG",key:"sdg",youtube:"PLzsS-UEHQNA8aUGFmoDtcG12NXmsCVbOz",link:"https://www.youtube.com/playlist?list=PLzsS-UEHQNA8aUGFmoDtcG12NXmsCVbOz",description:'¡Descubre la magia y el misterio con la saga "SDG"! Sumérgete en las emocionantes aventuras del "Sistema de Distribución de Gatos", donde cada misión es una mezcla de desafíos increíbles y sorpresas mágicas. Desde rescatar a un jaguar perdido hasta desentrañar secretos en mansiones abandonadas, nuestros valientes agentes se aseguran de que cada felino encuentre su hogar perfecto. Ideal para amantes de los gatos, la fantasía y los enigmas. Únete al SDG y vive historias inolvidables que te mantendrán al borde de tu asiento.'},{order:"4",name:"Tupi y su Sombrero",key:"tupi-y-su-sombrero",youtube:"PLzsS-UEHQNA8gsUYYpklgooQA5Ad1_Nle",link:"https://www.youtube.com/playlist?list=PLzsS-UEHQNA8gsUYYpklgooQA5Ad1_Nle",description:`¡Prepárate para sumergirte en la encantadora y cómica saga de Tupi, el pequeño hechicero travieso! 🌟
 
