@@ -77,11 +77,15 @@ export default {
   'footer.newsletters.thanks': 'Thank you for subscribing!',
   'footer.newsletters.error': 'Invalid email',
 
-  "sections.default.more": "See More",
-  
-  "page.custom.h1": "Create Your Personalized Story",
-  "page.custom.description": "Welcome to our magical story creation page! Here, you can request a personalized story for free. Let your imagination run wild and let us craft a special story just for you!",
+  'sections.default.more': 'See More',
 
-  "schema.type": "Children's Literature"
+  'page.custom.h1': 'Create Your Personalized Story',
+  'page.custom.description':
+    'Welcome to our magical story creation page! Here, you can request a personalized story for free. Let your imagination run wild and let us craft a special story just for you!',
 
+  'schema.type': "Children's Literature",
+
+  'page.home.h1': 'Home',
+  'page.home.description':
+    'Welcome to Bubo Boo! Here, every tale turns into a magical adventure. Explore stories full of wonder and mystery, where imagination soars high and the fun never ends.'
 }

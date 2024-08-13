@@ -54,7 +54,7 @@ const schema = JSON.stringify({
   name: story.name,
   author: {
     '@type': 'Person',
-    name: {author}
+    name: { author }
   },
   datePublished: formatDate(story.date),
   image: `${siteUrl}/assets/stories/${lang}/${story.key}.webp`,

@@ -19,9 +19,9 @@ export default {
   'footer.interesting.newsletter': 'Pasadas Newsletters',
   'footer.interesting.contact': 'Contactar',
 
-  'page.home.h1': 'Home',
+  'page.home.h1': 'Página Principal',
   'page.home.description':
-    'Welcome to Bubo Boo! Here, every tale turns into a magical adventure. Explore stories full of wonder and mystery, where imagination soars high and the fun never ends.',
+    'Embárcate en un viaje encantado a través de La Voz de los Cuentos, donde cada historia cobra vida y la magia de la narración te envuelve. Descubre relatos antiguos y nuevos, llenos de fantasía, misterio y maravillas, en un reino donde la imaginación no tiene límites.',
 
   'page.stories.h1': 'Listado de Cuentos',
   'page.stories.description':
@@ -74,7 +74,7 @@ export default {
   'page.newsletters.h1': 'Listado de News Audio Letter',
   'page.newsletters.description':
     'Las novedades y lo que está por venir, para que conozcas más de los entresijos de La Voz de los Cuentos',
-    
+
   'cmp.text':
     'Para mejorar la experiencia necesitamos cookies de terceros, sólo usamos Google Analytics ¿Aceptas las cookies?',
   'cmp.accept': 'Aceptar Cookies',
@@ -83,10 +83,11 @@ export default {
   'footer.newsletters.thanks': '¡Gracias por la suscripción!',
   'footer.newsletters.error': 'Correo no válido',
 
-  'sections.default.more': "Ver más",
+  'sections.default.more': 'Ver más',
 
-   "page.custom.h1": "Crea tu Cuento Personalizado",
-   "page.custom.description": "Bienvenido a nuestra página mágica de creación de cuentos infantiles.Aquí puedes pedir un cuento personalizado de forma gratuita. ¡Deja volar tu imaginación y permítenos crear una historia especial solo para ti!",
+  'page.custom.h1': 'Crea tu Cuento Personalizado',
+  'page.custom.description':
+    'Bienvenido a nuestra página mágica de creación de cuentos infantiles.Aquí puedes pedir un cuento personalizado de forma gratuita. ¡Deja volar tu imaginación y permítenos crear una historia especial solo para ti!',
 
-   "schema.type": "Literatura Infantil"
+  'schema.type': 'Literatura Infantil'
 }
