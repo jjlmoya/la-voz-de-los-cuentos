@@ -1,7 +1,6 @@
 <template>
   <VNavigation class="navigation">
     <template #header>
-      
       <VImage
         class="navigation__image"
         :src="`/assets/logo/${lang}.webp`"
@@ -14,7 +13,12 @@
     <slot />
 
     <template #footer>
-      <VImage class="navigation__image" :src="`/assets/utils/header-bottom.webp`" loading="lazy" alt="Logo" />
+      <VImage
+        class="navigation__image"
+        :src="`/assets/utils/header-bottom.webp`"
+        loading="lazy"
+        alt="Logo"
+      />
     </template>
   </VNavigation>
 </template>

@@ -1,6 +1,6 @@
 ---
 import NavLayout from '../../layouts/NavLayout.astro'
-import {getNewsLetters} from '../../data'
+import { getNewsLetters } from '../../data'
 import NewsLetterPage from '../../components/Page/NewsLetterPage.vue'
 const { id } = Astro.params
 const newsletter = getNewsLetters().find(newsletter => newsletter.id === id)

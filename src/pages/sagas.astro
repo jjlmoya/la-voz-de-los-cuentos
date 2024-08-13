@@ -3,12 +3,14 @@ import NavLayout from '../layouts/NavLayout.astro'
 import SagasPage from '../components/Page/SagasPage.vue'
 import SectionsDefault from '../components/Sections/Default.vue'
 import Sagas from '../components/Sections/Sagas.vue'
+import { toSagas } from '../router'
+import t from '../translations'
 ---
 
 <NavLayout
-  title="Nuestras Sagas"
-  description="Descubre todas nuestras mágicas sagas"
-  url={'/sagas/'}
+  title={t('page.sagas.h1')}
+  description={t('page.sagas.description')}
+  url={toSagas()}
 >
   <SagasPage>
     <SectionsDefault>

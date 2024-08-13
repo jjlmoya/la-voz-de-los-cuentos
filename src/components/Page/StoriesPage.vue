@@ -1,14 +1,13 @@
 <template>
   <VContainer size="xl" class="stories-page">
-    <VText class="stories-page__title" as="h1" variant="header"
-      >{{t('page.stories.h1')}}</VText
-    >
+    <VText class="stories-page__title" as="h1" variant="header">{{
+      t('page.stories.h1')
+    }}</VText>
     <slot />
   </VContainer>
 </template>
 
 <script setup>
-
   const props = defineProps({
     story: {
       type: Object,

@@ -1,9 +1,4 @@
-import es from '../data/es/stories.json'
-import en from '../data/en/stories.json'
-
-const lang = import.meta.env.PUBLIC_LANG
-const stories = { es, en }[lang]
-
+import { getStories as _getStories } from '../data'
 export default function useSaga(saga) {
   const getTime = () => {
     const accummulatedTime = getStories().reduce((acc, entry) => {
@@ -13,7 +8,7 @@ export default function useSaga(saga) {
   }
 
   const getStories = () => {
-    return stories.filter(_story => _story.saga === saga.key)
+    return _getStories().filter(_story => _story.saga === saga.key)
   }
 
   const firstParagraph = () =>

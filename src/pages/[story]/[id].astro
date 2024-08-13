@@ -1,9 +1,12 @@
 ---
 import NavLayout from '../../layouts/NavLayout.astro'
 import { getStories } from '../../data'
-
+import { toStory } from '../../router'
 import StoryPage from '../../components/Page/StoryPage.vue'
+import t from '../../translations'
 const siteUrl = import.meta.env.PUBLIC_SITE_URL
+const author = import.meta.env.PUBLIC_SITE_NAME
+
 const stories = getStories()
 
 const { id } = Astro.params
@@ -51,15 +54,15 @@ const schema = JSON.stringify({
   name: story.name,
   author: {
     '@type': 'Person',
-    name: 'LaVozDeLosCuentos'
+    name: {author}
   },
   datePublished: formatDate(story.date),
   image: `${siteUrl}/assets/stories/${lang}/${story.key}.webp`,
   description: firstParagraph,
-  genre: 'Literatura Infantil',
+  genre: `${t('schema.type')}`,
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': `${siteUrl}/cuento/${story.key}`
+    '@id': `${siteUrl}${toStory(story.key)}`
   },
   video: {
     '@type': 'VideoObject',
@@ -86,13 +89,13 @@ const schema = JSON.stringify({
   title={story.name}
   description={firstParagraph}
   image={`/assets/stories/${lang}/${story.key}.webp`}
-  url={'/cuento/' + story.key + '/'}
+  url={`${toStory(story.key)}`}
   hasVideo
 >
   <StoryPage
     story={story}
     client:load
-    url={`${siteUrl}/cuento/${story.key}/`}
+    url={`${toStory(story.key)}`}
     title={story.name}
   />
 

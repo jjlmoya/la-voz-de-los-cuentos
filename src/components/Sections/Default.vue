@@ -14,7 +14,7 @@
         color="primary"
         :href="moreLink"
         class="section-default__more"
-        >Ver mas</VLink
+        >{{ t('sections.default.more') }}</VLink
       >
     </div>
     <div class="section-default__content">
@@ -24,6 +24,7 @@
 </template>
 
 <script setup>
+  import t from '../../translations'
   import { VText, VLink } from '@overgaming/vicius'
   defineProps({
     title: {

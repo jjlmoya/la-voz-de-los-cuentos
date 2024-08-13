@@ -1,8 +1,5 @@
 <template>
-  <a
-    class="description-card"
-    :href="toSaga(slug)"
-  >
+  <a class="description-card" :href="toSaga(slug)">
     <div class="description-card__wrapper">
       <div class="description-card__content">
         <VText variant="header">{{ title }}</VText>
@@ -20,7 +17,7 @@
   </a>
 </template>
 
-<script setup>  
+<script setup>
   const lang = import.meta.env.PUBLIC_LANG
   import { VImage, VText } from '@overgaming/vicius'
   import { toSaga } from '../../router'

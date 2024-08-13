@@ -7,7 +7,7 @@ const cutArray = array => {
   return rest.slice(-50)
 }
 const today = new Date()
-today.setHours(0, 0, 0, 0) 
+today.setHours(0, 0, 0, 0)
 const stories = cutArray(
   Object.entries(getStories())
     .map(([key, data]) => ({ key, data }))
@@ -29,11 +29,7 @@ const shuffledStories = shuffle(stories)
 const initialStory = shuffledStories[0]
 ---
 
-<StreamingLayout
-  title="Listado de Cuentos"
-  description="Nuestra colección de cuentos mágicos, cientos de cuentos esperando a ser descubiertos"
-  url="/cuentos/"
->
+<StreamingLayout>
   <div class="streaming-content">
     <div class="streaming-current" id="streaming-current"></div>
     <div class="streaming-video">

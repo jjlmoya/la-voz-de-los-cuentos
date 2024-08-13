@@ -1,7 +1,8 @@
 ---
 import CustomPage from '../../components/Page/CustomPage.vue'
 import NavLayout from '../../layouts/NavLayout.astro'
-
+import { toCustomStory } from '../../router'
+import t from '../../translations'
 export async function getStaticPaths() {
   const paths = [
     {
@@ -18,9 +19,9 @@ export async function getStaticPaths() {
 ---
 
 <NavLayout
-  title="Cuento Personalizado"
-  description="Bienvenido a nuestra página mágica de creación de cuentos infantiles. Aquí puedes pedir un cuento personalizado de forma gratuita. ¡Deja volar tu imaginación y permítenos crear una historia especial solo para ti!"
-  url="/personalizado/cuento/"
+  title={t('page.custom.h1')}
+  description={t('page.custom.description')}
+  url={toCustomStory()}
 >
   <CustomPage client:load />
 </NavLayout>

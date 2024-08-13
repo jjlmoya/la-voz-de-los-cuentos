@@ -1,15 +1,11 @@
 <template>
-  <a
-    ref="cardRef"
-    class="basic-card"
-    :href="toStory(slug)"
-  >
+  <a ref="cardRef" class="basic-card" :href="toStory(slug)">
     <div class="basic-card__image">
       <img
         :alt="`Imagen de ${title}`"
         v-if="isIntersecting"
         class="basic-card__img"
-        :aspectRatio="1/1"
+        :aspectRatio="1 / 1"
         :src="`/assets/${isStory ? 'stories' : 'sagas'}/${lang}/${slug}.webp`"
         loading="lazy"
       />
@@ -34,116 +30,115 @@
 </template>
 
 <script setup>
-const lang = import.meta.env.PUBLIC_LANG;
-import { toStory } from '../../router'
-import { ref, onMounted, onUnmounted } from 'vue';
-import { VText } from '@overgaming/vicius';
-import useStory from '../../composables/useStory';
+  const lang = import.meta.env.PUBLIC_LANG
+  import { toStory } from '../../router'
+  import { ref, onMounted, onUnmounted } from 'vue'
+  import { VText } from '@overgaming/vicius'
+  import useStory from '../../composables/useStory'
 
-const props = defineProps({
-  title: {
-    type: String,
-    default: '',
-  },
-  slug: {
-    type: String,
-    default: '',
-  },
-  time: {
-    type: Number,
-    default: 0,
-  },
-  isStory: {
-    type: Boolean,
-    default: true,
-  },
-  as :{
-    type: String,
-    default: 'div'
-  }
-});
-
-const { getTime } = useStory({ time: props.time });
-const renderedTime = getTime();
-
-const cardRef = ref(null);
-const isIntersecting = ref(false);
-
-let observer;
-
-onMounted(() => {
-  observer = new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting) {
-        isIntersecting.value = true;
-        observer.unobserve(cardRef.value); 
-      }
+  const props = defineProps({
+    title: {
+      type: String,
+      default: ''
     },
-    {
-      threshold: 0.1,
+    slug: {
+      type: String,
+      default: ''
+    },
+    time: {
+      type: Number,
+      default: 0
+    },
+    isStory: {
+      type: Boolean,
+      default: true
+    },
+    as: {
+      type: String,
+      default: 'div'
     }
-  );
+  })
 
-  if (cardRef.value) {
-    observer.observe(cardRef.value);
-  }
-});
+  const { getTime } = useStory({ time: props.time })
+  const renderedTime = getTime()
 
-onUnmounted(() => {
-  if (observer && cardRef.value) {
-    observer.unobserve(cardRef.value);
-  }
-});
+  const cardRef = ref(null)
+  const isIntersecting = ref(false)
+
+  let observer
+
+  onMounted(() => {
+    observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          isIntersecting.value = true
+          observer.unobserve(cardRef.value)
+        }
+      },
+      {
+        threshold: 0.1
+      }
+    )
+
+    if (cardRef.value) {
+      observer.observe(cardRef.value)
+    }
+  })
+
+  onUnmounted(() => {
+    if (observer && cardRef.value) {
+      observer.unobserve(cardRef.value)
+    }
+  })
 </script>
 
-
 <style scoped>
-.basic-card {
-  position: relative;
-  display: grid;
-  background-color: var(--v-color-surface-mod);
-  border-radius: var(--v-unit-4);
-}
-.basic-card__content {
-  text-align: center;
-
-  .v-text {
-    line-height: 1;
+  .basic-card {
+    position: relative;
+    display: grid;
+    background-color: var(--v-color-surface-mod);
+    border-radius: var(--v-unit-4);
   }
-}
-.basic-card__image {
-  border-radius: var(--v-unit-2);
-  overflow: hidden;
-  min-height: 100px;
-  background-color: var(--v-color-surface-dark);
-}
+  .basic-card__content {
+    text-align: center;
 
-.basic-card__img {
-  aspect-ratio: 1 / 1;
-  opacity: 0; 
-  animation: fade-in 1s ease-in-out forwards;
-}
+    .v-text {
+      line-height: 1;
+    }
+  }
+  .basic-card__image {
+    border-radius: var(--v-unit-2);
+    overflow: hidden;
+    min-height: 100px;
+    background-color: var(--v-color-surface-dark);
+  }
 
-@keyframes fade-in {
-  0% {
+  .basic-card__img {
+    aspect-ratio: 1 / 1;
     opacity: 0;
+    animation: fade-in 1s ease-in-out forwards;
   }
-  100% {
-    opacity: 1;
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
-}
 
-.basic-card__time {
-  position: absolute;
-  padding: var(--v-unit-2);
+  .basic-card__time {
+    position: absolute;
+    padding: var(--v-unit-2);
 
-  font-size: 14px;
-  right: -5px;
-  top: -4px;
-  border: 4px solid var(--v-color-primary);
-  border-left: none;
-  border-bottom: none;
-  background-color: var(--v-color-surface);
-  border-radius: var(--v-unit-2) 0 var(--v-unit-2) 0;
-}
+    font-size: 14px;
+    right: -5px;
+    top: -4px;
+    border: 4px solid var(--v-color-primary);
+    border-left: none;
+    border-bottom: none;
+    background-color: var(--v-color-surface);
+    border-radius: var(--v-unit-2) 0 var(--v-unit-2) 0;
+  }
 </style>

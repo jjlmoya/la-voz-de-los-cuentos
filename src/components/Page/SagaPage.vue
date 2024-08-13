@@ -4,7 +4,7 @@
       v-if="saga.youtube"
       class="saga-page__iframe"
       :src="`https://www.youtube.com/embed/videoseries?list=${saga.youtube}`"
-      :title="`Playlist de la saga: ${saga.name}`"
+      :title="`Saga Playlist: ${saga.name}`"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
@@ -20,7 +20,7 @@
         <article v-html="descriptionHtml"></article>
       </VText>
     </VContainer>
-    <SectionsDefault :title="`Cuentos De La Saga (${totalTime})`">
+    <SectionsDefault :title="`${t('page.saga.stories')}(${totalTime})`">
       <SagaStories :saga="saga" />
     </SectionsDefault>
   </VContainer>
@@ -34,6 +34,7 @@
     }
   })
 
+  import t from '../../translations'
   import useSaga from '../../composables/useSaga'
   import { VText, VContainer } from '@overgaming/vicius'
   import SagaStories from '../Sections/SagaStories.vue'

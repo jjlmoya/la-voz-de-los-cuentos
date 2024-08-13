@@ -3,7 +3,8 @@ import NavLayout from '../layouts/NavLayout.astro'
 import StoriesPage from '../components/Page/StoriesPage.vue'
 import SectionsDefault from '../components/Sections/Default.vue'
 import FilteredStories from '../components/Sections/FilteredStories.vue'
-
+import t from '../translations'
+import { toStories } from '../router'
 export async function getStaticPaths() {
   const paths = [
     {
@@ -18,9 +19,9 @@ export async function getStaticPaths() {
 ---
 
 <NavLayout
-  title="Listado de Cuentos"
-  description="Nuestra colección de cuentos mágicos, cientos de cuentos esperando a ser descubiertos"
-  url="/cuentos/"
+  title={t('page.stories.h1')}
+  description={t('page.stories.description')}
+  url={toStories()}
 >
   <StoriesPage>
     <SectionsDefault>

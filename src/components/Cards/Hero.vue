@@ -22,7 +22,7 @@
   import useStories from '../../composables/useStories'
   import useStory from '../../composables/useStory'
   import { VImage, VText } from '@overgaming/vicius'
-  const lang = import.meta.env.PUBLIC_LANG;
+  const lang = import.meta.env.PUBLIC_LANG
 
   const { getLastStory } = useStories()
   const story = getLastStory()
@@ -41,7 +41,11 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3));
+    background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.3)
+    );
     top: 0;
     left: 0;
     display: grid;
@@ -56,5 +60,4 @@
     font-size: 24px;
     text-shadow: 0px 0px 10px white;
   }
-  
 </style>

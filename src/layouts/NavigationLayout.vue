@@ -1,11 +1,35 @@
 <template>
   <div class="navigation-layout">
     <div class="navigation-layout__mobile">
-      <button class="navigation-layout__btn" @click="toggle" aria-label="Boton para abrir menú">
-        <svg xmlns="http://www.w3.org/2000/svg" width="25px" viewBox="0 0 24 24" fill="none">
-          <path d="M20 7L4 7" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-          <path d="M20 12L4 12" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-          <path d="M20 17L4 17" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+      <button
+        class="navigation-layout__btn"
+        @click="toggle"
+        aria-label="Toggle Menu"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="25px"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M20 7L4 7"
+            stroke="black"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+          <path
+            d="M20 12L4 12"
+            stroke="black"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+          <path
+            d="M20 17L4 17"
+            stroke="black"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
         </svg>
       </button>
     </div>
@@ -25,13 +49,13 @@
       <Footer />
     </div>
 
-      <div
-        class="navigation-layout__backdrop"
-        :class="{
-          'navigation-layout__backdrop--visible': isOpen
-        }"
-        @click="toggle"
-      />
+    <div
+      class="navigation-layout__backdrop"
+      :class="{
+        'navigation-layout__backdrop--visible': isOpen
+      }"
+      @click="toggle"
+    />
   </div>
 </template>
 

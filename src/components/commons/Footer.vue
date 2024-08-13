@@ -1,9 +1,9 @@
 <template>
   <div class="footer">
     <div class="footer-header">
-      <VText class="footer-title" variant="header" as="h3"
-        >{{siteName}}</VText
-      >
+      <VText class="footer-title" variant="header" as="h3">{{
+        siteName
+      }}</VText>
     </div>
     <VDivider class="footer-divider">{{ t('footer.newsletter') }}</VDivider>
     <VContainer size="xs" class="footer-newsletter">
@@ -22,8 +22,10 @@
             <VFieldLabel for="email">Email:</VFieldLabel>
           </template>
           <template #message>
-            <VText v-if="successMessage">¡Gracias por la suscripción!</VText>
-            <VText v-if="emailError">Correo no válido</VText>
+            <VText v-if="successMessage">{{
+              t('footer.newsletters.thanks')
+            }}</VText>
+            <VText v-if="emailError">{{ t('footer.newsletters.error') }}</VText>
           </template>
           <VButton
             v-if="!successMessage"
@@ -60,27 +62,48 @@
       -->
       <div class="footer-links">
         <div class="footer-links__element">
-          <VLink v-if="links.youtube" :href="`https://www.youtube.com/${links.youtube}?sub_confirmation=1`">Youtube</VLink>
+          <VLink
+            v-if="links.youtube"
+            :href="`https://www.youtube.com/${links.youtube}?sub_confirmation=1`"
+            >Youtube</VLink
+          >
         </div>
         <div class="footer-links__element">
-          <VLink v-if="links.spotify" :href="`https://open.spotify.com/show/${links.spotify}`"
+          <VLink
+            v-if="links.spotify"
+            :href="`https://open.spotify.com/show/${links.spotify}`"
             >Spotify</VLink
           >
         </div>
         <div class="footer-links__element">
-          <VLink v-if="links.tiktok" :href="`https://www.tiktok.com/${links.tiktok}`">TikTok</VLink>
-        </div>
-        <div class="footer-links__element">
-          <VLink v-if="links.instagram" :href="`https://www.instagram.com/${links.instagram}/`">Instagram</VLink
+          <VLink
+            v-if="links.tiktok"
+            :href="`https://www.tiktok.com/${links.tiktok}`"
+            >TikTok</VLink
           >
         </div>
         <div class="footer-links__element">
-          <VLink v-if="links.facebook" :href="`https://www.facebook.com/${links.facebook}`">Facebook</VLink>
+          <VLink
+            v-if="links.instagram"
+            :href="`https://www.instagram.com/${links.instagram}/`"
+            >Instagram</VLink
+          >
+        </div>
+        <div class="footer-links__element">
+          <VLink
+            v-if="links.facebook"
+            :href="`https://www.facebook.com/${links.facebook}`"
+            >Facebook</VLink
+          >
         </div>
       </div>
       <div class="footer-links">
-        <VLink :href="toCustomStory()">{{t('footer.interesting.custom')}}</VLink>
-        <VLink v-if="links.email" :href="`mailto:${links.email}`">{{t('footer.interesting.contact')}}</VLink>
+        <VLink :href="toCustomStory()">{{
+          t('footer.interesting.custom')
+        }}</VLink>
+        <VLink v-if="links.email" :href="`mailto:${links.email}`">{{
+          t('footer.interesting.contact')
+        }}</VLink>
         <!--<VLink href="/legal/cookies/">Política de Cookies</VLink>-->
         <!--<VLink href="/legal/privacidad/">Política de Privacidad</VLink>-->
       </div>
@@ -100,7 +123,7 @@
     spotify: import.meta.env.PUBLIC_SPOTIFY_ID,
     twitter: import.meta.env.PUBLIC_TWITTER_USER,
     youtube: import.meta.env.PUBLIC_YOUTUBE_ID,
-    facebook: import.meta.env.PUBLIC_FB_USER,
+    facebook: import.meta.env.PUBLIC_FB_USER
   }
   import { ref } from 'vue'
   import {
@@ -134,15 +157,13 @@
     successMessage.value = false
 
     try {
-      const response = await fetch(newsletterEndpoint,
-        {
-          method: 'POST',
-          body: JSON.stringify({ email: email.value, lang, story: false }),
-          headers: {
-            'Content-Type': 'text/plain;charset=utf-8'
-          }
+      const response = await fetch(newsletterEndpoint, {
+        method: 'POST',
+        body: JSON.stringify({ email: email.value, lang, story: false }),
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8'
         }
-      )
+      })
 
       const result = await response.json()
       if (result.result === 'success') {

@@ -1,14 +1,13 @@
 <template>
   <VContainer size="xl" class="stories-page">
-    <VText class="stories-page__title" as="h1" variant="header"
-      >{{ t('page.sagas.h1') }}</VText
-    >
+    <VText class="stories-page__title" as="h1" variant="header">{{
+      t('page.sagas.h1')
+    }}</VText>
     <slot />
   </VContainer>
 </template>
 
 <script setup>
-
   import t from '../../translations'
   const props = defineProps({
     story: {

@@ -3,6 +3,7 @@ import '@overgaming/vicius/styles'
 import '../assets/css/fonts.css'
 import '../assets/css/styles.css'
 import CMP from '../components/commons/Legal/CMP.vue'
+const siteName = import.meta.env.PUBLIC_SITE_NAME
 const {
   title,
   description,
@@ -12,9 +13,7 @@ const {
   url = '/',
   hasVideo = false
 } = Astro.props
-const pageTitle = title
-  ? `${title} | La Voz de los Cuentos`
-  : 'La Voz de los Cuentos'
+const pageTitle = title ? `${title} | ${siteName}` : { siteName }
 const siteUrl = import.meta.env.PUBLIC_SITE_URL
 const lang = import.meta.env.PUBLIC_LANG
 const gaId = import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID
@@ -66,8 +65,7 @@ const twitterUser = import.meta.env.PUBLIC_TWITTER_USER
     ></script>
     <script>
       ;(function () {
-        const isProduction =
-          window.location.hostname !== 'localhost'
+        const isProduction = window.location.hostname !== 'localhost'
         if (!isProduction) return
         const currentUrl = window.location.href
         let newUrl = ''

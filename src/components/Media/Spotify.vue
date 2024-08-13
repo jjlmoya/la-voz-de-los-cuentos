@@ -1,42 +1,39 @@
 <template>
-    <div class="spotify" v-if="spotify">
-        <iframe
-
-            class="spotify__iframe"
-           :class="{'spotify__iframe--active': iframe}"
-            title="Reproductor de Spotify"
-            frameborder="0"
-            scrolling="no"
-            loading="lazy"
-            @load="iframeLoaded"
-            :src="`https://podcasters.spotify.com/pod/show/lavozdeloscuentos/embed/episodes/${spotify}`"
-        />
-        <div v-if="!iframe" class="spotify__loading"></div>
-        <div :class="{'spotify__mask--animation': iframe}" class="spotify__mask">
-
-        </div>
-    </div>
+  <div class="spotify" v-if="spotify">
+    <iframe
+      class="spotify__iframe"
+      :class="{ 'spotify__iframe--active': iframe }"
+      title="Spotify Audio Player"
+      frameborder="0"
+      scrolling="no"
+      loading="lazy"
+      @load="iframeLoaded"
+      :src="`https://podcasters.spotify.com/pod/show/lavozdeloscuentos/embed/episodes/${spotify}`"
+    />
+    <div v-if="!iframe" class="spotify__loading"></div>
+    <div
+      :class="{ 'spotify__mask--animation': iframe }"
+      class="spotify__mask"
+    ></div>
+  </div>
 </template>
 
 <script setup>
+  import { ref } from 'vue'
+  const iframe = ref(false)
 
-import { ref } from 'vue'
-const iframe = ref(false)
-
-const iframeLoaded = () => {
+  const iframeLoaded = () => {
     iframe.value = true
-}
-defineProps ({
-    spotify:{
-        type: String,
-        default: ''
+  }
+  defineProps({
+    spotify: {
+      type: String,
+      default: ''
     }
-})
+  })
 </script>
 
 <style>
-
-
   .spotify {
     border-radius: var(--v-unit-2);
     overflow: hidden;
@@ -62,10 +59,9 @@ defineProps ({
   .spotify__iframe {
     opacity: 0;
     background-color: white;
-
   }
-  
-   .spotify__iframe--active {
+
+  .spotify__iframe--active {
     opacity: 1;
     animation: opacity-in 0.3s ease-in forwards;
     animation-delay: 150ms;
@@ -93,7 +89,7 @@ defineProps ({
     }
   }
 
-   @keyframes opacity-in {
+  @keyframes opacity-in {
     0% {
       opacity: 0;
     }
@@ -102,16 +98,15 @@ defineProps ({
     }
   }
 
-
-   @media (max-width: 831px) {
+  @media (max-width: 831px) {
     .spotify {
-        max-height: 96px;
+      max-height: 96px;
     }
     .spotify__mask {
-        height: 96px;
+      height: 96px;
     }
     .spotify iframe {
-        height: 96px;
+      height: 96px;
     }
-   }
+  }
 </style>

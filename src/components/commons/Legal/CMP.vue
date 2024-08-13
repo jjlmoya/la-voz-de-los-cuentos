@@ -1,26 +1,30 @@
 <template>
   <div v-if="showCookieConsent" class="cookie-consent">
     <VText>
-      Para mejorar la experiencia necesitamos cookies de terceros, <br />
-      sólo usamos Google Analytics ¿Aceptas las cookies?
+      {{ t('cmp.text') }}
     </VText>
     <div class="cookie-consent-buttons">
-      <VButton color="primary" size="xs" @click="acceptCookies" class="cookie-consent-button"
-        >Aceptar Cookies</VButton
+      <VButton
+        color="primary"
+        size="xs"
+        @click="acceptCookies"
+        class="cookie-consent-button"
+        >{{ t('cmp.accept') }}</VButton
       >
       <VButton
         variant="text"
         size="xs"
         @click="rejectCookies"
         class="cookie-consent-reject-button"
-        >Rechazar</VButton
+        >{{ t('cmp.decline') }}</VButton
       >
     </div>
   </div>
 </template>
 
 <script setup>
-  const gaID = import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID;
+  import t from '../../../translations'
+  const gaID = import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID
 
   import { ref, onMounted } from 'vue'
   import { VButton, VText } from '@overgaming/vicius'

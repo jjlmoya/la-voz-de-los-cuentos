@@ -4,7 +4,7 @@
       <VImage
         v-if="!story.youtube"
         :src="`/assets/stories/${lang}/${story.key}.webp`"
-        :alt="`Imagen de portada del cuento ${story.name}`"
+        :alt="`Image ${story.name}`"
       />
       <lite-youtube
         v-if="story.youtube"
@@ -12,7 +12,11 @@
         :playlabel="story.name"
       />
       <div class="story-page__pdf">
-        <VButton color="primary" @click="printPdf" aria-label="Descargar en PDF">
+        <VButton
+          color="primary"
+          @click="printPdf"
+          aria-label="Descargar en PDF"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -61,7 +65,6 @@
         />
       </VContainer>
       <SocialShare :url="url" :title="title" />
-      
     </div>
     <div class="story-page__title">
       <VText
@@ -96,18 +99,18 @@
 <script setup>
   import t from '../../translations'
   import Spotify from '../Media/Spotify.vue'
-  const lang = import.meta.env.PUBLIC_LANG;
- 
+  const lang = import.meta.env.PUBLIC_LANG
+
   const props = defineProps({
     story: {
       type: Object,
       default: {}
     },
-    url :{
+    url: {
       type: String,
       default: ''
     },
-    title :{
+    title: {
       type: String,
       default: ''
     }
@@ -130,16 +133,11 @@
 
   const storyHTML = ref('')
   const fontSize = ref(16)
-  const iframe = ref(false)
 
   const { html } = useStory(props.story)
   storyHTML.value = html()
   const printPdf = () => {
     window.print()
-  }
-
-  const iframeLoaded = () => {
-    iframe.value = true
   }
 
   const updateFontSize = event => {

@@ -10,18 +10,18 @@ import charactersEs from './es/characters.json'
 import newslettersEs from './es/newsletters.json'
 
 const map = {
-    es: {
-        stories: storiesEs,
-        sagas: sagasEs,
-        characters: charactersEs,
-        newsletters: newslettersEs,
-    },
-    en: {
-        stories: storiesEn,
-        sagas: sagasEn,
-        characters: charactersEn,
-        newsletters: newslettersEn,
-    }
+  es: {
+    stories: storiesEs,
+    sagas: sagasEs,
+    characters: charactersEs,
+    newsletters: newslettersEs
+  },
+  en: {
+    stories: storiesEn,
+    sagas: sagasEn,
+    characters: charactersEn,
+    newsletters: newslettersEn
+  }
 }
 
 export const getSagas = () => map[lang].sagas
