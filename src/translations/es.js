@@ -74,15 +74,19 @@ export default {
   'page.newsletters.h1': 'Listado de News Audio Letter',
   'page.newsletters.description':
     'Las novedades y lo que está por venir, para que conozcas más de los entresijos de La Voz de los Cuentos',
-
-  'meta.description': '',
-  'meta.title': '',
-
+    
   'cmp.text':
     'Para mejorar la experiencia necesitamos cookies de terceros, sólo usamos Google Analytics ¿Aceptas las cookies?',
   'cmp.accept': 'Aceptar Cookies',
   'cmp.decline': 'Rechazar',
 
   'footer.newsletters.thanks': '¡Gracias por la suscripción!',
-  'footer.newsletters.error': 'Correo no válido'
+  'footer.newsletters.error': 'Correo no válido',
+
+  'sections.default.more': "Ver más",
+
+   "page.custom.h1": "Crea tu Cuento Personalizado",
+   "page.custom.description": "Bienvenido a nuestra página mágica de creación de cuentos infantiles.Aquí puedes pedir un cuento personalizado de forma gratuita. ¡Deja volar tu imaginación y permítenos crear una historia especial solo para ti!",
+
+   "schema.type": "Literatura Infantil"
 }
