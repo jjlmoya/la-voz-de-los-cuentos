@@ -1,4 +1,4 @@
-const CACHE_NAME = 'la-voz-de-los-cuentos';
+const CACHE_NAME = '3xp0-cache-time';
 
 self.addEventListener('fetch', event => {
     event.respondWith(
