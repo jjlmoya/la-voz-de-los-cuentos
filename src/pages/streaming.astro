@@ -1,26 +1,15 @@
 ---
-// Filtrar historias que tengan un campo de YouTube
 import StreamingLayout from '../layouts/StreamingLayout.astro'
-import es from '../data/es/stories.json'
-import en from '../data/en/stories.json'
-
-const storiesMap = {
-  es,
-  en
-}
-const storiesData = storiesMap[import.meta.env.PUBLIC.LANG]
-// Obtener la fecha de hoy
+import { getStories } from '../data'
 
 const cutArray = array => {
   const [first, ...rest] = array
   return rest.slice(-50)
 }
 const today = new Date()
-today.setHours(0, 0, 0, 0) // Poner la hora a 00:00:00 para comparaciones precisas
-
-// Filtrar historias que tengan un campo de YouTube y que sean de ayer o del pasado
+today.setHours(0, 0, 0, 0) 
 const stories = cutArray(
-  Object.entries(storiesData)
+  Object.entries(getStories())
     .map(([key, data]) => ({ key, data }))
     .filter(story => {
       const storyDate = new Date(story.data.date.split('/').reverse().join('-')) // Convertir la fecha al formato ISO
@@ -28,7 +17,6 @@ const stories = cutArray(
     })
 )
 
-// Función para mezclar el array de historias
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1))
