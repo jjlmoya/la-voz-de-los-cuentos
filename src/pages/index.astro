@@ -6,6 +6,7 @@ import NewSection from '../components/Sections/News.vue'
 import SagasSection from '../components/Sections/Sagas.vue'
 import { VContainer } from '@overgaming/vicius'
 import t from '../translations'
+import { toStories, toSagas } from '../router'
 ---
 
 <NavLayout
@@ -16,10 +17,10 @@ import t from '../translations'
   <div class="homepage">
     <VContainer size="xl">
       <Hero />
-      <SectionsDefault title={t('section.news')} moreLink={t('link.stories')}>
+      <SectionsDefault title={t('section.news')} moreLink={toStories()}>
         <NewSection client:load />
       </SectionsDefault>
-      <SectionsDefault title={t('section.sagas')} moreLink={t('link.stories')}>
+      <SectionsDefault title={t('section.sagas')} moreLink={toSagas()}>
         <SagasSection />
       </SectionsDefault>
     </VContainer>

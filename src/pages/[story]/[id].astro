@@ -1,20 +1,18 @@
 ---
 import NavLayout from '../../layouts/NavLayout.astro'
-import stories from '../../data/stories.json'
+import { getStories } from '../../data'
+
 import StoryPage from '../../components/Page/StoryPage.vue'
 const siteUrl = import.meta.env.PUBLIC_SITE_URL
-const lang = import.meta.env.PUBLIC_LANG
+const stories = getStories()
 
-console.log(Astro.params)
 const { id } = Astro.params
 const story = stories.find(story => story.key === id)
-
+const lang = import.meta.env.PUBLIC_LANG
 const firstParagraph = story.story.split('\n').filter(p => p.trim() !== '')[0]
 
 export async function getStaticPaths() {
-  console.log('staticPaths')
-
-  const paths = stories.map(story => ({
+  const paths = getStories().map(story => ({
     params: {
       story: import.meta.env.PUBLIC_LANG === 'en' ? 'story' : 'cuento',
       id: story.key
@@ -25,7 +23,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  console.log('staticProps')
   const { type, slug } = params
   if (type !== 'story' || !stories[slug]) {
     return {

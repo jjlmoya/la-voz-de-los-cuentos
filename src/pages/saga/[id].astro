@@ -1,13 +1,12 @@
 ---
 import NavLayout from '../../layouts/NavLayout.astro'
-import sagaData from '../../data/sagas.json'
-import storyData from '../../data/stories.json'
+import { getSagas } from '../../data'
 import SagaPage from '../../components/Page/SagaPage.vue'
 const { id } = Astro.params
-const saga = sagaData.find(s => s.key === id)
-
+const saga = getSagas().find(s => s.key === id)
+const lang = import.meta.env.PUBLIC_LANG
 export async function getStaticPaths() {
-  return sagaData.map(saga => ({
+  return getSagas().map(saga => ({
     params: { id: saga.key }
   }))
 }
@@ -16,7 +15,7 @@ export async function getStaticPaths() {
 <NavLayout
   title={'Saga: ' + saga.name}
   description={saga.description}
-  image={'/assets/sagas/' + saga.key + '.png'}
+  image={`/assets/sagas/${lang}/${saga.key}.webp`}
   url={'/saga/' + saga.key + '/'}
   hasVideo
 >

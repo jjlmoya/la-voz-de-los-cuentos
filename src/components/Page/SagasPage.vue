@@ -1,7 +1,7 @@
 <template>
   <VContainer size="xl" class="stories-page">
     <VText class="stories-page__title" as="h1" variant="header"
-      >Listado de Sagas</VText
+      >{{ t('page.sagas.h1') }}</VText
     >
     <slot />
   </VContainer>
@@ -9,7 +9,7 @@
 
 <script setup>
 
-
+  import t from '../../translations'
   const props = defineProps({
     story: {
       type: Object,

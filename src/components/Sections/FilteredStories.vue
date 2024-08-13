@@ -4,7 +4,7 @@
       <VInput
         type="text"
         v-model="searchQuery"
-        placeholder="Buscar cuento..."
+        :placeholder="t('page.stories.searcher.placeholder')"
         class="search-input"
       />
     </VContainer>
@@ -14,7 +14,7 @@
         :class="{ active: sortOrder === 'date' }"
         @click="setSortOrder('date')"
       >
-        Fecha
+        {{ t('page.stories.order.date') }}
         <VText v-if="sortOrder === 'date'">
           {{ sortDirection === 'asc' ? '▲' : '▼' }}
         </VText>
@@ -24,7 +24,7 @@
         :class="{ active: sortOrder === 'time' }"
         @click="setSortOrder('time')"
       >
-        Duración
+        {{ t('page.stories.order.duration') }}
         <VText v-if="sortOrder === 'time'">
           {{ sortDirection === 'asc' ? '▲' : '▼' }}
         </VText>
@@ -34,13 +34,13 @@
         :class="{ active: sortOrder === 'name' }"
         @click="setSortOrder('name')"
       >
-        Nombre
+        {{ t('page.stories.order.name') }}
         <VText v-if="sortOrder === 'name'">
           {{ sortDirection === 'asc' ? '▲' : '▼' }}
         </VText>
       </VButton>
       <VButton
-        aria-label="Cambiar a vista lista"
+        :aria-label="t('page.stories.changeview')"
         variant="text"
         :class="{ active: isListView }"
         @click="toggleViewMode"
@@ -74,6 +74,7 @@
 </template>
 
 <script setup>
+  import t from '../../translations'
   import { VContainer, VButton, VText, VInput } from '@overgaming/vicius'
   import { ref, computed } from 'vue'
   import BasicCard from '../Cards/Basic.vue'

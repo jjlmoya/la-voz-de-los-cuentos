@@ -1,7 +1,7 @@
 <template>
   <VContainer size="xl" class="stories-page">
     <VText class="stories-page__title" as="h1" variant="header"
-      >Listado de Cuentos</VText
+      >{{t('page.stories.h1')}}</VText
     >
     <slot />
   </VContainer>
@@ -15,7 +15,7 @@
       default: {}
     }
   })
-
+  import t from '../../translations'
   import { VText, VContainer } from '@overgaming/vicius'
 </script>
 

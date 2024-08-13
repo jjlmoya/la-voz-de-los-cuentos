@@ -9,6 +9,23 @@ const __dirname = dirname(__filename);
 const KEYFILEPATH = path.join(__dirname, 'credentials.json');
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
 
+const SPREADSHEET_IDS = {
+    es: '1stmw3Uy70JloMCnQpCG5wjLtAFbaIFN1Aqe1gK9JM7A',
+    en: '1E8J8Q5uVQxdZ1sNHusSumLXPNXYaYFnTBAh6PEsTagg' 
+};
+
+const SPREADSHEET_RANGES = {
+    stories: 'Cuentos!A1:L999', 
+    sagas: 'Sagas!A1:I999',
+    newsletters: 'Newsletter!A1:E999',
+    characters: 'Characters!A1:N999'
+};
+
+const OUTPUT_DIRS = {
+    es: '../src/data/es/',
+    en: '../src/data/en/'
+};
+
 async function authenticateGoogleSheets() {
     const auth = new google.auth.GoogleAuth({
         keyFile: KEYFILEPATH,
@@ -22,11 +39,7 @@ async function authenticateGoogleSheets() {
     return sheets;
 }
 
-async function readStoriesSpreedsheet() {
-    const spreadsheetId = '1stmw3Uy70JloMCnQpCG5wjLtAFbaIFN1Aqe1gK9JM7A';
-    const range = 'Cuentos!A1:L999';
-    const sheets = await authenticateGoogleSheets();
-
+async function readSpreadsheet(sheets, spreadsheetId, range) {
     const response = await sheets.spreadsheets.values.get({
         spreadsheetId: spreadsheetId,
         range: range,
@@ -35,101 +48,18 @@ async function readStoriesSpreedsheet() {
     const rows = response.data.values;
     if (rows.length) {
         const headers = rows[0];
-        const data = rows.slice(1).map(row => {
-            let obj = {};
-            headers.forEach((header, index) => {
-                obj[header] = row[index] || '';
-            });
-            return obj;
-        }).filter(e => e.order && e.name);
-        return data;
-    } else {
-        console.log('No se encontró data en la hoja.');
-        return [];
-    }
-}
-
-async function readSagasSpreedsheet() {
-    const spreadsheetId = '1stmw3Uy70JloMCnQpCG5wjLtAFbaIFN1Aqe1gK9JM7A';
-    const range = 'Sagas!A1:I999';
-    const sheets = await authenticateGoogleSheets();
-
-    const response = await sheets.spreadsheets.values.get({
-        spreadsheetId: spreadsheetId,
-        range: range,
-    });
-
-    const rows = response.data.values;
-    if (rows.length) {
-        const headers = rows[0];
-        const data = rows.slice(1).map(row => {
+        return rows.slice(1).map(row => {
             let obj = {};
             headers.forEach((header, index) => {
                 obj[header] = row[index] || '';
             });
             return obj;
         });
-        return data;
     } else {
-        console.log('No se encontró data en la hoja.');
+        console.log(`No se encontró data en la hoja: ${range}`);
         return [];
     }
 }
-
-async function readNewsLetterSpreedsheet() {
-    const spreadsheetId = '1stmw3Uy70JloMCnQpCG5wjLtAFbaIFN1Aqe1gK9JM7A';
-    const range = 'Newsletter!A1:E999';
-    const sheets = await authenticateGoogleSheets();
-
-    const response = await sheets.spreadsheets.values.get({
-        spreadsheetId: spreadsheetId,
-        range: range,
-    });
-
-    const rows = response.data.values;
-    if (rows.length) {
-        const headers = rows[0];
-        const data = rows.slice(1).map(row => {
-            let obj = {};
-            headers.forEach((header, index) => {
-                obj[header] = row[index] || '';
-            });
-            return obj;
-        });
-        return data;
-    } else {
-        console.log('No se encontró data en la hoja.');
-        return [];
-    }
-}
-
-async function readCharactersSpreedsheet() {
-    const spreadsheetId = '1stmw3Uy70JloMCnQpCG5wjLtAFbaIFN1Aqe1gK9JM7A';
-    const range = 'Characters!A1:N999';
-    const sheets = await authenticateGoogleSheets();
-
-    const response = await sheets.spreadsheets.values.get({
-        spreadsheetId: spreadsheetId,
-        range: range,
-    });
-
-    const rows = response.data.values;
-    if (rows.length) {
-        const headers = rows[0];
-        const data = rows.slice(1).map(row => {
-            let obj = {};
-            headers.forEach((header, index) => {
-                obj[header] = row[index] || '';
-            });
-            return obj;
-        });
-        return data.filter(entry => entry.name);
-    } else {
-        console.log('No se encontró data en la hoja.');
-        return [];
-    }
-}
-
 
 async function writeJsonToFile(data, filePath) {
     return new Promise((resolve, reject) => {
@@ -146,39 +76,24 @@ async function writeJsonToFile(data, filePath) {
     });
 }
 
-readStoriesSpreedsheet()
-    .then(data => {
-        return writeJsonToFile(data, path.join(__dirname, '../src/data/stories.json'));
-    })
-    .then(() => {
-        console.log('JSON created stories.json');
-    })
-    .catch(err => console.error('Error creating stories.json:', err));
+async function processLanguage(language, spreadsheetId, outputDir) {
+    const sheets = await authenticateGoogleSheets();
 
-readSagasSpreedsheet()
-    .then(data => {
-        return writeJsonToFile(data, path.join(__dirname, '../src/data/sagas.json'));
-    })
-    .then(() => {
-        console.log('JSON created sagas.json');
-    })
-    .catch(err => console.error('Error Creating sagas.json', err));
+    for (const [key, range] of Object.entries(SPREADSHEET_RANGES)) {
+        const adjustedRange = range;
+        const data = await readSpreadsheet(sheets, spreadsheetId, adjustedRange);
+        const filteredData = data.filter(entry => (entry.order || entry.id) && (entry.name || entry.title))
 
-readNewsLetterSpreedsheet()
-    .then(data => {
-        return writeJsonToFile(data, path.join(__dirname, '../src/data/newsletters.json'));
-    })
-    .then(() => {
-        console.log('JSON created newsletters.json');
-    })
-    .catch(err => console.error('Error Creating newsletters.json', err));
+        const outputPath = path.join(__dirname, `${outputDir}${key}.json`);
+        await writeJsonToFile(filteredData, outputPath);
+        console.log(`JSON created ${key}.json for ${language}`);
+    }
+}
 
+async function main() {
+    for (const [language, spreadsheetId] of Object.entries(SPREADSHEET_IDS)) {
+        await processLanguage(language, spreadsheetId, OUTPUT_DIRS[language]);
+    }
+}
 
-readCharactersSpreedsheet()
-    .then(data => {
-        return writeJsonToFile(data, path.join(__dirname, '../src/data/characters.json'));
-    })
-    .then(() => {
-        console.log('JSON created characters.json');
-    })
-    .catch(err => console.error('Error Creating characters.json', err));
+main().catch(err => console.error('Error processing spreadsheets:', err));

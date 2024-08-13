@@ -1,7 +1,7 @@
 <template>
   <a
     class="description-card"
-    :href="`/${isStory ? 'cuento' : 'saga'}/${slug}/`"
+    :href="toSaga(slug)"
   >
     <div class="description-card__wrapper">
       <div class="description-card__content">
@@ -13,15 +13,17 @@
       <div class="description-card__image">
         <VImage
           aspectRation="1/1"
-          :src="`/assets/${isStory ? 'stories' : 'sagas'}/${slug}.png`"
+          :src="`/assets/sagas/${lang}/${slug}.webp`"
         />
       </div>
     </div>
   </a>
 </template>
 
-<script setup>
+<script setup>  
+  const lang = import.meta.env.PUBLIC_LANG
   import { VImage, VText } from '@overgaming/vicius'
+  import { toSaga } from '../../router'
   defineProps({
     title: {
       type: String,

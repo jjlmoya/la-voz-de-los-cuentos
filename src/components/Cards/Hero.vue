@@ -2,10 +2,10 @@
   <article class="card-hero">
     <VImage
       aspectRatio="16/9"
-      :src="`/assets/stories/${story.key}.webp`"
+      :src="`/assets/stories/${lang}/${story.key}.webp`"
     ></VImage>
     <div class="card-hero__content">
-      <a class="card-hero__article" :href="`/cuento/${story.key}/`">
+      <a class="card-hero__article" :href="toStory(story.key)">
         <VText class="card-hero__title" variant="header">{{
           story.name
         }}</VText>
@@ -18,9 +18,12 @@
 </template>
 
 <script setup>
+  import { toStory } from '../../router'
   import useStories from '../../composables/useStories'
   import useStory from '../../composables/useStory'
   import { VImage, VText } from '@overgaming/vicius'
+  const lang = import.meta.env.PUBLIC_LANG;
+
   const { getLastStory } = useStories()
   const story = getLastStory()
   const { firstParagraph } = useStory(getLastStory())

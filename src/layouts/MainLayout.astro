@@ -67,8 +67,7 @@ const twitterUser = import.meta.env.PUBLIC_TWITTER_USER
     <script>
       ;(function () {
         const isProduction =
-          window.location.hostname === 'lavozdeloscuentos.es' ||
-          window.location.hostname === 'buboboo.com'
+          window.location.hostname !== 'localhost'
         if (!isProduction) return
         const currentUrl = window.location.href
         let newUrl = ''

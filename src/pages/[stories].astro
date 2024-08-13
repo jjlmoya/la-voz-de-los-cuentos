@@ -1,0 +1,30 @@
+---
+import NavLayout from '../layouts/NavLayout.astro'
+import StoriesPage from '../components/Page/StoriesPage.vue'
+import SectionsDefault from '../components/Sections/Default.vue'
+import FilteredStories from '../components/Sections/FilteredStories.vue'
+
+export async function getStaticPaths() {
+  const paths = [
+    {
+      params: {
+        stories: import.meta.env.PUBLIC_LANG === 'en' ? 'stories' : 'cuentos'
+      }
+    }
+  ]
+
+  return paths
+}
+---
+
+<NavLayout
+  title="Listado de Cuentos"
+  description="Nuestra colección de cuentos mágicos, cientos de cuentos esperando a ser descubiertos"
+  url="/cuentos/"
+>
+  <StoriesPage>
+    <SectionsDefault>
+      <FilteredStories client:load />
+    </SectionsDefault>
+  </StoriesPage>
+</NavLayout>

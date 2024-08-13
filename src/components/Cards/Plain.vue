@@ -1,5 +1,5 @@
 <template>
-  <a class="plain-card" :href="`/cuento/${story.key}/`">
+  <a class="plain-card" :href="toStory(story.key)">
     <VText ellipsis class="plain-card__element">{{ story.name }}</VText>
     <VText ellipsis class="plain-card__element">{{ saga }}</VText>
     <VText ellipsis class="plain-card__element">{{ time }}</VText>
@@ -7,6 +7,7 @@
 </template>
 
 <script setup>
+  import { toStory } from '../../router'
   import { VText } from '@overgaming/vicius'
   import useStory from '../../composables/useStory'
   const props = defineProps({

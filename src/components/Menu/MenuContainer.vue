@@ -1,10 +1,12 @@
 <template>
   <VNavigation class="navigation">
     <template #header>
+      
       <VImage
-        src="/assets/hero/title.png"
+        class="navigation__image"
+        :src="`/assets/logo/${lang}.webp`"
         aspectRatio="1/1"
-        loading="lazy"
+        loading="eager"
         alt="Logo"
       />
     </template>
@@ -12,17 +14,21 @@
     <slot />
 
     <template #footer>
-      <VImage src="/assets/hero/owl-layer.png" loading="lazy" alt="Logo" />
+      <VImage class="navigation__image" :src="`/assets/utils/header-bottom.webp`" loading="lazy" alt="Logo" />
     </template>
   </VNavigation>
 </template>
 
 <script setup>
+  const lang = import.meta.env.PUBLIC_LANG
   import { VImage, VNavigation } from '@overgaming/vicius'
 </script>
 
 <style scoped>
   .navigation {
     height: 100dvh;
+  }
+  .navigation__image {
+    background-color: var(--v-color-surface);
   }
 </style>

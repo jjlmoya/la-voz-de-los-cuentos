@@ -1,0 +1,26 @@
+---
+import CustomPage from '../../components/Page/CustomPage.vue'
+import NavLayout from '../../layouts/NavLayout.astro'
+
+export async function getStaticPaths() {
+  const paths = [
+    {
+      params: {
+        custom:
+          import.meta.env.PUBLIC_LANG === 'en' ? 'custom' : 'personalizado',
+        story: import.meta.env.PUBLIC_LANG === 'en' ? 'story' : 'cuento'
+      }
+    }
+  ]
+
+  return paths
+}
+---
+
+<NavLayout
+  title="Cuento Personalizado"
+  description="Bienvenido a nuestra página mágica de creación de cuentos infantiles. Aquí puedes pedir un cuento personalizado de forma gratuita. ¡Deja volar tu imaginación y permítenos crear una historia especial solo para ti!"
+  url="/personalizado/cuento/"
+>
+  <CustomPage client:load />
+</NavLayout>

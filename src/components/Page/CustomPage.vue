@@ -1,38 +1,38 @@
 <template>
   <VContainer size="xs" class="custom-page">
     <div class="custom-page-step" v-if="currentStep === 1">
-      <h2>Nombre del protagonista</h2>
+      <h2>{{ t('page.custom.input.name') }}</h2>
       <VInput         
-        aria-label="Input para el nombre del protagonista"
+        :aria-label="`Input ${t('page.custom.input.name')}`"
         type="text" 
         v-model="form.name" 
       />
       <div class="custom-page-step__buttons">
-        <VButton @click="nextStep" :disabled="!form.name">Siguiente</VButton>
+        <VButton @click="nextStep" :disabled="!form.name">{{t('page.custom.button.next')}}</VButton>
       </div>
     </div>
 
     <div class="custom-page-step" v-if="currentStep === 2">
       <h2>
-        ¿De qué va el cuento? <span class="custom-page-mandatory">*</span>
+        {{t('page.custom.input.story')}} <span class="custom-page-mandatory">*</span>
       </h2>
       <textarea aria-label="Area de texto para describir el cuento" v-model="form.story" required></textarea>
       <div class="custom-page-step__buttons">
-        <VButton @click="prevStep">Anterior</VButton>
-        <VButton @click="nextStep" :disabled="!form.story">Siguiente</VButton>
+        <VButton @click="prevStep">{{t('page.custom.button.prev')}}</VButton>
+        <VButton @click="nextStep" :disabled="!form.story">{{t('page.custom.button.next')}}</VButton>
       </div>
     </div>
 
     <div class="custom-page-step" v-if="currentStep === 3">
-      <h2>¿Dónde enviarlo?</h2>
+      <h2>{{t('page.custom.input.email')}}</h2>
       <VInput
-        aria-label="Email para enviar el cuento"
+        aria-label="Email"
         type="email"
         v-model="form.email"
-        placeholder="ejemplo@email.com"
+        placeholder="abc@email.com"
       />
       <div class="custom-page-step__buttons">
-        <VButton @click="prevStep">Anterior</VButton>
+        <VButton @click="prevStep">{{t('page.custom.button.prev')}}</VButton>
         <VButton
           @click="nextStep"
           :disabled="
@@ -40,7 +40,7 @@
             form.email.indexOf('@') === -1 ||
             form.email.indexOf('.') === -1
           "
-          >Siguiente</VButton
+          >{{t('page.custom.button.next')}}</VButton
         >
       </div>
     </div>
@@ -49,36 +49,33 @@
       class="custom-page-step"
       v-if="currentStep === 4 && !loading && !successMessage"
     >
-      <VText
-        >Te enviaremos el cuento al correo electrónico, ¿Quieres suscribirte
-        también a la Newsletter Mensual?</VText
-      >
+      <VText>{{t('page.custom.input.newsletter')}}</VText>
       <div class="custom-page-step__buttons">
-        <VButton @click="submitForm">Sí</VButton>
-        <VButton @click="submitFormWithoutSubscription">No</VButton>
+        <VButton @click="submitForm">{{t('page.custom.button.accept')}}</VButton>
+        <VButton @click="submitFormWithoutSubscription">{{t('page.custom.button.decline')}}</VButton>
       </div>
     </div>
 
     <div class="custom-page-loader" v-if="loading">
-      <p>Enviando tu petición de cuento mágico...</p>
+      <VText>{{t('page.custom.button.loading')}}</VText>
     </div>
 
     <div v-if="successMessage" class="custom-page-success-message">
-      <p>¡Tu petición se ha enviado con éxito y nos pondremos a ello pronto!</p>
+      <VText>{{t('page.custom.button.success')}}</VText>
     </div>
 
     <div v-if="errorMessage" class="custom-page-error-message">
-      <p>
-        Lo sentimos, hubo un error al crear tu cuento. Por favor, intenta de
-        nuevo.
-      </p>
+      <VText>{{t('page.custom.button.error')}}</VText>
     </div>
   </VContainer>
 </template>
 
 <script setup>
+  import t from '../../translations'
   import { ref } from 'vue'
   import { VButton, VInput, VContainer, VText } from '@overgaming/vicius'
+  const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT
+  const lang = import.meta.env.PUBLIC_LANG
 
   const currentStep = ref(1)
   const form = ref({
@@ -101,7 +98,22 @@
 
   const submitFormWithoutSubscription = () => {
     form.value.receiveAll = false
+    submitForm()
   }
+
+   async function addNewsletter() {
+    if (!form.value.receiveAll) return
+    await fetch(newsletterEndpoint,
+        {
+          method: 'POST',
+          body: JSON.stringify({ email: form.value.email, lang, story: true }),
+          headers: {
+            'Content-Type': 'text/plain;charset=utf-8'
+          }
+        }
+      )
+  }
+
   const submitForm = async () => {
     nextStep()
     loading.value = true
@@ -119,7 +131,7 @@
           }
         }
       )
-
+      addNewsletter()
       if (response.ok) {
         successMessage.value = true
       } else {

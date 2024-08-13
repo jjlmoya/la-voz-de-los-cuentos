@@ -1,19 +1,20 @@
 <template>
   <div class="social-share">
     <VContainer size="xs" class="social-share__elements">
-        <VButton class="social-share__button" aria-label="Compartir en Facebook" color="primary" @click="shareOnFacebook"><FacebookIcon /></VButton>
-        <VButton class="social-share__button" aria-label="Compartir en X" color="primary" @click="shareOnTwitter"><XIcon /></VButton>
-        <VButton class="social-share__button" aria-label="Compartir en LinkedIn" color="primary" @click="shareOnLinkedIn"><LinkedInIcon /></VButton>
-        <VButton class="social-share__button" aria-label="Compartir en Whatsapp" color="primary" @click="shareOnWhatsApp"><WhatsappIcon /></VButton>
+        <VButton class="social-share__button" :aria-label="`${t('page.story.share.aria')} Facebook`" color="primary" @click="shareOnFacebook"><FacebookIcon /></VButton>
+        <VButton class="social-share__button" :aria-label="`${t('page.story.share.aria')} X`" color="primary" @click="shareOnTwitter"><XIcon /></VButton>
+        <VButton class="social-share__button" :aria-label="`${t('page.story.share.aria')} LinkedIn`" color="primary" @click="shareOnLinkedIn"><LinkedInIcon /></VButton>
+        <VButton class="social-share__button" :aria-label="`${t('page.story.share.aria')} Whatsapp`" color="primary" @click="shareOnWhatsApp"><WhatsappIcon /></VButton>
     </VContainer>
     <div class="social-share__share">
-        <VText>Comparte y disfruta</VText>
+        <VText>{{t('page.story.share')}}</VText>
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
+import t from '../../translations'
 import { VButton, VContainer, VText } from '@overgaming/vicius'
 import FacebookIcon from '../Icons/Social/Facebook.vue'
 import LinkedInIcon from '../Icons/Social/LinkedIn.vue'

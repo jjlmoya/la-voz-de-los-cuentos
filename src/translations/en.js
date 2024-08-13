@@ -11,19 +11,28 @@ export default {
     "footer.newsletter": "Monthly Newsletter",
     "footer.newsletter.button": "Subscribe",
 
+    "footer.sagas": "Sagas",
+    
     "footer.community": "Join Our Communities",
+
+    "footer.interesting": "Useful Links",
     "footer.interesting.custom": "Make a Custom Story",
     "footer.interesting.newsletter": "Previous Newsletters",
+    "footer.interesting.contact": "Contact",
 
-    "page.stories.h1": "All Stories",
+    "page.stories.h1": "Browse All Stories",
     "page.stories.searcher.placeholder": "Search for a story...",
 
+    "page.stories.changeview": "Change view mode",
     "page.stories.order.date": "Date",
     "page.stories.order.duration": "Duration",
     "page.stories.order.name": "Title",
 
+    "page.story.font.aria": "Choose text size",
+
     "page.story.share": "Share and Enjoy",
     "page.story.related": "More Stories Like This",
+    "page.story.share.aria": "Share on",
 
     "page.sagas.h1": "All Sagas",
 
@@ -43,4 +52,8 @@ export default {
     "page.custom.button.decline": "No",
     "page.custom.button.next": "Next",
     "page.custom.button.prev": "Previous",
+
+    "page.404.message": "Oh no! It looks like the page you're looking for is lost in a magical story.",
+    "page.404.title": "404 - Page Not Found",
+    "page.404.link": "Home"
 }

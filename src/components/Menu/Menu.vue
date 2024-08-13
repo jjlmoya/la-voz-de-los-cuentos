@@ -10,7 +10,10 @@
   import t from '../../translations'
   import { VMenu, VMenuItem } from '@overgaming/vicius'
   import { ref, onMounted } from 'vue'
-
+  import {toStories, toSagas, toCustomStory, toNewsLetters} from '../../router'
+  import useNewsLetters from '../../composables/useNewsLetters'
+  const {hasNewsLetters} = useNewsLetters()
+  
   const menu = ref([
     {
       label: t('menu.home'),
@@ -18,21 +21,22 @@
     },
     {
       label: t('menu.stories'),
-      link: '/cuentos/'
+      link: toStories()
     },
     {
       label: t('menu.sagas'),
-      link: '/sagas/'
+      link: toSagas()
     },
     {
       label: t('menu.custom'),
-      link: '/personalizado/cuento/'
+      link: toCustomStory()
     },
     {
       label: t('menu.newsletter'),
-      link: '/newsletters/'
+      link: toNewsLetters(),
+      hide: !hasNewsLetters()
     }
-  ])
+  ].filter(entry => !entry.hide))
 
   onMounted(() => {
     const current = window.location.pathname

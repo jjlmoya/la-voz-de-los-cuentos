@@ -2,7 +2,7 @@
   <a
     ref="cardRef"
     class="basic-card"
-    :href="`/${isStory ? 'cuento' : 'saga'}/${slug}/`"
+    :href="toStory(slug)"
   >
     <div class="basic-card__image">
       <img
@@ -35,7 +35,7 @@
 
 <script setup>
 const lang = import.meta.env.PUBLIC_LANG;
-
+import { toStory } from '../../router'
 import { ref, onMounted, onUnmounted } from 'vue';
 import { VText } from '@overgaming/vicius';
 import useStory from '../../composables/useStory';

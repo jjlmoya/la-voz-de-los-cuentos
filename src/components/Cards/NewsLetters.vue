@@ -1,5 +1,5 @@
 <template>
-  <a class="newsletter-card" :href="`/newsletter/${newsletter.id}/`">
+  <a class="newsletter-card" :href="toNewsLetter(newsletter.id)">
     <VLink class="newsletter-card__element"
       >#{{ newsletter.id }} - {{ newsletter.title }}</VLink
     >
@@ -7,6 +7,7 @@
 </template>
 
 <script setup>
+  import { toNewsLetter } from '../../router'
   import { VLink } from '@overgaming/vicius'
   defineProps({
     newsletter: {

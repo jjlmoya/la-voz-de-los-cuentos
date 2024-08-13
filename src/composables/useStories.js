@@ -1,6 +1,9 @@
 import { ref } from 'vue'
-import stories from '../data/stories.json'
+import es from '../data/es/stories.json'
+import en from '../data/en/stories.json'
 
+const lang = import.meta.env.PUBLIC_LANG
+const stories = {es,en}[lang]
 export default function useStories() {
   const allStories = ref(
     [...stories].sort((a, b) => new Date(a.date) - new Date(b.date))

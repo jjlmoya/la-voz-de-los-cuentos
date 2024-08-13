@@ -1,24 +1,31 @@
 ---
 import '../styles/404.css'
 import NavLayout from '../layouts/NavLayout.astro'
+import t from '../translations'
 ---
 
 <NavLayout
-  title="Página no encontrada"
-  description="Página no encontrada en La Voz De Los Cuentos. Descubre más cuentos mágicos en nuestro sitio."
+  title={t('page.404.title')}
+  description={t('page.404.message')}
   url="/404"
 >
   <div class="voz-cuentos-body">
-    <div class="voz-cuentos-container">
+    <div class="voz-cuentos-container" style="display: grid; grid-gap: 12px;">
       <div class="voz-cuentos-owl">
-        <img src="/assets/emotes/sad.png" alt="Lechuza mágica" />
+        <img src="/assets/emotes/sad.webp" alt="Lechuza mágica" />
       </div>
-      <h1 class="voz-cuentos-title">404 - Página no encontrada</h1>
+      <h1 class="voz-cuentos-title">{t('page.404.title')}</h1>
       <p class="voz-cuentos-message">
-        ¡Oh no! Parece que la página que buscas se ha perdido en un cuento
-        mágico.
+        {t('page.404.message')}
       </p>
-      <a href="/" class="voz-cuentos-link">Volver a la página principal</a>
+      <div>
+        <a
+          class="v-button v-button--vt-default v-button--cr-primary v-button--sz-df"
+          style="color:white; padding: 16px;"
+          href="/"
+          class="voz-cuentos-link">{t('page.404.link')}</a
+        >
+      </div>
     </div>
   </div>
 </NavLayout>

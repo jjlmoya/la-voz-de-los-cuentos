@@ -5,13 +5,13 @@
         >{{siteName}}</VText
       >
     </div>
-    <VDivider class="footer-divider">NewsLetter Mensual</VDivider>
+    <VDivider class="footer-divider">{{ t('footer.newsletter') }}</VDivider>
     <VContainer size="xs" class="footer-newsletter">
       <div class="footer-newsletter__content">
         <VField>
           <VInput
             v-if="!successMessage"
-            aria-label="Input Email de Newsletter"
+            aria-label="Input Email Newsletter"
             type="email"
             name="email"
             v-model="email"
@@ -31,67 +31,77 @@
             :disabled="!isEmailValid || isSubmitting"
             @click="submitForm"
           >
-            Suscribirse
+            {{ t('footer.newsletter.button') }}
           </VButton>
         </VField>
       </div>
     </VContainer>
     <div class="footer-wrapper">
+      <!--
       <div class="footer-links">
-        <VDivider>Sagas</VDivider>
+        <VDivider>{{ t('footer.sagas') }}</VDivider>
+      </div>
+      -->
+      <div class="footer-links">
+        <VDivider>{{ t('footer.community') }}</VDivider>
       </div>
       <div class="footer-links">
-        <VDivider>Nuestra Comunidades</VDivider>
-      </div>
-      <div class="footer-links">
-        <VDivider>Interés</VDivider>
+        <VDivider>{{ t('footer.interesting') }}</VDivider>
       </div>
     </div>
     <div class="footer-wrapper">
+      <!--
       <div class="footer-links">
         <VLink href="/saga/la-vida-de-eloy/">La Vida de Eloy</VLink>
         <VLink href="/saga/sdg/">Sistema de Distribución de Gatos</VLink>
         <VLink href="/saga/luna-y-la-fisica/">Luna y la ciencia</VLink>
         <VLink href="/saga/llamarada/">Llamarada en Imaginaria</VLink>
       </div>
+      -->
       <div class="footer-links">
         <div class="footer-links__element">
-          <VLink href="https://www.youtube.com/@LaVozDeLosCuentos"
-            >Youtube</VLink
-          >
+          <VLink v-if="links.youtube" :href="`https://www.youtube.com/${links.youtube}?sub_confirmation=1`">Youtube</VLink>
         </div>
         <div class="footer-links__element">
-          <VLink href="https://open.spotify.com/show/2fmWlaQNGSEcE7IX5Ir06z"
+          <VLink v-if="links.spotify" :href="`https://open.spotify.com/show/${links.spotify}`"
             >Spotify</VLink
           >
         </div>
         <div class="footer-links__element">
-          <VLink href="https://www.tiktok.com/@lavozdetuscuentos">TikTok</VLink>
+          <VLink v-if="links.tiktok" :href="`https://www.tiktok.com/${links.tiktok}`">TikTok</VLink>
         </div>
         <div class="footer-links__element">
-          <VLink href="https://www.instagram.com/lavozdetuscuentos/"
-            >Instagram</VLink
+          <VLink v-if="links.instagram" :href="`https://www.instagram.com/${links.instagram}/`">Instagram</VLink
           >
         </div>
         <div class="footer-links__element">
-          <VLink href="https://www.facebook.com/AudioCuentosParaTodos"
-            >Facebook</VLink
-          >
+          <VLink v-if="links.facebook" :href="`https://www.facebook.com/${links.facebook}`">Facebook</VLink>
         </div>
       </div>
       <div class="footer-links">
-        <VLink href="/personalizado/cuento/">Cuento Personalizado</VLink>
-        <!--<VLink href="/contacto/">Contactar</VLink>-->
-        <VLink href="/newsletters/">Pasadas NewsLetters</VLink>
+        <VLink :href="toCustomStory()">{{t('footer.interesting.custom')}}</VLink>
+        <VLink v-if="links.email" :href="`mailto:${links.email}`">{{t('footer.interesting.contact')}}</VLink>
         <!--<VLink href="/legal/cookies/">Política de Cookies</VLink>-->
         <!--<VLink href="/legal/privacidad/">Política de Privacidad</VLink>-->
       </div>
     </div>
   </div>
 </template>
-
 <script setup>
-  const siteName = import.meta.env.PUBLIC_SITE_NAME;
+  import t from '../../translations'
+  const siteName = import.meta.env.PUBLIC_SITE_NAME
+  const lang = import.meta.env.PUBLIC_LANG
+  const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT
+  import { toCustomStory } from '../../router'
+  const links = {
+    email: import.meta.env.PUBLIC_EMAIL,
+    instagram: import.meta.env.PUBLIC_INSTAGRAM_USER,
+    tiktok: import.meta.env.PUBLIC_TIKTOK_USER,
+    spotify: import.meta.env.PUBLIC_SPOTIFY_ID,
+    twitter: import.meta.env.PUBLIC_TWITTER_USER,
+    youtube: import.meta.env.PUBLIC_YOUTUBE_ID,
+    facebook: import.meta.env.PUBLIC_FB_USER,
+  }
   import { ref } from 'vue'
   import {
     VText,
@@ -100,7 +110,6 @@
     VInput,
     VContainer,
     VFieldLabel,
-    VFieldHelp,
     VField,
     VButton
   } from '@overgaming/vicius'
@@ -125,11 +134,10 @@
     successMessage.value = false
 
     try {
-      const response = await fetch(
-        'https://script.google.com/macros/s/AKfycbxzhVGv1wPrLwYU9Inq0Pbx9Bm76LBl8RX9oyWSdaEcaCWyschEyNgJbMNS8XUYj7Pi/exec',
+      const response = await fetch(newsletterEndpoint,
         {
           method: 'POST',
-          body: JSON.stringify({ email: email.value }),
+          body: JSON.stringify({ email: email.value, lang, story: false }),
           headers: {
             'Content-Type': 'text/plain;charset=utf-8'
           }
@@ -167,7 +175,7 @@
   }
   .footer-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: var(--v-unit-4);
     text-align: center;
     align-items: start;

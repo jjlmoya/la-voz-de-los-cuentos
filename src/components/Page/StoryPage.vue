@@ -45,14 +45,14 @@
     <Spotify v-if="story.spotify" :spotify="story.spotify" />
     <div class="story-page__tool">
       <VContainer class="story-page_font-selector" size="xs">
-        <label for="font-size">
+        <label for="fontSize">
           <span style="fontsize: 24px">A</span>
           <span style="fontsize: 16px">a</span>
         </label>
         <VInput
           type="range"
-          name="font-Size"
-          aria-label="Tamaño de Fuente"
+          name="fontSize"
+          :aria-label="t('page.story.font.aria')"
           id="font-size"
           min="14"
           max="28"
@@ -86,7 +86,7 @@
     </article>
     <SectionsDefault
       class="story-page__related"
-      title="Cuentos Relacionados"
+      :title="t('page.story.related')"
     >
       <RelatedStoriesSection :story="story" />
     </SectionsDefault>
@@ -94,6 +94,7 @@
 </template>
 
 <script setup>
+  import t from '../../translations'
   import Spotify from '../Media/Spotify.vue'
   const lang = import.meta.env.PUBLIC_LANG;
  

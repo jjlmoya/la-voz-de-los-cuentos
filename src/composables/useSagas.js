@@ -1,5 +1,10 @@
 import { ref } from 'vue'
-import sagas from '../data/sagas.json'
+import es from '../data/es/sagas.json'
+import en from '../data/en/sagas.json'
+
+const lang = import.meta.env.PUBLIC_LANG
+const sagas = { es, en }[lang]
+
 export default function useSagas() {
   const allSagas = ref(
     [...sagas].sort((a, b) => new Date(a.order) - new Date(b.order))
