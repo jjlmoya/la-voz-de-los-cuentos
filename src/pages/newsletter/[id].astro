@@ -1,9 +1,9 @@
 ---
 import NavLayout from '../../layouts/NavLayout.astro'
-import newsletters from '../../data/newsletters.json'
+import {getNewsLetters} from '../../data'
 import NewsLetterPage from '../../components/Page/NewsLetterPage.vue'
 const { id } = Astro.params
-const newsletter = newsletters.find(newsletter => newsletter.id === id)
+const newsletter = getNewsLetters().find(newsletter => newsletter.id === id)
 
 const firstParagraph = newsletter.html
   .split('\n')
@@ -11,7 +11,7 @@ const firstParagraph = newsletter.html
   .replace(/<\/?[^>]+(>|$)/g, '')
 
 export async function getStaticPaths() {
-  return newsletters.map(newsletter => ({
+  return getNewsLetters().map(newsletter => ({
     params: { id: newsletter.id }
   }))
 }
