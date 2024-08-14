@@ -7,11 +7,13 @@
           <div v-html="content"></div>
         </VText>
       </div>
-      <div class="description-card__image">
-        <VImage
-          aspectRation="1/1"
-          :src="`/assets/sagas/${lang}/${slug}.webp`"
-        />
+      <div class="description-card__wrapper-image">
+        <div class="description-card__image">
+          <VImage
+            aspectRation="1/1"
+            :src="`/assets/sagas/${lang}/${slug}.webp`"
+          />
+        </div>
       </div>
     </div>
   </a>
@@ -47,28 +49,56 @@
     border-radius: var(--v-unit-2);
     overflow: hidden;
     min-height: 250px;
+    border-radius: var(--v-unit-2);
   }
   .description-card__wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     height: 100%;
   }
 
   .description-card__content {
-    padding: var(--v-unit-8);
+    padding: var(--v-unit-1) var(--v-unit-6);
     display: grid;
     align-self: center;
-    gap: var(--v-unit-4);
+    gap: var(--v-unit-2);
   }
 
+  .description-card__wrapper-image {
+    overflow: hidden;
+  }
   .description-card__image {
     position: relative;
-    display: grid;
+  
   }
   .description-card__image .v-image {
     position: absolute;
     transform: rotate(25deg);
     margin-left: 16px;
-    top: 50px;
+
+  }
+
+    
+      @media (width <= 900px) {
+     .description-card__image {
+          width: 300px;
+          right: 25px;
+      }
+    }
+    
+  @media (width <= 600px) {
+     .description-card__image {
+          width: 235px;
+          right: 30px;
+      }
+    }
+
+ 
+
+  @media (width > 900px) {
+    .description-card__image {
+        width: 360px;
+        right: 20px;
+    }
   }
 </style>

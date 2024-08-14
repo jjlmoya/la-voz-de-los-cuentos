@@ -1,5 +1,5 @@
 <template>
-  <section class="sections-new">
+  <section class="sections-sagas">
     <DescriptionCard
       v-for="saga in sagas"
       :slug="saga.key"
@@ -26,7 +26,7 @@
 </script>
 
 <style scoped>
-  .sections-new {
+  .sections-sagas {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(600px, 100%), 1fr));
     grid-gap: var(--v-unit-8);

@@ -140,11 +140,12 @@
   }
 
   .sections-filtered__bar {
-    display: flex;
+    display: grid;
     gap: var(--v-unit-4);
     justify-content: center;
     align-items: center;
     margin-bottom: var(--v-unit-4);
+    grid-auto-flow: column;
   }
 
   .sections-filtered__bar button {
@@ -164,7 +165,7 @@
 
   .sections-filtered__content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     grid-gap: var(--v-unit-10);
   }
 
