@@ -1111,7 +1111,7 @@ La primera historia fue la de un caballero que partió en busca de un dragón pa
 Motivado por este éxito, Gregorio continuó con esta encantadora tarea, día tras día, historia tras historia. Desde la leyenda de la Dama de la Niebla, que supuestamente se perdía siempre en su propio velo, hasta el misterio del reloj que nunca marcaba la medianoche. Uno a uno, los cuentos de Veloneblina encontraban su conclusión.\r
 No pasó mucho tiempo antes de que el pueblo entero se involucrara. Cada noche, alrededor de grandes fogatas, los habitantes de Veloneblina compartían sus nuevas versiones de las viejas historias, cada una con un final más creativo y esperanzador que el anterior.\r
 Finalmente, en la última noche de la Fiesta de los Finales, justo cuando Gregorio narraba el último cuento, la niebla se disipó completamente, revelando estrellas que brillaban como si aplaudieran el fin de la maldición. Veloneblina, el pueblo de nunca acabar, se había liberado del hechizo y ahora podía disfrutar de la belleza de cada historia concluida.\r
-Gregorio, viendo que su trabajo en Veloneblina había llegado a su fin, se despidió de Maribel y los nuevos amigos que había hecho. Con una sonrisa y el corazón lleno de historias, se dirigió hacia el horizonte, listo para encontrar nuevos lugares donde los finales aún eran necesarios. Y así, el Finalizador continuó su camino, dejando detrás un pueblo lleno de finales felices y el eco de cuentos que ahora sí, tenían un final.\r`,time:"222,9",spotifyLink:"https://podcasters.spotify.com/pod/show/lavozdeloscuentos/episodes/El-Regreso-de-El-Finalizador-e2j9dkb/a-ab842k6",date:"11/05/2024"},{order:"80",name:"Antes de las Sombras: La Llamarada del Traga Luces",key:"antes-de-las-sombras-la-llamarada-del-traga-luces",youtube:"E_N09FwolOE",tiktok:"",spotify:"Antes-de-las-Sombras-La-Llamarada-del-Traga-Luces-e2j9euo/a-ab845r3",saga:"el-tragaluces",link:"https://youtu.be/E_N09FwolOE",story:`Hace muchos años, antes de que el Traga Luces fuera conocido por su silueta misteriosa y su sombrero oscuro, existía un hombre llamado Emiliano, cuyo brillo era conocido en todos los rincones del mundo científico. Emiliano era un joven y brillante científico, amante de las estrellas y apasionado por desentrañar los secretos de la luz.\r
+Gregorio, viendo que su trabajo en Veloneblina había llegado a su fin, se despidió de Maribel y los nuevos amigos que había hecho. Con una sonrisa y el corazón lleno de historias, se dirigió hacia el horizonte, listo para encontrar nuevos lugares donde los finales aún eran necesarios. Y así, el Finalizador continuó su camino, dejando detrás un pueblo lleno de finales felices y el eco de cuentos que ahora sí, tenían un final.\r`,time:"222,9",spotifyLink:"https://podcasters.spotify.com/pod/show/lavozdeloscuentos/episodes/El-Regreso-de-El-Finalizador-e2j9dkb/a-ab842k6",date:"11/05/2024"},{order:"80",name:"Antes de las Sombras: La Llamada del Traga Luces",key:"antes-de-las-sombras-la-llamada-del-traga-luces",youtube:"E_N09FwolOE",tiktok:"",spotify:"Antes-de-las-Sombras-La-Llamarada-del-Traga-Luces-e2j9euo/a-ab845r3",saga:"el-tragaluces",link:"https://youtu.be/E_N09FwolOE",story:`Hace muchos años, antes de que el Traga Luces fuera conocido por su silueta misteriosa y su sombrero oscuro, existía un hombre llamado Emiliano, cuyo brillo era conocido en todos los rincones del mundo científico. Emiliano era un joven y brillante científico, amante de las estrellas y apasionado por desentrañar los secretos de la luz.\r
 \r
 En una pequeña ciudad bañada por la luz del sol, Emiliano tenía un laboratorio lleno de tubos de ensayo, lentes de aumento y una vasta colección de espejos de todas formas y tamaños. Su fama no radicaba solo en su inteligencia, sino en su incansable deseo de hacer el bien. Emiliano estaba decidido a crear una fuente de luz que no solo pudiera iluminar los lugares más oscuros del mundo, sino que también fuera eterna y sostenible, para que nadie, ni en las aldeas más remotas, tuviera que temer a la oscuridad de la noche.\r
 \r
@@ -3236,76 +3236,40 @@ La noche se acercaba, y los insectos comenzaron a regresar a sus hogares, satisf
 Con eso, Carlota recogió sus cosas y se dirigió a su hogar bajo una hoja, sintiendo que, a pesar de los fallos, había logrado algo mucho más valioso: la felicidad compartida con sus amigos. Y así, en el cálido resplandor de la luna, Carlota se preparó para soñar con nuevas aventuras y, tal vez, con un nuevo show de magia que, sin duda, sería aún más divertido.
 Y mientras el jardín volvía a su calma nocturna, la pequeña cucaracha aventurera se acurrucó en su cama de hojas, sabiendo que el verdadero encanto de la magia estaba en la alegría y la amistad compartida, y no solo en los trucos que salían bien.
 
-`,time:"419,7",spotifyLink:"https://podcasters.spotify.com/pod/show/lavozdeloscuentos/episodes/El-Show-de-Magia-de-Carlota-Cucaracha-e2n554k/a-abfr8tm",date:"13/08/2024"},{order:"175",name:"El Enigma de Mishi, el Gato Alpinista",key:"el-enigma-de-mishi-el-gato-alpinista",youtube:"",tiktok:"",spotify:"",saga:"",link:"",story:`Me presenté ante Doña Elena, la jefa de la Oficina Central del SDG (Sistema de Distribución de Gatos).
-
-"Tengo un caso especial para ti", me dijo. "Un gato alpinista llamado Mishi ha desaparecido mientras subía a la Montaña del Cielo".
-
-"¿Qué sabemos sobre él?", le pregunté.
-
-"No mucho", respondió Doña Elena. "Pero parece que ha sido secuestrado por un grupo de ladrones que buscan gatos para venderlos en el mercado negro".
-
-Me emocioné con la idea de resolver el caso y decidí investigar.
-
-Comencé a buscar pistas sobre Mishi, pero no había mucho que encontrar. No había testigos ni huellas de los ladrones. Pero tenía una intuición de que algo estaba mal en la montaña.
-
-Me reuní con Juan, un experto en escalada y guía de montañismo, para pedirle su ayuda.
-
-"¿Podemos subir a la Montaña del Cielo?", le pregunté.
-
-"Sí", respondió. "Pero debes saber que es una ascensión peligrosa".
-
-Me emocioné con la idea de subir a la montaña en busca de Mishi. Era un desafío emocionante.
-
-
-Subimos la montaña con Juan, quien me enseñó cómo caminar por el terreno rocoso y cómo usar los instrumentos de escalada. La montaña era impresionante: altas paredes de roca negra y niebla que se elevaba desde abajo.
-
-Después de varias horas de subir, llegamos a un punto en el que la niebla se hacía más espesa. Juan me dijo que éramos cerca del vértice de la montaña, pero no podía ver nada.
-
-"¿Qué pasa si el viento es fuerte?", le pregunté.
-
-"No te preocupes", respondió. "Tengo una linterna para guiarnos".
-
-Pero cuando intentamos avanzar, el viento se volvió demasiado fuerte y la niebla se hizo casi impenetrable.
-
-"¿Qué hacemos?", le pregunté a Juan.
-
-"Tenemos que esperar", respondió. "La niebla pasará pronto".
-
-Esperamos durante lo que pareció una eternidad, pero finalmente, la niebla comenzó a disiparse y vimos algo en la distancia.
-
-"¿Qué es eso?", le pregunté a Juan.
-
-"No lo sé", respondió. "Pero parece un gato".
-
-
-Me emocioné con la idea de que pudiera ser Mishi, pero cuando nos acercamos más, vi que era un gato diferente al de Mishi.
-
-"¿Quién es este gato?", le pregunté a Juan.
-
-"No lo sé", respondió. "Pero parece que está herido".
-
-Me acerqué al gato y lo toqué con suavidad. Estaba muy débil, pero me parecía que estaba vivo.
-
-"Parece que necesitamos ayudarlo", le dije a Juan.
-
-"¡Exacto!", respondió. "Vamos a cuidar de él".
-
-Pero justo cuando estábamos llevando al gato hacia nosotros, escuché un ruido en la distancia.
-
-"¿Qué es eso?", preguntó Juan.
-
-No lo sabíamos, pero pronto descubriríamos que era Mishi, quien había estado siguiendo nuestras huellas durante todo el tiempo.
-
-Mishi se acercó a nosotros con una mirada curiosa en los ojos. Estaba un poco más débil que antes, pero parecía estar bien.
-
-Me emocioné con la idea de haber encontrado a Mishi y decidí llevarlo de regreso a su dueño.
-
-Después de devolver a Mishi a su dueño, recibí una nota de felicitaciones de Doña Elena en la Oficina Central.
-
-"¡Bien hecho, Agente!", decía. "Has demostrado que eres uno de los mejores agentes del SDG".
-
-Me sentí orgulloso de haber resuelto el caso y de haber ayudado a Mishi a volver a casa.
-`,time:"198,9",spotifyLink:"",date:"14/08/2024"}],G=[{order:"1",name:"La Vida de Eloy",key:"la-vida-de-eloy",youtube:"PLzsS-UEHQNA-zzbUZFaTCKX6Rlo7aFxwN",link:"https://www.youtube.com/playlist?list=PLzsS-UEHQNA-zzbUZFaTCKX6Rlo7aFxwN",description:`¡Hola a todos y todas! Bienvenidos a la maravillosa colección de historias de "La vida de Eloy", donde lo imposible se vuelve realidad gracias a nuestro querido abuelo Eloy. Con su carismática sonrisa y su inconfundible sombrero lleno de plumas y medallas de todos los colores, Eloy nos transporta a tiempos y lugares increíbles junto a sus nietos curiosos.\r
+`,time:"419,7",spotifyLink:"https://podcasters.spotify.com/pod/show/lavozdeloscuentos/episodes/El-Show-de-Magia-de-Carlota-Cucaracha-e2n554k/a-abfr8tm",date:"13/08/2024"},{order:"175",name:"El Enigma de Mishi, el Gato Alpinista",key:"el-enigma-de-mishi-el-gato-alpinista",youtube:"",tiktok:"",spotify:"",saga:"sdg",link:"",story:`El cielo estaba cubierto de nubes grises cuando me presenté en la Oficina Central del SDG (Sistema de Distribución de Gatos). Como uno de sus agentes, estaba acostumbrado a resolver casos extraños relacionados con felinos, pero nada me había preparado para el misterio que estaba a punto de enfrentar. Cuando entré, Doña Elena, la amable y siempre sonriente recepcionista, me saludó con una expresión de preocupación inusual.\r
+"¡Buenos días, agente!", dijo, su voz tintineante habitual teñida de inquietud. "Tenemos un caso especial para ti". Me entregó una carpeta, sus manos temblando ligeramente. "Un gato alpinista llamado Mishi ha desaparecido mientras subía a la Montaña del Cielo".\r
+"¿Un gato alpinista?", pregunté, sorprendido y curioso a la vez. "Eso no es algo que escuches todos los días. ¿Qué sabemos sobre él?"\r
+"No mucho", respondió Doña Elena, bajando la voz como si temiera que alguien pudiera escuchar. "Pero parece que ha sido secuestrado por un grupo de ladrones que buscan gatos para venderlos en el mercado negro. Mishi es un gato muy especial, un escalador nato, y su dueño está desesperado por encontrarlo".\r
+Me intrigó la idea de resolver un caso tan peculiar. Gatos perdidos, rescates en techos o árboles, e incluso investigaciones sobre extrañas desapariciones eran mi pan de cada día, pero la idea de un gato alpinista perdido en una montaña mística despertó mi curiosidad y espíritu aventurero. Decidí aceptar el desafío y comenzaba así mi investigación.\r
+Primero, me dirigí al hogar de Mishi para aprender más sobre él. Su dueño, un hombre llamado Don Ernesto, me recibió con los ojos rojos de tanto llorar. En su sala de estar había docenas de fotos enmarcadas de Mishi escalando montañas, explorando cuevas y descansando en picos nevados.\r
+"Mishi es mi compañero de aventuras", me dijo Don Ernesto con la voz entrecortada. "Es un gato fuera de lo común. Desde que era un cachorro, mostraba una habilidad asombrosa para trepar y explorar. No es como los demás gatos... es casi como un espíritu libre atrapado en el cuerpo de un felino. Hace unos días, decidimos escalar la Montaña del Cielo, pero en algún punto del ascenso, se adelantó y lo perdí de vista. Desde entonces, no he sabido nada de él".\r
+Lo que Don Ernesto me dijo me dio una visión más clara de la situación. No se trataba de un gato ordinario, sino de uno con habilidades excepcionales. Sin embargo, sin más pistas, no sabía por dónde comenzar la búsqueda. Decidí que la montaña misma debía tener la clave. La Montaña del Cielo, conocida por sus abruptos acantilados y su clima impredecible, había sido fuente de leyendas durante siglos. Algunos decían que estaba encantada, que espíritus antiguos la habitaban, y que cualquiera que se aventuraba demasiado lejos nunca volvía a ser el mismo.\r
+Sabía que no podía enfrentar ese reto solo, así que busqué la ayuda de Juan, un experimentado guía de montaña y escalador que conocía cada rincón de la Montaña del Cielo. Nos encontramos en un café cercano, donde Juan, un hombre de aspecto robusto y mirada tranquila, escuchó atentamente mi historia.\r
+"¿Podemos subir a la Montaña del Cielo y buscar a Mishi?", le pregunté, sintiendo una mezcla de anticipación y temor.\r
+"Podemos intentarlo", respondió Juan, su voz grave y serena. "Pero debes saber que es una ascensión peligrosa. Esa montaña es impredecible, y el clima puede cambiar en un abrir y cerrar de ojos. Si Mishi sigue ahí arriba, lo encontraremos. Pero debes estar preparado para lo peor".\r
+El día siguiente, al amanecer, nos dirigimos a la base de la montaña. El aire era fresco y cargado de humedad, y una espesa neblina cubría las cimas, dándole a la Montaña del Cielo una apariencia casi irreal. Juan me entregó equipo de escalada, me enseñó cómo usarlo, y comenzamos el ascenso.\r
+La montaña era tan majestuosa como peligrosa. Las paredes de roca negra parecían interminables, y la niebla que se levantaba desde los abismos nos envolvía, creando una sensación de aislamiento total. Mientras subíamos, Juan me contó historias de escaladores que nunca habían regresado, de tormentas repentinas que barrían las laderas y de criaturas misteriosas que algunos decían haber visto.\r
+Después de varias horas de arduo ascenso, alcanzamos una zona donde la niebla se volvió más densa. Juan me informó que estábamos cerca del vértice de la montaña, pero la visibilidad era casi nula. "Este es el punto más peligroso", dijo. "Si el viento se vuelve más fuerte, podríamos perder el camino".\r
+"¿Y si eso pasa?", pregunté, sintiendo un nudo en el estómago.\r
+"Tendremos que esperar", respondió. "La niebla puede ser traicionera, pero tengo una linterna que nos guiará cuando sea seguro avanzar".\r
+Nos sentamos en una pequeña repisa, rodeados de un silencio abrumador, solo roto por el silbido del viento. El tiempo pareció detenerse mientras esperábamos que la niebla se disipara. Finalmente, después de lo que parecieron horas, la niebla comenzó a levantarse lentamente. Fue entonces cuando vi algo en la distancia: una pequeña silueta moviéndose cautelosamente entre las rocas.\r
+"¡Mira!", exclamé. "¡Allí, hay algo!"\r
+Juan entrecerró los ojos y asintió. "Parece un gato, pero no estoy seguro si es Mishi. Vamos a acercarnos con cuidado".\r
+Nos deslizamos por las rocas, avanzando hacia la figura. Mi corazón latía con fuerza, la idea de encontrar a Mishi después de tanta incertidumbre era emocionante. Pero al llegar más cerca, me di cuenta de que era otro gato, no Mishi. Era un gato de pelaje oscuro, con cicatrices que hablaban de una vida difícil, y estaba visiblemente herido.\r
+"¿Quién será?", me pregunté en voz alta.\r
+"No lo sé", respondió Juan con suavidad. "Pero está claro que necesita ayuda".\r
+Me acerqué al gato y, con cuidado, lo recogí en mis brazos. Estaba débil, pero sus ojos aún mostraban una chispa de vida. "Tenemos que ayudarlo", le dije a Juan. "No podemos dejarlo aquí".\r
+"De acuerdo", respondió Juan. "Lo llevaremos con nosotros. Pero debemos tener cuidado, aún no sabemos si Mishi está cerca".\r
+Mientras nos preparábamos para descender con el gato herido, un sonido suave pero distintivo llegó hasta nosotros desde las profundidades de la montaña. Era un maullido, pero no uno cualquiera; era un maullido que parecía expresar alivio, como si estuviera llamando a alguien conocido.\r
+"¿Oíste eso?", pregunté, mi corazón saltando un latido.\r
+"Sí", respondió Juan, con una leve sonrisa. "Creo que es él".\r
+Nos quedamos en silencio, esperando escuchar nuevamente el sonido. Y allí estaba, más cerca esta vez. Mishi, el gato alpinista, emergió de entre las sombras, su pelaje desordenado y su andar cauteloso. Parecía haber pasado por una dura prueba, pero estaba vivo, y eso era todo lo que importaba.\r
+"¡Mishi!", exclamé, aliviado y emocionado al mismo tiempo. "¡Lo logramos, te encontramos!"\r
+Mishi se acercó a nosotros con una curiosidad tranquila en sus ojos. Había sido un largo y difícil camino, pero había encontrado el camino de regreso. Lo recogí con cuidado, y mientras lo sostenía, sentí una profunda satisfacción por haber completado nuestra misión.\r
+El descenso fue mucho más tranquilo, con Mishi y el otro gato a salvo en nuestros brazos. Cuando finalmente regresamos al hogar de Don Ernesto, la emoción en su rostro fue indescriptible. Mishi estaba de vuelta, y el otro gato también encontró un nuevo hogar, uno donde sería cuidado y amado.\r
+Unos días después, recibí una nota de felicitación de la Oficina Central del SDG. "¡Bien hecho, Agente!", decía. "Has demostrado que eres uno de los mejores agentes del SDG. No solo has encontrado a Mishi, sino que también has salvado otra vida en el proceso".\r
+Me sentí orgulloso de lo que habíamos logrado, no solo por haber resuelto el caso, sino por haber ayudado a esos dos gatos a encontrar un lugar seguro. Mientras reflexionaba sobre todo lo que había sucedido, no pude evitar sonreír. El caso de Mishi, el gato alpinista, siempre sería una de las aventuras más emocionantes y gratificantes que había tenido el privilegio de vivir.\r
+`,time:"513,3",spotifyLink:"",date:"14/08/2024"}],G=[{order:"1",name:"La Vida de Eloy",key:"la-vida-de-eloy",youtube:"PLzsS-UEHQNA-zzbUZFaTCKX6Rlo7aFxwN",link:"https://www.youtube.com/playlist?list=PLzsS-UEHQNA-zzbUZFaTCKX6Rlo7aFxwN",description:`¡Hola a todos y todas! Bienvenidos a la maravillosa colección de historias de "La vida de Eloy", donde lo imposible se vuelve realidad gracias a nuestro querido abuelo Eloy. Con su carismática sonrisa y su inconfundible sombrero lleno de plumas y medallas de todos los colores, Eloy nos transporta a tiempos y lugares increíbles junto a sus nietos curiosos.\r
 \r
 Cada noche, alrededor de la chispeante chimenea, Eloy nos narra sus fantásticas aventuras con tal convicción que es imposible no creer que realmente las vivió. En su mundo, la historia cobra vida de una manera asombrosa y siempre está llena de momentos divertidos y sorprendentes`},{order:"2",name:"Llamarada",key:"llamarada",youtube:"PLzsS-UEHQNA8uSXzhvoVvIjDMwnJMEeLE",link:"https://www.youtube.com/playlist?list=PLzsS-UEHQNA8uSXzhvoVvIjDMwnJMEeLE",description:"La saga de Llamarada narra las emocionantes aventuras de una llama con pelaje azul eléctrico y poderes mágicos. En un mundo lleno de criaturas mágicas, Llamarada enfrenta desafíos que ponen a prueba su valentía y determinación. A lo largo de su viaje, se encuentra con seres fantásticos como hadas, sirenas y unicornios, mientras lucha contra fuerzas oscuras que amenazan con robar colores, sueños y alegrías. La serie celebra la amistad, el coraje y la magia, llevándonos a través de mundos llenos de maravillas y misterios."},{order:"3",name:"Luna y la física",key:"luna-y-la-fisica",youtube:"PLzsS-UEHQNA-orn2hgsCP31wv69x7iDAg",link:"https://www.youtube.com/playlist?list=PLzsS-UEHQNA-orn2hgsCP31wv69x7iDAg",description:'Acompaña a Luna en la saga "Luna y la Física", donde esta joven aventurera utiliza su amor por la física para enseñar a los más pequeños conceptos científicos de manera divertida y accesible. Desde su taller secreto donde inventa estrellas hasta desentrañar los misterios de la Isla Cuántica, Luna convierte la ciencia en un mundo mágico lleno de descubrimientos y aprendizaje. Ideal para niños curiosos y futuros científicos.'},{order:"4",name:"SDG",key:"sdg",youtube:"PLzsS-UEHQNA8aUGFmoDtcG12NXmsCVbOz",link:"https://www.youtube.com/playlist?list=PLzsS-UEHQNA8aUGFmoDtcG12NXmsCVbOz",description:'¡Descubre la magia y el misterio con la saga "SDG"! Sumérgete en las emocionantes aventuras del "Sistema de Distribución de Gatos", donde cada misión es una mezcla de desafíos increíbles y sorpresas mágicas. Desde rescatar a un jaguar perdido hasta desentrañar secretos en mansiones abandonadas, nuestros valientes agentes se aseguran de que cada felino encuentre su hogar perfecto. Ideal para amantes de los gatos, la fantasía y los enigmas. Únete al SDG y vive historias inolvidables que te mantendrán al borde de tu asiento.'},{order:"4",name:"Tupi y su Sombrero",key:"tupi-y-su-sombrero",youtube:"PLzsS-UEHQNA8gsUYYpklgooQA5Ad1_Nle",link:"https://www.youtube.com/playlist?list=PLzsS-UEHQNA8gsUYYpklgooQA5Ad1_Nle",description:`¡Prepárate para sumergirte en la encantadora y cómica saga de Tupi, el pequeño hechicero travieso! 🌟
 
