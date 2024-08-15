@@ -69,36 +69,31 @@
   }
   .description-card__image {
     position: relative;
-  
   }
   .description-card__image .v-image {
     position: absolute;
     transform: rotate(25deg);
     margin-left: 16px;
-
   }
 
-    
-      @media (width <= 900px) {
-     .description-card__image {
-          width: 300px;
-          right: 25px;
-      }
+  @media (width <= 900px) {
+    .description-card__image {
+      width: 300px;
+      right: 25px;
     }
-    
-  @media (width <= 600px) {
-     .description-card__image {
-          width: 235px;
-          right: 30px;
-      }
-    }
+  }
 
- 
+  @media (width <= 600px) {
+    .description-card__image {
+      width: 235px;
+      right: 30px;
+    }
+  }
 
   @media (width > 900px) {
     .description-card__image {
-        width: 360px;
-        right: 20px;
+      width: 360px;
+      right: 20px;
     }
   }
 </style>

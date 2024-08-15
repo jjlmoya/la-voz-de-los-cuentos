@@ -38,19 +38,28 @@ export default function useStories() {
     return allStories.value.slice(-n)
   }
 
+  const getTitleSimilarity = (title1, title2) => {
+    const words1 = new Set(title1.toLowerCase().split(/\s+/))
+    const words2 = new Set(title2.toLowerCase().split(/\s+/))
+
+    const intersection = new Set([...words1].filter(word => words2.has(word)))
+    const union = new Set([...words1, ...words2])
+
+    return intersection.size / union.size // Similarity score between 0 and 1
+  }
+
   const getRelatedStories = story => {
     const sameSagaStories = allStories.value.filter(
       entry => entry.saga === story.saga && entry.key !== story.key
     )
-
-    if (sameSagaStories.length < 8) {
-      const remainingSlots = 8 - sameSagaStories.length
+    if (sameSagaStories.length < 10) {
+      const remainingSlots = 10 - sameSagaStories.length
 
       const similarTimeStories = allStories.value
         .filter(
           entry =>
             entry.saga !== story.saga &&
-            Math.abs(entry.time - story.time) <= 2 &&
+            Math.abs(parseInt(entry.time) - parseInt(story.time)) <= 50 &&
             entry.key !== story.key
         )
         .sort(
@@ -61,7 +70,7 @@ export default function useStories() {
       return [...sameSagaStories, ...similarTimeStories]
     }
 
-    return sameSagaStories.slice(0, 8)
+    return sameSagaStories.slice(0, 10)
   }
 
   return {
