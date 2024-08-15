@@ -1,10 +1,26 @@
 [
   {
     "order": "5",
+    "name": "CRT",
+    "key": "crt",
+    "youtube": "",
+    "link": "",
+    "description": "Dive into the thrilling adventures of the \"Cat Recovery Team\" (CRT), where every mission is a blend of incredible challenges and magical surprises. From rescuing a lost jaguar to unraveling secrets in abandoned mansions, our brave agents make sure every feline finds its perfect home. Perfect for cat lovers, fantasy fans, and mystery enthusiasts. Join the CRT and experience unforgettable stories that will keep you on the edge of your seat."
+  },
+  {
+    "order": "6",
     "name": "The Finisher",
     "key": "the-finisher",
     "youtube": "PLW83oZeNwbliQDTHW72BstEAhyRRkqoSU",
     "link": "https://www.youtube.com/playlist?list=PLW83oZeNwbliQDTHW72BstEAhyRRkqoSU",
     "description": "Dive into the saga of \"The Finisher,\" where Gregory, with his unique gift, brings closure to unfinished projects in a city plagued by fears and chaos. By teaching others to overcome their fear of failure, he transforms lives and celebrates each ending as a new beginning. Join Gregory and experience the power of happy endings!"
+  },
+  {
+    "order": "11",
+    "name": "LightEater",
+    "key": "lighteater",
+    "youtube": "PLW83oZeNwblj3yFK4oCFIbkq_js37INme",
+    "link": "https://www.youtube.com/playlist?list=PLW83oZeNwblj3yFK4oCFIbkq_js37INme",
+    "description": "In the saga \"The LightEater,\" follow the mysterious story of Emiliano, a brilliant scientist who invents a device capable of absorbing and storing light. Over time, this invention transforms his life, turning him into the enigmatic LightEater, a figure who roams the streets absorbing light to protect his creation from falling into the wrong hands. Through his adventures, the LightEater seeks redemption and understanding, shedding light on the importance of empathy and human connection."
   }
 ]
