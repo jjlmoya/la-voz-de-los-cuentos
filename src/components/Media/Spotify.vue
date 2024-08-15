@@ -8,7 +8,7 @@
       scrolling="no"
       loading="lazy"
       @load="iframeLoaded"
-      :src="`https://podcasters.spotify.com/pod/show/lavozdeloscuentos/embed/episodes/${spotify}`"
+      :src="`https://podcasters.spotify.com/pod/show/${spotifyID}/embed/episodes/${spotify}`"
     />
     <div v-if="!iframe" class="spotify__loading"></div>
     <div
@@ -19,6 +19,7 @@
 </template>
 
 <script setup>
+  const spotifyID = import.meta.env.PUBLIC_SPOTIFY_USER
   import { ref } from 'vue'
   const iframe = ref(false)
 
