@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "astro dev",
+    "dev:en": "env-cmd -f .env.en astro dev",
     "start": "astro dev",
     "build": "npm run statics && astro build && npm run robots",
     "preview": "astro preview",
@@ -32,6 +33,7 @@
   },
   "devDependencies": {
     "dotenv": "^16.4.5",
+    "env-cmd": "^10.1.0",
     "eslint": "^9.8.0",
     "eslint-define-config": "^2.1.0",
     "eslint-plugin-astro": "^1.2.3",
