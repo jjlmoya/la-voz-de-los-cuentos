@@ -4,10 +4,11 @@ import '../assets/css/fonts.css'
 import '../assets/css/styles.css'
 import CMP from '../components/commons/Legal/CMP.vue'
 const siteName = import.meta.env.PUBLIC_SITE_NAME
+const lang = import.meta.env.PUBLIC_LANG
 const {
   title,
   description,
-  image = '/img/icons/512x512.png',
+  image = `/assets/logo/${lang}.webp`,
   twitterCard = 'summary_large_image',
   type = 'website',
   url = '/',
@@ -15,7 +16,6 @@ const {
 } = Astro.props
 const pageTitle = title ? `${title} | ${siteName}` : { siteName }
 const siteUrl = import.meta.env.PUBLIC_SITE_URL
-const lang = import.meta.env.PUBLIC_LANG
 const gaId = import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID
 const bingValidate = import.meta.env.PUBLIC_BING_VALIDATE
 const fbAppId = import.meta.env.PUBLIC_FB_APP_ID
@@ -28,10 +28,11 @@ const twitterUser = import.meta.env.PUBLIC_TWITTER_USER
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Cache-Control" content="max-age=14400, public" />
-    <link rel="icon" href="/img/icons/32x32.png" sizes="32x32" />
-    <link rel="icon" href="/img/icons/32x32.png" sizes="16x16" />
-    <link rel="icon" href="/img/icons/favicon.ico" />
-    <link rel="apple-touch-icon" href="/img/icons/152x152.png" />
+    <link rel="icon" href={`/img/icons/${lang}/512x512.wbp`} sizes="512x512" />
+    <link rel="icon" href={`/img/icons/${lang}/152x152.wbp`} sizes="152x152" />
+    <link rel="icon" href={`/img/icons/${lang}/32x32.webp`} sizes="32x32" />
+    <link rel="icon" href={`/img/icons/${lang}/16x16.webp`} sizes="16x16" />
+    <link rel="icon" href={`/img/icons/${lang}/favicon.ico`} />
     <meta name="theme-color" content="#4DBA87" />
 
     <!-- Styles -->
@@ -50,7 +51,7 @@ const twitterUser = import.meta.env.PUBLIC_TWITTER_USER
     <meta property="og:title" content={title} />
     <meta property="og:image" content={`${siteUrl}${image}`} />
     <meta property="og:image:alt" content={title} />
-    <meta property="og:url" content={`${siteUrl}${url}/`} />
+    <meta property="og:url" content={`${siteUrl}${url}`} />
     <meta property="og:type" content={type} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="msvalidate.01" content={bingValidate} />

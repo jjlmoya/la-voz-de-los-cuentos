@@ -107,11 +107,11 @@
     isListView.value = !isListView.value
   }
 
-  const parseDate = dateString => {
-    const [day, month, year] = dateString.split('/').map(Number)
+  const parseDate = (dateString) => {
+    const [day, month, year] = dateString.split('/').map(Number);
     // Note: Months are 0-indexed in JavaScript Date (0 = January, 11 = December)
-    return new Date(year, month - 1, day)
-  }
+    return new Date(year, month - 1, day);
+};
 
   const filteredAndSortedStories = computed(() => {
     let filtered = stories
@@ -124,10 +124,6 @@
 
     return filtered.slice().sort((a, b) => {
       let comparison = 0
-      console.log({
-        a: a.date,
-        b: b.date
-      })
       if (sortOrder.value === 'date') {
         comparison = parseDate(a.date) - parseDate(b.date)
       } else if (sortOrder.value === 'time') {

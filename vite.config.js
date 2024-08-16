@@ -3,11 +3,12 @@ import { VitePWA } from 'vite-plugin-pwa';
 import astro from '@astrojs/vite-plugin-astro';
 
 const domain = process.env.PUBLIC_SITE_URL
+const lang = process.env.PUBLIC_LANG
 
 const manifestMap = {
     'https://lavozdeloscuentos.es': {
         registerType: 'autoUpdate',
-        includeAssets: ['favicon.svg', 'robots.txt', 'apple-touch-icon.png'],
+        includeAssets: ['img/icons/es/512x512.webp', 'robots.txt', 'img/icons/es/32x32.webp'],
         manifest: {
             "id": "la-voz-de-los-cuentos",
             "name": "La Voz De los Cuentos",
@@ -34,18 +35,18 @@ const manifestMap = {
             ],
             "icons": [
                 {
-                    "src": "img/icons/512x512.png",
+                    "src": "img/icons/es/512x512.png",
                     "sizes": "512x512",
                     "type": "image/png",
                     "purpose": "any"
                 },
                 {
-                    "src": "img/icons/192x192.png",
+                    "src": "img/icons/es/192x192.png",
                     "sizes": "192x192",
                     "type": "image/png"
                 },
                 {
-                    "src": "img/icons/512x512.png",
+                    "src": "img/icons/es/512x512.png",
                     "sizes": "512x512",
                     "type": "image/png"
                 }
@@ -60,7 +61,7 @@ const manifestMap = {
     },
     'https://buboboo.com': {
         registerType: 'autoUpdate',
-        includeAssets: ['favicon.svg', 'robots.txt', 'apple-touch-icon.png'],
+        includeAssets: ['img/icons/en/512x512.webp', 'robots.txt', 'img/icons/en/32x32.webp'],
         manifest: {
             "id": "buboboo",
             "name": "Bubo Boo",
@@ -87,18 +88,18 @@ const manifestMap = {
             ],
             "icons": [
                 {
-                    "src": "img/icons/512x512.png",
+                    "src": "img/icons/en/512x512.png",
                     "sizes": "512x512",
                     "type": "image/png",
                     "purpose": "any"
                 },
                 {
-                    "src": "img/icons/192x192.png",
+                    "src": "img/icons/en/192x192.png",
                     "sizes": "192x192",
                     "type": "image/png"
                 },
                 {
-                    "src": "img/icons/512x512.png",
+                    "src": "img/icons/en/512x512.png",
                     "sizes": "512x512",
                     "type": "image/png"
                 }

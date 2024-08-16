@@ -4,8 +4,6 @@ import sitemap from "@astrojs/sitemap";
 import dotenv from 'dotenv';
 dotenv.config();
 
-console.log('PUBLIC_SITE_URL:', process.env.PUBLIC_SITE_URL);
-
 export default defineConfig({
     site: process.env.PUBLIC_SITE_URL,
     integrations: [sitemap(), vue({
