@@ -44,7 +44,7 @@
   .card-hero__content {
     position: absolute;
     width: 100%;
-    height: 65%;
+    height: 100%;
     background: linear-gradient(
       to top,
       rgba(242, 242, 242, 1),
