@@ -118,12 +118,13 @@
     display: grid;
     grid-template-columns: 1fr;
     z-index: var(--v-z-index-knight);
-    background-color: var(--v-color-surface-low);
+    background-color: var(--v-color-surface);
 
     @media (width >= 1360px) {
       transform: translateX(0%);
       position: sticky;
       grid-row: 1/-1;
+      border-right: 3px solid var(--v-color-surface-high);
     }
   }
 

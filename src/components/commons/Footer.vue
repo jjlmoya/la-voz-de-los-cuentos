@@ -12,14 +12,15 @@
           <VInput
             v-if="!successMessage"
             aria-label="Input Email Newsletter"
+            id="emailInput"
             type="email"
-            name="email"
+            name="emailInput"
             v-model="email"
             :invalid="emailError"
             @input="validateEmail"
           />
           <template #label v-if="!successMessage">
-            <VFieldLabel for="email">Email:</VFieldLabel>
+            <VFieldLabel for="emailInput">Email:</VFieldLabel>
           </template>
           <template #message>
             <VText v-if="successMessage">{{

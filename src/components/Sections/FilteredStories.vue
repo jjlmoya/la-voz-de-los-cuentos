@@ -88,7 +88,7 @@
 
   const searchQuery = ref('')
   const sortOrder = ref('date')
-  const sortDirection = ref('asc')
+  const sortDirection = ref('desc')
   const isListView = ref(false)
 
   const setSortOrder = order => {
@@ -107,11 +107,11 @@
     isListView.value = !isListView.value
   }
 
-  const parseDate = (dateString) => {
-    const [day, month, year] = dateString.split('/').map(Number);
+  const parseDate = dateString => {
+    const [day, month, year] = dateString.split('/').map(Number)
     // Note: Months are 0-indexed in JavaScript Date (0 = January, 11 = December)
-    return new Date(year, month - 1, day);
-};
+    return new Date(year, month - 1, day)
+  }
 
   const filteredAndSortedStories = computed(() => {
     let filtered = stories
