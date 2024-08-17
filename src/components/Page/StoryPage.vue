@@ -131,10 +131,11 @@
   import { ref, onMounted } from 'vue'
   import useStory from '../../composables/useStory'
 
+  const isFinished = ref(false)
   const storyHTML = ref('')
   const fontSize = ref(16)
 
-  const { html } = useStory(props.story)
+  const { html, getCurrentStatus } = useStory(props.story)
   storyHTML.value = html()
   const printPdf = () => {
     window.print()
@@ -150,6 +151,10 @@
     if (savedFontSize) {
       fontSize.value = parseInt(savedFontSize, 10)
     }
+    setTimeout(() => {
+      const _current = getCurrentStatus()
+      isFinished.value = _current.finished
+    }, 3000)
   })
 </script>
 

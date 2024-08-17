@@ -1,7 +1,11 @@
+
+import account from './account'
 export default {
+  ...account,
   'menu.home': 'Inicio',
   'menu.stories': 'Cuentos',
   'menu.sagas': 'Sagas',
+  'menu.account': 'Cuenta',
   'menu.custom': 'Cuento Personalizado',
   'menu.newsletter': 'NewsLetters',
 

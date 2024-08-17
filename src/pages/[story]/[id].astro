@@ -144,13 +144,13 @@ const schema = JSON.stringify({
       let storyIndex = storiesData.findIndex(s => s.key === storyKey)
 
       if (storyIndex !== -1) {
-        storiesData[storyIndex].spentTime += 30
+        storiesData[storyIndex].spentTime += 10
         if (storiesData[storyIndex].spentTime >= storyTime) {
           storiesData[storyIndex].finished = true
         }
         setStoriesData(storiesData)
       }
     }
-    setInterval(updateTimeSpent, 30000)
+    setInterval(updateTimeSpent, 10000)
   })
 </script>

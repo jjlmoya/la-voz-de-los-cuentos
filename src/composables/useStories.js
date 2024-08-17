@@ -1,5 +1,6 @@
 import { ref } from 'vue'
 import { getStories as _getStories } from '../data'
+import useStory from './useStory'
 const stories = _getStories()
 
 export default function useStories() {
@@ -48,6 +49,16 @@ export default function useStories() {
     return intersection.size / union.size // Similarity score between 0 and 1
   }
 
+  const getCompleteStories = () => stories.filter((entry) => {
+    const { isComplete } = useStory(entry)
+    return isComplete()
+  })
+  const getPendingStories = () => stories.filter((entry) => {
+    const { isComplete } = useStory(entry)
+    return !isComplete()
+  })
+  const getFavoriteStories = () => allStories
+
   const getRelatedStories = story => {
     const sameSagaStories = allStories.value.filter(
       entry => entry.saga === story.saga && entry.key !== story.key
@@ -80,6 +91,9 @@ export default function useStories() {
     getAllStories,
     getStoriesByPage,
     getLastNStories,
-    getRelatedStories
+    getRelatedStories,
+    getCompleteStories,
+    getPendingStories,
+    getFavoriteStories
   }
 }

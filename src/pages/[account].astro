@@ -1,0 +1,26 @@
+---
+import NavLayout from '../layouts/NavLayout.astro'
+import AccountPage from '../components/Page/AccountPage.vue'
+import t from '../translations'
+import { toStories } from '../router'
+export async function getStaticPaths() {
+  const paths = [
+    {
+      params: {
+        account: import.meta.env.PUBLIC_LANG === 'en' ? 'account' : 'cuenta'
+      }
+    }
+  ]
+
+  return paths
+}
+---
+
+<NavLayout
+  title={t('page.account.h1')}
+  description={t('page.account.description')}
+  url={toStories()}
+>
+  <AccountPage client:only />
+
+</NavLayout>

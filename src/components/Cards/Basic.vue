@@ -9,6 +9,9 @@
         :src="`/assets/${isStory ? 'stories' : 'sagas'}/${lang}/${slug}.webp`"
         loading="lazy"
       />
+      <div class="basic-card__progress">
+        <div :style="{width: `${status.current || 0}%`}" class="basic-card__progress-complete"></div>
+      </div>
     </div>
     <div class="basic-card__content">
       <div class="basic-card__article">
@@ -59,10 +62,10 @@
     }
   })
 
-  const { getTime } = useStory({ time: props.time })
+  const { getTime, getCurrentStatus } = useStory({ key: props.slug, time: props.time })
   const renderedTime = getTime()
-
   const cardRef = ref(null)
+  const status = ref({})
   const isIntersecting = ref(false)
 
   let observer
@@ -83,6 +86,8 @@
     if (cardRef.value) {
       observer.observe(cardRef.value)
     }
+
+    status.value = getCurrentStatus()
   })
 
   onUnmounted(() => {
@@ -95,7 +100,6 @@
 <style scoped>
   .basic-card {
     position: relative;
-    display: grid;
     padding-bottom: var(--v-unit-2);
 
     .v-image{
@@ -111,16 +115,29 @@
     }
   }
   .basic-card__image {
-    border-radius: var(--v-unit-2);
-    min-height: 100px;
-    background-color: var(--v-color-surface-dark);
-
+    position: relative;
+    background-color: var(--v-color-surface-high);
   }
 
   .basic-card__img {
     aspect-ratio: 1 / 1;
     opacity: 0;
     animation: fade-in 1s ease-in-out forwards;
+  }
+
+  .basic-card__progress {
+    background-color: var(--v-color-surface-high);
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    bottom: 5px;
+  }
+
+  .basic-card__progress-complete {
+    background-color: var(--v-color-error);
+    height: 5px;
+    transition: width 2s ease-in-out;
+    transition-delay: 2s;
   }
 
   @keyframes fade-in {

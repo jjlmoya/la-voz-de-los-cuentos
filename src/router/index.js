@@ -8,6 +8,7 @@ const toSaga = slug => `/saga/${slug}/`
 const toNewsLetters = () => `/newsletters/`
 const toNewsLetter = slug => `/newsletter/${slug}/`
 
+const toAccount = () => `/${lang === 'es' ? 'cuenta' : 'account'}/`
 const toCustomStory = () =>
   lang === 'es' ? `/personalizado/cuento/` : '/custom/story/'
 
@@ -18,5 +19,6 @@ export {
   toSagas,
   toNewsLetter,
   toNewsLetters,
-  toCustomStory
+  toCustomStory,
+  toAccount
 }
