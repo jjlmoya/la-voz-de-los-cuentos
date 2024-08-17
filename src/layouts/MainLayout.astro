@@ -120,6 +120,21 @@ const twitterUser = import.meta.env.PUBLIC_TWITTER_USER
       )
     }
 
+    {lang === 'es' ? 
+    <style>
+      :root {
+        --v-blue-hue: 235;
+        --v-blue-saturation: 100%;
+      }
+    </style> 
+    : 
+    <style>
+      :root {
+        --v-blue-hue: 150;
+        --v-blue-saturation: 25%;
+      }
+    </style>
+    }
     <style>
       :root {
         /* Pure */
@@ -211,8 +226,6 @@ const twitterUser = import.meta.env.PUBLIC_TWITTER_USER
         );
 
         /* Blue */
-        --v-blue-hue: 235;
-        --v-blue-saturation: 100%;
         --v-blue-16: hsl(var(--v-blue-hue) var(--v-blue-saturation) 16%);
         --v-blue-62: hsl(var(--v-blue-hue) var(--v-blue-saturation) 62%);
         --v-blue-72: hsl(var(--v-blue-hue) var(--v-blue-saturation) 72%);

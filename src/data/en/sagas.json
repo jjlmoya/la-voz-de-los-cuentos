@@ -1,5 +1,13 @@
 [
   {
+    "order": "4",
+    "name": "Luna and Physics",
+    "key": "luna-and-physics",
+    "youtube": "PLW83oZeNwblgdZI5iP8kpEfuuOKA30omb",
+    "link": "https://www.youtube.com/playlist?list=PLW83oZeNwblgdZI5iP8kpEfuuOKA30omb",
+    "description": "Join Luna in the series Luna and Physics, where this young adventurer uses her love for physics to teach young children scientific concepts in a fun and accessible way. Luna turns science into a magical world full of discoveries and learning. Ideal for curious kids and future scientists."
+  },
+  {
     "order": "5",
     "name": "CRT",
     "key": "crt",
