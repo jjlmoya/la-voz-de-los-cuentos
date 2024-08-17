@@ -213,8 +213,9 @@
   }
 
   .footer-links {
-    font-size: 12px;
+    font-size: 16px;
     display: grid;
+    grid-gap: var(--v-unit-1);
     align-items: center;
   }
 
