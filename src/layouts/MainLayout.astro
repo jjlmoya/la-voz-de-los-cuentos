@@ -2,9 +2,13 @@
 import '@overgaming/vicius/styles'
 import '../assets/css/fonts.css'
 import '../assets/css/styles.css'
+import '../assets/css/theme.css'
+
+
 import CMP from '../components/commons/Legal/CMP.vue'
 const siteName = import.meta.env.PUBLIC_SITE_NAME
 const lang = import.meta.env.PUBLIC_LANG
+
 const {
   title,
   description,
@@ -22,7 +26,7 @@ const fbAppId = import.meta.env.PUBLIC_FB_APP_ID
 const twitterUser = import.meta.env.PUBLIC_TWITTER_USER
 ---
 
-<html lang={lang}>
+<html lang={lang} class={`theme--${lang}`}>
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -64,6 +68,7 @@ const twitterUser = import.meta.env.PUBLIC_TWITTER_USER
     <meta property="twitter:description" content={description} />
     <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
     ></script>
+  
     <script>
       ;(function () {
         const isProduction = window.location.hostname !== 'localhost'
@@ -119,198 +124,6 @@ const twitterUser = import.meta.env.PUBLIC_TWITTER_USER
         ''
       )
     }
-
-    {lang === 'es' ? 
-    <style>
-      :root {
-        --v-blue-hue: 235;
-        --v-blue-saturation: 100%;
-      }
-    </style> 
-    : 
-    <style>
-      :root {
-        --v-blue-hue: 150;
-        --v-blue-saturation: 25%;
-      }
-    </style>
-    }
-    <style>
-      :root {
-        /* Pure */
-        --v-pure-white: hsl(0 0% 100%);
-        --v-pure-black: hsl(0 0% 0%);
-
-        /* Shade */
-        --v-shade-hue: 0; /* HSL hue for white shades */
-        --v-shade-saturation: 0%; /* No saturation for shades of white */
-        --v-shade-0: hsl(var(--v-shade-hue) var(--v-shade-saturation) 100%);
-        --v-shade-4: hsl(var(--v-shade-hue) var(--v-shade-saturation) 100%);
-        --v-shade-8: hsl(var(--v-shade-hue) var(--v-shade-saturation) 100%);
-        --v-shade-12: hsl(var(--v-shade-hue) var(--v-shade-saturation) 99%);
-        --v-shade-16: hsl(var(--v-shade-hue) var(--v-shade-saturation) 98%);
-        --v-shade-20: hsl(var(--v-shade-hue) var(--v-shade-saturation) 97%);
-        --v-shade-24: hsl(var(--v-shade-hue) var(--v-shade-saturation) 96%);
-        --v-shade-28: hsl(var(--v-shade-hue) var(--v-shade-saturation) 95%);
-        --v-shade-32: hsl(var(--v-shade-hue) var(--v-shade-saturation) 90%);
-        --v-shade-36: hsl(var(--v-shade-hue) var(--v-shade-saturation) 85%);
-        --v-shade-40: hsl(var(--v-shade-hue) var(--v-shade-saturation) 80%);
-        --v-shade-44: hsl(var(--v-shade-hue) var(--v-shade-saturation) 75%);
-        --v-shade-48: hsl(var(--v-shade-hue) var(--v-shade-saturation) 70%);
-        --v-shade-52: hsl(var(--v-shade-hue) var(--v-shade-saturation) 65%);
-        --v-shade-56: hsl(var(--v-shade-hue) var(--v-shade-saturation) 60%);
-        --v-shade-60: hsl(var(--v-shade-hue) var(--v-shade-saturation) 55%);
-        --v-shade-64: hsl(var(--v-shade-hue) var(--v-shade-saturation) 50%);
-        --v-shade-68: hsl(var(--v-shade-hue) var(--v-shade-saturation) 45%);
-        --v-shade-72: hsl(var(--v-shade-hue) var(--v-shade-saturation) 40%);
-        --v-shade-76: hsl(var(--v-shade-hue) var(--v-shade-saturation) 35%);
-        --v-shade-80: hsl(var(--v-shade-hue) var(--v-shade-saturation) 30%);
-        --v-shade-84: hsl(var(--v-shade-hue) var(--v-shade-saturation) 25%);
-        --v-shade-88: hsl(var(--v-shade-hue) var(--v-shade-saturation) 20%);
-        --v-shade-92: hsl(var(--v-shade-hue) var(--v-shade-saturation) 15%);
-        --v-shade-96: hsl(var(--v-shade-hue) var(--v-shade-saturation) 10%);
-        --v-shade-100: hsl(var(--v-shade-hue) var(--v-shade-saturation) 0%);
-
-        --v-shade-mod-12: hsl(
-          var(--v-shade-hue) var(--v-shade-saturation) 88% / 0.12
-        );
-        --v-shade-mod-16: hsl(
-          var(--v-shade-hue) var(--v-shade-saturation) 84% / 0.16
-        );
-        --v-shade-mod-20: hsl(
-          var(--v-shade-hue) var(--v-shade-saturation) 80% / 0.2
-        );
-        --v-shade-mod-24: hsl(
-          var(--v-shade-hue) var(--v-shade-saturation) 76% / 0.24
-        );
-        --v-shade-mod-28: hsl(
-          var(--v-shade-hue) var(--v-shade-saturation) 72% / 0.28
-        );
-        --v-shade-mod-40: hsl(
-          var(--v-shade-hue) var(--v-shade-saturation) 60% / 0.4
-        );
-        --v-shade-mod-60: hsl(
-          var(--v-shade-hue) var(--v-shade-saturation) 40% / 0.6
-        );
-        --v-shade-mod-80: hsl(
-          var(--v-shade-hue) var(--v-shade-saturation) 20% / 0.8
-        );
-
-        --v-shade-mod-alt-12: hsl(
-          var(--v-shade-hue) var(--v-shade-saturation) 2% / 0.12
-        );
-        --v-shade-mod-alt-16: hsl(
-          var(--v-shade-hue) var(--v-shade-saturation) 2% / 0.16
-        );
-        --v-shade-mod-alt-24: hsl(
-          var(--v-shade-hue) var(--v-shade-saturation) 2% / 0.24
-        );
-        --v-shade-mod-alt-20: hsl(
-          var(--v-shade-hue) var(--v-shade-saturation) 80% / 0.2
-        );
-        --v-shade-mod-alt-28: hsl(
-          var(--v-shade-hue) var(--v-shade-saturation) 2% / 0.28
-        );
-
-        --v-on-shade-56: hsl(
-          var(--v-shade-hue) var(--v-shade-saturation) 20% / 0.56
-        );
-        --v-on-shade-76: hsl(
-          var(--v-shade-hue) var(--v-shade-saturation) 0% / 0.98
-        );
-        --v-on-shade-96: hsl(
-          var(--v-shade-hue) var(--v-shade-saturation) 2% / 0.96
-        );
-        --v-on-shade-100: hsl(
-          var(--v-shade-hue) var(--v-shade-saturation) 0% / 1
-        );
-
-        /* Blue */
-        --v-blue-16: hsl(var(--v-blue-hue) var(--v-blue-saturation) 16%);
-        --v-blue-62: hsl(var(--v-blue-hue) var(--v-blue-saturation) 62%);
-        --v-blue-72: hsl(var(--v-blue-hue) var(--v-blue-saturation) 72%);
-
-        /* Red */
-        --v-red-hue: 347;
-        --v-red-saturation: 72%;
-        --v-red-72: hsl(var(--v-red-hue) var(--v-red-saturation) 72%);
-
-        /* Yellow */
-        --v-yellow-hue: 48;
-        --v-yellow-saturation: 72%;
-        --v-yellow-72: hsl(var(--v-yellow-hue) var(--v-yellow-saturation) 72%);
-
-        /* Green */
-        --v-green-hue: 148;
-        --v-green-saturation: 72%;
-        --v-green-72: hsl(var(--v-green-hue) var(--v-green-saturation) 72%);
-
-        /* Surface */
-        --v-color-surface-floating: var(--v-shade-12);
-
-        --v-color-surface-lowest: var(--v-shade-20);
-        --v-color-surface-low: var(--v-shade-24);
-        --v-color-surface: var(--v-shade-28);
-        --v-color-surface-high: var(--v-shade-32);
-        --v-color-surface-highest: var(--v-shade-36);
-
-        --v-color-surface-mod-lowest: var(--v-shade-mod-12);
-        --v-color-surface-mod-low: var(--v-shade-mod-16);
-        --v-color-surface-mod: var(--v-shade-mod-20);
-        --v-color-surface-mod-high: var(--v-shade-mod-24);
-        --v-color-surface-mod-highest: var(--v-shade-mod-28);
-
-        --v-color-surface-mod-alt-lowest: var(--v-shade-mod-alt-12);
-        --v-color-surface-mod-alt-low: var(--v-shade-mod-alt-16);
-        --v-color-surface-mod-alt: var(--v-shade-mod-alt-20);
-        --v-color-surface-mod-alt-high: var(--v-shade-mod-alt-24);
-        --v-color-surface-mod-alt-highest: var(--v-shade-mod-alt-28);
-
-        --v-color-on-surface-low: var(--v-on-shade-56);
-        --v-color-on-surface: var(--v-on-shade-76);
-        --v-color-on-surface-high: var(--v-on-shade-100);
-
-        --v-color-outline-low: var(--v-shade-mod-20);
-        --v-color-outline: var(--v-shade-mod-40);
-        --v-color-outline-high: var(--v-shade-mod-60);
-        --v-color-outline-highest: var(--v-shade-mod-80);
-
-        --v-color-elevation: var(--v-shade-12);
-        --v-color-elevation-stroke: color-mix(
-          in hsl,
-          var(--v-color-elevation),
-          transparent 80%
-        );
-        --v-color-elevation-low: color-mix(
-          in hsl,
-          var(--v-color-elevation),
-          transparent 80%
-        );
-        --v-color-elevation: color-mix(
-          in hsl,
-          var(--v-color-elevation),
-          transparent 84%
-        );
-        --v-color-elevation-high: color-mix(
-          in hsl,
-          var(--v-color-elevation),
-          transparent 76%
-        );
-
-        --v-color-skeleton: var(--v-color-surface-mod-alt);
-
-        --v-color-backdrop: hsl(0 0% 12% / 0.95);
-
-        --v-color-overlay: hsl(0 0% 16%);
-
-        --v-color-primary: var(--v-blue-62);
-        --v-color-on-primary: var(--v-blue-16);
-
-        --v-color-error: var(--v-red-72);
-        --v-color-info: var(--v-blue-72);
-        --v-color-warning: var(--v-yellow-72);
-        --v-color-success: var(--v-green-72);
-      }
-    </style>
   </body>
+  
 </html>

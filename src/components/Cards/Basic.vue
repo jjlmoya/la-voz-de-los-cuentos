@@ -96,21 +96,25 @@
   .basic-card {
     position: relative;
     display: grid;
-    background-color: var(--v-color-surface-mod);
-    border-radius: var(--v-unit-4);
+    padding-bottom: var(--v-unit-2);
+
+    .v-image{
+          border-radius: var(--v-unit-3);
+    }
   }
   .basic-card__content {
     text-align: center;
 
     .v-text {
-      line-height: 1;
+      line-height: 1.2;
+      padding-bottom: var(--v-unit-05)
     }
   }
   .basic-card__image {
     border-radius: var(--v-unit-2);
-    overflow: hidden;
     min-height: 100px;
     background-color: var(--v-color-surface-dark);
+
   }
 
   .basic-card__img {

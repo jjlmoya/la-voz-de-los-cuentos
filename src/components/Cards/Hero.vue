@@ -1,20 +1,20 @@
 <template>
-  <article class="card-hero">
+  <a class="card-hero" :href="toStory(story.key)" >
     <VImage
       aspectRatio="16/9"
       :src="`/assets/stories/${lang}/${story.key}.webp`"
     ></VImage>
     <div class="card-hero__content">
-      <a class="card-hero__article" :href="toStory(story.key)">
-        <VText class="card-hero__title" variant="header">{{
+      <div class="card-hero__article" >
+        <VText class="card-hero__title" color="primary" variant="header">{{
           story.name
         }}</VText>
         <VText max-lines="3" variant="label">
           <div v-html="first"></div>
         </VText>
-      </a>
+      </div>
     </div>
-  </article>
+  </a>
 </template>
 
 <script setup>
@@ -33,20 +33,24 @@
 <style scoped>
   .card-hero {
     position: relative;
-    border-radius: 16px;
     overflow: hidden;
+    .v-image{
+      border-radius: var(--v-unit-3);
+    }
   }
+
+  
 
   .card-hero__content {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 65%;
     background: linear-gradient(
       to top,
-      rgba(255, 255, 255, 0.9),
-      rgba(255, 255, 255, 0.3)
+      rgba(242, 242, 242, 1),
+      rgba(242, 242, 242, 0)
     );
-    top: 0;
+    bottom: 0;
     left: 0;
     display: grid;
     align-items: end;
@@ -58,6 +62,6 @@
   }
   .card-hero__title {
     font-size: 24px;
-    text-shadow: 0px 0px 10px white;
+    text-shadow: 0px 0px 50px white;
   }
 </style>
