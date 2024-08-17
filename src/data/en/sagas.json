@@ -1,5 +1,13 @@
 [
   {
+    "order": "1",
+    "name": "The Life of Eloy",
+    "key": "the-life-of-eloy",
+    "youtube": "",
+    "link": "",
+    "description": "Hello everyone! Welcome to the wonderful collection of stories from \"The Life of Eloy,\" where the impossible becomes reality thanks to our beloved Grandpa Eloy. With his charismatic smile and his unmistakable hat full of feathers and medals of every color, Eloy transports us to incredible times and places with his curious grandkids.\n\nEach night, around the crackling fireplace, Eloy recounts his fantastic adventures with such conviction that it's impossible not to believe he actually lived them. In his world, history comes alive in an amazing way and is always filled with fun and surprising moments."
+  },
+  {
     "order": "4",
     "name": "Luna and Physics",
     "key": "luna-and-physics",
