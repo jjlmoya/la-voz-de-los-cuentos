@@ -5,7 +5,7 @@
         :alt="`Imagen de ${title}`"
         v-if="isIntersecting"
         class="basic-card__img"
-        :aspectRatio="1 / 1"
+        :aspectRatio="1/1"
         :src="`/assets/${isStory ? 'stories' : 'sagas'}/${lang}/${slug}.webp`"
         loading="lazy"
       />
