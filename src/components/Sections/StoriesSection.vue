@@ -19,7 +19,6 @@
       default: []
     }
   })
-
 </script>
 
 <style scoped>

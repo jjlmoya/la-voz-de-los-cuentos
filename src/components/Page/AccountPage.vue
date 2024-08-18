@@ -2,7 +2,7 @@
   <VContainer size="xl" class="account-page">
     <div class="account-page__content">
       <div class="account-page__title">
-          <VText as="h1" variant="header">{{ t('page.account.h1') }}</VText>
+        <VText as="h1" variant="header">{{ t('page.account.h1') }}</VText>
       </div>
       <UserResume />
     </div>

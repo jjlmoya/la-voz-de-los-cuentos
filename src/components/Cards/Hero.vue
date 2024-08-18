@@ -1,11 +1,11 @@
 <template>
-  <a class="card-hero" :href="toStory(story.key)" >
+  <a class="card-hero" :href="toStory(story.key)">
     <VImage
       aspectRatio="16/9"
       :src="`/assets/stories/${lang}/${story.key}.webp`"
     ></VImage>
     <div class="card-hero__content">
-      <div class="card-hero__article" >
+      <div class="card-hero__article">
         <VText class="card-hero__title" color="primary" variant="header">{{
           story.name
         }}</VText>
@@ -34,12 +34,10 @@
   .card-hero {
     position: relative;
     overflow: hidden;
-    .v-image{
+    .v-image {
       border-radius: var(--v-unit-3);
     }
   }
-
-  
 
   .card-hero__content {
     position: absolute;

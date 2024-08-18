@@ -5,12 +5,15 @@
         :alt="`Imagen de ${title}`"
         v-if="isIntersecting"
         class="basic-card__img"
-        :aspectRatio="1/1"
+        :aspectRatio="1 / 1"
         :src="`/assets/${isStory ? 'stories' : 'sagas'}/${lang}/${slug}.webp`"
         loading="lazy"
       />
       <div class="basic-card__progress">
-        <div :style="{width: `${status.current || 0}%`}" class="basic-card__progress-complete"></div>
+        <div
+          :style="{ width: `${status.current || 0}%` }"
+          class="basic-card__progress-complete"
+        ></div>
       </div>
     </div>
     <div class="basic-card__content">
@@ -62,7 +65,10 @@
     }
   })
 
-  const { getTime, getCurrentStatus } = useStory({ key: props.slug, time: props.time })
+  const { getTime, getCurrentStatus } = useStory({
+    key: props.slug,
+    time: props.time
+  })
   const renderedTime = getTime()
   const cardRef = ref(null)
   const status = ref({})
@@ -102,8 +108,8 @@
     position: relative;
     padding-bottom: var(--v-unit-2);
 
-    .v-image{
-          border-radius: var(--v-unit-3);
+    .v-image {
+      border-radius: var(--v-unit-3);
     }
   }
   .basic-card__content {
@@ -111,7 +117,7 @@
 
     .v-text {
       line-height: 1.2;
-      padding-bottom: var(--v-unit-05)
+      padding-bottom: var(--v-unit-05);
     }
   }
   .basic-card__image {

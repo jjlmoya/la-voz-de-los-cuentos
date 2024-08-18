@@ -49,14 +49,16 @@ export default function useStories() {
     return intersection.size / union.size // Similarity score between 0 and 1
   }
 
-  const getCompleteStories = () => stories.filter((entry) => {
-    const { isComplete } = useStory(entry)
-    return isComplete()
-  })
-  const getPendingStories = () => stories.filter((entry) => {
-    const { isComplete } = useStory(entry)
-    return !isComplete()
-  })
+  const getCompleteStories = () =>
+    stories.filter(entry => {
+      const { isComplete } = useStory(entry)
+      return isComplete()
+    })
+  const getPendingStories = () =>
+    stories.filter(entry => {
+      const { isComplete } = useStory(entry)
+      return !isComplete()
+    })
   const getFavoriteStories = () => []
 
   const getRelatedStories = story => {

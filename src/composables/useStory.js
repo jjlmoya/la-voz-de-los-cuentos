@@ -21,8 +21,12 @@ export default function useStory(story) {
 
   const getCurrentStatus = () => {
     try {
-      const state = JSON.parse(localStorage.getItem('storiesData')).find(entry => entry.key === story.key)
-      const _currentPercent = Math.ceil(state.spentTime / state.totalTime * 100)
+      const state = JSON.parse(localStorage.getItem('storiesData')).find(
+        entry => entry.key === story.key
+      )
+      const _currentPercent = Math.ceil(
+        (state.spentTime / state.totalTime) * 100
+      )
       const current = _currentPercent > 100 ? 100 : _currentPercent
 
       return {
@@ -32,7 +36,6 @@ export default function useStory(story) {
     } catch (e) {
       return {}
     }
-    
   }
 
   const isComplete = () => getCurrentStatus().current >= 100
