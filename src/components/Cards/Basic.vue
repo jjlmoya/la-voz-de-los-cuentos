@@ -116,7 +116,6 @@
   }
   .basic-card__image {
     position: relative;
-    background-color: var(--v-color-surface-high);
   }
 
   .basic-card__img {
