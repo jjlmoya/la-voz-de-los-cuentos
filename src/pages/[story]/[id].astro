@@ -77,7 +77,7 @@ const schema = JSON.stringify({
     '@type': 'AudioObject',
     name: `${story.name} - Audio`,
     description: `${firstParagraph}`,
-    thumbnailUrl: `${siteUrl}/assets/stories/${lang}${story.key}.webp`,
+    thumbnailUrl: `${siteUrl}/assets/stories/${lang}/${story.key}.webp`,
     uploadDate: formatDate(story.date),
     contentUrl: story.spotifyLink,
     embedUrl: story.spotifyLink
