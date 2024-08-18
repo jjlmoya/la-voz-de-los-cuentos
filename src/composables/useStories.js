@@ -57,7 +57,7 @@ export default function useStories() {
     const { isComplete } = useStory(entry)
     return !isComplete()
   })
-  const getFavoriteStories = () => allStories
+  const getFavoriteStories = () => []
 
   const getRelatedStories = story => {
     const sameSagaStories = allStories.value.filter(

@@ -23,7 +23,6 @@
     import { ref } from 'vue'
     import t from '../../translations'
     import UserResumeEntry from './UserResumeEntry.vue'
-    import SectionDefault from '../Sections/Default.vue'
     import StoriesSection from '../Sections/StoriesSection.vue'
     import useStories from '../../composables/useStories'
 
@@ -68,7 +67,7 @@
 }
 .user-resume__content {
     display: grid;
-    grid-gap: var(--v-unit-4);
+    grid-gap: var(--v-unit-2);
 
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;

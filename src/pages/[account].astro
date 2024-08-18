@@ -21,7 +21,5 @@ export async function getStaticPaths() {
   description={t('page.account.description')}
   url={toStories()}
 >
-  <client:only> 
     <AccountPage client:load />
-  </client:only>
 </NavLayout>
