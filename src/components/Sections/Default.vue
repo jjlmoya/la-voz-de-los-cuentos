@@ -5,6 +5,7 @@
         as="h2"
         class="section-default__title"
         variant="header"
+        color="high"
         v-if="title"
       >
         {{ title }}

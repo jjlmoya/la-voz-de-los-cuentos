@@ -2,7 +2,7 @@
   <a class="description-card" :href="toSaga(slug)">
     <div class="description-card__wrapper">
       <div class="description-card__content">
-        <VText variant="header">{{ title }}</VText>
+        <VText variant="header" color="high">{{ title }}</VText>
         <VText max-lines="4" variant="body">
           <div v-html="content"></div>
         </VText>

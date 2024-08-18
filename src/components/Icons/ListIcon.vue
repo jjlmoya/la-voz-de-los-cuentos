@@ -49,7 +49,7 @@
 <style scoped>
   .list-icon {
     height: 25px;
-    fill: var(--v-color-on-surface);
+    fill: var(--v-color-text);
   }
   .list-icon--active {
     fill: var(--v-color-primary);

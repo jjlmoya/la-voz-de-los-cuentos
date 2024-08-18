@@ -1,6 +1,6 @@
 <template>
   <VContainer size="xl" class="stories-page">
-    <VText class="stories-page__title" as="h1" variant="header">{{
+    <VText class="stories-page__title" as="h1" variant="header" color="high">{{
       t('page.stories.h1')
     }}</VText>
     <slot />

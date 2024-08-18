@@ -15,7 +15,7 @@
         @click="setSortOrder('date')"
       >
         {{ t('page.stories.order.date') }}
-        <VText v-if="sortOrder === 'date'">
+        <VText v-if="sortOrder === 'date'" color="high">
           {{ sortDirection === 'asc' ? '▲' : '▼' }}
         </VText>
       </VButton>
@@ -25,7 +25,7 @@
         @click="setSortOrder('time')"
       >
         {{ t('page.stories.order.duration') }}
-        <VText v-if="sortOrder === 'time'">
+        <VText v-if="sortOrder === 'time'" color="high">
           {{ sortDirection === 'asc' ? '▲' : '▼' }}
         </VText>
       </VButton>
@@ -35,7 +35,7 @@
         @click="setSortOrder('name')"
       >
         {{ t('page.stories.order.name') }}
-        <VText v-if="sortOrder === 'name'">
+        <VText v-if="sortOrder === 'name'" color="high">
           {{ sortDirection === 'asc' ? '▲' : '▼' }}
         </VText>
       </VButton>

@@ -70,6 +70,7 @@
       <VText
         as="h1"
         variant="header"
+        color="high"
         :style="{
           fontSize: `${fontSize}px`,
           'line-height': `${fontSize >= 20 ? '1.5' : '1'}`
