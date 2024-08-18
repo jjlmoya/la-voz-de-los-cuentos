@@ -37,7 +37,7 @@
 </template>
 
 <script setup>
-  import { ref } from 'vue'
+  import { ref, onMounted } from 'vue'
   import t from '../../translations'
   import { VButton, VContainer, VText } from '@overgaming/vicius'
   import FacebookIcon from '../Icons/Social/Facebook.vue'
@@ -57,7 +57,6 @@
   })
   const url = ref(props.url)
   const title = ref(props.title)
-
   function shareOnFacebook() {
     const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url.value}`
     window.open(shareUrl, '_blank')
@@ -77,6 +76,10 @@
     const shareUrl = `https://wa.me/?text=${title.value}%20${url.value}`
     window.open(shareUrl, '_blank')
   }
+
+  onMounted(() => {
+    url.value = window.location.href
+  })
 </script>
 
 <style scoped>
