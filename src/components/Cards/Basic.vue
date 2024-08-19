@@ -29,7 +29,7 @@
         </VText>
       </div>
     </div>
-    <VText variant="body" v-if="time" class="basic-card__time">
+    <VText v-if="time" class="basic-card__time">
       {{ renderedTime }}
     </VText>
   </a>
@@ -164,7 +164,7 @@
     border: 4px solid var(--v-color-primary);
     border-left: none;
     border-bottom: none;
-    background-color: var(--v-color-surface);
+    background-color: var(--v-color-surface-high);
     border-radius: var(--v-unit-2) 0 var(--v-unit-2) 0;
   }
 </style>
