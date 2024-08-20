@@ -12,7 +12,7 @@
         >{{ t('cmp.accept') }}</VButton
       >
       <VButton
-        variant="text"
+        variant="ghost"
         size="xs"
         @click="rejectCookies"
         class="cookie-consent-reject-button"
