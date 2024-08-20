@@ -10,7 +10,7 @@
     </VContainer>
     <VContainer class="sections-filtered__bar" size="xs">
       <VButton
-        variant="text"
+        variant="ghost"
         :class="{ active: sortOrder === 'date' }"
         @click="setSortOrder('date')"
       >
@@ -20,7 +20,7 @@
         </VText>
       </VButton>
       <VButton
-        variant="text"
+        variant="ghost"
         :class="{ active: sortOrder === 'time' }"
         @click="setSortOrder('time')"
       >
@@ -30,7 +30,7 @@
         </VText>
       </VButton>
       <VButton
-        variant="text"
+        variant="ghost"
         :class="{ active: sortOrder === 'name' }"
         @click="setSortOrder('name')"
       >
@@ -41,7 +41,7 @@
       </VButton>
       <VButton
         :aria-label="t('page.stories.changeview')"
-        variant="text"
+        variant="ghost"
         :class="{ active: isListView }"
         @click="toggleViewMode"
       >
