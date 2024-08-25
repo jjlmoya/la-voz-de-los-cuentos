@@ -49,7 +49,7 @@
       rgba(242, 242, 242, 1),
       rgba(242, 242, 242, 0)
     );
-    t: 0;
+    top: 0;
     left: 0;
     display: grid;
     align-items: end;
