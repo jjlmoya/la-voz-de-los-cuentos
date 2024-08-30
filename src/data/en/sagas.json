@@ -48,6 +48,14 @@
     "description": "Discover the exciting adventures of Charlotte Cockroach, a fearless explorer who transforms her tiny world with bravery and curiosity. From solving mysteries in a secret-filled basement to facing a magical mud rain, Charlotte shows that with a little courage, any cockroach can be a hero. Join Charlotte on her unforgettable and magical adventures!"
   },
   {
+    "order": "7",
+    "name": "Paco the Dreamy Peanut",
+    "key": "paco-the-dreamy-peanut",
+    "youtube": "",
+    "link": "",
+    "description": ""
+  },
+  {
     "order": "8",
     "name": "Legends",
     "key": "legends",
