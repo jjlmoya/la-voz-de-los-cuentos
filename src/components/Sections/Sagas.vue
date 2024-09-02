@@ -14,7 +14,7 @@
 <script setup>
   const props = defineProps({
     amount: {
-      type: Number,
+      type: [String, Number],
       default: 7
     }
   })

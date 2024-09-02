@@ -19,9 +19,7 @@ export default function useSagas() {
     return allSagas.value[randomIndex]
   }
 
-  const getAllSagas = () => {
-    return allSagas.value
-  }
+  const getAllSagas = () => allSagas.value
 
   const getSagasByPage = (pageNumber, pageSize) => {
     const startIndex = (pageNumber - 1) * pageSize
