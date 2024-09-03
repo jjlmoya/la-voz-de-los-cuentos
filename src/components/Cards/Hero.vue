@@ -1,10 +1,12 @@
 <template>
-  <a class="card-hero" :href="toStory(story.key)">
-    <VImage
-      aspectRatio="16/9"
-      :src="`/assets/stories/${lang}/${story.key}.webp`"
-    ></VImage>
-    <div class="card-hero__content">
+  <VBanner as="a" class="card-hero" :href="toStory(story.key)">
+    <template #image>
+      <VImage
+        aspectRatio="16/9"
+        :src="`/assets/stories/${lang}/${story.key}.webp`"
+      ></VImage>
+    </template>
+    <VBannerContent class="card-hero__content">
       <div class="card-hero__article">
         <VText class="card-hero__title" color="primary" variant="header">{{
           story.name
@@ -13,15 +15,15 @@
           <div v-html="first"></div>
         </VText>
       </div>
-    </div>
-  </a>
+    </VBannerContent>
+  </VBanner>
 </template>
 
 <script setup>
   import { toStory } from '../../router'
   import useStories from '../../composables/useStories'
   import useStory from '../../composables/useStory'
-  import { VImage, VText } from '@overgaming/vicius'
+  import { VImage, VText, VBanner, VBannerContent } from '@overgaming/vicius'
   const lang = import.meta.env.PUBLIC_LANG
 
   const { getLastStory } = useStories()
@@ -46,7 +48,9 @@
     height: 100%;
     background: linear-gradient(
       to top,
-      rgba(242, 242, 242, 1),
+      rgba(242, 242, 242, 0.95),
+      rgba(242, 242, 242, 0.8),
+      rgba(242, 242, 242, 0.2),
       rgba(242, 242, 242, 0)
     );
     top: 0;
@@ -60,7 +64,6 @@
     grid-gap: var(--v-unit-2);
   }
   .card-hero__title {
-    font-size: 24px;
     text-shadow: 0px 0px 50px white;
   }
 </style>
