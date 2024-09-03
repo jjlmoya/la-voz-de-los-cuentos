@@ -9,6 +9,9 @@
       isStory
     />
   </div>
+  <div class="sections-stories-fallback">
+    <slot name="fallback" v-if="!stories.length"></slot>
+  </div>
 </template>
 
 <script setup>

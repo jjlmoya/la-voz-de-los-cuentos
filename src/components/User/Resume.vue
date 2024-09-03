@@ -1,5 +1,5 @@
 <template>
-  <div class="user-resume">
+  <VContainer size="xs" class="user-resume">
     <div class="user-resume__content">
       <UserResumeEntry
         @click="setActiveSection('read')"
@@ -21,17 +21,24 @@
       />
     </div>
 
-    <StoriesSection :stories="activeStories" />
-  </div>
+    <StoriesSection :stories="activeStories">
+      <template #fallback>
+        <div v-if="activeSection === 'favorites'"></div>
+        <div v-if="activeSection === 'pending'"></div>
+        <TutorialProgress v-if="activeSection === 'read'" />
+      </template>
+    </StoriesSection>
+  </VContainer>
 </template>
 
 <script setup>
   import { ref } from 'vue'
+  import { VContainer } from '@overgaming/vicius'
   import t from '../../translations'
   import UserResumeEntry from './UserResumeEntry.vue'
   import StoriesSection from '../Sections/StoriesSection.vue'
   import useStories from '../../composables/useStories'
-
+  import TutorialProgress from '../Tutorial/Progress.vue'
   const { getCompleteStories, getPendingStories, getFavoriteStories } =
     useStories()
   const map = {
@@ -64,7 +71,6 @@
   .user-resume {
     display: grid;
     margin: 0 auto;
-    max-width: 500px;
     grid-gap: var(--v-unit-8);
   }
   .user-resume__content {

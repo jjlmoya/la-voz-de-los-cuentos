@@ -1,5 +1,7 @@
 import account from './account'
+import tutorials from './tutorials'
 export default {
+  ...tutorials,
   ...account,
   'menu.home': 'Home',
   'menu.stories': 'Stories',

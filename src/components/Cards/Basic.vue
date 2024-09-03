@@ -11,7 +11,7 @@
       />
       <div class="basic-card__progress">
         <div
-          :style="{ width: `${status.current || 0}%` }"
+          :style="{ width: `${status.current || progress}%` }"
           class="basic-card__progress-complete"
         ></div>
       </div>
@@ -62,6 +62,10 @@
     as: {
       type: String,
       default: 'div'
+    },
+    progress: {
+      type: Number,
+      default: 0
     }
   })
 
@@ -93,7 +97,7 @@
       observer.observe(cardRef.value)
     }
 
-    status.value = getCurrentStatus()
+    status.value = props.progress || getCurrentStatus()
   })
 
   onUnmounted(() => {
@@ -136,6 +140,7 @@
     height: 5px;
     position: absolute;
     bottom: 5px;
+    z-index: 3;
   }
 
   .basic-card__progress-complete {

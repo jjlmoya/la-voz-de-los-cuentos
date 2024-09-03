@@ -1,22 +1,24 @@
 <template>
-  <VBanner as="a" class="card-hero" :href="toStory(story.key)">
-    <template #image>
-      <VImage
-        aspectRatio="16/9"
-        :src="`/assets/stories/${lang}/${story.key}.webp`"
-      ></VImage>
-    </template>
-    <VBannerContent class="card-hero__content">
-      <div class="card-hero__article">
-        <VText class="card-hero__title" color="primary" variant="header">{{
-          story.name
-        }}</VText>
-        <VText max-lines="3" variant="label">
-          <div v-html="first"></div>
-        </VText>
-      </div>
-    </VBannerContent>
-  </VBanner>
+  <a :href="toStory(story.key)">
+    <VBanner class="card-hero">
+      <template #image>
+        <VImage
+          aspectRatio="16/9"
+          :src="`/assets/stories/${lang}/${story.key}.webp`"
+        ></VImage>
+      </template>
+      <VBannerContent class="card-hero__content">
+        <div class="card-hero__article">
+          <VText class="card-hero__title" color="primary" variant="header">{{
+            story.name
+          }}</VText>
+          <VText max-lines="3" variant="label">
+            <div v-html="first"></div>
+          </VText>
+        </div>
+      </VBannerContent>
+    </VBanner>
+  </a>
 </template>
 
 <script setup>
