@@ -52,7 +52,7 @@
       to top,
       rgba(242, 242, 242, 0.95),
       rgba(242, 242, 242, 0.8),
-      rgba(242, 242, 242, 0.2),
+      rgba(242, 242, 242, 0.7),
       rgba(242, 242, 242, 0)
     );
     top: 0;
@@ -66,6 +66,6 @@
     grid-gap: var(--v-unit-2);
   }
   .card-hero__title {
-    text-shadow: 0px 0px 50px white;
+    text-shadow: 0px 0px 10px #dbcb0d;
   }
 </style>

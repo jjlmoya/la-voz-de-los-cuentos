@@ -11,17 +11,18 @@
         :videoid="story.youtube"
         :playlabel="story.name"
       />
-      <div class="story-page__pdf">
+    </div>
+    <Spotify v-if="story.spotify" :spotify="story.spotify" />
+    <div class="story-page__tool">
+      <div class="story-page__tool-left">
         <VButton
-          color="primary"
+          class="story-page__button"
           @click="printPdf"
           aria-label="Descargar en PDF"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
-            version="1.1"
-            id="Capa_1"
             viewBox="0 0 58 58"
             xml:space="preserve"
           >
@@ -44,50 +45,53 @@
             </g>
           </svg>
         </VButton>
+        <VButton @click="toggleLike" class="story-page__button">
+          <img v-if="!like" :src="`/assets/utils/heart-empty.webp`" />
+          <img v-if="like" :src="`/assets/utils/heart-full.webp`" />
+        </VButton>
       </div>
-    </div>
-    <Spotify v-if="story.spotify" :spotify="story.spotify" />
-    <div class="story-page__tool">
-      <VContainer class="story-page_font-selector" size="xs">
-        <label for="fontSize">
-          <span style="fontsize: 24px">A</span>
-          <span style="fontsize: 16px">a</span>
-        </label>
-        <VInput
-          type="range"
-          name="fontSize"
-          :aria-label="t('page.story.font.aria')"
-          id="font-size"
-          min="14"
-          max="28"
-          :value="fontSize"
-          @input="updateFontSize"
-        />
-      </VContainer>
       <SocialShare :url="url" :title="title" />
     </div>
-    <div class="story-page__title">
-      <VText
-        as="h1"
-        variant="header"
-        color="high"
-        :style="{
-          fontSize: `${fontSize}px`,
-          'line-height': `${fontSize >= 20 ? '1.5' : '1'}`
-        }"
-      >
-        {{ story.name }}
-      </VText>
-    </div>
-    <article class="story-page__content">
-      <div
-        :style="{
-          fontSize: `${fontSize}px`,
-          'line-height': `${fontSize >= 20 ? '1.5' : '1.2'}`
-        }"
-        v-html="storyHTML"
+    <VContainer class="story-page_font-selector" size="xs">
+      <label for="fontSize">
+        <span style="fontsize: 24px">A</span>
+        <span style="fontsize: 16px">a</span>
+      </label>
+      <VInput
+        type="range"
+        name="fontSize"
+        :aria-label="t('page.story.font.aria')"
+        id="font-size"
+        min="14"
+        max="28"
+        :value="fontSize"
+        @input="updateFontSize"
       />
-    </article>
+    </VContainer>
+    <VContainer class="story-page__content">
+      <div class="story-page__title">
+        <VText
+          as="h1"
+          variant="header"
+          color="high"
+          :style="{
+            fontSize: `${fontSize}px`,
+            'line-height': `${fontSize >= 20 ? '1.5' : '1'}`
+          }"
+        >
+          {{ story.name }}
+        </VText>
+      </div>
+      <article class="story-page__body">
+        <div
+          :style="{
+            fontSize: `${fontSize}px`,
+            'line-height': `${fontSize >= 20 ? '1.5' : '1.2'}`
+          }"
+          v-html="storyHTML"
+        />
+      </article>
+    </VContainer>
     <SectionsDefault
       class="story-page__related"
       :title="t('page.story.related')"
@@ -135,16 +139,23 @@
   const isFinished = ref(false)
   const storyHTML = ref('')
   const fontSize = ref(16)
-
-  const { html, getCurrentStatus } = useStory(props.story)
+  const { html, getCurrentStatus, setLikeStatus, reading } = useStory(
+    props.story
+  )
   storyHTML.value = html()
   const printPdf = () => {
     window.print()
   }
+  const like = ref(getCurrentStatus().like)
 
   const updateFontSize = event => {
     fontSize.value = event.target.value
     localStorage.setItem('fontSize', fontSize.value)
+  }
+
+  const toggleLike = () => {
+    like.value = !like.value
+    setLikeStatus(like.value)
   }
 
   onMounted(() => {
@@ -152,6 +163,7 @@
     if (savedFontSize) {
       fontSize.value = parseInt(savedFontSize, 10)
     }
+    reading()
     setTimeout(() => {
       const _current = getCurrentStatus()
       isFinished.value = _current.finished
@@ -163,16 +175,27 @@
   .story-page {
     padding: var(--v-unit-8);
   }
+  .story-page__content {
+    background-color: var(--v-color-surface-high);
+    padding: var(--v-unit-5);
+    border-radius: var(--v-unit-2);
+    display: grid;
+    grid-gap: var(--v-unit-6);
+  }
   .story-page_font-selector {
     font-weight: bold;
-    padding: var(--v-unit-2);
+    padding-bottom: var(--v-unit-2);
     display: grid;
     justify-content: center;
-    grid-gap: var(--v-unit-1);
     text-align: center;
     .v-input {
       min-height: 0;
     }
+  }
+  .story-page__like {
+    display: grid;
+    justify-content: center;
+    align-items: center;
   }
   .story-page__tool {
     display: grid;
@@ -180,49 +203,52 @@
     grid-gap: var(--v-unit-4);
   }
 
+  .story-page__tool-left {
+    justify-content: start;
+    height: 30px;
+    display: grid;
+    grid-auto-flow: column;
+    img {
+      height: 20px;
+    }
+  }
+
+  .story-page__button {
+    svg {
+      height: 32px;
+      fill: black;
+    }
+    &:hover {
+      background: var(--v-color-primary);
+      svg {
+        fill: white;
+      }
+    }
+  }
+
   .story-page__image {
     position: relative;
     border-radius: var(--v-unit-3);
     overflow: hidden;
   }
-  .story-page__pdf {
-    top: 0;
-    right: 0;
-    position: absolute;
-    z-index: 100;
-    svg {
-      height: 60px;
-      width: auto;
-      padding: 4px;
-      fill: white;
-    }
-    &:hover {
-      svg {
-        fill: black;
-      }
-    }
-  }
-
-  .story-page__content,
-  .story-page__title {
-    padding: var(--v-unit-2) 0;
-  }
 
   @media print {
-    body {
-      background: white !important;
-      color: black !important;
-    }
-
-    .main-layout-menu {
-      width: 0px !important;
-      opacity: 0;
-    }
-    img {
+    * {
       display: none;
     }
-    .main-layout {
-      grid-template-columns: 0px 1fr !important;
+
+    html,
+    body,
+    .story-page,
+    .navigation-layout,
+    .navigation-layout__content {
+      display: block;
+    }
+    .story-page__content {
+      display: block;
+      * {
+        display: block;
+      }
     }
     .story-page__image,
     .story-page__related,

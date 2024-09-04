@@ -1,5 +1,5 @@
 <template>
-  <VContainer size="xs" class="user-resume">
+  <VContainer size="xs" class="user-resume" v-if="map.read">
     <div class="user-resume__content">
       <UserResumeEntry
         @click="setActiveSection('read')"
@@ -32,7 +32,7 @@
 </template>
 
 <script setup>
-  import { ref } from 'vue'
+  import { ref, onMounted, toValue } from 'vue'
   import { VContainer } from '@overgaming/vicius'
   import t from '../../translations'
   import UserResumeEntry from './UserResumeEntry.vue'
@@ -41,26 +41,33 @@
   import TutorialProgress from '../Tutorial/Progress.vue'
   const { getCompleteStories, getPendingStories, getFavoriteStories } =
     useStories()
-  const map = {
-    read: {
-      text: 'page.account.resume.read',
-      stories: getCompleteStories()
-    },
-    pending: {
-      text: 'page.account.resume.pending',
-      stories: getPendingStories()
-    },
-    favorites: {
-      text: 'page.account.resume.favorites',
-      stories: getFavoriteStories()
+
+  const map = ref({})
+  onMounted(() => {
+    map.value = {
+      read: {
+        text: 'page.account.resume.read',
+        stories: getCompleteStories()
+      },
+      pending: {
+        text: 'page.account.resume.pending',
+        stories: getPendingStories()
+      },
+      favorites: {
+        text: 'page.account.resume.favorites',
+        stories: getFavoriteStories()
+      }
     }
-  }
-  const activeSection = ref('read')
-  const activeStories = ref(getCompleteStories())
-  const activeText = ref(map.read.text)
+    activeSection.value = 'read'
+    activeStories.value = getCompleteStories()
+    activeText.value = toValue(map).read.text
+  })
+  const activeSection = ref()
+  const activeStories = ref()
+  const activeText = ref()
 
   const setActiveSection = key => {
-    const _mapped = map[key]
+    const _mapped = toValue(map)[key]
     activeSection.value = key
     activeStories.value = _mapped.stories || []
     activeText.value = _mapped.text
