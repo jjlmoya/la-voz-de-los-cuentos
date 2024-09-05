@@ -138,7 +138,7 @@
 
   const isFinished = ref(false)
   const storyHTML = ref('')
-  const fontSize = ref(16)
+  const fontSize = ref(17)
   const { html, getCurrentStatus, setLikeStatus, reading } = useStory(
     props.story
   )

@@ -51,11 +51,15 @@
   const story = getRandomStory()
 </script>
 
-<style scoped>
+<style>
   .tutorial-progress {
     display: grid;
     grid-gap: var(--v-unit-4);
     padding: var(--v-unit-4);
+   
+  }
+  .tutorial-progress .basic-card__time {
+    display: none;
   }
   .tutorial-progress__content {
     display: grid;
