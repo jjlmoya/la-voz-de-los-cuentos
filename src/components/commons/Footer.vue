@@ -3,7 +3,7 @@
     <div class="footer-header">
       <VText class="footer-title" variant="header" as="h3">{{
         siteName
-      }}</VText>
+      }} v{{ pkg.version }}</VText>
     </div>
     <VDivider class="footer-divider">{{ t('footer.newsletter') }}</VDivider>
     <VContainer size="xs" class="footer-newsletter">
@@ -112,6 +112,7 @@
   </div>
 </template>
 <script setup>
+  import pkg from '../../../package.json'
   import t from '../../translations'
   const siteName = import.meta.env.PUBLIC_SITE_NAME
   const lang = import.meta.env.PUBLIC_LANG

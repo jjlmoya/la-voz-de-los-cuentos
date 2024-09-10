@@ -3,6 +3,7 @@ import '@overgaming/vicius/styles'
 import '../assets/css/fonts.css'
 import '../assets/css/styles.css'
 import '../assets/css/theme.css'
+import pkg from '../../package.json'
 
 import CMP from '../components/commons/Legal/CMP.vue'
 const siteName = import.meta.env.PUBLIC_SITE_NAME
@@ -94,6 +95,7 @@ const twitterUser = import.meta.env.PUBLIC_TWITTER_USER
   <body>
     <slot />
 
+    <div class="page-version" class="display:none">v{pkg.version}</div>
     <CMP client:load />
 
     <script>
