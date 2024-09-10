@@ -56,7 +56,6 @@
     display: grid;
     grid-gap: var(--v-unit-4);
     padding: var(--v-unit-4);
-   
   }
   .tutorial-progress .basic-card__time {
     display: none;
