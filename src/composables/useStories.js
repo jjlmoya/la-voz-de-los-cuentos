@@ -1,15 +1,13 @@
-import { ref } from 'vue'
+import { ref, toValue } from 'vue'
 import { getStories as _getStories } from '../data'
 import useStory from './useStory'
 const stories = _getStories()
 
 export default function useStories() {
-  const allStories = ref(
-    [...stories].sort((a, b) => new Date(a.date) - new Date(b.date))
-  )
+  const allStories = [...stories]
 
   const getFirstStory = () => {
-    return allStories.value[0]
+    return allStories
   }
 
   const getStoryBySlug = () => {
@@ -17,26 +15,26 @@ export default function useStories() {
   }
 
   const getLastStory = () => {
-    return allStories.value[allStories.value.length - 1]
+    return allStories[allStories.length - 1]
   }
 
   const getRandomStory = () => {
-    const randomIndex = Math.floor(Math.random() * allStories.value.length)
-    return allStories.value[randomIndex]
+    const randomIndex = Math.floor(Math.random() * allStories.length)
+    return allStories[randomIndex]
   }
 
   const getAllStories = () => {
-    return allStories.value
+    return allStories
   }
 
   const getStoriesByPage = (pageNumber, pageSize) => {
     const startIndex = (pageNumber - 1) * pageSize
     const endIndex = startIndex + pageSize
-    return allStories.value.slice(startIndex, endIndex)
+    return allStories.slice(startIndex, endIndex)
   }
 
   const getLastNStories = n => {
-    return allStories.value.slice(-n)
+    return allStories.slice(-n)
   }
 
   const getTitleSimilarity = (title1, title2) => {
@@ -65,13 +63,13 @@ export default function useStories() {
     )
 
   const getRelatedStories = story => {
-    const sameSagaStories = allStories.value.filter(
+    const sameSagaStories = allStories.filter(
       entry => entry.saga === story.saga && entry.key !== story.key
     )
     if (sameSagaStories.length < 10) {
       const remainingSlots = 10 - sameSagaStories.length
 
-      const similarTimeStories = allStories.value
+      const similarTimeStories = allStories
         .filter(
           entry =>
             entry.saga !== story.saga &&

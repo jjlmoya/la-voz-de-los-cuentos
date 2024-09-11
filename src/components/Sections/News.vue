@@ -3,7 +3,7 @@
     <BasicCard
       v-for="story in stories"
       :slug="story.key"
-      :key="'key' + story.key"
+      :key="story.key"
       :title="story.name"
       :time="parseInt(story.time)"
       isStory
