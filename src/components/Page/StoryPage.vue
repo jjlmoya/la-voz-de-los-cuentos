@@ -173,14 +173,14 @@
 
 <style>
   .story-page {
-    padding: var(--v-unit-8);
+    padding: var(--v-unit-4);
   }
   .story-page__content {
     background-color: var(--v-color-surface-high);
-    padding: var(--v-unit-5);
+    padding: var(--v-unit-4);
     border-radius: var(--v-unit-2);
     display: grid;
-    grid-gap: var(--v-unit-6);
+    grid-gap: var(--v-unit-4);
   }
   .story-page_font-selector {
     font-weight: bold;

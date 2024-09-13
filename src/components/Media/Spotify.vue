@@ -14,13 +14,14 @@
     <div
       :class="{ 'spotify__mask--animation': iframe }"
       class="spotify__mask"
-    ></div>
+    ><VText variant="label">Voice</VText></div>
   </div>
 </template>
 
 <script setup>
   const spotifyID = import.meta.env.PUBLIC_SPOTIFY_USER
   import { ref } from 'vue'
+  import { VText } from '@overgaming/vicius'
   const iframe = ref(false)
 
   const iframeLoaded = () => {
@@ -55,6 +56,10 @@
     bottom: 0;
     background-color: white;
     z-index: 10;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: #9691ff;
   }
 
   .spotify__iframe {
@@ -86,7 +91,7 @@
       width: 100%;
     }
     100% {
-      width: 130px;
+      width: 100px;
     }
   }
 
