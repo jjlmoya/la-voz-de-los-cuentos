@@ -2,7 +2,7 @@
   <VNavigation class="navigation">
     <template #header>
       <VImage
-        class="navigation__image"
+        class="navigation__image navigation__image-logo"
         :src="`/assets/logo/${lang}.webp`"
         aspectRatio="1/1"
         loading="eager"
@@ -34,5 +34,9 @@
   }
   .navigation__image {
     background-color: var(--v-color-surface);
+    margin: 0 auto;
+  }
+  .navigation__image-logo {
+     max-width: 200px;
   }
 </style>

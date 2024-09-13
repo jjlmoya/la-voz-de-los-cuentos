@@ -32,6 +32,9 @@
           />
         </svg>
       </button>
+      <div class="navigation-layout__mobile-image">
+        <img :src="`/assets/logo/h/${lang}.webp`"/>
+      </div>
     </div>
     <div
       class="navigation-layout__nav"
@@ -61,9 +64,11 @@
 
 <script setup>
   import { ref } from 'vue'
+  import { VImage } from '@overgaming/vicius'
   import MenuContainer from '../components/Menu/MenuContainer.vue'
   import Menu from '../components/Menu/Menu.vue'
   import Footer from '../components/commons/Footer.vue'
+  const lang = import.meta.env.PUBLIC_LANG
 
   const isOpen = ref(false)
 
@@ -84,19 +89,31 @@
     }
   }
 
+
   .navigation-layout__mobile {
-    display: flex;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
     align-items: center;
     position: sticky;
     inset-block-start: 0;
     inset-inline-start: 0;
     width: 100vw;
     height: var(--v-unit-16);
-    z-index: calc(var(--v-z-index-knight) - 2);
     background-color: var(--v-color-surface-high);
-
+    z-index: calc(var(--v-z-index-knight) - 2);
     @media (width >= 1360px) {
       display: none;
+    }
+  }
+
+  .navigation-layout__mobile-image {
+    display: grid;
+    max-width: 100%;
+    img {
+      padding: var(--v-unit-2) 0;
+      height: 64px;
+      margin: 0 auto;
+      background-color: var(--v-color-surface-high);
     }
   }
 
