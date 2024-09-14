@@ -68,20 +68,22 @@
         @input="updateFontSize"
       />
     </VContainer>
-    <VContainer class="story-page__content">
-      <div class="story-page__title">
+        <div class="story-page__title">
         <VText
           as="h1"
           variant="header"
           color="high"
-          :style="{
-            fontSize: `${fontSize}px`,
-            'line-height': `${fontSize >= 20 ? '1.5' : '1'}`
-          }"
         >
           {{ story.name }}
         </VText>
+        <div class="story-page__progress">
+          <div
+            :style="{ width: `${progress || 0}%` }"
+            class="story-page__progress-complete"
+          ></div>
+        </div>
       </div>
+    <div class="story-page__content">
       <article class="story-page__body">
         <div
           :style="{
@@ -91,7 +93,7 @@
           v-html="storyHTML"
         />
       </article>
-    </VContainer>
+    </div>
     <SectionsDefault
       class="story-page__related"
       :title="t('page.story.related')"
@@ -133,7 +135,7 @@
   import SocialShare from '../Social/Share.vue'
 
   SectionsDefault
-  import { ref, onMounted } from 'vue'
+  import { ref, toValue, onMounted } from 'vue'
   import useStory from '../../composables/useStory'
 
   const isFinished = ref(false)
@@ -146,8 +148,10 @@
   const printPdf = () => {
     window.print()
   }
-  const like = ref(getCurrentStatus().like)
+  const status = ref(getCurrentStatus())
 
+  const like = ref(toValue(status.like))
+  const progress = ref(toValue(status.current))
   const updateFontSize = event => {
     fontSize.value = event.target.value
     localStorage.setItem('fontSize', fontSize.value)
@@ -164,10 +168,11 @@
       fontSize.value = parseInt(savedFontSize, 10)
     }
     reading()
-    setTimeout(() => {
+    setInterval(() => {
       const _current = getCurrentStatus()
+      progress.value = _current.current
       isFinished.value = _current.finished
-    }, 3000)
+    }, 2500)
   })
 </script>
 
@@ -175,12 +180,48 @@
   .story-page {
     padding: var(--v-unit-4);
   }
-  .story-page__content {
+  .story-page__title {
+    position: sticky;
     background-color: var(--v-color-surface-high);
     padding: var(--v-unit-4);
-    border-radius: var(--v-unit-2);
+    top: 60px;
+    border-radius: var(--v-unit-2) var(--v-unit-2) 0 0;
+    text-align: center;
+    font-size: 24px;
+
+    @media (width >= 1360px) {
+       top: 0;
+    }
+    z-index: 4;
+    .v-text {
+          line-height: 1.1;
+    }
+  }
+
+  .story-page__progress {
+    background-color: var(--v-color-surface-high);
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+  }
+
+  .story-page__progress-complete {
+    background-color: var(--v-color-error);
+    height: 5px;
+    transition: width 10s ease-in-out;
+  }
+
+  
+  .story-page__content {
+    background-color: var(--v-color-surface-high);
+    padding: var(--v-unit-2) var(--v-unit-6) var(--v-unit-6) var(--v-unit-6);
+    border-radius: 0 0 var(--v-unit-2) var(--v-unit-2);
     display: grid;
     grid-gap: var(--v-unit-4);
+
   }
   .story-page_font-selector {
     font-weight: bold;
@@ -244,8 +285,10 @@
     .navigation-layout__content {
       display: block;
     }
-    .story-page__content {
+    .story-page__content, .story-page__title {
       display: block;
+      background-color: white;
+      border: 0;
       * {
         display: block;
       }
@@ -257,6 +300,7 @@
     .story-page_font-selector,
     .spotify,
     .social-share,
+    .story-page__progress,
     astro-dev-toolbar {
       display: none !important;
     }
