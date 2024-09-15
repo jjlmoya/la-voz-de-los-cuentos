@@ -53,12 +53,12 @@
           </div>
         </div>
       </div>
+      <SocialShare v-if="isSocialShare" :url="url" :title="title" />
       <div class="story-page__tool-wrapper">
-        <div class="story-page__tool-left">
           <VButton
             class="story-page__button"
             @click="printPdf"
-            aria-label="Descargar en PDF"
+            aria-label="PDF"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -85,25 +85,31 @@
               </g>
             </svg>
           </VButton>
-          <VButton @click="toggleLike" class="story-page__button">
+          <VButton @click="toggleLike" class="story-page__button" aria-label="Like">
             <img v-if="!like" :src="`/assets/utils/heart-empty.webp`" />
             <img v-if="like" :src="`/assets/utils/heart-full.webp`" />
           </VButton>
-        </div>
-        <VContainer
-          @click="toggleFontSelector"
-          class="story-page_font-selector"
-          size="xs"
-        >
           <VButton
+            @click="toggleFontSelector"
             class="story-page__button"
             :class="{ 'story-page__button--active': isFontSelector }"
           >
             <span style="fontsize: 24px">A</span>
             <span style="fontsize: 16px">a</span>
           </VButton>
-        </VContainer>
-        <SocialShare :url="url" :title="title" />
+          <VButton
+            @click="toggleSocialShare"
+            class="story-page__button"
+            :class="{ 'story-page__button--active': isSocialShare }"
+          >
+            <svg viewBox="0 0 700 700">
+              <g transform="matrix(1.3377542,0,0,1.3377542,-127.23318,-22.517556)">
+                <path d="m 349.3,39.199 c -1.2539,0.13672 -2.4258,0.69141 -3.3242,1.5742 l -89.602,89.602 c -1.0664,1.0664 -1.668,2.5156 -1.668,4.0234 0,1.5117 0.60156,2.9609 1.668,4.0273 1.0664,1.0664 2.5156,1.668 4.0234,1.668 1.5117,0 2.9609,-0.60156 4.0273,-1.668 l 85.574,-85.574 85.574,85.574 c 1.0664,1.0664 2.5156,1.668 4.0273,1.668 1.5078,0 2.957,-0.60156 4.0234,-1.668 1.0664,-1.0664 1.668,-2.5156 1.668,-4.0273 0,-1.5078 -0.60156,-2.957 -1.668,-4.0234 l -89.602,-89.602 c -1.2422,-1.2344 -2.9883,-1.8164 -4.7227,-1.5742 z"/>
+                <path d="m 348.77,47.074 c -2.6055,0.58594 -4.4375,2.9297 -4.375,5.6016 v 232.93 c -0.0195,1.4961 0.5625,2.9414 1.6133,4.0078 1.0508,1.0703 2.4883,1.6719 3.9883,1.6719 1.5,0 2.9375,-0.60156 3.9883,-1.6719 1.0508,-1.0664 1.6328,-2.5117 1.6133,-4.0078 v -232.93 c 0.0391,-1.7266 -0.71484,-3.3711 -2.0469,-4.4648 -1.3359,-1.0938 -3.0977,-1.5117 -4.7812,-1.1367 z"/>
+                <path d="m 226.8,218.4 c -15.414,0 -28,12.586 -28,28 v 246.4 c 0,15.414 12.586,28 28,28 h 212.8 v 0.004 c 1.4961,0.0195 2.9414,-0.55859 4.0078,-1.6133 1.0703,-1.0508 1.6719,-2.4883 1.6719,-3.9883 0,-1.5 -0.60156,-2.9336 -1.6719,-3.9883 -1.0664,-1.0508 -2.5117,-1.6328 -4.0078,-1.6094 H 226.8 c -9.4023,0 -16.801,-7.3945 -16.801,-16.801 v -246.4 c 0,-9.4023 7.3945,-16.801 16.801,-16.801 h 61.602 -0.004 c 1.5,0.0195 2.9453,-0.5625 4.0117,-1.6133 1.0703,-1.0508 1.668,-2.4883 1.668,-3.9883 0,-1.5 -0.59766,-2.9375 -1.668,-3.9883 -1.0664,-1.0508 -2.5117,-1.6328 -4.0117,-1.6133 h -61.602 z m 184.27,0 c -3.0938,0.14844 -5.4805,2.7695 -5.3359,5.8633 0.1446,3.0938 2.7695,5.4844 5.8633,5.3398 h 61.602 c 9.4023,0 16.801,7.3945 16.801,16.801 v 246.4 c 0,9.4023 -7.3945,16.801 -16.801,16.801 h -0.004 c -1.5,-0.0234 -2.9414,0.55859 -4.0117,1.6094 -1.0664,1.0547 -1.668,2.4883 -1.668,3.9883 0,1.5 0.60156,2.9375 1.668,3.9883 1.0703,1.0547 2.5117,1.6328 4.0117,1.6133 15.414,0 28,-12.586 28,-28 v -246.4 c 0,-15.414 -12.586,-28 -28,-28 h -61.602 l 0.004,-0.004 c -0.17578,-0.008 -0.35156,-0.008 -0.52734,0 "/>
+              </g>
+            </svg>
+          </VButton>
       </div>
     </div>
     <SectionsDefault
@@ -145,6 +151,8 @@
   import useStory from '../../composables/useStory'
 
   const isFontSelector = ref(false)
+  const isSocialShare = ref(false)
+
   const setFontSize = _size => {
     fontSize.value = _size
     localStorage.setItem('fontSize', fontSize.value)
@@ -166,6 +174,10 @@
 
   const toggleFontSelector = () => {
     isFontSelector.value = !isFontSelector.value
+  }
+
+  const toggleSocialShare = () => {
+    isSocialShare.value = !isSocialShare.value
   }
   const toggleLike = () => {
     like.value = !like.value
@@ -297,6 +309,9 @@
   }
 
   .story-page__button {
+    img {
+      max-height: 20px;
+    }
     svg {
       height: 32px;
       fill: black;
