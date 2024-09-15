@@ -30,7 +30,7 @@
         ><WhatsappIcon
       /></VButton>
     </VContainer>
-    <div class="social-share__share">
+    <div class="social-share__share" v-if="label">
       <VText>{{ t('page.story.share') }}</VText>
     </div>
   </div>
@@ -53,6 +53,10 @@
     title: {
       type: String,
       default: ''
+    },
+    label: {
+      type: Boolean,
+      default: false
     }
   })
   const url = ref(props.url)

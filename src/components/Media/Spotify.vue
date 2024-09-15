@@ -11,10 +11,9 @@
       :src="`https://podcasters.spotify.com/pod/show/${spotifyID}/embed/episodes/${spotify}`"
     />
     <div v-if="!iframe" class="spotify__loading"></div>
-    <div
-      :class="{ 'spotify__mask--animation': iframe }"
-      class="spotify__mask"
-    ><VText variant="label">Voice</VText></div>
+    <div :class="{ 'spotify__mask--animation': iframe }" class="spotify__mask">
+      <VText variant="label">Voice</VText>
+    </div>
   </div>
 </template>
 

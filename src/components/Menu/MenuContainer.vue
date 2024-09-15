@@ -37,6 +37,6 @@
     margin: 0 auto;
   }
   .navigation__image-logo {
-     max-width: 175px;
+    max-width: 175px;
   }
 </style>

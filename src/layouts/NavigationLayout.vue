@@ -33,7 +33,7 @@
         </svg>
       </button>
       <div class="navigation-layout__mobile-image">
-        <img :src="`/assets/logo/h/${lang}.webp`"/>
+        <img :src="`/assets/logo/h/${lang}.webp`" />
       </div>
     </div>
     <div
@@ -88,7 +88,6 @@
       grid-template-columns: auto 1fr;
     }
   }
-
 
   .navigation-layout__mobile {
     display: grid;

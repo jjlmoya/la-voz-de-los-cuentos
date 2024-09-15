@@ -1,9 +1,9 @@
 <template>
   <div class="footer">
     <div class="footer-header">
-      <VText class="footer-title" variant="header" as="h3">{{
-        siteName
-      }} v{{ pkg.version }}</VText>
+      <VText class="footer-title" variant="header" as="h3"
+        >{{ siteName }} v{{ pkg.version }}</VText
+      >
     </div>
     <VDivider class="footer-divider">{{ t('footer.newsletter') }}</VDivider>
     <VContainer size="xs" class="footer-newsletter">
