@@ -283,6 +283,7 @@
     display: grid;
     grid-auto-flow: column;
     grid-gap: var(--v-unit-2);
+    padding-bottom: env(safe-area-inset-bottom);
   }
 
   .story-page__tool-left {
