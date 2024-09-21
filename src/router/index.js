@@ -11,7 +11,8 @@ const toNewsLetter = slug => `/newsletter/${slug}/`
 const toAccount = () => `/${lang === 'es' ? 'cuenta' : 'account'}/`
 const toCustomStory = () =>
   lang === 'es' ? `/personalizado/cuento/` : '/custom/story/'
-
+const toLandingsPage = (key) => 
+  lang === 'en' ? `/list/${key}/` : `/listado/${key}/`
 export {
   toStories,
   toStory,
@@ -20,5 +21,6 @@ export {
   toNewsLetter,
   toNewsLetters,
   toCustomStory,
-  toAccount
+  toAccount,
+  toLandingsPage
 }

@@ -1,4 +1,6 @@
 import account from './account'
+import landing from './landing'
+
 const tutorials = {
   'tutorials.progress.title': '¿Cómo funciona el progreso?',
   'tutorials.progress.description':
@@ -9,6 +11,7 @@ const tutorials = {
 }
 export default {
   ...tutorials,
+  ...landing,
   ...account,
   'menu.home': 'Inicio',
   'menu.stories': 'Cuentos',

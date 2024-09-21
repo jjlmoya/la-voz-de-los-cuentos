@@ -1,4 +1,5 @@
 import account from './account'
+import landing from './landing'
 
 const tutorials = {
   'tutorials.progress.title': 'How Does Progress Work?',
@@ -11,6 +12,7 @@ const tutorials = {
 
 export default {
   ...tutorials,
+  ...landing,
   ...account,
   'menu.home': 'Home',
   'menu.stories': 'Stories',

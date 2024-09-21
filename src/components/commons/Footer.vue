@@ -108,16 +108,29 @@
         <!--<VLink href="/legal/cookies/">Política de Cookies</VLink>-->
         <!--<VLink href="/legal/privacidad/">Política de Privacidad</VLink>-->
       </div>
+
+    </div>
+    <div class="footer-landing">
+      · <VLink 
+          v-for="landing in landings" 
+          :href="toLandingsPage(landing.key)">
+          {{ landing.title }}
+        </VLink>
     </div>
   </div>
 </template>
 <script setup>
   import pkg from '../../../package.json'
   import t from '../../translations'
+  import useLandings from '../../composables/useLandings';
   const siteName = import.meta.env.PUBLIC_SITE_NAME
   const lang = import.meta.env.PUBLIC_LANG
   const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT
-  import { toCustomStory } from '../../router'
+  import { toCustomStory, toLandingsPage } from '../../router'
+  const { getAll}  = useLandings()
+
+  const landings = getAll()
+
   const links = {
     email: import.meta.env.PUBLIC_EMAIL,
     instagram: import.meta.env.PUBLIC_INSTAGRAM_USER,
@@ -196,6 +209,7 @@
       color: white;
     }
   }
+
   .footer-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -226,5 +240,14 @@
   }
   .footer-divider {
     color: var(--v-color-primary);
+  }
+  .footer-landing {
+    line-height: 1;
+    font-size: 9px;
+    .v-link {
+      padding: 0 var(--v-unit-1);
+      text-decoration: underline;
+      opacity: 0.8;
+    }
   }
 </style>

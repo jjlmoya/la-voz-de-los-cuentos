@@ -1,0 +1,26 @@
+---
+import NavLayout from '../../layouts/NavLayout.astro'
+import { getLandings } from '../../data'
+import LandingPage from '../../components/Page/LandingPage.vue'
+const { id } = Astro.params
+const lang = import.meta.env.PUBLIC_LANG
+
+const landing = getLandings().find(s => s.key === id)
+export async function getStaticPaths() {
+  return getLandings().map(landing => ({
+    params: {
+      list: import.meta.env.PUBLIC_LANG === 'en' ? 'list' : 'listado',
+      id: landing.key
+    }
+  }))
+}
+---
+
+<NavLayout
+  title={landing.title}
+  description={landing.description}
+  url={'/p/' + landing.key + '/'}
+  hasVideo
+>
+  <LandingPage landing={landing} client:load />
+</NavLayout>
