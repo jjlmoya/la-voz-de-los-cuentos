@@ -1,7 +1,10 @@
 import { getStories as _getStories } from '../data'
 export default function useLanding(landing) {
   const getStories = () => {
-    return _getStories().filter(_story => landing.keys.includes(_story.key)).reverse().slice(0,25)
+    return _getStories()
+      .filter(_story => landing.keys.includes(_story.key))
+      .reverse()
+      .slice(0, 25)
   }
 
   const firstParagraph = () =>

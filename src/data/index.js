@@ -17,7 +17,7 @@ const map = {
     sagas: sagasEs,
     characters: charactersEs,
     newsletters: newslettersEs,
-    landings: landingsEs,
+    landings: landingsEs
   },
   en: {
     stories: storiesEn,

@@ -108,26 +108,24 @@
         <!--<VLink href="/legal/cookies/">Política de Cookies</VLink>-->
         <!--<VLink href="/legal/privacidad/">Política de Privacidad</VLink>-->
       </div>
-
     </div>
     <div class="footer-landing">
-      · <VLink 
-          v-for="landing in landings" 
-          :href="toLandingsPage(landing.key)">
-          {{ landing.title }}
-        </VLink>
+      ·
+      <VLink v-for="landing in landings" :href="toLandingsPage(landing.key)">
+        {{ landing.title }}
+      </VLink>
     </div>
   </div>
 </template>
 <script setup>
   import pkg from '../../../package.json'
   import t from '../../translations'
-  import useLandings from '../../composables/useLandings';
+  import useLandings from '../../composables/useLandings'
   const siteName = import.meta.env.PUBLIC_SITE_NAME
   const lang = import.meta.env.PUBLIC_LANG
   const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT
   import { toCustomStory, toLandingsPage } from '../../router'
-  const { getAll}  = useLandings()
+  const { getAll } = useLandings()
 
   const landings = getAll()
 

@@ -28,11 +28,11 @@
   import { VText, VContainer } from '@overgaming/vicius'
   import LandingStories from '../Sections/LandingStories.vue'
   import SectionsDefault from '../Sections/Default.vue'
-  import useLanding from '../../composables/useLanding';
+  import useLanding from '../../composables/useLanding'
 
   const { html } = useLanding(props.landing)
 
-const descriptionHtml = html()
+  const descriptionHtml = html()
 </script>
 
 <style>
@@ -41,11 +41,15 @@ const descriptionHtml = html()
     display: grid;
     grid-gap: var(--v-unit-4);
 
-    h1, h2, h3, h4, h5 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
       font-weight: bold;
       font-size: 1.2rem;
     }
-    h1 { 
+    h1 {
       text-align: center;
       font-size: 1.5rem;
     }

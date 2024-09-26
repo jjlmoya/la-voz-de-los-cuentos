@@ -1,3 +1,3 @@
 export default {
-    'page.landing.stories': 'List of',
+  'page.landing.stories': 'List of'
 }
