@@ -1,0 +1,33 @@
+---
+import NavLayout from '../../layouts/NavLayout.astro'
+import Card from '../../components/TGC/Card.vue'
+import { VContainer } from '@overgaming/vicius'
+import t from '../../translations'
+---
+
+<NavLayout
+  title={t('page.home.h1')}
+  description={t('page.home.description')}
+  url={'/'}
+>
+  <div class="tgc">
+    <VContainer size="xl">
+      <div class="tgc__list">
+        <Card size="xxs" image="sample3" client:load />
+        <Card size="xs" image="sample4" client:load />
+        <Card size="md" image="sample2" client:load />
+        <Card size="xl" image="sample3" name="Fear Cat" client:load />
+      </div>
+    </VContainer>
+  </div>
+</NavLayout>
+
+<style>
+  .tgc {
+    padding: 60px;
+  }
+  .tgc__list {
+    display: grid;
+    grid-auto-flow: column;
+  }
+</style>
