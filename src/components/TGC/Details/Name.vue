@@ -28,7 +28,7 @@
     font-weight: 500;
     color: white;
     border-radius: 0 0 5px 0;
-    padding: 0 var(--v-unit-2)
+    padding: 0 var(--v-unit-2);
   }
 
   .tgc-card-header--xxs {

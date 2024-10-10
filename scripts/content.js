@@ -9,6 +9,9 @@ const __dirname = dirname(__filename);
 const KEYFILEPATH = path.join(__dirname, 'credentials.json');
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
 
+
+const SPREADSHEET_CARD_ID = '1XnlycHz6-l7MKHS3dr9OwOvz5vzb00ctTcsIMHISRo8'
+
 const SPREADSHEET_IDS = {
     es: '1stmw3Uy70JloMCnQpCG5wjLtAFbaIFN1Aqe1gK9JM7A',
     en: '1E8J8Q5uVQxdZ1sNHusSumLXPNXYaYFnTBAh6PEsTagg' 
@@ -19,7 +22,7 @@ const SPREADSHEET_RANGES = {
     sagas: 'Sagas!A1:I999',
     newsletters: 'Newsletter!A1:E999',
     characters: 'Characters!A1:N999',
-    landings: 'Landings!A1:N999',
+    landings: 'Landings!A1:N999'
 };
 
 const OUTPUT_DIRS = {
@@ -83,18 +86,36 @@ async function processLanguage(language, spreadsheetId, outputDir) {
     for (const [key, range] of Object.entries(SPREADSHEET_RANGES)) {
         const adjustedRange = range;
         const data = await readSpreadsheet(sheets, spreadsheetId, adjustedRange);
-        const filteredData = data.filter(entry => (entry.order || entry.id) && (entry.name || entry.title))
-
+        const filteredData = data.filter(hasMandatoryStoryFields)
         const outputPath = path.join(__dirname, `${outputDir}${key}.json`);
         await writeJsonToFile(filteredData, outputPath);
+        
         console.log(`JSON created ${key}.json for ${language}`);
     }
+}
+
+const hasMandatoryCardFields = (card) =>  card.order && card.storyId && card.es && card.en
+const hasMandatoryStoryFields = (story) => (story.order || story.id) && (story.name || story.title) 
+
+async function retrieveCards() {
+    const sheets = await authenticateGoogleSheets();
+    const adjustedRange = 'Cards!A1:N999';
+    const data = await readSpreadsheet(sheets, SPREADSHEET_CARD_ID, adjustedRange);
+    const filteredData = data.filter(hasMandatoryCardFields)
+
+    const outputPath = path.join(__dirname, `../src/data/cards.json`);
+    await writeJsonToFile(filteredData, outputPath);
+    console.log(`JSON created cards.json`);
+
+
+    await writeJsonToFile(filteredData, outputPath);
 }
 
 async function main() {
     for (const [language, spreadsheetId] of Object.entries(SPREADSHEET_IDS)) {
         await processLanguage(language, spreadsheetId, OUTPUT_DIRS[language]);
     }
+    await retrieveCards()
 }
 
 main().catch(err => console.error('Error processing spreadsheets:', err));
