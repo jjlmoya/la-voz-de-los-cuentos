@@ -5,6 +5,9 @@
     @click="flipCard"
     @mousemove="rotateCard"
     @mouseleave="resetRotation"
+    @touchstart="rotateCard"
+    @pointerdown="rotateCard"
+    @touchend="resetRotation"
   >
     <div class="tgc-card__content" :style="cardStyle">
       <Front :name="name" :image="image" :size="size" />
@@ -104,7 +107,7 @@
     left: 0;
     display: grid;
   }
- 
+
   .tgc-card--xxs {
     width: 60px;
     height: 100px;

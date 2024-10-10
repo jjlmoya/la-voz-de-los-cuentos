@@ -1,8 +1,8 @@
 <template>
   <div
     v-if="name"
-    class="tgc-card__header"
-    :class="[`tgc-card__header--${size}`]"
+    class="tgc-card-header"
+    :class="[`tgc-card-header--${size}`]"
   >
     {{ name }}
   </div>
@@ -22,45 +22,39 @@
 </script>
 
 <style>
-  .tgc-card__header {
+  .tgc-card-header {
     position: absolute;
     background-color: var(--v-color-primary);
     font-weight: 500;
     color: white;
     border-radius: 0 0 5px 0;
+    padding: 0 var(--v-unit-2)
   }
 
-  .tgc-card__header--xxs {
+  .tgc-card-header--xxs {
     left: 1px;
     top: 1px;
-    border: 1px solid var(--v-color-primary);
-    padding: 0 var(--v-unit-1);
-    font-size: 8px;
+    font-size: 7px;
     line-height: 12px;
   }
 
-  .tgc-card--xs {
+  .tgc-card-header--xs {
     left: 2px;
     top: 2px;
-    border: 1px solid var(--v-color-primary);
-    padding: 0 var(--v-unit-1);
     font-size: 10px;
     line-height: 16px;
   }
 
-  .tgc-card__header--md {
-    left: 2px;
-    top: 2px;
-    border: 2px solid var(--v-color-primary);
-    padding: 0 var(--v-unit-1);
+  .tgc-card-header--md {
+    left: 3px;
+    top: 3px;
     font-size: 12px;
     line-height: 18px;
   }
 
-  .tgc-card__header--xl {
-    top: 5px;
-    left: 5px;
-    padding: var(--v-unit-1) var(--v-unit-2);
+  .tgc-card-header--xl {
+    top: 6px;
+    left: 6px;
     border: 2px solid var(--v-color-primary);
     line-height: 18px;
     font-size: 14px;
