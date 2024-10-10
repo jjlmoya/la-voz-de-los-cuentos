@@ -41,7 +41,7 @@
   .tgc-card-header--xs {
     left: 2px;
     top: 2px;
-    font-size: 10px;
+    font-size: 8px;
     line-height: 16px;
   }
 

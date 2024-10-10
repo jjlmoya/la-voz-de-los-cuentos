@@ -1,6 +1,6 @@
 ---
 import NavLayout from '../../layouts/NavLayout.astro'
-import Card from '../../components/TGC/Card.vue'
+import CardsPage from '../../components/Page/CardsPage.vue'
 import { VContainer } from '@overgaming/vicius'
 import t from '../../translations'
 ---
@@ -12,22 +12,7 @@ import t from '../../translations'
 >
   <div class="tgc">
     <VContainer size="xl">
-      <div class="tgc__section">
-        <h2 class="tgc__title">Draw:</h2>
-        <div class="tgc__list">
-          <Card flipped image="sample" name="" client:load />
-          <Card image="sample" name="" client:load />
-        </div>
-      </div>
-      <div class="tgc__section">
-        <h2 class="tgc__title">Sizes:</h2>
-        <div class="tgc__list">
-          <Card size="xxs" image="sample" name="Angry Cat" client:load />
-          <Card size="xs" image="sample4" name="Descent Moon" client:load />
-          <Card size="md" image="sample4" name="Descent Moon" client:load />
-          <Card size="xl" image="sample4" name="Descent Moon" client:load />
-        </div>
-      </div>
+      <CardsPage client:load />
     </VContainer>
   </div>
 </NavLayout>
