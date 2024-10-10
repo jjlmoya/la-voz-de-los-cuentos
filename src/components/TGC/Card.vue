@@ -8,9 +8,12 @@
   >
     <div class="tgc-card__content" :style="cardStyle">
       <div class="tgc-card__front">
-        <div v-if="name" class="tgc-card__header">{{ image }}</div>
         <div class="tgc-card__layer tgc-card__image">
           <img :src="`/cards/${image}.webp`" alt="Front Image" />
+        </div>
+        <div v-if="name" class="tgc-card__header">{{ name }}</div>
+        <div class="tgc-card__layer tgc-card__border-fill">
+          <img src="/cards/structure/border-fill.webp" alt="Border" />
         </div>
         <div class="tgc-card__layer tgc-card__border">
           <img src="/cards/structure/border.webp" alt="Border" />
@@ -142,15 +145,17 @@
     object-fit: cover;
   }
 
+  .tgc-card__border img {
+    /*filter: invert(42%) sepia(95%) saturate(679%) hue-rotate(187deg) brightness(91%) contrast(96%);*/
+    filter: invert(36%) sepia(18%) saturate(1639%) hue-rotate(115deg) brightness(93%) contrast(84%);
+  }
+
   .tgc-card__header {
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 4px;
-    font-weight: bold;
-    z-index: 3;
+    background-color: var(--v-color-primary);
+    font-weight: 500;
+    color: white;
+    border-radius: 0 0 5px 0;;
   }
 
   .tgc-card--xxs {
@@ -158,6 +163,14 @@
     height: 100px;
     .tgc-card__image img {
       border-radius: 4px;
+    }
+    .tgc-card__header {
+      left: 1px;
+      top: 1px;
+      border: 1px solid var(--v-color-primary);
+      padding: 0 var(--v-unit-1);
+      font-size: 8px;
+      line-height: 12px;
     }
   }
 
@@ -167,6 +180,14 @@
     .tgc-card__image img {
       border-radius: 6px;
     }
+     .tgc-card__header {
+      left: 2px;
+      top: 2px;
+      border: 1px solid var(--v-color-primary);
+      padding: 0 var(--v-unit-1);
+      font-size: 10px;
+      line-height: 16px;
+    }
   }
 
   .tgc-card--md {
@@ -175,6 +196,14 @@
     .tgc-card__image img {
       border-radius: 8px;
     }
+    .tgc-card__header {
+      left: 2px;
+      top: 2px;
+      border: 2px solid var(--v-color-primary);
+      padding: 0 var(--v-unit-1);
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
 
   .tgc-card--xl {
@@ -182,6 +211,14 @@
     height: 500px;
     .tgc-card__image img {
       border-radius: 16px;
+    }
+    .tgc-card__header {
+      top: 5px;
+      left: 5px;
+      padding: var(--v-unit-1) var(--v-unit-2);
+      border: 2px solid var(--v-color-primary);
+      line-height: 18px;
+      font-size: 14px;
     }
   }
 </style>
