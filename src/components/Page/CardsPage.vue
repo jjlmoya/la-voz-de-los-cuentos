@@ -2,28 +2,34 @@
   <VContainer size="xl" class="card-page">
     <VContainer class="card-page__content">
       <div class="card-page__title">
-        <VText as="h1" variant="header">
-          Temp Card Page
-        </VText>
+        <VText as="h1" variant="header"> Temp Card Page </VText>
       </div>
-    </VContainer>
-    <SectionsDefault title="List All Cards">
+      <SectionsDefault title="Debug Paquetes">
+        <VButton variant="primary" class="card-page__cards">
+            Get
+        </VButton>
+      </SectionsDefault>
+      <SectionsDefault title="List Obtained Cards">
         <div class="card-page__cards">
-            <Card v-for="card in cards" size="xs" :name="card[lang]" :image="`season/${card.season}/${card.key}`"></Card>
+          <Card
+            v-for="card in cards"
+            size="xs"
+            :card="card"
+          />
         </div>
-    </SectionsDefault>
+      </SectionsDefault>
+    </VContainer>
   </VContainer>
 </template>
 
 <script setup>
   import useCards from '../../composables/useCards'
   import Card from '../TGC/Card.vue'
-  import { VText, VContainer } from '@overgaming/vicius'
+  import { VText, VContainer, VButton } from '@overgaming/vicius'
   import SectionsDefault from '../Sections/Default.vue'
   const { getAll } = useCards()
   const cards = getAll()
   const lang = import.meta.env.PUBLIC_LANG
-
 </script>
 
 <style>

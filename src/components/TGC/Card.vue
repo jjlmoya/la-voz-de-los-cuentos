@@ -1,7 +1,7 @@
 <template>
   <div
     class="tgc-card"
-    :class="[{ 'tgc-card--flipped': isFlipped }, `tgc-card--${size}`]"
+    :class="[{ 'tgc-card--flipped': isFlipped, 'tgc-card--disabled': !hasCard() }, `tgc-card--${size}`]"
     @click="flipCard"
     @mousemove="rotateCard"
     @mouseleave="resetRotation"
@@ -10,13 +10,17 @@
     @touchend="resetRotation"
   >
     <div class="tgc-card__content" :style="cardStyle">
-      <Front :name="name" :image="image" :size="size" />
+      <Front 
+        :name="card.name"
+        :image="`season/${card.season}/${card.key}`" 
+        :size="size" />
       <Back />
     </div>
   </div>
 </template>
 
 <script setup>
+  import useCard from '../../composables/useCard'
   import Back from './Details/Back.vue'
   import Front from './Details/Front.vue'
   import { ref, computed } from 'vue'
@@ -26,13 +30,9 @@
       type: String,
       default: 'md'
     },
-    name: {
-      type: String,
-      default: ''
-    },
-    image: {
-      type: String,
-      default: 'default'
+    card: {
+      type: Object,
+      defualt: {}
     },
     flipped: {
       type: Boolean,
@@ -40,10 +40,12 @@
     }
   })
 
+  const { hasCard } = useCard(props.card)
+
+
   const isFlipped = ref(props.flipped)
   const rotateX = ref(0)
   const rotateY = ref(0)
-
   const flipCard = () => {
     isFlipped.value = !isFlipped.value
     if (isFlipped.value) {
@@ -90,6 +92,13 @@
   .tgc-card {
     perspective: 250px;
     cursor: pointer;
+    pointer-events: none;
+  }
+
+  .tgc-card--disabled {
+    opacity: 0.3;
+    filter: grayscale(100%);
+
   }
 
   .tgc-card__content {
