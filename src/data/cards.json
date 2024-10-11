@@ -11,7 +11,40 @@
     "season": "1"
   },
   {
-    "order": "197",
+    "order": "172",
+    "storyId": "172",
+    "es": "Eloy Pirata",
+    "en": "Eloy Pirate",
+    "key": "eloy-pirate",
+    "rank": "",
+    "rate": "",
+    "decoration": "",
+    "season": "1"
+  },
+  {
+    "order": "173",
+    "storyId": "172",
+    "es": "Barbanegra",
+    "en": "Blackbeard",
+    "key": "blackbeard",
+    "rank": "",
+    "rate": "",
+    "decoration": "",
+    "season": "1"
+  },
+  {
+    "order": "194",
+    "storyId": "193",
+    "es": "Eloy Samurai",
+    "en": "Eloy Samurai",
+    "key": "eloy-samurai",
+    "rank": "",
+    "rate": "",
+    "decoration": "",
+    "season": "1"
+  },
+  {
+    "order": "198",
     "storyId": "197",
     "es": "Zarabé",
     "en": "Zarabe",
@@ -22,7 +55,7 @@
     "season": "1"
   },
   {
-    "order": "198",
+    "order": "199",
     "storyId": "198",
     "es": "Mabel",
     "en": "Mabel",
@@ -33,7 +66,7 @@
     "season": "1"
   },
   {
-    "order": "204",
+    "order": "205",
     "storyId": "204",
     "es": "En Pompeya",
     "en": "In Pompeii",
@@ -44,7 +77,7 @@
     "season": "1"
   },
   {
-    "order": "225",
+    "order": "226",
     "storyId": "225",
     "es": "Melusine",
     "en": "Melusine",
