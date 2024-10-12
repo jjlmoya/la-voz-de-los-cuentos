@@ -1,13 +1,11 @@
 <template>
-  <div class="tgc-booster-pack">
-  </div>
+  <div class="tgc-booster-pack"></div>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
 <style>
-   body {
+  body {
     &:has(.tgc-booster-pack) {
       overflow-y: hidden;
     }

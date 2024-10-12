@@ -1,22 +1,22 @@
 <template>
   <VContainer class="card-page">
-      <div class="card-page__title">
-        <VText as="h1" variant="header"> Temp Card Page </VText>
+    <div class="card-page__title">
+      <VText as="h1" variant="header"> Temp Card Page </VText>
+    </div>
+    <SectionsDefault title="Debug Paquetes">
+      <VButton
+        @click="openBoosterPack"
+        variant="primary"
+        class="card-page__cards"
+      >
+        Get
+      </VButton>
+    </SectionsDefault>
+    <SectionsDefault title="Album">
+      <div class="card-page__cards">
+        <Card v-for="card in cards" size="md" :card="card" />
       </div>
-      <SectionsDefault title="Debug Paquetes">
-        <VButton @click="openBoosterPack" variant="primary" class="card-page__cards">
-            Get
-        </VButton>
-      </SectionsDefault>
-      <SectionsDefault title="Album">
-        <div class="card-page__cards">
-          <Card
-            v-for="card in cards"
-            size="md"
-            :card="card"
-          />
-        </div>
-      </SectionsDefault>
+    </SectionsDefault>
   </VContainer>
   <BoosterPack />
 </template>
@@ -30,9 +30,7 @@
   const { getAll } = useCards()
   const cards = getAll()
 
-  const openBoosterPack = () => {
-
-  }
+  const openBoosterPack = () => {}
 </script>
 
 <style>

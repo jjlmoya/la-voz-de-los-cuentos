@@ -1,9 +1,6 @@
 <template>
-  <div
-    class="tgc-card-header"
-    :class="[`tgc-card-header--${size}`]"
-  >
-      {{ hasCard ? name : `?` }} 
+  <div class="tgc-card-header" :class="[`tgc-card-header--${size}`]">
+    {{ hasCard ? name : `?` }}
   </div>
 </template>
 

@@ -1,8 +1,21 @@
 <template>
   <div class="tgc-card__front">
-    <div class="tgc-card__layer tgc-card__image" :class="{'tgc-card__front--disable': !hasCard}">
-      <img v-if="hasCard" class="tgc-card-image__content" :src="`/cards/${image}.webp`" alt="Front Image" />
-      <img v-if="!hasCard" class="tgc-card-image__content--disabled" src="/cards/unknown.webp" alt="Front Image" />
+    <div
+      class="tgc-card__layer tgc-card__image"
+      :class="{ 'tgc-card__front--disable': !hasCard }"
+    >
+      <img
+        v-if="hasCard"
+        class="tgc-card-image__content"
+        :src="`/cards/${image}.webp`"
+        alt="Front Image"
+      />
+      <img
+        v-if="!hasCard"
+        class="tgc-card-image__content--disabled"
+        src="/cards/unknown.webp"
+        alt="Front Image"
+      />
     </div>
     <CardName :hasCard :name="name" :size="size" />
     <Border />

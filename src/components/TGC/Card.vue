@@ -1,7 +1,10 @@
 <template>
   <div
     class="tgc-card"
-    :class="[{ 'tgc-card--flipped': isFlipped, 'tgc-card--disabled': !hasCard() }, `tgc-card--${size}`]"
+    :class="[
+      { 'tgc-card--flipped': isFlipped, 'tgc-card--disabled': !hasCard() },
+      `tgc-card--${size}`
+    ]"
     @click="flipCard"
     @mousemove="rotateCard"
     @mouseleave="resetRotation"
@@ -10,11 +13,12 @@
     @touchend="resetRotation"
   >
     <div class="tgc-card__content" :style="cardStyle">
-      <Front 
+      <Front
         :has-card="hasCard()"
         :name="card[lang]"
-        :image="`season/${card.season}/${card.key}`" 
-        :size="size" />
+        :image="`season/${card.season}/${card.key}`"
+        :size="size"
+      />
       <Back />
     </div>
   </div>
@@ -43,7 +47,6 @@
   })
 
   const { hasCard } = useCard(props.card)
-
 
   const isFlipped = ref(props.flipped)
   const rotateX = ref(0)
