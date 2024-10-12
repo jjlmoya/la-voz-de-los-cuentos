@@ -11,7 +11,8 @@
   >
     <div class="tgc-card__content" :style="cardStyle">
       <Front 
-        :name="card.name"
+        :has-card="hasCard()"
+        :name="card[lang]"
         :image="`season/${card.season}/${card.key}`" 
         :size="size" />
       <Back />
@@ -24,6 +25,7 @@
   import Back from './Details/Back.vue'
   import Front from './Details/Front.vue'
   import { ref, computed } from 'vue'
+  const lang = import.meta.env.PUBLIC_LANG
 
   const props = defineProps({
     size: {
@@ -32,7 +34,7 @@
     },
     card: {
       type: Object,
-      defualt: {}
+      default: {}
     },
     flipped: {
       type: Boolean,
@@ -92,13 +94,10 @@
   .tgc-card {
     perspective: 250px;
     cursor: pointer;
-    pointer-events: none;
   }
 
   .tgc-card--disabled {
-    opacity: 0.3;
-    filter: grayscale(100%);
-
+    pointer-events: none;
   }
 
   .tgc-card__content {
@@ -119,7 +118,7 @@
 
   .tgc-card--xxs {
     width: 60px;
-    height: 100px;
+    height: 106px;
     .tgc-card__image img {
       border-radius: 4px;
     }
@@ -127,7 +126,7 @@
 
   .tgc-card--xs {
     width: 120px;
-    height: 200px;
+    height: 215px;
     .tgc-card__image img {
       border-radius: 6px;
     }
@@ -143,7 +142,7 @@
 
   .tgc-card--xl {
     width: 300px;
-    height: 500px;
+    height: 538px;
     .tgc-card__image img {
       border-radius: 16px;
     }

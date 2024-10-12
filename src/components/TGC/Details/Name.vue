@@ -1,15 +1,18 @@
 <template>
   <div
-    v-if="name"
     class="tgc-card-header"
     :class="[`tgc-card-header--${size}`]"
   >
-    {{ name }}
+      {{ hasCard ? name : `?` }} 
   </div>
 </template>
 
 <script setup>
   const props = defineProps({
+    order: {
+      type: [Number, String],
+      default: 0
+    },
     name: {
       type: String,
       default: ''
@@ -17,6 +20,10 @@
     size: {
       type: String,
       default: 'md'
+    },
+    hasCard: {
+      type: Boolean,
+      default: false
     }
   })
 </script>

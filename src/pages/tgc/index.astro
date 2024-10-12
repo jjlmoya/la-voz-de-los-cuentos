@@ -12,7 +12,9 @@ import t from '../../translations'
 >
   <div class="tgc">
     <VContainer size="xl">
-      <CardsPage client:load />
+      <CardsPage client:only="vue">
+        <div slot="fallback">...</div>
+      </CardsPage>
     </VContainer>
   </div>
 </NavLayout>

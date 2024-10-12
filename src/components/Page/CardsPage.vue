@@ -1,35 +1,38 @@
 <template>
-  <VContainer size="xl" class="card-page">
-    <VContainer class="card-page__content">
+  <VContainer class="card-page">
       <div class="card-page__title">
         <VText as="h1" variant="header"> Temp Card Page </VText>
       </div>
       <SectionsDefault title="Debug Paquetes">
-        <VButton variant="primary" class="card-page__cards">
+        <VButton @click="openBoosterPack" variant="primary" class="card-page__cards">
             Get
         </VButton>
       </SectionsDefault>
-      <SectionsDefault title="List Obtained Cards">
+      <SectionsDefault title="Album">
         <div class="card-page__cards">
           <Card
             v-for="card in cards"
-            size="xs"
+            size="md"
             :card="card"
           />
         </div>
       </SectionsDefault>
-    </VContainer>
   </VContainer>
+  <BoosterPack />
 </template>
 
 <script setup>
   import useCards from '../../composables/useCards'
   import Card from '../TGC/Card.vue'
+  import BoosterPack from '../TGC/BoosterPack.vue'
   import { VText, VContainer, VButton } from '@overgaming/vicius'
   import SectionsDefault from '../Sections/Default.vue'
   const { getAll } = useCards()
   const cards = getAll()
-  const lang = import.meta.env.PUBLIC_LANG
+
+  const openBoosterPack = () => {
+
+  }
 </script>
 
 <style>
@@ -40,8 +43,8 @@
   }
   .card-page__cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-    grid-gap: var(--v-unit-10);
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-gap: 12px;
   }
 
   .card-page__content {
