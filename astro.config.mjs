@@ -6,7 +6,9 @@ dotenv.config();
 
 export default defineConfig({
     site: process.env.PUBLIC_SITE_URL,
-    integrations: [sitemap(), vue({
+    integrations: [sitemap({
+        filter: (page) => !page.includes('newsletter') && !page.includes('tgc'),
+    }), vue({
         template: {
             compilerOptions: {
                 isCustomElement: (tag) => {

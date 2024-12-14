@@ -9,7 +9,7 @@ export default function useNewsLetters() {
     return newsletters
   }
   const hasNewsLetters = () => {
-    return !!newsletters.length
+    return false //!!newsletters.length
   }
   return {
     getAll,

@@ -42,12 +42,11 @@
         label: t('menu.custom'),
         link: toCustomStory()
       },
-
       {
         label: t('menu.newsletter'),
         link: toNewsLetters(),
         hide: !hasNewsLetters()
-      }
+      } 
     ].filter(entry => !entry.hide)
   )
 
