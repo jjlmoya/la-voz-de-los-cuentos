@@ -28,13 +28,13 @@
     "hobbies": "Historia Antigua",
     "phobias": "Aracnofobia (sólo a Escorpiones)",
     "saga": "la-vida-de-eloy",
-    "age": "Nadie sabe",
+    "age": "-",
     "height": "185"
   },
   {
     "order": "3",
     "name": "Doña Elena",
-    "key": "dona-elena",
+    "key": "elena",
     "personality": "Es una persona organizada y eficiente, siempre lista para manejar la llegada de nuevos gatos y asignarles a los agentes del SDG. Su personalidad calmada y profesional se refleja en su actitud hacia cada caso, lo que le permite mantener el equilibrio necesario para gestionar las variadas situaciones que surgen en Sombra Larga.",
     "appearance": "Tiene un estilo conservador pero elegante. Lleva su cabello grisáceo bien peinado, a menudo con una goma detrás de la oreja para mantener el pelo alejado de la cara para que no estorben con sus gafas. Su ropa suele ser de colores neutros y siempre se asegura de estar impecablemente vestida.",
     "motivations": "Está motivada por el bienestar de los gatos y la necesidad de encontrarles hogares adecuados. Le preocupa que algunos de estos animales puedan quedar huérfanos o sin cuidado, por lo que se esfuerza por conectarlos con familias dispuestas a ofrecerles un hogar seguro.",
@@ -50,7 +50,7 @@
   {
     "order": "4",
     "name": "Agente",
-    "key": "agente",
+    "key": "agent",
     "personality": "Un entusiasta y curioso miembro del SDG. Le encanta resolver misterios y descubrir nuevos lugares en Sombra Larga. Su personalidad es una mezcla de aventurero, detective y protector de los gatos. Está siempre listo para enfrentar cualquier desafío que se presente.",
     "appearance": "Tiene el cabello moreno y liso. Sus ojos son marrones brillantes y expresivos. Su sonrisa es amplia y contagiosa. Le gusta vestir con ropa cómoda y práctica, ya que su trabajo le lleva a moverse por la ciudad durante horas.",
     "motivations": "Su principal motivación es proteger a los gatos de Sombra Larga y asegurarse de que encuentren hogares seguros y amorosos. Se apasiona por descubrir sus historias y ayudarles a encontrar su lugar en el mundo.",
@@ -78,21 +78,5 @@
     "saga": "tupi-y-su-sombrero",
     "age": "60",
     "height": "60"
-  },
-  {
-    "order": "6",
-    "name": "El Sombrero",
-    "key": "el-sombrero",
-    "personality": "Es un personaje complejo y contradictorio. Puede ser muy gruñón y agresivo cuando se siente molesto o frustrado, pero también tiene una gran capacidad para adaptarse y aprender. Tiene un lado más cariñoso y protector.",
-    "appearance": " Es un objeto mágico puntiagudo, se retuerce sobre sí mismo y es gigantesco con un brillo de oscuridad extraño.",
-    "motivations": "Sus motivaciones son inciertas, no se sabe si está para fastidiar y reirse, o para ayudar, una dualidad interesante",
-    "color": "#8B9467",
-    "food": "Moscas",
-    "birthday": "12-09",
-    "hobbies": "Escribir Chistes",
-    "phobias": "Arsonfobia",
-    "saga": "tupi-y-su-sombrero",
-    "age": "Ancestral",
-    "height": "80"
   }
 ]
