@@ -2,6 +2,9 @@ const lang = import.meta.env.PUBLIC_LANG
 const toStories = () => `/${lang === 'es' ? 'cuentos' : 'stories'}/`
 const toStory = slug => `/${lang === 'es' ? 'cuento' : 'story'}/${slug}/`
 
+const toCharacter = slug => `/${lang === 'es' ? 'personaje' : 'character'}/`
+const toCharacters = slug => `/${lang === 'es' ? 'personajes' : 'characters'}/`
+
 const toSagas = () => `/sagas/`
 const toSaga = slug => `/saga/${slug}/`
 
@@ -21,6 +24,8 @@ export {
   toNewsLetter,
   toNewsLetters,
   toCustomStory,
+  toCharacter,
   toAccount,
-  toLandingsPage
+  toLandingsPage,
+  toCharacters
 }

@@ -6,7 +6,7 @@
         v-if="isIntersecting"
         class="basic-card__img"
         :aspectRatio="1 / 1"
-        :src="`/assets/${isStory ? 'stories' : 'sagas'}/${lang}/${slug}.webp`"
+        :src="getImage()"
         loading="lazy"
       />
       <div class="basic-card__progress">
@@ -59,6 +59,10 @@
       type: Boolean,
       default: true
     },
+    isCharacter: {
+      type: Boolean,
+      default: false
+    },
     as: {
       type: String,
       default: 'div'
@@ -73,6 +77,12 @@
     key: props.slug,
     time: props.time
   })
+
+  const getImage = () => {
+    if (props.isStory) return `/assets/stories/${lang}/${props.slug}.webp`
+    if (props.isCharacter) return `/assets/characters/${props.slug}.webp`
+    return  `/assets/sagas/${lang}/${props.slug}.webp`
+  }
   const renderedTime = getTime()
   const cardRef = ref(null)
   const status = ref({})

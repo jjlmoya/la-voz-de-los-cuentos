@@ -1,0 +1,100 @@
+---
+import NavLayout from '../../../layouts/NavLayout.astro'
+import { getCharacters } from '../../../data'
+import { toCharacter } from '../../../router'
+import CharacterPage from '../../../components/Page/CharacterPage.vue'
+import t from '../../../translations'
+const siteUrl = import.meta.env.PUBLIC_SITE_URL
+const pathName =
+  import.meta.env.PUBLIC_LANG === 'en' ? 'character' : 'personaje'
+const author = import.meta.env.PUBLIC_SITE_NAME
+
+const characters = getCharacters()
+
+const { id } = Astro.params
+const character = characters.find(character => character.key === id)
+const lang = import.meta.env.PUBLIC_LANG
+
+export async function getStaticPaths() {
+  const paths = getCharacters().map(character => ({
+    params: {
+      character:
+        import.meta.env.PUBLIC_LANG === 'en' ? 'character' : 'personaje',
+      id: character.key
+    }
+  }))
+
+  return paths
+}
+
+export async function getStaticProps({ params }) {
+  const { type, slug } = params
+  if (type !== 'character' || !characters[slug]) {
+    return {
+      notFound: true
+    }
+  }
+
+  const content = characters[slug]
+
+  return {
+    props: {
+      content
+    }
+  }
+}
+
+const formatDate = dateStr => {
+  const [day, month, year] = dateStr.split('/')
+  const fullYear = `${year}`
+  return `${fullYear}-${month}-${day}T00:00:00Z`
+}
+
+const schema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: character.name,
+  description: character.description,
+  image: `/assets/characters/${character.key}.webp`,
+  url: toCharacter(id),
+  birthDate: character.birthday,
+  birthPlace: {
+    '@type': 'Place',
+    name: character.location
+  },
+  fictional: true,
+  characterRole: character.role,
+  creator: {
+    '@type': 'Person',
+    name: author,
+    url: siteUrl
+  },
+  affiliation: {
+    '@type': 'Organization',
+    name: character.saga
+  }
+})
+---
+
+<NavLayout
+  title={character.name}
+  description={character.description}
+  image={`/assets/characters/${character.key}.webp`}
+  url={`${toCharacter(character.key)}`}
+  hasVideo
+>
+  <CharacterPage
+    character={character}
+    client:load
+    url={`${toCharacter(character.key)}`}
+    title={character.name}
+  />
+
+  <div
+    id="character-data"
+    data-character={JSON.stringify(character)}
+    style="display:none"
+  >
+  </div>
+  <script type="application/ld+json" set:html={schema} />
+</NavLayout>
