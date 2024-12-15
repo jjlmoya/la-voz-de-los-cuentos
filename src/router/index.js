@@ -4,8 +4,7 @@ const toStory = slug => `/${lang === 'es' ? 'cuento' : 'story'}/${slug}/`
 
 const toCharacter = slug =>
   `/${lang === 'es' ? 'personaje' : 'character'}/${slug}/`
-const toCharacters = () =>
-  `/${lang === 'es' ? 'personajes' : 'characters'}/`
+const toCharacters = () => `/${lang === 'es' ? 'personajes' : 'characters'}/`
 
 const toSagas = () => `/sagas/`
 const toSaga = slug => `/saga/${slug}/`

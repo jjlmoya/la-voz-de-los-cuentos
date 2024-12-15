@@ -7,8 +7,7 @@ export default {
   'page.character.personality': 'Personality',
   'page.character.appearance': 'Appearance',
   'page.character.motivations': 'Dreams & Goals',
-    'page.character.color': 'Color',
-
+  'page.character.color': 'Color',
 
   'page.character.food': 'Favorite Food',
   'page.character.birthday': 'Birthday',

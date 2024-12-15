@@ -46,7 +46,10 @@
           </div>
           <div class="character-page__quick-row">
             <h2>{{ t('page.character.color') }}</h2>
-            <div class="character-page__color" :style="{backgroundColor: character.color}"></div>
+            <div
+              class="character-page__color"
+              :style="{ backgroundColor: character.color }"
+            ></div>
           </div>
           <div class="character-page__quick-row">
             <h2>{{ t('page.character.hobbies') }}</h2>
@@ -118,7 +121,12 @@
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    background-image: linear-gradient(0deg, rgb(255 255 255 / 70%) 0%, rgb(255 255 255 / 80%) 70%, rgb(255 255 255 / 90%) 100%);
+    background-image: linear-gradient(
+      0deg,
+      rgb(255 255 255 / 70%) 0%,
+      rgb(255 255 255 / 80%) 70%,
+      rgb(255 255 255 / 90%) 100%
+    );
     grid-gap: var(--v-unit-1);
     font-size: 14px;
     line-height: 1.3;
@@ -128,9 +136,9 @@
       font-weight: bold;
     }
   }
-   .character-page__quick-row {
+  .character-page__quick-row {
     display: grid;
-   }
+  }
 
   .character-page__back {
     &:before {
