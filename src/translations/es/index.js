@@ -19,6 +19,7 @@ export default {
   'menu.home': 'Inicio',
   'menu.stories': 'Cuentos',
   'menu.sagas': 'Sagas',
+  'menu.characters': 'Personajes',
   'menu.account': 'Cuenta',
   'menu.custom': 'Cuento Personalizado',
   'menu.newsletter': 'NewsLetters',
