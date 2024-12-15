@@ -117,8 +117,8 @@
   .smash-card__saga {
     z-index: 1;
     opacity: 0.15;
-    height: 100%;
     position: absolute;
+    width: 100px;
     height: 100px;
     left: 10px;
     bottom: 0;
