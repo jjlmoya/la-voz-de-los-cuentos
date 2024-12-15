@@ -81,7 +81,7 @@
   const getImage = () => {
     if (props.isStory) return `/assets/stories/${lang}/${props.slug}.webp`
     if (props.isCharacter) return `/assets/characters/${props.slug}.webp`
-    return  `/assets/sagas/${lang}/${props.slug}.webp`
+    return `/assets/sagas/${lang}/${props.slug}.webp`
   }
   const renderedTime = getTime()
   const cardRef = ref(null)

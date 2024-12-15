@@ -9,7 +9,8 @@ export async function getStaticPaths() {
   const paths = [
     {
       params: {
-        characters: import.meta.env.PUBLIC_LANG === 'en' ? 'characters' : 'personajes'
+        characters:
+          import.meta.env.PUBLIC_LANG === 'en' ? 'characters' : 'personajes'
       }
     }
   ]

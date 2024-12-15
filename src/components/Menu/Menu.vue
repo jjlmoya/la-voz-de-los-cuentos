@@ -46,7 +46,7 @@
         label: t('menu.newsletter'),
         link: toNewsLetters(),
         hide: !hasNewsLetters()
-      } 
+      }
     ].filter(entry => !entry.hide)
   )
 

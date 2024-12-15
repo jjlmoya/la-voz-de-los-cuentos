@@ -1,9 +1,7 @@
 <template>
   <VContainer size="xl" class="characters-page">
     <VText class="characters-page__title" as="h1" variant="header" color="high">
-      {{
-        t('page.characters.h1')
-      }}
+      {{ t('page.characters.h1') }}
     </VText>
     <slot />
   </VContainer>

@@ -1,5 +1,6 @@
 import account from './account'
 import landing from './landing'
+import characters from './characters'
 
 const tutorials = {
   'tutorials.progress.title': 'How Does Progress Work?',
@@ -11,6 +12,7 @@ const tutorials = {
 }
 
 export default {
+  ...characters,
   ...tutorials,
   ...landing,
   ...account,
