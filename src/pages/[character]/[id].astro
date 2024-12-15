@@ -1,9 +1,9 @@
 ---
-import NavLayout from '../../../layouts/NavLayout.astro'
-import { getCharacters } from '../../../data'
-import { toCharacter } from '../../../router'
-import CharacterPage from '../../../components/Page/CharacterPage.vue'
-import t from '../../../translations'
+import NavLayout from '../../layouts/NavLayout.astro'
+import { getCharacters } from '../../data'
+import { toCharacter } from '../../router'
+import CharacterPage from '../../components/Page/CharacterPage.vue'
+import t from '../../translations'
 const siteUrl = import.meta.env.PUBLIC_SITE_URL
 const pathName =
   import.meta.env.PUBLIC_LANG === 'en' ? 'character' : 'personaje'

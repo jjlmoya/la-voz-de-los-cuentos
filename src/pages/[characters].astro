@@ -1,10 +1,10 @@
 ---
-import NavLayout from '../../layouts/NavLayout.astro'
-import CharactersPage from '../../components/Page/CharactersPage.vue'
-import SectionsDefault from '../../components/Sections/Default.vue'
-import FilteredCharacters from '../../components/Sections/FilteredCharacters.vue'
-import t from '../../translations'
-import { toCharacters } from '../../router'
+import NavLayout from '../layouts/NavLayout.astro'
+import CharactersPage from '../components/Page/CharactersPage.vue'
+import SectionsDefault from '../components/Sections/Default.vue'
+import FilteredCharacters from '../components/Sections/FilteredCharacters.vue'
+import t from '../translations'
+import { toCharacters } from '../router'
 export async function getStaticPaths() {
   const paths = [
     {

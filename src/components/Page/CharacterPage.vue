@@ -1,17 +1,78 @@
 <template>
   <VContainer size="xl" class="character-page">
-    <h1 class="character-page__name">
-      <div>
-        {{ character.order < 10 ? `0${character.order}` : character.order }}
-      </div>
-      <div>{{ character.name }}</div>
-    </h1>
+    <div class="character-page__header">
+      <VButton
+        variant="primary"
+        class="character-page__back"
+        as="a"
+        :href="toCharacters()"
+      >
+        <svg viewBox="0 0 477.175 477.175">
+          <g>
+            <path
+              d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225   c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"
+            />
+          </g>
+        </svg>
+      </VButton>
+      <h1 class="character-page__name">
+        <div>
+          {{ character.order < 10 ? `0${character.order}` : character.order }}
+        </div>
+        <div>{{ character.name }}</div>
+        <div class="character-page__saga">
+          <VImage :src="getSagaImage()" :alt="`Saga ${character.saga}`" />
+        </div>
+      </h1>
+    </div>
     <div class="character-page__content">
       <div class="character-page__image">
         <VImage
-          :src="`/assets/characters/${character.key}.webp`"
+          :src="`/assets/characters/${character.key}-v.webp`"
           :alt="`Image ${character.name}`"
         />
+        <div class="character-page__quick">
+          <div class="character-page__quick-row">
+            <h2>{{ t('page.character.birthday') }}</h2>
+            <div>{{ character.birthday }}</div>
+          </div>
+          <div class="character-page__quick-row">
+            <h2>{{ t('page.character.age') }}</h2>
+            <div>{{ character.age }}</div>
+          </div>
+          <div class="character-page__quick-row">
+            <h2>{{ t('page.character.food') }}</h2>
+            <div>{{ character.food }}</div>
+          </div>
+          <div class="character-page__quick-row">
+            <h2>{{ t('page.character.color') }}</h2>
+            <div class="character-page__color" :style="{backgroundColor: character.color}"></div>
+          </div>
+          <div class="character-page__quick-row">
+            <h2>{{ t('page.character.hobbies') }}</h2>
+            <div>{{ character.hobbies }}</div>
+          </div>
+          <div class="character-page__quick-row">
+            <h2>{{ t('page.character.phobias') }}</h2>
+            <div>{{ character.phobias }}</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="character-page__info">
+          <div class="character-page__paragraph">
+            <h2>{{ t('page.character.personality') }}</h2>
+            <div>{{ character.personality }}</div>
+          </div>
+          <div class="character-page__paragraph">
+            <h2>{{ t('page.character.appearance') }}</h2>
+            <div>{{ character.appearance }}</div>
+          </div>
+          <div class="character-page__paragraph">
+            <h2>{{ t('page.character.motivations') }}</h2>
+            <div>{{ character.motivations }}</div>
+          </div>
+        </div>
       </div>
     </div>
   </VContainer>
@@ -24,8 +85,12 @@
       default: {}
     }
   })
-
-  import { VImage, VText, VContainer } from '@overgaming/vicius'
+  import t from '../../translations'
+  import { VImage, VContainer, VButton } from '@overgaming/vicius'
+  import useCharacter from '../../composables/useCharacter'
+  import { toCharacters } from '../../router'
+  const { getSagaImageKey } = useCharacter(props.character)
+  const getSagaImage = () => `/assets/sagas/${getSagaImageKey()}.webp`
 </script>
 
 <style>
@@ -34,18 +99,85 @@
     display: grid;
     grid-gap: var(--v-unit-2);
   }
+  .character-page__header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: var(--v-unit-1);
+  }
+  .character-page__color {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin: 0 auto;
+  }
+  .character-page__quick {
+    position: absolute;
+    bottom: 0;
+    padding: var(--v-unit-8) 0;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-image: linear-gradient(0deg, rgb(255 255 255 / 70%) 0%, rgb(255 255 255 / 80%) 70%, rgb(255 255 255 / 90%) 100%);
+    grid-gap: var(--v-unit-1);
+    font-size: 14px;
+    line-height: 1.3;
+    width: 100%;
+
+    h2 {
+      font-weight: bold;
+    }
+  }
+   .character-page__quick-row {
+    display: grid;
+   }
+
+  .character-page__back {
+    &:before {
+      content: ' ';
+      height: 100%;
+      border-left: 3px solid white;
+      border-right: 1px solid white;
+      margin-left: 4px;
+    }
+    svg {
+      fill: white;
+      height: 25px;
+    }
+  }
+  .character-page__info {
+    display: grid;
+    grid-gap: var(--v-unit-4);
+    align-items: start;
+    justify-content: start;
+    h2 {
+      font-weight: bold;
+    }
+    @media (width <= 1360px) {
+      font-size: 14px;
+      line-height: 1.2;
+    }
+  }
   .character-page__content {
+    position: relative;
     padding: var(--v-unit-4);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media (width <= 1360px) {
+      grid-template-columns: 1fr;
+    }
+    grid-gap: var(--v-unit-4);
   }
 
   .character-page__name {
+    background-color: white;
+    position: relative;
     display: grid;
     grid-template-columns: auto 1fr;
     grid-gap: var(--v-unit-4);
     font-size: 24px;
     padding: var(--v-unit-4);
-    background-color: black;
-    color: white;
+    color: var(--v-color-primary);
     font-weight: bold;
 
     @media (width >= 1360px) {
@@ -57,5 +189,16 @@
     position: relative;
     border-radius: var(--v-unit-3);
     overflow: hidden;
+  }
+
+  .character-page__saga {
+    opacity: 0.2;
+    position: absolute;
+    left: 25px;
+    bottom: 0;
+    height: 60px;
+    img {
+      height: 60px;
+    }
   }
 </style>
