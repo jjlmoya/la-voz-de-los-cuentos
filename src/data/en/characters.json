@@ -3,6 +3,7 @@
     "order": "1",
     "name": "Luna",
     "key": "luna",
+    "image": "luna",
     "personality": "She is a young woman with a radiant and adventurous personality. Her curiosity about the cosmos and the universe drives her to explore and discover new places and phenomena, always with a smile on her face and a sparkle in her violet eyes. She is determined and persistent, never giving up easily when she sets her mind to a goal, whether it’s building a bridge or understanding a mysterious phenomenon. Her mind is active and analytical, always seeking the logic behind things, which leads her to ask questions and passionately search for answers. Deep within her beats a love for learning, motivating her to continue investigating and uncovering new secrets of the universe.",
     "appearance": "She has luminous blue hair that seems to shine in the sunlight, like a precious jewel framing her angelic face. Her violet eyes are deep and expressive, reflecting her curiosity and love for learning. Her skin is soft and clear, with a touch of color from exposure to the sun's rays. Her facial features are delicate and well-defined, giving her a fresh and youthful appearance. When she moves, her blue hair flows around her face, as if it were a celestial halo surrounding her.",
     "motivations": "What truly motivates her is the desire to learn and uncover new secrets of the universe. She is fascinated by the mysteries of the cosmos and feels thrilled by the prospect of exploring and understanding phenomena that remain unexplained. Her curiosity drives her to seek answers and passionately investigate, making her feel alive and connected to the world around her. She is also motivated by her desire to help others, especially those who feel confused or lost in their own lives. She wants to be a guide and a role model, showing them that curiosity and a love for learning can lead them to incredible places.",
@@ -12,13 +13,13 @@
     "hobbies": "Read",
     "phobias": "Acrophobia - Fear of heights.",
     "saga": "luna-and-physics",
-    "age": "155",
-    "height": "155"
+    "age": "14"
   },
   {
     "order": "2",
     "name": "Eloy",
     "key": "eloy",
+    "image": "eloy",
     "personality": "He is a man with a vibrant and contagious personality. He has an easy smile and a deep laugh that can diffuse any tense situation. A natural storyteller, he has the ability to make his tales so vivid and exciting that they feel real. His passion for storytelling is genuine and resonates with those around him, creating an atmosphere of connection and excitement at any moment. Despite his youthful appearance (well-preserved), he possesses a mature wisdom and sense of humor that make him deeply cherished by his friends and family.",
     "appearance": "He is a tall and slender man with dark brown hair and deep brown eyes that sparkle with mischief. He has a well-groomed beard and a wide-brimmed hat, his favorite accessory. His clothing is comfortable and suited to the occasion, and he always carries a satchel filled with stories and memories.\n\n\n\n\n\n\n",
     "motivations": "Sharing their stories with others. They love seeing how people connect with their tales and how they can inspire or entertain those around them. They also have a deep curiosity about the world and are always eager to explore new places and experiences to find fresh stories.",
@@ -28,13 +29,13 @@
     "hobbies": "Ancient History",
     "phobias": "Arachnophobia (specific to Scorpions)",
     "saga": "the-life-of-eloy",
-    "age": "185",
-    "height": "185"
+    "age": "??"
   },
   {
     "order": "3",
     "name": "Mrs. Elena",
-    "key": "elena",
+    "key": "mrs-elena",
+    "image": "elena",
     "personality": "They are an organized and efficient individual, always ready to handle the arrival of new cats and assign them to the agents of the CRT. Their calm and professional demeanor is reflected in their approach to each case, allowing them to maintain the balance needed to manage the diverse situations that arise in Shadevale.",
     "appearance": "She has a conservative yet elegant style. Her graying hair is neatly groomed, often tied back with a clip behind her ear to keep it away from her face and glasses. Her clothing is typically in neutral tones, and she always ensures she is impeccably dressed.",
     "motivations": "She is driven by the well-being of cats and the need to find them suitable homes. She is deeply concerned that some of these animals might be left orphaned or uncared for, so she works tirelessly to connect them with families willing to provide them with a safe and loving home.",
@@ -44,13 +45,13 @@
     "hobbies": "Saloon Dance",
     "phobias": "Claustrophobia ",
     "saga": "crt",
-    "age": "165",
-    "height": "165"
+    "age": "62"
   },
   {
     "order": "4",
     "name": "Agent",
     "key": "agent",
+    "image": "agent",
     "personality": "An enthusiastic and curious member of the CRT. They love solving mysteries and discovering new places in Shadevale. Their personality is a blend of adventurer, detective, and protector of cats. They are always ready to face any challenge that comes their way.",
     "appearance": "She has straight, dark brown hair. Her eyes are bright, expressive, and brown. Her smile is wide and contagious. She prefers to wear comfortable and practical clothing, as her work keeps her moving around the city for hours.",
     "motivations": "Their main motivation is to protect the cats of Shadevale and ensure they find safe and loving homes. They are passionate about uncovering their stories and helping them find their place in the world.",
@@ -60,13 +61,13 @@
     "hobbies": "Climbing",
     "phobias": "Musophobia",
     "saga": "crt",
-    "age": "180",
-    "height": "180"
+    "age": "32"
   },
   {
     "order": "5",
     "name": "Tupi",
     "key": "tupi",
+    "image": "tupi",
     "personality": "He is a grumpy sorcerer who is always on the defensive, but he also possesses a remarkable ability to adapt and learn.",
     "appearance": "Es un personaje diminuto, solo mide 60 cm de altura, lo que hace que parezca que alguien lo ha encogido por accidente y no sabe cómo devolverlo a su tamaño original. A pesar de su pequeña estatura, tiene unos ojos enormes y brillantes que destellan como faros en la noche, lo que le da un aspecto casi sobrenatural. Su sonrisa es cosida de manera peculiar, lo que le da un toque un poco inquietante, pero no de una manera que sea completamente desagradable. De hecho, su sonrisa parece estar siempre tramando algo, como si estuviera pensando en algún plan secreto o broma que pronto llevará a cabo.",
     "motivations": "Their motivation is to live a simple, uncomplicated life and be able to come home to eat and sleep in comfort. \"Anything interesting is just the prelude to a bigger problem,\" they always say.",
@@ -76,7 +77,6 @@
     "hobbies": "Sailing",
     "phobias": "Scopophobia",
     "saga": "tupi-and-his-hat",
-    "age": "60",
-    "height": "60"
+    "age": "60"
   }
 ]

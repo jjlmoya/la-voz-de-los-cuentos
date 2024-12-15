@@ -55,7 +55,7 @@ const schema = JSON.stringify({
   '@type': 'Person',
   name: character.name,
   description: character.personality,
-  image: `/assets/characters/${character.key}-v.webp`,
+  image: `/assets/characters/${character.image}-v.webp`,
   url: toCharacter(id),
   birthDate: character.birthday,
   birthPlace: {
@@ -79,7 +79,7 @@ const schema = JSON.stringify({
 <NavLayout
   title={character.name}
   description={character.personality}
-  image={`/assets/characters/${character.key}-v.webp`}
+  image={`/assets/characters/${character.image}-v.webp`}
   url={`${toCharacter(character.key)}`}
   hasVideo
 >

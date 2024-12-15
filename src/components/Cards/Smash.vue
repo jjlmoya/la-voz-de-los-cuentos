@@ -74,6 +74,10 @@
       type: String,
       default: ''
     },
+    image: {
+      type: String,
+      default: ''
+    },
     as: {
       type: String,
       default: 'div'
@@ -81,7 +85,7 @@
   })
 
   const { getSagaImageKey } = useCharacter(props)
-  const getImage = () => `/assets/characters/${props.slug}.webp`
+  const getImage = () => `/assets/characters/${props.image}.webp`
   const getSagaImage = () => `/assets/sagas/${getSagaImageKey()}.webp`
 </script>
 

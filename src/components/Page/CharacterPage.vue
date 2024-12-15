@@ -28,7 +28,7 @@
     <div class="character-page__content">
       <div class="character-page__image">
         <VImage
-          :src="`/assets/characters/${character.key}-v.webp`"
+          :src="`/assets/characters/${character.image}-v.webp`"
           :alt="`Image ${character.name}`"
         />
         <div class="character-page__quick">

@@ -14,6 +14,7 @@
         v-for="character in filteredAndSortedCharacters"
         :slug="character.key"
         :key="character.key"
+        :image="character.image"
         :name="character.name"
         :order="character.order"
         :saga="character.saga"
