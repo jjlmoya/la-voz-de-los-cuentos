@@ -205,6 +205,7 @@
     left: 25px;
     bottom: 0;
     height: 60px;
+    width: 60px;
     img {
       height: 60px;
     }
