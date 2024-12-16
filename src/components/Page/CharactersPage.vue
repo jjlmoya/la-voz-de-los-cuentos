@@ -8,12 +8,6 @@
 </template>
 
 <script setup>
-  const props = defineProps({
-    story: {
-      type: Object,
-      default: {}
-    }
-  })
   import t from '../../translations'
   import { VText, VContainer } from '@overgaming/vicius'
 </script>

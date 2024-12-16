@@ -13,6 +13,7 @@ export default function useCharacters() {
     if (saga.includes('eloy')) return 'eloy'
     if (saga.includes('sdg') || saga.includes('crt')) return 'sdg'
     if (saga.includes('tupi') || saga.includes('crt')) return 'tupi'
+    if (saga.includes('llamarada')) return 'llamarada'
     return 'tupi'
   }
 

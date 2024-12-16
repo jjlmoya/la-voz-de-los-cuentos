@@ -13,7 +13,9 @@
     "hobbies": "Leer",
     "phobias": "Acrofobia  (a las alturas)",
     "saga": "luna-y-la-fisica",
-    "age": "14"
+    "age": "14",
+    "height": "155",
+    "faction": "ally"
   },
   {
     "order": "2",
@@ -29,7 +31,9 @@
     "hobbies": "Historia Antigua",
     "phobias": "Aracnofobia (sólo a Escorpiones)",
     "saga": "la-vida-de-eloy",
-    "age": "??"
+    "age": "??",
+    "height": "185",
+    "faction": "ally"
   },
   {
     "order": "3",
@@ -45,7 +49,9 @@
     "hobbies": "Baile de Salón",
     "phobias": "Claustrofobia",
     "saga": "sdg",
-    "age": "62"
+    "age": "62",
+    "height": "165",
+    "faction": "ally"
   },
   {
     "order": "4",
@@ -61,7 +67,9 @@
     "hobbies": "Escalada",
     "phobias": "Musofobia",
     "saga": "sdg",
-    "age": "32"
+    "age": "32",
+    "height": "180",
+    "faction": "ally"
   },
   {
     "order": "5",
@@ -77,6 +85,98 @@
     "hobbies": "Navegar en Barco",
     "phobias": "Escopofobia",
     "saga": "tupi-y-su-sombrero",
-    "age": "60"
+    "age": "60",
+    "height": "60",
+    "faction": "ally"
+  },
+  {
+    "order": "6",
+    "name": "Llamarada",
+    "key": "llamarada",
+    "image": "llamarada",
+    "personality": "Es un espíritu valiente y protector. Tiene un corazón lleno de decisión y coraje, y nunca se rinde incluso frente a los desafíos más difíciles. Siempre busca ayudar a los demás y tiene un fuerte sentido de la justicia, actuando como un faro de esperanza para quienes la rodean.        ",
+    "appearance": "Es una llama mágica de pelaje azul eléctrico y ojos que reflejan los colores del arcoíris. Es valiente, decidida y siempre está dispuesta a ayudar a los demás. Posee una fuerte conexión con la magia del Reino de Imaginaria y tiene la capacidad de crear pompas de jabón mágicas que contienen diminutas fracciones de magia, capaces de liberar energías místicas.        ",
+    "motivations": "Proteger Imaginaria y a sus habitantes, restaurar la vitalidad de su hogar y derrotar a los enemigos que buscan sumirlo en sombras y tristeza.\t",
+    "color": "#0000FF",
+    "food": "Frutas del bosque\t",
+    "birthday": "15-03",
+    "hobbies": "Correr y explorar\t",
+    "phobias": "Nictofobia",
+    "saga": "llamarada",
+    "age": "??",
+    "height": "100",
+    "faction": "ally"
+  },
+  {
+    "order": "c",
+    "name": "Grisura",
+    "key": "grisura",
+    "image": "grayscale",
+    "personality": "Es una figura melancólica y calculadora. Su naturaleza sombría la impulsa a buscar el lado más oscuro de cada situación, deleitándose en extinguir la alegría de quienes la rodean. Es astuta y sabe cómo manipular los sentimientos de los demás, siendo tan temida como incomprendida.\t",
+    "appearance": "Una nube oscura con forma fluida y cambiante. Sus bordes se difuminan como si estuviera constantemente evaporándose, y sus ojos apagados emiten una fría indiferencia. Su presencia es opresiva y parece absorber toda la luz a su alrededor.\t",
+    "motivations": "Llevar tristeza y oscuridad al mundo, apagando la alegría y el color en cada lugar que toca. Busca cubrirlo todo con una neblina eterna de melancolía y desolación.\t",
+    "color": "#808080",
+    "food": "Helado de vainilla",
+    "birthday": "07-11",
+    "hobbies": "Observar a Otros",
+    "phobias": "Colorfobia",
+    "saga": "llamarada",
+    "age": "??",
+    "height": "Variable",
+    "faction": "enemy"
+  },
+  {
+    "order": "8",
+    "name": "Kronar",
+    "key": "kronar",
+    "image": "kronar",
+    "personality": "Es el Amo de las Tinieblas Temporales, un ser maligno que busca controlar el tiempo en todo Imaginaria. Es astuto, manipulador y posee un profundo deseo de poder. Fue desterrado hace siglos por sus intentos de manipular el flujo del tiempo, pero ha regresado con planes de congelar el tiempo en todo el reino para moldear el futuro a su antojo.\t",
+    "appearance": "Una figura alta y esbelta, envuelta en un manto negro que absorbe la luz a su alrededor. Su rostro está oculto tras una máscara de hierro oxidada, y en sus manos sostiene un bastón adornado con un reloj de arena. Su presencia es imponente y emana una aura de oscuridad y frialdad.\t",
+    "motivations": "Controlar el tiempo en todo Imaginaria, congelando el flujo temporal para convertirse en el único capaz de moverse y moldear el futuro según sus deseos.\t",
+    "color": "#000000",
+    "food": "Carne Asada",
+    "birthday": "31-10",
+    "hobbies": "Las Artes Oscuras",
+    "phobias": "Fotofobia",
+    "saga": "llamarada",
+    "age": "150",
+    "height": "50",
+    "faction": "enemy"
+  },
+  {
+    "order": "9",
+    "name": "Azaroth",
+    "key": "azaroth",
+    "image": "azaroth",
+    "personality": "Es un demonio de aspecto imponente pero de corazón amable. Aunque su apariencia puede ser intimidante, es comprensivo y dispuesto a ayudar, especialmente cuando se trata de enseñar lecciones valiosas sobre responsabilidad y atención al detalle.\t",
+    "appearance": "Una figura alta y robusta con piel de tono rojizo, cuernos curvados y ojos brillantes. A pesar de su apariencia demoníaca, su expresión es amistosa y sus movimientos son calmados y seguros.\t",
+    "motivations": "Transmitir enseñanzas valiosas, mantener la paz en su comunidad y encontrar maneras de reparar el daño causado por su pasado oscuro.\t",
+    "color": "#8B1A1A",
+    "food": "Manzanas asadas",
+    "birthday": "06-06",
+    "hobbies": "Jugar al Ajedrez",
+    "phobias": "Chronophobia",
+    "saga": "",
+    "age": "??",
+    "height": "210",
+    "faction": "ally"
+  },
+  {
+    "order": "10",
+    "name": "Traga Luces",
+    "key": "traga-luces",
+    "image": "lighteater",
+    "personality": "Un hombre solitario y melancólico, marcado por su pasado y las consecuencias de sus acciones. Aunque su apariencia es misteriosa, en el fondo busca redención y conexión con los demás.\t",
+    "appearance": "Hombre de mediana edad, vestido con un largo abrigo negro y un sombrero de ala ancha que oculta su rostro. Sus ojos reflejan tristeza y anhelo.\t",
+    "motivations": "Encontrar una forma de revertir el efecto de su invención y reconectar con la humanidad, compartiendo su historia para que otros aprendan de sus errores.\t",
+    "color": "#4B0082",
+    "food": "Pan de Centeno",
+    "birthday": "01-11",
+    "hobbies": "Pasear por el bosque",
+    "phobias": "Photophobia ",
+    "saga": "el-tragaluces",
+    "age": "45",
+    "height": "180",
+    "faction": "ally"
   }
 ]

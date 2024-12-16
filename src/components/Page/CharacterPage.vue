@@ -90,12 +90,10 @@
               :order="_character.order"
               :saga="_character.saga"
               :color="_character.color"
+              :faction="_character.faction"
             />
           </div>
-          <div
-            class="character-page__paragraph"
-            v-if="relatedStories.length"
-          >
+          <div class="character-page__paragraph" v-if="relatedStories.length">
             <h2>{{ t('page.character.stories') }}</h2>
             <div class="character-page__stories">
               <Basic
@@ -108,7 +106,6 @@
                 isStory
               />
             </div>
-             
           </div>
         </div>
       </div>
@@ -130,10 +127,9 @@
   import { toCharacters } from '../../router'
   import Smash from '../Cards/Smash.vue'
   import { onMounted, ref } from 'vue'
-import Basic from '../Cards/Basic.vue';
-  const { getSagaImageKey, getCharactersSameSaga, getRelatedStories } = useCharacter(
-    props.character
-  )
+  import Basic from '../Cards/Basic.vue'
+  const { getSagaImageKey, getCharactersSameSaga, getRelatedStories } =
+    useCharacter(props.character)
   const getSagaImage = () => `/assets/sagas/${getSagaImageKey()}.webp`
   const relatedCharacters = ref([])
   const relatedStories = ref([])

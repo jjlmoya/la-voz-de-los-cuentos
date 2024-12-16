@@ -13,7 +13,9 @@
     "hobbies": "Read",
     "phobias": "Acrophobia - Fear of heights.",
     "saga": "luna-and-physics",
-    "age": "14"
+    "age": "14",
+    "height": "155",
+    "faction": ""
   },
   {
     "order": "2",
@@ -29,7 +31,9 @@
     "hobbies": "Ancient History",
     "phobias": "Arachnophobia (specific to Scorpions)",
     "saga": "the-life-of-eloy",
-    "age": "??"
+    "age": "??",
+    "height": "185",
+    "faction": ""
   },
   {
     "order": "3",
@@ -40,12 +44,14 @@
     "appearance": "She has a conservative yet elegant style. Her graying hair is neatly groomed, often tied back with a clip behind her ear to keep it away from her face and glasses. Her clothing is typically in neutral tones, and she always ensures she is impeccably dressed.",
     "motivations": "She is driven by the well-being of cats and the need to find them suitable homes. She is deeply concerned that some of these animals might be left orphaned or uncared for, so she works tirelessly to connect them with families willing to provide them with a safe and loving home.",
     "color": "#87CEEB",
-    "food": "\nSpanish Omelette",
+    "food": "Spanish Omelette",
     "birthday": "12-04",
     "hobbies": "Saloon Dance",
     "phobias": "Claustrophobia ",
     "saga": "crt",
-    "age": "62"
+    "age": "62",
+    "height": "165",
+    "faction": ""
   },
   {
     "order": "4",
@@ -61,7 +67,9 @@
     "hobbies": "Climbing",
     "phobias": "Musophobia",
     "saga": "crt",
-    "age": "32"
+    "age": "32",
+    "height": "180",
+    "faction": ""
   },
   {
     "order": "5",
@@ -77,6 +85,98 @@
     "hobbies": "Sailing",
     "phobias": "Scopophobia",
     "saga": "tupi-and-his-hat",
-    "age": "60"
+    "age": "60",
+    "height": "60",
+    "faction": ""
+  },
+  {
+    "order": "6",
+    "name": "Llamarada",
+    "key": "llamarada",
+    "image": "llamarada",
+    "personality": "Llamarada is a brave and protective spirit! It has a heart full of courage and never gives up, no matter how hard things get. It always wants to help others and believes in doing what's right, acting like a little light of hope for everyone around.\t",
+    "appearance": "Llamarada is a magical llama with bright electric-blue fur and eyes that shimmer with rainbow colors. It's super brave, full of determination, and always ready to lend a helping hoof! It’s deeply connected to the magic of the Kingdom of Imaginaria and can create magical soap bubbles filled with tiny bits of magic that release mystical energies.\t",
+    "motivations": "To protect Imaginaria and its friends, bring life back to its home, and beat the bad guys!",
+    "color": "#0000FF",
+    "food": "Berry Fruits",
+    "birthday": "15-03",
+    "hobbies": "Running and exploring ",
+    "phobias": "Nyctophobia",
+    "saga": "llamarada",
+    "age": "??",
+    "height": "100",
+    "faction": ""
+  },
+  {
+    "order": "7",
+    "name": "Grayscale",
+    "key": "grayscale",
+    "image": "grayscale",
+    "personality": "A melancholic and calculating figure who always looks for the darkest side of every situation. It takes delight in extinguishing the joy of those around it. Clever and manipulative, it’s both feared and misunderstood.\t",
+    "appearance": "A dark, shifting cloud with blurry edges, as if it’s constantly evaporating. Its dim, lifeless eyes radiate cold indifference. Its presence feels heavy, almost as if it absorbs all the light nearby.\t",
+    "motivations": "To bring sadness and darkness to the world, snuffing out joy and color everywhere it goes. It seeks to cover everything in an eternal mist of gloom and despair.\"",
+    "color": "#808080",
+    "food": "Vanilla Ice Cream ",
+    "birthday": "07-11",
+    "hobbies": "Watching Others",
+    "phobias": "Colorfobia",
+    "saga": "llamarada",
+    "age": "??",
+    "height": "Variable",
+    "faction": "enemy"
+  },
+  {
+    "order": "8",
+    "name": "Kronar",
+    "key": "kronar",
+    "image": "kronar",
+    "personality": "The Master of Temporal Darkness, an evil being determined to control time across Imaginaria. Cunning and manipulative, with an insatiable hunger for power. Banished long ago for meddling with the flow of time, but now returned with plans to freeze time and reshape the future.\t",
+    "appearance": "A tall, slender figure wrapped in a black cloak that absorbs all light. Its face is hidden behind a rusty iron mask, and it wields a staff adorned with an hourglass. Its presence is commanding, radiating an aura of darkness and cold.\t",
+    "motivations": "To control time across Imaginaria, freezing its flow to become the only one who can move freely and reshape the future as desired",
+    "color": "#000000",
+    "food": "Grilled Meat",
+    "birthday": "31-10",
+    "hobbies": "Dark Arts",
+    "phobias": "Photofobia",
+    "saga": "llamarada",
+    "age": "150",
+    "height": "200",
+    "faction": "enemy"
+  },
+  {
+    "order": "9",
+    "name": "Azaroth",
+    "key": "azaroth",
+    "image": "azaroth",
+    "personality": "An imposing yet kind-hearted demon. Despite a scary appearance, Azaroth is understanding and always ready to help, especially when teaching valuable lessons about responsibility and paying attention to details.\t",
+    "appearance": "A tall, sturdy figure with reddish skin, curved horns, and glowing eyes. Despite the intimidating look, its expression is friendly, and its movements are calm and confident.\t",
+    "motivations": "To teach important lessons, keep peace in the community, and make up for past mistakes.",
+    "color": "#8B1A1A",
+    "food": "Baked Apples ",
+    "birthday": "06-06",
+    "hobbies": "Playing Chess",
+    "phobias": "Chronophobia",
+    "saga": "",
+    "age": "??",
+    "height": "210",
+    "faction": ""
+  },
+  {
+    "order": "10",
+    "name": "LightEater",
+    "key": "lighteater",
+    "image": "lighteater",
+    "personality": "A lonely and melancholic figure shaped by his past and the consequences of his actions. While mysterious, deep down he seeks redemption and longs to reconnect with others.\t",
+    "appearance": "A middle-aged man dressed in a long black coat and a wide-brimmed hat that hides his face. His eyes carry a deep sadness and longing.\t",
+    "motivations": "To find a way to undo the effects of his invention and reconnect with humanity, sharing his story so others can learn from his mistakes",
+    "color": "#4B0082",
+    "food": "Rye Bread",
+    "birthday": "01-11",
+    "hobbies": "Walking in the forest",
+    "phobias": "Photophobia ",
+    "saga": "lighteater",
+    "age": "45",
+    "height": "180",
+    "faction": ""
   }
 ]

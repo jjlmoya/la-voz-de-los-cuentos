@@ -17,5 +17,4 @@ export default {
 
   'page.character.same.saga': 'In the Same Saga',
   'page.character.stories': 'Their Adventures'
-
 }

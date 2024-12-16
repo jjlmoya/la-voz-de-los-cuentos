@@ -7,6 +7,15 @@
       }"
     >
       <div class="smash-card__content">
+        <div class="smash-card__foe" v-if="faction === 'enemy'">
+          <img
+            :alt="`Imagen de ${name}`"
+            class="smash-card__img"
+            :aspectRatio="2 / 1"
+            :src="getImageFoe()"
+            loading="lazy"
+          />
+        </div>
         <VText
           class="smash-card__order"
           variant="header"
@@ -51,7 +60,7 @@
 <script setup>
   import useCharacter from '../../composables/useCharacter'
   import { toCharacter } from '../../router'
-  import { VText } from '@overgaming/vicius'
+  import { VText, VImage } from '@overgaming/vicius'
 
   const props = defineProps({
     name: {
@@ -81,11 +90,16 @@
     as: {
       type: String,
       default: 'div'
+    },
+    faction: {
+      type: String,
+      default: ''
     }
   })
 
   const { getSagaImageKey } = useCharacter(props)
   const getImage = () => `/assets/characters/${props.image}.webp`
+  const getImageFoe = () => `/assets/icons/foe.webp`
   const getSagaImage = () => `/assets/sagas/${getSagaImageKey()}.webp`
 </script>
 
@@ -105,6 +119,7 @@
     height: 100px;
   }
   .smash-card__image {
+    border-radius: 8px;
     height: 100%;
     position: absolute;
     height: 125px;
@@ -116,6 +131,15 @@
       width: 100%;
       height: 100%;
     }
+  }
+  .smash-card__foe {
+    opacity: 0.5;
+    width: 27px;
+    height: 28px;
+    position: absolute;
+    left: 7px;
+    top: 0;
+    border-bottom: 3px dotted #6b0a0a;
   }
 
   .smash-card__saga {

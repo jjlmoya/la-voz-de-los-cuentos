@@ -19,6 +19,7 @@
         :order="character.order"
         :saga="character.saga"
         :color="character.color"
+        :faction="character.faction"
       />
     </div>
   </div>
@@ -81,7 +82,7 @@
 
   .sections-fildered-character__content {
     display: grid;
-    grid-gap: var(--v-unit-2);
+    grid-gap: var(--v-unit-2) var(--v-unit-4);
     grid-template-columns: 1fr;
 
     @media (width >= 900px) {
