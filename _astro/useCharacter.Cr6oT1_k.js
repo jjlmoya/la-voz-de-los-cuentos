@@ -1,1 +1,0 @@
-function n(u){return{getSagaImageKey:()=>u.saga.includes("luna")?"luna":u.saga.includes("eloy")?"eloy":u.saga.includes("sdg")||u.saga.includes("crt")?"sdg":(u.saga.includes("tupi")||u.saga.includes("crt"),"tupi")}}export{n as u};
