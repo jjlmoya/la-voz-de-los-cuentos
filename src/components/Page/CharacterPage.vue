@@ -75,6 +75,41 @@
             <h2>{{ t('page.character.motivations') }}</h2>
             <div>{{ character.motivations }}</div>
           </div>
+          <div
+            class="character-page__paragraph"
+            v-if="relatedCharacters.length"
+          >
+            <h2>{{ t('page.character.same.saga') }}</h2>
+            <Smash
+              v-for="_character in relatedCharacters"
+              :key="_character.order"
+              as="h3"
+              :slug="_character.key"
+              :image="_character.image"
+              :name="_character.name"
+              :order="_character.order"
+              :saga="_character.saga"
+              :color="_character.color"
+            />
+          </div>
+          <div
+            class="character-page__paragraph"
+            v-if="relatedStories.length"
+          >
+            <h2>{{ t('page.character.stories') }}</h2>
+            <div class="character-page__stories">
+              <Basic
+                as="h3"
+                v-for="story in relatedStories"
+                :slug="story.key"
+                :key="story.key"
+                :title="story.name"
+                :time="parseInt(story.time)"
+                isStory
+              />
+            </div>
+             
+          </div>
         </div>
       </div>
     </div>
@@ -88,12 +123,24 @@
       default: {}
     }
   })
+
   import t from '../../translations'
   import { VImage, VContainer, VButton } from '@overgaming/vicius'
   import useCharacter from '../../composables/useCharacter'
   import { toCharacters } from '../../router'
-  const { getSagaImageKey } = useCharacter(props.character)
+  import Smash from '../Cards/Smash.vue'
+  import { onMounted, ref } from 'vue'
+import Basic from '../Cards/Basic.vue';
+  const { getSagaImageKey, getCharactersSameSaga, getRelatedStories } = useCharacter(
+    props.character
+  )
   const getSagaImage = () => `/assets/sagas/${getSagaImageKey()}.webp`
+  const relatedCharacters = ref([])
+  const relatedStories = ref([])
+  onMounted(() => {
+    relatedCharacters.value = getCharactersSameSaga()
+    relatedStories.value = getRelatedStories()
+  })
 </script>
 
 <style>
@@ -106,6 +153,12 @@
     display: grid;
     grid-template-columns: auto 1fr;
     grid-gap: var(--v-unit-1);
+  }
+
+  .character-page__stories {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-gap: 12px;
   }
   .character-page__color {
     width: 25px;
@@ -159,7 +212,10 @@
     align-items: start;
     justify-content: start;
     h2 {
+      font-size: 24px;
       font-weight: bold;
+      padding-top: var(--v-unit-6);
+      padding-bottom: var(--v-unit-2);
     }
     @media (width <= 1360px) {
       font-size: 14px;
@@ -171,6 +227,7 @@
     padding: var(--v-unit-4);
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: start;
     @media (width <= 1360px) {
       grid-template-columns: 1fr;
     }

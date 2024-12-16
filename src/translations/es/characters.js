@@ -13,5 +13,8 @@ export default {
   'page.character.hobbies': 'Hobbies',
   'page.character.phobias': 'Mayor Temor',
   'page.character.age': 'Edad',
-  'page.character.height': 'Altura'
+  'page.character.height': 'Altura',
+
+  'page.character.same.saga': 'Comparten Saga',
+  'page.character.stories': 'Sus Apariciones'
 }

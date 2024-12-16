@@ -8,11 +8,14 @@ export default {
   'page.character.appearance': 'Appearance',
   'page.character.motivations': 'Dreams & Goals',
   'page.character.color': 'Color',
-
   'page.character.food': 'Favorite Food',
   'page.character.birthday': 'Birthday',
   'page.character.hobbies': 'Hobbies',
   'page.character.phobias': 'Greatest Fear',
   'page.character.age': 'Age',
-  'page.character.height': 'Height'
+  'page.character.height': 'Height',
+
+  'page.character.same.saga': 'In the Same Saga',
+  'page.character.stories': 'Their Adventures'
+
 }
