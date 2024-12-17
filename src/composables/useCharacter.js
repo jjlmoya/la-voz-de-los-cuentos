@@ -14,8 +14,8 @@ export default function useCharacter(character) {
       console.log(story)
       return (
         story.saga === character.saga &&
-        (story.story.includes(character.name + " ") ||
-          story.story.includes(character.name.toLowerCase() + " "))
+        (story.story.includes(character.name + ' ') ||
+          story.story.includes(character.name.toLowerCase() + ' '))
       )
     })
   }
@@ -33,12 +33,21 @@ export default function useCharacter(character) {
 
   const getSagaImageKey = () => {
     const saga = character.saga
+
     if (saga.includes('luna')) return 'luna'
     if (saga.includes('eloy')) return 'eloy'
     if (saga.includes('sdg') || saga.includes('crt')) return 'sdg'
     if (saga.includes('tupi') || saga.includes('crt')) return 'tupi'
+    if (saga.includes('legends') || saga.includes('leyendas')) return 'legends'
+    if (saga.includes('458')) return '458'
+    if (saga.includes('paco')) return 'paco'
+    if (saga.includes('carlota') || saga.includes('charlotte'))
+      return 'cockroach'
     if (saga.includes('llamarada')) return 'llamarada'
-    return 'tupi'
+    if (saga.includes('finalizador') || saga.includes('finisher'))
+      return 'finalizador'
+
+    return 'feather'
   }
 
   return {
