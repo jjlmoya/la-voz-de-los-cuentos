@@ -14,8 +14,8 @@ export default function useCharacter(character) {
       console.log(story)
       return (
         story.saga === character.saga &&
-        (story.story.includes(character.name) ||
-          story.story.includes(character.name.toLowerCase()))
+        (story.story.includes(character.name + " ") ||
+          story.story.includes(character.name.toLowerCase() + " "))
       )
     })
   }

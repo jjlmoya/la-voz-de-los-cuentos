@@ -15,7 +15,7 @@
     "saga": "luna-y-la-fisica",
     "age": "14",
     "height": "155",
-    "faction": "ally"
+    "faction": ""
   },
   {
     "order": "2",
@@ -33,7 +33,7 @@
     "saga": "la-vida-de-eloy",
     "age": "??",
     "height": "185",
-    "faction": "ally"
+    "faction": ""
   },
   {
     "order": "3",
@@ -51,7 +51,7 @@
     "saga": "sdg",
     "age": "62",
     "height": "165",
-    "faction": "ally"
+    "faction": ""
   },
   {
     "order": "4",
@@ -69,7 +69,7 @@
     "saga": "sdg",
     "age": "32",
     "height": "180",
-    "faction": "ally"
+    "faction": ""
   },
   {
     "order": "5",
@@ -87,7 +87,7 @@
     "saga": "tupi-y-su-sombrero",
     "age": "60",
     "height": "60",
-    "faction": "ally"
+    "faction": ""
   },
   {
     "order": "6",
@@ -105,7 +105,7 @@
     "saga": "llamarada",
     "age": "??",
     "height": "100",
-    "faction": "ally"
+    "faction": ""
   },
   {
     "order": "c",
@@ -159,7 +159,7 @@
     "saga": "",
     "age": "??",
     "height": "210",
-    "faction": "ally"
+    "faction": ""
   },
   {
     "order": "10",
@@ -177,6 +177,24 @@
     "saga": "el-tragaluces",
     "age": "45",
     "height": "180",
-    "faction": "ally"
+    "faction": ""
+  },
+  {
+    "order": "15",
+    "name": "Noa",
+    "key": "noa",
+    "image": "noa",
+    "personality": "Es curiosa, empática y soñadora. Tiende a observar el mundo con asombro, siempre dispuesta a aprender y a ayudar a los demás con una sonrisa.",
+    "appearance": "De estatura menuda, con el cabello castaño claro y una mirada cálida y reflexiva. Suele vestir prendas de tonos verdes y marrones que parecen mimetizarse con el entorno natural. Sus mejillas son ligeramente sonrosadas y su postura transmite serenidad.",
+    "motivations": "Desea comprender la magia que habita en la naturaleza y compartirla con quienes la rodean. Le impulsa la búsqueda de secretos ocultos en cada rincón del bosque, y anhela, con ternura, despertar la misma curiosidad en otros corazones.",
+    "color": "#28998B",
+    "food": "Frutos del bosque con miel",
+    "birthday": "21-04",
+    "hobbies": "Recoger Hojas Caídas",
+    "phobias": "Nyctophobia",
+    "saga": "",
+    "age": "8",
+    "height": "100",
+    "faction": ""
   }
 ]

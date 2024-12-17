@@ -178,5 +178,23 @@
     "age": "45",
     "height": "180",
     "faction": ""
+  },
+  {
+    "order": "11",
+    "name": "Noa",
+    "key": "noa",
+    "image": "noa",
+    "personality": "She is curious, empathetic, and a dreamer. She tends to observe the world with wonder, always willing to learn and help others with a smile.",
+    "appearance": "Of small stature, with light brown hair and a warm, reflective gaze. She usually wears clothing in shades of green and brown that seem to blend into the natural surroundings. Her cheeks are slightly rosy, and her posture conveys serenity.\n",
+    "motivations": "She longs to understand the magic that resides in nature and to share it with those around her. She is driven by the search for hidden secrets in every corner of the forest, and tenderly hopes to awaken the same curiosity in other hearts.\n",
+    "color": "#28998B",
+    "food": "Forest berries with honey",
+    "birthday": "21-04",
+    "hobbies": "Collecting Fallen Leaves",
+    "phobias": "Nyctophobia",
+    "saga": "",
+    "age": "8",
+    "height": "100",
+    "faction": ""
   }
 ]
