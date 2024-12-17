@@ -268,5 +268,23 @@
     "age": "8",
     "height": "100",
     "faction": ""
+  },
+  {
+    "order": "16",
+    "name": "Dice of Discord",
+    "key": "dice-of-discord",
+    "image": "dice-of-discord",
+    "personality": "It has a deeply malicious and whimsical personality. Although it lacks human emotions, it enjoys watching the balance crumble and chaos consume others. It has no loyalties or empathy, acting only in its own interest: to unleash absolute disorder. Its voice, if ever heard, sounds like a distorted whisper bringing omens of ruin. It lives feeding off the suffering and despair of its victims, and its nature prevents it from understanding the beauty of order or hope.",
+    "appearance": "It is a colossal cube-shaped entity, hundreds of meters tall. Its surface is covered in a deep black with purple flashes, as if fragments of the cosmos were trapped in its structure. Each of its faces, titanic and threatening, is adorned with arcane symbols of calamities: loss, hopelessness, war, disease, betrayal, and ruin. When it moves, it produces a roar as if reality itself were being torn apart, leaving a trail of shadows and an aura that blocks light around it.",
+    "motivations": "Its main motivation is to destroy balance and spread chaos wherever it goes. It delights in the misfortune of others, as every tear shed and every broken hope feeds its power. It seeks to corrupt any form of order and harmony, especially manifesting in moments of uncertainty and doubt. To it, chance is not fun: it is a tool of destruction. It dreams of all existence falling into a state of total entropy, where absolute randomness reigns and endless despair prevails.",
+    "color": "#1B0033",
+    "food": "Dry Tears",
+    "birthday": "07-02",
+    "hobbies": "Manipulate Fate ",
+    "phobias": "Harmoniafobia",
+    "saga": "",
+    "age": "3000",
+    "height": "Enormous ",
+    "faction": "enemy"
   }
 ]

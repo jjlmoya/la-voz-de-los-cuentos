@@ -268,5 +268,23 @@
     "age": "8",
     "height": "100",
     "faction": ""
+  },
+  {
+    "order": "16",
+    "name": "Dado de la Discordia",
+    "key": "dado-de-la-discordia",
+    "image": "dice-of-discord",
+    "personality": "Tiene una personalidad profundamente maliciosa y caprichosa. Aunque carece de emociones humanas, disfruta observando cómo el equilibrio se desmorona y el caos consume a los demás. No tiene lealtades ni empatía, actuando únicamente en su propio interés: desatar el desorden absoluto. Su voz, si alguna vez se escucha, suena como un susurro distorsionado que trae presagios de ruina. Vive alimentándose del sufrimiento y la desesperación de sus víctimas, y su naturaleza le impide comprender la belleza del orden o la esperanza.\t",
+    "appearance": "Es un coloso en forma de cubo, con cientos de metros de altura. Su superficie está cubierta de un negro profundo con destellos púrpura, como si fragmentos del cosmos estuvieran atrapados en su estructura. Cada una de sus caras, titánica y amenazante, está adornada con símbolos arcanos de calamidades: pérdida, desesperanza, guerra, enfermedad, traición y ruina. Al moverse, produce un rugido como si la misma realidad se desgarrara, dejando una estela de sombras y un aura que bloquea la luz a su alrededor.\t",
+    "motivations": "La motivación principal es destruir el equilibrio y propagar el caos por donde pasa. Se deleita en la desgracia ajena, pues cada lágrima derramada y cada esperanza rota alimentan su poder. Busca corromper cualquier forma de orden y armonía, manifestándose especialmente en momentos de incertidumbre y duda. Para él, el azar no es diversión: es una herramienta de destrucción. Sueña con que toda la existencia caiga en un estado de entropía total, donde reine el azar absoluto y la desesperación sin fin.\t",
+    "color": "#1B0033\t",
+    "food": "Lágrimas secas\t",
+    "birthday": "07-02",
+    "hobbies": "Manipular el destino",
+    "phobias": "Harmoniafobia ",
+    "saga": "",
+    "age": "3000",
+    "height": "Enormísimo",
+    "faction": "enemy"
   }
 ]
