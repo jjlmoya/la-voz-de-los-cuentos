@@ -16,15 +16,7 @@
             loading="lazy"
           />
         </div>
-        <VText
-          class="smash-card__order"
-          variant="header"
-          color="primary"
-          maxLines="2"
-          :as="as"
-        >
-          {{ order < 10 ? `0${order}` : `${order}` }}
-        </VText>
+
         <VText
           class="smash-card__name"
           variant="header"
@@ -60,7 +52,7 @@
 <script setup>
   import useCharacter from '../../composables/useCharacter'
   import { toCharacter } from '../../router'
-  import { VText, VImage } from '@overgaming/vicius'
+  import { VText } from '@overgaming/vicius'
 
   const props = defineProps({
     name: {
@@ -161,9 +153,9 @@
     grid-template-columns: auto 1fr;
     grid-gap: var(--v-unit-6);
   }
-  .smash-card__order,
   .smash-card__name {
     z-index: 10;
-    font-size: 20px;
+    padding-left: var(--v-unit-4);
+    font-size: 22px;
   }
 </style>
