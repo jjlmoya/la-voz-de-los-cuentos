@@ -35,7 +35,6 @@
     </div>
   </div>
 </template>
-
 <script setup>
   import { ref, onMounted } from 'vue'
   import t from '../../translations'
@@ -57,28 +56,39 @@
     label: {
       type: Boolean,
       default: false
+    },
+    onShare: {
+      type: Function,
+      default: () => {}
     }
   })
+
   const url = ref(props.url)
   const title = ref(props.title)
+
+  function openShareWindow(shareUrl) {
+    window.open(shareUrl, '_blank')
+    props.onShare()
+  }
+
   function shareOnFacebook() {
     const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url.value}`
-    window.open(shareUrl, '_blank')
+    openShareWindow(shareUrl)
   }
 
   function shareOnTwitter() {
     const shareUrl = `https://twitter.com/intent/tweet?url=${url.value}&text=${title.value}`
-    window.open(shareUrl, '_blank')
+    openShareWindow(shareUrl)
   }
 
   function shareOnLinkedIn() {
     const shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url.value}`
-    window.open(shareUrl, '_blank')
+    openShareWindow(shareUrl)
   }
 
   function shareOnWhatsApp() {
     const shareUrl = `https://wa.me/?text=${title.value}%20${url.value}`
-    window.open(shareUrl, '_blank')
+    openShareWindow(shareUrl)
   }
 
   onMounted(() => {

@@ -53,7 +53,7 @@
           </div>
         </div>
       </div>
-      <SocialShare v-if="isSocialShare" :url="url" :title="title" />
+      <SocialShare v-if="isSocialShare" :url="url" :title="title" :onShare="lostFocusOnShare" />
       <div class="story-page__tool-wrapper">
         <VButton class="story-page__button" @click="printPdf" aria-label="PDF">
           <svg
@@ -154,9 +154,13 @@
   import SectionsDefault from '../Sections/Default.vue'
   import SocialShare from '../Social/Share.vue'
 
-  SectionsDefault
   import { ref, toValue, onMounted } from 'vue'
   import useStory from '../../composables/useStory'
+
+
+  const lostFocusOnShare = () => {
+    isSocialShare.value = false
+  }
 
   const isFontSelector = ref(false)
   const isSocialShare = ref(false)
