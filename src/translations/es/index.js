@@ -108,5 +108,6 @@ export default {
   'page.custom.description':
     'Bienvenido a nuestra página mágica de creación de cuentos infantiles.Aquí puedes pedir un cuento personalizado de forma gratuita. ¡Deja volar tu imaginación y permítenos crear una historia especial solo para ti!',
 
-  'schema.type': 'Literatura Infantil'
+  'schema.type': 'Literatura Infantil',
+  'spotify.voice': 'Voz'
 }

@@ -106,5 +106,7 @@ export default {
 
   'page.home.h1': 'Home',
   'page.home.description':
-    'Welcome to Bubo Boo! Here, every tale turns into a magical adventure. Explore stories full of wonder and mystery, where imagination soars high and the fun never ends.'
+    'Welcome to Bubo Boo! Here, every tale turns into a magical adventure. Explore stories full of wonder and mystery, where imagination soars high and the fun never ends.',
+
+  'spotify.listen': 'Voice'
 }

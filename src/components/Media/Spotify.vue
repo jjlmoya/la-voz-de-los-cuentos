@@ -12,13 +12,14 @@
     />
     <div v-if="!iframe" class="spotify__loading"></div>
     <div :class="{ 'spotify__mask--animation': iframe }" class="spotify__mask">
-      <VText variant="label">Voice</VText>
+      <VText variant="label">{{ t('spotify.voice') }}</VText>
     </div>
   </div>
 </template>
 
 <script setup>
   const spotifyID = import.meta.env.PUBLIC_SPOTIFY_USER
+  import t from '../../translations';
   import { ref } from 'vue'
   import { VText } from '@overgaming/vicius'
   const iframe = ref(false)
