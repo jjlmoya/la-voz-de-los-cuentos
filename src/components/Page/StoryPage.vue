@@ -263,8 +263,9 @@
   }
 
   .story-page__content {
+    text-wrap: pretty;
     background-color: var(--v-color-surface-high);
-    padding: var(--v-unit-2) var(--v-unit-6) var(--v-unit-6) var(--v-unit-6);
+    padding: var(--v-unit-2) var(--v-unit-4) var(--v-unit-6) var(--v-unit-4);
     border-radius: 0 0 var(--v-unit-2) var(--v-unit-2);
     display: grid;
     grid-gap: var(--v-unit-4);
