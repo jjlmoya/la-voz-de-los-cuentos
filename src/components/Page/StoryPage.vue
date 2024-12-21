@@ -212,7 +212,11 @@
 
 <style>
   .story-page {
-    padding: var(--v-unit-4);
+    
+    @media (width >= 1360px) {
+      padding: var(--v-unit-4);
+    }
+    padding: var(--v-unit-1);
     display: grid;
     grid-gap: var(--v-unit-2);
   }
