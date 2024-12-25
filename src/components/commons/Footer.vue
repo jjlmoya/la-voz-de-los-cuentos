@@ -40,11 +40,11 @@
       </div>
     </VContainer>
     <div class="footer-wrapper">
-      <!--
+    
       <div class="footer-links">
-        <VDivider>{{ t('footer.sagas') }}</VDivider>
+        <VDivider>{{ t('footer.sites') }}</VDivider>
       </div>
-      -->
+
       <div class="footer-links">
         <VDivider>{{ t('footer.community') }}</VDivider>
       </div>
@@ -53,6 +53,9 @@
       </div>
     </div>
     <div class="footer-wrapper">
+      <div class="footer-links">
+        <VLink v-for="brand in getBrands()" :href="brand.link" rel="noopener noreferrer dofollow">{{ brand.name }} [{{brand.lang}}]</VLink>
+      </div>
       <!--
       <div class="footer-links">
         <VLink href="/saga/la-vida-de-eloy/">La Vida de Eloy</VLink>
@@ -121,6 +124,7 @@
   import pkg from '../../../package.json'
   import t from '../../translations'
   import useLandings from '../../composables/useLandings'
+  const { getBrands } = useBrand()
   const siteName = import.meta.env.PUBLIC_SITE_NAME
   const lang = import.meta.env.PUBLIC_LANG
   const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT
@@ -149,6 +153,7 @@
     VField,
     VButton
   } from '@overgaming/vicius'
+import useBrand from '../../composables/useBrand'
 
   const email = ref('')
   const emailError = ref(false)
@@ -210,7 +215,7 @@
 
   .footer-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: var(--v-unit-4);
     text-align: center;
     align-items: start;

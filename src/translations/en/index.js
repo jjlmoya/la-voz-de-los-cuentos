@@ -33,6 +33,7 @@ export default {
   'footer.sagas': 'Sagas',
 
   'footer.community': 'Join Our Communities',
+  'footer.sites': 'Our Sites',
 
   'footer.interesting': 'Useful Links',
   'footer.interesting.custom': 'Make a Custom Story',

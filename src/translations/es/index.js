@@ -32,6 +32,7 @@ export default {
 
   'footer.sagas': 'Sagas',
 
+  'footer.sites': 'Nuestros Sitios',
   'footer.community': 'Nuestras Comunidades',
   'footer.interesting': 'Enlaces de Interés',
   'footer.interesting.custom': 'Crear cuento personalizado',
