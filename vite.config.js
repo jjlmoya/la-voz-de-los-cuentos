@@ -123,7 +123,7 @@ export default defineConfig({
         lib: {
             entry: 'src/library.js',
             name: 'LaVozDeLosCuentos',
-            fileName: (format) => `lavozdeloscuentos.${format}.js`
+            fileName: `lavozdeloscuentos`
         },
         rollupOptions: isLibraryBuild ? {
             external: ['vue'],

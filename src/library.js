@@ -1,8 +1,4 @@
-import { default as Cards } from './components/Cards/index.js'
-import { default as Pages } from './components/Page/index.js'
+export { default as StoriesPage } from './components/Page/StoriesPage.vue'
 
 
-export default { 
-    ...Cards, 
-    ...Pages
- }
+

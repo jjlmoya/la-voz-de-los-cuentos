@@ -1,11 +1,17 @@
 {
   "name": "la-voz-de-los-cuentos",
   "type": "module",
-  "version": "0.1.204",
+  "version": "0.1.205",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/vicius.umd.cjs",
+  "module": "./dist/vicius.js",
   "exports": {
     ".": {
-      "import": "./dist/lavozdeloscuentos.es.js",
-      "require": "./dist/lavozdeloscuentos.umd.js"
+      "types": "./dist/vicius.d.ts",
+      "import": "./dist/vicius.js",
+      "require": "./dist/vicius.umd.cjs"
     }
   },
   "scripts": {
@@ -41,7 +47,7 @@
     "vite-plugin-pwa": "^0.20.5"
   },
   "peerDependencies": {
-    "vue": "latest"
+    "vue": "^3.4.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
