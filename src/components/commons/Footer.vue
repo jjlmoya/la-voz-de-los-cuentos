@@ -40,7 +40,6 @@
       </div>
     </VContainer>
     <div class="footer-wrapper">
-    
       <div class="footer-links">
         <VDivider>{{ t('footer.sites') }}</VDivider>
       </div>
@@ -54,7 +53,12 @@
     </div>
     <div class="footer-wrapper">
       <div class="footer-links">
-        <VLink v-for="brand in getBrands()" :href="brand.link" rel="noopener noreferrer dofollow">{{ brand.name }} [{{brand.lang}}]</VLink>
+        <VLink
+          v-for="brand in getBrands()"
+          :href="brand.link"
+          rel="noopener noreferrer dofollow"
+          >{{ brand.name }} [{{ brand.lang }}]</VLink
+        >
       </div>
       <!--
       <div class="footer-links">
@@ -153,7 +157,7 @@
     VField,
     VButton
   } from '@overgaming/vicius'
-import useBrand from '../../composables/useBrand'
+  import useBrand from '../../composables/useBrand'
 
   const email = ref('')
   const emailError = ref(false)

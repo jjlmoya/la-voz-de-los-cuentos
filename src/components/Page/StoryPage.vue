@@ -53,7 +53,12 @@
           </div>
         </div>
       </div>
-      <SocialShare v-if="isSocialShare" :url="url" :title="title" :onShare="lostFocusOnShare" />
+      <SocialShare
+        v-if="isSocialShare"
+        :url="url"
+        :title="title"
+        :onShare="lostFocusOnShare"
+      />
       <div class="story-page__tool-wrapper">
         <VButton class="story-page__button" @click="printPdf" aria-label="PDF">
           <svg
@@ -157,7 +162,6 @@
   import { ref, toValue, onMounted } from 'vue'
   import useStory from '../../composables/useStory'
 
-
   const lostFocusOnShare = () => {
     isSocialShare.value = false
   }
@@ -212,7 +216,6 @@
 
 <style>
   .story-page {
-    
     @media (width >= 1360px) {
       padding: var(--v-unit-4);
     }

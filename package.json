@@ -1,7 +1,7 @@
 {
   "name": "la-voz-de-los-cuentos",
   "type": "module",
-  "version": "0.1.203",
+  "version": "0.1.204",
   "exports": {
     ".": {
       "import": "./dist/lavozdeloscuentos.es.js",
@@ -16,6 +16,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "build:lib": "cross-env BUILD_LIB=true vite build",
+    "publish:lib": "npm run build:lib && npm publish",
+    "clean": "rimraf dist",
     "statics": "npm run copy-assets",
     "games": "npm i la-voz-de-los-cuentos-games@latest && npm run copy-assets",
     "content": "node ./scripts/content.js",
@@ -53,6 +55,7 @@
     "ncp": "^2.0.0",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
+    "rimraf": "^6.0.1",
     "stylelint": "^16.9.0",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-recommended": "^14.0.1",

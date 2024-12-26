@@ -19,7 +19,7 @@
 
 <script setup>
   const spotifyID = import.meta.env.PUBLIC_SPOTIFY_USER
-  import t from '../../translations';
+  import t from '../../translations'
   import { ref } from 'vue'
   import { VText } from '@overgaming/vicius'
   const iframe = ref(false)
