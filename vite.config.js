@@ -1,9 +1,11 @@
 import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 import { VitePWA } from 'vite-plugin-pwa';
-import astro from '@astrojs/vite-plugin-astro';
 
-const domain = process.env.PUBLIC_SITE_URL
-const lang = process.env.PUBLIC_LANG
+const isLibraryBuild = process.env.BUILD_LIB === 'true';
+
+const domain = process.env.PUBLIC_SITE_URL;
+const lang = process.env.PUBLIC_LANG;
 
 const manifestMap = {
     'https://lavozdeloscuentos.es': {
@@ -112,20 +114,35 @@ const manifestMap = {
             }
         }
     }
-}
-const getManifestMap = () => manifestMap[domain]
+};
+
+const getManifestMap = () => manifestMap[domain];
+
 export default defineConfig({
     build: {
-        rollupOptions: {
+        lib: {
+            entry: 'src/library.js',
+            name: 'LaVozDeLosCuentos',
+            fileName: (format) => `lavozdeloscuentos.${format}.js`
+        },
+        rollupOptions: isLibraryBuild ? {
+            external: ['vue'],
             output: {
-                entryFileNames: '*/[name].[hash].js',
+                globals: {
+                    vue: 'Vue'
+                }
+            }
+        } : {
+            output: {
+                entryFileNames: '[name].[hash].js',
                 chunkFileNames: 'assets/[name].[hash].js',
                 assetFileNames: 'assets/[name].[hash].[ext]'
             }
         }
     },
-    plugins: [  
-        astro(),
-        VitePWA(getManifestMap())
-    ]
+    plugins: [
+        vue(),
+        !isLibraryBuild && astro(),
+        !isLibraryBuild && VitePWA(getManifestMap())
+    ].filter(Boolean)
 });
