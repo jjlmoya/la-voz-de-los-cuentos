@@ -120,19 +120,7 @@ const getManifestMap = () => manifestMap[domain];
 
 export default defineConfig({
     build: {
-        lib: {
-            entry: 'src/library.js',
-            name: 'LaVozDeLosCuentos',
-            fileName: `lavozdeloscuentos`
-        },
-        rollupOptions: isLibraryBuild ? {
-            external: ['vue'],
-            output: {
-                globals: {
-                    vue: 'Vue'
-                }
-            }
-        } : {
+        rollupOptions: {
             output: {
                 entryFileNames: '[name].[hash].js',
                 chunkFileNames: 'assets/[name].[hash].js',
@@ -142,7 +130,7 @@ export default defineConfig({
     },
     plugins: [
         vue(),
-        !isLibraryBuild && astro(),
-        !isLibraryBuild && VitePWA(getManifestMap())
+        astro(),
+        VitePWA(getManifestMap())
     ].filter(Boolean)
 });
