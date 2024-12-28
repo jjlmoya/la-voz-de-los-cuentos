@@ -2,7 +2,6 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { VitePWA } from 'vite-plugin-pwa';
 
-const isLibraryBuild = process.env.BUILD_LIB === 'true';
 
 const domain = process.env.PUBLIC_SITE_URL;
 const lang = process.env.PUBLIC_LANG;
