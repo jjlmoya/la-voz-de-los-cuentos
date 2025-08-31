@@ -15,6 +15,11 @@
       <VText v-if="time" class="basic-card__time">
         {{ renderedTime }}
       </VText>
+      <div v-if="isCompleted" class="basic-card__completed">
+        <VText class="basic-card__completed-text">
+          {{ lang === 'es' ? '¡LEÍDO!' : 'READ!' }}
+        </VText>
+      </div>
       <div class="basic-card__progress">
         <div
           :style="{ width: `${status.current || progress}%` }"
@@ -41,7 +46,7 @@
 <script setup>
   const lang = import.meta.env.PUBLIC_LANG
   import { toStory } from '../../router'
-  import { ref, onMounted, onUnmounted } from 'vue'
+  import { ref, onMounted, onUnmounted, computed } from 'vue'
   import { VText } from '@overgaming/vicius'
   import useStory from '../../composables/useStory'
 
@@ -90,6 +95,10 @@
   const cardRef = ref(null)
   const status = ref({})
   const isIntersecting = ref(false)
+
+  const isCompleted = computed(() => {
+    return (status.value.current || props.progress) >= 100
+  })
 
   let observer
 
@@ -330,6 +339,31 @@
     }
   }
 
+  .basic-card__completed {
+    position: absolute;
+    top: var(--v-unit-2);
+    left: var(--v-unit-2);
+    background: linear-gradient(135deg, 
+      var(--v-color-accent-primary) 0%, 
+      var(--v-color-primary) 100%);
+    color: white;
+    padding: var(--v-unit-2) var(--v-unit-4);
+    border-radius: var(--v-radius-xl);
+    font-size: var(--v-font-size-sm);
+    font-weight: 900;
+    box-shadow: var(--v-shadow-lg);
+    border: 2px solid var(--v-color-background);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    z-index: 7;
+    animation: completed-bounce 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+    transform-origin: center;
+  }
+
+  .basic-card__completed-text {
+    font-size: var(--v-font-size-sm);
+    line-height: 1;
+  }
+
   .basic-card__time {
     position: absolute;
     top: var(--v-unit-3);
@@ -368,6 +402,24 @@
     }
   }
 
+  @keyframes completed-bounce {
+    0% {
+      opacity: 0;
+      transform: scale(0.3) rotate(-15deg);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2) rotate(5deg);
+    }
+    70% {
+      transform: scale(0.9) rotate(-2deg);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+  }
+
   @keyframes time-badge-bounce {
     0% {
       opacity: 0;
@@ -389,6 +441,11 @@
     }
     
     .basic-card__time {
+      animation: none;
+      opacity: 1;
+    }
+
+    .basic-card__completed {
       animation: none;
       opacity: 1;
     }
