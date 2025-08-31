@@ -8,9 +8,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     permissions:
       contents: read
       pages: write
@@ -39,7 +36,6 @@ jobs:
 
       - name: Add CNAME file
         run: echo "lavozdeloscuentos.es" > ./dist/CNAME
-
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
