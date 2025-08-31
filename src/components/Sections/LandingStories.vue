@@ -27,7 +27,36 @@
 <style scoped>
   .sections-landing {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: var(--v-unit-8);
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--v-unit-8);
+    padding: 0;
+  }
+
+  @media (max-width: 480px) {
+    .sections-landing {
+      grid-template-columns: 1fr;
+      gap: var(--v-unit-6);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .sections-landing {
+      grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+      gap: var(--v-unit-12);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .sections-landing {
+      grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
+      gap: var(--v-unit-12);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .sections-landing {
+      grid-template-columns: repeat(auto-fit, minmax(580px, 1fr));
+      gap: var(--v-unit-12);
+    }
   }
 </style>

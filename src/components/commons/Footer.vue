@@ -1,14 +1,19 @@
 <template>
-  <div class="footer">
-    <div class="footer-header">
-      <VText class="footer-title" variant="header" as="h3"
-        >{{ siteName }} v{{ pkg.version }}</VText
-      >
-    </div>
-    <VDivider class="footer-divider">{{ t('footer.newsletter') }}</VDivider>
-    <VContainer size="xs" class="footer-newsletter">
-      <div class="footer-newsletter__content">
-        <VField>
+  <footer class="footer">
+    <VContainer class="footer-container">
+      <!-- Header -->
+      <div class="footer-header">
+        <VText class="footer-title" variant="header" as="h3">
+          {{ siteName }} v{{ pkg.version }}
+        </VText>
+      </div>
+
+      <!-- Newsletter Section -->
+      <div class="footer-newsletter">
+        <VText variant="subtitle" class="footer-section-title">
+          {{ t('footer.newsletter') }}
+        </VText>
+        <VField class="newsletter-field">
           <VInput
             v-if="!successMessage"
             aria-label="Input Email Newsletter"
@@ -18,111 +23,128 @@
             v-model="email"
             :invalid="emailError"
             @input="validateEmail"
+            placeholder="tu@email.com"
           />
           <template #label v-if="!successMessage">
             <VFieldLabel for="emailInput">Email:</VFieldLabel>
           </template>
           <template #message>
-            <VText v-if="successMessage">{{
-              t('footer.newsletters.thanks')
-            }}</VText>
-            <VText v-if="emailError">{{ t('footer.newsletters.error') }}</VText>
+            <VText v-if="successMessage" class="success-message">
+              {{ t('footer.newsletters.thanks') }}
+            </VText>
+            <VText v-if="emailError" class="error-message">
+              {{ t('footer.newsletters.error') }}
+            </VText>
           </template>
           <VButton
             v-if="!successMessage"
             color="primary"
             :disabled="!isEmailValid || isSubmitting"
             @click="submitForm"
+            class="newsletter-button"
           >
             {{ t('footer.newsletter.button') }}
           </VButton>
         </VField>
       </div>
-    </VContainer>
-    <div class="footer-wrapper">
-      <div class="footer-links">
-        <VDivider>{{ t('footer.sites') }}</VDivider>
+
+      <!-- Main Content -->
+      <div class="footer-content">
+        <!-- Sites Section -->
+        <div class="footer-section">
+          <VText variant="subtitle" class="footer-section-title">
+            {{ t('footer.sites') }}
+          </VText>
+          <div class="footer-links">
+            <VLink
+              v-for="brand in getBrands()"
+              :key="brand.name"
+              :href="brand.link"
+              rel="noopener noreferrer dofollow"
+              class="footer-link"
+            >
+              {{ brand.name }} [{{ brand.lang }}]
+            </VLink>
+          </div>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="footer-section">
+          <VText variant="subtitle" class="footer-section-title">
+            {{ t('footer.community') }}
+          </VText>
+          <div class="footer-social">
+            <VLink
+              v-if="links.youtube"
+              :href="`https://www.youtube.com/${links.youtube}?sub_confirmation=1`"
+              class="footer-link"
+            >
+              Youtube
+            </VLink>
+            <VLink
+              v-if="links.spotify"
+              :href="`https://open.spotify.com/show/${links.spotify}`"
+              class="footer-link"
+            >
+              Spotify
+            </VLink>
+            <VLink
+              v-if="links.tiktok"
+              :href="`https://www.tiktok.com/${links.tiktok}`"
+              class="footer-link"
+            >
+              TikTok
+            </VLink>
+            <VLink
+              v-if="links.instagram"
+              :href="`https://www.instagram.com/${links.instagram}/`"
+              class="footer-link"
+            >
+              Instagram
+            </VLink>
+            <VLink
+              v-if="links.facebook"
+              :href="`https://www.facebook.com/${links.facebook}`"
+              class="footer-link"
+            >
+              Facebook
+            </VLink>
+          </div>
+        </div>
+
+        <!-- Interesting Section -->
+        <div class="footer-section">
+          <VText variant="subtitle" class="footer-section-title">
+            {{ t('footer.interesting') }}
+          </VText>
+          <div class="footer-links">
+            <VLink :href="toCustomStory()" class="footer-link">
+              {{ t('footer.interesting.custom') }}
+            </VLink>
+            <VLink 
+              v-if="links.email" 
+              :href="`mailto:${links.email}`"
+              class="footer-link"
+            >
+              {{ t('footer.interesting.contact') }}
+            </VLink>
+          </div>
+        </div>
       </div>
 
-      <div class="footer-links">
-        <VDivider>{{ t('footer.community') }}</VDivider>
-      </div>
-      <div class="footer-links">
-        <VDivider>{{ t('footer.interesting') }}</VDivider>
-      </div>
-    </div>
-    <div class="footer-wrapper">
-      <div class="footer-links">
-        <VLink
-          v-for="brand in getBrands()"
-          :href="brand.link"
-          rel="noopener noreferrer dofollow"
-          >{{ brand.name }} [{{ brand.lang }}]</VLink
+      <!-- Landing Links -->
+      <div class="footer-landing" v-if="landings.length">
+        <VLink 
+          v-for="(landing, index) in landings" 
+          :key="landing.key"
+          :href="toLandingsPage(landing.key)"
+          class="landing-link"
         >
+          {{ landing.title }}{{ index < landings.length - 1 ? ' · ' : '' }}
+        </VLink>
       </div>
-      <!--
-      <div class="footer-links">
-        <VLink href="/saga/la-vida-de-eloy/">La Vida de Eloy</VLink>
-        <VLink href="/saga/sdg/">Sistema de Distribución de Gatos</VLink>
-        <VLink href="/saga/luna-y-la-fisica/">Luna y la ciencia</VLink>
-        <VLink href="/saga/llamarada/">Llamarada en Imaginaria</VLink>
-      </div>
-      -->
-      <div class="footer-links">
-        <div class="footer-links__element">
-          <VLink
-            v-if="links.youtube"
-            :href="`https://www.youtube.com/${links.youtube}?sub_confirmation=1`"
-            >Youtube</VLink
-          >
-        </div>
-        <div class="footer-links__element">
-          <VLink
-            v-if="links.spotify"
-            :href="`https://open.spotify.com/show/${links.spotify}`"
-            >Spotify</VLink
-          >
-        </div>
-        <div class="footer-links__element">
-          <VLink
-            v-if="links.tiktok"
-            :href="`https://www.tiktok.com/${links.tiktok}`"
-            >TikTok</VLink
-          >
-        </div>
-        <div class="footer-links__element">
-          <VLink
-            v-if="links.instagram"
-            :href="`https://www.instagram.com/${links.instagram}/`"
-            >Instagram</VLink
-          >
-        </div>
-        <div class="footer-links__element">
-          <VLink
-            v-if="links.facebook"
-            :href="`https://www.facebook.com/${links.facebook}`"
-            >Facebook</VLink
-          >
-        </div>
-      </div>
-      <div class="footer-links">
-        <VLink :href="toCustomStory()">{{
-          t('footer.interesting.custom')
-        }}</VLink>
-        <VLink v-if="links.email" :href="`mailto:${links.email}`">{{
-          t('footer.interesting.contact')
-        }}</VLink>
-        <!--<VLink href="/legal/cookies/">Política de Cookies</VLink>-->
-        <!--<VLink href="/legal/privacidad/">Política de Privacidad</VLink>-->
-      </div>
-    </div>
-    <div class="footer-landing">
-      ·
-      <VLink v-for="landing in landings" :href="toLandingsPage(landing.key)">
-        {{ landing.title }}
-      </VLink>
-    </div>
-  </div>
+    </VContainer>
+  </footer>
 </template>
 <script setup>
   import pkg from '../../../package.json'
@@ -206,55 +228,193 @@
 <style scoped>
   .footer {
     margin-top: var(--v-unit-12);
-    padding: var(--v-unit-8);
-    background-color: var(--v-color-surface-mod);
-    border-radius: var(--v-unit-4) var(--v-unit-4) 0 0;
-    align-items: center;
-    display: grid;
-    grid-gap: var(--v-unit-3);
-    .v-button {
-      color: white;
-    }
+    background-color: var(--v-color-background-soft);
+    border-radius: var(--v-radius-lg) var(--v-radius-lg) 0 0;
   }
 
-  .footer-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: var(--v-unit-4);
-    text-align: center;
-    align-items: start;
+  .footer-container {
+    padding: var(--v-unit-8) var(--v-unit-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--v-unit-6);
   }
-  .footer-newsletter {
-    width: 100%;
-    display: grid;
-    justify-content: center;
+
+  .footer-header {
+    text-align: center;
+    padding-bottom: var(--v-unit-4);
+    border-bottom: 1px solid var(--v-color-text-low);
   }
 
   .footer-title {
+    color: var(--v-color-text-high);
+    margin: 0;
+  }
+
+  .footer-newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: var(--v-unit-3);
+    max-width: 400px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .footer-section-title {
+    color: var(--v-color-primary);
+    font-weight: 500;
+    margin: 0 0 var(--v-unit-2) 0;
     text-align: center;
   }
 
-  .footer-links {
-    font-size: 16px;
+  .newsletter-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--v-unit-2);
+  }
+
+  .newsletter-button {
+    align-self: stretch;
+    margin-top: var(--v-unit-2);
+  }
+
+  .success-message {
+    color: var(--v-color-accent-primary);
+    text-align: center;
+  }
+
+  .error-message {
+    color: #e74c3c;
+    text-align: center;
+  }
+
+  .footer-content {
     display: grid;
-    grid-gap: var(--v-unit-1);
+    gap: var(--v-unit-6);
+    grid-template-columns: 1fr;
+  }
+
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--v-unit-3);
+    text-align: center;
+  }
+
+  .footer-links,
+  .footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: var(--v-unit-2);
     align-items: center;
   }
 
-  .footer-input-error {
+  .footer-link {
+    color: var(--v-color-text-medium);
+    text-decoration: none;
+    padding: var(--v-unit-1) var(--v-unit-2);
+    border-radius: var(--v-radius-sm);
+    transition: all 0.2s ease;
+    font-size: var(--v-font-size-sm);
   }
-  .footer-input-success {
+
+  .footer-link:hover {
+    color: var(--v-color-text-high);
+    background-color: var(--v-color-background);
+    transform: translateY(-1px);
   }
-  .footer-divider {
-    color: var(--v-color-primary);
-  }
+
   .footer-landing {
-    line-height: 1;
-    font-size: 9px;
-    .v-link {
-      padding: 0 var(--v-unit-1);
-      text-decoration: underline;
-      opacity: 0.8;
+    padding-top: var(--v-unit-4);
+    border-top: 1px solid var(--v-color-text-low);
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .landing-link {
+    color: var(--v-color-text-low);
+    text-decoration: none;
+    font-size: var(--v-font-size-xs);
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+  }
+
+  .landing-link:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+
+  /* Mobile improvements */
+  @media (max-width: 480px) {
+    .footer-container {
+      padding: var(--v-unit-6) var(--v-unit-3);
+      gap: var(--v-unit-4);
     }
+
+    .footer-newsletter {
+      max-width: 100%;
+    }
+
+    .footer-section-title {
+      font-size: var(--v-font-size-md);
+    }
+
+    .footer-link {
+      padding: var(--v-unit-2) var(--v-unit-3);
+      font-size: var(--v-font-size-md);
+    }
+  }
+
+  /* Tablet and Desktop */
+  @media (min-width: 768px) {
+    .footer-container {
+      padding: var(--v-unit-8);
+      gap: var(--v-unit-8);
+    }
+
+    .footer-content {
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--v-unit-8);
+    }
+
+    .footer-section {
+      text-align: left;
+    }
+
+    .footer-section-title {
+      text-align: left;
+    }
+
+    .footer-links,
+    .footer-social {
+      align-items: flex-start;
+    }
+
+    .footer-newsletter {
+      max-width: 500px;
+    }
+
+    .newsletter-field {
+      flex-direction: row;
+      align-items: flex-end;
+      gap: var(--v-unit-3);
+    }
+
+    .newsletter-button {
+      align-self: flex-end;
+      margin-top: 0;
+      flex-shrink: 0;
+    }
+  }
+
+  /* Large Desktop */
+  @media (min-width: 1200px) {
+    .footer-content {
+      gap: var(--v-unit-12);
+    }
+  }
+
+  /* Button styling */
+  .footer :deep(.v-button) {
+    color: white;
   }
 </style>

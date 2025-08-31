@@ -23,7 +23,28 @@
 <style scoped>
   .sections-new {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    grid-gap: var(--v-unit-10);
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--v-unit-8);
+  }
+
+  @media (max-width: 480px) {
+    .sections-new {
+      grid-template-columns: 1fr;
+      gap: var(--v-unit-6);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .sections-new {
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: var(--v-unit-10);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .sections-new {
+      grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+      gap: var(--v-unit-12);
+    }
   }
 </style>

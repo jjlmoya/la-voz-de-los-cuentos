@@ -11,8 +11,16 @@ const tutorials = {
   'tutorials.progress.started': '¡Ya has empezado!',
   'tutorials.progress.finished': '¡Cuento terminado!'
 }
+
+const story = {
+  'story.related.title': 'Cuentos relacionados',
+  'story.related.from_saga': 'De la saga',
+  'story.breadcrumb.home': 'Inicio',
+  'story.breadcrumb.stories': 'Cuentos'
+}
 export default {
   ...tutorials,
+  ...story,
   ...landing,
   ...account,
   ...characters,

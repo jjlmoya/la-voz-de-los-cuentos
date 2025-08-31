@@ -11,7 +11,6 @@ export default function useCharacter(character) {
         if (story.saga !== character.saga) return
       } else {
       }
-      console.log(story)
       return (
         story.saga === character.saga &&
         story.story.toLowerCase().includes(character.name.toLowerCase())

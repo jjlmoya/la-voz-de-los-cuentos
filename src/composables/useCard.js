@@ -1,11 +1,9 @@
 export default function useCards(card) {
-  console.log(card)
   const hasCard = () => {
     return getUserCards().includes(card.order)
   }
 
   const getUserCards = () => {
-    console.log({ parse: JSON.parse(localStorage.getItem('cards')) })
     return JSON.parse(localStorage.getItem('cards')) || []
   }
 

@@ -5,15 +5,23 @@ import characters from './characters'
 const tutorials = {
   'tutorials.progress.title': 'How Does Progress Work?',
   'tutorials.progress.description':
-    'As you dive into these fun stories, they’ll start to appear here. Each story has its own progress bar, like a little adventure tracker at the bottom of the image!',
+    'As you dive into these fun stories, they will start to appear here. Each story has its own progress bar, like a little adventure tracker at the bottom of the image!',
   'tutorials.progress.toStart': 'Not Started Yet',
-  'tutorials.progress.started': 'You’ve Begun!',
+  'tutorials.progress.started': 'You have Begun!',
   'tutorials.progress.finished': 'Story Finished!'
+}
+
+const story = {
+  'story.related.title': 'Related Stories',
+  'story.related.from_saga': 'From saga',
+  'story.breadcrumb.home': 'Home',
+  'story.breadcrumb.stories': 'Stories'
 }
 
 export default {
   ...characters,
   ...tutorials,
+  ...story,
   ...landing,
   ...account,
   'menu.home': 'Home',

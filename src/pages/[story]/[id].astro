@@ -1,16 +1,20 @@
 ---
 import NavLayout from '../../layouts/NavLayout.astro'
-import { getStories } from '../../data'
+import { getStories, getSagas } from '../../data'
 import { toStory } from '../../router'
 import StoryPage from '../../components/Page/StoryPage.vue'
+import RelatedStories from '../../components/Navigation/RelatedStories.vue'
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.vue'
 import t from '../../translations'
 const siteUrl = import.meta.env.PUBLIC_SITE_URL
 const author = import.meta.env.PUBLIC_SITE_NAME
 
 const stories = getStories()
+const sagas = getSagas()
 
 const { id } = Astro.params
 const story = stories.find(story => story.key === id)
+const currentSaga = sagas.find(saga => saga.key === story.saga)
 const lang = import.meta.env.PUBLIC_LANG
 const firstParagraph = story.story.split('\n').filter(p => p.trim() !== '')[0]
 
@@ -49,39 +53,61 @@ const formatDate = dateStr => {
 }
 
 const schema = JSON.stringify({
-  '@context': 'http://schema.org',
+  '@context': 'https://schema.org',
   '@type': 'CreativeWork',
+  '@id': `${siteUrl}${toStory(story.key)}`,
   name: story.name,
+  headline: story.name,
   author: {
-    '@type': 'Person',
-    name: { author }
+    '@type': 'Organization',
+    name: author,
+    url: siteUrl
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: author,
+    url: siteUrl,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteUrl}/assets/logo/${lang}.webp`
+    }
   },
   datePublished: formatDate(story.date),
-  image: `${siteUrl}/assets/stories/${lang}/${story.key}.webp`,
+  dateModified: formatDate(story.date),
+  image: {
+    '@type': 'ImageObject',
+    url: `${siteUrl}/assets/stories/${lang}/${story.key}.webp`,
+    width: 1200,
+    height: 630
+  },
   description: firstParagraph,
   genre: `${t('schema.type')}`,
+  inLanguage: lang,
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': `${siteUrl}${toStory(story.key)}`
   },
-  video: {
-    '@type': 'VideoObject',
-    name: `${story.name} - Video`,
-    description: firstParagraph,
-    thumbnailUrl: `${siteUrl}/assets/stories/${lang}/${story.key}.webp`,
-    uploadDate: formatDate(story.date),
-    contentUrl: `https://www.youtube.com/embed/${story.youtube}`,
-    embedUrl: `https://www.youtube.com/embed/${story.youtube}`
-  },
-  audio: {
-    '@type': 'AudioObject',
-    name: `${story.name} - Audio`,
-    description: `${firstParagraph}`,
-    thumbnailUrl: `${siteUrl}/assets/stories/${lang}/${story.key}.webp`,
-    uploadDate: formatDate(story.date),
-    contentUrl: story.spotifyLink,
-    embedUrl: story.spotifyLink
-  }
+  associatedMedia: [
+    {
+      '@type': 'VideoObject',
+      name: story.name,
+      description: firstParagraph,
+      thumbnailUrl: `${siteUrl}/assets/stories/${lang}/${story.key}.webp`,
+      uploadDate: formatDate(story.date),
+      contentUrl: `https://www.youtube.com/watch?v=${story.youtube}`,
+      embedUrl: `https://www.youtube.com/embed/${story.youtube}`,
+      duration: `PT${Math.round(parseFloat(story.time.replace(',', '.')) || 0)}S`
+    },
+    {
+      '@type': 'AudioObject', 
+      name: story.name,
+      description: firstParagraph,
+      thumbnailUrl: `${siteUrl}/assets/stories/${lang}/${story.key}.webp`,
+      uploadDate: formatDate(story.date),
+      contentUrl: story.spotifyLink,
+      duration: `PT${Math.round(parseFloat(story.time.replace(',', '.')) || 0)}S`
+    }
+  ]
 })
 ---
 
@@ -94,9 +120,17 @@ const schema = JSON.stringify({
 >
   <StoryPage
     story={story}
+    currentSaga={currentSaga}
     client:load
     url={`${toStory(story.key)}`}
     title={story.name}
+  />
+
+  <RelatedStories
+    :currentStory={story}
+    :allStories={stories}
+    :allSagas={sagas}
+    client:idle
   />
 
   <div id="story-data" data-story={JSON.stringify(story)} style="display:none">
