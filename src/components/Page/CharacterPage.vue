@@ -1,5 +1,6 @@
 <template>
   <VContainer size="xl" class="character-page">
+    <Breadcrumbs :current-page="character.name" />
     <div class="character-page__header">
       <VButton
         variant="primary"
@@ -128,6 +129,7 @@
   import Smash from '../Cards/Smash.vue'
   import { onMounted, ref } from 'vue'
   import Basic from '../Cards/Basic.vue'
+  import Breadcrumbs from '../Navigation/Breadcrumbs.vue'
   const { getSagaImageKey, getCharactersSameSaga, getRelatedStories } =
     useCharacter(props.character)
   const getSagaImage = () => `/assets/sagas/${getSagaImageKey()}.webp`

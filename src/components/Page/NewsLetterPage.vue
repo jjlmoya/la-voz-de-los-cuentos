@@ -1,5 +1,6 @@
 <template>
   <VContainer size="xl" class="newsletter-page">
+    <Breadcrumbs :current-page="newsletter.title" />
     <VText class="newsletter-page__title" as="h1">
       {{ newsletter.title }}
     </VText>
@@ -14,6 +15,7 @@
   import { VText, VContainer } from '@overgaming/vicius'
   import Spotify from '../Media/Spotify.vue'
   import { ref } from 'vue'
+  import Breadcrumbs from '../Navigation/Breadcrumbs.vue'
   defineProps({
     newsletter: {
       type: Object,

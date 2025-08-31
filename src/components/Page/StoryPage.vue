@@ -1,13 +1,11 @@
 <template>
   <VContainer size="xl" class="story-page">
     <!-- Breadcrumbs -->
-    <div class="breadcrumbs">
-      <div class="breadcrumb-row">
-        <a href="/" class="breadcrumb-tag">Inicio</a>
-        <a v-if="currentSaga" :href="`/saga/${currentSaga.key}/`" class="breadcrumb-tag breadcrumb-tag--saga">{{ currentSaga.name }}</a>
-      </div>
-      <div class="breadcrumb-title">{{ story.name }}</div>
-    </div>
+    <Breadcrumbs 
+      :current-page="story.name"
+      :saga-name="currentSaga?.name"
+      :saga-key="currentSaga?.key"
+    />
     
     <div class="story-page__image">
       <VImage
@@ -171,6 +169,7 @@
   import RelatedStoriesSection from '../Sections/RelatedStories.vue'
   import SectionsDefault from '../Sections/Default.vue'
   import SocialShare from '../Social/Share.vue'
+  import Breadcrumbs from '../Navigation/Breadcrumbs.vue'
 
   import { ref, toValue, onMounted } from 'vue'
   import useStory from '../../composables/useStory'
@@ -374,75 +373,6 @@
   }
   astro-dev-toolbar {
     display: none !important;
-  }
-
-  .breadcrumbs {
-    background: linear-gradient(135deg, var(--v-color-background-soft), var(--v-color-background));
-    padding: var(--v-unit-4);
-    margin-bottom: var(--v-unit-6);
-    border-radius: var(--v-radius-md);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  }
-
-  .breadcrumb-row {
-    display: flex;
-    gap: var(--v-unit-2);
-    margin-bottom: var(--v-unit-3);
-    flex-wrap: wrap;
-  }
-
-  .breadcrumb-tag {
-    background: var(--v-color-primary);
-    color: white;
-    padding: var(--v-unit-1) var(--v-unit-3);
-    border-radius: var(--v-radius-lg);
-    text-decoration: none;
-    font-size: var(--v-font-size-sm);
-    font-weight: 600;
-    transition: all 0.2s ease;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  }
-
-  .breadcrumb-tag--saga {
-    background: var(--v-color-accent-primary);
-  }
-
-  .breadcrumb-tag:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  }
-
-  .breadcrumb-title {
-    color: var(--v-color-text-high);
-    font-size: var(--v-font-size-lg);
-    font-weight: 700;
-    line-height: 1.3;
-    word-wrap: break-word;
-  }
-
-  @media (max-width: 768px) {
-    .breadcrumbs {
-      padding: var(--v-unit-3) var(--v-unit-2);
-      margin-bottom: var(--v-unit-4);
-    }
-    
-    .breadcrumbs-container {
-      gap: var(--v-unit-2);
-      font-size: var(--v-font-size-sm);
-    }
-    
-    .breadcrumb-link {
-      padding: var(--v-unit-1) var(--v-unit-2);
-      font-size: var(--v-font-size-sm);
-    }
-    
-    .breadcrumb-current {
-      font-size: var(--v-font-size-md);
-    }
-    
-    .breadcrumb-separator {
-      font-size: var(--v-font-size-md);
-    }
   }
 
   @media print {

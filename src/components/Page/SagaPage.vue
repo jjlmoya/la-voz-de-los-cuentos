@@ -1,5 +1,6 @@
 <template>
   <VContainer size="xl" class="saga-page">
+    <Breadcrumbs :current-page="saga.name" />
     <iframe
       v-if="saga.youtube"
       class="saga-page__iframe"
@@ -39,6 +40,7 @@
   import { VText, VContainer } from '@overgaming/vicius'
   import SagaStories from '../Sections/SagaStories.vue'
   import SectionsDefault from '../Sections/Default.vue'
+  import Breadcrumbs from '../Navigation/Breadcrumbs.vue'
   const { getTime, html } = useSaga(props.saga)
   const totalTime = getTime()
   const descriptionHtml = html()
