@@ -58,29 +58,8 @@ class ScrollAnimations {
   }
 
   addCelebrationEffect(element) {
-    // Create floating emojis
-    const emojis = ['✨', '🎉', '🌟', '💫', '🎊'];
-    
-    for (let i = 0; i < 5; i++) {
-      setTimeout(() => {
-        const emoji = document.createElement('div');
-        emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-        emoji.style.cssText = `
-          position: fixed;
-          top: ${Math.random() * 100}vh;
-          left: ${Math.random() * 100}vw;
-          font-size: 2rem;
-          pointer-events: none;
-          z-index: 9999;
-          animation: confetti-1 3s ease-out forwards;
-        `;
-        
-        document.body.appendChild(emoji);
-        
-        // Remove after animation
-        setTimeout(() => emoji.remove(), 3000);
-      }, i * 200);
-    }
+    // Celebration effects completely disabled - no emojis
+    return;
   }
 
   observeElements() {
