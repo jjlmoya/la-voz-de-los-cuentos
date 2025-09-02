@@ -84,17 +84,13 @@ class ScrollAnimations {
   }
 
   observeElements() {
-    // Observe all potentially animatable elements
+    // Observe all potentially animatable elements (exclude cards to avoid conflicts)
     const selectors = [
       '.animate-on-scroll',
       '.section-default',
       '.footer',
-      '.basic-card',
-      '.card-hero',
       '.breadcrumbs',
       'h1', 'h2', 'h3',
-      'img',
-      '.v-button',
       '.footer-section'
     ];
 
@@ -188,7 +184,7 @@ const additionalStyles = `
     animation: revealer 0.8s ease-out forwards;
   }
   
-  .animate-on-scroll {
+  .animate-on-scroll:not(.basic-card):not(.card-hero) {
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
