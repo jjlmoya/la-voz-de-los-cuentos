@@ -1,21 +1,21 @@
 <template>
-  <div class="breadcrumbs">
+  <div class="breadcrumbs animate-fadeInUp">
     <VContainer size="xl">
       <nav aria-label="Breadcrumb">
-        <div class="breadcrumbs__trail">
-          <a href="/" class="breadcrumb-item breadcrumb-item--home">
+        <div class="breadcrumbs__trail stagger-children">
+          <a href="/" class="breadcrumb-item breadcrumb-item--home btn-playful">
             {{ t('story.breadcrumb.home') }}
           </a>
           
           <template v-if="sagaName">
             <span class="breadcrumb-sep">/</span>
-            <a :href="sagaUrl" class="breadcrumb-item breadcrumb-item--saga">
+            <a :href="sagaUrl" class="breadcrumb-item breadcrumb-item--saga btn-playful">
               {{ sagaName }}
             </a>
           </template>
           
           <span class="breadcrumb-sep">/</span>
-          <span class="breadcrumb-item breadcrumb-item--current">
+          <span class="breadcrumb-item breadcrumb-item--current animate-pulse">
             {{ currentPage }}
           </span>
         </div>

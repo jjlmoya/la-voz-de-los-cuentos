@@ -162,10 +162,62 @@
     display: flex;
     align-items: center;
     gap: 5px;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    border-radius: var(--v-radius-md);
+    transform-origin: center;
+    
+    &:hover {
+      transform: scale(1.1);
+      background: var(--v-color-surface-soft);
+      animation: filter-bounce 0.5s ease;
+      box-shadow: 0 4px 12px hsla(0, 0%, 0%, 0.1);
+    }
+    
+    &:active {
+      transform: scale(0.95);
+      animation: filter-press 0.15s ease;
+    }
+    
+    &.active {
+      color: var(--v-color-primary);
+      background: var(--v-color-surface-high);
+      transform: scale(1.05);
+      box-shadow: 0 2px 8px hsla(var(--v-color-primary-hsl), 0.2);
+      animation: active-glow 2s ease-in-out infinite alternate;
+    }
   }
 
-  .sections-filtered__bar button.active {
-    color: var(--primary-color);
+  @keyframes filter-bounce {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.15);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+
+  @keyframes filter-press {
+    0% {
+      transform: scale(1.1);
+    }
+    50% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(0.95);
+    }
+  }
+
+  @keyframes active-glow {
+    0% {
+      box-shadow: 0 2px 8px hsla(var(--v-color-primary-hsl), 0.2);
+    }
+    100% {
+      box-shadow: 0 4px 16px hsla(var(--v-color-primary-hsl), 0.4);
+    }
   }
 
   .sections-filtered__content {

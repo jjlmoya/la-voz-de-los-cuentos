@@ -114,14 +114,57 @@
 
   .social-share__button {
     background-color: var(--v-color-surface-mod);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform-origin: center;
+    
     svg {
       fill: black;
+      transition: fill 0.3s ease;
+    }
+    
+    &:hover {
+      background-color: var(--v-color-primary);
+      transform: scale(1.15);
+      animation: button-bounce 0.6s ease;
+      box-shadow: 
+        0 8px 20px hsla(0, 0%, 0%, 0.15),
+        0 0 20px hsla(var(--v-color-primary-hsl), 0.3);
+      
+      svg {
+        fill: white;
+      }
+    }
+    
+    &:active {
+      transform: scale(0.95);
+      animation: button-press 0.2s ease;
     }
   }
-  .social-share__button:hover {
-    background-color: var(--v-color-primary);
-    svg {
-      fill: white;
+
+  @keyframes button-bounce {
+    0% {
+      transform: scale(1);
+    }
+    30% {
+      transform: scale(1.25);
+    }
+    60% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1.15);
+    }
+  }
+
+  @keyframes button-press {
+    0% {
+      transform: scale(1.15);
+    }
+    50% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(0.95);
     }
   }
 </style>

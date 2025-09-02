@@ -1,12 +1,12 @@
 <template>
-  <VContainer size="xl" class="landing-page">
-    <VContainer class="landing-page__content">
+  <VContainer size="xl" class="landing-page animate-fadeInUp">
+    <VContainer class="landing-page__content animate-fadeInScale animate-delay-1">
       <div class="landing-page__title">
-        <VText as="h1" variant="header">
+        <VText as="h1" variant="header" class="typing-animation animate-delay-2">
           {{ landing.title }}
         </VText>
       </div>
-      <VText>
+      <VText class="animate-fadeInUp animate-delay-3">
         <article v-html="descriptionHtml"></article>
       </VText>
     </VContainer>

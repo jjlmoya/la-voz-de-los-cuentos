@@ -3,6 +3,7 @@ import '@overgaming/vicius/styles'
 import '../assets/css/fonts.css'
 import '../assets/css/styles.css'
 import '../assets/css/theme.css'
+import '../assets/css/animations.css'
 import pkg from '../../package.json'
 
 import CMP from '../components/commons/Legal/CMP.vue'
@@ -119,6 +120,9 @@ const twitterUser = import.meta.env.PUBLIC_TWITTER_USER
     <slot />
 
     <CMP client:load />
+    
+    <!-- Scroll animations for children engagement -->
+    <script type="module" src="/src/assets/js/scroll-animations.js"></script>
 
     <script>
       if ('serviceWorker' in navigator) {

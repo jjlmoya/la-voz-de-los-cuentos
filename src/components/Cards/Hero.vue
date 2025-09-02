@@ -39,8 +39,36 @@
     display: block;
     position: relative;
     overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: var(--v-unit-3);
+    
     .v-image {
       border-radius: var(--v-unit-3);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    &:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 
+        0 24px 48px hsla(0, 0%, 0%, 0.2),
+        0 12px 24px hsla(0, 0%, 0%, 0.12),
+        0 0 40px hsla(var(--v-color-primary-hsl), 0.2);
+      
+      .v-image {
+        transform: scale(1.05);
+        filter: brightness(1.1) saturate(1.2);
+      }
+      
+      .card-hero__title {
+        text-shadow: 
+          0px 0px 15px #dbcb0d,
+          0px 0px 25px hsla(var(--v-color-primary-hsl), 0.5);
+        transform: translateY(-2px);
+      }
+    }
+    
+    &:active {
+      transform: translateY(-4px) scale(1.01);
     }
   }
 
@@ -67,5 +95,6 @@
   }
   .card-hero__title {
     text-shadow: 0px 0px 10px #dbcb0d;
+    transition: all 0.3s ease;
   }
 </style>

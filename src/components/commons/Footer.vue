@@ -1,6 +1,6 @@
 <template>
-  <footer class="footer">
-    <VContainer class="footer-container">
+  <footer class="footer animate-fadeInUp animate-delay-2">
+    <VContainer class="footer-container stagger-children">
       <!-- Header -->
       <div class="footer-header">
         <VText class="footer-title" variant="header" as="h3">
@@ -29,7 +29,7 @@
             <VFieldLabel for="emailInput">Email:</VFieldLabel>
           </template>
           <template #message>
-            <VText v-if="successMessage" class="success-message">
+            <VText v-if="successMessage" class="success-message celebrate animate-bounceIn">
               {{ t('footer.newsletters.thanks') }}
             </VText>
             <VText v-if="emailError" class="error-message">
@@ -41,7 +41,7 @@
             color="primary"
             :disabled="!isEmailValid || isSubmitting"
             @click="submitForm"
-            class="newsletter-button"
+            class="newsletter-button btn-playful"
           >
             {{ t('footer.newsletter.button') }}
           </VButton>
@@ -61,7 +61,7 @@
               :key="brand.name"
               :href="brand.link"
               rel="noopener noreferrer dofollow"
-              class="footer-link"
+              class="footer-link link-playful"
             >
               {{ brand.name }} [{{ brand.lang }}]
             </VLink>
@@ -77,35 +77,35 @@
             <VLink
               v-if="links.youtube"
               :href="`https://www.youtube.com/${links.youtube}?sub_confirmation=1`"
-              class="footer-link"
+              class="footer-link link-playful animate-on-hover"
             >
               Youtube
             </VLink>
             <VLink
               v-if="links.spotify"
               :href="`https://open.spotify.com/show/${links.spotify}`"
-              class="footer-link"
+              class="footer-link link-playful animate-on-hover"
             >
               Spotify
             </VLink>
             <VLink
               v-if="links.tiktok"
               :href="`https://www.tiktok.com/${links.tiktok}`"
-              class="footer-link"
+              class="footer-link link-playful animate-on-hover"
             >
               TikTok
             </VLink>
             <VLink
               v-if="links.instagram"
               :href="`https://www.instagram.com/${links.instagram}/`"
-              class="footer-link"
+              class="footer-link link-playful animate-on-hover"
             >
               Instagram
             </VLink>
             <VLink
               v-if="links.facebook"
               :href="`https://www.facebook.com/${links.facebook}`"
-              class="footer-link"
+              class="footer-link link-playful animate-on-hover"
             >
               Facebook
             </VLink>
@@ -118,13 +118,13 @@
             {{ t('footer.interesting') }}
           </VText>
           <div class="footer-links">
-            <VLink :href="toCustomStory()" class="footer-link">
+            <VLink :href="toCustomStory()" class="footer-link link-playful animate-on-hover">
               {{ t('footer.interesting.custom') }}
             </VLink>
             <VLink 
               v-if="links.email" 
               :href="`mailto:${links.email}`"
-              class="footer-link"
+              class="footer-link link-playful animate-on-hover"
             >
               {{ t('footer.interesting.contact') }}
             </VLink>

@@ -70,6 +70,9 @@
     </div>
 
     <div class="custom-page-loader" v-if="loading">
+      <div class="magic-spinner">
+        <div class="magic-spinner__wand"></div>
+      </div>
       <VText>{{ t('page.custom.button.loading') }}</VText>
     </div>
 
@@ -198,6 +201,108 @@
 
   .custom-page-loader {
     text-align: center;
+    padding: var(--v-unit-8);
+  }
+
+  .magic-spinner {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-bottom: var(--v-unit-4);
+  }
+
+  .magic-spinner__star {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    animation: star-pulse 1.5s infinite ease-in-out;
+  }
+
+  .magic-spinner__wand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 40px;
+    background: linear-gradient(45deg, 
+      var(--v-color-primary) 0%, 
+      var(--v-color-accent-primary) 50%, 
+      hsl(45, 100%, 70%) 100%);
+    border-radius: 2px;
+    transform-origin: center bottom;
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: wand-spin 2s infinite linear;
+    box-shadow: 0 0 10px hsla(var(--v-color-primary-hsl), 0.5);
+  }
+
+  .magic-spinner__sparkles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .sparkle {
+    position: absolute;
+    font-size: 1.2rem;
+    animation: sparkle-float 2s infinite ease-in-out;
+  }
+
+  .sparkle-1 {
+    top: 10%;
+    left: 20%;
+    animation-delay: 0s;
+  }
+
+  .sparkle-2 {
+    top: 20%;
+    right: 15%;
+    animation-delay: 0.7s;
+  }
+
+  .sparkle-3 {
+    bottom: 15%;
+    left: 15%;
+    animation-delay: 1.4s;
+  }
+
+  @keyframes star-pulse {
+    0%, 100% {
+      transform: translate(-50%, -50%) scale(1);
+      filter: brightness(1);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.2);
+      filter: brightness(1.3);
+    }
+  }
+
+  @keyframes wand-spin {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+  @keyframes sparkle-float {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) scale(0.8);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(-10px) scale(1.1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-30px) scale(0.6);
+    }
   }
 
   .custom-page-mandatory {
