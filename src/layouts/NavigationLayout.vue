@@ -2,7 +2,7 @@
   <div class="navigation-layout">
     <div class="navigation-layout__mobile">
       <button
-        class="navigation-layout__btn"
+        class="navigation-layout__btn btn-playful animate-pulse"
         @click="toggle"
         aria-label="Toggle Menu"
       >
@@ -33,7 +33,7 @@
         </svg>
       </button>
       <div class="navigation-layout__mobile-image">
-        <img :src="`/assets/logo/h/${lang}.webp`" />
+        <img :src="`/assets/logo/h/${lang}.webp`" class="animate-float" />
       </div>
     </div>
     <div

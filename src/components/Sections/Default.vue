@@ -1,9 +1,9 @@
 <template>
-  <div class="section-default">
-    <div class="section-default__header">
+  <div class="section-default animate-fadeInUp">
+    <div class="section-default__header stagger-children">
       <VText
         as="h2"
-        class="section-default__title"
+        class="section-default__title typing-animation animate-rainbow"
         variant="header"
         color="high"
         v-if="title"
@@ -14,11 +14,11 @@
         v-if="moreLink"
         color="primary"
         :href="moreLink"
-        class="section-default__more"
+        class="section-default__more link-playful animate-bounce animate-delay-3"
         >{{ t('sections.default.more') }}</VLink
       >
     </div>
-    <div class="section-default__content">
+    <div class="section-default__content animate-fadeInUp animate-delay-1">
       <slot />
     </div>
   </div>

@@ -1,6 +1,6 @@
 <template>
-  <VMenu class="menu">
-    <VMenuItem v-for="entry in menu" :active="entry.active" :href="entry.link">
+  <VMenu class="menu stagger-children">
+    <VMenuItem v-for="entry in menu" :active="entry.active" :href="entry.link" class="animate-on-hover btn-playful">
       {{ entry.label }}
     </VMenuItem>
   </VMenu>
