@@ -71,13 +71,7 @@
 
     <div class="custom-page-loader" v-if="loading">
       <div class="magic-spinner">
-        <div class="magic-spinner__star">✨</div>
         <div class="magic-spinner__wand"></div>
-        <div class="magic-spinner__sparkles">
-          <span class="sparkle sparkle-1">⭐</span>
-          <span class="sparkle sparkle-2">🌟</span>
-          <span class="sparkle sparkle-3">💫</span>
-        </div>
       </div>
       <VText>{{ t('page.custom.button.loading') }}</VText>
     </div>

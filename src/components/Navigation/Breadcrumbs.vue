@@ -8,13 +8,13 @@
           </a>
           
           <template v-if="sagaName">
-            <span class="breadcrumb-sep animate-wiggle animate-delay-1">✨</span>
+            <span class="breadcrumb-sep">/</span>
             <a :href="sagaUrl" class="breadcrumb-item breadcrumb-item--saga btn-playful">
               {{ sagaName }}
             </a>
           </template>
           
-          <span class="breadcrumb-sep animate-wiggle animate-delay-2">✨</span>
+          <span class="breadcrumb-sep">/</span>
           <span class="breadcrumb-item breadcrumb-item--current animate-pulse">
             {{ currentPage }}
           </span>
