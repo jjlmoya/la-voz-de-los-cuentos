@@ -131,35 +131,10 @@ class ScrollAnimations {
     });
   }
 
-  // Add playful cursor effects
+  // Add playful cursor effects (disabled)
   initCursorEffects() {
-    if (typeof window === 'undefined') return;
-    
-    // Create cursor trail effect
-    let trail = [];
-    
-    document.addEventListener('mousemove', (e) => {
-      // Skip on mobile
-      if (window.innerWidth < 768) return;
-      
-      // Create sparkle on mouse move
-      if (Math.random() < 0.3) { // 30% chance
-        const sparkle = document.createElement('div');
-        sparkle.textContent = '✨';
-        sparkle.style.cssText = `
-          position: fixed;
-          top: ${e.clientY - 10}px;
-          left: ${e.clientX - 10}px;
-          font-size: 1rem;
-          pointer-events: none;
-          z-index: 9999;
-          animation: sparkle-float 1s ease-out forwards;
-        `;
-        
-        document.body.appendChild(sparkle);
-        setTimeout(() => sparkle.remove(), 1000);
-      }
-    });
+    // Cursor effects disabled per user request
+    return;
   }
 
   // Add click celebration effects

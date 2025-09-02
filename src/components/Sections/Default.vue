@@ -3,7 +3,7 @@
     <div class="section-default__header stagger-children">
       <VText
         as="h2"
-        class="section-default__title typing-animation animate-rainbow"
+        class="section-default__title animate-fadeInLeft animate-delay-1"
         variant="header"
         color="high"
         v-if="title"
