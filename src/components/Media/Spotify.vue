@@ -10,7 +10,13 @@
       @load="iframeLoaded"
       :src="`https://podcasters.spotify.com/pod/show/${spotifyID}/embed/episodes/${spotify}`"
     />
-    <div v-if="!iframe" class="spotify__loading"></div>
+    <div v-if="!iframe" class="spotify__loading">
+      <div class="music-spinner">
+        <div class="music-note note-1">🎵</div>
+        <div class="music-note note-2">🎶</div>
+        <div class="music-note note-3">🎼</div>
+      </div>
+    </div>
     <div :class="{ 'spotify__mask--animation': iframe }" class="spotify__mask">
       <VText variant="label">{{ t('spotify.voice') }}</VText>
     </div>
@@ -77,14 +83,54 @@
     animation-delay: 250ms;
   }
 
-  .newsletter-page__loading {
+  .spotify__loading {
     position: absolute;
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
-    content: ' ';
+    background: linear-gradient(135deg, 
+      hsl(280, 50%, 95%) 0%, 
+      hsl(290, 60%, 97%) 100%);
     z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .music-spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--v-unit-2);
+  }
+
+  .music-note {
+    font-size: 2rem;
+    animation: music-bounce 1.4s infinite ease-in-out;
+  }
+
+  .note-1 {
+    animation-delay: 0s;
+  }
+
+  .note-2 {
+    animation-delay: 0.2s;
+  }
+
+  .note-3 {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes music-bounce {
+    0%, 40%, 100% {
+      transform: translateY(0) scale(1) rotate(0deg);
+      opacity: 0.7;
+    }
+    20% {
+      transform: translateY(-15px) scale(1.2) rotate(10deg);
+      opacity: 1;
+    }
   }
   @keyframes fold {
     0% {

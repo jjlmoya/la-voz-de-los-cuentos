@@ -145,10 +145,13 @@
     flex-direction: column;
 
     &:hover {
-      transform: translateY(-8px) scale(1.03);
+      transform: translateY(-12px) scale(1.05);
       box-shadow: 
-        0 20px 40px hsla(0, 0%, 0%, 0.16),
-        0 12px 24px hsla(0, 0%, 0%, 0.12);
+        0 32px 60px hsla(0, 0%, 0%, 0.2),
+        0 16px 32px hsla(0, 0%, 0%, 0.15),
+        0 0 30px hsla(var(--v-color-primary-hsl), 0.3),
+        inset 0 1px 0 hsla(0, 0%, 100%, 0.3);
+      animation: card-glow 0.6s ease-out forwards;
     }
 
     &:hover .basic-card__img {
@@ -303,6 +306,29 @@
     }
   }
 
+  .basic-card__progress-complete[style*="100%"] {
+    animation: progress-sparkles 1.5s ease-in-out forwards;
+    
+    &::before {
+      animation: sparkle-shine 2s infinite ease-in-out;
+    }
+    
+    &::after {
+      animation: progress-complete-shine 2s infinite ease-in-out, sparkle-burst 0.8s ease-out;
+    }
+  }
+
+  .basic-card__progress-complete[style*="100%"]::before {
+    background: 
+      radial-gradient(circle at 20% 50%, hsla(60, 100%, 80%, 0.8) 0%, transparent 4px),
+      radial-gradient(circle at 60% 30%, hsla(45, 100%, 85%, 0.6) 0%, transparent 3px),
+      radial-gradient(circle at 80% 70%, hsla(50, 100%, 90%, 0.7) 0%, transparent 2px),
+      linear-gradient(180deg, 
+        hsla(0, 0%, 100%, 0.4) 0%,
+        hsla(0, 0%, 100%, 0.1) 50%,
+        transparent 100%);
+  }
+
   @keyframes progress-shimmer {
     0% {
       left: -100%;
@@ -428,6 +454,67 @@
     100% {
       opacity: 1;
       transform: scale(1) translateY(0);
+    }
+  }
+
+  @keyframes card-glow {
+    0% {
+      filter: brightness(1) saturate(1);
+    }
+    50% {
+      filter: brightness(1.1) saturate(1.3) contrast(1.1);
+    }
+    100% {
+      filter: brightness(1.05) saturate(1.2) contrast(1.05);
+    }
+  }
+
+  @keyframes progress-sparkles {
+    0% {
+      filter: brightness(1) saturate(1);
+      box-shadow: inset 0 1px 2px hsla(0, 0%, 100%, 0.4);
+    }
+    50% {
+      filter: brightness(1.3) saturate(1.5);
+      box-shadow: 
+        inset 0 1px 2px hsla(0, 0%, 100%, 0.6),
+        0 0 15px hsla(var(--v-color-primary-hsl), 0.5);
+    }
+    100% {
+      filter: brightness(1.1) saturate(1.2);
+      box-shadow: 
+        inset 0 1px 2px hsla(0, 0%, 100%, 0.4),
+        0 0 10px hsla(var(--v-color-primary-hsl), 0.3);
+    }
+  }
+
+  @keyframes sparkle-shine {
+    0% {
+      opacity: 0.8;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 0.8;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes sparkle-burst {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
     }
   }
 
