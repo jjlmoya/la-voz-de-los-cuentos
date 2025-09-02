@@ -47,8 +47,8 @@
 
   @media (min-width: 1024px) {
     .sections-related {
-      grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
-      gap: var(--v-unit-12);
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--v-unit-8);
     }
   }
 </style>

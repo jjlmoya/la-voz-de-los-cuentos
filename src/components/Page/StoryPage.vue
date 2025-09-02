@@ -228,12 +228,23 @@
 
 <style>
   .story-page {
-    @media (width >= 1360px) {
-      padding: var(--v-unit-4);
-    }
-    padding: var(--v-unit-1);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--v-unit-4);
     display: grid;
-    grid-gap: var(--v-unit-2);
+    grid-template-areas: 
+      "breadcrumbs"
+      "header"
+      "media"
+      "content"
+      "tools"
+      "related";
+    gap: var(--v-unit-6);
+    
+    @media (max-width: 768px) {
+      padding: var(--v-unit-2);
+      gap: var(--v-unit-4);
+    }
   }
   .story-page__tool-font {
     display: grid;
@@ -245,45 +256,112 @@
   }
   .story-page__title {
     position: sticky;
-    background-color: var(--v-color-surface-high);
-    padding: var(--v-unit-4);
     top: 60px;
-    border-radius: var(--v-unit-2) var(--v-unit-2) 0 0;
+    background: linear-gradient(135deg, var(--v-color-surface-high) 0%, var(--v-color-background-soft) 100%);
+    padding: var(--v-unit-4) var(--v-unit-6);
     text-align: center;
-    font-size: 24px;
-
+    box-shadow: var(--v-shadow-lg);
+    border-bottom: 2px solid var(--v-color-primary);
+    backdrop-filter: blur(10px);
+    z-index: 50;
+    margin: 0 calc(-1 * var(--v-unit-4));
+    
+    /* Desktop con menú lateral visible */
     @media (width >= 1360px) {
       top: 0;
+      margin: 0 calc(-1 * var(--v-unit-4));
     }
-    z-index: 4;
+    
+    /* Tablet donde el menú se colapsa */
+    @media (width < 1360px) and (width >= 768px) {
+      margin: 0 calc(-1 * var(--v-unit-4));
+    }
+    
+    /* Mobile */
+    @media (width < 768px) {
+      margin: 0 calc(-1 * var(--v-unit-2));
+    }
+    
     .v-text {
-      line-height: 1.1;
+      font-size: clamp(24px, 4vw, 32px);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0;
     }
   }
 
   .story-page__progress {
-    background-color: var(--v-color-surface-high);
-    width: 100%;
-    height: 5px;
     position: absolute;
     bottom: 0;
     left: 0;
+    width: 100%;
+    height: 6px;
+    background-color: rgba(var(--v-color-primary-rgb), 0.2);
     z-index: 3;
   }
 
   .story-page__progress-complete {
-    background-color: var(--v-color-error);
-    height: 5px;
-    transition: width 10s ease-in-out;
+    height: 100%;
+    background: linear-gradient(90deg, var(--v-color-primary), var(--v-color-accent-primary));
+    transition: width 0.8s ease-out;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -10px;
+      width: 20px;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+      animation: shine 3s infinite;
+    }
+  }
+  
+  @keyframes shine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
   }
 
   .story-page__content {
-    text-wrap: pretty;
     background-color: var(--v-color-surface-high);
-    padding: var(--v-unit-2) var(--v-unit-4) var(--v-unit-6) var(--v-unit-4);
-    border-radius: 0 0 var(--v-unit-2) var(--v-unit-2);
-    display: grid;
-    grid-gap: var(--v-unit-4);
+    padding: var(--v-unit-4) var(--v-unit-6);
+    padding-bottom: calc(var(--v-unit-8) + 80px); /* Espacio para herramientas fixed */
+    border-radius: var(--v-radius-lg);
+    box-shadow: var(--v-shadow-md);
+    border: 1px solid var(--v-color-primary);
+    margin-top: var(--v-unit-4);
+    
+    .story-page__body {
+      max-width: 65ch;
+      margin: 0 auto;
+      line-height: 1.6;
+      font-size: clamp(20px, 3.5vw, 24px);
+      color: var(--v-color-text-high);
+      
+      p {
+        margin-bottom: var(--v-unit-6);
+        text-align: justify;
+        hyphens: auto;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    
+    @media (max-width: 768px) {
+      padding: var(--v-unit-6);
+      
+      .story-page__body {
+        font-size: 22px;
+        line-height: 1.5;
+        
+        p {
+          margin-bottom: var(--v-unit-4);
+        }
+      }
+    }
   }
   .story-page_font-selector {
     font-weight: bold;
@@ -314,20 +392,35 @@
     align-items: center;
   }
   .story-page__tool {
-    display: grid;
-    justify-content: center;
-    position: sticky;
+    position: fixed;
     bottom: 0;
-    z-index: 10;
-    background-color: var(--v-color-surface-high);
-    border-top: 1px solid var(--v-color-primary);
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, var(--v-color-surface-high) 0%, var(--v-color-background-soft) 100%);
+    padding: var(--v-unit-3) var(--v-unit-4);
+    box-shadow: var(--v-shadow-lg);
+    border-top: 2px solid var(--v-color-primary);
+    backdrop-filter: blur(10px);
+    z-index: 50;
+    padding-bottom: env(safe-area-inset-bottom);
+    
+    /* Desktop con menú lateral visible */
+    @media (width >= 1360px) {
+      left: 280px;
+    }
+    
+    /* Tablet/medium donde el menú se colapsa */
+    @media (width < 1360px) {
+      left: 0;
+      right: 0;
+    }
   }
 
   .story-page__tool-wrapper {
-    display: grid;
-    grid-auto-flow: column;
-    grid-gap: var(--v-unit-2);
-    padding-bottom: env(safe-area-inset-bottom);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--v-unit-3);
   }
 
   .story-page__tool-left {
@@ -341,17 +434,29 @@
   }
 
   .story-page__button {
+    min-width: 56px;
+    min-height: 56px;
+    border-radius: var(--v-radius-md);
+    transition: all 0.2s ease;
+    background-color: var(--v-color-background);
+    border: 1px solid rgba(var(--v-color-primary-rgb), 0.2);
+    
     img {
-      max-height: 20px;
+      max-height: 28px;
     }
+    
     svg {
-      height: 32px;
-      fill: black;
+      height: 28px;
+      width: 28px;
+      fill: var(--v-color-text-medium);
+      transition: all 0.2s ease;
     }
-    .story-page__button--active,
+    
     &:hover {
-      color: white;
       background: var(--v-color-primary);
+      color: white;
+      transform: scale(1.05);
+      
       svg {
         fill: white;
       }
@@ -361,15 +466,35 @@
   .story-page__button--active {
     background: var(--v-color-primary);
     color: white;
+    border-color: var(--v-color-primary);
+    transform: scale(1.05);
+    
     svg {
       fill: white;
     }
   }
 
   .story-page__image {
+    grid-area: media;
     position: relative;
-    border-radius: var(--v-unit-3);
+    border-radius: var(--v-radius-lg);
     overflow: hidden;
+    box-shadow: var(--v-shadow-lg);
+    aspect-ratio: 16/9;
+    
+    img, lite-youtube {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(45deg, transparent 50%, rgba(255,255,255,0.1) 100%);
+      pointer-events: none;
+    }
   }
   astro-dev-toolbar {
     display: none !important;
