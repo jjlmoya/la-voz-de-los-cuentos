@@ -242,12 +242,12 @@ if (typeof window !== 'undefined') {
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
       scrollAnimations = new ScrollAnimations();
-      scrollAnimations.initCursorEffects();
+      // NO cursor effects - completely disabled to avoid any emojis
       scrollAnimations.initClickEffects();
     });
   } else {
     scrollAnimations = new ScrollAnimations();
-    scrollAnimations.initCursorEffects();
+    // NO cursor effects - completely disabled to avoid any emojis
     scrollAnimations.initClickEffects();
   }
   
