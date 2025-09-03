@@ -121,11 +121,20 @@ const sagaUrl = computed(() => {
 
 // Detectar sección actual basada en la URL
 const currentSection = computed(() => {
-  const path = window.location.pathname
-  if (path === '/') return 'home'
-  if (path.includes('/sagas')) return 'sagas'  
-  if (path.includes('/personajes')) return 'personajes'
-  if (path.includes('/cuentos') && props.sagaName) return 'story'
+  // SSR-safe: usar props para determinar la sección actual
+  if (props.sagaName && props.currentPage !== props.sagaName) return 'story'
+  if (props.sagaName) return 'sagas'
+  
+  // En cliente, usar window.location como fallback
+  if (typeof window !== 'undefined') {
+    const path = window.location.pathname
+    if (path === '/') return 'home'
+    if (path.includes('/sagas')) return 'sagas'  
+    if (path.includes('/personajes')) return 'personajes'
+    return 'other'
+  }
+  
+  // Default para SSR
   return 'other'
 })
 
