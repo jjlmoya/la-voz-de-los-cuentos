@@ -38,6 +38,15 @@
         >
           {{ title }}
         </VText>
+        <VText
+          v-if="storySnippet"
+          class="basic-card__snippet"
+          variant="body"
+          color="medium"
+          maxLines="3"
+        >
+          {{ storySnippet }}
+        </VText>
       </div>
     </div>
   </a>
@@ -78,6 +87,10 @@
     progress: {
       type: Number,
       default: 0
+    },
+    storyContent: {
+      type: String,
+      default: ''
     }
   })
 
@@ -98,6 +111,15 @@
 
   const isCompleted = computed(() => {
     return (status.value.current || props.progress) >= 100
+  })
+
+  const storySnippet = computed(() => {
+    if (!props.storyContent || !props.isStory) return ''
+    const cleanText = props.storyContent.replace(/\n+/g, ' ').trim()
+    const maxLength = 120
+    return cleanText.length > maxLength 
+      ? cleanText.substring(0, maxLength) + '...' 
+      : cleanText
   })
 
   let observer
@@ -180,9 +202,9 @@
       hsl(50, 100%, 98%) 50%, 
       hsl(55, 100%, 96%) 100%);
     text-align: center;
-    padding: var(--v-unit-3) var(--v-unit-4);
+    padding: var(--v-unit-4) var(--v-unit-6);
     margin: 0;
-    min-height: 60px;
+    min-height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -193,6 +215,22 @@
       text-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.08);
       margin: 0;
     }
+  }
+
+  .basic-card__article {
+    display: flex;
+    flex-direction: column;
+    gap: var(--v-unit-3);
+    width: 100%;
+  }
+
+  .basic-card__snippet {
+    font-size: var(--v-font-size-md) !important;
+    line-height: 1.4 !important;
+    font-weight: 400 !important;
+    color: var(--v-color-text-medium) !important;
+    text-align: left !important;
+    margin-top: var(--v-unit-2) !important;
   }
 
   .basic-card__image {

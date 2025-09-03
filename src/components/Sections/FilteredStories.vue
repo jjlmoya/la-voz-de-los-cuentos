@@ -52,23 +52,39 @@
       class="sections-filtered__content"
       :class="{ 'list-view': isListView }"
     >
-      <BasicCard
-        as="h2"
-        v-if="!isListView"
-        v-for="story in filteredAndSortedStories"
-        :slug="story.key"
-        :key="story.key"
-        :title="story.name"
-        :time="parseInt(story.time)"
-        isStory
+      <LoadingMessage 
+        v-if="isLoading"
+        :messages="[
+          t('loading.adventure'),
+          t('loading.book'),
+          t('loading.characters'),
+          t('loading.worlds'),
+          t('loading.potions'),
+          t('loading.treasures')
+        ]"
+        :interval="1500"
       />
-      <VContainer class="sections-filtered__content-list" v-if="isListView">
-        <PlainCard
+      
+      <template v-else>
+        <BasicCard
+          as="h2"
+          v-if="!isListView"
           v-for="story in filteredAndSortedStories"
+          :slug="story.key"
           :key="story.key"
-          :story="story"
+          :title="story.name"
+          :time="parseInt(story.time)"
+          :storyContent="story.story"
+          isStory
         />
-      </VContainer>
+        <VContainer class="sections-filtered__content-list" v-if="isListView">
+          <PlainCard
+            v-for="story in filteredAndSortedStories"
+            :key="story.key"
+            :story="story"
+          />
+        </VContainer>
+      </template>
     </div>
   </div>
 </template>
@@ -80,6 +96,7 @@
   import BasicCard from '../Cards/Basic.vue'
   import PlainCard from '../Cards/Plain.vue'
   import ListIcon from '../Icons/ListIcon.vue'
+  import LoadingMessage from '../Loading/LoadingMessage.vue'
 
   import useStories from '../../composables/useStories'
 
@@ -90,13 +107,20 @@
   const sortOrder = ref('date')
   const sortDirection = ref('desc')
   const isListView = ref(false)
+  const isLoading = ref(false)
 
   const setSortOrder = order => {
+    isLoading.value = true
     if (sortOrder.value === order) {
       toggleSortDirection()
     } else {
       sortOrder.value = order
     }
+    
+    // Simular carga para mostrar loading
+    setTimeout(() => {
+      isLoading.value = false
+    }, 1000)
   }
 
   const toggleSortDirection = () => {

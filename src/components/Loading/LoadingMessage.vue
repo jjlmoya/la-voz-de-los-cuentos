@@ -1,0 +1,156 @@
+<template>
+  <div class="loading-message">
+    <div class="loading-spinner">
+      <div class="loading-dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <VText class="loading-message__text" variant="header" color="primary">
+      {{ currentMessage }}
+    </VText>
+  </div>
+</template>
+
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+import { VText } from '@overgaming/vicius'
+import t from '../../translations'
+
+const props = defineProps({
+  messages: {
+    type: Array,
+    default: () => [
+      t('loading.adventure'),
+      t('loading.book'),
+      t('loading.characters'),
+      t('loading.worlds'),
+      t('loading.potions'),
+      t('loading.treasures')
+    ]
+  },
+  interval: {
+    type: Number,
+    default: 2000
+  }
+})
+
+const currentMessage = ref(props.messages[0])
+let messageInterval = null
+let currentIndex = 0
+
+const rotateMessage = () => {
+  currentIndex = (currentIndex + 1) % props.messages.length
+  currentMessage.value = props.messages[currentIndex]
+}
+
+onMounted(() => {
+  if (props.messages.length > 1) {
+    messageInterval = setInterval(rotateMessage, props.interval)
+  }
+})
+
+onUnmounted(() => {
+  if (messageInterval) {
+    clearInterval(messageInterval)
+  }
+})
+</script>
+
+<style scoped>
+.loading-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--v-unit-12) var(--v-unit-8);
+  text-align: center;
+  min-height: 200px;
+  width: 100%;
+}
+
+.loading-spinner {
+  margin-bottom: var(--v-unit-6);
+}
+
+.loading-dots {
+  display: flex;
+  gap: var(--v-unit-2);
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--v-color-primary);
+  animation: loading-bounce 1.4s ease-in-out infinite both;
+}
+
+.loading-dots span:nth-child(1) { animation-delay: -0.32s; }
+.loading-dots span:nth-child(2) { animation-delay: -0.16s; }
+.loading-dots span:nth-child(3) { animation-delay: 0s; }
+
+@keyframes loading-bounce {
+  0%, 80%, 100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+.loading-message__text {
+  font-size: var(--v-font-size-lg) !important;
+  font-weight: 600 !important;
+  color: var(--v-color-primary) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  animation: loading-fade 2s ease-in-out infinite alternate !important;
+  max-width: 400px;
+  line-height: 1.4 !important;
+  margin: 0 !important;
+}
+
+@keyframes loading-fade {
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .loading-message {
+    padding: var(--v-unit-8) var(--v-unit-4);
+    min-height: 180px;
+  }
+  
+  .loading-message__text {
+    font-size: var(--v-font-size-md) !important;
+    max-width: 300px;
+  }
+  
+  .loading-dots span {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-dots span {
+    animation: none !important;
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .loading-message__text {
+    animation: none !important;
+    opacity: 1;
+  }
+}
+</style>
