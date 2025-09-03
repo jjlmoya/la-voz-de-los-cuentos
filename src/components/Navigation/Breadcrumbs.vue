@@ -141,35 +141,29 @@ const sagaUrl = computed(() => {
 
 @media (max-width: 768px) {
   .breadcrumbs__trail {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--v-unit-3);
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--v-unit-2);
   }
   
   .breadcrumb-enhanced {
-    font-size: var(--v-font-size-lg) !important;
-    padding: var(--v-unit-3) var(--v-unit-4) !important;
-    min-height: 44px !important;
-    width: auto;
-    max-width: 100%;
-    word-wrap: break-word;
-  }
-  
-  .breadcrumb-sep {
-    display: none;
+    font-size: var(--v-font-size-md) !important;
+    padding: var(--v-unit-2) var(--v-unit-3) !important;
+    min-height: 40px !important;
+    flex-shrink: 1;
+    min-width: 0;
   }
   
   .breadcrumb-current {
-    order: 3;
+    width: 100%;
     margin-top: var(--v-unit-2);
+    text-align: left;
   }
   
-  .breadcrumb-item--home {
-    order: 1;
-  }
-  
-  .breadcrumb-item--saga {
-    order: 2;
+  .breadcrumb-sep {
+    font-size: var(--v-font-size-md);
+    margin: 0 var(--v-unit-1);
   }
 }
 </style>
