@@ -1,46 +1,91 @@
 <template>
-  <div class="story-path">
+  <div class="adventure-map">
     <VContainer size="xl">
-      <div class="path-container">
-        <!-- Historia como un camino de piedras -->
-        <div class="story-stones">
-          <a href="/" class="stone stone--home">
-            <span class="stone-text">{{ t('story.breadcrumb.home') }}</span>
-          </a>
+      <div class="map-container">
+        <svg viewBox="0 0 800 200" class="path-svg">
+          <!-- Líneas de conexión -->
+          <path 
+            d="M 100 100 L 200 100" 
+            class="connection-line"
+            :class="{ 'active': isPathActive(['sagas', 'personajes']) }"
+          />
           
-          <div class="path-line"></div>
+          <!-- Línea hacia sagas -->
+          <path 
+            v-if="sagaName || currentSection === 'sagas'"
+            d="M 200 100 L 300 100" 
+            class="connection-line"
+            :class="{ 'active': isPathActive(['sagas']) }"
+          />
           
-          <a v-if="sagaName" :href="sagaUrl" class="stone stone--saga">
-            <span class="stone-text">{{ sagaName }}</span>
-          </a>
+          <!-- Línea hacia historia específica -->
+          <path 
+            v-if="sagaName && currentPage !== sagaName"
+            d="M 300 100 L 400 100" 
+            class="connection-line"
+            :class="{ 'active': isPathActive(['story']) }"
+          />
           
-          <div v-if="sagaName" class="path-line"></div>
-          
-          <div class="stone stone--current">
-            <span class="stone-text">{{ currentPage }}</span>
-            <div class="current-glow"></div>
-          </div>
-        </div>
+          <!-- Ramas hacia personajes -->
+          <path 
+            d="M 200 100 L 250 60" 
+            class="connection-line branch"
+            :class="{ 'active': currentSection === 'personajes' }"
+          />
+        </svg>
         
-        <!-- Mobile: Mapa del tesoro style -->
-        <div class="treasure-map">
-          <div class="map-header">
-            <span class="map-title">Tu aventura</span>
-          </div>
-          <div class="map-path">
-            <a href="/" class="map-location map-home">
-              {{ t('story.breadcrumb.home') }}
+        <div class="nodes-container">
+          <!-- Nodo Inicio -->
+          <div class="map-node home-node" :class="{ 'current': currentSection === 'home', 'visited': true }">
+            <a href="/" class="node-link">
+              <div class="node-icon">🏠</div>
+              <span class="node-label">{{ t('story.breadcrumb.home') }}</span>
             </a>
-            <template v-if="sagaName">
-              <div class="map-trail"></div>
-              <a :href="sagaUrl" class="map-location map-saga">
-                {{ sagaName }}
-              </a>
-            </template>
-            <div class="map-trail"></div>
-            <div class="map-location map-treasure">
-              {{ currentPage }}
-              <div class="treasure-mark">✨</div>
+          </div>
+          
+          <!-- Nodo Hub (Sagas/Personajes) -->
+          <div class="map-node hub-node">
+            <div class="hub-branches">
+              <!-- Rama Sagas -->
+              <div class="map-node saga-hub" :class="{ 
+                'current': currentSection === 'sagas' && !sagaName, 
+                'visited': sagaName || currentSection === 'sagas' 
+              }">
+                <a href="/sagas" class="node-link">
+                  <div class="node-icon">📚</div>
+                  <span class="node-label">Sagas</span>
+                </a>
+              </div>
+              
+              <!-- Rama Personajes -->
+              <div class="map-node character-hub" :class="{ 
+                'current': currentSection === 'personajes', 
+                'visited': currentSection === 'personajes' 
+              }">
+                <a href="/personajes" class="node-link">
+                  <div class="node-icon">🎭</div>
+                  <span class="node-label">Personajes</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Nodo Saga específica -->
+          <div v-if="sagaName" class="map-node saga-node" :class="{ 
+            'current': currentPage === sagaName, 
+            'visited': true 
+          }">
+            <a :href="sagaUrl" class="node-link">
+              <div class="node-icon">📖</div>
+              <span class="node-label">{{ sagaName }}</span>
+            </a>
+          </div>
+          
+          <!-- Nodo Historia actual -->
+          <div v-if="sagaName && currentPage !== sagaName" class="map-node story-node current pulsing">
+            <div class="node-link">
+              <div class="node-icon">✨</div>
+              <span class="node-label">{{ currentPage }}</span>
             </div>
           </div>
         </div>
@@ -73,253 +118,263 @@ const props = defineProps({
 const sagaUrl = computed(() => {
   return props.sagaKey ? toSaga(props.sagaKey) : '#'
 })
+
+// Detectar sección actual basada en la URL
+const currentSection = computed(() => {
+  const path = window.location.pathname
+  if (path === '/') return 'home'
+  if (path.includes('/sagas')) return 'sagas'  
+  if (path.includes('/personajes')) return 'personajes'
+  if (path.includes('/cuentos') && props.sagaName) return 'story'
+  return 'other'
+})
+
+// Función para determinar si un camino está activo
+const isPathActive = (sections) => {
+  return sections.includes(currentSection.value) || 
+         (sections.includes('story') && props.sagaName && props.currentPage !== props.sagaName)
+}
 </script>
 
 <style scoped>
-.story-path {
+.adventure-map {
   background: linear-gradient(135deg, 
     var(--v-color-background-soft) 0%, 
     var(--v-color-background) 100%);
   padding: var(--v-unit-6) 0;
   margin-bottom: var(--v-unit-6);
-  overflow: hidden;
+  overflow-x: auto;
+  min-height: 120px;
 }
 
-/* Desktop: Piedras del camino */
-.story-stones {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--v-unit-2);
-  padding: var(--v-unit-4);
-}
-
-.stone {
+.map-container {
   position: relative;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  background: var(--v-color-primary);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 
-              0 2px 4px rgba(0, 0, 0, 0.1);
+  min-width: 600px;
+  height: 200px;
 }
 
-.stone--home {
-  background: radial-gradient(circle at 30% 30%, 
-    var(--v-color-accent-primary) 0%, 
-    var(--v-color-primary) 100%);
-}
-
-.stone--saga {
-  background: radial-gradient(circle at 30% 30%, 
-    var(--v-color-accent-primary-hover) 0%, 
-    var(--v-color-accent-primary) 100%);
-}
-
-.stone--current {
-  background: radial-gradient(circle at 30% 30%, 
-    #ffd700 0%, 
-    var(--v-color-primary) 70%);
-  transform: scale(1.1);
-  position: relative;
-}
-
-.current-glow {
+/* SVG Lines */
+.path-svg {
   position: absolute;
-  top: -4px;
-  left: -4px;
-  right: -4px;
-  bottom: -4px;
-  border-radius: 50%;
-  background: linear-gradient(45deg, 
-    transparent 30%, 
-    rgba(255, 215, 0, 0.3) 50%, 
-    transparent 70%);
-  animation: rotate-glow 3s linear infinite;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
-@keyframes rotate-glow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.stone-text {
-  font-size: var(--v-font-size-xs);
-  font-weight: 700;
-  color: white;
-  text-align: center;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-  padding: var(--v-unit-1);
-  line-height: 1.1;
-}
-
-.stone:hover {
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.path-line {
-  width: 40px;
-  height: 4px;
-  background: linear-gradient(90deg, 
-    var(--v-color-primary) 0%, 
-    var(--v-color-accent-primary) 50%, 
-    var(--v-color-primary) 100%);
-  border-radius: 2px;
-  position: relative;
-}
-
-.path-line::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: -6px;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-left: 8px solid var(--v-color-primary);
-  border-top: 4px solid transparent;
-  border-bottom: 4px solid transparent;
-}
-
-/* Mobile: Mapa del tesoro */
-.treasure-map {
-  display: none;
-  background: linear-gradient(145deg, 
-    #f4e4bc 0%, 
-    #e8d5a3 100%);
-  border: 3px solid #8b7355;
-  border-radius: var(--v-radius-lg);
-  padding: var(--v-unit-4);
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: relative;
-}
-
-.treasure-map::before {
-  content: '';
-  position: absolute;
-  top: var(--v-unit-2);
-  left: var(--v-unit-2);
-  right: var(--v-unit-2);
-  bottom: var(--v-unit-2);
-  border: 2px dashed #8b7355;
-  border-radius: var(--v-radius-md);
+.connection-line {
+  stroke: var(--v-color-text-low);
+  stroke-width: 3;
+  fill: none;
   opacity: 0.3;
+  transition: all 0.6s ease;
+  stroke-dasharray: 8 4;
 }
 
-.map-title {
-  font-size: var(--v-font-size-lg);
-  font-weight: 700;
-  color: #5d4e37;
-  text-align: center;
-  display: block;
-  margin-bottom: var(--v-unit-4);
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+.connection-line.active {
+  stroke: #ffd700;
+  opacity: 1;
+  stroke-dasharray: none;
+  animation: path-flow 2s ease-in-out;
+  filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.5));
 }
 
-.map-path {
+.connection-line.branch {
+  stroke-dasharray: 4 4;
+}
+
+@keyframes path-flow {
+  0% { stroke-dasharray: 20 10; stroke-dashoffset: 30; }
+  100% { stroke-dasharray: none; stroke-dashoffset: 0; }
+}
+
+/* Nodes Container */
+.nodes-container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+}
+
+.map-node {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  gap: var(--v-unit-3);
-  align-items: flex-start;
+  align-items: center;
+  transition: all 0.4s ease;
 }
 
-.map-location {
-  background: #8b7355;
-  color: white;
-  padding: var(--v-unit-3) var(--v-unit-4);
-  border-radius: var(--v-radius-xl);
-  font-size: var(--v-font-size-md);
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-  transition: all 0.2s ease;
-  min-height: 44px;
-  display: flex;
-  align-items: center;
+/* Node Positions */
+.home-node {
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hub-node {
+  left: 180px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.saga-hub {
   position: relative;
 }
 
-.map-home {
-  background: var(--v-color-primary);
-  align-self: flex-start;
+.character-hub {
+  position: absolute;
+  top: -60px;
+  left: 30px;
 }
 
-.map-saga {
-  background: var(--v-color-accent-primary);
-  align-self: center;
+.saga-node {
+  left: 280px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.map-treasure {
-  background: linear-gradient(135deg, #ffd700 0%, #ffb347 100%);
-  color: #5d4e37;
-  align-self: flex-end;
+.story-node {
+  left: 380px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Node Styling */
+.node-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.node-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--v-font-size-xl);
+  background: var(--v-color-background);
+  border: 3px solid var(--v-color-text-low);
+  margin-bottom: var(--v-unit-2);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.node-label {
+  font-size: var(--v-font-size-sm);
+  font-weight: 600;
+  color: var(--v-color-text-medium);
+  text-align: center;
+  max-width: 80px;
+  line-height: 1.2;
+  transition: all 0.3s ease;
+}
+
+/* Node States */
+.map-node.visited .node-icon {
+  border-color: var(--v-color-primary);
+  background: linear-gradient(135deg, 
+    var(--v-color-primary) 0%, 
+    var(--v-color-accent-primary) 100%);
+  color: white;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.map-node.visited .node-label {
+  color: var(--v-color-text-high);
   font-weight: 700;
 }
 
-.treasure-mark {
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  font-size: var(--v-font-size-lg);
-  animation: twinkle 2s ease-in-out infinite;
+.map-node.current .node-icon {
+  border-color: #ffd700;
+  background: radial-gradient(circle at 30% 30%, 
+    #ffeb3b 0%, 
+    #ffd700 100%);
+  color: #5d4e37;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6),
+              0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes twinkle {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.7; transform: scale(1.2); }
+.map-node.current .node-label {
+  color: var(--v-color-text-high);
+  font-weight: 800;
 }
 
-.map-trail {
-  width: 3px;
-  height: 20px;
-  background: repeating-linear-gradient(
-    to bottom,
-    #8b7355 0px,
-    #8b7355 4px,
-    transparent 4px,
-    transparent 8px
-  );
-  align-self: center;
-  margin: 0 var(--v-unit-2);
+.map-node.pulsing .node-icon {
+  animation: pulse-glow 2s ease-in-out infinite;
 }
 
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6),
+                0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+  }
+  50% { 
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.9),
+                0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.15);
+  }
+}
+
+/* Hover Effects */
+.map-node .node-link:hover .node-icon {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.map-node.current .node-link:hover .node-icon {
+  transform: translateY(-2px) scale(1.2);
+}
+
+/* Hub Branches */
+.hub-branches {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
-  .story-stones {
-    display: none;
+  .map-container {
+    min-width: 480px;
+    transform: scale(0.8);
+    transform-origin: left center;
   }
   
-  .treasure-map {
-    display: block;
-  }
-}
-
-@media (min-width: 769px) {
-  .story-stones {
-    display: flex;
+  .node-icon {
+    width: 50px;
+    height: 50px;
+    font-size: var(--v-font-size-lg);
   }
   
-  .treasure-map {
-    display: none;
+  .node-label {
+    font-size: var(--v-font-size-xs);
+    max-width: 60px;
+  }
+  
+  .character-hub {
+    top: -50px;
+    left: 25px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .current-glow {
+  .connection-line.active {
     animation: none;
   }
   
-  .treasure-mark {
+  .map-node.pulsing .node-icon {
     animation: none;
   }
   
-  .stone {
+  .map-node, .node-link, .node-icon {
     transition: none;
   }
 }
