@@ -1,21 +1,32 @@
 <template>
   <div class="breadcrumbs animate-fadeInUp">
     <VContainer size="xl">
-      <nav aria-label="Breadcrumb">
-        <div class="breadcrumbs__trail stagger-children">
-          <a href="/" class="breadcrumb-item breadcrumb-item--home btn-playful breadcrumb-enhanced">
+      <nav aria-label="Breadcrumb" class="breadcrumbs-nav">
+        <!-- Mobile: Simple back button + title -->
+        <div class="breadcrumbs-mobile">
+          <a href="/" class="back-button">
+            ← {{ t('story.breadcrumb.home') }}
+          </a>
+          <div class="current-title">
+            {{ currentPage }}
+          </div>
+        </div>
+        
+        <!-- Desktop: Traditional breadcrumbs -->
+        <div class="breadcrumbs-desktop">
+          <a href="/" class="breadcrumb-link">
             {{ t('story.breadcrumb.home') }}
           </a>
           
           <template v-if="sagaName">
-            <span class="breadcrumb-sep">→</span>
-            <a :href="sagaUrl" class="breadcrumb-item breadcrumb-item--saga btn-playful breadcrumb-enhanced">
+            <span class="breadcrumb-sep">/</span>
+            <a :href="sagaUrl" class="breadcrumb-link">
               {{ sagaName }}
             </a>
           </template>
           
-          <span class="breadcrumb-sep">→</span>
-          <span class="breadcrumb-item breadcrumb-item--current animate-pulse breadcrumb-enhanced breadcrumb-current">
+          <span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-current">
             {{ currentPage }}
           </span>
         </div>
@@ -58,112 +69,96 @@ const sagaUrl = computed(() => {
   padding: var(--v-unit-4) 0;
 }
 
-.breadcrumbs__trail {
+/* Mobile: Clean back button + title */
+.breadcrumbs-mobile {
+  display: none;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--v-unit-3) var(--v-unit-4);
+  background: var(--v-color-primary);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--v-radius-md);
+  font-size: var(--v-font-size-md);
+  font-weight: 600;
+  min-height: 44px;
+  box-shadow: var(--v-shadow-sm);
+  transition: all 0.2s ease;
+  margin-bottom: var(--v-unit-3);
+}
+
+.back-button:focus {
+  box-shadow: var(--v-shadow-md), 0 0 0 3px var(--v-color-accent-primary-hover);
+}
+
+.current-title {
+  font-size: var(--v-font-size-lg);
+  font-weight: 700;
+  color: var(--v-color-text-high);
+  line-height: 1.3;
+  padding: 0 var(--v-unit-2);
+}
+
+/* Desktop: Traditional breadcrumbs */
+.breadcrumbs-desktop {
   display: flex;
   align-items: center;
-  gap: var(--v-unit-2);
+  gap: var(--v-unit-3);
   flex-wrap: wrap;
 }
 
-.breadcrumb-item {
-  font-size: var(--v-font-size-sm);
+.breadcrumb-link {
+  font-size: var(--v-font-size-md);
   font-weight: 500;
-  padding: var(--v-unit-2) var(--v-unit-3);
-  border-radius: var(--v-radius-md);
+  color: var(--v-color-primary);
   text-decoration: none;
+  padding: var(--v-unit-2) var(--v-unit-3);
+  border-radius: var(--v-radius-sm);
   transition: all 0.2s ease;
-  color: var(--v-color-text-medium);
 }
 
-.breadcrumb-enhanced {
-  font-size: var(--v-font-size-lg) !important;
-  font-weight: 600 !important;
-  padding: var(--v-unit-4) var(--v-unit-6) !important;
-  border-radius: var(--v-radius-lg) !important;
-  min-height: 44px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
-  box-shadow: var(--v-shadow-sm) !important;
-  border: 2px solid transparent !important;
-}
-
-.breadcrumb-item--home,
-.breadcrumb-item--saga {
+.breadcrumb-link:hover {
   background-color: var(--v-color-primary);
   color: white;
 }
 
-.breadcrumb-item--home:hover,
-.breadcrumb-item--saga:hover {
-  background-color: var(--v-color-accent-primary-hover);
-  box-shadow: var(--v-shadow-sm);
-}
-
-.breadcrumb-item--current {
-  background-color: var(--v-color-background);
-  color: var(--v-color-text-high);
-  border: 1px solid var(--v-color-primary);
-  font-weight: 600;
-}
-
-.breadcrumb-enhanced.breadcrumb-item--home {
-  background: linear-gradient(135deg, var(--v-color-primary) 0%, var(--v-color-accent-primary) 100%) !important;
-  color: white !important;
-}
-
-.breadcrumb-enhanced.breadcrumb-item--saga {
-  background: linear-gradient(135deg, var(--v-color-accent-primary) 0%, var(--v-color-accent-primary-hover) 100%) !important;
-  color: white !important;
+.breadcrumb-link:focus {
+  outline: 2px solid var(--v-color-accent-primary-hover);
+  outline-offset: 2px;
 }
 
 .breadcrumb-current {
-  background: linear-gradient(135deg, var(--v-color-background) 0%, var(--v-color-background-soft) 100%) !important;
-  color: var(--v-color-text-high) !important;
-  border: 3px solid var(--v-color-primary) !important;
-  font-weight: 700 !important;
-}
-
-.breadcrumb-enhanced:focus {
-  border-color: var(--v-color-accent-primary-hover) !important;
-  box-shadow: var(--v-shadow-md), 0 0 0 3px var(--v-color-accent-primary-hover) !important;
+  font-size: var(--v-font-size-md);
+  font-weight: 600;
+  color: var(--v-color-text-high);
 }
 
 .breadcrumb-sep {
-  color: var(--v-color-primary);
-  margin: 0 var(--v-unit-4);
-  font-size: var(--v-font-size-xl);
-  font-weight: 700;
+  color: var(--v-color-text-low);
+  font-size: var(--v-font-size-md);
   user-select: none;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
-  .breadcrumbs__trail {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    gap: var(--v-unit-2);
+  .breadcrumbs-mobile {
+    display: block;
   }
   
-  .breadcrumb-enhanced {
-    font-size: var(--v-font-size-md) !important;
-    padding: var(--v-unit-2) var(--v-unit-3) !important;
-    min-height: 40px !important;
-    flex-shrink: 1;
-    min-width: 0;
+  .breadcrumbs-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .breadcrumbs-mobile {
+    display: none;
   }
   
-  .breadcrumb-current {
-    width: 100%;
-    margin-top: var(--v-unit-2);
-    text-align: left;
-  }
-  
-  .breadcrumb-sep {
-    font-size: var(--v-font-size-md);
-    margin: 0 var(--v-unit-1);
+  .breadcrumbs-desktop {
+    display: flex;
   }
 }
 </style>
