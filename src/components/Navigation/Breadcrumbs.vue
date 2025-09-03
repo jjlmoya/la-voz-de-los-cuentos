@@ -1,8 +1,8 @@
 <template>
-  <div class="breadcrumbs animate-fadeInUp">
+  <div class="breadcrumbs">
     <VContainer size="xl">
       <nav aria-label="Breadcrumb">
-        <div class="breadcrumbs__trail stagger-children">
+        <div class="breadcrumbs__trail">
           <a href="/" class="breadcrumb-item breadcrumb-item--home btn-playful breadcrumb-enhanced">
             {{ t('story.breadcrumb.home') }}
           </a>
@@ -15,7 +15,7 @@
           </template>
           
           <span class="breadcrumb-sep">→</span>
-          <span class="breadcrumb-item breadcrumb-item--current animate-pulse breadcrumb-enhanced breadcrumb-current">
+          <span class="breadcrumb-item breadcrumb-item--current breadcrumb-enhanced breadcrumb-current">
             {{ currentPage }}
           </span>
         </div>
