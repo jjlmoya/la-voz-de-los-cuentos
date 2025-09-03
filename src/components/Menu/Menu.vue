@@ -97,20 +97,11 @@
   transform: scale(1.05) !important;
 }
 
-.menu-item-color-0 {
-  background: linear-gradient(135deg, var(--v-color-primary) 0%, var(--v-color-accent-primary) 100%) !important;
-}
-
-.menu-item-color-1 {
-  background: linear-gradient(135deg, var(--v-color-accent-primary) 0%, var(--v-color-primary) 100%) !important;
-}
-
-.menu-item-color-2 {
-  background: linear-gradient(135deg, var(--v-color-primary) 30%, var(--v-color-accent-primary-hover) 100%) !important;
-}
-
+.menu-item-color-0,
+.menu-item-color-1,
+.menu-item-color-2,
 .menu-item-color-3 {
-  background: linear-gradient(135deg, var(--v-color-accent-primary-hover) 0%, var(--v-color-accent-primary) 100%) !important;
+  background: var(--v-color-primary) !important;
 }
 
 @media (max-width: 768px) {
