@@ -55,12 +55,12 @@
       <LoadingMessage 
         v-if="isLoading"
         :messages="[
-          'Preparando tu aventura...',
-          'Abriendo el libro mágico...',
-          'Despertando a los personajes...',
-          'Creando mundos fantásticos...',
-          'Mezclando pociones de palabras...',
-          'Buscando tesoros literarios...'
+          t('loading.adventure'),
+          t('loading.book'),
+          t('loading.characters'),
+          t('loading.worlds'),
+          t('loading.potions'),
+          t('loading.treasures')
         ]"
         :interval="1500"
       />

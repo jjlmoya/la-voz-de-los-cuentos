@@ -61,6 +61,13 @@ export default {
   'page.stories.order.duration': 'Duración',
   'page.stories.order.name': 'Nombre',
 
+  'loading.adventure': 'Preparando tu aventura...',
+  'loading.book': 'Abriendo el libro mágico...',
+  'loading.characters': 'Despertando a los personajes...',
+  'loading.worlds': 'Creando mundos fantásticos...',
+  'loading.potions': 'Mezclando pociones de palabras...',
+  'loading.treasures': 'Buscando tesoros literarios...',
+
   'page.story.font.aria': 'Elige el tamaño de fuente',
 
   'page.story.share': 'Comparte y disfruta',
