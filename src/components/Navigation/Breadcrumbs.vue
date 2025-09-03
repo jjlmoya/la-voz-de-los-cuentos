@@ -1,39 +1,25 @@
 <template>
-  <div class="simple-breadcrumbs">
+  <div class="breadcrumbs animate-fadeInUp">
     <VContainer size="xl">
-      <div class="breadcrumb-path">
-        
-        <!-- Inicio -->
-        <div class="breadcrumb-node">
-          <a href="/" class="node">
-            <span class="node-icon">🏠</span>
-            <span class="node-text">{{ t('story.breadcrumb.home') }}</span>
+      <nav aria-label="Breadcrumb">
+        <div class="breadcrumbs__trail stagger-children">
+          <a href="/" class="breadcrumb-item breadcrumb-item--home btn-playful breadcrumb-enhanced">
+            {{ t('story.breadcrumb.home') }}
           </a>
+          
+          <template v-if="sagaName">
+            <span class="breadcrumb-sep">→</span>
+            <a :href="sagaUrl" class="breadcrumb-item breadcrumb-item--saga btn-playful breadcrumb-enhanced">
+              {{ sagaName }}
+            </a>
+          </template>
+          
+          <span class="breadcrumb-sep">→</span>
+          <span class="breadcrumb-item breadcrumb-item--current animate-pulse breadcrumb-enhanced breadcrumb-current">
+            {{ currentPage }}
+          </span>
         </div>
-        
-        <!-- Arrow -->
-        <div v-if="sagaName || currentPage" class="arrow">→</div>
-        
-        <!-- Saga -->
-        <div v-if="sagaName" class="breadcrumb-node">
-          <a :href="sagaUrl" class="node">
-            <span class="node-icon">📚</span>
-            <span class="node-text">{{ sagaName }}</span>
-          </a>
-        </div>
-        
-        <!-- Arrow to story -->
-        <div v-if="sagaName && currentPage !== sagaName" class="arrow">→</div>
-        
-        <!-- Historia actual -->
-        <div v-if="sagaName && currentPage !== sagaName" class="breadcrumb-node current">
-          <div class="node">
-            <span class="node-icon">✨</span>
-            <span class="node-text">{{ currentPage }}</span>
-          </div>
-        </div>
-        
-      </div>
+      </nav>
     </VContainer>
   </div>
 </template>
@@ -62,119 +48,111 @@ const props = defineProps({
 const sagaUrl = computed(() => {
   return props.sagaKey ? toSaga(props.sagaKey) : '#'
 })
-
-// Ya no necesitamos lógica compleja, solo el sagaUrl
 </script>
 
 <style scoped>
-.simple-breadcrumbs {
-  background: linear-gradient(135deg, 
-    var(--v-color-background-soft) 0%, 
-    var(--v-color-background) 100%);
-  padding: var(--v-unit-4) 0;
+.breadcrumbs {
+  background-color: var(--v-color-background-soft);
+  border-bottom: 1px solid var(--v-color-background);
   margin-bottom: var(--v-unit-6);
+  padding: var(--v-unit-4) 0;
 }
 
-.breadcrumb-path {
-  display: flex;
-  align-items: center;
-  gap: var(--v-unit-3);
-  flex-wrap: wrap;
-}
-
-.breadcrumb-node {
-  display: flex;
-  align-items: center;
-}
-
-.node {
+.breadcrumbs__trail {
   display: flex;
   align-items: center;
   gap: var(--v-unit-2);
-  padding: var(--v-unit-3) var(--v-unit-4);
-  background: var(--v-color-primary);
-  color: white;
+  flex-wrap: wrap;
+}
+
+.breadcrumb-item {
+  font-size: var(--v-font-size-sm);
+  font-weight: 500;
+  padding: var(--v-unit-2) var(--v-unit-3);
+  border-radius: var(--v-radius-md);
   text-decoration: none;
-  border-radius: var(--v-radius-xl);
-  font-size: var(--v-font-size-md);
-  font-weight: 600;
+  transition: all 0.2s ease;
+  color: var(--v-color-text-medium);
+}
+
+.breadcrumb-enhanced {
+  font-size: var(--v-font-size-lg) !important;
+  font-weight: 600 !important;
+  padding: var(--v-unit-4) var(--v-unit-6) !important;
+  border-radius: var(--v-radius-lg) !important;
+  min-height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: var(--v-shadow-sm) !important;
+  border: 2px solid transparent !important;
+}
+
+.breadcrumb-item--home,
+.breadcrumb-item--saga {
+  background-color: var(--v-color-primary);
+  color: white;
+}
+
+.breadcrumb-item--home:hover,
+.breadcrumb-item--saga:hover {
+  background-color: var(--v-color-accent-primary-hover);
   box-shadow: var(--v-shadow-sm);
-  transition: all 0.3s ease;
-  min-height: 44px;
 }
 
-.node:hover {
-  background: var(--v-color-accent-primary-hover);
-  transform: translateY(-1px);
-  box-shadow: var(--v-shadow-md);
+.breadcrumb-item--current {
+  background-color: var(--v-color-background);
+  color: var(--v-color-text-high);
+  border: 1px solid var(--v-color-primary);
+  font-weight: 600;
 }
 
-.breadcrumb-node.current .node {
-  background: linear-gradient(135deg, #ffd700 0%, #ffb347 100%);
-  color: #5d4e37;
-  font-weight: 700;
-  animation: pulse-current 2s ease-in-out infinite;
+.breadcrumb-enhanced.breadcrumb-item--home {
+  background: linear-gradient(135deg, var(--v-color-primary) 0%, var(--v-color-accent-primary) 100%) !important;
+  color: white !important;
 }
 
-@keyframes pulse-current {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+.breadcrumb-enhanced.breadcrumb-item--saga {
+  background: linear-gradient(135deg, var(--v-color-accent-primary) 0%, var(--v-color-accent-primary-hover) 100%) !important;
+  color: white !important;
 }
 
-.node-icon {
-  font-size: var(--v-font-size-lg);
-  line-height: 1;
+.breadcrumb-current {
+  background: linear-gradient(135deg, var(--v-color-background) 0%, var(--v-color-background-soft) 100%) !important;
+  color: var(--v-color-text-high) !important;
+  border: 3px solid var(--v-color-primary) !important;
+  font-weight: 700 !important;
 }
 
-.node-text {
-  font-size: var(--v-font-size-md);
-  line-height: 1.2;
-  max-width: 200px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+.breadcrumb-enhanced:focus {
+  border-color: var(--v-color-accent-primary-hover) !important;
+  box-shadow: var(--v-shadow-md), 0 0 0 3px var(--v-color-accent-primary-hover) !important;
 }
 
-.arrow {
-  font-size: var(--v-font-size-xl);
+.breadcrumb-sep {
   color: var(--v-color-primary);
+  margin: 0 var(--v-unit-4);
+  font-size: var(--v-font-size-xl);
   font-weight: 700;
-  margin: 0 var(--v-unit-2);
+  user-select: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
-  .breadcrumb-path {
-    gap: var(--v-unit-2);
+  .breadcrumb-enhanced {
+    font-size: var(--v-font-size-xl) !important;
+    padding: var(--v-unit-6) var(--v-unit-8) !important;
+    min-height: 48px !important;
   }
   
-  .node {
-    padding: var(--v-unit-2) var(--v-unit-3);
-    font-size: var(--v-font-size-sm);
-    min-height: 40px;
+  .breadcrumbs__trail {
+    gap: var(--v-unit-4);
   }
   
-  .node-text {
-    font-size: var(--v-font-size-sm);
-    max-width: 120px;
-  }
-  
-  .node-icon {
-    font-size: var(--v-font-size-md);
-  }
-  
-  .arrow {
-    font-size: var(--v-font-size-lg);
-    margin: 0 var(--v-unit-1);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .breadcrumb-node.current .node {
-    animation: none;
-  }
-  
-  .node {
-    transition: none;
+  .breadcrumb-sep {
+    font-size: var(--v-font-size-xl);
+    margin: 0 var(--v-unit-6);
   }
 }
 </style>
