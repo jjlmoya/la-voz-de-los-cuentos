@@ -1,0 +1,17 @@
+import { getSagas } from '../../src/data/index.js';
+
+export default async function handler(_req, res) {
+  res.setHeader('X-Robots-Tag', 'noindex, nofollow');
+  res.setHeader('Content-Type', 'application/json');
+
+  try {
+    const sagas = getSagas();
+    const randomIndex = Math.floor(Math.random() * sagas.length);
+    const randomSaga = sagas[randomIndex];
+
+    res.status(200).json(randomSaga);
+  } catch (error) {
+    console.error('Error generating random saga:', error);
+    res.status(500).json({ error: 'Error generating random saga' });
+  }
+}

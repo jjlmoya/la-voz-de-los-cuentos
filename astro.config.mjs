@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import vue from '@astrojs/vue';
 import sitemap from "@astrojs/sitemap";
+import vercel from '@astrojs/vercel';
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -12,6 +13,8 @@ const shouldIncludePage = (page) => {
 
 export default defineConfig({
     site: process.env.PUBLIC_SITE_URL,
+    output: 'static',
+    adapter: vercel(),
     integrations: [
         sitemap({
             filter: shouldIncludePage
