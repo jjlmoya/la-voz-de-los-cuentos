@@ -1,7 +1,7 @@
 {
   "name": "la-voz-de-los-cuentos",
   "type": "module",
-  "version": "0.1.235",
+  "version": "0.1.237",
   "scripts": {
     "dev": "astro dev",
     "dev:en": "env-cmd -f .env.en astro dev",
@@ -24,19 +24,18 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.2.0",
-    "@astrojs/vue": "^4.5.2",
+    "@astrojs/vercel": "^8.2.8",
+    "@astrojs/vue": "^5.1.1",
     "@overgaming/vicius": "0.10.0",
     "@vue/compiler-sfc": "^3.5.11",
-    "astro": "^4.15.12",
+    "astro": "^5.14.1",
     "eslint-plugin-vue": "^9.28.0",
     "glob": "^11.0.3",
     "human-touch": "^1.0.7",
     "la-voz-de-los-cuentos-games": "^0.23.0",
     "natural": "^8.1.0",
     "sharp": "^0.33.5",
-    "vite-plugin-pwa": "^0.20.5"
-  },
-  "peerDependencies": {
+    "vite-plugin-pwa": "^0.20.5",
     "vue": "^3.4.0"
   },
   "devDependencies": {
