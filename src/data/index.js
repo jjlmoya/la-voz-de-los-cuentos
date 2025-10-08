@@ -1,15 +1,15 @@
-const lang = import.meta.env.PUBLIC_LANG
-import storiesEn from './en/stories.json' assert { type: 'json' }
-import sagasEn from './en/sagas.json' assert { type: 'json' }
-import charactersEn from './en/characters.json' assert { type: 'json' }
-import newslettersEn from './en/newsletters.json' assert { type: 'json' }
-import landingsEn from './en/landings.json' assert { type: 'json' }
+const lang = import.meta?.env?.PUBLIC_LANG || process.env.PUBLIC_LANG || 'es'
+import storiesEn from './en/stories.json' with { type: 'json' }
+import sagasEn from './en/sagas.json' with { type: 'json' }
+import charactersEn from './en/characters.json' with { type: 'json' }
+import newslettersEn from './en/newsletters.json' with { type: 'json' }
+import landingsEn from './en/landings.json' with { type: 'json' }
 
-import storiesEs from './es/stories.json' assert { type: 'json' }
-import sagasEs from './es/sagas.json' assert { type: 'json' }
-import charactersEs from './es/characters.json' assert { type: 'json' }
-import newslettersEs from './es/newsletters.json' assert { type: 'json' }
-import landingsEs from './es/landings.json' assert { type: 'json' }
+import storiesEs from './es/stories.json' with { type: 'json' }
+import sagasEs from './es/sagas.json' with { type: 'json' }
+import charactersEs from './es/characters.json' with { type: 'json' }
+import newslettersEs from './es/newsletters.json' with { type: 'json' }
+import landingsEs from './es/landings.json' with { type: 'json' }
 
 const map = {
   es: {
