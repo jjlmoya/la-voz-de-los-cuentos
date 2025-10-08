@@ -1,11 +1,14 @@
 import { getCharacters } from '../../src/data/index.js';
 
-export default async function handler(_req, res) {
+export default async function handler(req, res) {
   res.setHeader('X-Robots-Tag', 'noindex, nofollow');
   res.setHeader('Content-Type', 'application/json');
 
   try {
-    const characters = getCharacters();
+    const { lang } = req.query;
+    const language = (lang === 'es' || lang === 'en') ? lang : undefined;
+
+    const characters = getCharacters(language);
     const randomIndex = Math.floor(Math.random() * characters.length);
     const randomCharacter = characters[randomIndex];
 

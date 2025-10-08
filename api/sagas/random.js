@@ -1,11 +1,14 @@
 import { getSagas } from '../../src/data/index.js';
 
-export default async function handler(_req, res) {
+export default async function handler(req, res) {
   res.setHeader('X-Robots-Tag', 'noindex, nofollow');
   res.setHeader('Content-Type', 'application/json');
 
   try {
-    const sagas = getSagas();
+    const { lang } = req.query;
+    const language = (lang === 'es' || lang === 'en') ? lang : undefined;
+
+    const sagas = getSagas(language);
     const randomIndex = Math.floor(Math.random() * sagas.length);
     const randomSaga = sagas[randomIndex];
 

@@ -28,8 +28,8 @@ const map = {
   }
 }
 
-export const getSagas = () => map[lang].sagas
-export const getStories = () => map[lang].stories
-export const getNewsLetters = () => map[lang].newsletters
-export const getCharacters = () => map[lang].characters
-export const getLandings = () => map[lang].landings
+export const getSagas = (language = lang) => map[language]?.sagas || map[lang].sagas
+export const getStories = (language = lang) => map[language]?.stories || map[lang].stories
+export const getNewsLetters = (language = lang) => map[language]?.newsletters || map[lang].newsletters
+export const getCharacters = (language = lang) => map[language]?.characters || map[lang].characters
+export const getLandings = (language = lang) => map[language]?.landings || map[lang].landings
