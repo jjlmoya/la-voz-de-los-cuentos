@@ -17,6 +17,9 @@ const toCustomStory = () =>
   lang === 'es' ? `/personalizado/cuento/` : '/custom/story/'
 const toLandingsPage = key =>
   lang === 'en' ? `/list/${key}/` : `/listado/${key}/`
+const toSongs = () => `/${lang === 'es' ? 'canciones' : 'songs'}/`
+const toSong = slug => `/${lang === 'es' ? 'cancion' : 'song'}/${slug}/`
+
 export {
   toStories,
   toStory,
@@ -28,5 +31,7 @@ export {
   toCharacter,
   toAccount,
   toLandingsPage,
-  toCharacters
+  toCharacters,
+  toSongs,
+  toSong
 }

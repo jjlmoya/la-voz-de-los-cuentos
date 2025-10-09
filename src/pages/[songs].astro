@@ -1,0 +1,91 @@
+---
+import NavLayout from '../layouts/NavLayout.astro'
+import { VContainer } from '@overgaming/vicius'
+import FilteredSongs from '../components/Sections/FilteredSongs.vue'
+import t from '../translations'
+import { toSongs } from '../router'
+import { getSongs } from '../data'
+
+const siteUrl = import.meta.env.PUBLIC_SITE_URL
+const author = import.meta.env.PUBLIC_SITE_NAME
+const lang = import.meta.env.PUBLIC_LANG
+
+export async function getStaticPaths() {
+  const paths = [
+    {
+      params: {
+        songs: import.meta.env.PUBLIC_LANG === 'en' ? 'songs' : 'canciones'
+      }
+    }
+  ]
+
+  return paths
+}
+
+const songs = getSongs()
+
+const schema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: t('page.songs.h1'),
+  description: t('page.songs.description'),
+  url: `${siteUrl}${toSongs()}`,
+  publisher: {
+    '@type': 'Organization',
+    name: author,
+    url: siteUrl,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteUrl}/assets/logo/${lang}.webp`
+    }
+  },
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: songs.length,
+    itemListElement: songs.map((song, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'MusicRecording',
+        name: song.name,
+        url: `${siteUrl}/${lang === 'es' ? 'cancion' : 'song'}/${song.key}/`,
+        image: `${siteUrl}/assets/stories/${lang}/${song.key}.webp`
+      }
+    }))
+  }
+})
+---
+
+<NavLayout
+  title={t('page.songs.h1')}
+  description={t('page.songs.description')}
+  url={toSongs()}
+  image={`/assets/logo/${lang}.webp`}
+>
+  <VContainer size="xl" class="songs-page">
+    <h1 class="songs-page__title">{t('page.songs.h1')}</h1>
+    <FilteredSongs client:load />
+  </VContainer>
+
+  <script type="application/ld+json" set:html={schema} />
+</NavLayout>
+
+<style>
+  .songs-page {
+    padding: var(--v-unit-8) var(--v-unit-4);
+  }
+
+  .songs-page__title {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    color: var(--v-color-text-high);
+    text-align: center;
+    margin-bottom: var(--v-unit-8);
+  }
+
+  @media (max-width: 768px) {
+    .songs-page {
+      padding: var(--v-unit-6) var(--v-unit-2);
+    }
+  }
+</style>

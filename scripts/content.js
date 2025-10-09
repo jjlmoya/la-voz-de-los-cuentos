@@ -18,7 +18,7 @@ const SPREADSHEET_IDS = {
 };
 
 const SPREADSHEET_RANGES = {
-    stories: 'Cuentos!A1:L999', 
+    stories: 'Cuentos!A1:M999',
     sagas: 'Sagas!A1:I999',
     newsletters: 'Newsletter!A1:E999',
     characters: 'Characters!A1:P999',
@@ -89,8 +89,26 @@ async function processLanguage(language, spreadsheetId, outputDir) {
         const filteredData = data.filter(hasMandatoryStoryFields)
         const outputPath = path.join(__dirname, `${outputDir}${key}.json`);
         await writeJsonToFile(filteredData, outputPath);
-        
+
         console.log(`JSON created ${key}.json for ${language}`);
+
+        // Generate songs.json from stories that have a song field
+        if (key === 'stories') {
+            const songs = filteredData
+                .filter(story => story.song && story.song.trim() !== '')
+                .map(story => ({
+                    order: story.order,
+                    name: story.name,
+                    key: story.key,
+                    song: story.song,
+                    saga: story.saga,
+                    date: story.date,
+                    lyrics: story.lyrics || ''
+                }));
+            const outputPathSongs = path.join(__dirname, `${outputDir}songs.json`);
+            await writeJsonToFile(songs, outputPathSongs);
+            console.log(`JSON created songs.json for ${language} (${songs.length} songs)`);
+        }
     }
 }
 

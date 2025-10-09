@@ -21,6 +21,18 @@
     </div>
     <Spotify v-if="story.spotify" :spotify="story.spotify" />
 
+    <div v-if="relatedSong" class="story-page__song-link">
+      <VButton
+        :href="toSong(relatedSong.key)"
+        class="story-page__song-button"
+      >
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+        </svg>
+        <span>{{ t('page.story.listenSong') }}</span>
+      </VButton>
+    </div>
+
     <div class="story-page__title">
       <VText as="h1" variant="header" color="high">
         {{ story.name }}
@@ -144,6 +156,7 @@
 <script setup>
   import t from '../../translations'
   import Spotify from '../Media/Spotify.vue'
+  import { toSong } from '../../router'
   const lang = import.meta.env.PUBLIC_LANG
 
   const props = defineProps({
@@ -152,6 +165,10 @@
       default: {}
     },
     currentSaga: {
+      type: Object,
+      default: null
+    },
+    relatedSong: {
       type: Object,
       default: null
     },
@@ -468,9 +485,42 @@
     color: white;
     border-color: var(--v-color-primary);
     transform: scale(1.05);
-    
+
     svg {
       fill: white;
+    }
+  }
+
+  .story-page__song-link {
+    display: flex;
+    justify-content: center;
+    margin: var(--v-unit-4) 0;
+  }
+
+  .story-page__song-button {
+    display: flex;
+    align-items: center;
+    gap: var(--v-unit-2);
+    padding: var(--v-unit-3) var(--v-unit-6);
+    background: linear-gradient(135deg, var(--v-color-primary) 0%, var(--v-color-accent-primary) 100%);
+    color: white;
+    border: none;
+    border-radius: var(--v-radius-lg);
+    font-size: var(--v-font-size-lg);
+    font-weight: 600;
+    box-shadow: var(--v-shadow-md);
+    transition: all 0.3s ease;
+    text-decoration: none;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: white;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--v-shadow-lg);
     }
   }
 

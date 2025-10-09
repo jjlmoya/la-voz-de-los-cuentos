@@ -22,7 +22,8 @@
     toCustomStory,
     toNewsLetters,
     toAccount,
-    toCharacters
+    toCharacters,
+    toSongs
   } from '../../router'
   import useNewsLetters from '../../composables/useNewsLetters'
   const { hasNewsLetters } = useNewsLetters()
@@ -40,6 +41,10 @@
       {
         label: t('menu.sagas'),
         link: toSagas()
+      },
+      {
+        label: t('menu.songs'),
+        link: toSongs()
       },
       {
         label: t('menu.characters'),

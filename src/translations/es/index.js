@@ -27,6 +27,7 @@ export default {
   'menu.home': 'Inicio',
   'menu.stories': 'Cuentos',
   'menu.sagas': 'Sagas',
+  'menu.songs': 'Canciones',
   'menu.characters': 'Personajes',
   'menu.account': 'Cuenta',
   'menu.custom': 'Cuento Personalizado',
@@ -61,6 +62,14 @@ export default {
   'page.stories.order.duration': 'Duración',
   'page.stories.order.name': 'Nombre',
 
+  'page.songs.h1': 'Canciones',
+  'page.songs.description':
+    'Descubre todas nuestras canciones mágicas basadas en los cuentos',
+  'page.songs.searcher.placeholder': 'Buscar canción...',
+  'page.songs.order.date': 'Fecha',
+  'page.songs.order.duration': 'Duración',
+  'page.songs.order.name': 'Nombre',
+
   'loading.adventure': 'Preparando tu aventura...',
   'loading.book': 'Abriendo el libro mágico...',
   'loading.characters': 'Despertando a los personajes...',
@@ -73,6 +82,16 @@ export default {
   'page.story.share': 'Comparte y disfruta',
   'page.story.related': 'Cuentos Relacionados',
   'page.story.share.aria': 'Compartir en',
+  'page.story.listenSong': 'Escuchar Canción',
+
+  'page.song.playlist': 'Canciones',
+  'page.song.lyrics': 'Letra',
+  'page.song.fromStory': 'Del cuento',
+  'page.song.repeat': 'Repetir',
+  'page.song.autoplay': 'Reproducción automática',
+  'page.song.readStory': 'Leer el Cuento',
+  'page.song.description': 'Disfruta cantando esta adaptación musical del cuento {name}. Canta y diviértete con esta mágica canción infantil.',
+  'page.song.description.withSaga': 'Disfruta cantando esta adaptación musical del cuento {name} de la saga {saga}. Canta y diviértete con esta mágica canción infantil.',
 
   'page.sagas.h1': 'Nuestras Sagas Mágicas',
   'page.sagas.description':

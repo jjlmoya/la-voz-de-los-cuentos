@@ -1,0 +1,109 @@
+---
+import NavLayout from '../../layouts/NavLayout.astro'
+import { getSongs, getStories, getSagas } from '../../data'
+import { toSong } from '../../router'
+import SongPage from '../../components/Page/SongPage.vue'
+import t from '../../translations'
+
+const siteUrl = import.meta.env.PUBLIC_SITE_URL
+const author = import.meta.env.PUBLIC_SITE_NAME
+const lang = import.meta.env.PUBLIC_LANG
+
+const songs = getSongs()
+const stories = getStories()
+const sagas = getSagas()
+
+const { id } = Astro.params
+const song = songs.find(s => s.key === id)
+
+// Find the related story (the song IS the story, but we might want to link to the story page)
+const relatedStory = stories.find(s => s.key === song.key)
+const currentSaga = sagas.find(saga => saga.key === song.saga)
+
+const getDescription = () => {
+  const key = currentSaga && song.saga ? 'page.song.description.withSaga' : 'page.song.description'
+  let desc = t(key)
+  desc = desc.replace('{name}', song.name)
+  if (currentSaga && song.saga) {
+    desc = desc.replace('{saga}', currentSaga.name)
+  }
+  return desc
+}
+
+const description = getDescription()
+
+export async function getStaticPaths() {
+  const paths = getSongs().map(song => ({
+    params: {
+      song: import.meta.env.PUBLIC_LANG === 'en' ? 'song' : 'cancion',
+      id: song.key
+    }
+  }))
+
+  return paths
+}
+
+const formatDate = dateStr => {
+  const [day, month, year] = dateStr.split('/')
+  const fullYear = `${year}`
+  return `${fullYear}-${month}-${day}T00:00:00Z`
+}
+
+const schema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'MusicRecording',
+  '@id': `${siteUrl}${toSong(song.key)}`,
+  name: song.name,
+  author: {
+    '@type': 'Organization',
+    name: author,
+    url: siteUrl
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: author,
+    url: siteUrl,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteUrl}/assets/logo/${lang}.webp`
+    }
+  },
+  datePublished: formatDate(song.date),
+  dateModified: formatDate(song.date),
+  image: {
+    '@type': 'ImageObject',
+    url: `${siteUrl}/assets/stories/${lang}/${song.key}.webp`,
+    width: 1200,
+    height: 1200
+  },
+  description: description,
+  genre: `${t('schema.type')}`,
+  inLanguage: lang,
+  associatedMedia: song.song ? {
+    '@type': 'VideoObject',
+    name: song.name,
+    description: description,
+    thumbnailUrl: `${siteUrl}/assets/stories/${lang}/${song.key}.webp`,
+    uploadDate: formatDate(song.date),
+    contentUrl: song.song,
+    embedUrl: song.song
+  } : undefined
+})
+---
+
+<NavLayout
+  title={song.name}
+  description={description}
+  image={`/assets/stories/${lang}/${song.key}.webp`}
+  url={`${toSong(song.key)}`}
+>
+  <SongPage
+    song={song}
+    allSongs={songs}
+    currentSaga={currentSaga}
+    relatedStory={relatedStory}
+    client:load
+  />
+
+  <script type="application/ld+json" set:html={schema} />
+</NavLayout>

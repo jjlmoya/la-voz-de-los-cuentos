@@ -27,6 +27,7 @@ export default {
   'menu.home': 'Home',
   'menu.stories': 'Stories',
   'menu.sagas': 'Sagas',
+  'menu.songs': 'Songs',
   'menu.characters': 'Characters',
   'menu.account': 'Account',
   'menu.custom': 'Create a Story',
@@ -58,6 +59,14 @@ export default {
   'page.stories.order.duration': 'Duration',
   'page.stories.order.name': 'Title',
 
+  'page.songs.h1': 'Songs',
+  'page.songs.description':
+    'Discover all our magical songs based on the stories',
+  'page.songs.searcher.placeholder': 'Search for a song...',
+  'page.songs.order.date': 'Date',
+  'page.songs.order.duration': 'Duration',
+  'page.songs.order.name': 'Title',
+
   'loading.adventure': 'Preparing your adventure...',
   'loading.book': 'Opening the magic book...',
   'loading.characters': 'Waking up the characters...',
@@ -70,6 +79,16 @@ export default {
   'page.story.share': 'Share and Enjoy',
   'page.story.related': 'More Stories Like This',
   'page.story.share.aria': 'Share on',
+  'page.story.listenSong': 'Listen to Song',
+
+  'page.song.playlist': 'Songs',
+  'page.song.lyrics': 'Lyrics',
+  'page.song.fromStory': 'From the story',
+  'page.song.repeat': 'Repeat',
+  'page.song.autoplay': 'Autoplay',
+  'page.song.readStory': 'Read the Story',
+  'page.song.description': 'Enjoy singing this musical adaptation of the story {name}. Sing and have fun with this magical children\'s song.',
+  'page.song.description.withSaga': 'Enjoy singing this musical adaptation of the story {name} from the {saga} saga. Sing and have fun with this magical children\'s song.',
 
   'page.sagas.h1': 'Our Magical Sagas',
   'page.sagas.description':
