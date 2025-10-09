@@ -444,30 +444,27 @@ watch([isRepeat, isAutoplay], savePreferences)
 }
 
 .song-page__lyrics {
-  background: linear-gradient(135deg,
-    rgba(var(--v-color-primary-rgb), 0.05),
-    rgba(var(--v-color-accent-primary-rgb), 0.05));
-  padding: var(--v-unit-8);
-  border-radius: var(--v-radius-xl);
-  border: 3px dashed var(--v-color-primary);
-  box-shadow: 0 8px 32px rgba(var(--v-color-primary-rgb), 0.1);
+  background: var(--v-color-background-soft);
+  padding: var(--v-unit-6);
+  border-radius: var(--v-radius-lg);
+  border: 2px solid var(--v-color-primary);
+  box-shadow: var(--v-shadow-sm);
 }
 
 .song-page__lyrics-title {
-  font-size: var(--v-font-size-xl);
+  font-size: var(--v-font-size-lg);
   font-weight: 700;
   color: var(--v-color-primary);
-  text-align: center;
-  margin: 0 0 var(--v-unit-6) 0;
+  margin: 0 0 var(--v-unit-4) 0;
 }
 
 .song-page__lyrics-content {
-  line-height: 2;
+  line-height: 1.6;
   color: var(--v-color-text-high);
-  font-size: var(--v-font-size-lg);
+  font-size: var(--v-font-size-md);
   text-align: center;
-  white-space: pre-wrap;
-  font-weight: 500;
+  white-space: pre-line;
+  font-weight: 400;
 }
 
 .song-page__playlist {
