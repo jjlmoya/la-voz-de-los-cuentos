@@ -1,0 +1,1 @@
+const o=()=>"/cuentos/",t=s=>`/cuento/${s}/`,a=s=>`/personaje/${s}/`,n=()=>"/personajes/",c=()=>"/sagas/",e=s=>`/saga/${s}/`,r=()=>"/newsletters/",$=()=>"/cuenta/",g=()=>"/personalizado/cuento/",i=s=>`/listado/${s}/`,S=()=>"/canciones/",u=s=>`/cancion/${s}/`;export{t as a,u as b,e as c,a as d,o as e,c as f,S as g,$ as h,g as i,r as j,i as k,n as t};
