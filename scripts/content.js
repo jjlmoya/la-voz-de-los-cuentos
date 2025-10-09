@@ -18,7 +18,7 @@ const SPREADSHEET_IDS = {
 };
 
 const SPREADSHEET_RANGES = {
-    stories: 'Cuentos!A1:M999',
+    stories: 'Cuentos!A1:N999',
     sagas: 'Sagas!A1:I999',
     newsletters: 'Newsletter!A1:E999',
     characters: 'Characters!A1:P999',
