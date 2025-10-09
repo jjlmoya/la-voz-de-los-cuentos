@@ -1,4 +1,4 @@
-import { getCharacters } from '../../src/data/index.js';
+import { getCharacters, enrichWithRelations } from '../../src/data/index.js';
 
 export default async function handler(req, res) {
   res.setHeader('X-Robots-Tag', 'noindex, nofollow');
@@ -12,7 +12,9 @@ export default async function handler(req, res) {
     const randomIndex = Math.floor(Math.random() * characters.length);
     const randomCharacter = characters[randomIndex];
 
-    res.status(200).json(randomCharacter);
+    const enrichedCharacter = enrichWithRelations(randomCharacter, 'character', language);
+
+    res.status(200).json(enrichedCharacter);
   } catch (error) {
     console.error('Error generating random character:', error);
     res.status(500).json({ error: 'Error generating random character' });

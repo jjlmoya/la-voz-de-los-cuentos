@@ -38,3 +38,89 @@ export const getNewsLetters = (language = lang) => map[language]?.newsletters ||
 export const getCharacters = (language = lang) => map[language]?.characters || map[lang].characters
 export const getLandings = (language = lang) => map[language]?.landings || map[lang].landings
 export const getSongs = (language = lang) => map[language]?.songs || map[lang].songs
+
+// Enrich entities with related data
+export const enrichWithRelations = (item, type, language = lang) => {
+  if (!item) return null
+
+  const enriched = { ...item }
+  const stories = getStories(language)
+  const sagas = getSagas(language)
+  const characters = getCharacters(language)
+  const songs = getSongs(language)
+
+  switch (type) {
+    case 'story':
+      // Add saga object if story belongs to a saga
+      if (item.saga) {
+        enriched.sagaData = sagas.find(s => s.key === item.saga) || null
+
+        // Add related characters from same saga
+        enriched.relatedCharacters = characters.filter(c => c.saga === item.saga)
+
+        // Add related songs from same saga
+        enriched.relatedSongs = songs.filter(s => s.saga === item.saga)
+      }
+
+      // Check if story has a song
+      enriched.hasSong = !!(item.song && item.song.trim() !== '')
+      if (enriched.hasSong) {
+        enriched.songData = songs.find(s => s.song === item.song) || null
+      }
+      break
+
+    case 'saga':
+      // Add all stories from this saga
+      enriched.stories = stories
+        .filter(s => s.saga === item.key)
+        .sort((a, b) => parseInt(a.order) - parseInt(b.order))
+      enriched.storiesCount = enriched.stories.length
+
+      // Add all characters from this saga
+      enriched.characters = characters.filter(c => c.saga === item.key)
+      enriched.charactersCount = enriched.characters.length
+
+      // Add all songs from this saga
+      enriched.songs = songs.filter(s => s.saga === item.key)
+      enriched.songsCount = enriched.songs.length
+      break
+
+    case 'character':
+      // Add saga object if character belongs to a saga
+      if (item.saga) {
+        enriched.sagaData = sagas.find(s => s.key === item.saga) || null
+
+        // Add stories from same saga
+        enriched.stories = stories.filter(s => s.saga === item.saga)
+        enriched.storiesCount = enriched.stories.length
+
+        // Add related characters from same saga
+        enriched.relatedCharacters = characters.filter(c => c.saga === item.saga && c.key !== item.key)
+
+        // Add songs from same saga
+        enriched.songs = songs.filter(s => s.saga === item.saga)
+      }
+      break
+
+    case 'song':
+      // Add saga object if song belongs to a saga
+      if (item.saga) {
+        enriched.sagaData = sagas.find(s => s.key === item.saga) || null
+
+        // Add related stories from same saga
+        enriched.relatedStories = stories.filter(s => s.saga === item.saga)
+        enriched.storiesCount = enriched.relatedStories.length
+
+        // Add characters from same saga
+        enriched.characters = characters.filter(c => c.saga === item.saga)
+      }
+
+      // Find specific story that has this song
+      if (item.song) {
+        enriched.storyWithSong = stories.find(s => s.song === item.song) || null
+      }
+      break
+  }
+
+  return enriched
+}

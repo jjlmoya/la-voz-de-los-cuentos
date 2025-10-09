@@ -39,10 +39,15 @@ try {
 // Test stories with lang=es
 console.log('--- Testing /api/stories/random?lang=es ---');
 try {
+  const { enrichWithRelations } = await import('./src/data/index.js');
   const stories = getStories('es');
   const randomStory = stories[Math.floor(Math.random() * stories.length)];
-  console.log(`✓ Got random story: ${randomStory.name}`);
-  console.log(`  Keys: ${Object.keys(randomStory).slice(0, 5).join(', ')}\n`);
+  const enriched = enrichWithRelations(randomStory, 'story', 'es');
+  console.log(`✓ Got random story: ${enriched.name}`);
+  console.log(`  Has saga: ${!!enriched.sagaData}`);
+  console.log(`  Has song: ${enriched.hasSong}`);
+  console.log(`  Related characters: ${enriched.relatedCharacters?.length || 0}`);
+  console.log(`  Related songs: ${enriched.relatedSongs?.length || 0}\n`);
 } catch (error) {
   console.error('✗ Error:', error.message, '\n');
 }
@@ -61,10 +66,14 @@ try {
 // Test sagas
 console.log('--- Testing /api/sagas/random?lang=es ---');
 try {
+  const { enrichWithRelations } = await import('./src/data/index.js');
   const sagas = getSagas('es');
   const randomSaga = sagas[Math.floor(Math.random() * sagas.length)];
-  console.log(`✓ Got random saga: ${randomSaga.name}`);
-  console.log(`  Keys: ${Object.keys(randomSaga).slice(0, 5).join(', ')}\n`);
+  const enriched = enrichWithRelations(randomSaga, 'saga', 'es');
+  console.log(`✓ Got random saga: ${enriched.name}`);
+  console.log(`  Stories: ${enriched.storiesCount}`);
+  console.log(`  Characters: ${enriched.charactersCount}`);
+  console.log(`  Songs: ${enriched.songsCount}\n`);
 } catch (error) {
   console.error('✗ Error:', error.message, '\n');
 }
@@ -72,10 +81,15 @@ try {
 // Test characters
 console.log('--- Testing /api/characters/random?lang=es ---');
 try {
+  const { enrichWithRelations } = await import('./src/data/index.js');
   const characters = getCharacters('es');
   const randomCharacter = characters[Math.floor(Math.random() * characters.length)];
-  console.log(`✓ Got random character: ${randomCharacter.name}`);
-  console.log(`  Keys: ${Object.keys(randomCharacter).slice(0, 5).join(', ')}\n`);
+  const enriched = enrichWithRelations(randomCharacter, 'character', 'es');
+  console.log(`✓ Got random character: ${enriched.name}`);
+  console.log(`  Has saga: ${!!enriched.sagaData}`);
+  console.log(`  Stories: ${enriched.storiesCount || 0}`);
+  console.log(`  Related characters: ${enriched.relatedCharacters?.length || 0}`);
+  console.log(`  Songs: ${enriched.songs?.length || 0}\n`);
 } catch (error) {
   console.error('✗ Error:', error.message, '\n');
 }
@@ -98,11 +112,16 @@ try {
 // Test songs
 console.log('--- Testing /api/songs/random?lang=es ---');
 try {
+  const { enrichWithRelations } = await import('./src/data/index.js');
   const songs = getSongs('es');
   if (songs.length > 0) {
     const randomSong = songs[Math.floor(Math.random() * songs.length)];
-    console.log(`✓ Got random song: ${randomSong.name}`);
-    console.log(`  Keys: ${Object.keys(randomSong).slice(0, 5).join(', ')}\n`);
+    const enriched = enrichWithRelations(randomSong, 'song', 'es');
+    console.log(`✓ Got random song: ${enriched.name}`);
+    console.log(`  Has saga: ${!!enriched.sagaData}`);
+    console.log(`  Related stories: ${enriched.storiesCount || 0}`);
+    console.log(`  Characters: ${enriched.characters?.length || 0}`);
+    console.log(`  Story with song: ${!!enriched.storyWithSong}\n`);
   } else {
     console.log('⚠ No songs available\n');
   }
@@ -113,11 +132,16 @@ try {
 // Test songs with lang=en
 console.log('--- Testing /api/songs/random?lang=en ---');
 try {
+  const { enrichWithRelations } = await import('./src/data/index.js');
   const songs = getSongs('en');
   if (songs.length > 0) {
     const randomSong = songs[Math.floor(Math.random() * songs.length)];
-    console.log(`✓ Got random song: ${randomSong.name}`);
-    console.log(`  Keys: ${Object.keys(randomSong).slice(0, 5).join(', ')}\n`);
+    const enriched = enrichWithRelations(randomSong, 'song', 'en');
+    console.log(`✓ Got random song: ${enriched.name}`);
+    console.log(`  Has saga: ${!!enriched.sagaData}`);
+    console.log(`  Related stories: ${enriched.storiesCount || 0}`);
+    console.log(`  Characters: ${enriched.characters?.length || 0}`);
+    console.log(`  Story with song: ${!!enriched.storyWithSong}\n`);
   } else {
     console.log('⚠ No songs available\n');
   }

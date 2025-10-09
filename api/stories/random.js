@@ -1,4 +1,4 @@
-import { getStories } from '../../src/data/index.js';
+import { getStories, enrichWithRelations } from '../../src/data/index.js';
 
 export default async function handler(req, res) {
   res.setHeader('X-Robots-Tag', 'noindex, nofollow');
@@ -12,7 +12,9 @@ export default async function handler(req, res) {
     const randomIndex = Math.floor(Math.random() * stories.length);
     const randomStory = stories[randomIndex];
 
-    res.status(200).json(randomStory);
+    const enrichedStory = enrichWithRelations(randomStory, 'story', language);
+
+    res.status(200).json(enrichedStory);
   } catch (error) {
     console.error('Error generating random story:', error);
     res.status(500).json({ error: 'Error generating random story' });
