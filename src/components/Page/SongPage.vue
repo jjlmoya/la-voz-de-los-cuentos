@@ -149,7 +149,11 @@ let player = null
 
 const lyricsHTML = computed(() => {
   if (!props.song.lyrics) return ''
-  return props.song.lyrics.replace(/\n/g, '<br>')
+  // Remove existing <br> tags, collapse multiple newlines, and convert to <br>
+  return props.song.lyrics
+    .replace(/<br\s*\/?>/gi, '\n')
+    .replace(/\n{3,}/g, '\n\n')  // Max 2 consecutive newlines
+    .replace(/\n/g, '<br>')
 })
 
 const toggleRepeat = () => {
@@ -444,24 +448,28 @@ watch([isRepeat, isAutoplay], savePreferences)
 }
 
 .song-page__lyrics {
-  background: var(--v-color-background-soft);
-  padding: var(--v-unit-6);
+  background-color: var(--v-color-surface-high);
+  padding: var(--v-unit-4) var(--v-unit-6);
   border-radius: var(--v-radius-lg);
-  border: 2px solid var(--v-color-primary);
-  box-shadow: var(--v-shadow-sm);
+  box-shadow: var(--v-shadow-md);
+  border: 1px solid var(--v-color-primary);
+  margin-top: var(--v-unit-4);
 }
 
 .song-page__lyrics-title {
-  font-size: var(--v-font-size-lg);
+  font-size: var(--v-font-size-xl);
   font-weight: 700;
   color: var(--v-color-primary);
   margin: 0 0 var(--v-unit-4) 0;
+  text-align: center;
 }
 
 .song-page__lyrics-content {
+  max-width: 65ch;
+  margin: 0 auto;
   line-height: 1.6;
   color: var(--v-color-text-high);
-  font-size: var(--v-font-size-md);
+  font-size: clamp(18px, 3vw, 20px);
   text-align: center;
   white-space: pre-line;
   font-weight: 400;
