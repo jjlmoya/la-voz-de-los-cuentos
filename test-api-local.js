@@ -1,5 +1,5 @@
 // Test script para probar los endpoints localmente
-import { getStories, getSagas, getCharacters, getLandings } from './src/data/index.js';
+import { getStories, getSagas, getCharacters, getLandings, getSongs } from './src/data/index.js';
 
 console.log('\n=== Testing API Endpoints Locally ===\n');
 
@@ -90,6 +90,36 @@ try {
     console.log(`  Keys: ${Object.keys(randomLanding).slice(0, 5).join(', ')}\n`);
   } else {
     console.log('⚠ No landings available\n');
+  }
+} catch (error) {
+  console.error('✗ Error:', error.message, '\n');
+}
+
+// Test songs
+console.log('--- Testing /api/songs/random?lang=es ---');
+try {
+  const songs = getSongs('es');
+  if (songs.length > 0) {
+    const randomSong = songs[Math.floor(Math.random() * songs.length)];
+    console.log(`✓ Got random song: ${randomSong.name}`);
+    console.log(`  Keys: ${Object.keys(randomSong).slice(0, 5).join(', ')}\n`);
+  } else {
+    console.log('⚠ No songs available\n');
+  }
+} catch (error) {
+  console.error('✗ Error:', error.message, '\n');
+}
+
+// Test songs with lang=en
+console.log('--- Testing /api/songs/random?lang=en ---');
+try {
+  const songs = getSongs('en');
+  if (songs.length > 0) {
+    const randomSong = songs[Math.floor(Math.random() * songs.length)];
+    console.log(`✓ Got random song: ${randomSong.name}`);
+    console.log(`  Keys: ${Object.keys(randomSong).slice(0, 5).join(', ')}\n`);
+  } else {
+    console.log('⚠ No songs available\n');
   }
 } catch (error) {
   console.error('✗ Error:', error.message, '\n');

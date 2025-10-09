@@ -1,4 +1,4 @@
-const lang = import.meta.env.PUBLIC_LANG || 'es'
+const lang = import.meta.env?.PUBLIC_LANG || 'es'
 import storiesEn from './en/stories.json' with { type: 'json' }
 import sagasEn from './en/sagas.json' with { type: 'json' }
 import charactersEn from './en/characters.json' with { type: 'json' }
