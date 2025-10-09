@@ -107,17 +107,25 @@ export const enrichWithRelations = (item, type, language = lang) => {
       if (item.saga) {
         enriched.sagaData = sagas.find(s => s.key === item.saga) || null
 
-        // Add related stories from same saga
-        enriched.relatedStories = stories.filter(s => s.saga === item.saga)
+        // Add related stories from same saga (without song field to avoid redundancy)
+        enriched.relatedStories = stories
+          .filter(s => s.saga === item.saga)
+          .map(({ song, lyrics, ...story }) => story)
         enriched.storiesCount = enriched.relatedStories.length
 
         // Add characters from same saga
         enriched.characters = characters.filter(c => c.saga === item.saga)
       }
 
-      // Find specific story that has this song
+      // Find specific story that has this song (without song field to avoid redundancy)
       if (item.song) {
-        enriched.storyWithSong = stories.find(s => s.song === item.song) || null
+        const foundStory = stories.find(s => s.song === item.song)
+        if (foundStory) {
+          const { song, lyrics, ...storyData } = foundStory
+          enriched.storyWithSong = storyData
+        } else {
+          enriched.storyWithSong = null
+        }
       }
       break
   }
