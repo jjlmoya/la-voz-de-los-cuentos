@@ -14,6 +14,21 @@
           <div :id="`youtube-player-${song.key}`" class="song-page__video"></div>
         </div>
 
+        <!-- Karaoke mode: mostrar solo si hay syncedLyrics -->
+        <div v-if="song.syncedLyrics && song.syncedLyrics.length > 0" class="song-page__karaoke">
+          <div
+            v-for="(line, index) in song.syncedLyrics"
+            :key="index"
+            :class="{
+              'song-page__karaoke-line': true,
+              'song-page__karaoke-line--active': isLineActive(line)
+            }"
+            class="song-page__karaoke-line"
+          >
+            {{ line.text }}
+          </div>
+        </div>
+
         <div class="song-page__controls-section">
           <button
             @click="toggleRepeat"
@@ -110,7 +125,7 @@
 <script setup>
 import { VText, VButton, VContainer } from '@overgaming/vicius'
 import Breadcrumbs from '../Navigation/Breadcrumbs.vue'
-import { ref, computed, onMounted, watch } from 'vue'
+import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
 import t from '../../translations'
 import { toSong, toStory } from '../../router'
 
@@ -145,7 +160,9 @@ const props = defineProps({
 const isRepeat = ref(false)
 const isAutoplay = ref(true)
 const isPlaying = ref(false)
+const currentTime = ref(0)
 let player = null
+let timeUpdateInterval = null
 
 const lyricsHTML = computed(() => {
   if (!props.song.lyrics) return ''
@@ -155,6 +172,53 @@ const lyricsHTML = computed(() => {
     .replace(/\n{3,}/g, '\n\n')  // Max 2 consecutive newlines
     .replace(/\n/g, '<br>')
 })
+
+// Función para determinar si una línea está activa en el karaoke
+const isLineActive = (line) => {
+  return currentTime.value >= line.start && currentTime.value < line.end
+}
+
+// Auto-scroll al cambiar la línea activa
+watch(currentTime, () => {
+  if (!props.song.syncedLyrics || props.song.syncedLyrics.length === 0) return
+
+  const activeIndex = props.song.syncedLyrics.findIndex(line => isLineActive(line))
+  if (activeIndex !== -1) {
+    const karaokeContainer = document.querySelector('.song-page__karaoke')
+    const activeLine = document.querySelectorAll('.song-page__karaoke-line')[activeIndex]
+
+    if (karaokeContainer && activeLine) {
+      const containerTop = karaokeContainer.scrollTop
+      const containerHeight = karaokeContainer.clientHeight
+      const lineTop = activeLine.offsetTop - karaokeContainer.offsetTop
+      const lineHeight = activeLine.clientHeight
+
+      // Calcular posición para centrar la línea en el contenedor
+      const scrollTo = lineTop - (containerHeight / 2) + (lineHeight / 2)
+
+      // Solo hacer scroll si la línea está fuera del viewport del contenedor
+      if (lineTop < containerTop || lineTop + lineHeight > containerTop + containerHeight) {
+        karaokeContainer.scrollTo({
+          top: scrollTo,
+          behavior: 'smooth'
+        })
+      }
+    }
+  }
+})
+
+// Actualizar el currentTime desde el player de YouTube
+const startTimeTracking = () => {
+  if (timeUpdateInterval) {
+    clearInterval(timeUpdateInterval)
+  }
+
+  timeUpdateInterval = setInterval(() => {
+    if (player && typeof player.getCurrentTime === 'function') {
+      currentTime.value = player.getCurrentTime()
+    }
+  }, 100) // Actualizar cada 100ms para suavidad
+}
 
 const toggleRepeat = () => {
   isRepeat.value = !isRepeat.value
@@ -216,9 +280,28 @@ const createPlayer = () => {
       cc_load_policy: 1
     },
     events: {
+      onReady: (event) => {
+        // DEBUG: Exponer player globalmente para testing en consola
+        window.__ytPlayer = event.target
+        console.log('✅ YouTube Player listo! Prueba: window.__ytPlayer.getCurrentTime()')
+
+        // Iniciar tracking de tiempo para karaoke
+        startTimeTracking()
+      },
       onStateChange: (event) => {
         if (event.data === window.YT.PlayerState.ENDED) {
           handleSongEnded()
+        }
+        if (event.data === window.YT.PlayerState.PLAYING) {
+          isPlaying.value = true
+          // Asegurar que el tracking está activo cuando se reproduce
+          startTimeTracking()
+        }
+        if (event.data === window.YT.PlayerState.PAUSED) {
+          // Detener tracking al pausar
+          if (timeUpdateInterval) {
+            clearInterval(timeUpdateInterval)
+          }
         }
       }
     }
@@ -251,6 +334,13 @@ const savePreferences = () => {
 
 // Watch for changes
 watch([isRepeat, isAutoplay], savePreferences)
+
+// Limpiar intervalo al desmontar componente
+onUnmounted(() => {
+  if (timeUpdateInterval) {
+    clearInterval(timeUpdateInterval)
+  }
+})
 </script>
 
 <style>
@@ -317,6 +407,94 @@ watch([isRepeat, isAutoplay], savePreferences)
 .song-page__video {
   width: 100%;
   height: 100%;
+}
+
+.song-page__karaoke {
+  background: linear-gradient(135deg,
+    rgba(var(--v-color-primary-rgb), 0.08),
+    rgba(var(--v-color-accent-primary-rgb), 0.08));
+  border: 4px solid var(--v-color-primary);
+  border-radius: var(--v-radius-xl);
+  padding: var(--v-unit-6);
+  box-shadow:
+    0 10px 30px rgba(var(--v-color-primary-rgb), 0.2),
+    inset 0 2px 10px rgba(var(--v-color-primary-rgb), 0.1);
+  max-height: 400px;
+  overflow-y: auto;
+  margin-top: var(--v-unit-6);
+
+  @media (max-width: 768px) {
+    padding: var(--v-unit-4);
+    max-height: 300px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(var(--v-color-primary-rgb), 0.1);
+    border-radius: var(--v-radius-sm);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--v-color-primary);
+    border-radius: var(--v-radius-sm);
+
+    &:hover {
+      background: var(--v-color-accent-primary);
+    }
+  }
+}
+
+.song-page__karaoke-line {
+  font-size: clamp(18px, 3vw, 22px);
+  line-height: 1.8;
+  color: var(--v-color-text-medium);
+  padding: var(--v-unit-3) var(--v-unit-4);
+  margin-bottom: var(--v-unit-2);
+  border-radius: var(--v-radius-md);
+  transition: all 0.3s ease;
+  opacity: 0.5;
+  white-space: pre-line;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    padding: var(--v-unit-2) var(--v-unit-3);
+  }
+}
+
+.song-page__karaoke-line--active {
+  opacity: 1;
+  font-size: clamp(22px, 4vw, 28px);
+  font-weight: 700;
+  color: var(--v-color-primary);
+  background: linear-gradient(135deg,
+    rgba(var(--v-color-primary-rgb), 0.15),
+    rgba(var(--v-color-accent-primary-rgb), 0.15));
+  border: 3px solid var(--v-color-primary);
+  transform: scale(1.02);
+  box-shadow:
+    0 0 20px rgba(var(--v-color-primary-rgb), 0.4),
+    0 6px 16px rgba(0,0,0,0.2);
+  animation: karaoke-pulse 0.5s ease-in-out;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    transform: scale(1);
+  }
+}
+
+@keyframes karaoke-pulse {
+  0% {
+    transform: scale(0.98);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+  100% {
+    transform: scale(1.02);
+  }
 }
 
 .song-page__controls-section {

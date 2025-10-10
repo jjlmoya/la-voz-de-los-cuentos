@@ -96,15 +96,35 @@ async function processLanguage(language, spreadsheetId, outputDir) {
         if (key === 'stories') {
             const songs = filteredData
                 .filter(story => story.song && story.song.trim() !== '')
-                .map(story => ({
-                    order: story.order,
-                    name: story.name,
-                    key: story.key,
-                    song: story.song,
-                    saga: story.saga,
-                    date: story.date,
-                    lyrics: story.lyrics || ''
-                }));
+                .map(story => {
+                    const lyricsField = story.lyrics || '';
+
+                    // Si tiene formato SBV, parsear
+                    if (hasSBVFormat(lyricsField)) {
+                        const parsed = parseSBV(lyricsField);
+                        return {
+                            order: story.order,
+                            name: story.name,
+                            key: story.key,
+                            song: story.song,
+                            saga: story.saga,
+                            date: story.date,
+                            lyrics: parsed.lyrics,
+                            syncedLyrics: parsed.syncedLyrics
+                        };
+                    }
+
+                    // Si no tiene formato SBV, dejar como está (retrocompatibilidad)
+                    return {
+                        order: story.order,
+                        name: story.name,
+                        key: story.key,
+                        song: story.song,
+                        saga: story.saga,
+                        date: story.date,
+                        lyrics: lyricsField
+                    };
+                });
             const outputPathSongs = path.join(__dirname, `${outputDir}songs.json`);
             await writeJsonToFile(songs, outputPathSongs);
             console.log(`JSON created songs.json for ${language} (${songs.length} songs)`);
@@ -113,7 +133,68 @@ async function processLanguage(language, spreadsheetId, outputDir) {
 }
 
 const hasMandatoryCardFields = (card) =>  card.order && card.storyId && card.es && card.en
-const hasMandatoryStoryFields = (story) => (story.order || story.id) && (story.name || story.title) 
+const hasMandatoryStoryFields = (story) => (story.order || story.id) && (story.name || story.title)
+
+// Detecta si el texto tiene formato SBV (timestamps)
+function hasSBVFormat(text) {
+    if (!text || text.trim() === '') return false;
+    // Busca patrón de timestamp SBV: 0:00:00.000,0:00:00.000
+    const sbvPattern = /\d+:\d{2}:\d{2}\.\d{3},\d+:\d{2}:\d{2}\.\d{3}/;
+    return sbvPattern.test(text);
+}
+
+// Convierte timestamp SBV (0:00:07.280) a segundos (7.28)
+function sbvTimestampToSeconds(timestamp) {
+    const parts = timestamp.split(':');
+    const hours = parseInt(parts[0], 10);
+    const minutes = parseInt(parts[1], 10);
+    const seconds = parseFloat(parts[2]);
+    return hours * 3600 + minutes * 60 + seconds;
+}
+
+// Parsea formato SBV y devuelve {lyrics: string, syncedLyrics: array}
+function parseSBV(sbvText) {
+    if (!sbvText || sbvText.trim() === '') {
+        return { lyrics: '', syncedLyrics: [] };
+    }
+
+    const lines = sbvText.trim().split('\n');
+    const syncedLyrics = [];
+    const cleanLyrics = [];
+    let i = 0;
+
+    while (i < lines.length) {
+        const line = lines[i].trim();
+
+        // Si es una línea de timestamp
+        if (line.match(/\d+:\d{2}:\d{2}\.\d{3},\d+:\d{2}:\d{2}\.\d{3}/)) {
+            const [startStr, endStr] = line.split(',');
+            const start = sbvTimestampToSeconds(startStr);
+            const end = sbvTimestampToSeconds(endStr);
+
+            // Recoger todas las líneas de texto hasta la siguiente línea vacía o timestamp
+            const textLines = [];
+            i++;
+            while (i < lines.length && lines[i].trim() !== '' && !lines[i].match(/\d+:\d{2}:\d{2}\.\d{3},\d+:\d{2}:\d{2}\.\d{3}/)) {
+                textLines.push(lines[i]);
+                i++;
+            }
+
+            const text = textLines.join('\n');
+            if (text.trim()) {
+                syncedLyrics.push({ start, end, text });
+                cleanLyrics.push(text);
+            }
+        } else {
+            i++;
+        }
+    }
+
+    return {
+        lyrics: cleanLyrics.join('\n\n'),
+        syncedLyrics: syncedLyrics
+    };
+} 
 
 async function retrieveCards() {
     const sheets = await authenticateGoogleSheets();
