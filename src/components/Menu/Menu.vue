@@ -1,20 +1,24 @@
 <template>
-  <VMenu class="menu stagger-children">
-    <VMenuItem 
-      v-for="(entry, index) in menu" 
-      :active="entry.active" 
-      :href="entry.link" 
-      class="animate-on-hover btn-playful menu-item-enhanced"
-      :class="`menu-item-color-${index % 4}`"
+  <nav class="menu-nav">
+    <a
+      v-for="entry in menu"
+      :key="entry.link"
+      :href="entry.link"
+      class="menu-item"
+      :class="{ 'menu-item--active': entry.active }"
     >
-      {{ entry.label }}
-    </VMenuItem>
-  </VMenu>
+      <img
+        :src="`/assets/menu-icons/${entry.icon}.png`"
+        :alt="entry.label"
+        class="menu-item__icon"
+      />
+      <span class="menu-item__text">{{ entry.label }}</span>
+    </a>
+  </nav>
 </template>
 
 <script setup>
   import t from '../../translations'
-  import { VMenu, VMenuItem } from '@overgaming/vicius'
   import { ref, onMounted } from 'vue'
   import {
     toStories,
@@ -32,35 +36,43 @@
     [
       {
         label: t('menu.home'),
-        link: '/'
+        link: '/',
+        icon: 'home'
       },
       {
         label: t('menu.stories'),
-        link: toStories()
+        link: toStories(),
+        icon: 'stories'
       },
       {
         label: t('menu.sagas'),
-        link: toSagas()
+        link: toSagas(),
+        icon: 'sagas'
       },
       {
         label: t('menu.songs'),
-        link: toSongs()
+        link: toSongs(),
+        icon: 'songs'
       },
       {
         label: t('menu.characters'),
-        link: toCharacters()
+        link: toCharacters(),
+        icon: 'characters'
       },
       {
         label: t('menu.account'),
-        link: toAccount()
+        link: toAccount(),
+        icon: 'account'
       },
       {
         label: t('menu.custom'),
-        link: toCustomStory()
+        link: toCustomStory(),
+        icon: 'custom'
       },
       {
         label: t('menu.newsletter'),
         link: toNewsLetters(),
+        icon: 'newsletter',
         hide: !hasNewsLetters()
       }
     ].filter(entry => !entry.hide)
@@ -81,46 +93,130 @@
 </script>
 
 <style scoped>
-.menu-item-enhanced {
-  min-height: 48px !important;
-  padding: var(--v-unit-4) var(--v-unit-6) !important;
-  margin: var(--v-unit-2) !important;
-  border-radius: var(--v-radius-lg) !important;
-  font-size: var(--v-font-size-lg) !important;
-  font-weight: 600 !important;
-  transition: all 0.3s ease !important;
-  border: 3px solid transparent !important;
-  color: white !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
-  box-shadow: var(--v-shadow-md) !important;
+.menu-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: var(--v-unit-2) 0;
 }
 
-.menu-item-enhanced:focus,
-.menu-item-enhanced[active="true"] {
-  border-color: var(--v-color-background) !important;
-  box-shadow: var(--v-shadow-lg), 0 0 0 4px var(--v-color-accent-primary-hover) !important;
-  transform: scale(1.05) !important;
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: var(--v-unit-4);
+  padding: 8px var(--v-unit-4);
+  padding-left: 6px;
+  margin: var(--v-unit-6) var(--v-unit-3);
+  margin-left: var(--v-unit-6);
+  height: 44px;
+  font-size: var(--v-font-size-md);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--v-color-text-high);
+  text-decoration: none;
+  border-radius: 24px;
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.85) 100%);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12),
+              inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: visible;
 }
 
-.menu-item-color-0,
-.menu-item-color-1,
-.menu-item-color-2,
-.menu-item-color-3 {
-  background: var(--v-color-primary) !important;
+.menu-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(135deg,
+    rgba(255, 182, 193, 0.5),
+    rgba(135, 206, 250, 0.5),
+    rgba(152, 251, 152, 0.5),
+    rgba(255, 218, 185, 0.5));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .menu-item-enhanced {
-    min-height: 52px !important;
-    padding: var(--v-unit-6) var(--v-unit-8) !important;
-    margin: var(--v-unit-3) !important;
-    font-size: var(--v-font-size-xl) !important;
+.menu-item:nth-child(1)::before { background: linear-gradient(135deg, rgba(255, 182, 193, 0.6), rgba(255, 105, 180, 0.6)); }
+.menu-item:nth-child(2)::before { background: linear-gradient(135deg, rgba(135, 206, 250, 0.6), rgba(79, 195, 247, 0.6)); }
+.menu-item:nth-child(3)::before { background: linear-gradient(135deg, rgba(152, 251, 152, 0.6), rgba(129, 199, 132, 0.6)); }
+.menu-item:nth-child(4)::before { background: linear-gradient(135deg, rgba(255, 218, 185, 0.6), rgba(255, 179, 0, 0.6)); }
+.menu-item:nth-child(5)::before { background: linear-gradient(135deg, rgba(221, 160, 221, 0.6), rgba(186, 85, 211, 0.6)); }
+.menu-item:nth-child(6)::before { background: linear-gradient(135deg, rgba(255, 215, 0, 0.6), rgba(255, 193, 7, 0.6)); }
+.menu-item:nth-child(7)::before { background: linear-gradient(135deg, rgba(238, 130, 238, 0.6), rgba(218, 112, 214, 0.6)); }
+.menu-item:nth-child(8)::before { background: linear-gradient(135deg, rgba(173, 216, 230, 0.6), rgba(135, 206, 235, 0.6)); }
+
+.menu-item__icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  flex-shrink: 0;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.12));
+  margin-left: -20px;
+  z-index: 2;
+  position: relative;
+  animation: subtle-bounce 3s ease-in-out infinite;
+}
+
+.menu-item:nth-child(1) .menu-item__icon { animation-delay: 0s; }
+.menu-item:nth-child(2) .menu-item__icon { animation-delay: 0.2s; }
+.menu-item:nth-child(3) .menu-item__icon { animation-delay: 0.4s; }
+.menu-item:nth-child(4) .menu-item__icon { animation-delay: 0.6s; }
+.menu-item:nth-child(5) .menu-item__icon { animation-delay: 0.8s; }
+.menu-item:nth-child(6) .menu-item__icon { animation-delay: 1s; }
+.menu-item:nth-child(7) .menu-item__icon { animation-delay: 1.2s; }
+.menu-item:nth-child(8) .menu-item__icon { animation-delay: 1.4s; }
+
+@keyframes subtle-bounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-4px) scale(1.05); }
+}
+
+.menu-item__text {
+  position: relative;
+  flex: 1;
+}
+
+.menu-item--active {
+  transform: translateX(4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18),
+              inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.menu-item--active::before {
+  opacity: 1;
+}
+
+.menu-item--active .menu-item__icon {
+  transform: scale(1.15) rotate(-8deg);
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.25));
+  animation: wiggle-infinite 2s ease-in-out infinite;
+}
+
+@keyframes wiggle-infinite {
+  0%, 100% { transform: scale(1.15) rotate(-8deg) translateY(0); }
+  15% { transform: scale(1.2) rotate(-12deg) translateY(-3px); }
+  30% { transform: scale(1.15) rotate(-4deg) translateY(0); }
+  45% { transform: scale(1.18) rotate(-10deg) translateY(-2px); }
+  60% { transform: scale(1.15) rotate(-6deg) translateY(0); }
+  75% { transform: scale(1.17) rotate(-11deg) translateY(-1px); }
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
   }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .menu-item-enhanced {
-    transition: none !important;
+  to {
+    width: 100%;
   }
 }
 </style>
