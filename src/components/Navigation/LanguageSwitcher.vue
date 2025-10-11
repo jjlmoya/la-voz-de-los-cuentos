@@ -40,8 +40,8 @@ const targetFlag = targetLang === 'es' ? 'ES' : 'EN'
 
 // Base URLs for each language
 const BASE_URLS = {
-  es: 'https://www.lavozdeloscuentos.com',
-  en: 'https://www.buboboo.com'
+  es: 'https://lavozdeloscuentos.es',
+  en: 'https://buboboo.com'
 }
 
 // Path patterns for each type and language
