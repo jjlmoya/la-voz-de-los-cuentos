@@ -6,97 +6,77 @@
     "song": "https://youtu.be/GT07xP6QBXk",
     "saga": "el-finalizador",
     "date": "23/02/2024",
-    "lyrics": "Lucas en el sol con su helado feliz,\r\nchocolate en la taza—¡qué dulce matiz!\r\n\nPero falta la cuchara… ¡ay, qué aflicción!\r\nSu helado se derrite sin solución.\r\n\n¡Ay, dónde está la cuchara, amiga de metal?\r\nSin ella, el helado se va a deshacer mal.\r\n\nAbrió un libro viejo, con polvo y un “¡achús!”,\r\ny dijo un conjuro… ¡y vino Azaroth plus!\r\n\n“¿POR QUÉ ME HAS INVOCADO, PEQUEÑO HUMANO?!”\r\n\nAzaroth llegó con sonrisa y honor,\r\nno para asustar… ¡sino con buen humor!\r\n\n“¡Un helado que hable? ¡Qué idea tan fina!”,\r\ny con un ¡zas! lo convirtió en divina rutina.\r\n\nEl helado gritó: “¡Oye, heladero, mira!\r\n¡La cuchara es esencial,\r\n\nno la hagas desaparecer sin lira!\r\nMe derrito en vano… ¡qué triste final!\r\n\n¡Dale su cuchara… y helado \r\ngratis verano entero, qué tal!”\r\n\n“LINGUA GELATA, CUCULLA MINOR!\r\nCUCARACHA SPOONUS—¡AHORA, SEÑOR!”\r\n\nEl heladero palideció, luego rió con emoción,\r\n“¡Helado gratis todo el verano—es mi redención!”\r\n\nAzaroth se despidió con un guiño y un salto,\r\n\n“Usa magia con juicio… ¡y \r\nsiempre comparte el malto!”\r\n\nAsí Lucas tuvo cucharas sin fin,\r\n\ny risas de chocolate en su jardín.\r\nNunca más llamó a un demonio, es verdad,\r\n\npero aprendió: hasta lo \r\npequeño tiene magia y amistad.\r\n\n“…solo no pierdas la cuchara.”",
+    "lyrics": "En una ciudad donde el tiempo se perdía,\r\nnadie terminaba lo que un día empezaría.\r\n\nLibros sin última página, torres sin techo,\r\npromesas rotas y un eterno despecho.\r\n\nLlegó Gregorio, callado y sereno,\r\ncon un don raro: cerrar lo que es bueno.\r\n\nNo por perfección, ni por vanidad,\r\nsino por darle paz a la humanidad.\r\n\nPorque un final no es el fin del camino,\r\nes el aliento que enciende el destino.\r\n\nCada adiós abre una puerta nueva,\r\ny en cada cierre, la esperanza se renueva.\r\n\nLa alcaldesa lo llamó con desesperanza,\r\n“¡Ayúdanos, por favor, con esta mudanza\r\n\nde almas que empiezan y nunca concluyen!”\r\nÉl sonrió… porque ya lo intuía.\r\n\nEl verdadero enemigo no era el cansancio,\r\nera el miedo disfrazado de fracaso.\r\n\nMiedo al qué dirán, miedo a triunfar,\r\nmiedo a mirar lo que hay que soltar.\r\n\nPorque un final no es el fin del camino,\r\nes el latido que empuja al destino.\r\n\nCada proyecto que al fin se completa\r\nes una estrella que al cielo se inyecta.\r\n\nY cuando la ciudad aprendió a cerrar,\r\nGregorio supo que debía marchar.\r\n\nNo con tristeza, sino con honor:\r\nsu misión terminó… para empezar otra flor.",
     "syncedLyrics": [
       {
-        "start": 7.28,
-        "end": 12.92,
-        "text": "Lucas en el sol con su helado feliz,\r\nchocolate en la taza—¡qué dulce matiz!\r"
+        "start": 3.2,
+        "end": 12.72,
+        "text": "En una ciudad donde el tiempo se perdía,\r\nnadie terminaba lo que un día empezaría.\r"
       },
       {
-        "start": 12.92,
-        "end": 18.76,
-        "text": "Pero falta la cuchara… ¡ay, qué aflicción!\r\nSu helado se derrite sin solución.\r"
+        "start": 13.32,
+        "end": 23.44,
+        "text": "Libros sin última página, torres sin techo,\r\npromesas rotas y un eterno despecho.\r"
       },
       {
-        "start": 18.76,
-        "end": 24.84,
-        "text": "¡Ay, dónde está la cuchara, amiga de metal?\r\nSin ella, el helado se va a deshacer mal.\r"
+        "start": 23.44,
+        "end": 32.24,
+        "text": "Llegó Gregorio, callado y sereno,\r\ncon un don raro: cerrar lo que es bueno.\r"
       },
       {
-        "start": 24.84,
-        "end": 31.44,
-        "text": "Abrió un libro viejo, con polvo y un “¡achús!”,\r\ny dijo un conjuro… ¡y vino Azaroth plus!\r"
+        "start": 32.24,
+        "end": 41.88,
+        "text": "No por perfección, ni por vanidad,\r\nsino por darle paz a la humanidad.\r"
       },
       {
-        "start": 31.44,
-        "end": 35.48,
-        "text": "“¿POR QUÉ ME HAS INVOCADO, PEQUEÑO HUMANO?!”\r"
+        "start": 41.88,
+        "end": 51.96,
+        "text": "Porque un final no es el fin del camino,\r\nes el aliento que enciende el destino.\r"
       },
       {
-        "start": 35.48,
-        "end": 41.24,
-        "text": "Azaroth llegó con sonrisa y honor,\r\nno para asustar… ¡sino con buen humor!\r"
+        "start": 51.96,
+        "end": 64.12,
+        "text": "Cada adiós abre una puerta nueva,\r\ny en cada cierre, la esperanza se renueva.\r"
       },
       {
-        "start": 41.24,
-        "end": 47.88,
-        "text": "“¡Un helado que hable? ¡Qué idea tan fina!”,\r\ny con un ¡zas! lo convirtió en divina rutina.\r"
+        "start": 64.12,
+        "end": 75,
+        "text": "La alcaldesa lo llamó con desesperanza,\r\n“¡Ayúdanos, por favor, con esta mudanza\r"
       },
       {
-        "start": 48.6,
-        "end": 52.76,
-        "text": "El helado gritó: “¡Oye, heladero, mira!\r\n¡La cuchara es esencial,\r"
+        "start": 75,
+        "end": 84.88,
+        "text": "de almas que empiezan y nunca concluyen!”\r\nÉl sonrió… porque ya lo intuía.\r"
       },
       {
-        "start": 52.76,
-        "end": 57.76,
-        "text": "no la hagas desaparecer sin lira!\r\nMe derrito en vano… ¡qué triste final!\r"
+        "start": 84.88,
+        "end": 93.56,
+        "text": "El verdadero enemigo no era el cansancio,\r\nera el miedo disfrazado de fracaso.\r"
       },
       {
-        "start": 57.76,
-        "end": 63.48,
-        "text": "¡Dale su cuchara… y helado \r\ngratis verano entero, qué tal!”\r"
+        "start": 93.56,
+        "end": 103.03999999999999,
+        "text": "Miedo al qué dirán, miedo a triunfar,\r\nmiedo a mirar lo que hay que soltar.\r"
       },
       {
-        "start": 64.44,
-        "end": 76.8,
-        "text": "“LINGUA GELATA, CUCULLA MINOR!\r\nCUCARACHA SPOONUS—¡AHORA, SEÑOR!”\r"
+        "start": 103.03999999999999,
+        "end": 113.16,
+        "text": "Porque un final no es el fin del camino,\r\nes el latido que empuja al destino.\r"
       },
       {
-        "start": 76.8,
-        "end": 87.64,
-        "text": "El heladero palideció, luego rió con emoción,\r\n“¡Helado gratis todo el verano—es mi redención!”\r"
+        "start": 113.16,
+        "end": 123.32,
+        "text": "Cada proyecto que al fin se completa\r\nes una estrella que al cielo se inyecta.\r"
       },
       {
-        "start": 88.4,
-        "end": 91.36,
-        "text": "Azaroth se despidió con un guiño y un salto,\r"
+        "start": 123.96,
+        "end": 134.2,
+        "text": "Y cuando la ciudad aprendió a cerrar,\r\nGregorio supo que debía marchar.\r"
       },
       {
-        "start": 91.36,
-        "end": 96.68,
-        "text": "“Usa magia con juicio… ¡y \r\nsiempre comparte el malto!”\r"
-      },
-      {
-        "start": 96.68,
-        "end": 99.44,
-        "text": "Así Lucas tuvo cucharas sin fin,\r"
-      },
-      {
-        "start": 99.44,
-        "end": 106.88,
-        "text": "y risas de chocolate en su jardín.\r\nNunca más llamó a un demonio, es verdad,\r"
-      },
-      {
-        "start": 106.88,
-        "end": 112.03999999999999,
-        "text": "pero aprendió: hasta lo \r\npequeño tiene magia y amistad.\r"
-      },
-      {
-        "start": 112.03999999999999,
-        "end": 115.84,
-        "text": "“…solo no pierdas la cuchara.”"
+        "start": 134.2,
+        "end": 144.64,
+        "text": "No con tristeza, sino con honor:\r\nsu misión terminó… para empezar otra flor."
       }
     ]
   },
@@ -339,97 +319,97 @@
     "song": "https://youtu.be/53xuLoz7tuA",
     "saga": "",
     "date": "26/02/2024",
-    "lyrics": "Cruza el destello, más allá del umbral,\r\n¡donde luciérnagas programan y dragones calculan!\r\n\nUn lado es circuitos, cielos neón,\r\nel otro es bosques bajo la luna en flor.\r\n\nTic-tac, el reloj tiene alas y engranajes,\r\n¡escucha la ciudad: canta con coraje!\r\n\n¡Delimencia! Entre dos mundos está,\r\nmagia en los cables, tecnología en el jardín ya.\r\n\nCorre con el viento, surfea un haz de luz,\r\n¡viviendo el sueño que tú siempre quis!\r\n\n¡Delimencia! Donde chocan mil realidades,\r\n¡entra ya, vive mil aventuras sin igual!\r\n\nRobots adivinan, árboles traman planes,\r\nislas flotan con fuerzas magnéticas y cristales.\r\n\nUn fénix vuela por fibras de color,\r\ny ríos de energía iluminan el sol.\r\n\n¡Zip-zap! Los puentes brillan al pasar,\r\nentre el futuro y lo que ha de contar.\r\n\n¡Delimencia! Entre dos mundos está,\r\nmagia en los cables, tecnología en el jardín ya.\r\n\nBaila con las estrellas, nada en un rayo azul,\r\n¡no hay otro lugar tan mágico y tan puro!\r\n\n¡Delimencia! Donde chocan mil realidades,\r\n¡entra ya, vive mil aventuras sin igual!\r\n\nEl equilibrio es la llave, el fuego, la razón,\r\nsin un mundo el otro pierde su canción.\r\n\nAsí que toma ambas manos, no elijas jamás,\r\n¡porque Delimencia brilla cuando sueñas más!\r\n\n(Estribillo final – más rápido y alegre!)\r\n¡Delimencia! Entre dos mundos está,\r\n\nmagia en los cables, tecnología en el jardín ya.\r\nVuela con los bots, trepa el árbol de luz,\r\n\n¡aquí es donde tú perteneces, tú!\r\n¡Delimencia!\r\n\nDonde chocan mil realidades,\r\n¡entra ya… y nunca más te escondas jamás!",
+    "lyrics": "Cruza el destello, más allá del umbral,\n¡donde luciérnagas programan y dragones calculan!\n\nUn lado es circuitos, cielos neón,\nel otro es bosques bajo la luna en flor.\n\nTic-tac, el reloj tiene alas y engranajes,\n¡escucha la ciudad: canta con coraje!\n\n¡Delimencia! Entre dos mundos está,\nmagia en los cables, tecnología en el jardín ya.\n\nCorre con el viento, surfea un haz de luz,\n¡viviendo el sueño que tú siempre quis!\n\n¡Delimencia! Donde chocan mil realidades,\n¡entra ya, vive mil aventuras sin igual!\n\nRobots adivinan, árboles traman planes,\nislas flotan con fuerzas magnéticas y cristales.\n\nUn fénix vuela por fibras de color,\ny ríos de energía iluminan el sol.\n\n¡Zip-zap! Los puentes brillan al pasar,\nentre el futuro y lo que ha de contar.\n\n¡Delimencia! Entre dos mundos está,\nmagia en los cables, tecnología en el jardín ya.\n\nBaila con las estrellas, nada en un rayo azul,\n¡no hay otro lugar tan mágico y tan puro!\n\n¡Delimencia! Donde chocan mil realidades,\n¡entra ya, vive mil aventuras sin igual!\n\nEl equilibrio es la llave, el fuego, la razón,\nsin un mundo el otro pierde su canción.\n\nAsí que toma ambas manos, no elijas jamás,\n¡porque Delimencia brilla cuando sueñas más!\n\n(Estribillo final – más rápido y alegre!)\n¡Delimencia! Entre dos mundos está,\n\nmagia en los cables, tecnología en el jardín ya.\nVuela con los bots, trepa el árbol de luz,\n\n¡aquí es donde tú perteneces, tú!\n¡Delimencia!\n\nDonde chocan mil realidades,\n¡entra ya… y nunca más te escondas jamás!",
     "syncedLyrics": [
       {
         "start": 13.72,
         "end": 20.36,
-        "text": "Cruza el destello, más allá del umbral,\r\n¡donde luciérnagas programan y dragones calculan!\r"
+        "text": "Cruza el destello, más allá del umbral,\n¡donde luciérnagas programan y dragones calculan!"
       },
       {
         "start": 20.36,
         "end": 26.72,
-        "text": "Un lado es circuitos, cielos neón,\r\nel otro es bosques bajo la luna en flor.\r"
+        "text": "Un lado es circuitos, cielos neón,\nel otro es bosques bajo la luna en flor."
       },
       {
         "start": 26.72,
         "end": 37.44,
-        "text": "Tic-tac, el reloj tiene alas y engranajes,\r\n¡escucha la ciudad: canta con coraje!\r"
+        "text": "Tic-tac, el reloj tiene alas y engranajes,\n¡escucha la ciudad: canta con coraje!"
       },
       {
         "start": 37.44,
         "end": 44.16,
-        "text": "¡Delimencia! Entre dos mundos está,\r\nmagia en los cables, tecnología en el jardín ya.\r"
+        "text": "¡Delimencia! Entre dos mundos está,\nmagia en los cables, tecnología en el jardín ya."
       },
       {
         "start": 44.16,
         "end": 51.14,
-        "text": "Corre con el viento, surfea un haz de luz,\r\n¡viviendo el sueño que tú siempre quis!\r"
+        "text": "Corre con el viento, surfea un haz de luz,\n¡viviendo el sueño que tú siempre quis!"
       },
       {
         "start": 51.14,
         "end": 62.12,
-        "text": "¡Delimencia! Donde chocan mil realidades,\r\n¡entra ya, vive mil aventuras sin igual!\r"
+        "text": "¡Delimencia! Donde chocan mil realidades,\n¡entra ya, vive mil aventuras sin igual!"
       },
       {
         "start": 64.6,
         "end": 70.96000000000001,
-        "text": "Robots adivinan, árboles traman planes,\r\nislas flotan con fuerzas magnéticas y cristales.\r"
+        "text": "Robots adivinan, árboles traman planes,\nislas flotan con fuerzas magnéticas y cristales."
       },
       {
         "start": 70.96000000000001,
         "end": 78.2,
-        "text": "Un fénix vuela por fibras de color,\r\ny ríos de energía iluminan el sol.\r"
+        "text": "Un fénix vuela por fibras de color,\ny ríos de energía iluminan el sol."
       },
       {
         "start": 78.2,
         "end": 85.68,
-        "text": "¡Zip-zap! Los puentes brillan al pasar,\r\nentre el futuro y lo que ha de contar.\r"
+        "text": "¡Zip-zap! Los puentes brillan al pasar,\nentre el futuro y lo que ha de contar."
       },
       {
         "start": 86.96000000000001,
         "end": 93.6,
-        "text": "¡Delimencia! Entre dos mundos está,\r\nmagia en los cables, tecnología en el jardín ya.\r"
+        "text": "¡Delimencia! Entre dos mundos está,\nmagia en los cables, tecnología en el jardín ya."
       },
       {
         "start": 93.6,
         "end": 99.32,
-        "text": "Baila con las estrellas, nada en un rayo azul,\r\n¡no hay otro lugar tan mágico y tan puro!\r"
+        "text": "Baila con las estrellas, nada en un rayo azul,\n¡no hay otro lugar tan mágico y tan puro!"
       },
       {
         "start": 99.32,
         "end": 111.56,
-        "text": "¡Delimencia! Donde chocan mil realidades,\r\n¡entra ya, vive mil aventuras sin igual!\r"
+        "text": "¡Delimencia! Donde chocan mil realidades,\n¡entra ya, vive mil aventuras sin igual!"
       },
       {
         "start": 111.56,
         "end": 117.16,
-        "text": "El equilibrio es la llave, el fuego, la razón,\r\nsin un mundo el otro pierde su canción.\r"
+        "text": "El equilibrio es la llave, el fuego, la razón,\nsin un mundo el otro pierde su canción."
       },
       {
         "start": 117.16,
         "end": 131.915,
-        "text": "Así que toma ambas manos, no elijas jamás,\r\n¡porque Delimencia brilla cuando sueñas más!\r"
+        "text": "Así que toma ambas manos, no elijas jamás,\n¡porque Delimencia brilla cuando sueñas más!"
       },
       {
         "start": 131.915,
         "end": 135.12,
-        "text": "(Estribillo final – más rápido y alegre!)\r\n¡Delimencia! Entre dos mundos está,\r"
+        "text": "(Estribillo final – más rápido y alegre!)\n¡Delimencia! Entre dos mundos está,"
       },
       {
         "start": 135.12,
         "end": 141.92000000000002,
-        "text": "magia en los cables, tecnología en el jardín ya.\r\nVuela con los bots, trepa el árbol de luz,\r"
+        "text": "magia en los cables, tecnología en el jardín ya.\nVuela con los bots, trepa el árbol de luz,"
       },
       {
         "start": 141.92000000000002,
         "end": 145.36,
-        "text": "¡aquí es donde tú perteneces, tú!\r\n¡Delimencia!\r"
+        "text": "¡aquí es donde tú perteneces, tú!\n¡Delimencia!"
       },
       {
         "start": 147.36,
         "end": 166.8,
-        "text": "Donde chocan mil realidades,\r\n¡entra ya… y nunca más te escondas jamás!"
+        "text": "Donde chocan mil realidades,\n¡entra ya… y nunca más te escondas jamás!"
       }
     ]
   },
@@ -440,77 +420,77 @@
     "song": "https://youtu.be/-FSFmzH_pHY",
     "saga": "el-tragaluces",
     "date": "27/02/2024",
-    "lyrics": "En un pueblo entre sombras y niebla,\r\ndonde el sol se escondía al caer,\r\n\ncorría un rumor entre las tabernas:\r\n“¡El Traga Luces vuelve a aparecer!”\r\n\nCon su abrigo que brilla en la oscuridad,\r\ny un sombrero que oculta su faz,\r\n\nroba la luz de las lámparas viejas…\r\n¡y el mundo se apaga sin más!\r\n\n¡Traga Luces, Traga Luces!\r\n¿Qué guardas dentro de ti?\r\n\nNo es maldad lo que consumes…\r\nes un grito: “¡Alguien mírame así!”\r\n\nYo lo seguí con mi linterna en mano,\r\nsin temblar, con el alma en pie.\r\n\nHasta el bosque, bajo el viejo roble,\r\nvi su rostro… ¡y su verdad!\r\n\n“Fui un soñador que quiso atrapar\r\nla esencia pura del sol…\r\n\npero al guardarla en mi piel,\r\nperdí el mundo… y mi calor.”\r\n\n¡Traga Luces, ya no estás solo!\r\nLucía vino a entenderte al fin.\r\n\nNo necesitas más resplandor…\r\nsolo un alma que te vea así.\r\n\nAhora en cada ventana\r\nbrilla una llama en paz.\r\n\nNo por miedo… ¡sino por amor!\r\nY la oscuridad ya tiene luz al pasar.",
+    "lyrics": "En un pueblo entre sombras y niebla,\ndonde el sol se escondía al caer,\n\ncorría un rumor entre las tabernas:\n“¡El Traga Luces vuelve a aparecer!”\n\nCon su abrigo que brilla en la oscuridad,\ny un sombrero que oculta su faz,\n\nroba la luz de las lámparas viejas…\n¡y el mundo se apaga sin más!\n\n¡Traga Luces, Traga Luces!\n¿Qué guardas dentro de ti?\n\nNo es maldad lo que consumes…\nes un grito: “¡Alguien mírame así!”\n\nYo lo seguí con mi linterna en mano,\nsin temblar, con el alma en pie.\n\nHasta el bosque, bajo el viejo roble,\nvi su rostro… ¡y su verdad!\n\n“Fui un soñador que quiso atrapar\nla esencia pura del sol…\n\npero al guardarla en mi piel,\nperdí el mundo… y mi calor.”\n\n¡Traga Luces, ya no estás solo!\nLucía vino a entenderte al fin.\n\nNo necesitas más resplandor…\nsolo un alma que te vea así.\n\nAhora en cada ventana\nbrilla una llama en paz.\n\nNo por miedo… ¡sino por amor!\nY la oscuridad ya tiene luz al pasar.",
     "syncedLyrics": [
       {
         "start": 10.12,
         "end": 19.08,
-        "text": "En un pueblo entre sombras y niebla,\r\ndonde el sol se escondía al caer,\r"
+        "text": "En un pueblo entre sombras y niebla,\ndonde el sol se escondía al caer,"
       },
       {
         "start": 19.08,
         "end": 27.44,
-        "text": "corría un rumor entre las tabernas:\r\n“¡El Traga Luces vuelve a aparecer!”\r"
+        "text": "corría un rumor entre las tabernas:\n“¡El Traga Luces vuelve a aparecer!”"
       },
       {
         "start": 27.44,
         "end": 36,
-        "text": "Con su abrigo que brilla en la oscuridad,\r\ny un sombrero que oculta su faz,\r"
+        "text": "Con su abrigo que brilla en la oscuridad,\ny un sombrero que oculta su faz,"
       },
       {
         "start": 36,
         "end": 44.2,
-        "text": "roba la luz de las lámparas viejas…\r\n¡y el mundo se apaga sin más!\r"
+        "text": "roba la luz de las lámparas viejas…\n¡y el mundo se apaga sin más!"
       },
       {
         "start": 44.96,
         "end": 53.64,
-        "text": "¡Traga Luces, Traga Luces!\r\n¿Qué guardas dentro de ti?\r"
+        "text": "¡Traga Luces, Traga Luces!\n¿Qué guardas dentro de ti?"
       },
       {
         "start": 53.64,
         "end": 61.44,
-        "text": "No es maldad lo que consumes…\r\nes un grito: “¡Alguien mírame así!”\r"
+        "text": "No es maldad lo que consumes…\nes un grito: “¡Alguien mírame así!”"
       },
       {
         "start": 62.12,
         "end": 71.16,
-        "text": "Yo lo seguí con mi linterna en mano,\r\nsin temblar, con el alma en pie.\r"
+        "text": "Yo lo seguí con mi linterna en mano,\nsin temblar, con el alma en pie."
       },
       {
         "start": 71.16,
         "end": 79.2,
-        "text": "Hasta el bosque, bajo el viejo roble,\r\nvi su rostro… ¡y su verdad!\r"
+        "text": "Hasta el bosque, bajo el viejo roble,\nvi su rostro… ¡y su verdad!"
       },
       {
         "start": 80.36,
         "end": 89.2,
-        "text": "“Fui un soñador que quiso atrapar\r\nla esencia pura del sol…\r"
+        "text": "“Fui un soñador que quiso atrapar\nla esencia pura del sol…"
       },
       {
         "start": 89.2,
         "end": 99.52000000000001,
-        "text": "pero al guardarla en mi piel,\r\nperdí el mundo… y mi calor.”\r"
+        "text": "pero al guardarla en mi piel,\nperdí el mundo… y mi calor.”"
       },
       {
         "start": 99.52000000000001,
         "end": 108,
-        "text": "¡Traga Luces, ya no estás solo!\r\nLucía vino a entenderte al fin.\r"
+        "text": "¡Traga Luces, ya no estás solo!\nLucía vino a entenderte al fin."
       },
       {
         "start": 108,
         "end": 117.44,
-        "text": "No necesitas más resplandor…\r\nsolo un alma que te vea así.\r"
+        "text": "No necesitas más resplandor…\nsolo un alma que te vea así."
       },
       {
         "start": 117.44,
         "end": 125.56,
-        "text": "Ahora en cada ventana\r\nbrilla una llama en paz.\r"
+        "text": "Ahora en cada ventana\nbrilla una llama en paz."
       },
       {
         "start": 125.56,
         "end": 136.32,
-        "text": "No por miedo… ¡sino por amor!\r\nY la oscuridad ya tiene luz al pasar."
+        "text": "No por miedo… ¡sino por amor!\nY la oscuridad ya tiene luz al pasar."
       }
     ]
   },
@@ -632,97 +612,97 @@
     "song": "https://youtu.be/kKO88bWf3Tg",
     "saga": "sdg",
     "date": "29/02/2024",
-    "lyrics": "Shh… la selva guarda un secreto…\r\n\nLa luna baña hojas de esmeralda,\r\nel jaguar desapareció—¿quién lo mira?\r\n\nSin prisas, sin gritos, sin alboroto,\r\nsolo pasos suaves y ojos muy notos.\r\n\nEl Equipo SDG avanza con calma,\r\nleyendo pistas con alma y palma.\r\n\nHuella aquí… liana rota…\r\nun pelo negro junto a la gota.\r\n\nSigue la pista, despacito ya,\r\n¿dónde está nuestro amigo jaguar?\r\n\nAh-ah-ah… misterio en lo verde…\r\nAh-ah-ah… la selva nos tiende su red.\r\n\nEl mono aullador señala un rincón:\r\n\n“En la cueva de la luciérnaga, \r\n¡allí está, campeón!”\r\n\nLa lechuza parpadea—“Tranquilo está,\r\npero buscadlo con bondad.”\r\n\nHuella allá… nido movido…\r\nun ronroneo casi escondido.\r\n\nPor helechos que cantan en voz baja,\r\nel Equipo SDG no pierde la pista.\r\n\nAh-ah-ah… secretos en la sombra…\r\nAh-ah-ah… el jaguar no se asombra.\r\n\nSin jaulas. Sin miedo. Solo raíz y sol.\r\nNo está perdido… solo dice “adiós”\r\n\nal río, al viento, a la luna en flor—\r\nestá en casa. Y todo está en orden, señor.\r\n\nLo encontramos… durmiendo en paz,\r\nbajo la luna, sin más que paz.\r\n\nEl Equipo SDG sonríe al saber:\r\nsu hogar es la selva… y hay que proteger.\r\n\nAh-ah-ah… corazones verdes latiendo…\r\nAh-ah-ah… y el mundo sigue creciendo.\r\n\nSusurro: Caso resuelto… con cariño.",
+    "lyrics": "Shh… la selva guarda un secreto…\n\nLa luna baña hojas de esmeralda,\nel jaguar desapareció—¿quién lo mira?\n\nSin prisas, sin gritos, sin alboroto,\nsolo pasos suaves y ojos muy notos.\n\nEl Equipo SDG avanza con calma,\nleyendo pistas con alma y palma.\n\nHuella aquí… liana rota…\nun pelo negro junto a la gota.\n\nSigue la pista, despacito ya,\n¿dónde está nuestro amigo jaguar?\n\nAh-ah-ah… misterio en lo verde…\nAh-ah-ah… la selva nos tiende su red.\n\nEl mono aullador señala un rincón:\n\n“En la cueva de la luciérnaga, \n¡allí está, campeón!”\n\nLa lechuza parpadea—“Tranquilo está,\npero buscadlo con bondad.”\n\nHuella allá… nido movido…\nun ronroneo casi escondido.\n\nPor helechos que cantan en voz baja,\nel Equipo SDG no pierde la pista.\n\nAh-ah-ah… secretos en la sombra…\nAh-ah-ah… el jaguar no se asombra.\n\nSin jaulas. Sin miedo. Solo raíz y sol.\nNo está perdido… solo dice “adiós”\n\nal río, al viento, a la luna en flor—\nestá en casa. Y todo está en orden, señor.\n\nLo encontramos… durmiendo en paz,\nbajo la luna, sin más que paz.\n\nEl Equipo SDG sonríe al saber:\nsu hogar es la selva… y hay que proteger.\n\nAh-ah-ah… corazones verdes latiendo…\nAh-ah-ah… y el mundo sigue creciendo.\n\nSusurro: Caso resuelto… con cariño.",
     "syncedLyrics": [
       {
         "start": 3.747,
         "end": 16.44,
-        "text": "Shh… la selva guarda un secreto…\r"
+        "text": "Shh… la selva guarda un secreto…"
       },
       {
         "start": 16.44,
         "end": 23.64,
-        "text": "La luna baña hojas de esmeralda,\r\nel jaguar desapareció—¿quién lo mira?\r"
+        "text": "La luna baña hojas de esmeralda,\nel jaguar desapareció—¿quién lo mira?"
       },
       {
         "start": 23.64,
         "end": 31.12,
-        "text": "Sin prisas, sin gritos, sin alboroto,\r\nsolo pasos suaves y ojos muy notos.\r"
+        "text": "Sin prisas, sin gritos, sin alboroto,\nsolo pasos suaves y ojos muy notos."
       },
       {
         "start": 31.12,
         "end": 42.44,
-        "text": "El Equipo SDG avanza con calma,\r\nleyendo pistas con alma y palma.\r"
+        "text": "El Equipo SDG avanza con calma,\nleyendo pistas con alma y palma."
       },
       {
         "start": 42.44,
         "end": 50.12,
-        "text": "Huella aquí… liana rota…\r\nun pelo negro junto a la gota.\r"
+        "text": "Huella aquí… liana rota…\nun pelo negro junto a la gota."
       },
       {
         "start": 50.12,
         "end": 57.32,
-        "text": "Sigue la pista, despacito ya,\r\n¿dónde está nuestro amigo jaguar?\r"
+        "text": "Sigue la pista, despacito ya,\n¿dónde está nuestro amigo jaguar?"
       },
       {
         "start": 57.32,
         "end": 71.88,
-        "text": "Ah-ah-ah… misterio en lo verde…\r\nAh-ah-ah… la selva nos tiende su red.\r"
+        "text": "Ah-ah-ah… misterio en lo verde…\nAh-ah-ah… la selva nos tiende su red."
       },
       {
         "start": 71.88,
         "end": 75.32,
-        "text": "El mono aullador señala un rincón:\r"
+        "text": "El mono aullador señala un rincón:"
       },
       {
         "start": 75.32,
         "end": 79,
-        "text": "“En la cueva de la luciérnaga, \r\n¡allí está, campeón!”\r"
+        "text": "“En la cueva de la luciérnaga, \n¡allí está, campeón!”"
       },
       {
         "start": 79,
         "end": 86.8,
-        "text": "La lechuza parpadea—“Tranquilo está,\r\npero buscadlo con bondad.”\r"
+        "text": "La lechuza parpadea—“Tranquilo está,\npero buscadlo con bondad.”"
       },
       {
         "start": 86.8,
         "end": 94.68,
-        "text": "Huella allá… nido movido…\r\nun ronroneo casi escondido.\r"
+        "text": "Huella allá… nido movido…\nun ronroneo casi escondido."
       },
       {
         "start": 94.68,
         "end": 102.3,
-        "text": "Por helechos que cantan en voz baja,\r\nel Equipo SDG no pierde la pista.\r"
+        "text": "Por helechos que cantan en voz baja,\nel Equipo SDG no pierde la pista."
       },
       {
         "start": 102.3,
         "end": 115.68,
-        "text": "Ah-ah-ah… secretos en la sombra…\r\nAh-ah-ah… el jaguar no se asombra.\r"
+        "text": "Ah-ah-ah… secretos en la sombra…\nAh-ah-ah… el jaguar no se asombra."
       },
       {
         "start": 115.68,
         "end": 123.28,
-        "text": "Sin jaulas. Sin miedo. Solo raíz y sol.\r\nNo está perdido… solo dice “adiós”\r"
+        "text": "Sin jaulas. Sin miedo. Solo raíz y sol.\nNo está perdido… solo dice “adiós”"
       },
       {
         "start": 123.28,
         "end": 137.74,
-        "text": "al río, al viento, a la luna en flor—\r\nestá en casa. Y todo está en orden, señor.\r"
+        "text": "al río, al viento, a la luna en flor—\nestá en casa. Y todo está en orden, señor."
       },
       {
         "start": 137.74,
         "end": 152.92000000000002,
-        "text": "Lo encontramos… durmiendo en paz,\r\nbajo la luna, sin más que paz.\r"
+        "text": "Lo encontramos… durmiendo en paz,\nbajo la luna, sin más que paz."
       },
       {
         "start": 152.92000000000002,
         "end": 164.54,
-        "text": "El Equipo SDG sonríe al saber:\r\nsu hogar es la selva… y hay que proteger.\r"
+        "text": "El Equipo SDG sonríe al saber:\nsu hogar es la selva… y hay que proteger."
       },
       {
         "start": 164.54,
         "end": 179.4,
-        "text": "Ah-ah-ah… corazones verdes latiendo…\r\nAh-ah-ah… y el mundo sigue creciendo.\r"
+        "text": "Ah-ah-ah… corazones verdes latiendo…\nAh-ah-ah… y el mundo sigue creciendo."
       },
       {
         "start": 179.4,
