@@ -1,6 +1,13 @@
 <template>
   <VContainer size="xl" class="saga-page">
     <Breadcrumbs :current-page="saga.name" />
+
+    <!-- Language Switcher -->
+    <LanguageSwitcher
+      :order="saga.order"
+      type="saga"
+      class="saga-page__language-switcher"
+    />
     <iframe
       v-if="saga.youtube"
       class="saga-page__iframe"
@@ -41,6 +48,7 @@
   import SagaStories from '../Sections/SagaStories.vue'
   import SectionsDefault from '../Sections/Default.vue'
   import Breadcrumbs from '../Navigation/Breadcrumbs.vue'
+  import LanguageSwitcher from '../Navigation/LanguageSwitcher.vue'
   const { getTime, html } = useSaga(props.saga)
   const totalTime = getTime()
   const descriptionHtml = html()

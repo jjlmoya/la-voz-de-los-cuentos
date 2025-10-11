@@ -1,10 +1,16 @@
 <template>
   <VContainer size="xl" class="story-page">
     <!-- Breadcrumbs -->
-    <Breadcrumbs 
+    <Breadcrumbs
       :current-page="story.name"
       :saga-name="currentSaga?.name"
       :saga-key="currentSaga?.key"
+    />
+
+    <!-- Language Switcher - Sidebar Tab -->
+    <LanguageSwitcher
+      :order="story.order"
+      type="story"
     />
     
     <div class="story-page__image">
@@ -190,6 +196,7 @@
   import SectionsDefault from '../Sections/Default.vue'
   import SocialShare from '../Social/Share.vue'
   import Breadcrumbs from '../Navigation/Breadcrumbs.vue'
+  import LanguageSwitcher from '../Navigation/LanguageSwitcher.vue'
 
   import { ref, toValue, onMounted } from 'vue'
   import useStory from '../../composables/useStory'
@@ -252,7 +259,7 @@
     margin: 0 auto;
     padding: var(--v-unit-4);
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
       "breadcrumbs"
       "header"
       "media"
@@ -260,7 +267,7 @@
       "tools"
       "related";
     gap: var(--v-unit-6);
-    
+
     @media (max-width: 768px) {
       padding: var(--v-unit-2);
       gap: var(--v-unit-4);

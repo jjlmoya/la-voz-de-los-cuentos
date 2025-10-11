@@ -6,6 +6,13 @@
       :saga-key="currentSaga?.key"
     />
 
+    <!-- Language Switcher -->
+    <LanguageSwitcher
+      :order="song.order"
+      type="song"
+      class="song-page__language-switcher"
+    />
+
     <h1 class="song-page__title">{{ song.name }}</h1>
 
     <div class="song-page__layout">
@@ -138,6 +145,7 @@
 <script setup>
 import { VText, VButton, VContainer } from '@overgaming/vicius'
 import Breadcrumbs from '../Navigation/Breadcrumbs.vue'
+import LanguageSwitcher from '../Navigation/LanguageSwitcher.vue'
 import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
 import t from '../../translations'
 import { toSong, toStory } from '../../router'
@@ -404,6 +412,10 @@ onUnmounted(() => {
   color: var(--v-color-text-high);
   text-align: center;
   margin: 0 0 var(--v-unit-8) 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  line-height: 1.2;
 }
 
 .song-page__layout {

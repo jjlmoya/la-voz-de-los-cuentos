@@ -145,5 +145,8 @@ export default {
   'page.home.description':
     'Welcome to Bubo Boo! Here, every tale turns into a magical adventure. Explore stories full of wonder and mystery, where imagination soars high and the fun never ends.',
 
-  'spotify.voice': 'Voice'
+  'spotify.voice': 'Voice',
+
+  'language.switch': 'Leer en Español',
+  'language.switch.aria': 'Switch language'
 }
