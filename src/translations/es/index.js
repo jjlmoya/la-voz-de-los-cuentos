@@ -90,6 +90,7 @@ export default {
   'page.song.fromStory': 'Del cuento',
   'page.song.repeat': 'Repetir',
   'page.song.autoplay': 'Reproducción automática',
+  'page.song.shuffle': 'Aleatorio',
   'page.song.readStory': 'Leer el Cuento',
   'page.song.description': 'Disfruta cantando esta adaptación musical del cuento {name}. Canta y diviértete con esta mágica canción infantil.',
   'page.song.description.withSaga': 'Disfruta cantando esta adaptación musical del cuento {name} de la saga {saga}. Canta y diviértete con esta mágica canción infantil.',

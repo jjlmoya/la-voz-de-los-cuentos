@@ -87,6 +87,7 @@ export default {
   'page.song.fromStory': 'From the story',
   'page.song.repeat': 'Repeat',
   'page.song.autoplay': 'Autoplay',
+  'page.song.shuffle': 'Shuffle',
   'page.song.readStory': 'Read the Story',
   'page.song.description': 'Enjoy singing this musical adaptation of the story {name}. Sing and have fun with this magical children\'s song.',
   'page.song.description.withSaga': 'Enjoy singing this musical adaptation of the story {name} from the {saga} saga. Sing and have fun with this magical children\'s song.',

@@ -6,7 +6,99 @@
     "song": "https://youtu.be/GT07xP6QBXk",
     "saga": "el-finalizador",
     "date": "23/02/2024",
-    "lyrics": "\nEn una ciudad donde el tiempo se perdía,\nnadie terminaba lo que un día empezaría.\nLibros sin última página, torres sin techo,\npromesas rotas y un eterno despecho.\n\nLlegó Gregorio, callado y sereno,\ncon un don raro: cerrar lo que es bueno.\nNo por perfección, ni por vanidad,\nsino por darle paz a la humanidad.\n\nPorque un final no es el fin del camino,\nes el aliento que enciende el destino.\nCada adiós abre una puerta nueva,\ny en cada cierre, la esperanza se renueva.\n\nLa alcaldesa lo llamó con desesperanza,\n“¡Ayúdanos, por favor, con esta mudanza\nde almas que empiezan y nunca concluyen!”\nÉl sonrió… porque ya lo intuía.\n\nEl verdadero enemigo no era el cansancio,\nera el miedo disfrazado de fracaso.\nMiedo al qué dirán, miedo a triunfar,\nmiedo a mirar lo que hay que soltar.\n\nPorque un final no es el fin del camino,\nes el latido que empuja al destino.\nCada proyecto que al fin se completa\nes una estrella que al cielo se inyecta.\n\nY cuando la ciudad aprendió a cerrar,\nGregorio supo que debía marchar.\nNo con tristeza, sino con honor:\nsu misión terminó… para empezar otra flor."
+    "lyrics": "Lucas en el sol con su helado feliz,\r\nchocolate en la taza—¡qué dulce matiz!\r\n\nPero falta la cuchara… ¡ay, qué aflicción!\r\nSu helado se derrite sin solución.\r\n\n¡Ay, dónde está la cuchara, amiga de metal?\r\nSin ella, el helado se va a deshacer mal.\r\n\nAbrió un libro viejo, con polvo y un “¡achús!”,\r\ny dijo un conjuro… ¡y vino Azaroth plus!\r\n\n“¿POR QUÉ ME HAS INVOCADO, PEQUEÑO HUMANO?!”\r\n\nAzaroth llegó con sonrisa y honor,\r\nno para asustar… ¡sino con buen humor!\r\n\n“¡Un helado que hable? ¡Qué idea tan fina!”,\r\ny con un ¡zas! lo convirtió en divina rutina.\r\n\nEl helado gritó: “¡Oye, heladero, mira!\r\n¡La cuchara es esencial,\r\n\nno la hagas desaparecer sin lira!\r\nMe derrito en vano… ¡qué triste final!\r\n\n¡Dale su cuchara… y helado \r\ngratis verano entero, qué tal!”\r\n\n“LINGUA GELATA, CUCULLA MINOR!\r\nCUCARACHA SPOONUS—¡AHORA, SEÑOR!”\r\n\nEl heladero palideció, luego rió con emoción,\r\n“¡Helado gratis todo el verano—es mi redención!”\r\n\nAzaroth se despidió con un guiño y un salto,\r\n\n“Usa magia con juicio… ¡y \r\nsiempre comparte el malto!”\r\n\nAsí Lucas tuvo cucharas sin fin,\r\n\ny risas de chocolate en su jardín.\r\nNunca más llamó a un demonio, es verdad,\r\n\npero aprendió: hasta lo \r\npequeño tiene magia y amistad.\r\n\n“…solo no pierdas la cuchara.”",
+    "syncedLyrics": [
+      {
+        "start": 7.28,
+        "end": 12.92,
+        "text": "Lucas en el sol con su helado feliz,\r\nchocolate en la taza—¡qué dulce matiz!\r"
+      },
+      {
+        "start": 12.92,
+        "end": 18.76,
+        "text": "Pero falta la cuchara… ¡ay, qué aflicción!\r\nSu helado se derrite sin solución.\r"
+      },
+      {
+        "start": 18.76,
+        "end": 24.84,
+        "text": "¡Ay, dónde está la cuchara, amiga de metal?\r\nSin ella, el helado se va a deshacer mal.\r"
+      },
+      {
+        "start": 24.84,
+        "end": 31.44,
+        "text": "Abrió un libro viejo, con polvo y un “¡achús!”,\r\ny dijo un conjuro… ¡y vino Azaroth plus!\r"
+      },
+      {
+        "start": 31.44,
+        "end": 35.48,
+        "text": "“¿POR QUÉ ME HAS INVOCADO, PEQUEÑO HUMANO?!”\r"
+      },
+      {
+        "start": 35.48,
+        "end": 41.24,
+        "text": "Azaroth llegó con sonrisa y honor,\r\nno para asustar… ¡sino con buen humor!\r"
+      },
+      {
+        "start": 41.24,
+        "end": 47.88,
+        "text": "“¡Un helado que hable? ¡Qué idea tan fina!”,\r\ny con un ¡zas! lo convirtió en divina rutina.\r"
+      },
+      {
+        "start": 48.6,
+        "end": 52.76,
+        "text": "El helado gritó: “¡Oye, heladero, mira!\r\n¡La cuchara es esencial,\r"
+      },
+      {
+        "start": 52.76,
+        "end": 57.76,
+        "text": "no la hagas desaparecer sin lira!\r\nMe derrito en vano… ¡qué triste final!\r"
+      },
+      {
+        "start": 57.76,
+        "end": 63.48,
+        "text": "¡Dale su cuchara… y helado \r\ngratis verano entero, qué tal!”\r"
+      },
+      {
+        "start": 64.44,
+        "end": 76.8,
+        "text": "“LINGUA GELATA, CUCULLA MINOR!\r\nCUCARACHA SPOONUS—¡AHORA, SEÑOR!”\r"
+      },
+      {
+        "start": 76.8,
+        "end": 87.64,
+        "text": "El heladero palideció, luego rió con emoción,\r\n“¡Helado gratis todo el verano—es mi redención!”\r"
+      },
+      {
+        "start": 88.4,
+        "end": 91.36,
+        "text": "Azaroth se despidió con un guiño y un salto,\r"
+      },
+      {
+        "start": 91.36,
+        "end": 96.68,
+        "text": "“Usa magia con juicio… ¡y \r\nsiempre comparte el malto!”\r"
+      },
+      {
+        "start": 96.68,
+        "end": 99.44,
+        "text": "Así Lucas tuvo cucharas sin fin,\r"
+      },
+      {
+        "start": 99.44,
+        "end": 106.88,
+        "text": "y risas de chocolate en su jardín.\r\nNunca más llamó a un demonio, es verdad,\r"
+      },
+      {
+        "start": 106.88,
+        "end": 112.03999999999999,
+        "text": "pero aprendió: hasta lo \r\npequeño tiene magia y amistad.\r"
+      },
+      {
+        "start": 112.03999999999999,
+        "end": 115.84,
+        "text": "“…solo no pierdas la cuchara.”"
+      }
+    ]
   },
   {
     "order": "2",
@@ -152,6 +244,112 @@
         "start": 112.03999999999999,
         "end": 125.72,
         "text": "“…solo no pierdas la cuchara.”"
+      }
+    ]
+  },
+  {
+    "order": "7",
+    "name": "Equipo SDG: La Aventura del Jaguar Perdido",
+    "key": "equipo-sdg-la-aventura-del-jaguar-perdido",
+    "song": "https://youtu.be/kKO88bWf3Tg",
+    "saga": "sdg",
+    "date": "29/02/2024",
+    "lyrics": "Shh… la selva guarda un secreto…\r\n\nLa luna baña hojas de esmeralda,\r\nel jaguar desapareció—¿quién lo mira?\r\n\nSin prisas, sin gritos, sin alboroto,\r\nsolo pasos suaves y ojos muy notos.\r\n\nEl Equipo SDG avanza con calma,\r\nleyendo pistas con alma y palma.\r\n\nHuella aquí… liana rota…\r\nun pelo negro junto a la gota.\r\n\nSigue la pista, despacito ya,\r\n¿dónde está nuestro amigo jaguar?\r\n\nAh-ah-ah… misterio en lo verde…\r\nAh-ah-ah… la selva nos tiende su red.\r\n\nEl mono aullador señala un rincón:\r\n\n“En la cueva de la luciérnaga, \r\n¡allí está, campeón!”\r\n\nLa lechuza parpadea—“Tranquilo está,\r\npero buscadlo con bondad.”\r\n\nHuella allá… nido movido…\r\nun ronroneo casi escondido.\r\n\nPor helechos que cantan en voz baja,\r\nel Equipo SDG no pierde la pista.\r\n\nAh-ah-ah… secretos en la sombra…\r\nAh-ah-ah… el jaguar no se asombra.\r\n\nSin jaulas. Sin miedo. Solo raíz y sol.\r\nNo está perdido… solo dice “adiós”\r\n\nal río, al viento, a la luna en flor—\r\nestá en casa. Y todo está en orden, señor.\r\n\nLo encontramos… durmiendo en paz,\r\nbajo la luna, sin más que paz.\r\n\nEl Equipo SDG sonríe al saber:\r\nsu hogar es la selva… y hay que proteger.\r\n\nAh-ah-ah… corazones verdes latiendo…\r\nAh-ah-ah… y el mundo sigue creciendo.\r\n\nSusurro: Caso resuelto… con cariño.",
+    "syncedLyrics": [
+      {
+        "start": 3.747,
+        "end": 16.44,
+        "text": "Shh… la selva guarda un secreto…\r"
+      },
+      {
+        "start": 16.44,
+        "end": 23.64,
+        "text": "La luna baña hojas de esmeralda,\r\nel jaguar desapareció—¿quién lo mira?\r"
+      },
+      {
+        "start": 23.64,
+        "end": 31.12,
+        "text": "Sin prisas, sin gritos, sin alboroto,\r\nsolo pasos suaves y ojos muy notos.\r"
+      },
+      {
+        "start": 31.12,
+        "end": 42.44,
+        "text": "El Equipo SDG avanza con calma,\r\nleyendo pistas con alma y palma.\r"
+      },
+      {
+        "start": 42.44,
+        "end": 50.12,
+        "text": "Huella aquí… liana rota…\r\nun pelo negro junto a la gota.\r"
+      },
+      {
+        "start": 50.12,
+        "end": 57.32,
+        "text": "Sigue la pista, despacito ya,\r\n¿dónde está nuestro amigo jaguar?\r"
+      },
+      {
+        "start": 57.32,
+        "end": 71.88,
+        "text": "Ah-ah-ah… misterio en lo verde…\r\nAh-ah-ah… la selva nos tiende su red.\r"
+      },
+      {
+        "start": 71.88,
+        "end": 75.32,
+        "text": "El mono aullador señala un rincón:\r"
+      },
+      {
+        "start": 75.32,
+        "end": 79,
+        "text": "“En la cueva de la luciérnaga, \r\n¡allí está, campeón!”\r"
+      },
+      {
+        "start": 79,
+        "end": 86.8,
+        "text": "La lechuza parpadea—“Tranquilo está,\r\npero buscadlo con bondad.”\r"
+      },
+      {
+        "start": 86.8,
+        "end": 94.68,
+        "text": "Huella allá… nido movido…\r\nun ronroneo casi escondido.\r"
+      },
+      {
+        "start": 94.68,
+        "end": 102.3,
+        "text": "Por helechos que cantan en voz baja,\r\nel Equipo SDG no pierde la pista.\r"
+      },
+      {
+        "start": 102.3,
+        "end": 115.68,
+        "text": "Ah-ah-ah… secretos en la sombra…\r\nAh-ah-ah… el jaguar no se asombra.\r"
+      },
+      {
+        "start": 115.68,
+        "end": 123.28,
+        "text": "Sin jaulas. Sin miedo. Solo raíz y sol.\r\nNo está perdido… solo dice “adiós”\r"
+      },
+      {
+        "start": 123.28,
+        "end": 137.74,
+        "text": "al río, al viento, a la luna en flor—\r\nestá en casa. Y todo está en orden, señor.\r"
+      },
+      {
+        "start": 137.74,
+        "end": 152.92000000000002,
+        "text": "Lo encontramos… durmiendo en paz,\r\nbajo la luna, sin más que paz.\r"
+      },
+      {
+        "start": 152.92000000000002,
+        "end": 164.54,
+        "text": "El Equipo SDG sonríe al saber:\r\nsu hogar es la selva… y hay que proteger.\r"
+      },
+      {
+        "start": 164.54,
+        "end": 179.4,
+        "text": "Ah-ah-ah… corazones verdes latiendo…\r\nAh-ah-ah… y el mundo sigue creciendo.\r"
+      },
+      {
+        "start": 179.4,
+        "end": 190.24,
+        "text": "Susurro: Caso resuelto… con cariño."
       }
     ]
   }

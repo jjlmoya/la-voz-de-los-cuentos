@@ -54,6 +54,17 @@
             </svg>
             <span>{{ t('page.song.autoplay') }}</span>
           </button>
+
+          <button
+            @click="toggleShuffle"
+            :class="{ 'active': isShuffle }"
+            class="song-page__control"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/>
+            </svg>
+            <span>{{ t('page.song.shuffle') }}</span>
+          </button>
         </div>
 
         <div v-if="relatedStory" class="song-page__story-card">
@@ -161,6 +172,7 @@ const props = defineProps({
 
 const isRepeat = ref(false)
 const isAutoplay = ref(true)
+const isShuffle = ref(false)
 const isPlaying = ref(false)
 const currentTime = ref(0)
 let player = null
@@ -226,12 +238,20 @@ const toggleRepeat = () => {
   isRepeat.value = !isRepeat.value
   if (isRepeat.value) {
     isAutoplay.value = false
+    isShuffle.value = false
   }
 }
 
 const toggleAutoplay = () => {
   isAutoplay.value = !isAutoplay.value
   if (isAutoplay.value) {
+    isRepeat.value = false
+  }
+}
+
+const toggleShuffle = () => {
+  isShuffle.value = !isShuffle.value
+  if (isShuffle.value) {
     isRepeat.value = false
   }
 }
@@ -246,9 +266,27 @@ const handleSongEnded = () => {
 
 const playNextSong = () => {
   const currentIndex = props.allSongs.findIndex(s => s.key === props.song.key)
-  if (currentIndex !== -1 && currentIndex < props.allSongs.length - 1) {
-    const nextSong = props.allSongs[currentIndex + 1]
-    navigateToSong(nextSong.key)
+
+  if (isShuffle.value) {
+    // Modo aleatorio: elegir una canción al azar (diferente de la actual)
+    let randomIndex
+    do {
+      randomIndex = Math.floor(Math.random() * props.allSongs.length)
+    } while (randomIndex === currentIndex && props.allSongs.length > 1)
+
+    const randomSong = props.allSongs[randomIndex]
+    navigateToSong(randomSong.key)
+  } else if (currentIndex !== -1) {
+    // Modo secuencial
+    if (currentIndex < props.allSongs.length - 1) {
+      // Si no es la última, ir a la siguiente
+      const nextSong = props.allSongs[currentIndex + 1]
+      navigateToSong(nextSong.key)
+    } else {
+      // Si es la última, volver a la primera
+      const firstSong = props.allSongs[0]
+      navigateToSong(firstSong.key)
+    }
   }
 }
 
@@ -276,7 +314,7 @@ const createPlayer = () => {
     width: '100%',
     height: '100%',
     playerVars: {
-      autoplay: 0,
+      autoplay: 1,
       rel: 0,
       modestbranding: 1,
       cc_load_policy: 1
@@ -314,12 +352,16 @@ onMounted(() => {
   // Load preferences from localStorage
   const savedRepeat = localStorage.getItem('songRepeat')
   const savedAutoplay = localStorage.getItem('songAutoplay')
+  const savedShuffle = localStorage.getItem('songShuffle')
 
   if (savedRepeat !== null) {
     isRepeat.value = savedRepeat === 'true'
   }
   if (savedAutoplay !== null) {
     isAutoplay.value = savedAutoplay === 'true'
+  }
+  if (savedShuffle !== null) {
+    isShuffle.value = savedShuffle === 'true'
   }
 
   // Initialize YouTube player
@@ -330,10 +372,11 @@ onMounted(() => {
 const savePreferences = () => {
   localStorage.setItem('songRepeat', isRepeat.value)
   localStorage.setItem('songAutoplay', isAutoplay.value)
+  localStorage.setItem('songShuffle', isShuffle.value)
 }
 
 // Watch for changes
-watch([isRepeat, isAutoplay], savePreferences)
+watch([isRepeat, isAutoplay, isShuffle], savePreferences)
 
 // Limpiar intervalo al desmontar componente
 onUnmounted(() => {
