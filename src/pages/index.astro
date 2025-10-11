@@ -4,9 +4,10 @@ import Hero from '../components/Cards/Hero.vue'
 import SectionsDefault from '../components/Sections/Default.vue'
 import NewSection from '../components/Sections/News.vue'
 import SagasSection from '../components/Sections/Sagas.vue'
+import FeaturedSongs from '../components/Sections/FeaturedSongs.vue'
 import { VContainer } from '@overgaming/vicius'
 import t from '../translations'
-import { toStories, toSagas } from '../router'
+import { toStories, toSagas, toSongs } from '../router'
 ---
 
 <NavLayout
@@ -19,6 +20,9 @@ import { toStories, toSagas } from '../router'
       <Hero />
       <SectionsDefault title={t('section.news')} moreLink={toStories()}>
         <NewSection client:load />
+      </SectionsDefault>
+      <SectionsDefault title={t('section.songs')} moreLink={toSongs()}>
+        <FeaturedSongs client:load limit={6} />
       </SectionsDefault>
       <SectionsDefault title={t('section.sagas')} moreLink={toSagas()}>
         <SagasSection />

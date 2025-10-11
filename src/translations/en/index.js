@@ -35,6 +35,7 @@ export default {
 
   'section.news': "What's New",
   'section.sagas': 'Featured Sagas',
+  'section.songs': 'Songs',
 
   'footer.newsletter': 'Monthly Newsletter',
   'footer.newsletter.button': 'Subscribe',

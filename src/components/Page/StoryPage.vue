@@ -21,17 +21,20 @@
     </div>
     <Spotify v-if="story.spotify" :spotify="story.spotify" />
 
-    <div v-if="relatedSong" class="story-page__song-link">
-      <VButton
-        :href="toSong(relatedSong.key)"
-        class="story-page__song-button"
-      >
+    <a v-if="relatedSong" :href="toSong(relatedSong.key)" class="story-page__song-card">
+      <div class="story-page__song-icon">
         <svg viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
         </svg>
-        <span>{{ t('page.story.listenSong') }}</span>
-      </VButton>
-    </div>
+      </div>
+      <div class="story-page__song-info">
+        <span class="story-page__song-label">{{ t('page.story.listenSong') }}</span>
+        <span class="story-page__song-name">{{ relatedSong.name }}</span>
+      </div>
+      <svg class="story-page__song-arrow" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+      </svg>
+    </a>
 
     <div class="story-page__title">
       <VText as="h1" variant="header" color="high">
@@ -491,36 +494,122 @@
     }
   }
 
-  .story-page__song-link {
-    display: flex;
-    justify-content: center;
-    margin: var(--v-unit-4) 0;
-  }
-
-  .story-page__song-button {
-    display: flex;
+  .story-page__song-card {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    gap: var(--v-unit-2);
-    padding: var(--v-unit-3) var(--v-unit-6);
-    background: linear-gradient(135deg, var(--v-color-primary) 0%, var(--v-color-accent-primary) 100%);
-    color: white;
-    border: none;
-    border-radius: var(--v-radius-lg);
-    font-size: var(--v-font-size-lg);
-    font-weight: 600;
-    box-shadow: var(--v-shadow-md);
-    transition: all 0.3s ease;
+    gap: var(--v-unit-4);
+    padding: var(--v-unit-4);
+    margin: var(--v-unit-6) 0;
+    background: white;
+    border: 3px solid var(--v-color-primary);
+    border-radius: var(--v-radius-xl);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     text-decoration: none;
-
-    svg {
-      width: 24px;
-      height: 24px;
-      fill: white;
-    }
+    transition: all 0.3s ease;
+    cursor: pointer;
 
     &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(var(--v-color-primary-rgb), 0.25);
+      border-color: var(--v-color-accent-primary);
+
+      .story-page__song-icon {
+        background: linear-gradient(135deg, var(--v-color-primary), var(--v-color-accent-primary));
+        transform: scale(1.1);
+      }
+
+      .story-page__song-arrow {
+        transform: translateX(4px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      gap: var(--v-unit-3);
+      padding: var(--v-unit-3);
+    }
+  }
+
+  .story-page__song-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--v-color-primary);
+    border-radius: var(--v-radius-lg);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+
+    svg {
+      width: 32px;
+      height: 32px;
+      fill: white;
+      animation: song-icon-bounce 2s ease-in-out infinite;
+    }
+
+    @media (max-width: 768px) {
+      width: 50px;
+      height: 50px;
+
+      svg {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+
+  .story-page__song-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--v-unit-1);
+    min-width: 0;
+  }
+
+  .story-page__song-label {
+    font-size: var(--v-font-size-sm);
+    color: var(--v-color-text-medium);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .story-page__song-name {
+    font-size: var(--v-font-size-lg);
+    color: var(--v-color-text-high);
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    @media (max-width: 768px) {
+      font-size: var(--v-font-size-md);
+    }
+  }
+
+  .story-page__song-arrow {
+    width: 24px;
+    height: 24px;
+    fill: var(--v-color-primary);
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+
+  @keyframes song-icon-bounce {
+    0%, 60%, 100% {
+      transform: translateY(0);
+    }
+    10% {
+      transform: translateY(-6px);
+    }
+    20% {
       transform: translateY(-2px);
-      box-shadow: var(--v-shadow-lg);
+    }
+    30% {
+      transform: translateY(-8px);
+    }
+    40% {
+      transform: translateY(-1px);
     }
   }
 

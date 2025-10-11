@@ -1,6 +1,6 @@
 ---
 import NavLayout from '../../layouts/NavLayout.astro'
-import { getStories, getSagas } from '../../data'
+import { getStories, getSagas, getSongs } from '../../data'
 import { toStory } from '../../router'
 import StoryPage from '../../components/Page/StoryPage.vue'
 import RelatedStories from '../../components/Navigation/RelatedStories.vue'
@@ -11,12 +11,16 @@ const author = import.meta.env.PUBLIC_SITE_NAME
 
 const stories = getStories()
 const sagas = getSagas()
+const songs = getSongs()
 
 const { id } = Astro.params
 const story = stories.find(story => story.key === id)
 const currentSaga = sagas.find(saga => saga.key === story.saga)
 const lang = import.meta.env.PUBLIC_LANG
 const firstParagraph = story.story.split('\n').filter(p => p.trim() !== '')[0]
+
+// Find related song if story has one
+const relatedSong = story.song ? songs.find(s => s.song === story.song) : null
 
 export async function getStaticPaths() {
   const paths = getStories().map(story => ({
@@ -121,6 +125,7 @@ const schema = JSON.stringify({
   <StoryPage
     story={story}
     currentSaga={currentSaga}
+    relatedSong={relatedSong}
     client:load
     url={`${toStory(story.key)}`}
     title={story.name}

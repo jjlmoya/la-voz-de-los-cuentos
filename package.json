@@ -1,7 +1,7 @@
 {
   "name": "la-voz-de-los-cuentos",
   "type": "module",
-  "version": "0.1.250",
+  "version": "0.1.251",
   "scripts": {
     "dev": "astro dev",
     "dev:en": "env-cmd -f .env.en astro dev",

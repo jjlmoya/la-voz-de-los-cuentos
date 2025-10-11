@@ -16,16 +16,18 @@
 
         <!-- Karaoke mode: mostrar solo si hay syncedLyrics -->
         <div v-if="song.syncedLyrics && song.syncedLyrics.length > 0" class="song-page__karaoke">
-          <div
-            v-for="(line, index) in song.syncedLyrics"
-            :key="index"
-            :class="{
-              'song-page__karaoke-line': true,
-              'song-page__karaoke-line--active': isLineActive(line)
-            }"
-            class="song-page__karaoke-line"
-          >
-            {{ line.text }}
+          <h2 class="song-page__karaoke-title">{{ t('page.song.lyrics') }}</h2>
+          <div class="song-page__karaoke-content">
+            <div
+              v-for="(line, index) in song.syncedLyrics"
+              :key="index"
+              :class="{
+                'song-page__karaoke-line': true,
+                'song-page__karaoke-line--active': isLineActive(line)
+              }"
+            >
+              {{ line.text }}
+            </div>
           </div>
         </div>
 
@@ -69,7 +71,7 @@
           </a>
         </div>
 
-        <div v-if="song.lyrics" class="song-page__lyrics">
+        <div v-if="song.lyrics && (!song.syncedLyrics || song.syncedLyrics.length === 0)" class="song-page__lyrics">
           <h2 class="song-page__lyrics-title">{{ t('page.song.lyrics') }}</h2>
           <div class="song-page__lyrics-content" v-html="lyricsHTML" />
         </div>
@@ -184,13 +186,13 @@ watch(currentTime, () => {
 
   const activeIndex = props.song.syncedLyrics.findIndex(line => isLineActive(line))
   if (activeIndex !== -1) {
-    const karaokeContainer = document.querySelector('.song-page__karaoke')
+    const karaokeContent = document.querySelector('.song-page__karaoke-content')
     const activeLine = document.querySelectorAll('.song-page__karaoke-line')[activeIndex]
 
-    if (karaokeContainer && activeLine) {
-      const containerTop = karaokeContainer.scrollTop
-      const containerHeight = karaokeContainer.clientHeight
-      const lineTop = activeLine.offsetTop - karaokeContainer.offsetTop
+    if (karaokeContent && activeLine) {
+      const containerTop = karaokeContent.scrollTop
+      const containerHeight = karaokeContent.clientHeight
+      const lineTop = activeLine.offsetTop - karaokeContent.offsetTop
       const lineHeight = activeLine.clientHeight
 
       // Calcular posición para centrar la línea en el contenedor
@@ -198,7 +200,7 @@ watch(currentTime, () => {
 
       // Solo hacer scroll si la línea está fuera del viewport del contenedor
       if (lineTop < containerTop || lineTop + lineHeight > containerTop + containerHeight) {
-        karaokeContainer.scrollTo({
+        karaokeContent.scrollTo({
           top: scrollTo,
           behavior: 'smooth'
         })
@@ -283,8 +285,6 @@ const createPlayer = () => {
       onReady: (event) => {
         // DEBUG: Exponer player globalmente para testing en consola
         window.__ytPlayer = event.target
-        console.log('✅ YouTube Player listo! Prueba: window.__ytPlayer.getCurrentTime()')
-
         // Iniciar tracking de tiempo para karaoke
         startTimeTracking()
       },
@@ -410,21 +410,34 @@ onUnmounted(() => {
 }
 
 .song-page__karaoke {
-  background: linear-gradient(135deg,
-    rgba(var(--v-color-primary-rgb), 0.08),
-    rgba(var(--v-color-accent-primary-rgb), 0.08));
-  border: 4px solid var(--v-color-primary);
+  background: white;
+  border: 3px solid var(--v-color-primary);
   border-radius: var(--v-radius-xl);
   padding: var(--v-unit-6);
-  box-shadow:
-    0 10px 30px rgba(var(--v-color-primary-rgb), 0.2),
-    inset 0 2px 10px rgba(var(--v-color-primary-rgb), 0.1);
-  max-height: 400px;
-  overflow-y: auto;
-  margin-top: var(--v-unit-6);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  overflow: hidden;
 
   @media (max-width: 768px) {
     padding: var(--v-unit-4);
+  }
+}
+
+.song-page__karaoke-title {
+  font-size: var(--v-font-size-xl);
+  font-weight: 700;
+  color: var(--v-color-primary);
+  margin: 0 0 var(--v-unit-4) 0;
+  text-align: center;
+}
+
+.song-page__karaoke-content {
+  max-width: 65ch;
+  margin: 0 auto;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: var(--v-unit-2);
+
+  @media (max-width: 768px) {
     max-height: 300px;
   }
 
@@ -433,7 +446,7 @@ onUnmounted(() => {
   }
 
   &::-webkit-scrollbar-track {
-    background: rgba(var(--v-color-primary-rgb), 0.1);
+    background: var(--v-color-background-soft);
     border-radius: var(--v-radius-sm);
   }
 
@@ -448,52 +461,54 @@ onUnmounted(() => {
 }
 
 .song-page__karaoke-line {
-  font-size: clamp(18px, 3vw, 22px);
-  line-height: 1.8;
+  font-size: clamp(18px, 2.5vw, 20px);
+  line-height: 1.6;
   color: var(--v-color-text-medium);
   padding: var(--v-unit-3) var(--v-unit-4);
   margin-bottom: var(--v-unit-2);
-  border-radius: var(--v-radius-md);
+  border-radius: var(--v-radius-lg);
   transition: all 0.3s ease;
-  opacity: 0.5;
+  opacity: 0.4;
+  text-align: center;
   white-space: pre-line;
+  font-weight: 400;
 
   @media (max-width: 768px) {
-    font-size: 18px;
+    font-size: 16px;
     padding: var(--v-unit-2) var(--v-unit-3);
   }
 }
 
 .song-page__karaoke-line--active {
   opacity: 1;
-  font-size: clamp(22px, 4vw, 28px);
+  font-size: clamp(22px, 3vw, 26px);
   font-weight: 700;
   color: var(--v-color-primary);
   background: linear-gradient(135deg,
-    rgba(var(--v-color-primary-rgb), 0.15),
-    rgba(var(--v-color-accent-primary-rgb), 0.15));
-  border: 3px solid var(--v-color-primary);
-  transform: scale(1.02);
-  box-shadow:
-    0 0 20px rgba(var(--v-color-primary-rgb), 0.4),
-    0 6px 16px rgba(0,0,0,0.2);
-  animation: karaoke-pulse 0.5s ease-in-out;
+    rgba(var(--v-color-primary-rgb), 0.1),
+    rgba(var(--v-color-accent-primary-rgb), 0.1));
+  border: 2px solid var(--v-color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(var(--v-color-primary-rgb), 0.25);
+  animation: karaoke-highlight 0.3s ease-out;
 
   @media (max-width: 768px) {
-    font-size: 20px;
-    transform: scale(1);
+    font-size: 18px;
+    transform: translateY(-1px);
   }
 }
 
-@keyframes karaoke-pulse {
+@keyframes karaoke-highlight {
   0% {
-    transform: scale(0.98);
+    transform: translateY(0) scale(0.98);
+    opacity: 0.4;
   }
   50% {
-    transform: scale(1.04);
+    transform: translateY(-3px) scale(1.01);
   }
   100% {
-    transform: scale(1.02);
+    transform: translateY(-2px) scale(1);
+    opacity: 1;
   }
 }
 

@@ -35,6 +35,7 @@ export default {
 
   'section.news': 'Novedades',
   'section.sagas': 'Sagas Destacadas',
+  'section.songs': 'Canciones',
 
   'footer.newsletter': 'Newsletter Mensual',
   'footer.newsletter.button': 'Enviar',

@@ -43,9 +43,10 @@
 <style scoped>
   .section-default {
     padding-top: var(--v-unit-4);
+    margin-bottom: var(--v-unit-12);
     position: relative;
     display: grid;
-    grid-gap: var(--v-unit-2) 0;
+    grid-gap: var(--v-unit-6) 0;
   }
   .section-default__title {
     font-size: 24px;

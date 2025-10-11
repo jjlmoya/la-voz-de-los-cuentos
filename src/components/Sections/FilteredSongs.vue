@@ -54,35 +54,7 @@
         :interval="1500"
       />
 
-      <template v-else>
-        <div
-          v-for="song in filteredAndSortedSongs"
-          :key="song.key"
-          class="song-card"
-          @click="navigateToSong(song.key)"
-        >
-          <div class="song-card__cover">
-            <img
-              :src="`/assets/stories/${lang}/${song.key}.webp`"
-              :alt="song.name"
-              @error="handleImageError"
-            />
-            <div class="song-card__play">
-              <svg viewBox="0 0 24 24" fill="white">
-                <path d="M8 5v14l11-7z"/>
-              </svg>
-            </div>
-          </div>
-          <div class="song-card__info">
-            <VText as="h2" variant="subtitle" color="high" class="song-card__title">
-              {{ song.name }}
-            </VText>
-            <VText v-if="song.time" variant="caption" color="medium">
-              {{ formatTime(song.time) }}
-            </VText>
-          </div>
-        </div>
-      </template>
+      <SongList v-else :songs="filteredAndSortedSongs" />
     </div>
   </div>
 </template>
@@ -92,20 +64,15 @@ import t from '../../translations'
 import { VContainer, VButton, VText, VInput } from '@overgaming/vicius'
 import { ref, computed } from 'vue'
 import LoadingMessage from '../Loading/LoadingMessage.vue'
+import SongList from '../Lists/SongList.vue'
 import { getSongs } from '../../data'
-import { toSong } from '../../router'
 
-const lang = import.meta.env.PUBLIC_LANG
 const songs = getSongs()
 
 const searchQuery = ref('')
 const sortOrder = ref('date')
 const sortDirection = ref('desc')
 const isLoading = ref(false)
-
-const handleImageError = (e) => {
-  console.error('Error loading image:', e.target.src)
-}
 
 const setSortOrder = order => {
   isLoading.value = true
@@ -127,18 +94,6 @@ const toggleSortDirection = () => {
 const parseDate = dateString => {
   const [day, month, year] = dateString.split('/').map(Number)
   return new Date(year, month - 1, day)
-}
-
-const formatTime = (time) => {
-  if (!time) return ''
-  const seconds = parseFloat(time.replace(',', '.'))
-  const minutes = Math.floor(seconds / 60)
-  const secs = Math.floor(seconds % 60)
-  return `${minutes}:${secs.toString().padStart(2, '0')}`
-}
-
-const navigateToSong = (key) => {
-  window.location.href = toSong(key)
 }
 
 const filteredAndSortedSongs = computed(() => {
@@ -219,73 +174,6 @@ const filteredAndSortedSongs = computed(() => {
 }
 
 .sections-filtered__content--songs {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: var(--v-unit-6);
-
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: var(--v-unit-4);
-  }
-}
-
-.song-card {
-  cursor: pointer;
-  transition: transform 0.3s ease;
-
-  &:hover {
-    transform: translateY(-8px);
-
-    .song-card__play {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-}
-
-.song-card__cover {
-  position: relative;
-  aspect-ratio: 1;
-  border-radius: var(--v-radius-lg);
-  overflow: hidden;
-  box-shadow: var(--v-shadow-lg);
-  margin-bottom: var(--v-unit-3);
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-.song-card__play {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  transform: scale(0.8);
-  transition: all 0.3s ease;
-
-  svg {
-    width: 64px;
-    height: 64px;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
-  }
-}
-
-.song-card__info {
-  text-align: center;
-  padding: 0 var(--v-unit-2);
-}
-
-.song-card__title {
-  margin-bottom: var(--v-unit-1);
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  width: 100%;
 }
 </style>
