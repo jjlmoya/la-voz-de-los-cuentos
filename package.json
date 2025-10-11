@@ -1,7 +1,7 @@
 {
   "name": "la-voz-de-los-cuentos",
   "type": "module",
-  "version": "0.1.259",
+  "version": "0.1.260",
   "scripts": {
     "dev": "astro dev",
     "dev:en": "env-cmd -f .env.en astro dev",
@@ -14,6 +14,7 @@
     "statics": "npm run copy-assets",
     "games": "npm i la-voz-de-los-cuentos-games@latest && npm run copy-assets",
     "content": "node ./scripts/content.js",
+    "content:update": "npm run content && git add . && git commit -m \"content: update content\" && git push",
     "robots": "node ./scripts/generate-robots.js",
     "redimension": "python ./scripts/redimension.py",
     "characters": "node ./scripts/characters.js",
