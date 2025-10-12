@@ -8,7 +8,7 @@
       :class="{ 'menu-item--active': entry.active }"
     >
       <img
-        :src="`/assets/menu-icons/${entry.icon}.png`"
+        :src="`/assets/menu-icons/${entry.icon}.webp`"
         :alt="entry.label"
         class="menu-item__icon"
       />
