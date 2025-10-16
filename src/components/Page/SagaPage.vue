@@ -1,6 +1,11 @@
 <template>
   <VContainer size="xl" class="saga-page">
-    <Breadcrumbs :current-page="saga.name" />
+    <Breadcrumbs
+      :current-page="saga.name"
+      :saga-name="saga.name"
+      :saga-key="saga.key"
+      :is-story="false"
+    />
 
     <!-- Language Switcher -->
     <LanguageSwitcher
