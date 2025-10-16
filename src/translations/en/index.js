@@ -152,5 +152,6 @@ export default {
   'language.switch': 'Leer en Español',
   'language.switch.aria': 'Switch language',
 
-  'achievement.unlocked': 'Achievement Unlocked'
+  'achievement.unlocked': 'Achievement Unlocked',
+  'achievement.view': 'View Achievement'
 }

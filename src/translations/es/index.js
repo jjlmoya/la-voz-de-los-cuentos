@@ -153,5 +153,6 @@ export default {
   'language.switch': 'Read in English',
   'language.switch.aria': 'Cambiar idioma',
 
-  'achievement.unlocked': 'Logro Desbloqueado'
+  'achievement.unlocked': 'Logro Desbloqueado',
+  'achievement.view': 'Ver Logro'
 }

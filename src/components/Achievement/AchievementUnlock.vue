@@ -1,7 +1,7 @@
 <template>
   <Teleport to="body">
     <Transition name="achievement-unlock">
-      <div v-if="isVisible" class="achievement-unlock">
+      <div v-if="currentNotification" class="achievement-unlock" @click.self="handleClose">
         <div class="achievement-unlock__container">
           <!-- Imagen de logro conseguido -->
           <div class="achievement-unlock__image-wrapper">
@@ -12,14 +12,19 @@
             />
           </div>
 
-          <!-- Título -->
+          <!-- Contenido -->
           <div class="achievement-unlock__content">
             <p class="achievement-unlock__label">{{ t('achievement.unlocked') }}</p>
-            <h2 class="achievement-unlock__title">{{ achievement.name }}</h2>
-            <p class="achievement-unlock__description">{{ achievement.description }}</p>
+            <h2 class="achievement-unlock__title">{{ currentNotification.name }}</h2>
+            <p class="achievement-unlock__description">{{ currentNotification.description }}</p>
           </div>
 
-          <!-- Confeti opcional -->
+          <!-- Botón para ir a logros -->
+          <button class="achievement-unlock__button" @click="navigateToAchievements">
+            {{ t('achievement.view') }}
+          </button>
+
+          <!-- Confeti -->
           <div v-for="i in 8" :key="i" class="achievement-unlock__confetti" :style="{ animationDelay: `${i * 0.1}s` }" />
         </div>
       </div>
@@ -28,44 +33,23 @@
 </template>
 
 <script setup>
-  import { ref, watch } from 'vue'
+  import { computed } from 'vue'
+  import { useRouter } from 'vue:router'
+  import { useAchievementNotification } from '../../composables/useAchievementNotification'
+  import { toAccountAchievements } from '../../router'
   import t from '../../translations'
 
-  const props = defineProps({
-    achievement: {
-      type: Object,
-      default: () => ({
-        name: 'Achievement',
-        description: 'You have unlocked a new achievement!'
-      })
-    },
-    duration: {
-      type: Number,
-      default: 4000 // 4 segundos
-    },
-    show: {
-      type: Boolean,
-      default: false
-    }
-  })
+  const router = useRouter()
+  const { currentNotification, closeNotification } = useAchievementNotification()
 
-  const emit = defineEmits(['close'])
+  const handleClose = () => {
+    closeNotification()
+  }
 
-  const isVisible = ref(false)
-
-  watch(
-    () => props.show,
-    (newVal) => {
-      if (newVal) {
-        isVisible.value = true
-        // Auto-close después del tiempo especificado
-        setTimeout(() => {
-          isVisible.value = false
-          emit('close')
-        }, props.duration)
-      }
-    }
-  )
+  const navigateToAchievements = () => {
+    router.push(toAccountAchievements())
+    handleClose()
+  }
 </script>
 
 <style scoped>
@@ -139,6 +123,34 @@
     font-size: var(--v-font-size-md);
     color: rgba(255, 255, 255, 0.95);
     line-height: 1.4;
+  }
+
+  .achievement-unlock__button {
+    margin-top: var(--v-unit-4);
+    padding: var(--v-unit-2) var(--v-unit-4);
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #FFD700;
+    border-radius: var(--v-radius-lg);
+    color: #FF6F00;
+    font-size: var(--v-font-size-md);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+  }
+
+  .achievement-unlock__button:hover {
+    background: #FFD700;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 193, 7, 0.5);
+  }
+
+  .achievement-unlock__button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(255, 193, 7, 0.3);
   }
 
   /* Confeti */
@@ -318,6 +330,11 @@
     }
 
     .achievement-unlock__description {
+      font-size: var(--v-font-size-sm);
+    }
+
+    .achievement-unlock__button {
+      padding: var(--v-unit-2) var(--v-unit-3);
       font-size: var(--v-font-size-sm);
     }
   }
