@@ -7,7 +7,7 @@
         </div>
         <div class="account-summary__card-number">{{ readCount }}</div>
         <div class="account-summary__card-label">
-          {{ lang === 'es' ? 'Leídos' : 'Read' }}
+          {{ props.lang === 'es' ? 'Leídos' : 'Read' }}
         </div>
       </a>
 
@@ -17,7 +17,7 @@
         </div>
         <div class="account-summary__card-number">{{ pendingCount }}</div>
         <div class="account-summary__card-label">
-          {{ lang === 'es' ? 'Pendientes' : 'Pending' }}
+          {{ props.lang === 'es' ? 'Pendientes' : 'Pending' }}
         </div>
       </a>
 
@@ -27,7 +27,7 @@
         </div>
         <div class="account-summary__card-number">{{ favoriteCount }}</div>
         <div class="account-summary__card-label">
-          {{ lang === 'es' ? 'Favoritos' : 'Favorites' }}
+          {{ props.lang === 'es' ? 'Favoritos' : 'Favorites' }}
         </div>
       </a>
 
@@ -37,7 +37,7 @@
         </div>
         <div class="account-summary__card-number">{{ achievementCount }}</div>
         <div class="account-summary__card-label">
-          {{ lang === 'es' ? 'Logros' : 'Achievements' }}
+          {{ props.lang === 'es' ? 'Logros' : 'Achievements' }}
         </div>
       </a>
     </div>
@@ -50,11 +50,11 @@
   import useStories from '../../composables/useStories'
   import { toAccountRead, toAccountPending, toAccountFavorites, toAccountAchievements } from '../../router'
 
-  const lang = computed(() => {
-    if (typeof window !== 'undefined') {
-      return import.meta.env.PUBLIC_LANG || 'es'
+  const props = defineProps({
+    lang: {
+      type: String,
+      default: 'es'
     }
-    return 'es'
   })
 
   const { getCompleteStories, getPendingStories, getFavoriteStories } = useStories()

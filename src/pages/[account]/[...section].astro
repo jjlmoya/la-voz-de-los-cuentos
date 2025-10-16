@@ -69,7 +69,7 @@ if (activeSection === 'read') {
 >
   <AccountPageNav client:load pageTitle={pageTitle}>
     <!-- Mostrar AccountSummary (dashboard) en todas las secciones -->
-    <AccountSummary client:load />
+    <AccountSummary client:load lang={lang} />
 
     <!-- Contenido específico de cada sección -->
     {activeSection === 'read' && (

@@ -56,33 +56,34 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 48px;
-    height: 48px;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--v-color-accent-primary), var(--v-color-accent-primary-hover));
-    border: 2px solid var(--v-color-primary);
+    background: linear-gradient(135deg, var(--v-color-primary), var(--v-color-accent-primary));
+    border: 3px solid white;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   }
 
   .account-page__back-button:hover {
-    transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
   }
 
   .account-page__back-button:active {
-    transform: translateY(-50%) scale(0.95);
+    transform: translateY(-50%) scale(0.9);
   }
 
   .account-page__back-icon {
-    font-size: 24px;
+    font-size: 28px;
     color: white;
     font-weight: 700;
+    line-height: 1;
   }
 
   /* Título */
@@ -95,10 +96,7 @@
     margin: 0;
     font-size: 48px;
     font-weight: 700;
-    background: linear-gradient(135deg, var(--v-color-primary), var(--v-color-accent-primary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--v-color-primary);
     animation: slideInDown 0.6s ease-out;
   }
 
