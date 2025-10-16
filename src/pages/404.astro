@@ -2,12 +2,11 @@
 import '../styles/404.css'
 import NavLayout from '../layouts/NavLayout.astro'
 import t from '../translations'
-import { getRandomIllustration, getIllustrationUrl, getFallbackIllustrationUrl } from '../utils/404-illustrations'
+import { getRandomIllustration, getIllustrationUrl } from '../utils/404-illustrations'
 import { toStories, toSagas, toSongs } from '../router'
 
 const illustration = getRandomIllustration()
 const illustrationUrl = getIllustrationUrl(illustration.filename)
-const fallbackUrl = getFallbackIllustrationUrl()
 ---
 
 <NavLayout
@@ -23,14 +22,11 @@ const fallbackUrl = getFallbackIllustrationUrl()
 
       <!-- Ilustración con animación -->
       <div class="voz-cuentos-illustration">
-        <picture>
-          <source srcset={illustrationUrl} type="image/webp" />
-          <img
-            src={fallbackUrl}
-            alt={illustration.name}
-            class="voz-cuentos-illustration-img"
-          />
-        </picture>
+        <img
+          src={illustrationUrl}
+          alt={illustration.name}
+          class="voz-cuentos-illustration-img"
+        />
       </div>
 
       <!-- Mensaje - Invitando a buscar -->

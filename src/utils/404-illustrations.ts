@@ -52,9 +52,3 @@ export function getIllustrationUrl(filename: string): string {
   return `/assets/illustrations/404/${filename}`
 }
 
-/**
- * Get the fallback illustration (placeholder)
- */
-export function getFallbackIllustrationUrl(): string {
-  return `/assets/illustrations/404/placeholder.svg`
-}
