@@ -99,7 +99,7 @@
   .tutorial-progress__overlay-bar {
     position: absolute;
     font-size: 20px;
-    top: 202px;
+    top: 106px;
     left: -5px;
     width: calc(100% + 8px);
     height: 16px;
