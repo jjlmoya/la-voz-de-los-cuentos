@@ -1,36 +1,5 @@
 <template>
   <div class="account-summary">
-    <div class="account-summary__title">
-      <VText as="h1" variant="header">{{ lang === 'es' ? 'Mi Cuenta' : 'My Account' }}</VText>
-    </div>
-
-    <nav class="account-summary__nav">
-      <a
-        :href="toAccountRead()"
-        class="account-summary__nav-link"
-      >
-        <VText class="account-summary__nav-text">{{ lang === 'es' ? 'Leídos' : 'Read' }}</VText>
-      </a>
-      <a
-        :href="toAccountPending()"
-        class="account-summary__nav-link"
-      >
-        <VText class="account-summary__nav-text">{{ lang === 'es' ? 'Pendientes' : 'Pending' }}</VText>
-      </a>
-      <a
-        :href="toAccountFavorites()"
-        class="account-summary__nav-link"
-      >
-        <VText class="account-summary__nav-text">{{ lang === 'es' ? 'Favoritos' : 'Favorites' }}</VText>
-      </a>
-      <a
-        :href="toAccountAchievements()"
-        class="account-summary__nav-link"
-      >
-        <VText class="account-summary__nav-text">{{ lang === 'es' ? 'Logros' : 'Achievements' }}</VText>
-      </a>
-    </nav>
-
     <div class="account-summary__grid">
       <a :href="toAccountRead()" class="account-summary__card account-summary__card--read">
         <div class="account-summary__card-icon">
@@ -99,46 +68,6 @@
 <style scoped>
   .account-summary {
     padding: var(--v-unit-8);
-  }
-
-  .account-summary__title {
-    text-align: center;
-    margin-bottom: var(--v-unit-6);
-  }
-
-  .account-summary__nav {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    grid-gap: var(--v-unit-3);
-    padding: var(--v-unit-4);
-    background-color: var(--v-color-surface);
-    border-radius: var(--v-radius-lg);
-    margin-bottom: var(--v-unit-8);
-  }
-
-  .account-summary__nav-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--v-unit-3) var(--v-unit-4);
-    background-color: var(--v-color-surface-high);
-    border-radius: var(--v-radius-md);
-    border: 2px solid transparent;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-
-  .account-summary__nav-link:active,
-  .account-summary__nav-link:focus {
-    border-color: var(--v-color-accent-primary);
-  }
-
-  .account-summary__nav-text {
-    margin: 0;
-    font-weight: 600;
-    text-decoration: none;
-    color: inherit;
   }
 
   .account-summary__grid {
