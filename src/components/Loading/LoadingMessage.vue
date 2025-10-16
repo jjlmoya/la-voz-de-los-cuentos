@@ -50,35 +50,22 @@ const props = defineProps({
 
 // Iconos que corresponden a cada mensaje
 const icons = [
-  'aventurero',    // adventure
-  'mago',          // book
-  'princesa',      // characters
-  'dragon',        // worlds
-  'hechicero',     // potions
-  'pirata'         // treasures
+  'explorer',    // adventure
+  'wizard',      // book
+  'princess',    // characters
+  'dragon',      // worlds
+  'sorcerer',    // potions
+  'pirate'       // treasures
 ]
 
-const currentMessage = ref(props.messages[0])
-const currentIcon = ref(icons[0])
-let messageInterval = null
-let currentIndex = 0
+// Seleccionar uno aleatorio al montar
+const getRandomIndex = () => Math.floor(Math.random() * props.messages.length)
 
-const rotateMessage = () => {
-  currentIndex = (currentIndex + 1) % props.messages.length
-  currentMessage.value = props.messages[currentIndex]
-  currentIcon.value = icons[currentIndex]
-}
+const currentMessage = ref(props.messages[getRandomIndex()])
+const currentIcon = ref(icons[getRandomIndex()])
 
 onMounted(() => {
-  if (props.messages.length > 1) {
-    messageInterval = setInterval(rotateMessage, props.interval)
-  }
-})
-
-onUnmounted(() => {
-  if (messageInterval) {
-    clearInterval(messageInterval)
-  }
+  // No rotar, solo uno aleatorio
 })
 </script>
 
