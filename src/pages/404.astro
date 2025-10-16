@@ -2,6 +2,12 @@
 import '../styles/404.css'
 import NavLayout from '../layouts/NavLayout.astro'
 import t from '../translations'
+import { getRandomIllustration, getIllustrationUrl, getFallbackIllustrationUrl } from '../utils/404-illustrations'
+import { toStories, toSagas, toSongs } from '../router'
+
+const illustration = getRandomIllustration()
+const illustrationUrl = getIllustrationUrl(illustration.filename)
+const fallbackUrl = getFallbackIllustrationUrl()
 ---
 
 <NavLayout
@@ -11,21 +17,45 @@ import t from '../translations'
   robots="noindex, nofollow"
 >
   <div class="voz-cuentos-body">
-    <div class="voz-cuentos-container" style="display: grid; grid-gap: 12px;">
-      <div class="voz-cuentos-owl">
-        <img src="/assets/emotes/sad.webp" alt="Lechuza mágica" />
-      </div>
+    <div class="voz-cuentos-container">
+      <!-- Título arriba del todo - Divertido -->
       <h1 class="voz-cuentos-title">{t('page.404.title')}</h1>
+
+      <!-- Ilustración con animación -->
+      <div class="voz-cuentos-illustration">
+        <picture>
+          <source srcset={illustrationUrl} type="image/webp" />
+          <img
+            src={fallbackUrl}
+            alt={illustration.name}
+            class="voz-cuentos-illustration-img"
+          />
+        </picture>
+      </div>
+
+      <!-- Mensaje - Invitando a buscar -->
       <p class="voz-cuentos-message">
         {t('page.404.message')}
       </p>
-      <div>
-        <a
-          class="v-button v-button--vt-default v-button--cr-primary v-button--sz-df"
-          style="color:white; padding: 16px;"
-          href="/"
-          class="voz-cuentos-link">{t('page.404.link')}</a
-        >
+
+      <!-- Navegación con múltiples opciones con iconos -->
+      <div class="voz-cuentos-nav">
+        <a href={toStories()} class="voz-cuentos-link voz-cuentos-link--icon">
+          <img src="/assets/menu-icons/stories.webp" alt={t('page.404.stories')} class="voz-cuentos-link-icon" />
+          <span class="voz-cuentos-link-text">{t('page.404.stories')}</span>
+        </a>
+        <a href={toSagas()} class="voz-cuentos-link voz-cuentos-link--icon">
+          <img src="/assets/menu-icons/sagas.webp" alt={t('page.404.sagas')} class="voz-cuentos-link-icon" />
+          <span class="voz-cuentos-link-text">{t('page.404.sagas')}</span>
+        </a>
+        <a href={toSongs()} class="voz-cuentos-link voz-cuentos-link--icon">
+          <img src="/assets/menu-icons/songs.webp" alt={t('page.404.songs')} class="voz-cuentos-link-icon" />
+          <span class="voz-cuentos-link-text">{t('page.404.songs')}</span>
+        </a>
+        <a href="/" class="voz-cuentos-link voz-cuentos-link--icon voz-cuentos-link--home">
+          <img src="/assets/menu-icons/home.webp" alt={t('page.404.home')} class="voz-cuentos-link-icon" />
+          <span class="voz-cuentos-link-text">{t('page.404.home')}</span>
+        </a>
       </div>
     </div>
   </div>
