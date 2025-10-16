@@ -1,6 +1,7 @@
 ---
 import NavLayout from '../../layouts/NavLayout.astro'
 import AccountPageNav from '../../components/Page/AccountPageNav.vue'
+import AccountSummary from '../../components/Account/AccountSummary.vue'
 import AccountReadSection from '../../components/Account/AccountReadSection.vue'
 import AccountPendingSection from '../../components/Account/AccountPendingSection.vue'
 import AccountFavoritesSection from '../../components/Account/AccountFavoritesSection.vue'
@@ -66,7 +67,11 @@ if (activeSection === 'read') {
   description={t('page.account.description')}
   url={toAccount()}
 >
-  <AccountPageNav client:load activeTab={activeSection} lang={lang}>
+  <AccountPageNav client:load pageTitle={pageTitle}>
+    <!-- Mostrar AccountSummary (dashboard) en todas las secciones -->
+    <AccountSummary client:load />
+
+    <!-- Contenido específico de cada sección -->
     {activeSection === 'read' && (
       <AccountReadSection client:load stories={stories} showTutorial={showTutorial} />
     )}
