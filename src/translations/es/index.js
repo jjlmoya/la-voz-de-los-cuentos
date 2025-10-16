@@ -122,10 +122,12 @@ export default {
   'slug.stories': 'cuentos',
   'slug.sagas': 'sagas',
 
-  'page.404.message':
-    '¡Oh no! Parece que la página que buscas se ha perdido en un cuento mágico.',
-  'page.404.title': '404 - Página No Encontrada',
-  'page.404.link': 'Inicio',
+  'page.404.title': '¡Nos robaron el cuento!',
+  'page.404.message': '¿Nos ayudas a encontrarlo? Busca entre estas secciones',
+  'page.404.stories': 'Cuentos',
+  'page.404.sagas': 'Sagas',
+  'page.404.songs': 'Canciones',
+  'page.404.home': 'Inicio',
 
   'page.newsletters.h1': 'Listado de News Audio Letter',
   'page.newsletters.description':

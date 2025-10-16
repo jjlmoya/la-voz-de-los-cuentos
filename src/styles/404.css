@@ -1,48 +1,183 @@
 .voz-cuentos-body {
-  background-size: cover;
+  background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  min-height: 100vh;
   margin: 0;
   font-family: 'Fredoka', sans-serif;
-  img {
-    border-radius: 16px;
-  }
+  padding: var(--v-unit-4);
 }
 
 .voz-cuentos-container {
   text-align: center;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  margin: 40px 16px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.95);
+  padding: var(--v-unit-8);
+  margin: 0 auto;
+  border-radius: var(--v-radius-xl);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+  max-width: 600px;
+  border: 3px solid var(--v-color-primary);
 }
 
-.voz-cuentos-owl img {
-  width: 100px;
-  margin-bottom: 20px;
+.voz-cuentos-illustration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--v-unit-3);
+}
+
+.voz-cuentos-illustration picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.voz-cuentos-illustration-img {
+  width: 300px;
+  height: 300px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--v-radius-lg);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@media (max-width: 768px) {
+  .voz-cuentos-illustration-img {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .voz-cuentos-illustration-img {
+    width: 180px;
+    height: 180px;
+  }
 }
 
 .voz-cuentos-title {
-  margin-bottom: 0.5em;
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: var(--v-unit-6);
+  color: var(--v-color-primary);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
 .voz-cuentos-message {
-  font-size: 1.2em;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: var(--v-color-text-medium);
+  margin-bottom: var(--v-unit-6);
+  font-weight: 500;
+}
+
+.voz-cuentos-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--v-unit-4);
+  justify-content: center;
+  margin-top: var(--v-unit-6);
 }
 
 .voz-cuentos-link {
-  display: inline-block;
-  margin-top: 1em;
-  padding: 0.5em 1em;
-  color: #ffffff;
-  background-color: var(--secondary-color);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--v-unit-3);
+  padding: var(--v-unit-4) var(--v-unit-6);
+  color: var(--v-color-primary);
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: var(--v-radius-lg);
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  background: #ffffff;
+  border: 2px solid var(--v-color-primary);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.voz-cuentos-link-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.voz-cuentos-link--primary {
+  background: #ffffff;
+  color: var(--v-color-primary);
+}
+
+.voz-cuentos-link--secondary {
+  background: #ffffff;
+  color: var(--v-color-primary);
 }
 
 .voz-cuentos-link:hover {
-  background-color: #795548;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  animation: none;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+@media (max-width: 768px) {
+  .voz-cuentos-title {
+    font-size: 2.5rem;
+  }
+
+  .voz-cuentos-message {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .voz-cuentos-container {
+    padding: var(--v-unit-6);
+    max-width: 100%;
+  }
+
+  .voz-cuentos-title {
+    font-size: 2rem;
+  }
+
+  .voz-cuentos-message {
+    font-size: 1rem;
+  }
+
+  .voz-cuentos-illustration-img {
+    width: 200px !important;
+    height: 200px !important;
+  }
 }

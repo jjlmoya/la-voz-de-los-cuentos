@@ -120,10 +120,12 @@ export default {
   'page.newsletters.description':
     "Discover what's new and what's coming next! Get a sneak peek into the world of Bubo Boo and all the exciting adventures ahead.",
 
-  'page.404.message':
-    "Oh no! It looks like the page you're looking for is lost in a magical story.",
-  'page.404.title': '404 - Page Not Found',
-  'page.404.link': 'Home',
+  'page.404.title': 'They Stole Our Story!',
+  'page.404.message': 'Can you help us find it? Look in these sections',
+  'page.404.stories': 'Stories',
+  'page.404.sagas': 'Sagas',
+  'page.404.songs': 'Songs',
+  'page.404.home': 'Home',
 
   'cmp.text':
     'To improve your experience, we need third-party cookies. We only use Google Analytics. Do you accept cookies?',
