@@ -57,10 +57,12 @@ export default function useStories() {
       const { isComplete } = useStory(entry)
       return !isComplete()
     })
-  const getFavoriteStories = () =>
-    (JSON.parse(localStorage?.getItem('storiesData')) || []).filter(
+  const getFavoriteStories = () => {
+    if (typeof localStorage === 'undefined') return []
+    return (JSON.parse(localStorage?.getItem('storiesData')) || []).filter(
       entry => entry.like
     )
+  }
 
   const getRelatedStories = story => {
     const sameSagaStories = allStories.filter(

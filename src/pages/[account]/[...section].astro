@@ -1,0 +1,83 @@
+---
+import NavLayout from '../../layouts/NavLayout.astro'
+import AccountPageNav from '../../components/Page/AccountPageNav.vue'
+import AccountReadSection from '../../components/Account/AccountReadSection.vue'
+import AccountPendingSection from '../../components/Account/AccountPendingSection.vue'
+import AccountFavoritesSection from '../../components/Account/AccountFavoritesSection.vue'
+import AccountAchievementsSection from '../../components/Account/AccountAchievementsSection.vue'
+import t from '../../translations'
+import { toAccount } from '../../router'
+import useStories from '../../composables/useStories'
+
+// Map sections to their slugs
+const sectionMap = {
+  'leidos': 'read',
+  'read': 'read',
+  'pendientes': 'pending',
+  'pending': 'pending',
+  'favoritos': 'favorites',
+  'favorites': 'favorites',
+  'logros': 'achievements',
+  'achievements': 'achievements'
+}
+
+export async function getStaticPaths() {
+  const lang = import.meta.env.PUBLIC_LANG
+  const sections = ['leidos', 'read', 'pendientes', 'pending', 'favoritos', 'favorites', 'logros', 'achievements']
+
+  const paths = sections.map(section => ({
+    params: {
+      account: lang === 'en' ? 'account' : 'cuenta',
+      section: section
+    }
+  }))
+
+  return paths
+}
+
+const { section } = Astro.params
+const lang = import.meta.env.PUBLIC_LANG
+const activeSection = sectionMap[section]
+
+// Get stories based on section
+let stories = []
+let pageTitle = ''
+let showTutorial = false
+
+const { getCompleteStories, getPendingStories, getFavoriteStories } = useStories()
+
+if (activeSection === 'read') {
+  stories = getCompleteStories()
+  pageTitle = t('page.account.resume.read')
+  showTutorial = stories.length === 0
+} else if (activeSection === 'pending') {
+  stories = getPendingStories()
+  pageTitle = t('page.account.resume.pending')
+} else if (activeSection === 'favorites') {
+  stories = getFavoriteStories()
+  pageTitle = t('page.account.resume.favorites')
+} else if (activeSection === 'achievements') {
+  pageTitle = t('page.account.achievements')
+}
+---
+
+<NavLayout
+  title={pageTitle}
+  description={t('page.account.description')}
+  url={toAccount()}
+>
+  <AccountPageNav client:load activeTab={activeSection} lang={lang}>
+    {activeSection === 'read' && (
+      <AccountReadSection client:load stories={stories} showTutorial={showTutorial} />
+    )}
+    {activeSection === 'pending' && (
+      <AccountPendingSection client:load stories={stories} />
+    )}
+    {activeSection === 'favorites' && (
+      <AccountFavoritesSection client:load stories={stories} />
+    )}
+    {activeSection === 'achievements' && (
+      <AccountAchievementsSection client:load />
+    )}
+  </AccountPageNav>
+</NavLayout>

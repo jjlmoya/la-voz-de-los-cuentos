@@ -11,7 +11,7 @@
           :key="tab.id"
           :href="tab.href"
           class="account-page__nav-link"
-          :class="{ 'account-page__nav-link--active': isActive(tab.href) }"
+          :class="{ 'account-page__nav-link--active': isActive(tab.id) }"
         >
           <VText class="account-page__nav-text">{{ tab.label }}</VText>
         </a>
@@ -28,36 +28,46 @@
   import { VText, VContainer } from '@overgaming/vicius'
   import { toAccountRead, toAccountPending, toAccountFavorites, toAccountAchievements } from '../../router'
 
+  const props = defineProps({
+    activeTab: {
+      type: String,
+      default: 'read'
+    },
+    lang: {
+      type: String,
+      default: 'es'
+    }
+  })
+
   const tabs = computed(() => {
-    const lang = import.meta.env.PUBLIC_LANG
-    return [
+    const basicTabs = [
       {
         id: 'read',
-        label: lang === 'es' ? 'Leídos' : 'Read',
+        label: props.lang === 'es' ? 'Leídos' : 'Read',
         href: toAccountRead()
       },
       {
         id: 'pending',
-        label: lang === 'es' ? 'Pendientes' : 'Pending',
+        label: props.lang === 'es' ? 'Pendientes' : 'Pending',
         href: toAccountPending()
       },
       {
         id: 'favorites',
-        label: lang === 'es' ? 'Favoritos' : 'Favorites',
+        label: props.lang === 'es' ? 'Favoritos' : 'Favorites',
         href: toAccountFavorites()
       },
       {
         id: 'achievements',
-        label: lang === 'es' ? 'Logros' : 'Achievements',
+        label: props.lang === 'es' ? 'Logros' : 'Achievements',
         href: toAccountAchievements()
       }
     ]
+
+    // Only show tabs for non-summary pages
+    return props.activeTab === 'summary' ? [] : basicTabs
   })
 
-  const isActive = (href) => {
-    if (typeof window === 'undefined') return false
-    return window.location.pathname === href || window.location.pathname.startsWith(href.replace(/\/$/, ''))
-  }
+  const isActive = (tabId) => props.activeTab === tabId
 </script>
 
 <style scoped>
