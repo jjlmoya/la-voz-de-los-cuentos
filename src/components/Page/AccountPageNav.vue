@@ -97,7 +97,7 @@
     font-size: 48px;
     font-weight: 700;
     color: var(--v-color-primary);
-    animation: slideInDown 0.6s ease-out;
+    animation: slideInDown 0.6s ease-out forwards;
   }
 
   @keyframes slideInDown {
