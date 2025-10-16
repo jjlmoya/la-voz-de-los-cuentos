@@ -972,5 +972,2134 @@
         "text": "year after year!\r\nThank you, Gravity!"
       }
     ]
+  },
+  {
+    "order": "10",
+    "name": "The Story of Clayby",
+    "key": "the-story-of-clayby",
+    "song": "https://youtu.be/4fTNMXxaejo",
+    "saga": "",
+    "date": "03/03/2024",
+    "lyrics": "In the little Clay Village, near the forest wide,\r\nEveryone shaped figures,\r\n\nbut life they couldn't hide.\r\nValeria came one morning,\r\n\nwith the clay in her hand,\r\nShe molded a small golem,\r\n\nthe best in all the land.\r\nTwo marbles for his eyes, a smiling clay face,\r\n\n\"I wish you were my friend, \r\nlet's run and win the race!\"\r\n\nClayby, Clayby!\r\nThe magic came alive,\r\n\nMade of clay and color,\r\nOur friendship will survive.\r\n\nClayby, Clayby!\r\nJump and run and play today,\r\n\nIt doesn't matter what you're made of,\r\nIf your heart lights up the way!\r\n\nThey played in the fields, laughing all the time,\r\n\nExploring ancient woods, feeling truly sublime.\r\nClayby was so different, he moved in a funny way,\r\n\nHis body was made of earth, \r\nbut he brightened every day.\r\n\nBut other children stared, \r\nwith faces full of fear,\r\n\nThey laughed at his shape, \r\nand brought him many a tear.\r\n\nClayby, Clayby!\r\nThe magic came alive,\r\n\nMade of clay and color,\r\nOur friendship will survive.\r\n\nClayby, Clayby!\r\nJump and run and play today,\r\n\nIt doesn't matter what you're made of,\r\nIf your heart lights up the way!\r\n\nA scream by the river, the \r\ncurrent fast and strong!\r\n\nA child was caught in danger, \r\nwhere they didn't belong.\r\n\nClayby saw the problem, no time to stop or rest,\r\nHe jumped with his strong clay body,\r\n\nputting him to the test.\r\nHe held against the water, a hero made of clay!\r\n\nAnd everyone discovered kindness \r\nmatters more than they say.\r\n\nThe village cheered loudly, no more fear or shame,\r\nPlaying games with Clayby is the greatest\r\n\nof all fame.\r\nFriendship isn't\r\n\nabout shapes, not about what you're made of,\r\nWhat's important is the heart, showing real love!",
+    "syncedLyrics": [
+      {
+        "start": 11.28,
+        "end": 19.12,
+        "text": "In the little Clay Village, near the forest wide,\r\nEveryone shaped figures,\r"
+      },
+      {
+        "start": 19.12,
+        "end": 24.4,
+        "text": "but life they couldn't hide.\r\nValeria came one morning,\r"
+      },
+      {
+        "start": 24.4,
+        "end": 29.84,
+        "text": "with the clay in her hand,\r\nShe molded a small golem,\r"
+      },
+      {
+        "start": 29.84,
+        "end": 38.72,
+        "text": "the best in all the land.\r\nTwo marbles for his eyes, a smiling clay face,\r"
+      },
+      {
+        "start": 38.72,
+        "end": 44.4,
+        "text": "\"I wish you were my friend, \r\nlet's run and win the race!\"\r"
+      },
+      {
+        "start": 44.4,
+        "end": 49.12,
+        "text": "Clayby, Clayby!\r\nThe magic came alive,\r"
+      },
+      {
+        "start": 49.12,
+        "end": 55.12,
+        "text": "Made of clay and color,\r\nOur friendship will survive.\r"
+      },
+      {
+        "start": 55.12,
+        "end": 59.76,
+        "text": "Clayby, Clayby!\r\nJump and run and play today,\r"
+      },
+      {
+        "start": 59.76,
+        "end": 68.32,
+        "text": "It doesn't matter what you're made of,\r\nIf your heart lights up the way!\r"
+      },
+      {
+        "start": 68.32,
+        "end": 71.12,
+        "text": "They played in the fields, laughing all the time,\r"
+      },
+      {
+        "start": 71.12,
+        "end": 76.56,
+        "text": "Exploring ancient woods, feeling truly sublime.\r\nClayby was so different, he moved in a funny way,\r"
+      },
+      {
+        "start": 76.56,
+        "end": 79.36,
+        "text": "His body was made of earth, \r\nbut he brightened every day.\r"
+      },
+      {
+        "start": 79.36,
+        "end": 84.56,
+        "text": "But other children stared, \r\nwith faces full of fear,\r"
+      },
+      {
+        "start": 84.56,
+        "end": 93.28,
+        "text": "They laughed at his shape, \r\nand brought him many a tear.\r"
+      },
+      {
+        "start": 93.28,
+        "end": 98.08,
+        "text": "Clayby, Clayby!\r\nThe magic came alive,\r"
+      },
+      {
+        "start": 98.08,
+        "end": 104.08,
+        "text": "Made of clay and color,\r\nOur friendship will survive.\r"
+      },
+      {
+        "start": 104.08,
+        "end": 108.64,
+        "text": "Clayby, Clayby!\r\nJump and run and play today,\r"
+      },
+      {
+        "start": 108.64,
+        "end": 114.64,
+        "text": "It doesn't matter what you're made of,\r\nIf your heart lights up the way!\r"
+      },
+      {
+        "start": 114.64,
+        "end": 120,
+        "text": "A scream by the river, the \r\ncurrent fast and strong!\r"
+      },
+      {
+        "start": 120,
+        "end": 125.6,
+        "text": "A child was caught in danger, \r\nwhere they didn't belong.\r"
+      },
+      {
+        "start": 125.6,
+        "end": 129.68,
+        "text": "Clayby saw the problem, no time to stop or rest,\r\nHe jumped with his strong clay body,\r"
+      },
+      {
+        "start": 129.68,
+        "end": 133.68,
+        "text": "putting him to the test.\r\nHe held against the water, a hero made of clay!\r"
+      },
+      {
+        "start": 133.68,
+        "end": 137.84,
+        "text": "And everyone discovered kindness \r\nmatters more than they say.\r"
+      },
+      {
+        "start": 140.16,
+        "end": 150.32,
+        "text": "The village cheered loudly, no more fear or shame,\r\nPlaying games with Clayby is the greatest\r"
+      },
+      {
+        "start": 150.32,
+        "end": 153.04,
+        "text": "of all fame.\r\nFriendship isn't\r"
+      },
+      {
+        "start": 153.04,
+        "end": 164.4,
+        "text": "about shapes, not about what you're made of,\r\nWhat's important is the heart, showing real love!"
+      }
+    ]
+  },
+  {
+    "order": "11",
+    "name": "The Spirit Tamer",
+    "key": "the-spirit-tamer",
+    "song": "https://youtu.be/U-WdyAvdk_k",
+    "saga": "",
+    "date": "04/03/2024",
+    "lyrics": "In the kingdom of Shiro, \r\nwhere primal forces sleep,\r\n\nLives Ilian, the Tamer, his promises to keep.\r\nHe needs no metal armor, no blade to make\r\n\nhis stand,\r\nHe commands\r\n\nthe fierce spirits with the flute in his hand.\r\nBetween chaos and order, he holds a fragile line,\r\n\nBut a powerful ancient wrath \r\ngives a dangerous sign.The\r\n\nsky is crackling thunder, the air is pure despair,\r\nEolus the Tempest God is roaring everywhere!\r\n\nThe King cries out for \r\nrescue, the danger is extreme,\r\n\nIlian takes his challenge, living \r\nout his dream!The Spirit Tamer!\r\n\nLight against the Hurricane!\r\nClimbing to the high peaks,\r\n\nto challenge the wind's reign!\r\nHis melody defies the elemental pain,\r\n\nFacing down the lightning, \r\nhe breaks the storm's chain!\r\n\nThe Spirit Tamer! He fights to \r\nfind the peace again!The mountain\r\n\nis a battlefield of fury and despair,\r\nThe Epicenter of Chaos, raging in the air.\r\n\nIlian stands his ground, his \r\nmind is sharp and bright,\r\n\nHis flute is the counter-spell \r\nagainst the tempest's might.\r\n\nThe notes are pure enchantment, \r\nthey pierce the cloudy dome,\r\n\nThe music is his weapon, calling Eolus \r\nhome.And the Whirlwind takes a body,\r\n\nnot a monster of the night!\r\nBut an old man of the breezes,\r\n\nfull of broken light.\r\n\"The lands that I protect are\r\n\nbleeding from your greed!\"\r\n\"Your people are the\r\n\nfailure that planted the bad seed!\"\r\nIlian hears the grieving, he offers his decree,\r\n\nHe promises to fix it, and sets the spirit \r\nfree.The Spirit Tamer! Seals a powerful truce!\r\n\nThe flute defeated fury with no sign of excuse.\r\nNow Eolus is a mentor, a force upon their side,\r\n\nTeaching them the power that nature must provide.\r\nThe kingdom mends its spirit, harmony will\r\n\nride!They planted the new \r\ndefenses, healing sea and ground,\r\n\nAnd Eolus's gentle showers are now the only sound.\r\nIlian is the Master, the Hero of the Way,\r\n\nThe legend of the Tamer, \r\nwho saved the brighter day.",
+    "syncedLyrics": [
+      {
+        "start": 19.68,
+        "end": 25.92,
+        "text": "In the kingdom of Shiro, \r\nwhere primal forces sleep,\r"
+      },
+      {
+        "start": 25.92,
+        "end": 36.72,
+        "text": "Lives Ilian, the Tamer, his promises to keep.\r\nHe needs no metal armor, no blade to make\r"
+      },
+      {
+        "start": 36.72,
+        "end": 39.28,
+        "text": "his stand,\r\nHe commands\r"
+      },
+      {
+        "start": 39.28,
+        "end": 50.32,
+        "text": "the fierce spirits with the flute in his hand.\r\nBetween chaos and order, he holds a fragile line,\r"
+      },
+      {
+        "start": 50.32,
+        "end": 57.04,
+        "text": "But a powerful ancient wrath \r\ngives a dangerous sign.The\r"
+      },
+      {
+        "start": 57.04,
+        "end": 68.96000000000001,
+        "text": "sky is crackling thunder, the air is pure despair,\r\nEolus the Tempest God is roaring everywhere!\r"
+      },
+      {
+        "start": 68.96000000000001,
+        "end": 74.92,
+        "text": "The King cries out for \r\nrescue, the danger is extreme,\r"
+      },
+      {
+        "start": 74.92,
+        "end": 84.64,
+        "text": "Ilian takes his challenge, living \r\nout his dream!The Spirit Tamer!\r"
+      },
+      {
+        "start": 84.64,
+        "end": 90.96000000000001,
+        "text": "Light against the Hurricane!\r\nClimbing to the high peaks,\r"
+      },
+      {
+        "start": 90.96000000000001,
+        "end": 100.8,
+        "text": "to challenge the wind's reign!\r\nHis melody defies the elemental pain,\r"
+      },
+      {
+        "start": 100.8,
+        "end": 106.88,
+        "text": "Facing down the lightning, \r\nhe breaks the storm's chain!\r"
+      },
+      {
+        "start": 106.88,
+        "end": 126.64,
+        "text": "The Spirit Tamer! He fights to \r\nfind the peace again!The mountain\r"
+      },
+      {
+        "start": 126.64,
+        "end": 138.64,
+        "text": "is a battlefield of fury and despair,\r\nThe Epicenter of Chaos, raging in the air.\r"
+      },
+      {
+        "start": 138.64,
+        "end": 144.4,
+        "text": "Ilian stands his ground, his \r\nmind is sharp and bright,\r"
+      },
+      {
+        "start": 144.4,
+        "end": 150.64,
+        "text": "His flute is the counter-spell \r\nagainst the tempest's might.\r"
+      },
+      {
+        "start": 150.64,
+        "end": 156.72,
+        "text": "The notes are pure enchantment, \r\nthey pierce the cloudy dome,\r"
+      },
+      {
+        "start": 156.72,
+        "end": 170.48,
+        "text": "The music is his weapon, calling Eolus \r\nhome.And the Whirlwind takes a body,\r"
+      },
+      {
+        "start": 170.48,
+        "end": 177.04,
+        "text": "not a monster of the night!\r\nBut an old man of the breezes,\r"
+      },
+      {
+        "start": 177.04,
+        "end": 183.28,
+        "text": "full of broken light.\r\n\"The lands that I protect are\r"
+      },
+      {
+        "start": 183.28,
+        "end": 187.12,
+        "text": "bleeding from your greed!\"\r\n\"Your people are the\r"
+      },
+      {
+        "start": 187.12,
+        "end": 192.24,
+        "text": "failure that planted the bad seed!\"\r\nIlian hears the grieving, he offers his decree,\r"
+      },
+      {
+        "start": 192.24,
+        "end": 209.84,
+        "text": "He promises to fix it, and sets the spirit \r\nfree.The Spirit Tamer! Seals a powerful truce!\r"
+      },
+      {
+        "start": 209.84,
+        "end": 222.4,
+        "text": "The flute defeated fury with no sign of excuse.\r\nNow Eolus is a mentor, a force upon their side,\r"
+      },
+      {
+        "start": 222.4,
+        "end": 233.52,
+        "text": "Teaching them the power that nature must provide.\r\nThe kingdom mends its spirit, harmony will\r"
+      },
+      {
+        "start": 238.32,
+        "end": 244.48,
+        "text": "ride!They planted the new \r\ndefenses, healing sea and ground,\r"
+      },
+      {
+        "start": 244.48,
+        "end": 256.88,
+        "text": "And Eolus's gentle showers are now the only sound.\r\nIlian is the Master, the Hero of the Way,\r"
+      },
+      {
+        "start": 256.88,
+        "end": 278.08,
+        "text": "The legend of the Tamer, \r\nwho saved the brighter day."
+      }
+    ]
+  },
+  {
+    "order": "12",
+    "name": "458, the Robot with a Heart",
+    "key": "458-the-robot-with-a-heart",
+    "song": "https://youtu.be/DbgaBIMyMJ8",
+    "saga": "robot-458",
+    "date": "05/03/2024",
+    "lyrics": "In the cold hanger, a maze of iron and light,\r\nRobot 458 kept working, day and night.\r\n\nThousands of machines just like \r\nhim, in a routine without end,\r\n\nBut he held a quiet secret, \r\na curious, gentle trend.\r\n\nHe had a heart made of gears, \r\nthat longed for something new,\r\n\nDreaming of the sky's soft \r\ncolors and the morning dew.\r\n\nHe felt a *tick-tock* different, \r\na pulse he couldn't control,\r\n\nWaiting for the perfect moment to follow his soul.\r\n\n458, a robot of metal and might!\r\nAn engine that's beating with a hopeful light.\r\n\nHe left the gray factory, \r\nfor the adventure of the sun,\r\n\nWith his curiosity burning, \r\nbreaking rules one by one.\r\n\nTurn up the gears, no longer just to produce,\r\n\nBut to feel the rhythm of \r\nlife and shake things loose.\r\n\nOne day, complete silence, the \r\nassembly line stopped cold,\r\n\n458 whispered: \"My great journey must unfold!\"\r\n\nHe crossed the rusty gateway \r\nand the world dazzled his eyes,\r\n\nAn emerald green garden reaching for the skies.\r\nHe saw sunlight on the leaves,\r\n\nfelt the soil beneath his frame,\r\nAnd a tiny feathered friend,\r\n\ncrying out in pain and shame.\r\nA wounded little bird, couldn't fly or soar,\r\n\nAnd the robot, without question, \r\nknew what his tools were for.\r\n\nWith fine pincers and cables of great precision,\r\n\nHe fixed the small broken \r\nwing, making a firm decision.\r\n\nThe bird gave a melody, a *thank you* so musical!\r\n458 understood a meaning so essential.\r\n\nBut he missed the *clank-clank* \r\nof his brothers of steel,\r\n\nThey needed to see this magic, \r\nthis world that was real.\r\n\nHe came back to the concrete \r\nwith flowers and friends near,\r\n\nBringing the green symphony to wipe away the fear.\r\nThe other robots saw the color and the true\r\n\nheart's spark,\r\nAnd the gray\r\n\nstarted fading, leaving its dark mark.\r\nNow there is a garden on the production floor,\r\n\nThanks to the brave robot who walked out the door.\r\nMetal and life, working together in sweet peace,\r\n\n458 showed us that kindness will never cease.",
+    "syncedLyrics": [
+      {
+        "start": 16.08,
+        "end": 24,
+        "text": "In the cold hanger, a maze of iron and light,\r\nRobot 458 kept working, day and night.\r"
+      },
+      {
+        "start": 24,
+        "end": 28,
+        "text": "Thousands of machines just like \r\nhim, in a routine without end,\r"
+      },
+      {
+        "start": 28,
+        "end": 31.76,
+        "text": "But he held a quiet secret, \r\na curious, gentle trend.\r"
+      },
+      {
+        "start": 31.76,
+        "end": 35.2,
+        "text": "He had a heart made of gears, \r\nthat longed for something new,\r"
+      },
+      {
+        "start": 35.2,
+        "end": 39.12,
+        "text": "Dreaming of the sky's soft \r\ncolors and the morning dew.\r"
+      },
+      {
+        "start": 39.12,
+        "end": 42.8,
+        "text": "He felt a *tick-tock* different, \r\na pulse he couldn't control,\r"
+      },
+      {
+        "start": 42.8,
+        "end": 46.4,
+        "text": "Waiting for the perfect moment to follow his soul.\r"
+      },
+      {
+        "start": 46.4,
+        "end": 53.04,
+        "text": "458, a robot of metal and might!\r\nAn engine that's beating with a hopeful light.\r"
+      },
+      {
+        "start": 53.04,
+        "end": 56.96,
+        "text": "He left the gray factory, \r\nfor the adventure of the sun,\r"
+      },
+      {
+        "start": 56.96,
+        "end": 61.12,
+        "text": "With his curiosity burning, \r\nbreaking rules one by one.\r"
+      },
+      {
+        "start": 61.12,
+        "end": 64.24,
+        "text": "Turn up the gears, no longer just to produce,\r"
+      },
+      {
+        "start": 64.24,
+        "end": 75.92,
+        "text": "But to feel the rhythm of \r\nlife and shake things loose.\r"
+      },
+      {
+        "start": 75.92,
+        "end": 79.52,
+        "text": "One day, complete silence, the \r\nassembly line stopped cold,\r"
+      },
+      {
+        "start": 79.52,
+        "end": 83.36,
+        "text": "458 whispered: \"My great journey must unfold!\"\r"
+      },
+      {
+        "start": 83.36,
+        "end": 87.03999999999999,
+        "text": "He crossed the rusty gateway \r\nand the world dazzled his eyes,\r"
+      },
+      {
+        "start": 87.03999999999999,
+        "end": 92.4,
+        "text": "An emerald green garden reaching for the skies.\r\nHe saw sunlight on the leaves,\r"
+      },
+      {
+        "start": 92.4,
+        "end": 96.16,
+        "text": "felt the soil beneath his frame,\r\nAnd a tiny feathered friend,\r"
+      },
+      {
+        "start": 96.16,
+        "end": 101.84,
+        "text": "crying out in pain and shame.\r\nA wounded little bird, couldn't fly or soar,\r"
+      },
+      {
+        "start": 101.84,
+        "end": 105.68,
+        "text": "And the robot, without question, \r\nknew what his tools were for.\r"
+      },
+      {
+        "start": 105.68,
+        "end": 109.28,
+        "text": "With fine pincers and cables of great precision,\r"
+      },
+      {
+        "start": 109.28,
+        "end": 112.96000000000001,
+        "text": "He fixed the small broken \r\nwing, making a firm decision.\r"
+      },
+      {
+        "start": 112.96000000000001,
+        "end": 120.32,
+        "text": "The bird gave a melody, a *thank you* so musical!\r\n458 understood a meaning so essential.\r"
+      },
+      {
+        "start": 120.32,
+        "end": 124,
+        "text": "But he missed the *clank-clank* \r\nof his brothers of steel,\r"
+      },
+      {
+        "start": 124,
+        "end": 128.24,
+        "text": "They needed to see this magic, \r\nthis world that was real.\r"
+      },
+      {
+        "start": 129.12,
+        "end": 132.64,
+        "text": "He came back to the concrete \r\nwith flowers and friends near,\r"
+      },
+      {
+        "start": 132.64,
+        "end": 139.04,
+        "text": "Bringing the green symphony to wipe away the fear.\r\nThe other robots saw the color and the true\r"
+      },
+      {
+        "start": 139.04,
+        "end": 140.8,
+        "text": "heart's spark,\r\nAnd the gray\r"
+      },
+      {
+        "start": 140.8,
+        "end": 147.84,
+        "text": "started fading, leaving its dark mark.\r\nNow there is a garden on the production floor,\r"
+      },
+      {
+        "start": 147.84,
+        "end": 155.28,
+        "text": "Thanks to the brave robot who walked out the door.\r\nMetal and life, working together in sweet peace,\r"
+      },
+      {
+        "start": 155.28,
+        "end": 170.8,
+        "text": "458 showed us that kindness will never cease."
+      }
+    ]
+  },
+  {
+    "order": "13",
+    "name": "Lluc’s Adventure and the Almond Dragon",
+    "key": "lluc’s-adventure-and-the-almond-dragon",
+    "song": "https://youtu.be/2lfz2oQoTKw",
+    "saga": "",
+    "date": "06/03/2024",
+    "lyrics": "In a valley where the almond trees bloom white,\r\nLived a boy named Lluc, full of wonder and light.\r\n\nHe heard a whisper on the morning air—\r\nA dragon was sleeping, lost in despair.\r\n\nHis scales were dull, his fire gone cold,\r\nNo one believed in him anymore, he’d been told.\r\n\nBut Lluc didn’t doubt, he packed up his sack,\r\nWith courage and kindness, he’d bring him\r\n\nback!Oh, Almond Dragon, rise and glow!\r\nYour heart still holds a golden glow.\r\n\nOne small seed, one gentle song—\r\nIs all it takes to make you strong!\r\n\nThrough olive groves and stony trails,\r\nPast singing streams and nightingale tales,\r\n\nHe found the cave beneath the hill,\r\nWhere silence lay so still, so still.\r\n\nHe offered an almond, fresh and sweet,\r\nPlucked from the branch with careful feet.\r\n\nThen softly sang beneath the moon—\r\nA lullaby in afternoon.Oh,\r\n\nAlmond Dragon, rise and glow!\r\nYour heart still holds a golden glow.\r\n\nOne small seed, one gentle song—\r\nIs all it takes to make you strong!\r\n\nThe dragon blinked, a spark took flight,\r\nA warm, soft flame in silver night.\r\n\nHe purred like wind through blossoms wide—\r\n“Thank you, Lluc,” the dragon cried.\r\n\nNow every spring, when blooms appear,\r\nYou’ll see them dancing, year by year:\r\n\nA boy and dragon, hand in wing,\r\nWhile almond petals softly sing!Oh,\r\n\nAlmond Dragon, rise and glow…\r\nYour heart still holds a golden glow…",
+    "syncedLyrics": [
+      {
+        "start": 10.24,
+        "end": 19.6,
+        "text": "In a valley where the almond trees bloom white,\r\nLived a boy named Lluc, full of wonder and light.\r"
+      },
+      {
+        "start": 19.6,
+        "end": 29.52,
+        "text": "He heard a whisper on the morning air—\r\nA dragon was sleeping, lost in despair.\r"
+      },
+      {
+        "start": 29.52,
+        "end": 39.2,
+        "text": "His scales were dull, his fire gone cold,\r\nNo one believed in him anymore, he’d been told.\r"
+      },
+      {
+        "start": 39.2,
+        "end": 47.6,
+        "text": "But Lluc didn’t doubt, he packed up his sack,\r\nWith courage and kindness, he’d bring him\r"
+      },
+      {
+        "start": 47.6,
+        "end": 60.48,
+        "text": "back!Oh, Almond Dragon, rise and glow!\r\nYour heart still holds a golden glow.\r"
+      },
+      {
+        "start": 60.48,
+        "end": 70.4,
+        "text": "One small seed, one gentle song—\r\nIs all it takes to make you strong!\r"
+      },
+      {
+        "start": 70.4,
+        "end": 76.56,
+        "text": "Through olive groves and stony trails,\r\nPast singing streams and nightingale tales,\r"
+      },
+      {
+        "start": 76.56,
+        "end": 86.08,
+        "text": "He found the cave beneath the hill,\r\nWhere silence lay so still, so still.\r"
+      },
+      {
+        "start": 86.08,
+        "end": 90.88,
+        "text": "He offered an almond, fresh and sweet,\r\nPlucked from the branch with careful feet.\r"
+      },
+      {
+        "start": 90.88,
+        "end": 100.88,
+        "text": "Then softly sang beneath the moon—\r\nA lullaby in afternoon.Oh,\r"
+      },
+      {
+        "start": 100.88,
+        "end": 110.32,
+        "text": "Almond Dragon, rise and glow!\r\nYour heart still holds a golden glow.\r"
+      },
+      {
+        "start": 110.32,
+        "end": 120.4,
+        "text": "One small seed, one gentle song—\r\nIs all it takes to make you strong!\r"
+      },
+      {
+        "start": 120.4,
+        "end": 127.68,
+        "text": "The dragon blinked, a spark took flight,\r\nA warm, soft flame in silver night.\r"
+      },
+      {
+        "start": 127.68,
+        "end": 137.36,
+        "text": "He purred like wind through blossoms wide—\r\n“Thank you, Lluc,” the dragon cried.\r"
+      },
+      {
+        "start": 137.36,
+        "end": 147.2,
+        "text": "Now every spring, when blooms appear,\r\nYou’ll see them dancing, year by year:\r"
+      },
+      {
+        "start": 147.2,
+        "end": 158.96,
+        "text": "A boy and dragon, hand in wing,\r\nWhile almond petals softly sing!Oh,\r"
+      },
+      {
+        "start": 158.96,
+        "end": 168.4,
+        "text": "Almond Dragon, rise and glow…\r\nYour heart still holds a golden glow…"
+      }
+    ]
+  },
+  {
+    "order": "14",
+    "name": "Luna's Secret Workshop, the Star Inventor",
+    "key": "lunas-secret-workshop-the-star-inventor",
+    "song": "https://youtu.be/S-YJbRQsRXw",
+    "saga": "",
+    "date": "07/03/2024",
+    "lyrics": "In Lucería village, quiet and dark at night,\r\nLived a young girl who held a special light.\r\n\nLuna was her name, speaking soft and low,\r\nA shy soul with dreams she wouldn't show.\r\n\nBut nobody knew her true heart's desire,\r\nHidden in the attic, fueling her fire.\r\n\nBehind old curtains, her small world waited,\r\nA secret workshop where she fabricated.\r\n\nWith glitter, scissors, and lights shining bright,\r\nShe was an architect of the starry night.\r\n\nCreating little stars of every shape and size,\r\nTo stitch up the darkness right before their eyes.\r\n\nOh, Luna, Luna, the inventor so grand!\r\nA new star is sparkling across the dark land.\r\n\nEvery night a sweet secret is slowly unfurling,\r\n\nA piece of pure magic that \r\nkeeps the world whirling.\r\n\nThe sky over Lucería changed forevermore,\r\nThanks to her secret, behind the attic door.\r\n\nOne night, a tap-tap upon the glass pane,\r\nAnd a small blue bird, Azulín, came.\r\n\nWith curious bright eyes, \r\nhe became her dear friend,\r\n\nTelling tales of the cosmos that never would end.\r\n\nLuna would share her ideas, \r\nso bright and so clear,\r\n\nAnd he'd bring back wisdom \r\nfrom the far atmosphere.\r\n\nThe people in the village started to wonder aloud:\r\n\n\"Who is giving us light, \r\nshining through the cloud?\"\r\n\nThe curious Mayor, following a twinkle so deep,\r\nFound Luna inventing,\r\n\nwhile the whole world was asleep.\r\nFear came to Luna: \"Will I lose my small peace?\"\r\n\nBut Azulín chirped softly: \r\n\"Your light must increase.\"\r\n\n\"Share your great art, let your genius ascend,\r\nThe light that you make is a gift from a friend.\"\r\n\nAnd Luna, the timid, finally agreed,\r\nHer workshop revealed, planting a magical seed.\r\n\nThe people cheered loudly, \r\nwith joy in their sight,\r\n\nThe dark sky of Lucería was suddenly bright.\r\n\nOh, Luna, Luna, the inventor so grand!\r\nA new star is sparkling across the dark land.\r\n\nEvery night a sweet secret is slowly unfurling,\r\n\nA piece of pure magic that \r\nkeeps the world whirling.\r\n\nThe sky over Lucería changed forevermore,\r\nThanks to her secret, behind the attic door.\r\n\nAnd Luna discovered, beneath the vast night,\r\nThat true magic is sharing your beautiful light.\r\n\nNow her workshop's a port \r\nwhere the dreams take a flight,\r\n\nTeaching all children to make stars shine bright.",
+    "syncedLyrics": [
+      {
+        "start": 17.12,
+        "end": 26.16,
+        "text": "In Lucería village, quiet and dark at night,\r\nLived a young girl who held a special light.\r"
+      },
+      {
+        "start": 26.16,
+        "end": 35.84,
+        "text": "Luna was her name, speaking soft and low,\r\nA shy soul with dreams she wouldn't show.\r"
+      },
+      {
+        "start": 35.84,
+        "end": 48.32,
+        "text": "But nobody knew her true heart's desire,\r\nHidden in the attic, fueling her fire.\r"
+      },
+      {
+        "start": 48.32,
+        "end": 57.04,
+        "text": "Behind old curtains, her small world waited,\r\nA secret workshop where she fabricated.\r"
+      },
+      {
+        "start": 57.04,
+        "end": 65.76,
+        "text": "With glitter, scissors, and lights shining bright,\r\nShe was an architect of the starry night.\r"
+      },
+      {
+        "start": 65.76,
+        "end": 80.24,
+        "text": "Creating little stars of every shape and size,\r\nTo stitch up the darkness right before their eyes.\r"
+      },
+      {
+        "start": 80.24,
+        "end": 88.96000000000001,
+        "text": "Oh, Luna, Luna, the inventor so grand!\r\nA new star is sparkling across the dark land.\r"
+      },
+      {
+        "start": 88.96000000000001,
+        "end": 93.6,
+        "text": "Every night a sweet secret is slowly unfurling,\r"
+      },
+      {
+        "start": 93.6,
+        "end": 98,
+        "text": "A piece of pure magic that \r\nkeeps the world whirling.\r"
+      },
+      {
+        "start": 98,
+        "end": 122.56,
+        "text": "The sky over Lucería changed forevermore,\r\nThanks to her secret, behind the attic door.\r"
+      },
+      {
+        "start": 131.44,
+        "end": 140,
+        "text": "One night, a tap-tap upon the glass pane,\r\nAnd a small blue bird, Azulín, came.\r"
+      },
+      {
+        "start": 140,
+        "end": 144.32,
+        "text": "With curious bright eyes, \r\nhe became her dear friend,\r"
+      },
+      {
+        "start": 144.32,
+        "end": 149.2,
+        "text": "Telling tales of the cosmos that never would end.\r"
+      },
+      {
+        "start": 149.2,
+        "end": 158.64,
+        "text": "Luna would share her ideas, \r\nso bright and so clear,\r"
+      },
+      {
+        "start": 158.64,
+        "end": 169.2,
+        "text": "And he'd bring back wisdom \r\nfrom the far atmosphere.\r"
+      },
+      {
+        "start": 169.2,
+        "end": 174,
+        "text": "The people in the village started to wonder aloud:\r"
+      },
+      {
+        "start": 174,
+        "end": 178.24,
+        "text": "\"Who is giving us light, \r\nshining through the cloud?\"\r"
+      },
+      {
+        "start": 178.24,
+        "end": 184.8,
+        "text": "The curious Mayor, following a twinkle so deep,\r\nFound Luna inventing,\r"
+      },
+      {
+        "start": 184.8,
+        "end": 196.4,
+        "text": "while the whole world was asleep.\r\nFear came to Luna: \"Will I lose my small peace?\"\r"
+      },
+      {
+        "start": 196.4,
+        "end": 205.52,
+        "text": "But Azulín chirped softly: \r\n\"Your light must increase.\"\r"
+      },
+      {
+        "start": 205.52,
+        "end": 214.07999999999998,
+        "text": "\"Share your great art, let your genius ascend,\r\nThe light that you make is a gift from a friend.\"\r"
+      },
+      {
+        "start": 214.07999999999998,
+        "end": 222.88,
+        "text": "And Luna, the timid, finally agreed,\r\nHer workshop revealed, planting a magical seed.\r"
+      },
+      {
+        "start": 222.88,
+        "end": 227.36,
+        "text": "The people cheered loudly, \r\nwith joy in their sight,\r"
+      },
+      {
+        "start": 227.36,
+        "end": 236.32,
+        "text": "The dark sky of Lucería was suddenly bright.\r"
+      },
+      {
+        "start": 238.96,
+        "end": 248.48,
+        "text": "Oh, Luna, Luna, the inventor so grand!\r\nA new star is sparkling across the dark land.\r"
+      },
+      {
+        "start": 248.48,
+        "end": 253.12,
+        "text": "Every night a sweet secret is slowly unfurling,\r"
+      },
+      {
+        "start": 253.12,
+        "end": 257.52,
+        "text": "A piece of pure magic that \r\nkeeps the world whirling.\r"
+      },
+      {
+        "start": 257.52,
+        "end": 274.32,
+        "text": "The sky over Lucería changed forevermore,\r\nThanks to her secret, behind the attic door.\r"
+      },
+      {
+        "start": 274.32,
+        "end": 282.8,
+        "text": "And Luna discovered, beneath the vast night,\r\nThat true magic is sharing your beautiful light.\r"
+      },
+      {
+        "start": 282.8,
+        "end": 291.52,
+        "text": "Now her workshop's a port \r\nwhere the dreams take a flight,\r"
+      },
+      {
+        "start": 291.52,
+        "end": 309.6,
+        "text": "Teaching all children to make stars shine bright."
+      }
+    ]
+  },
+  {
+    "order": "15",
+    "name": "The Adventures of the Mischievous Keys",
+    "key": "the-adventures-of-the-mischievous-keys",
+    "song": "https://youtu.be/eRHPaGjmi24",
+    "saga": "",
+    "date": "8/03/2024",
+    "lyrics": "We are the keys, the lively, the bright!\r\nThe small metal spirits that play in the night!\r\n\nUpon the keyring, we rest through the day;\r\nBut once the door closes, we hurry to play!\r\n\nYet we are responsible, this much is true,\r\nWe always return when the family needs you!\r\n\nIn Llaventura, a town rather \r\nsmall, a secret was kept,\r\n\nBy the Pérez household, \r\nwhile the whole family slept.\r\n\nThe keys on the rack, they would suddenly spring,\r\nA jingling adventure, a merry metallic thing!\r\n\nOne would roll on the floor, another would hide,\r\nSeeking amusement with nothing to guide.\r\n\nOne afternoon, alas, the game went too far,\r\nPlaying hide-and-seek, they forgot who they are!\r\n\nBehind an old wall clock, \r\nthey huddled quite tight,\r\n\nWhen little young Luis arrived \r\nhome in the fading light.\r\n\nThe keyring was vacant! The boy cried with fright!\r\nTo open the doorway, the keys were not in sight!\r\n\nHe looked in the mailbox and under the mat,\r\nIn the flowerpot corner, where a stray kitten sat!\r\n\n“Where are my keys?” he cried in despair,\r\nBut they, behind the clock, felt a terrible scare.\r\n\nQuick! They whispered, We must hurry back fast!\r\nOur duty is waiting, our playtime is past!\r\n\nThey jumped with a clatter, \r\na frantic, quick flight,\r\n\nTo be in their spot 'fore he spotted the light!\r\n\nLuis searched once more, and lo! there they were,\r\nJust where they belonged, with no flutter or blur!\r\n\n\"How strange!\" thought the \r\nboy, \"I swore they were gone.\"\r\n\nHe turned the lock safely and hurried on.\r\nThe lesson was learned, but the impulse to roam,\r\n\nMeant they'd still sneak \r\noff, but always come home.\r\n\nWe are the keys, the lively, the bright!\r\nThe small metal spirits that play in the night!\r\n\nUpon the keyring, we rest through the day;\r\nBut once the door closes, we hurry to play!\r\n\nYet we are responsible, this much is true,\r\nWe always return when the family needs you!\r\n\nThen came the deep cleaning, a chaotic affair,\r\n\nMrs. Pérez was scrubbing, \r\nmoving chair after chair!\r\n\nDusters and brooms, a metallic alarm!\r\nThe keys scurried quickly, to escape any harm.\r\n\nNo corner was safe, no cushion to cling,\r\nSo they leaped with a jingle, a desperate swing,\r\n\nRight into the apron, the mother's deep fold,\r\nThe safest new hiding spot, shiny and bold!\r\n\nWhen the family went out, \r\nthe search started again,\r\n\nWorrying voices, a torrent of pain.\r\n\"Where are those keys,\r\n\ndear?\" The mother complained,\r\nThen felt a sharp jingle, a truth unrestrained!\r\n\n\"Well, well!\" she exclaimed, \r\nwith a chuckle and wink,\r\n\n\"These keys have a life! It's a marvelous blink!\"\r\nAnd the keys understood: Playtime is fine,\r\n\nBut duty is first, a magnificent \r\nsign! They return every time.",
+    "syncedLyrics": [
+      {
+        "start": 1.2,
+        "end": 8.64,
+        "text": "We are the keys, the lively, the bright!\r\nThe small metal spirits that play in the night!\r"
+      },
+      {
+        "start": 8.64,
+        "end": 15.36,
+        "text": "Upon the keyring, we rest through the day;\r\nBut once the door closes, we hurry to play!\r"
+      },
+      {
+        "start": 15.36,
+        "end": 26.32,
+        "text": "Yet we are responsible, this much is true,\r\nWe always return when the family needs you!\r"
+      },
+      {
+        "start": 26.32,
+        "end": 29.68,
+        "text": "In Llaventura, a town rather \r\nsmall, a secret was kept,\r"
+      },
+      {
+        "start": 29.68,
+        "end": 33.44,
+        "text": "By the Pérez household, \r\nwhile the whole family slept.\r"
+      },
+      {
+        "start": 33.44,
+        "end": 40.48,
+        "text": "The keys on the rack, they would suddenly spring,\r\nA jingling adventure, a merry metallic thing!\r"
+      },
+      {
+        "start": 40.48,
+        "end": 49.92,
+        "text": "One would roll on the floor, another would hide,\r\nSeeking amusement with nothing to guide.\r"
+      },
+      {
+        "start": 49.92,
+        "end": 57.04,
+        "text": "One afternoon, alas, the game went too far,\r\nPlaying hide-and-seek, they forgot who they are!\r"
+      },
+      {
+        "start": 57.04,
+        "end": 60.56,
+        "text": "Behind an old wall clock, \r\nthey huddled quite tight,\r"
+      },
+      {
+        "start": 60.56,
+        "end": 64.24,
+        "text": "When little young Luis arrived \r\nhome in the fading light.\r"
+      },
+      {
+        "start": 64.24,
+        "end": 73.28,
+        "text": "The keyring was vacant! The boy cried with fright!\r\nTo open the doorway, the keys were not in sight!\r"
+      },
+      {
+        "start": 73.28,
+        "end": 80.8,
+        "text": "He looked in the mailbox and under the mat,\r\nIn the flowerpot corner, where a stray kitten sat!\r"
+      },
+      {
+        "start": 80.8,
+        "end": 87.92,
+        "text": "“Where are my keys?” he cried in despair,\r\nBut they, behind the clock, felt a terrible scare.\r"
+      },
+      {
+        "start": 87.92,
+        "end": 94.96000000000001,
+        "text": "Quick! They whispered, We must hurry back fast!\r\nOur duty is waiting, our playtime is past!\r"
+      },
+      {
+        "start": 94.96000000000001,
+        "end": 98.56,
+        "text": "They jumped with a clatter, \r\na frantic, quick flight,\r"
+      },
+      {
+        "start": 98.56,
+        "end": 102.4,
+        "text": "To be in their spot 'fore he spotted the light!\r"
+      },
+      {
+        "start": 102.4,
+        "end": 109.52000000000001,
+        "text": "Luis searched once more, and lo! there they were,\r\nJust where they belonged, with no flutter or blur!\r"
+      },
+      {
+        "start": 109.52000000000001,
+        "end": 114.8,
+        "text": "\"How strange!\" thought the \r\nboy, \"I swore they were gone.\"\r"
+      },
+      {
+        "start": 114.8,
+        "end": 126.08,
+        "text": "He turned the lock safely and hurried on.\r\nThe lesson was learned, but the impulse to roam,\r"
+      },
+      {
+        "start": 126.08,
+        "end": 134.88,
+        "text": "Meant they'd still sneak \r\noff, but always come home.\r"
+      },
+      {
+        "start": 135.76,
+        "end": 143.2,
+        "text": "We are the keys, the lively, the bright!\r\nThe small metal spirits that play in the night!\r"
+      },
+      {
+        "start": 143.2,
+        "end": 150,
+        "text": "Upon the keyring, we rest through the day;\r\nBut once the door closes, we hurry to play!\r"
+      },
+      {
+        "start": 150,
+        "end": 159.12,
+        "text": "Yet we are responsible, this much is true,\r\nWe always return when the family needs you!\r"
+      },
+      {
+        "start": 159.12,
+        "end": 162.4,
+        "text": "Then came the deep cleaning, a chaotic affair,\r"
+      },
+      {
+        "start": 162.4,
+        "end": 166.56,
+        "text": "Mrs. Pérez was scrubbing, \r\nmoving chair after chair!\r"
+      },
+      {
+        "start": 166.56,
+        "end": 173.52,
+        "text": "Dusters and brooms, a metallic alarm!\r\nThe keys scurried quickly, to escape any harm.\r"
+      },
+      {
+        "start": 173.52,
+        "end": 181.92,
+        "text": "No corner was safe, no cushion to cling,\r\nSo they leaped with a jingle, a desperate swing,\r"
+      },
+      {
+        "start": 181.92,
+        "end": 195.12,
+        "text": "Right into the apron, the mother's deep fold,\r\nThe safest new hiding spot, shiny and bold!\r"
+      },
+      {
+        "start": 195.12,
+        "end": 199.28,
+        "text": "When the family went out, \r\nthe search started again,\r"
+      },
+      {
+        "start": 199.28,
+        "end": 204.48,
+        "text": "Worrying voices, a torrent of pain.\r\n\"Where are those keys,\r"
+      },
+      {
+        "start": 204.48,
+        "end": 212.88,
+        "text": "dear?\" The mother complained,\r\nThen felt a sharp jingle, a truth unrestrained!\r"
+      },
+      {
+        "start": 212.88,
+        "end": 216.48,
+        "text": "\"Well, well!\" she exclaimed, \r\nwith a chuckle and wink,\r"
+      },
+      {
+        "start": 216.48,
+        "end": 226.4,
+        "text": "\"These keys have a life! It's a marvelous blink!\"\r\nAnd the keys understood: Playtime is fine,\r"
+      },
+      {
+        "start": 226.4,
+        "end": 236.56,
+        "text": "But duty is first, a magnificent \r\nsign! They return every time."
+      }
+    ]
+  },
+  {
+    "order": "16",
+    "name": "Willie and the Enchanted Forest: A Magical Adventure",
+    "key": "willie-and-the-enchanted-forest-a-magical-adventure",
+    "song": "https://youtu.be/DK6bEsMN7kw",
+    "saga": "",
+    "date": "09/03/2024",
+    "lyrics": "In a quiet small village, beneath the wide sky\r\nLived a little boy Willie, with curiosity high\r\n\nA white lucky shirt and \r\nblue shorts from his granny\r\n\nAlways searching for stories, more than just many\r\n\nHe found a hidden path, nobody had known\r\nLeading deep to a forest, where mystery was grown\r\n\nBut as he crossed the \r\nthreshold, a silence descended\r\n\nThe world was grey and \r\nfaded, the colors suspended.\r\n\nOh, Enchanted Forest, where all light is gone!\r\nWillie, the brave one, his great quest is on\r\n\nWith Rabi the rabbit, the guardian so blue\r\nThey must find three gems to see the magic through\r\n\nOne gem for the blue, one red, one final green\r\nTo break the old dark spell, the greatest scene.\r\n\nThe map guides their steps \r\nto a lake bright and cold\r\n\nWhere a playful small otter, a challenge unfolds\r\n\"If you make me laugh hard, the blue gem is yours\"\r\n\nWillie told a funny joke that opened the doors\r\nLaughter and bubbles, the blue gem did shine\r\n\nAnd the climb to the mountain \r\nwas next in the line.\r\n\nClimbing up higher, where the clouds start to rest\r\n\nA majestic great eagle put \r\ntheir promise to the test\r\n\n\"The red gem is yours, if you vow to preserve\r\nEvery tree, every river, the nature you serve\"\r\n\nThe promise was sealed, the red gem flew down\r\nNow the wise ancient tree held the riddle's crown.\r\n\nThe wise tree is waiting, with a riddle of old\r\nA profound ancient truth that must be told\r\n\nWillie thought wisely, the answer he found\r\nAnd the final green gem dropped safe to the ground\r\n\nTo the heart of the forest, the main central spot\r\nUniting the colors, the magic they brought\r\n\nThe three gems together, \r\nthe spell broke with light!\r\n\nAnd the forest enchanted was vivid and bright.\r\n\nOh, Enchanted Forest, where all light is gone!\r\nWillie, the brave one, his great quest is on\r\n\nWith Rabi the rabbit, the guardian so blue\r\nThey must find three gems to see the magic through\r\n\nOne gem for the blue, one red, one final green\r\nTo break the old dark spell, the greatest scene.\r\n\nThe colors returned, the joy is complete\r\nWillie's a hero, his victory is sweet\r\n\nHe returns to his home, knowing what he knows\r\nThat real magic is kindness, wherever he goes.",
+    "syncedLyrics": [
+      {
+        "start": 16.88,
+        "end": 25.12,
+        "text": "In a quiet small village, beneath the wide sky\r\nLived a little boy Willie, with curiosity high\r"
+      },
+      {
+        "start": 25.12,
+        "end": 28.88,
+        "text": "A white lucky shirt and \r\nblue shorts from his granny\r"
+      },
+      {
+        "start": 28.88,
+        "end": 37.04,
+        "text": "Always searching for stories, more than just many\r"
+      },
+      {
+        "start": 37.04,
+        "end": 45.12,
+        "text": "He found a hidden path, nobody had known\r\nLeading deep to a forest, where mystery was grown\r"
+      },
+      {
+        "start": 45.12,
+        "end": 49.12,
+        "text": "But as he crossed the \r\nthreshold, a silence descended\r"
+      },
+      {
+        "start": 49.12,
+        "end": 56,
+        "text": "The world was grey and \r\nfaded, the colors suspended.\r"
+      },
+      {
+        "start": 56,
+        "end": 64.16,
+        "text": "Oh, Enchanted Forest, where all light is gone!\r\nWillie, the brave one, his great quest is on\r"
+      },
+      {
+        "start": 64.16,
+        "end": 73.12,
+        "text": "With Rabi the rabbit, the guardian so blue\r\nThey must find three gems to see the magic through\r"
+      },
+      {
+        "start": 73.12,
+        "end": 87.2,
+        "text": "One gem for the blue, one red, one final green\r\nTo break the old dark spell, the greatest scene.\r"
+      },
+      {
+        "start": 87.2,
+        "end": 91.28,
+        "text": "The map guides their steps \r\nto a lake bright and cold\r"
+      },
+      {
+        "start": 91.28,
+        "end": 99.36,
+        "text": "Where a playful small otter, a challenge unfolds\r\n\"If you make me laugh hard, the blue gem is yours\"\r"
+      },
+      {
+        "start": 99.36,
+        "end": 109.28,
+        "text": "Willie told a funny joke that opened the doors\r\nLaughter and bubbles, the blue gem did shine\r"
+      },
+      {
+        "start": 109.28,
+        "end": 117.52000000000001,
+        "text": "And the climb to the mountain \r\nwas next in the line.\r"
+      },
+      {
+        "start": 117.52000000000001,
+        "end": 121.2,
+        "text": "Climbing up higher, where the clouds start to rest\r"
+      },
+      {
+        "start": 121.2,
+        "end": 125.36,
+        "text": "A majestic great eagle put \r\ntheir promise to the test\r"
+      },
+      {
+        "start": 125.36,
+        "end": 135.44,
+        "text": "\"The red gem is yours, if you vow to preserve\r\nEvery tree, every river, the nature you serve\"\r"
+      },
+      {
+        "start": 135.44,
+        "end": 147.36,
+        "text": "The promise was sealed, the red gem flew down\r\nNow the wise ancient tree held the riddle's crown.\r"
+      },
+      {
+        "start": 147.36,
+        "end": 155.84,
+        "text": "The wise tree is waiting, with a riddle of old\r\nA profound ancient truth that must be told\r"
+      },
+      {
+        "start": 155.84,
+        "end": 166.07999999999998,
+        "text": "Willie thought wisely, the answer he found\r\nAnd the final green gem dropped safe to the ground\r"
+      },
+      {
+        "start": 168.32,
+        "end": 176.48,
+        "text": "To the heart of the forest, the main central spot\r\nUniting the colors, the magic they brought\r"
+      },
+      {
+        "start": 176.48,
+        "end": 180.24,
+        "text": "The three gems together, \r\nthe spell broke with light!\r"
+      },
+      {
+        "start": 180.24,
+        "end": 189.36,
+        "text": "And the forest enchanted was vivid and bright.\r"
+      },
+      {
+        "start": 189.36,
+        "end": 197.52,
+        "text": "Oh, Enchanted Forest, where all light is gone!\r\nWillie, the brave one, his great quest is on\r"
+      },
+      {
+        "start": 197.52,
+        "end": 206.48,
+        "text": "With Rabi the rabbit, the guardian so blue\r\nThey must find three gems to see the magic through\r"
+      },
+      {
+        "start": 206.48,
+        "end": 220.64,
+        "text": "One gem for the blue, one red, one final green\r\nTo break the old dark spell, the greatest scene.\r"
+      },
+      {
+        "start": 220.64,
+        "end": 228.48,
+        "text": "The colors returned, the joy is complete\r\nWillie's a hero, his victory is sweet\r"
+      },
+      {
+        "start": 228.48,
+        "end": 250.32,
+        "text": "He returns to his home, knowing what he knows\r\nThat real magic is kindness, wherever he goes."
+      }
+    ]
+  },
+  {
+    "order": "17",
+    "name": "Rickyteen, the Caveman Stone Counter",
+    "key": "rickyteen-the-caveman-stone-counter",
+    "song": "https://youtu.be/D2dnm2WY-pU",
+    "saga": "",
+    "date": "10/03/2024",
+    "lyrics": "Long ago, in ancient times, \r\nin the prehistoric land,\r\n\nWhere the giant woolly mammoths \r\nwalked across the sand.\r\n\nLived a little cave kid, \r\nwith a big heart in his hand,\r\n\nRickyteen, the counter, he was \r\nthe best in the whole clan.\r\n\nStones of every shape and \r\ncolor, shining in the sun,\r\n\nHe would count them one by \r\none, until the day was done.\r\n\nFrom the morning light \r\nuntil the evening has begun,\r\n\nCounting was his greatest \r\nlove, his favorite type of fun.\r\n\nOne, two, three, Moonstone bright! \r\nWhat an adventure starts tonight!\r\n\nRickyteen counts, Rickyteen \r\nsearches with all his might.\r\n\nWith a brave heart and his friends, \r\nhe’s running toward the light,\r\n\nGotta find that special stone \r\nand make everything right.\r\n\nBut one day, among his treasures, \r\noh no, what a terrible dread!\r\n\nThe Moonstone was missing, \r\nthe one that shines overhead.\r\n\nIt shimmered like a star, \r\nwith stardust in its gleam,\r\n\nRickyteen got very sad, he had to chase his dream!\r\n\nHe crossed the rushing rivers, \r\nclimbed mountains high above,\r\n\nHe met the wise old owl, who \r\ntaught him how to look with love.\r\n\nThe nimble squirrel showed him \r\nhow to leap and jump and bound,\r\n\nAnd the friendly mammoth said, \r\n\"True friendship must be found!\"\r\n\nOne, two, three, Moonstone bright! \r\nWhat an adventure starts tonight!\r\n\nRickyteen counts, Rickyteen \r\nsearches with all his might.\r\n\nWith a brave heart and his friends, \r\nhe’s running toward the light,\r\n\nGotta find that special stone \r\nand make everything right.\r\n\nIn the mysterious valley, he saw the shiny clue!\r\n\nThe stone was in the treetop, \r\nbeneath the sky of blue.\r\n\nThanks to all his forest friends, \r\nwho helped him reach the height,\r\n\nHe recovered his sweet \r\ntreasure, and hugged it tight.\r\n\nHolding it within his hand, he finally understood:\r\nCounting stones is entertaining,\r\n\nbut friendship is the good!\r\nKindness is the greatest gift,\r\n\nthe best thing to possess.\r\nRickyteen came back a hero, full of happiness!\r\n\nOne, two, three, Moonstone bright! \r\nWhat an adventure starts tonight!\r\n\nRickyteen counts, Rickyteen \r\nsearches with all his might.\r\n\nWith a big heart, a great \r\nfriend, a hero he will be,\r\n\nFriendship is the true treasure, for all eternity!",
+    "syncedLyrics": [
+      {
+        "start": 6.72,
+        "end": 9.92,
+        "text": "Long ago, in ancient times, \r\nin the prehistoric land,\r"
+      },
+      {
+        "start": 9.92,
+        "end": 13.12,
+        "text": "Where the giant woolly mammoths \r\nwalked across the sand.\r"
+      },
+      {
+        "start": 13.12,
+        "end": 16.32,
+        "text": "Lived a little cave kid, \r\nwith a big heart in his hand,\r"
+      },
+      {
+        "start": 16.32,
+        "end": 19.52,
+        "text": "Rickyteen, the counter, he was \r\nthe best in the whole clan.\r"
+      },
+      {
+        "start": 19.52,
+        "end": 22.72,
+        "text": "Stones of every shape and \r\ncolor, shining in the sun,\r"
+      },
+      {
+        "start": 22.72,
+        "end": 25.92,
+        "text": "He would count them one by \r\none, until the day was done.\r"
+      },
+      {
+        "start": 25.92,
+        "end": 29.2,
+        "text": "From the morning light \r\nuntil the evening has begun,\r"
+      },
+      {
+        "start": 29.2,
+        "end": 32.4,
+        "text": "Counting was his greatest \r\nlove, his favorite type of fun.\r"
+      },
+      {
+        "start": 32.4,
+        "end": 36.72,
+        "text": "One, two, three, Moonstone bright! \r\nWhat an adventure starts tonight!\r"
+      },
+      {
+        "start": 36.72,
+        "end": 40,
+        "text": "Rickyteen counts, Rickyteen \r\nsearches with all his might.\r"
+      },
+      {
+        "start": 40,
+        "end": 43.2,
+        "text": "With a brave heart and his friends, \r\nhe’s running toward the light,\r"
+      },
+      {
+        "start": 43.2,
+        "end": 49.84,
+        "text": "Gotta find that special stone \r\nand make everything right.\r"
+      },
+      {
+        "start": 49.84,
+        "end": 53.04,
+        "text": "But one day, among his treasures, \r\noh no, what a terrible dread!\r"
+      },
+      {
+        "start": 53.04,
+        "end": 56.16,
+        "text": "The Moonstone was missing, \r\nthe one that shines overhead.\r"
+      },
+      {
+        "start": 56.16,
+        "end": 59.6,
+        "text": "It shimmered like a star, \r\nwith stardust in its gleam,\r"
+      },
+      {
+        "start": 59.6,
+        "end": 62.56,
+        "text": "Rickyteen got very sad, he had to chase his dream!\r"
+      },
+      {
+        "start": 62.56,
+        "end": 65.76,
+        "text": "He crossed the rushing rivers, \r\nclimbed mountains high above,\r"
+      },
+      {
+        "start": 65.76,
+        "end": 68.96000000000001,
+        "text": "He met the wise old owl, who \r\ntaught him how to look with love.\r"
+      },
+      {
+        "start": 68.96000000000001,
+        "end": 72.4,
+        "text": "The nimble squirrel showed him \r\nhow to leap and jump and bound,\r"
+      },
+      {
+        "start": 72.4,
+        "end": 75.6,
+        "text": "And the friendly mammoth said, \r\n\"True friendship must be found!\"\r"
+      },
+      {
+        "start": 75.6,
+        "end": 79.92,
+        "text": "One, two, three, Moonstone bright! \r\nWhat an adventure starts tonight!\r"
+      },
+      {
+        "start": 79.92,
+        "end": 83.03999999999999,
+        "text": "Rickyteen counts, Rickyteen \r\nsearches with all his might.\r"
+      },
+      {
+        "start": 83.03999999999999,
+        "end": 86.4,
+        "text": "With a brave heart and his friends, \r\nhe’s running toward the light,\r"
+      },
+      {
+        "start": 86.4,
+        "end": 98.96000000000001,
+        "text": "Gotta find that special stone \r\nand make everything right.\r"
+      },
+      {
+        "start": 98.96000000000001,
+        "end": 102.47999999999999,
+        "text": "In the mysterious valley, he saw the shiny clue!\r"
+      },
+      {
+        "start": 102.47999999999999,
+        "end": 105.52000000000001,
+        "text": "The stone was in the treetop, \r\nbeneath the sky of blue.\r"
+      },
+      {
+        "start": 105.52000000000001,
+        "end": 108.88,
+        "text": "Thanks to all his forest friends, \r\nwho helped him reach the height,\r"
+      },
+      {
+        "start": 108.88,
+        "end": 114.32,
+        "text": "He recovered his sweet \r\ntreasure, and hugged it tight.\r"
+      },
+      {
+        "start": 114.32,
+        "end": 121.28,
+        "text": "Holding it within his hand, he finally understood:\r\nCounting stones is entertaining,\r"
+      },
+      {
+        "start": 121.28,
+        "end": 126.4,
+        "text": "but friendship is the good!\r\nKindness is the greatest gift,\r"
+      },
+      {
+        "start": 126.4,
+        "end": 134.72,
+        "text": "the best thing to possess.\r\nRickyteen came back a hero, full of happiness!\r"
+      },
+      {
+        "start": 134.72,
+        "end": 138.96,
+        "text": "One, two, three, Moonstone bright! \r\nWhat an adventure starts tonight!\r"
+      },
+      {
+        "start": 138.96,
+        "end": 142.24,
+        "text": "Rickyteen counts, Rickyteen \r\nsearches with all his might.\r"
+      },
+      {
+        "start": 142.24,
+        "end": 145.44,
+        "text": "With a big heart, a great \r\nfriend, a hero he will be,\r"
+      },
+      {
+        "start": 145.44,
+        "end": 158.72,
+        "text": "Friendship is the true treasure, for all eternity!"
+      }
+    ]
+  },
+  {
+    "order": "18",
+    "name": "The Adventure of the Star Cookie and the Avogadro Enigma",
+    "key": "the-adventure-of-the-star-cookie-and-the-avogadro-enigma",
+    "song": "https://youtu.be/dboAlOkhUC4",
+    "saga": "",
+    "date": "11/03/2024",
+    "lyrics": "In a floating town, of cotton candy clouds,\r\nWhere the river is lemonade, escaping the crowds,\r\n\nLived Luna, sweet and curious, sharp and keen,\r\nSeeking a mystery, the greatest ever seen.\r\n\nWhat do the stars whisper, \r\nwhat secrets do they keep?\r\n\nA gigantic number that makes the wise ones weep:\r\nThe Avogadro Enigma! A challenge for her soul,\r\n\nDancing in the kitchens to \r\nmake the world feel whole.\r\n\nOh, the Star Cookie! Red and sweet glow!\r\nIt holds a magic secret, a number we must know.\r\n\nEvery ingredient counts, a truly vital piece!\r\nScience and pure sweetness, a dance that\r\n\nwill not cease.\r\nWe must find\r\n\nthe formula, lift the great curtain high!\r\nThat giant number's meaning is written in the sky.\r\n\nWalking through the market \r\nwhere flying fruits ascend,\r\n\nA strawberry cookie started \r\nto brightly shine and send\r\n\nA sparkle to her eyes, she \r\npurchased it with grace,\r\n\nThe ancient baker shared the riddle of the place:\r\n\"Its recipe is ancient, a scientific pledge!\r\n\nEvery single particle is standing on the edge.\"\r\n\nOh, the Star Cookie! Red and sweet glow!\r\nIt holds a magic secret, a number we must know.\r\n\nEvery ingredient counts, a truly vital piece!\r\nScience and pure sweetness, a dance that\r\n\nwill not cease.\r\nWe must find\r\n\nthe formula, lift the great curtain high!\r\nThat giant number's meaning is written in the sky.\r\n\nShe flew through the clouds, her journey was long,\r\nMet talking birds reciting numeric songs.\r\n\nA wise old cat with spectacles so neat,\r\nPlaying with equations, a world that\r\n\ncan't be beat!\r\nClouds shaped\r\n\nlike Avogadro, stretching to the blue,\r\nShe learned that tiny particles make up the view.\r\n\nShe reached the heart, the ancient, golden book!\r\nOpened up the pages, just one magic look:\r\n\nThe number is the key, the essence and the sum,\r\n\nThe perfect balance found, \r\nwhere all good things have come.\r\n\nIt's not just a sweet treat, \r\nit's a lesson we can hold!\r\n\nThat every tiny fraction is \r\nprecious, brave, and bold.\r\n\nLuna shared the cookie and all she had found,\r\nThat magic is hidden, all around and around.\r\n\nIn the science, in the \r\nnumbers, in every little bite!\r\n\nThe Cookie Adventure! Shining ever bright!",
+    "syncedLyrics": [
+      {
+        "start": 7.76,
+        "end": 15.28,
+        "text": "In a floating town, of cotton candy clouds,\r\nWhere the river is lemonade, escaping the crowds,\r"
+      },
+      {
+        "start": 15.28,
+        "end": 23.44,
+        "text": "Lived Luna, sweet and curious, sharp and keen,\r\nSeeking a mystery, the greatest ever seen.\r"
+      },
+      {
+        "start": 23.44,
+        "end": 27.36,
+        "text": "What do the stars whisper, \r\nwhat secrets do they keep?\r"
+      },
+      {
+        "start": 27.36,
+        "end": 34.72,
+        "text": "A gigantic number that makes the wise ones weep:\r\nThe Avogadro Enigma! A challenge for her soul,\r"
+      },
+      {
+        "start": 34.72,
+        "end": 41.04,
+        "text": "Dancing in the kitchens to \r\nmake the world feel whole.\r"
+      },
+      {
+        "start": 41.04,
+        "end": 48.72,
+        "text": "Oh, the Star Cookie! Red and sweet glow!\r\nIt holds a magic secret, a number we must know.\r"
+      },
+      {
+        "start": 48.72,
+        "end": 56,
+        "text": "Every ingredient counts, a truly vital piece!\r\nScience and pure sweetness, a dance that\r"
+      },
+      {
+        "start": 56,
+        "end": 58.08,
+        "text": "will not cease.\r\nWe must find\r"
+      },
+      {
+        "start": 58.08,
+        "end": 68.56,
+        "text": "the formula, lift the great curtain high!\r\nThat giant number's meaning is written in the sky.\r"
+      },
+      {
+        "start": 68.56,
+        "end": 72.08,
+        "text": "Walking through the market \r\nwhere flying fruits ascend,\r"
+      },
+      {
+        "start": 72.08,
+        "end": 75.76,
+        "text": "A strawberry cookie started \r\nto brightly shine and send\r"
+      },
+      {
+        "start": 75.76,
+        "end": 79.6,
+        "text": "A sparkle to her eyes, she \r\npurchased it with grace,\r"
+      },
+      {
+        "start": 79.6,
+        "end": 87.44,
+        "text": "The ancient baker shared the riddle of the place:\r\n\"Its recipe is ancient, a scientific pledge!\r"
+      },
+      {
+        "start": 87.44,
+        "end": 92.64,
+        "text": "Every single particle is standing on the edge.\"\r"
+      },
+      {
+        "start": 92.64,
+        "end": 100.32,
+        "text": "Oh, the Star Cookie! Red and sweet glow!\r\nIt holds a magic secret, a number we must know.\r"
+      },
+      {
+        "start": 100.32,
+        "end": 107.52000000000001,
+        "text": "Every ingredient counts, a truly vital piece!\r\nScience and pure sweetness, a dance that\r"
+      },
+      {
+        "start": 107.52000000000001,
+        "end": 109.68,
+        "text": "will not cease.\r\nWe must find\r"
+      },
+      {
+        "start": 109.68,
+        "end": 119.84,
+        "text": "the formula, lift the great curtain high!\r\nThat giant number's meaning is written in the sky.\r"
+      },
+      {
+        "start": 119.84,
+        "end": 127.44,
+        "text": "She flew through the clouds, her journey was long,\r\nMet talking birds reciting numeric songs.\r"
+      },
+      {
+        "start": 127.44,
+        "end": 133.76,
+        "text": "A wise old cat with spectacles so neat,\r\nPlaying with equations, a world that\r"
+      },
+      {
+        "start": 133.76,
+        "end": 135.92,
+        "text": "can't be beat!\r\nClouds shaped\r"
+      },
+      {
+        "start": 135.92,
+        "end": 146.16,
+        "text": "like Avogadro, stretching to the blue,\r\nShe learned that tiny particles make up the view.\r"
+      },
+      {
+        "start": 146.16,
+        "end": 153.68,
+        "text": "She reached the heart, the ancient, golden book!\r\nOpened up the pages, just one magic look:\r"
+      },
+      {
+        "start": 153.68,
+        "end": 157.52,
+        "text": "The number is the key, the essence and the sum,\r"
+      },
+      {
+        "start": 157.52,
+        "end": 161.2,
+        "text": "The perfect balance found, \r\nwhere all good things have come.\r"
+      },
+      {
+        "start": 161.2,
+        "end": 164.96,
+        "text": "It's not just a sweet treat, \r\nit's a lesson we can hold!\r"
+      },
+      {
+        "start": 164.96,
+        "end": 176.32,
+        "text": "That every tiny fraction is \r\nprecious, brave, and bold.\r"
+      },
+      {
+        "start": 176.32,
+        "end": 183.44,
+        "text": "Luna shared the cookie and all she had found,\r\nThat magic is hidden, all around and around.\r"
+      },
+      {
+        "start": 183.44,
+        "end": 187.44,
+        "text": "In the science, in the \r\nnumbers, in every little bite!\r"
+      },
+      {
+        "start": 187.44,
+        "end": 196.48,
+        "text": "The Cookie Adventure! Shining ever bright!"
+      }
+    ]
+  },
+  {
+    "order": "19",
+    "name": "The 22,000",
+    "key": "the-22000",
+    "song": "https://youtu.be/qs9XV2OCs14",
+    "saga": "",
+    "date": "12/03/2024",
+    "lyrics": "In Coloralia, full of laughter, \r\ntwenty-two thousand bright little things\r\n\nEach a lively color, like a \r\nrainbow that constantly sings\r\n\nRed brings the heat, blue brings the \r\ncalm, green makes the plants reach high\r\n\nTwenty-two thousand hearts ready \r\nnow, beneath the colorful sky.\r\n\nTwenty-two thousand colors, look at the light!\r\nUnity makes us all shine so bright\r\n\nTwenty-two thousand colors, look at the light!\r\nWhite, White, you are the balance, you are right.\r\n\nBut in the corner, among the bright \r\nones, there was a little one who felt low\r\n\nHis name was White, without a color, \r\nhe thought he had no special glow\r\n\nHe watched the Festival of Colors, the \r\nparty of light, with sadness inside\r\n\n\"How can I join without my own shade? \r\nWith no power, where can I hide?\"\r\n\nTwenty-two thousand colors, look at the light!\r\nUnity makes us all shine so bright\r\n\nTwenty-two thousand colors, look at the light!\r\nWhite, White, you are the balance, you are right.\r\n\nAn old wise man, with a beard like a cloud, \r\nsaid: \"Your moment will soon be near\"\r\n\n\"You are special, little friend, just \r\nwait, and watch, and have no fear\"\r\n\nThe Great Festival arrived, what \r\nexcitement!, everyone was taking their place\r\n\nBut the rainbow stopped, it was broken, \r\nmissing something from its grace.\r\n\nThe 22000 were all confused, their \r\ncolors couldn't flow just right\r\n\nWhite closed his eyes and wished out loud: \r\n\"I want to be useful, share my light!\"\r\n\nA pure and brilliant glow, so intense, \r\nfrom his small body began to shine\r\n\n\"White is the balance!\" The elder smiled, \r\n\"Without you, they cannot be fine.\"\r\n\nTwenty-two thousand colors, look at the light!\r\nUnity makes us all shine so bright\r\n\nTwenty-two thousand colors, look at the light!\r\nWhite, White, you are the balance, you are right.",
+    "syncedLyrics": [
+      {
+        "start": 8.64,
+        "end": 12.48,
+        "text": "In Coloralia, full of laughter, \r\ntwenty-two thousand bright little things\r"
+      },
+      {
+        "start": 12.48,
+        "end": 16.64,
+        "text": "Each a lively color, like a \r\nrainbow that constantly sings\r"
+      },
+      {
+        "start": 16.64,
+        "end": 19.92,
+        "text": "Red brings the heat, blue brings the \r\ncalm, green makes the plants reach high\r"
+      },
+      {
+        "start": 19.92,
+        "end": 24.08,
+        "text": "Twenty-two thousand hearts ready \r\nnow, beneath the colorful sky.\r"
+      },
+      {
+        "start": 24.08,
+        "end": 31.44,
+        "text": "Twenty-two thousand colors, look at the light!\r\nUnity makes us all shine so bright\r"
+      },
+      {
+        "start": 31.44,
+        "end": 41.84,
+        "text": "Twenty-two thousand colors, look at the light!\r\nWhite, White, you are the balance, you are right.\r"
+      },
+      {
+        "start": 41.84,
+        "end": 45.52,
+        "text": "But in the corner, among the bright \r\nones, there was a little one who felt low\r"
+      },
+      {
+        "start": 45.52,
+        "end": 49.28,
+        "text": "His name was White, without a color, \r\nhe thought he had no special glow\r"
+      },
+      {
+        "start": 49.28,
+        "end": 53.12,
+        "text": "He watched the Festival of Colors, the \r\nparty of light, with sadness inside\r"
+      },
+      {
+        "start": 53.12,
+        "end": 57.28,
+        "text": "\"How can I join without my own shade? \r\nWith no power, where can I hide?\"\r"
+      },
+      {
+        "start": 57.28,
+        "end": 64.72,
+        "text": "Twenty-two thousand colors, look at the light!\r\nUnity makes us all shine so bright\r"
+      },
+      {
+        "start": 64.72,
+        "end": 75.52,
+        "text": "Twenty-two thousand colors, look at the light!\r\nWhite, White, you are the balance, you are right.\r"
+      },
+      {
+        "start": 75.52,
+        "end": 82.64,
+        "text": "An old wise man, with a beard like a cloud, \r\nsaid: \"Your moment will soon be near\"\r"
+      },
+      {
+        "start": 82.64,
+        "end": 86.48,
+        "text": "\"You are special, little friend, just \r\nwait, and watch, and have no fear\"\r"
+      },
+      {
+        "start": 86.48,
+        "end": 91.08,
+        "text": "The Great Festival arrived, what \r\nexcitement!, everyone was taking their place\r"
+      },
+      {
+        "start": 91.08,
+        "end": 91.836,
+        "text": "But the rainbow stopped, it was broken, \r\nmissing something from its grace.\r"
+      },
+      {
+        "start": 91.836,
+        "end": 95.36,
+        "text": "The 22000 were all confused, their \r\ncolors couldn't flow just right\r"
+      },
+      {
+        "start": 95.36,
+        "end": 99.52000000000001,
+        "text": "White closed his eyes and wished out loud: \r\n\"I want to be useful, share my light!\"\r"
+      },
+      {
+        "start": 99.52000000000001,
+        "end": 102.96000000000001,
+        "text": "A pure and brilliant glow, so intense, \r\nfrom his small body began to shine\r"
+      },
+      {
+        "start": 102.96000000000001,
+        "end": 108.96000000000001,
+        "text": "\"White is the balance!\" The elder smiled, \r\n\"Without you, they cannot be fine.\"\r"
+      },
+      {
+        "start": 108.96000000000001,
+        "end": 116.32,
+        "text": "Twenty-two thousand colors, look at the light!\r\nUnity makes us all shine so bright\r"
+      },
+      {
+        "start": 116.32,
+        "end": 125.44,
+        "text": "Twenty-two thousand colors, look at the light!\r\nWhite, White, you are the balance, you are right."
+      }
+    ]
+  },
+  {
+    "order": "20",
+    "name": "The Secret of the Ancient Clock",
+    "key": "the-secret-of-the-ancient-clock",
+    "song": "https://youtu.be/zJ-3SvFb1ek",
+    "saga": "",
+    "date": "13/03/2024",
+    "lyrics": "Marcos climbed to the attic, up in the dusty house\r\nTen years of curiosity, quiet as a mouse\r\n\nAmong the boxes and memories, \r\na treasure he did find\r\n\nA pocket watch of gold, the clock of humankind\r\n\nThe sun and moon together, a symbol was engraved\r\n\nHe opened it, saw the hands \r\nspinning, the past they saved!\r\n\nThey turn backward fast, a secret to conceal\r\nCan a child really make the wheel of time reel?\r\n\nTick-tock, the ancient clock is calling\r\nAn adventure in seconds, realities falling\r\n\nTo turn back time, an old mistake to mend\r\nBut the present starts changing, without an end\r\n\nMarcos, be careful with the secret that you hold!\r\nEvery trip to the past, a new story unfolds\r\n\nHe wished to retrieve his \r\nfavorite toy from a year ago\r\n\nWent back, hugged it tightly, put on a happy show\r\n\nReturned to the present, his bed, his own space\r\nBut the color on the wall, filled him with haste\r\n\nThe books were not there, \r\nsomething had been undone\r\n\nIf you touch yesterday's \r\nline, tomorrow hasn't begun\r\n\nTick-tock, the ancient clock is calling\r\nAn adventure in seconds, realities falling\r\n\nTo turn back time, an old mistake to mend\r\nBut the present starts changing, without an end\r\n\nMarcos, be careful with the secret that you hold!\r\nEvery trip to the past, a new story unfolds\r\n\nHe tried to stop the fight \r\nwith his very best friend\r\n\nA bitter moment he wanted to transcend\r\nHe did it, he smiled, now everything is fine!\r\n\nCalled his friend, but they looked \r\nat him, Who is this guy's line?\r\n\nHis best friend stared back \r\nwith a total lack of knowing\r\n\nA small change in the past, a lonely seed sowing\r\n\nHe searched the library, in a book of old lore\r\nThe alchemist’s great tale, the sorrow he bore\r\n\n\"He tried to correct things, \r\nlost everything he loved\r\n\nDon't seek the past's comfort, \r\nif you want your life un-shoved\"\r\n\nMarcos felt the burden, the great responsibility\r\nHe had to fix it all, return to stability\r\n\nHe took one final trip, \r\nnot to change, but to learn\r\n\nTo let the harsh lessons of yesterday burn\r\n\nCalm returned at last, his room, his best friend\r\nEverything was back, the timeline reached its end\r\n\nEvery mistake is a lesson, you don't have to flee\r\nTime is a true gift, you must let it just be\r\n\nHe hid the clock in the \r\nattic, the mystery concealed\r\n\nThe real magic is learning, the secret is revealed\r\n\nThe tick-tock stops spinning, \r\nthe journey is through\r\n\nAnd Marcos is much wiser, \r\nwith a present that is true",
+    "syncedLyrics": [
+      {
+        "start": 11.04,
+        "end": 20.08,
+        "text": "Marcos climbed to the attic, up in the dusty house\r\nTen years of curiosity, quiet as a mouse\r"
+      },
+      {
+        "start": 20.08,
+        "end": 24.64,
+        "text": "Among the boxes and memories, \r\na treasure he did find\r"
+      },
+      {
+        "start": 24.64,
+        "end": 28.64,
+        "text": "A pocket watch of gold, the clock of humankind\r"
+      },
+      {
+        "start": 28.64,
+        "end": 33.12,
+        "text": "The sun and moon together, a symbol was engraved\r"
+      },
+      {
+        "start": 33.12,
+        "end": 37.6,
+        "text": "He opened it, saw the hands \r\nspinning, the past they saved!\r"
+      },
+      {
+        "start": 37.6,
+        "end": 46.96,
+        "text": "They turn backward fast, a secret to conceal\r\nCan a child really make the wheel of time reel?\r"
+      },
+      {
+        "start": 46.96,
+        "end": 55.84,
+        "text": "Tick-tock, the ancient clock is calling\r\nAn adventure in seconds, realities falling\r"
+      },
+      {
+        "start": 55.84,
+        "end": 63.28,
+        "text": "To turn back time, an old mistake to mend\r\nBut the present starts changing, without an end\r"
+      },
+      {
+        "start": 63.28,
+        "end": 79.44,
+        "text": "Marcos, be careful with the secret that you hold!\r\nEvery trip to the past, a new story unfolds\r"
+      },
+      {
+        "start": 79.44,
+        "end": 84.08,
+        "text": "He wished to retrieve his \r\nfavorite toy from a year ago\r"
+      },
+      {
+        "start": 84.08,
+        "end": 88.72,
+        "text": "Went back, hugged it tightly, put on a happy show\r"
+      },
+      {
+        "start": 88.72,
+        "end": 93.2,
+        "text": "Returned to the present, his bed, his own space\r\nBut the color on the wall, filled him with haste\r"
+      },
+      {
+        "start": 93.2,
+        "end": 97.68,
+        "text": "The books were not there, \r\nsomething had been undone\r"
+      },
+      {
+        "start": 97.68,
+        "end": 104.72,
+        "text": "If you touch yesterday's \r\nline, tomorrow hasn't begun\r"
+      },
+      {
+        "start": 104.72,
+        "end": 113.6,
+        "text": "Tick-tock, the ancient clock is calling\r\nAn adventure in seconds, realities falling\r"
+      },
+      {
+        "start": 113.6,
+        "end": 120.88,
+        "text": "To turn back time, an old mistake to mend\r\nBut the present starts changing, without an end\r"
+      },
+      {
+        "start": 120.88,
+        "end": 130.4,
+        "text": "Marcos, be careful with the secret that you hold!\r\nEvery trip to the past, a new story unfolds\r"
+      },
+      {
+        "start": 130.4,
+        "end": 135.04,
+        "text": "He tried to stop the fight \r\nwith his very best friend\r"
+      },
+      {
+        "start": 135.04,
+        "end": 143.76,
+        "text": "A bitter moment he wanted to transcend\r\nHe did it, he smiled, now everything is fine!\r"
+      },
+      {
+        "start": 143.76,
+        "end": 150.88,
+        "text": "Called his friend, but they looked \r\nat him, Who is this guy's line?\r"
+      },
+      {
+        "start": 150.88,
+        "end": 155.44,
+        "text": "His best friend stared back \r\nwith a total lack of knowing\r"
+      },
+      {
+        "start": 155.44,
+        "end": 162.16,
+        "text": "A small change in the past, a lonely seed sowing\r"
+      },
+      {
+        "start": 162.16,
+        "end": 171.2,
+        "text": "He searched the library, in a book of old lore\r\nThe alchemist’s great tale, the sorrow he bore\r"
+      },
+      {
+        "start": 171.2,
+        "end": 175.52,
+        "text": "\"He tried to correct things, \r\nlost everything he loved\r"
+      },
+      {
+        "start": 175.52,
+        "end": 180.56,
+        "text": "Don't seek the past's comfort, \r\nif you want your life un-shoved\"\r"
+      },
+      {
+        "start": 180.56,
+        "end": 189.28,
+        "text": "Marcos felt the burden, the great responsibility\r\nHe had to fix it all, return to stability\r"
+      },
+      {
+        "start": 189.28,
+        "end": 193.36,
+        "text": "He took one final trip, \r\nnot to change, but to learn\r"
+      },
+      {
+        "start": 193.36,
+        "end": 198.16,
+        "text": "To let the harsh lessons of yesterday burn\r"
+      },
+      {
+        "start": 198.16,
+        "end": 204.88,
+        "text": "Calm returned at last, his room, his best friend\r\nEverything was back, the timeline reached its end\r"
+      },
+      {
+        "start": 204.88,
+        "end": 213.68,
+        "text": "Every mistake is a lesson, you don't have to flee\r\nTime is a true gift, you must let it just be\r"
+      },
+      {
+        "start": 213.68,
+        "end": 218.32,
+        "text": "He hid the clock in the \r\nattic, the mystery concealed\r"
+      },
+      {
+        "start": 218.32,
+        "end": 222.8,
+        "text": "The real magic is learning, the secret is revealed\r"
+      },
+      {
+        "start": 222.8,
+        "end": 227.6,
+        "text": "The tick-tock stops spinning, \r\nthe journey is through\r"
+      },
+      {
+        "start": 227.6,
+        "end": 245.76,
+        "text": "And Marcos is much wiser, \r\nwith a present that is true"
+      }
+    ]
+  },
+  {
+    "order": "21",
+    "name": "Find My That: Lía’s Adventure in Rainbow",
+    "key": "find-my-that-lia’s-adventure-in-rainbow",
+    "song": "https://youtu.be/wzkIQum2wn8",
+    "saga": "",
+    "date": "14/03/2024",
+    "lyrics": "In the town of Rainbow, colorful and bright,\r\n\nEvery neighbor has a \"That,\" \r\na unique kind of light.\r\n\nSomething special and magical, making them shine.\r\nBut Lia felt lost,\r\n\nsearching for what was hers, what was divine.\r\nWith her curly hair and eyes full of joyful gleam,\r\n\nA quiet emptiness behind the flowing stream.\r\n\"What is my 'That'?\", she asked the early sun,\r\n\n\"I'll start my great adventure, \r\ntill the searching is done.\"\r\n\nI'm gonna find my That, what makes me stand tall!\r\nI'll cross the Whispering Forest,\r\n\nI won't stumble or fall.\r\n\nIf it's in the heavens or \r\nhidden in the deep blue sea,\r\n\nThis is the moment, the new path for me!\r\nAn adventure, my true self I must see!\r\n\nTo the Whispering Forest, Lia started her stride,\r\nThrough colorful trees, with nowhere left to hide.\r\n\nThere she met Bluey, a bird \r\nas blue as the sky above,\r\n\nHe gave her one small clue, a secret full of love:\r\n\n\"Your 'That' is kept hidden \r\nwhere you'd least expect,\r\n\nIn a small, quiet corner that \r\nyour heart must protect.\"\r\n\nShe ran to the Lake of \r\nMirrors, water crystal clear,\r\n\nLooked at her reflection, conquering every fear.\r\nShe saw a girl brave, kind, and generous and true,\r\n\nFull of creativity in everything she would do.\r\n\nThen she climbed the Shining \r\nMountain, where a wise woman stayed,\r\n\nWho told her: \"Have patience, \r\nlet your worries fade.\r\n\nYour 'That' will reveal itself, \r\nwhen you are finally ready,\r\n\nPerseverance is the secret to \r\nkeeping your hands steady.\"\r\n\nI'm gonna find my That, what makes me stand tall!\r\n\nI'll cross the Whispering \r\nForest, I won't stumble or fall.\r\n\nIf it's in the heavens or \r\nhidden in the deep blue sea,\r\n\nThis is the moment, the new path for me!\r\nAn adventure, my true self I must see!\r\n\nLia returned to Rainbow, \r\nwith a calmer heart's beat,\r\n\nAnd started helping people, \r\nmaking their day sweet.\r\n\nShe helped a new friend, \r\ncared for her family dear,\r\n\nWithout knowing, her \"That\" \r\nwas finally drawing near.\r\n\nAt the Star Festival party, \r\nbeneath the vast night,\r\n\nShe finally understood her \r\n\"That\" was not a great might.\r\n\nIt wasn't a hidden skill or a talent bright,\r\n\nIt was her kind heart, her \r\nloyal and generous light.\r\n\nWhat made her special was \r\nthe way she would connect,\r\n\nThat her \"That\" had been with her \r\nalways, giving love and respect.",
+    "syncedLyrics": [
+      {
+        "start": 13.68,
+        "end": 18.08,
+        "text": "In the town of Rainbow, colorful and bright,\r"
+      },
+      {
+        "start": 18.08,
+        "end": 22.72,
+        "text": "Every neighbor has a \"That,\" \r\na unique kind of light.\r"
+      },
+      {
+        "start": 22.72,
+        "end": 29.12,
+        "text": "Something special and magical, making them shine.\r\nBut Lia felt lost,\r"
+      },
+      {
+        "start": 29.12,
+        "end": 37.44,
+        "text": "searching for what was hers, what was divine.\r\nWith her curly hair and eyes full of joyful gleam,\r"
+      },
+      {
+        "start": 37.44,
+        "end": 46.72,
+        "text": "A quiet emptiness behind the flowing stream.\r\n\"What is my 'That'?\", she asked the early sun,\r"
+      },
+      {
+        "start": 46.72,
+        "end": 52.08,
+        "text": "\"I'll start my great adventure, \r\ntill the searching is done.\"\r"
+      },
+      {
+        "start": 53.28,
+        "end": 60.8,
+        "text": "I'm gonna find my That, what makes me stand tall!\r\nI'll cross the Whispering Forest,\r"
+      },
+      {
+        "start": 60.8,
+        "end": 62.96,
+        "text": "I won't stumble or fall.\r"
+      },
+      {
+        "start": 62.96,
+        "end": 68.56,
+        "text": "If it's in the heavens or \r\nhidden in the deep blue sea,\r"
+      },
+      {
+        "start": 68.56,
+        "end": 80,
+        "text": "This is the moment, the new path for me!\r\nAn adventure, my true self I must see!\r"
+      },
+      {
+        "start": 80,
+        "end": 89.12,
+        "text": "To the Whispering Forest, Lia started her stride,\r\nThrough colorful trees, with nowhere left to hide.\r"
+      },
+      {
+        "start": 89.12,
+        "end": 93.68,
+        "text": "There she met Bluey, a bird \r\nas blue as the sky above,\r"
+      },
+      {
+        "start": 93.68,
+        "end": 99.03999999999999,
+        "text": "He gave her one small clue, a secret full of love:\r"
+      },
+      {
+        "start": 99.03999999999999,
+        "end": 103.84,
+        "text": "\"Your 'That' is kept hidden \r\nwhere you'd least expect,\r"
+      },
+      {
+        "start": 103.84,
+        "end": 108.72,
+        "text": "In a small, quiet corner that \r\nyour heart must protect.\"\r"
+      },
+      {
+        "start": 110.32,
+        "end": 116,
+        "text": "She ran to the Lake of \r\nMirrors, water crystal clear,\r"
+      },
+      {
+        "start": 116,
+        "end": 125.28,
+        "text": "Looked at her reflection, conquering every fear.\r\nShe saw a girl brave, kind, and generous and true,\r"
+      },
+      {
+        "start": 125.28,
+        "end": 129.92,
+        "text": "Full of creativity in everything she would do.\r"
+      },
+      {
+        "start": 129.92,
+        "end": 134.72,
+        "text": "Then she climbed the Shining \r\nMountain, where a wise woman stayed,\r"
+      },
+      {
+        "start": 134.72,
+        "end": 139.52,
+        "text": "Who told her: \"Have patience, \r\nlet your worries fade.\r"
+      },
+      {
+        "start": 139.52,
+        "end": 144.24,
+        "text": "Your 'That' will reveal itself, \r\nwhen you are finally ready,\r"
+      },
+      {
+        "start": 144.24,
+        "end": 149.68,
+        "text": "Perseverance is the secret to \r\nkeeping your hands steady.\"\r"
+      },
+      {
+        "start": 149.68,
+        "end": 154.96,
+        "text": "I'm gonna find my That, what makes me stand tall!\r"
+      },
+      {
+        "start": 154.96,
+        "end": 159.36,
+        "text": "I'll cross the Whispering \r\nForest, I won't stumble or fall.\r"
+      },
+      {
+        "start": 159.36,
+        "end": 164.88,
+        "text": "If it's in the heavens or \r\nhidden in the deep blue sea,\r"
+      },
+      {
+        "start": 164.88,
+        "end": 174.32,
+        "text": "This is the moment, the new path for me!\r\nAn adventure, my true self I must see!\r"
+      },
+      {
+        "start": 174.32,
+        "end": 178.8,
+        "text": "Lia returned to Rainbow, \r\nwith a calmer heart's beat,\r"
+      },
+      {
+        "start": 178.8,
+        "end": 183.76,
+        "text": "And started helping people, \r\nmaking their day sweet.\r"
+      },
+      {
+        "start": 183.76,
+        "end": 188.4,
+        "text": "She helped a new friend, \r\ncared for her family dear,\r"
+      },
+      {
+        "start": 188.4,
+        "end": 196.88,
+        "text": "Without knowing, her \"That\" \r\nwas finally drawing near.\r"
+      },
+      {
+        "start": 196.88,
+        "end": 201.84,
+        "text": "At the Star Festival party, \r\nbeneath the vast night,\r"
+      },
+      {
+        "start": 201.84,
+        "end": 206.72,
+        "text": "She finally understood her \r\n\"That\" was not a great might.\r"
+      },
+      {
+        "start": 206.72,
+        "end": 212.92000000000002,
+        "text": "It wasn't a hidden skill or a talent bright,\r"
+      },
+      {
+        "start": 213.52,
+        "end": 218.56,
+        "text": "It was her kind heart, her \r\nloyal and generous light.\r"
+      },
+      {
+        "start": 218.56,
+        "end": 223.6,
+        "text": "What made her special was \r\nthe way she would connect,\r"
+      },
+      {
+        "start": 223.6,
+        "end": 235.04,
+        "text": "That her \"That\" had been with her \r\nalways, giving love and respect."
+      }
+    ]
+  },
+  {
+    "order": "22",
+    "name": "The Misstep of the Magician",
+    "key": "the-misstep-of-the-magician",
+    "song": "https://youtu.be/hSXnRZ8d_hw",
+    "saga": "",
+    "date": "15/03/2024",
+    "lyrics": "In a cabin deep in the woods so green,\r\nLived a young magician, clumsy, unseen.\r\n\nHis spells would fizz, his potions pop,\r\nBut in his heart, he’d never stop!\r\n\nHe packed his hat, his wand, his cloak,\r\nSet off with hope, a magic joke.\r\n\nTo find the book that legends tell—\r\nThe Book of Lost Spells, hidden well.\r\n\nThrough the Magic Market, bright and loud,\r\nHe bought a map beneath a cloud.\r\n\nTo Whispering Mountain, tall and steep,\r\nWhere secrets sleep and dragons keep.\r\n\nHis hat flew off in winds so wild,\r\nBut Elian smiled—his spirit mild.\r\n\nBehind a fall, a cave so bright,\r\nA lake of stars, a glowing light.\r\n\nHe cast a spell—he meant to fly—\r\nBut made soft clouds up in the sky!\r\n\nHe hopped and laughed from puff to puff,\r\n“Not perfect magic—but that’s enough!”\r\n\nA dragon blue with gentle eyes\r\nGave riddles wise beneath the skies:\r\n\n“What moves the leaves but can’t be held?\r\nWhat shines at night but can’t be spelled?\r\n\nWhat runs through life but has no feet?\r\nAnswer true, and claim your treat!”\r\n\nHe thought, he grinned, he spoke with care—\r\nThe dragon nodded, “You’re almost there.”\r\n\nThe book was his! Its pages gleamed,\r\nNot just with spells—but dreams redeemed.\r\n\nBack in the town, no more a fool,\r\nHis magic now both kind and cool.\r\n\nHe helped the lost, he mended tears,\r\nWith stardust joy and courage years.\r\n\nThe king proclaimed, “Our Royal Mage!”\r\nNot for perfection—but for brave heart’s stage.\r\n\nFor every trip, each slip, each fall,\r\nCan lead to greatness, after all!\r\n\nSo if you stumble, don’t you fear—\r\nYour misstep’s music, loud and clear!\r\n\nLike Elian, bold and full of cheer:\r\nYour greatest magic starts right here!",
+    "syncedLyrics": [
+      {
+        "start": 16,
+        "end": 22.72,
+        "text": "In a cabin deep in the woods so green,\r\nLived a young magician, clumsy, unseen.\r"
+      },
+      {
+        "start": 22.72,
+        "end": 29.28,
+        "text": "His spells would fizz, his potions pop,\r\nBut in his heart, he’d never stop!\r"
+      },
+      {
+        "start": 30.08,
+        "end": 33.76,
+        "text": "He packed his hat, his wand, his cloak,\r\nSet off with hope, a magic joke.\r"
+      },
+      {
+        "start": 33.76,
+        "end": 41.28,
+        "text": "To find the book that legends tell—\r\nThe Book of Lost Spells, hidden well.\r"
+      },
+      {
+        "start": 41.28,
+        "end": 48.08,
+        "text": "Through the Magic Market, bright and loud,\r\nHe bought a map beneath a cloud.\r"
+      },
+      {
+        "start": 48.08,
+        "end": 55.36,
+        "text": "To Whispering Mountain, tall and steep,\r\nWhere secrets sleep and dragons keep.\r"
+      },
+      {
+        "start": 55.36,
+        "end": 58.458,
+        "text": "His hat flew off in winds so wild,\r\nBut Elian smiled—his spirit mild.\r"
+      },
+      {
+        "start": 58.458,
+        "end": 70.16,
+        "text": "Behind a fall, a cave so bright,\r\nA lake of stars, a glowing light.\r"
+      },
+      {
+        "start": 70.16,
+        "end": 77.36,
+        "text": "He cast a spell—he meant to fly—\r\nBut made soft clouds up in the sky!\r"
+      },
+      {
+        "start": 77.36,
+        "end": 88.24,
+        "text": "He hopped and laughed from puff to puff,\r\n“Not perfect magic—but that’s enough!”\r"
+      },
+      {
+        "start": 88.24,
+        "end": 94.88,
+        "text": "A dragon blue with gentle eyes\r\nGave riddles wise beneath the skies:\r"
+      },
+      {
+        "start": 94.88,
+        "end": 101.84,
+        "text": "“What moves the leaves but can’t be held?\r\nWhat shines at night but can’t be spelled?\r"
+      },
+      {
+        "start": 101.84,
+        "end": 110.4,
+        "text": "What runs through life but has no feet?\r\nAnswer true, and claim your treat!”\r"
+      },
+      {
+        "start": 113.2,
+        "end": 116.72,
+        "text": "He thought, he grinned, he spoke with care—\r\nThe dragon nodded, “You’re almost there.”\r"
+      },
+      {
+        "start": 116.72,
+        "end": 139.36,
+        "text": "The book was his! Its pages gleamed,\r\nNot just with spells—but dreams redeemed.\r"
+      },
+      {
+        "start": 144.96,
+        "end": 152.96,
+        "text": "Back in the town, no more a fool,\r\nHis magic now both kind and cool.\r"
+      },
+      {
+        "start": 152.96,
+        "end": 162.4,
+        "text": "He helped the lost, he mended tears,\r\nWith stardust joy and courage years.\r"
+      },
+      {
+        "start": 162.4,
+        "end": 169.68,
+        "text": "The king proclaimed, “Our Royal Mage!”\r\nNot for perfection—but for brave heart’s stage.\r"
+      },
+      {
+        "start": 169.68,
+        "end": 178.32,
+        "text": "For every trip, each slip, each fall,\r\nCan lead to greatness, after all!\r"
+      },
+      {
+        "start": 178.32,
+        "end": 185.36,
+        "text": "So if you stumble, don’t you fear—\r\nYour misstep’s music, loud and clear!\r"
+      },
+      {
+        "start": 185.36,
+        "end": 194.72,
+        "text": "Like Elian, bold and full of cheer:\r\nYour greatest magic starts right here!"
+      }
+    ]
+  },
+  {
+    "order": "23",
+    "name": "The Shadow Experiment in the Darkness",
+    "key": "the-shadow-experiment-in-the-darkness",
+    "song": "https://youtu.be/wFU5MMujXPA",
+    "saga": "",
+    "date": "16/03/2024",
+    "lyrics": "In Faintglow village, where the sun shines low\r\nlived a boy named Leo, curious to know\r\n\nHe loved the strange puzzles and mysteries untold\r\nhis window to the stars, a story to unfold\r\n\nThen one night he saw it, a shadow's strange sway\r\nthe trees were dancing in a playful way\r\n\nFlashlight ready, notebook in his hand\r\nhe slipped from his house to explore the dark land\r\n\nOh, the experiment in the dark!\r\nWhere the light makes a brand new reality mark\r\n\nLiving shadows, a mystery deep\r\nsearching for clues while the whole world's asleep\r\n\nA friend made of mist, a creature of night\r\nLeo and Sombri, stepping into the light!\r\n\nInto the forest, he walked with a slight tremor\r\nwhen off a pine tree came a shadowy glimmer\r\n\nA shape took form, it was not from a tree\r\nSombri introduced himself, playful and free\r\n\n\"I'm lost from my world, I need to go back\r\nhelp me, Leo, let's follow the shadow track\"\r\n\nTwo friends united, one light and one shade\r\na powerful team for the journey they made\r\n\nOn the oak bark, a riddle they read\r\n\n\"Night traveler, with a trail of \r\nstars spread\" Leo smiled wide:\r\n\n\"No feet, no wings, who could it be?\" A snail!\r\nA new shadow appeared, showing the glowing trail\r\n\nNext, stone statues in a moonlit clearing\r\nan old carved poem, a message appearing:\r\n\n\"The silent flyer, watching but unseen\" \r\nThe hidden owl showed the path in between\r\n\nOh, the experiment in the dark!\r\nWhere the light makes a brand new reality mark\r\n\nLiving shadows, a mystery deep\r\nsearching for clues while the whole world's asleep\r\n\nA friend made of mist, a creature of night\r\nLeo and Sombri, stepping into the light!\r\n\nThe stream water shines, reflecting the moon's hue\r\n\na stone puzzle forms a bridge, shining and new\r\nIn the cavern of mirrors, the final test came\r\n\n\"Shows you secrets, but knows \r\nnot its own name\" The mirror!\r\n\nThe door swings open, a bright glowing gate\r\nFarewell, Sombri, you can't be late!\r\n\nLeo returned home, as the dawn broke free\r\nhis mind and his heart filled with pure ecstasy\r\n\nThe shadows don't scare him, they hold a soft hand\r\nthe magic adventure in this wonderful land",
+    "syncedLyrics": [
+      {
+        "start": 9.84,
+        "end": 18.72,
+        "text": "In Faintglow village, where the sun shines low\r\nlived a boy named Leo, curious to know\r"
+      },
+      {
+        "start": 18.72,
+        "end": 27.28,
+        "text": "He loved the strange puzzles and mysteries untold\r\nhis window to the stars, a story to unfold\r"
+      },
+      {
+        "start": 27.84,
+        "end": 36.88,
+        "text": "Then one night he saw it, a shadow's strange sway\r\nthe trees were dancing in a playful way\r"
+      },
+      {
+        "start": 36.88,
+        "end": 45.84,
+        "text": "Flashlight ready, notebook in his hand\r\nhe slipped from his house to explore the dark land\r"
+      },
+      {
+        "start": 45.84,
+        "end": 51.84,
+        "text": "Oh, the experiment in the dark!\r\nWhere the light makes a brand new reality mark\r"
+      },
+      {
+        "start": 51.84,
+        "end": 56.48,
+        "text": "Living shadows, a mystery deep\r\nsearching for clues while the whole world's asleep\r"
+      },
+      {
+        "start": 56.48,
+        "end": 74.64,
+        "text": "A friend made of mist, a creature of night\r\nLeo and Sombri, stepping into the light!\r"
+      },
+      {
+        "start": 74.64,
+        "end": 83.2,
+        "text": "Into the forest, he walked with a slight tremor\r\nwhen off a pine tree came a shadowy glimmer\r"
+      },
+      {
+        "start": 83.2,
+        "end": 91.92,
+        "text": "A shape took form, it was not from a tree\r\nSombri introduced himself, playful and free\r"
+      },
+      {
+        "start": 91.92,
+        "end": 100.96000000000001,
+        "text": "\"I'm lost from my world, I need to go back\r\nhelp me, Leo, let's follow the shadow track\"\r"
+      },
+      {
+        "start": 100.96000000000001,
+        "end": 109.75999999999999,
+        "text": "Two friends united, one light and one shade\r\na powerful team for the journey they made\r"
+      },
+      {
+        "start": 109.75999999999999,
+        "end": 112.08,
+        "text": "On the oak bark, a riddle they read\r"
+      },
+      {
+        "start": 112.08,
+        "end": 116.47999999999999,
+        "text": "\"Night traveler, with a trail of \r\nstars spread\" Leo smiled wide:\r"
+      },
+      {
+        "start": 116.47999999999999,
+        "end": 123.44,
+        "text": "\"No feet, no wings, who could it be?\" A snail!\r\nA new shadow appeared, showing the glowing trail\r"
+      },
+      {
+        "start": 123.44,
+        "end": 132.8,
+        "text": "Next, stone statues in a moonlit clearing\r\nan old carved poem, a message appearing:\r"
+      },
+      {
+        "start": 132.8,
+        "end": 143.92000000000002,
+        "text": "\"The silent flyer, watching but unseen\" \r\nThe hidden owl showed the path in between\r"
+      },
+      {
+        "start": 143.92000000000002,
+        "end": 149.92000000000002,
+        "text": "Oh, the experiment in the dark!\r\nWhere the light makes a brand new reality mark\r"
+      },
+      {
+        "start": 149.92000000000002,
+        "end": 154.64,
+        "text": "Living shadows, a mystery deep\r\nsearching for clues while the whole world's asleep\r"
+      },
+      {
+        "start": 154.64,
+        "end": 165.44,
+        "text": "A friend made of mist, a creature of night\r\nLeo and Sombri, stepping into the light!\r"
+      },
+      {
+        "start": 172.32,
+        "end": 176.8,
+        "text": "The stream water shines, reflecting the moon's hue\r"
+      },
+      {
+        "start": 176.8,
+        "end": 185.92,
+        "text": "a stone puzzle forms a bridge, shining and new\r\nIn the cavern of mirrors, the final test came\r"
+      },
+      {
+        "start": 185.92,
+        "end": 192.48,
+        "text": "\"Shows you secrets, but knows \r\nnot its own name\" The mirror!\r"
+      },
+      {
+        "start": 192.48,
+        "end": 201.12,
+        "text": "The door swings open, a bright glowing gate\r\nFarewell, Sombri, you can't be late!\r"
+      },
+      {
+        "start": 201.12,
+        "end": 213.44,
+        "text": "Leo returned home, as the dawn broke free\r\nhis mind and his heart filled with pure ecstasy\r"
+      },
+      {
+        "start": 213.44,
+        "end": 234,
+        "text": "The shadows don't scare him, they hold a soft hand\r\nthe magic adventure in this wonderful land"
+      }
+    ]
   }
 ]

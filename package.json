@@ -1,7 +1,7 @@
 {
   "name": "la-voz-de-los-cuentos",
   "type": "module",
-  "version": "0.1.261",
+  "version": "0.1.266",
   "scripts": {
     "dev": "astro dev",
     "dev:en": "env-cmd -f .env.en astro dev",
@@ -35,7 +35,6 @@
     "human-touch": "^1.0.7",
     "la-voz-de-los-cuentos-games": "^0.23.0",
     "natural": "^8.1.0",
-    "sharp": "^0.33.5",
     "vite-plugin-pwa": "^0.20.5",
     "vue": "^3.4.0"
   },

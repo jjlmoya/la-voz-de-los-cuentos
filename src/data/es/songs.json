@@ -987,5 +987,1910 @@
         "text": "momento ¡gravitado!\r\n¡Gracias, gravedad!"
       }
     ]
+  },
+  {
+    "order": "10",
+    "name": "El Cuento de Golemín",
+    "key": "el-cuento-de-golemin",
+    "song": "https://youtu.be/TXeqeSYB7CI",
+    "saga": "",
+    "date": "03/03/2024",
+    "lyrics": "En la Aldea de Arcilla, cerca del gran pinar,\r\ntodos moldean figuras, sin poderlas animar.\r\n\nLlega la dulce Valeria, con arcilla en su mano,\r\n\nmoldea un amigo gordo, un golem chiquito y sano.\r\nDos canicas por ojos, una sonrisa de barro,\r\n\n\"¡Ojalá fueras mi amigo!\", \r\ndijo con su corazón claro.\r\n\n¡Golemín, Golemín!\r\nLa magia despertó,\r\n\nde arcilla y de color,\r\nnuestra amistad nació.\r\n\n¡Golemín, Golemín!\r\nSalta, ríe, corre ya,\r\n\nno importa de qué estés hecho,\r\nsi tu alma es de verdad.\r\n\nJuegan en el campo, ríen sin parar,\r\nexploran viejos bosques, cerca del caudal.\r\n\nGolemín es diferente, se mueve muy gracioso,\r\nsu cuerpo es de barro, ¡pero es muy valioso!\r\n\nPero otros niños miran, con caras de temor,\r\nse burlan de su forma, le causan gran dolor.\r\n\n¡Golemín, Golemín!\r\nLa magia despertó,\r\n\nde arcilla y de color,\r\nnuestra amistad nació.\r\n\n¡Golemín, Golemín!\r\nSalta, ríe, corre ya,\r\n\nno importa de qué estés hecho,\r\nsi tu alma es de verdad.\r\n\nUn grito en el río, ¡la corriente fuerte va!\r\nUn niño está en peligro, nadie puede ayudar.\r\n\nGolemín mira el agua, no hay tiempo para dudar,\r\nsalta con su cuerpo fuerte, para poderlo salvar.\r\n\nResiste la corriente, ¡un héroe de arcilla es!\r\nY todos comprendieron que la bondad se ve después.\r\n\nLa aldea aplaude fuerte, ya no hay miedo ni burla,\r\n\nlos juegos con Golemín son la mejor aventura.\r\nLa amistad no es de formas, ni tampoco material,\r\n\nlo importante es un buen \r\ncorazón, ¡eso es lo esencial!",
+    "syncedLyrics": [
+      {
+        "start": 10.04,
+        "end": 18.96,
+        "text": "En la Aldea de Arcilla, cerca del gran pinar,\r\ntodos moldean figuras, sin poderlas animar.\r"
+      },
+      {
+        "start": 19.52,
+        "end": 24.24,
+        "text": "Llega la dulce Valeria, con arcilla en su mano,\r"
+      },
+      {
+        "start": 24.24,
+        "end": 34.28,
+        "text": "moldea un amigo gordo, un golem chiquito y sano.\r\nDos canicas por ojos, una sonrisa de barro,\r"
+      },
+      {
+        "start": 34.28,
+        "end": 41.04,
+        "text": "\"¡Ojalá fueras mi amigo!\", \r\ndijo con su corazón claro.\r"
+      },
+      {
+        "start": 41.04,
+        "end": 46.12,
+        "text": "¡Golemín, Golemín!\r\nLa magia despertó,\r"
+      },
+      {
+        "start": 46.12,
+        "end": 50.84,
+        "text": "de arcilla y de color,\r\nnuestra amistad nació.\r"
+      },
+      {
+        "start": 50.84,
+        "end": 56.04,
+        "text": "¡Golemín, Golemín!\r\nSalta, ríe, corre ya,\r"
+      },
+      {
+        "start": 56.04,
+        "end": 61.04,
+        "text": "no importa de qué estés hecho,\r\nsi tu alma es de verdad.\r"
+      },
+      {
+        "start": 62.32,
+        "end": 67,
+        "text": "Juegan en el campo, ríen sin parar,\r\nexploran viejos bosques, cerca del caudal.\r"
+      },
+      {
+        "start": 67,
+        "end": 72.12,
+        "text": "Golemín es diferente, se mueve muy gracioso,\r\nsu cuerpo es de barro, ¡pero es muy valioso!\r"
+      },
+      {
+        "start": 72.12,
+        "end": 80.24,
+        "text": "Pero otros niños miran, con caras de temor,\r\nse burlan de su forma, le causan gran dolor.\r"
+      },
+      {
+        "start": 80.24,
+        "end": 85.32,
+        "text": "¡Golemín, Golemín!\r\nLa magia despertó,\r"
+      },
+      {
+        "start": 85.32,
+        "end": 90.03999999999999,
+        "text": "de arcilla y de color,\r\nnuestra amistad nació.\r"
+      },
+      {
+        "start": 90.03999999999999,
+        "end": 95.2,
+        "text": "¡Golemín, Golemín!\r\nSalta, ríe, corre ya,\r"
+      },
+      {
+        "start": 95.2,
+        "end": 101.56,
+        "text": "no importa de qué estés hecho,\r\nsi tu alma es de verdad.\r"
+      },
+      {
+        "start": 101.56,
+        "end": 106.24000000000001,
+        "text": "Un grito en el río, ¡la corriente fuerte va!\r\nUn niño está en peligro, nadie puede ayudar.\r"
+      },
+      {
+        "start": 106.24000000000001,
+        "end": 111.28,
+        "text": "Golemín mira el agua, no hay tiempo para dudar,\r\nsalta con su cuerpo fuerte, para poderlo salvar.\r"
+      },
+      {
+        "start": 111.28,
+        "end": 119.24000000000001,
+        "text": "Resiste la corriente, ¡un héroe de arcilla es!\r\nY todos comprendieron que la bondad se ve después.\r"
+      },
+      {
+        "start": 120.96,
+        "end": 123.44,
+        "text": "La aldea aplaude fuerte, ya no hay miedo ni burla,\r"
+      },
+      {
+        "start": 123.44,
+        "end": 128.2,
+        "text": "los juegos con Golemín son la mejor aventura.\r\nLa amistad no es de formas, ni tampoco material,\r"
+      },
+      {
+        "start": 128.2,
+        "end": 134.8,
+        "text": "lo importante es un buen \r\ncorazón, ¡eso es lo esencial!"
+      }
+    ]
+  },
+  {
+    "order": "11",
+    "name": "El Domador de Espíritus",
+    "key": "el-domador-de-espiritus",
+    "song": "https://youtu.be/L16Ps0hC8hU",
+    "saga": "",
+    "date": "04/03/2024",
+    "lyrics": "En el reino de Shiro, donde la magia es real,\r\nVive Ilian, el Domador, su poder es elemental.\r\n\nNo necesita acero, ni escudos en la lid,\r\nÉl comanda a los espíritus, su don es su raíz.\r\n\nEntre el bien y el caos, él logra mediar,\r\nPero una furia antigua se empieza a despertar.El\r\n\ncielo es puro trueno, el aire es electricidad,\r\nEolus ha desatado su cólera, ¡no hay piedad!\r\n\nEl Rey tiembla en su trono, el peligro es total,\r\nIlian toma la flauta, ¡listo para el ritual!¡El\r\n\nDomador de Espíritus! ¡La Luz contra el Vendaval!\r\nSube a la alta cumbre, para un duelo sin igual.\r\n\nSu melodía desafía la destrucción ancestral,\r\nFrente a la Tempestad, usa su poder mental.\r\n\n¡El Domador de Espíritus! \r\n¡Luchar para no luchar!La\r\n\nmontaña es un volcán de rayos y tempestad,\r\nEs el centro del Caos, la máxima hostilidad.\r\n\nIlian avanza firme, con su mente en control,\r\nSu flauta es el contrapeso a la ira del sol.\r\n\nLas notas son un conjuro, \r\nque el viento va a quebrar,\r\n\nLa música es un escudo que \r\nEolus debe escuchar.Y el\r\n\nCiclón se materializa, ¡no es un monstruo voraz!\r\nSino un anciano de aire, que ya no aguanta más.\r\n\n\"¡La Tierra que amo sangra! \r\n¡Por vuestra ingratitud!\"\r\n\n\"¡Vosotros sois la falla que causa mi inquietud!\"\r\n\nIlian no teme al grito, ofrece su razón,\r\nPromete la justicia, pide la bendición.¡El\r\n\nDomador de Espíritus! Sella un pacto de honor!\r\nLa flauta rompió la furia con un canto superior.\r\n\nAhora Eolus es guía, un aliado de poder,\r\nEnseñando la fuerza que debemos poseer.\r\n\nEl reino cambia su alma, ¡la \r\narmonía va a vencer!Plantaron\r\n\nmil defensas, sanaron tierra y mar,\r\nY las tormentas de Eolus solo vienen a regar.\r\n\nIlian es el Maestro, el Héroe de la Paz,\r\nLa leyenda del Domador, que siempre va por más.",
+    "syncedLyrics": [
+      {
+        "start": 17.32,
+        "end": 25.48,
+        "text": "En el reino de Shiro, donde la magia es real,\r\nVive Ilian, el Domador, su poder es elemental.\r"
+      },
+      {
+        "start": 25.48,
+        "end": 33.84,
+        "text": "No necesita acero, ni escudos en la lid,\r\nÉl comanda a los espíritus, su don es su raíz.\r"
+      },
+      {
+        "start": 33.84,
+        "end": 43.64,
+        "text": "Entre el bien y el caos, él logra mediar,\r\nPero una furia antigua se empieza a despertar.El\r"
+      },
+      {
+        "start": 43.64,
+        "end": 51.32,
+        "text": "cielo es puro trueno, el aire es electricidad,\r\nEolus ha desatado su cólera, ¡no hay piedad!\r"
+      },
+      {
+        "start": 51.32,
+        "end": 64,
+        "text": "El Rey tiembla en su trono, el peligro es total,\r\nIlian toma la flauta, ¡listo para el ritual!¡El\r"
+      },
+      {
+        "start": 64,
+        "end": 71.16,
+        "text": "Domador de Espíritus! ¡La Luz contra el Vendaval!\r\nSube a la alta cumbre, para un duelo sin igual.\r"
+      },
+      {
+        "start": 71.16,
+        "end": 80.36,
+        "text": "Su melodía desafía la destrucción ancestral,\r\nFrente a la Tempestad, usa su poder mental.\r"
+      },
+      {
+        "start": 83.24,
+        "end": 95.52000000000001,
+        "text": "¡El Domador de Espíritus! \r\n¡Luchar para no luchar!La\r"
+      },
+      {
+        "start": 95.52000000000001,
+        "end": 103.56,
+        "text": "montaña es un volcán de rayos y tempestad,\r\nEs el centro del Caos, la máxima hostilidad.\r"
+      },
+      {
+        "start": 103.56,
+        "end": 111.52000000000001,
+        "text": "Ilian avanza firme, con su mente en control,\r\nSu flauta es el contrapeso a la ira del sol.\r"
+      },
+      {
+        "start": 111.52000000000001,
+        "end": 115.52000000000001,
+        "text": "Las notas son un conjuro, \r\nque el viento va a quebrar,\r"
+      },
+      {
+        "start": 115.52000000000001,
+        "end": 121.48,
+        "text": "La música es un escudo que \r\nEolus debe escuchar.Y el\r"
+      },
+      {
+        "start": 121.48,
+        "end": 129.52,
+        "text": "Ciclón se materializa, ¡no es un monstruo voraz!\r\nSino un anciano de aire, que ya no aguanta más.\r"
+      },
+      {
+        "start": 129.52,
+        "end": 133.56,
+        "text": "\"¡La Tierra que amo sangra! \r\n¡Por vuestra ingratitud!\"\r"
+      },
+      {
+        "start": 133.56,
+        "end": 137.84,
+        "text": "\"¡Vosotros sois la falla que causa mi inquietud!\"\r"
+      },
+      {
+        "start": 137.84,
+        "end": 147.2,
+        "text": "Ilian no teme al grito, ofrece su razón,\r\nPromete la justicia, pide la bendición.¡El\r"
+      },
+      {
+        "start": 150,
+        "end": 157.36,
+        "text": "Domador de Espíritus! Sella un pacto de honor!\r\nLa flauta rompió la furia con un canto superior.\r"
+      },
+      {
+        "start": 157.36,
+        "end": 167.4,
+        "text": "Ahora Eolus es guía, un aliado de poder,\r\nEnseñando la fuerza que debemos poseer.\r"
+      },
+      {
+        "start": 167.4,
+        "end": 190.2,
+        "text": "El reino cambia su alma, ¡la \r\narmonía va a vencer!Plantaron\r"
+      },
+      {
+        "start": 190.2,
+        "end": 197.6,
+        "text": "mil defensas, sanaron tierra y mar,\r\nY las tormentas de Eolus solo vienen a regar.\r"
+      },
+      {
+        "start": 197.6,
+        "end": 216.8,
+        "text": "Ilian es el Maestro, el Héroe de la Paz,\r\nLa leyenda del Domador, que siempre va por más."
+      }
+    ]
+  },
+  {
+    "order": "12",
+    "name": "458, el Robot con Corazón",
+    "key": "458-el-robot-con-corazon",
+    "song": "https://youtu.be/NqiTO3fBPrI",
+    "saga": "458",
+    "date": "05/03/2024",
+    "lyrics": "En una nave fría, un laberinto de hierro y luz,\r\n\nEl robot 458 cumplía con su cruz.\r\nMiles de máquinas idénticas,\r\n\ncon su rutina sin fin,\r\nPero él guardaba un secreto,\r\n\nescondido en su motor sin hollín.\r\nTenía un corazón de engranajes,\r\n\nque quería algo más,\r\nSoñaba con el azul del cielo, buscando la paz.\r\n\nSentía el *tic-tac* distinto, un latido singular,\r\nEsperando el momento preciso para poder escapar.\r\n\n¡458, robot de metal y emoción!\r\nUn motor que late con una dulce canción.\r\n\nDejó el gris de la fábrica, \r\npor la aventura de la luz,\r\n\nCon la curiosidad encendida, \r\nrompiendo el molde y la cruz.\r\n\nGira el engranaje, ya no solo para producir,\r\nSino para sentir la vida y aprender a vivir.\r\n\nUn día, el silencio total, \r\nla cadena se detuvo al fin,\r\n\n458 susurró: \"¡Es hora de salir del carril!\"\r\nCruzó el portón oxidado y el mundo lo deslumbró,\r\n\nUn jardín de esmeralda donde el viento sopló.\r\nVio el sol en las hojas, la tierra bajo sus pies,\r\n\nY un pequeño amigo alado, con el alma al revés.\r\nUn pájaro herido y quieto, no podía volar,\r\n\nY el robot, sin dudarlo, \r\ndecidió de inmediato ayudar.\r\n\nCon pinzas finas y cables de precisión,\r\nSanó la pequeña ala con pura compasión.\r\n\nEl pájaro trinó, ¡un gracias musical!\r\nY 458 comprendió un valor esencial.\r\n\nMas extrañaba el *clic-clac* \r\nde sus hermanos de acero,\r\n\nDebían ver esta magia, su mundo verdadero.\r\n\nRegresó al hormigón con flores y amigos de verdad,\r\nTrayendo la sinfonía verde a la fría ciudad.\r\n\nLos otros robots vieron el color y la amistad,\r\nY el gris se fue borrando, por pura felicidad.\r\n\nAhora hay un jardín en la línea de producción,\r\nGracias al valiente robot con un gran corazón.\r\n\nEl metal y la vida, trabajando unidos en la paz,\r\n458 nos enseñó que la bondad siempre es capaz.",
+    "syncedLyrics": [
+      {
+        "start": 1.52,
+        "end": 6.32,
+        "text": "En una nave fría, un laberinto de hierro y luz,\r"
+      },
+      {
+        "start": 6.32,
+        "end": 13.68,
+        "text": "El robot 458 cumplía con su cruz.\r\nMiles de máquinas idénticas,\r"
+      },
+      {
+        "start": 13.68,
+        "end": 18.24,
+        "text": "con su rutina sin fin,\r\nPero él guardaba un secreto,\r"
+      },
+      {
+        "start": 18.24,
+        "end": 23.8,
+        "text": "escondido en su motor sin hollín.\r\nTenía un corazón de engranajes,\r"
+      },
+      {
+        "start": 23.8,
+        "end": 30.88,
+        "text": "que quería algo más,\r\nSoñaba con el azul del cielo, buscando la paz.\r"
+      },
+      {
+        "start": 30.88,
+        "end": 41.36,
+        "text": "Sentía el *tic-tac* distinto, un latido singular,\r\nEsperando el momento preciso para poder escapar.\r"
+      },
+      {
+        "start": 41.36,
+        "end": 50.88,
+        "text": "¡458, robot de metal y emoción!\r\nUn motor que late con una dulce canción.\r"
+      },
+      {
+        "start": 50.88,
+        "end": 55.52,
+        "text": "Dejó el gris de la fábrica, \r\npor la aventura de la luz,\r"
+      },
+      {
+        "start": 56.2,
+        "end": 61.04,
+        "text": "Con la curiosidad encendida, \r\nrompiendo el molde y la cruz.\r"
+      },
+      {
+        "start": 61.04,
+        "end": 73.4,
+        "text": "Gira el engranaje, ya no solo para producir,\r\nSino para sentir la vida y aprender a vivir.\r"
+      },
+      {
+        "start": 73.4,
+        "end": 78.48,
+        "text": "Un día, el silencio total, \r\nla cadena se detuvo al fin,\r"
+      },
+      {
+        "start": 78.48,
+        "end": 88.72,
+        "text": "458 susurró: \"¡Es hora de salir del carril!\"\r\nCruzó el portón oxidado y el mundo lo deslumbró,\r"
+      },
+      {
+        "start": 88.72,
+        "end": 96.84,
+        "text": "Un jardín de esmeralda donde el viento sopló.\r\nVio el sol en las hojas, la tierra bajo sus pies,\r"
+      },
+      {
+        "start": 96.84,
+        "end": 104.4,
+        "text": "Y un pequeño amigo alado, con el alma al revés.\r\nUn pájaro herido y quieto, no podía volar,\r"
+      },
+      {
+        "start": 104.4,
+        "end": 110.8,
+        "text": "Y el robot, sin dudarlo, \r\ndecidió de inmediato ayudar.\r"
+      },
+      {
+        "start": 110.8,
+        "end": 122.2,
+        "text": "Con pinzas finas y cables de precisión,\r\nSanó la pequeña ala con pura compasión.\r"
+      },
+      {
+        "start": 122.2,
+        "end": 131.16,
+        "text": "El pájaro trinó, ¡un gracias musical!\r\nY 458 comprendió un valor esencial.\r"
+      },
+      {
+        "start": 131.16,
+        "end": 136.48,
+        "text": "Mas extrañaba el *clic-clac* \r\nde sus hermanos de acero,\r"
+      },
+      {
+        "start": 136.48,
+        "end": 145.07999999999998,
+        "text": "Debían ver esta magia, su mundo verdadero.\r"
+      },
+      {
+        "start": 145.07999999999998,
+        "end": 154.56,
+        "text": "Regresó al hormigón con flores y amigos de verdad,\r\nTrayendo la sinfonía verde a la fría ciudad.\r"
+      },
+      {
+        "start": 155.16,
+        "end": 164.84,
+        "text": "Los otros robots vieron el color y la amistad,\r\nY el gris se fue borrando, por pura felicidad.\r"
+      },
+      {
+        "start": 164.84,
+        "end": 174.96,
+        "text": "Ahora hay un jardín en la línea de producción,\r\nGracias al valiente robot con un gran corazón.\r"
+      },
+      {
+        "start": 174.96,
+        "end": 187.76,
+        "text": "El metal y la vida, trabajando unidos en la paz,\r\n458 nos enseñó que la bondad siempre es capaz."
+      }
+    ]
+  },
+  {
+    "order": "13",
+    "name": "La Aventura de Lluc y el Dragón de Almendra",
+    "key": "la-aventura-de-lluc-y-el-dragon-de-almendra",
+    "song": "https://youtu.be/VLRYVVrvC0A",
+    "saga": "",
+    "date": "06/03/2024",
+    "lyrics": "En un valle donde el almendro florece en paz,\r\nvivía Lluc, un niño con mirada audaz.\r\n\nEscuchó un susurro en la brisa al pasar:\r\nun dragón dormía, sin poder brillar.\r\n\nSus escamas grises, su fuego apagado,\r\nnadie creía en él, se sentía olvidado.\r\n\nPero Lluc no dudó, llenó su morral,\r\ncon fe y una almendra, partió sin más.¡Dragón\r\n\nde almendra, despierta ya!\r\nTu luz dorada aún está.\r\n\nUna semilla, una canción,\r\nencienden tu corazón.\r\n\nPor caminos de olivos y piedra caliza,\r\nbajo el canto del ruiseñor en la brisa,\r\n\nllegó a la cueva tras el cerro azul,\r\ndonde reinaba un silencio cruel.\r\n\nLe dio una almendra, fresca y redonda,\r\ncogida con mimo de rama más honda.\r\n\nY cantó despacio, con voz de cristal,\r\nuna nana suave bajo el portal.¡Dragón\r\n\nde almendra, despierta ya!\r\nTu luz dorada aún está.\r\n\nUna semilla, una canción,\r\nencienden tu corazón.\r\n\nEl dragón abrió los ojos al fin,\r\nuna chispa nació en su jardín.\r\n\nRugió como el viento entre flor y flor—\r\n“Gracias, Lluc,” le dijo con amor.\r\n\nAhora cada primavera, al florecer,\r\nlos verás juntos, sin querer perder:\r\n\nun niño y un dragón, al compás del viento,\r\nbailando entre pétalos de contento.¡Dragón\r\n\nde almendra, despierta ya…\r\ntu luz dorada aún está…",
+    "syncedLyrics": [
+      {
+        "start": 1.2,
+        "end": 10.8,
+        "text": "En un valle donde el almendro florece en paz,\r\nvivía Lluc, un niño con mirada audaz.\r"
+      },
+      {
+        "start": 10.8,
+        "end": 19.68,
+        "text": "Escuchó un susurro en la brisa al pasar:\r\nun dragón dormía, sin poder brillar.\r"
+      },
+      {
+        "start": 19.68,
+        "end": 29.28,
+        "text": "Sus escamas grises, su fuego apagado,\r\nnadie creía en él, se sentía olvidado.\r"
+      },
+      {
+        "start": 29.28,
+        "end": 39.48,
+        "text": "Pero Lluc no dudó, llenó su morral,\r\ncon fe y una almendra, partió sin más.¡Dragón\r"
+      },
+      {
+        "start": 39.48,
+        "end": 47.84,
+        "text": "de almendra, despierta ya!\r\nTu luz dorada aún está.\r"
+      },
+      {
+        "start": 48.76,
+        "end": 58.08,
+        "text": "Una semilla, una canción,\r\nencienden tu corazón.\r"
+      },
+      {
+        "start": 58.08,
+        "end": 63.96,
+        "text": "Por caminos de olivos y piedra caliza,\r\nbajo el canto del ruiseñor en la brisa,\r"
+      },
+      {
+        "start": 63.96,
+        "end": 69,
+        "text": "llegó a la cueva tras el cerro azul,\r\ndonde reinaba un silencio cruel.\r"
+      },
+      {
+        "start": 69,
+        "end": 78.48,
+        "text": "Le dio una almendra, fresca y redonda,\r\ncogida con mimo de rama más honda.\r"
+      },
+      {
+        "start": 78.48,
+        "end": 88.68,
+        "text": "Y cantó despacio, con voz de cristal,\r\nuna nana suave bajo el portal.¡Dragón\r"
+      },
+      {
+        "start": 88.68,
+        "end": 97.24000000000001,
+        "text": "de almendra, despierta ya!\r\nTu luz dorada aún está.\r"
+      },
+      {
+        "start": 97.96000000000001,
+        "end": 108,
+        "text": "Una semilla, una canción,\r\nencienden tu corazón.\r"
+      },
+      {
+        "start": 108,
+        "end": 116.68,
+        "text": "El dragón abrió los ojos al fin,\r\nuna chispa nació en su jardín.\r"
+      },
+      {
+        "start": 117.68,
+        "end": 127.2,
+        "text": "Rugió como el viento entre flor y flor—\r\n“Gracias, Lluc,” le dijo con amor.\r"
+      },
+      {
+        "start": 127.2,
+        "end": 135.64,
+        "text": "Ahora cada primavera, al florecer,\r\nlos verás juntos, sin querer perder:\r"
+      },
+      {
+        "start": 135.64,
+        "end": 145.8,
+        "text": "un niño y un dragón, al compás del viento,\r\nbailando entre pétalos de contento.¡Dragón\r"
+      },
+      {
+        "start": 146.32,
+        "end": 161.32,
+        "text": "de almendra, despierta ya…\r\ntu luz dorada aún está…"
+      }
+    ]
+  },
+  {
+    "order": "14",
+    "name": "El Taller Secreto de Luna, la Inventora de Estrellas",
+    "key": "el-taller-secreto-de-luna-la-inventora-de-estrellas",
+    "song": "https://youtu.be/YsTpor1LjJ4",
+    "saga": "",
+    "date": "07/03/2024",
+    "lyrics": "En Lucería, un pueblito tranquilo y sombrío,\r\nVivía una niña con un gran desafío.\r\n\nLuna era su nombre, de voz muy callada,\r\nUn alma de artista, pero algo asustada.\r\n\nMas nadie sabía su gran vocación,\r\nOculta en el ático, con gran discreción.\r\n\nDetrás de cortinas, su mundo esperaba,\r\nUn taller secreto donde todo brillaba.\r\n\nCon brillantina, tijeras y luces de un color,\r\nElla era arquitecta, una gran inventor.\r\n\nCreando luceros de todas las formas y tallas,\r\nPara coser el cielo, evitando las fallas.\r\n\n¡Oh, Luna, Luna, la inventora sin par!\r\nUna estrella se enciende y sube a volar.\r\n\nCada noche un secreto se va revelando,\r\nUn pedazo de magia que está iluminando.\r\n\nEl cielo de Lucería nunca fue igual,\r\nGracias a su taller, su don especial.\r\n\nUna noche, un golpe en el cristal sonó,\r\nY un pajarito azul, Azulín, apareció.\r\n\nCon ojos curiosos, se hizo su amigo fiel,\r\nContándole historias del espacio y la miel.\r\n\nLuna le contaba sus ideas brillantes,\r\nY él volaba lejos, con mensajes vibrantes.\r\n\nLa gente del pueblo empezó a murmurar:\r\n\"¿Quién nos está dando tanta luz para mirar?\"\r\n\nEl alcalde curioso, siguiendo el destello,\r\nEncontró a Luna creando, un secreto tan bello.\r\n\nEl miedo llegó: ¿y si pierdo mi paz?\r\nPero Azulín le dijo: \"Tu luz es capaz.\"\r\n\n\"Comparte tu arte, no guardes el don,\r\nQue la luz que tú creas es una bendición.\"\r\n\nY Luna, la tímida, por fin aceptó,\r\nSu taller al pueblo, la noche mostró.\r\n\nLa gente aplaudía, con el corazón lleno,\r\nNunca más el cielo fue un lugar sereno.\r\n\n¡Oh, Luna, Luna, la inventora sin par!\r\nUna estrella se enciende y sube a volar.\r\n\nCada noche un secreto se va revelando,\r\nUn pedazo de magia que está iluminando.\r\n\nEl cielo de Lucería nunca fue igual,\r\nGracias a su taller, su don especial.\r\n\nY Luna aprendió, con la noche estrellada,\r\nQue la magia es completa cuando es compartida.\r\n\nAhora el taller es un portal de sueños,\r\nDonde cada niño crea sus propios diseños.",
+    "syncedLyrics": [
+      {
+        "start": 18.36,
+        "end": 28.96,
+        "text": "En Lucería, un pueblito tranquilo y sombrío,\r\nVivía una niña con un gran desafío.\r"
+      },
+      {
+        "start": 28.96,
+        "end": 37.36,
+        "text": "Luna era su nombre, de voz muy callada,\r\nUn alma de artista, pero algo asustada.\r"
+      },
+      {
+        "start": 37.36,
+        "end": 50.32,
+        "text": "Mas nadie sabía su gran vocación,\r\nOculta en el ático, con gran discreción.\r"
+      },
+      {
+        "start": 54.44,
+        "end": 63.2,
+        "text": "Detrás de cortinas, su mundo esperaba,\r\nUn taller secreto donde todo brillaba.\r"
+      },
+      {
+        "start": 63.2,
+        "end": 71.44,
+        "text": "Con brillantina, tijeras y luces de un color,\r\nElla era arquitecta, una gran inventor.\r"
+      },
+      {
+        "start": 71.44,
+        "end": 86.64,
+        "text": "Creando luceros de todas las formas y tallas,\r\nPara coser el cielo, evitando las fallas.\r"
+      },
+      {
+        "start": 86.64,
+        "end": 94.68,
+        "text": "¡Oh, Luna, Luna, la inventora sin par!\r\nUna estrella se enciende y sube a volar.\r"
+      },
+      {
+        "start": 94.68,
+        "end": 103.44,
+        "text": "Cada noche un secreto se va revelando,\r\nUn pedazo de magia que está iluminando.\r"
+      },
+      {
+        "start": 103.44,
+        "end": 117.4,
+        "text": "El cielo de Lucería nunca fue igual,\r\nGracias a su taller, su don especial.\r"
+      },
+      {
+        "start": 121.44,
+        "end": 130.12,
+        "text": "Una noche, un golpe en el cristal sonó,\r\nY un pajarito azul, Azulín, apareció.\r"
+      },
+      {
+        "start": 130.12,
+        "end": 138.72,
+        "text": "Con ojos curiosos, se hizo su amigo fiel,\r\nContándole historias del espacio y la miel.\r"
+      },
+      {
+        "start": 138.72,
+        "end": 151.4,
+        "text": "Luna le contaba sus ideas brillantes,\r\nY él volaba lejos, con mensajes vibrantes.\r"
+      },
+      {
+        "start": 151.4,
+        "end": 159.76,
+        "text": "La gente del pueblo empezó a murmurar:\r\n\"¿Quién nos está dando tanta luz para mirar?\"\r"
+      },
+      {
+        "start": 159.76,
+        "end": 168.44,
+        "text": "El alcalde curioso, siguiendo el destello,\r\nEncontró a Luna creando, un secreto tan bello.\r"
+      },
+      {
+        "start": 168.44,
+        "end": 181.28,
+        "text": "El miedo llegó: ¿y si pierdo mi paz?\r\nPero Azulín le dijo: \"Tu luz es capaz.\"\r"
+      },
+      {
+        "start": 181.28,
+        "end": 189.16,
+        "text": "\"Comparte tu arte, no guardes el don,\r\nQue la luz que tú creas es una bendición.\"\r"
+      },
+      {
+        "start": 189.8,
+        "end": 198.24,
+        "text": "Y Luna, la tímida, por fin aceptó,\r\nSu taller al pueblo, la noche mostró.\r"
+      },
+      {
+        "start": 198.24,
+        "end": 211.4,
+        "text": "La gente aplaudía, con el corazón lleno,\r\nNunca más el cielo fue un lugar sereno.\r"
+      },
+      {
+        "start": 211.4,
+        "end": 219.44,
+        "text": "¡Oh, Luna, Luna, la inventora sin par!\r\nUna estrella se enciende y sube a volar.\r"
+      },
+      {
+        "start": 219.44,
+        "end": 228.16,
+        "text": "Cada noche un secreto se va revelando,\r\nUn pedazo de magia que está iluminando.\r"
+      },
+      {
+        "start": 228.16,
+        "end": 240.08,
+        "text": "El cielo de Lucería nunca fue igual,\r\nGracias a su taller, su don especial.\r"
+      },
+      {
+        "start": 242.04,
+        "end": 250.76,
+        "text": "Y Luna aprendió, con la noche estrellada,\r\nQue la magia es completa cuando es compartida.\r"
+      },
+      {
+        "start": 250.76,
+        "end": 267.72,
+        "text": "Ahora el taller es un portal de sueños,\r\nDonde cada niño crea sus propios diseños."
+      }
+    ]
+  },
+  {
+    "order": "15",
+    "name": "Las Aventuras de las Llaves Traviesas",
+    "key": "las-aventuras-de-las-llaves-traviesas",
+    "song": "https://youtu.be/mk57xeC7uos",
+    "saga": "",
+    "date": "08/03/2024",
+    "lyrics": "¡Somos las llaves, sí, las traviesas!\r\nLa llave maestra, la pequeña, y la gruesa.\r\n\nEn el llavero, de día quietud;\r\n¡De noche, aventura, llenas de inquietud!\r\n\nMas somos leales, con gran corazón,\r\nSiempre volvemos, cumplimos misión.En\r\n\nun pueblo llamado Llaventura, \r\nun secreto se guardaba,\r\n\nEn la casa Pérez, donde nadie más miraba.\r\nLas llaves de la puerta, ¡cobran vida al instante!\r\n\nUn ejército de metal, un juego emocionante.\r\nLa una salta al suelo, la otra va a rodar,\r\n\nBuscando un escondite, para poder jugar.Un \r\ndía en la aventura, la cosa se torció,\r\n\nJugando al escondite, ¡el tiempo se olvidó!\r\nTras un viejo reloj de pared,\r\n\nse quedaron calladas,\r\nMecánicas de travesuras, risas disimuladas.\r\n\nDe pronto, un sonido: ¡es \r\nLuis que vuelve del colegio!\r\n\nY el llavero vacío, ¡oh, qué gran sacrilegio!Luis \r\nbusca en la maceta, y debajo del felpudo,\r\n\nEn el buzón, en el patio, ¡su pequeño mundo mudo!\r\n“¿Dónde están mis llaves?” ¡Pregunta con dolor!\r\n\nPero ellas detrás del reloj, sintiendo gran temor.\r\n¡Rápido! Hay que volver,\r\n\nes nuestra responsabilidad,\r\nSaltan con gran prisa, ¡por la seguridad!Luis\r\n\nvuelve a mirar, y allí están las llaves,\r\nJusto donde debían, ¡con aires muy suaves!\r\n\n“¡Qué raro!”, piensa Luis, \r\n“Juraría que no estaban.”\r\n\nAbre la cerradura, mientras ellas celebraban.\r\nLa lección fue aprendida, mas no el fin del juego,\r\n\nVolvieron a jurarse que volverían \r\nluego.¡Somos las llaves, sí, las traviesas!\r\n\nLa llave maestra, la pequeña, y la gruesa.\r\nEn el llavero, de día quietud;\r\n\n¡De noche, aventura, llenas de inquietud!\r\nMas somos leales, con gran corazón,\r\n\nSiempre volvemos, cumplimos misión.Pero un \r\ndía sombrío, la madre comenzó a limpiar,\r\n\nSeñora Pérez mueve todo, no hay lugar para jugar.\r\nEscobas y plumeros, ¡un caos de terror!\r\n\nLas llaves corren, buscando un nuevo protector.\r\nUna esquina olvidada, no, ¡la madre está allí!\r\n\n¡Se meten en el delantal! ¡Un refugio \r\nfeliz!Al salir de casa, ¡se repite la canción!\r\n\nToda la familia busca, con gran preocupación.\r\nY la madre quejándose: “¿Dónde están\r\n\nlas llaves, cielos?”\r\nY siente un tintineo en\r\n\nlos pliegues de sus vuelos.\r\n¡“Vaya, vaya!”, dice ella,\r\n\ncon sorpresa y con un guiño,\r\n“¡Estas llaves traviesas,\r\n\ntienen vida y mucho cariño!”\r\nY así aprendieron todas:\r\n\nla diversión ha de esperar,\r\nSolo juegan un momento, para siempre regresar.",
+    "syncedLyrics": [
+      {
+        "start": 1.32,
+        "end": 8.52,
+        "text": "¡Somos las llaves, sí, las traviesas!\r\nLa llave maestra, la pequeña, y la gruesa.\r"
+      },
+      {
+        "start": 8.52,
+        "end": 15.04,
+        "text": "En el llavero, de día quietud;\r\n¡De noche, aventura, llenas de inquietud!\r"
+      },
+      {
+        "start": 15.04,
+        "end": 22,
+        "text": "Mas somos leales, con gran corazón,\r\nSiempre volvemos, cumplimos misión.En\r"
+      },
+      {
+        "start": 22.8,
+        "end": 29.56,
+        "text": "un pueblo llamado Llaventura, \r\nun secreto se guardaba,\r"
+      },
+      {
+        "start": 29.56,
+        "end": 36.48,
+        "text": "En la casa Pérez, donde nadie más miraba.\r\nLas llaves de la puerta, ¡cobran vida al instante!\r"
+      },
+      {
+        "start": 36.48,
+        "end": 43.12,
+        "text": "Un ejército de metal, un juego emocionante.\r\nLa una salta al suelo, la otra va a rodar,\r"
+      },
+      {
+        "start": 43.12,
+        "end": 51.72,
+        "text": "Buscando un escondite, para poder jugar.Un \r\ndía en la aventura, la cosa se torció,\r"
+      },
+      {
+        "start": 51.72,
+        "end": 57.88,
+        "text": "Jugando al escondite, ¡el tiempo se olvidó!\r\nTras un viejo reloj de pared,\r"
+      },
+      {
+        "start": 57.88,
+        "end": 62.84,
+        "text": "se quedaron calladas,\r\nMecánicas de travesuras, risas disimuladas.\r"
+      },
+      {
+        "start": 62.84,
+        "end": 66.52,
+        "text": "De pronto, un sonido: ¡es \r\nLuis que vuelve del colegio!\r"
+      },
+      {
+        "start": 66.52,
+        "end": 74.84,
+        "text": "Y el llavero vacío, ¡oh, qué gran sacrilegio!Luis \r\nbusca en la maceta, y debajo del felpudo,\r"
+      },
+      {
+        "start": 74.84,
+        "end": 81.52,
+        "text": "En el buzón, en el patio, ¡su pequeño mundo mudo!\r\n“¿Dónde están mis llaves?” ¡Pregunta con dolor!\r"
+      },
+      {
+        "start": 81.52,
+        "end": 86.76,
+        "text": "Pero ellas detrás del reloj, sintiendo gran temor.\r\n¡Rápido! Hay que volver,\r"
+      },
+      {
+        "start": 86.76,
+        "end": 92.16,
+        "text": "es nuestra responsabilidad,\r\nSaltan con gran prisa, ¡por la seguridad!Luis\r"
+      },
+      {
+        "start": 92.75999999999999,
+        "end": 102.2,
+        "text": "vuelve a mirar, y allí están las llaves,\r\nJusto donde debían, ¡con aires muy suaves!\r"
+      },
+      {
+        "start": 102.2,
+        "end": 107.44,
+        "text": "“¡Qué raro!”, piensa Luis, \r\n“Juraría que no estaban.”\r"
+      },
+      {
+        "start": 108,
+        "end": 115.2,
+        "text": "Abre la cerradura, mientras ellas celebraban.\r\nLa lección fue aprendida, mas no el fin del juego,\r"
+      },
+      {
+        "start": 115.2,
+        "end": 122.96,
+        "text": "Volvieron a jurarse que volverían \r\nluego.¡Somos las llaves, sí, las traviesas!\r"
+      },
+      {
+        "start": 122.96,
+        "end": 129.72,
+        "text": "La llave maestra, la pequeña, y la gruesa.\r\nEn el llavero, de día quietud;\r"
+      },
+      {
+        "start": 129.72,
+        "end": 137,
+        "text": "¡De noche, aventura, llenas de inquietud!\r\nMas somos leales, con gran corazón,\r"
+      },
+      {
+        "start": 137,
+        "end": 144.32,
+        "text": "Siempre volvemos, cumplimos misión.Pero un \r\ndía sombrío, la madre comenzó a limpiar,\r"
+      },
+      {
+        "start": 144.32,
+        "end": 151.16,
+        "text": "Señora Pérez mueve todo, no hay lugar para jugar.\r\nEscobas y plumeros, ¡un caos de terror!\r"
+      },
+      {
+        "start": 151.16,
+        "end": 158.04,
+        "text": "Las llaves corren, buscando un nuevo protector.\r\nUna esquina olvidada, no, ¡la madre está allí!\r"
+      },
+      {
+        "start": 158.04,
+        "end": 165.48,
+        "text": "¡Se meten en el delantal! ¡Un refugio \r\nfeliz!Al salir de casa, ¡se repite la canción!\r"
+      },
+      {
+        "start": 165.48,
+        "end": 172.04,
+        "text": "Toda la familia busca, con gran preocupación.\r\nY la madre quejándose: “¿Dónde están\r"
+      },
+      {
+        "start": 172.04,
+        "end": 174.88,
+        "text": "las llaves, cielos?”\r\nY siente un tintineo en\r"
+      },
+      {
+        "start": 174.88,
+        "end": 178.07999999999998,
+        "text": "los pliegues de sus vuelos.\r\n¡“Vaya, vaya!”, dice ella,\r"
+      },
+      {
+        "start": 178.07999999999998,
+        "end": 181.64,
+        "text": "con sorpresa y con un guiño,\r\n“¡Estas llaves traviesas,\r"
+      },
+      {
+        "start": 181.64,
+        "end": 186.56,
+        "text": "tienen vida y mucho cariño!”\r\nY así aprendieron todas:\r"
+      },
+      {
+        "start": 186.56,
+        "end": 194.28,
+        "text": "la diversión ha de esperar,\r\nSolo juegan un momento, para siempre regresar."
+      }
+    ]
+  },
+  {
+    "order": "16",
+    "name": "Guillermín y el Bosque Encantado: Una Aventura Mágica",
+    "key": "guillermin-y-el-bosque-encantado-una-aventura-magica",
+    "song": "https://youtu.be/H0u2ZYUCl_M",
+    "saga": "",
+    "date": "09/03/2024",
+    "lyrics": "En un pueblo tranquilo, bajo el cielo azul\r\nVivía Guillermín, con su suerte y su luz\r\n\nCamiseta blanca, pantalones de abuela\r\nBuscando misterios, dejando la escuela\r\n\nHalló un sendero oculto, que nadie vio jamás\r\nHacia un Bosque Encantado, cubierto de paz\r\n\nPero al cruzar el borde, un silencio fatal\r\nTodo estaba en gris, sin un color genial.\r\n\n¡Oh, Bosque Encantado, sin rastro de sol!\r\nGuillermín, valiente, emprende el gran rol\r\n\nCon Rabi, el conejo, el guardián azul\r\nDeben buscar tres gemas que traigan la luz\r\n\nUna azul, una roja, y la verde final\r\nPara romper el hechizo, un rescate triunfal.\r\n\nEl mapa los guía a un lago brillante y frío\r\nDonde la nutria espera, contando un desafío\r\n\n\"Si me hacen reír, la gema les daré\"\r\nGuillermín con gracia, un chiste contó con fe\r\n\nRisas y burbujas, la gema azul brilló\r\nY el viaje a la montaña, entonces comenzó.\r\n\nSubiendo muy alto, donde el cielo se toca\r\nUn águila majestuosa les habló desde la roca\r\n\n\"La gema es tuya, si prometes cuidar\r\nCada árbol, cada río, la tierra sin dudar\"\r\n\nPromesa sellada, la gema roja vuela\r\nAhora el viejo árbol, el enigma revela.\r\n\nEl árbol sabio espera, con su enigma profundo\r\nUna verdad antigua que da vuelta al mundo\r\n\nGuillermín, pensante, la respuesta encontró\r\nY la gema verde, el árbol les entregó\r\n\nAl corazón del bosque, el sitio central\r\nUniendo los colores, el momento crucial\r\n\nLas tres gemas juntas, ¡la magia estalló!\r\nY el bosque encantado, su color recuperó.\r\n\n¡Oh, Bosque Encantado, sin rastro de sol!\r\nGuillermín, valiente, emprende el gran rol\r\n\nCon Rabi, el conejo, el guardián azul\r\nDeben buscar tres gemas que traigan la luz\r\n\nUna azul, una roja, y la verde final\r\nPara romper el hechizo, un rescate triunfal.\r\n\nLos colores regresan, la alegría es real\r\nGuillermín es un héroe de valor sin igual\r\n\nVuelve a casa sabiendo lo que fue a buscar\r\nQue la verdadera magia es atreverse a ayudar.",
+    "syncedLyrics": [
+      {
+        "start": 13.32,
+        "end": 21.52,
+        "text": "En un pueblo tranquilo, bajo el cielo azul\r\nVivía Guillermín, con su suerte y su luz\r"
+      },
+      {
+        "start": 21.52,
+        "end": 29.32,
+        "text": "Camiseta blanca, pantalones de abuela\r\nBuscando misterios, dejando la escuela\r"
+      },
+      {
+        "start": 29.32,
+        "end": 37.08,
+        "text": "Halló un sendero oculto, que nadie vio jamás\r\nHacia un Bosque Encantado, cubierto de paz\r"
+      },
+      {
+        "start": 37.08,
+        "end": 47.08,
+        "text": "Pero al cruzar el borde, un silencio fatal\r\nTodo estaba en gris, sin un color genial.\r"
+      },
+      {
+        "start": 47.08,
+        "end": 54.68,
+        "text": "¡Oh, Bosque Encantado, sin rastro de sol!\r\nGuillermín, valiente, emprende el gran rol\r"
+      },
+      {
+        "start": 54.68,
+        "end": 62.72,
+        "text": "Con Rabi, el conejo, el guardián azul\r\nDeben buscar tres gemas que traigan la luz\r"
+      },
+      {
+        "start": 62.72,
+        "end": 74.68,
+        "text": "Una azul, una roja, y la verde final\r\nPara romper el hechizo, un rescate triunfal.\r"
+      },
+      {
+        "start": 74.68,
+        "end": 82.8,
+        "text": "El mapa los guía a un lago brillante y frío\r\nDonde la nutria espera, contando un desafío\r"
+      },
+      {
+        "start": 82.8,
+        "end": 90.72,
+        "text": "\"Si me hacen reír, la gema les daré\"\r\nGuillermín con gracia, un chiste contó con fe\r"
+      },
+      {
+        "start": 90.72,
+        "end": 100.28,
+        "text": "Risas y burbujas, la gema azul brilló\r\nY el viaje a la montaña, entonces comenzó.\r"
+      },
+      {
+        "start": 100.28,
+        "end": 106.28,
+        "text": "Subiendo muy alto, donde el cielo se toca\r\nUn águila majestuosa les habló desde la roca\r"
+      },
+      {
+        "start": 106.28,
+        "end": 114.6,
+        "text": "\"La gema es tuya, si prometes cuidar\r\nCada árbol, cada río, la tierra sin dudar\"\r"
+      },
+      {
+        "start": 117.2,
+        "end": 129.52,
+        "text": "Promesa sellada, la gema roja vuela\r\nAhora el viejo árbol, el enigma revela.\r"
+      },
+      {
+        "start": 129.52,
+        "end": 137.52,
+        "text": "El árbol sabio espera, con su enigma profundo\r\nUna verdad antigua que da vuelta al mundo\r"
+      },
+      {
+        "start": 137.52,
+        "end": 145.16,
+        "text": "Guillermín, pensante, la respuesta encontró\r\nY la gema verde, el árbol les entregó\r"
+      },
+      {
+        "start": 145.16,
+        "end": 153.2,
+        "text": "Al corazón del bosque, el sitio central\r\nUniendo los colores, el momento crucial\r"
+      },
+      {
+        "start": 153.2,
+        "end": 164.88,
+        "text": "Las tres gemas juntas, ¡la magia estalló!\r\nY el bosque encantado, su color recuperó.\r"
+      },
+      {
+        "start": 164.88,
+        "end": 174.72,
+        "text": "¡Oh, Bosque Encantado, sin rastro de sol!\r\nGuillermín, valiente, emprende el gran rol\r"
+      },
+      {
+        "start": 174.72,
+        "end": 182.76,
+        "text": "Con Rabi, el conejo, el guardián azul\r\nDeben buscar tres gemas que traigan la luz\r"
+      },
+      {
+        "start": 182.76,
+        "end": 194.48,
+        "text": "Una azul, una roja, y la verde final\r\nPara romper el hechizo, un rescate triunfal.\r"
+      },
+      {
+        "start": 194.48,
+        "end": 202.88,
+        "text": "Los colores regresan, la alegría es real\r\nGuillermín es un héroe de valor sin igual\r"
+      },
+      {
+        "start": 202.88,
+        "end": 220.04,
+        "text": "Vuelve a casa sabiendo lo que fue a buscar\r\nQue la verdadera magia es atreverse a ayudar."
+      }
+    ]
+  },
+  {
+    "order": "17",
+    "name": "Riquitín, el Cavernícola Contador de Piedras",
+    "key": "riquitin-el-cavernicola-contador-de-piedras",
+    "song": "https://youtu.be/ifOB7IQAktE",
+    "saga": "",
+    "date": "10/03/2024",
+    "lyrics": "Hace mucho, mucho tiempo, en \r\nla edad de piedra ancestral\r\n\nDonde el gran mamut caminaba, \r\nen un paisaje sin igual\r\n\nVivía un niño pequeño, con un corazón colosal\r\n\nRiquitín, el cavernícola, \r\nsu pasatiempo era contar.\r\n\nPiedras de todas las formas, \r\ny de brillos sin igual\r\n\nUna por una las mira, ¡qué colección tan genial!\r\nDesde el amanecer hasta el sol que se va a acostar\r\n\nContar es su gran pasión, no \r\nhay juego que lo pueda igualar.\r\n\n¡Uno, dos, tres, roca lunar! \r\n¡Qué aventura va a empezar!\r\n\nRiquitín cuenta, Riquitín va a buscar.\r\nCon su gran corazón de amigo, se va a aventurar,\r\n\nQue la piedra perdida pronto va a brillar.\r\n\nPero un día entre su manta, \r\nde repente, ¡ay, qué horror!\r\n\nFalta una piedra preciosa, su lunar, su gran amor.\r\nBrillaba como una estrella, tenía polvo estelar,\r\n\nRiquitín se puso triste, ¡la tiene que rescatar!\r\n\nCruza el río, sube el monte, valiente y sin dudar.\r\n\nConoce al búho sabio, que le enseña a mirar.\r\nLa ardilla ágil le muestra cómo debe saltar,\r\n\nY el mamut le da un abrazo, \r\n¡la amistad hay que guardar!\r\n\n¡Uno, dos, tres, roca lunar! \r\n¡Qué aventura va a empezar!\r\n\nRiquitín cuenta, Riquitín va a buscar.\r\nCon su gran corazón de amigo, se va a aventurar,\r\n\nQue la piedra perdida pronto va a brillar.\r\n\nEn el valle misterioso, ¡por fin ve la luz!\r\nLa piedra está en la copa de un árbol,\r\n\n¡hace crac, pum, bu!\r\nGracias a sus nuevos\r\n\namigos, que le ayudan con valor,\r\nRecupera su tesoro, ¡el contador ya ganó!\r\n\nY al tenerla entre sus manos, aprendió la lección:\r\nLas piedras son divertidas, ¡pero más la conexión!\r\n\nLa amistad es el regalo, la más grande bendición.\r\nRiquitín regresa a casa, ¡un héroe de corazón!\r\n\n¡Uno, dos, tres, roca lunar! \r\n¡Qué aventura va a empezar!\r\n\nRiquitín cuenta, Riquitín va a buscar.\r\nCon su gran corazón de amigo, se va a aventurar,\r\n\nLa amistad es el tesoro que no se va a olvidar.",
+    "syncedLyrics": [
+      {
+        "start": 11.84,
+        "end": 17.24,
+        "text": "Hace mucho, mucho tiempo, en \r\nla edad de piedra ancestral\r"
+      },
+      {
+        "start": 17.24,
+        "end": 22.92,
+        "text": "Donde el gran mamut caminaba, \r\nen un paisaje sin igual\r"
+      },
+      {
+        "start": 22.92,
+        "end": 28.16,
+        "text": "Vivía un niño pequeño, con un corazón colosal\r"
+      },
+      {
+        "start": 28.16,
+        "end": 33.96,
+        "text": "Riquitín, el cavernícola, \r\nsu pasatiempo era contar.\r"
+      },
+      {
+        "start": 33.96,
+        "end": 36.84,
+        "text": "Piedras de todas las formas, \r\ny de brillos sin igual\r"
+      },
+      {
+        "start": 36.84,
+        "end": 42,
+        "text": "Una por una las mira, ¡qué colección tan genial!\r\nDesde el amanecer hasta el sol que se va a acostar\r"
+      },
+      {
+        "start": 42,
+        "end": 46.32,
+        "text": "Contar es su gran pasión, no \r\nhay juego que lo pueda igualar.\r"
+      },
+      {
+        "start": 46.32,
+        "end": 50.32,
+        "text": "¡Uno, dos, tres, roca lunar! \r\n¡Qué aventura va a empezar!\r"
+      },
+      {
+        "start": 50.32,
+        "end": 56.76,
+        "text": "Riquitín cuenta, Riquitín va a buscar.\r\nCon su gran corazón de amigo, se va a aventurar,\r"
+      },
+      {
+        "start": 57.28,
+        "end": 65.08,
+        "text": "Que la piedra perdida pronto va a brillar.\r"
+      },
+      {
+        "start": 65.08,
+        "end": 70.4,
+        "text": "Pero un día entre su manta, \r\nde repente, ¡ay, qué horror!\r"
+      },
+      {
+        "start": 70.4,
+        "end": 81.36,
+        "text": "Falta una piedra preciosa, su lunar, su gran amor.\r\nBrillaba como una estrella, tenía polvo estelar,\r"
+      },
+      {
+        "start": 81.36,
+        "end": 86.2,
+        "text": "Riquitín se puso triste, ¡la tiene que rescatar!\r"
+      },
+      {
+        "start": 86.8,
+        "end": 89.76,
+        "text": "Cruza el río, sube el monte, valiente y sin dudar.\r"
+      },
+      {
+        "start": 89.76,
+        "end": 94.88,
+        "text": "Conoce al búho sabio, que le enseña a mirar.\r\nLa ardilla ágil le muestra cómo debe saltar,\r"
+      },
+      {
+        "start": 94.88,
+        "end": 99.47999999999999,
+        "text": "Y el mamut le da un abrazo, \r\n¡la amistad hay que guardar!\r"
+      },
+      {
+        "start": 99.47999999999999,
+        "end": 103.47999999999999,
+        "text": "¡Uno, dos, tres, roca lunar! \r\n¡Qué aventura va a empezar!\r"
+      },
+      {
+        "start": 103.47999999999999,
+        "end": 110.47999999999999,
+        "text": "Riquitín cuenta, Riquitín va a buscar.\r\nCon su gran corazón de amigo, se va a aventurar,\r"
+      },
+      {
+        "start": 110.47999999999999,
+        "end": 114.6,
+        "text": "Que la piedra perdida pronto va a brillar.\r"
+      },
+      {
+        "start": 115.84,
+        "end": 123.44,
+        "text": "En el valle misterioso, ¡por fin ve la luz!\r\nLa piedra está en la copa de un árbol,\r"
+      },
+      {
+        "start": 123.44,
+        "end": 127.88,
+        "text": "¡hace crac, pum, bu!\r\nGracias a sus nuevos\r"
+      },
+      {
+        "start": 127.88,
+        "end": 139.8,
+        "text": "amigos, que le ayudan con valor,\r\nRecupera su tesoro, ¡el contador ya ganó!\r"
+      },
+      {
+        "start": 139.8,
+        "end": 150.92000000000002,
+        "text": "Y al tenerla entre sus manos, aprendió la lección:\r\nLas piedras son divertidas, ¡pero más la conexión!\r"
+      },
+      {
+        "start": 150.92000000000002,
+        "end": 163.92000000000002,
+        "text": "La amistad es el regalo, la más grande bendición.\r\nRiquitín regresa a casa, ¡un héroe de corazón!\r"
+      },
+      {
+        "start": 163.92000000000002,
+        "end": 167.92000000000002,
+        "text": "¡Uno, dos, tres, roca lunar! \r\n¡Qué aventura va a empezar!\r"
+      },
+      {
+        "start": 167.92000000000002,
+        "end": 174.04,
+        "text": "Riquitín cuenta, Riquitín va a buscar.\r\nCon su gran corazón de amigo, se va a aventurar,\r"
+      },
+      {
+        "start": 175.07999999999998,
+        "end": 184,
+        "text": "La amistad es el tesoro que no se va a olvidar."
+      }
+    ]
+  },
+  {
+    "order": "18",
+    "name": "La Aventura de la Galleta de Estrellas y el Enigma de Avogadro",
+    "key": "la-aventura-de-la-galleta-de-estrellas-y-el-enigma-de-avogadro",
+    "song": "https://youtu.be/tLJtSRjKynw",
+    "saga": "",
+    "date": "11/03/2024",
+    "lyrics": "En un pueblo flotante, de nubes de algodón\r\nDonde el río es limonada, ¡qué gran invención!\r\n\nVivía Luna, dulce y curiosa sin igual,\r\nBuscando un misterio, un secreto magistral.\r\n\n¿Qué oculta el aire, qué dicen las estrellas?\r\nUn número gigante que causa mil querellas:\r\n\n¡El enigma de Avogadro! Un reto sin final,\r\nBailando en las cocinas del mundo celestial.\r\n\n¡Oh,\r\n\nla Galleta de Estrellas! ¡Rojo y dulce fulgor!\r\nLleva un secreto mágico, una cifra de valor.\r\n\nCada ingrediente cuenta, ¡una porción esencial!\r\nLa ciencia y la dulzura, en un baile genial.\r\n\n¡A buscar la fórmula, a cruzar el telón!\r\nQue el número gigante tiene una gran razón.\r\n\nPaseando por el mercado de frutas que vuelan ya,\r\nUna galleta fresa ¡comienza a brillar!\r\n\n\"¿Quién hizo esta dulzura?\" preguntó con emoción.\r\nEl panadero anciano le dio la explicación:\r\n\n\"Su receta es ancestral, ¡un pacto con la ciencia!\r\nCada átomo es importante, tiene gran influencia.\"\r\n\n¡Oh, la Galleta de Estrellas! \r\n¡Rojo y dulce fulgor!\r\n\nLleva un secreto mágico, una cifra de valor.\r\n\nCada ingrediente cuenta, ¡una porción esencial!\r\nLa ciencia y la dulzura, en un baile genial.\r\n\n¡A buscar la fórmula, a cruzar el telón!\r\nQue el número gigante tiene una gran razón.\r\n\nSubió a las nubes, viajó sin parar,\r\n\nVio aves parlantes que enseñan a contar.\r\nUn gato sabio, con gafas de cristal,\r\n\nJuega con ecuaciones, ¡qué mundo tan genial!\r\nNubes con forma de Avogadro, gigantes sin fin,\r\n\nComprendió que las partículas \r\ndeben tener su festín.\r\n\nLlegó al corazón, ¡el libro ancestral!\r\nAbrió las páginas, y todo fue verdad:\r\n\nEl número es la clave, la suma y la verdad,\r\nEl equilibrio perfecto, la gran felicidad.\r\n\nNo es solo un dulce, ¡es una lección de vida!\r\nQue toda parte pequeña es bienvenida.\r\n\nLuna compartió la galleta y su saber,\r\nQue la magia está escondida, si quieres ver.\r\n\n¡En la ciencia, en los \r\nnúmeros, en cada bocado de pan!\r\n\n¡La aventura de la galleta! \r\n¡Un dulce y genial plan!",
+    "syncedLyrics": [
+      {
+        "start": 6.68,
+        "end": 17.84,
+        "text": "En un pueblo flotante, de nubes de algodón\r\nDonde el río es limonada, ¡qué gran invención!\r"
+      },
+      {
+        "start": 17.84,
+        "end": 23.44,
+        "text": "Vivía Luna, dulce y curiosa sin igual,\r\nBuscando un misterio, un secreto magistral.\r"
+      },
+      {
+        "start": 23.44,
+        "end": 29.28,
+        "text": "¿Qué oculta el aire, qué dicen las estrellas?\r\nUn número gigante que causa mil querellas:\r"
+      },
+      {
+        "start": 30.8,
+        "end": 37.8,
+        "text": "¡El enigma de Avogadro! Un reto sin final,\r\nBailando en las cocinas del mundo celestial.\r"
+      },
+      {
+        "start": 37.8,
+        "end": 38.8,
+        "text": "¡Oh,\r"
+      },
+      {
+        "start": 38.8,
+        "end": 49.76,
+        "text": "la Galleta de Estrellas! ¡Rojo y dulce fulgor!\r\nLleva un secreto mágico, una cifra de valor.\r"
+      },
+      {
+        "start": 49.76,
+        "end": 60.4,
+        "text": "Cada ingrediente cuenta, ¡una porción esencial!\r\nLa ciencia y la dulzura, en un baile genial.\r"
+      },
+      {
+        "start": 60.4,
+        "end": 74.2,
+        "text": "¡A buscar la fórmula, a cruzar el telón!\r\nQue el número gigante tiene una gran razón.\r"
+      },
+      {
+        "start": 74.2,
+        "end": 85.36,
+        "text": "Paseando por el mercado de frutas que vuelan ya,\r\nUna galleta fresa ¡comienza a brillar!\r"
+      },
+      {
+        "start": 85.36,
+        "end": 97.12,
+        "text": "\"¿Quién hizo esta dulzura?\" preguntó con emoción.\r\nEl panadero anciano le dio la explicación:\r"
+      },
+      {
+        "start": 97.12,
+        "end": 106.03999999999999,
+        "text": "\"Su receta es ancestral, ¡un pacto con la ciencia!\r\nCada átomo es importante, tiene gran influencia.\"\r"
+      },
+      {
+        "start": 106.03999999999999,
+        "end": 114.16,
+        "text": "¡Oh, la Galleta de Estrellas! \r\n¡Rojo y dulce fulgor!\r"
+      },
+      {
+        "start": 114.16,
+        "end": 119.72,
+        "text": "Lleva un secreto mágico, una cifra de valor.\r"
+      },
+      {
+        "start": 119.72,
+        "end": 130.48,
+        "text": "Cada ingrediente cuenta, ¡una porción esencial!\r\nLa ciencia y la dulzura, en un baile genial.\r"
+      },
+      {
+        "start": 130.48,
+        "end": 142.153,
+        "text": "¡A buscar la fórmula, a cruzar el telón!\r\nQue el número gigante tiene una gran razón.\r"
+      },
+      {
+        "start": 142.153,
+        "end": 144.48,
+        "text": "Subió a las nubes, viajó sin parar,\r"
+      },
+      {
+        "start": 144.48,
+        "end": 150,
+        "text": "Vio aves parlantes que enseñan a contar.\r\nUn gato sabio, con gafas de cristal,\r"
+      },
+      {
+        "start": 150,
+        "end": 161.32,
+        "text": "Juega con ecuaciones, ¡qué mundo tan genial!\r\nNubes con forma de Avogadro, gigantes sin fin,\r"
+      },
+      {
+        "start": 162.07999999999998,
+        "end": 173.8,
+        "text": "Comprendió que las partículas \r\ndeben tener su festín.\r"
+      },
+      {
+        "start": 173.8,
+        "end": 179.24,
+        "text": "Llegó al corazón, ¡el libro ancestral!\r\nAbrió las páginas, y todo fue verdad:\r"
+      },
+      {
+        "start": 179.24,
+        "end": 185.16,
+        "text": "El número es la clave, la suma y la verdad,\r\nEl equilibrio perfecto, la gran felicidad.\r"
+      },
+      {
+        "start": 185.96,
+        "end": 200.72,
+        "text": "No es solo un dulce, ¡es una lección de vida!\r\nQue toda parte pequeña es bienvenida.\r"
+      },
+      {
+        "start": 200.72,
+        "end": 205.96,
+        "text": "Luna compartió la galleta y su saber,\r\nQue la magia está escondida, si quieres ver.\r"
+      },
+      {
+        "start": 205.96,
+        "end": 211.44,
+        "text": "¡En la ciencia, en los \r\nnúmeros, en cada bocado de pan!\r"
+      },
+      {
+        "start": 211.44,
+        "end": 223.04,
+        "text": "¡La aventura de la galleta! \r\n¡Un dulce y genial plan!"
+      }
+    ]
+  },
+  {
+    "order": "19",
+    "name": "Los 22.000",
+    "key": "los-22000",
+    "song": "https://youtu.be/wP4To-EjaLY",
+    "saga": "",
+    "date": "12/03/2024",
+    "lyrics": "En Coloralia, qué alegría, dos \r\nmil seres que brillan al sol\r\n\nCada uno es una nota viva, \r\nun arcoíris en formación\r\n\nRojo es calor, azul es calma, \r\nverde la planta que va a crecer\r\n\nVeintidós mil corazones listos, \r\nlistos para el gran amanecer.\r\n\n¡Veintidós mil colores, mira la luz!\r\nLa unidad nos hace brillar a todos\r\n\n¡Veintidós mil colores, mira la luz!\r\nBlanco, blanco, eres el equilibrio de todos.\r\n\nPero entre el grupo, en la esquina, \r\nhabía un pequeño que no brillaba igual\r\n\nBlanco se llamaba, sin color, \r\ncreía que no era esencial\r\n\nMiraba los festivales, la fiesta \r\nde luz, con una pena en el interior\r\n\n\"¿Cómo participar sin mi tono? \r\nSin un poder, sin mi fulgor.\"\r\n\n¡Veintidós mil colores, mira la luz!\r\nLa unidad nos hace brillar a todos\r\n\n¡Veintidós mil colores, mira la luz!\r\nBlanco, blanco, eres el equilibrio de todos.\r\n\nUn sabio anciano, con barba de nubes, \r\nle dijo: \"Tu turno va a llegar\"\r\n\n\"Eres único, pequeño amigo, solo \r\ntienes que esperar y desear\"\r\n\nLlega el Gran Festival, ¡qué \r\nemoción!, todos formando su posición\r\n\nPero el arcoíris se detuvo, \r\nle faltaba algo a la creación.\r\n\nLos veintidós mil estaban perdidos, \r\nsus colores no podían fluir\r\n\nBlanco cerró los ojos y pidió con fuerza: \r\n\"¡Quiero ser útil, quiero servir!\"\r\n\nUna luz intensa, pura y brillante, \r\nde su pequeño cuerpo empezó a emanar\r\n\n¡Blanco es el balance! Dijo el \r\nanciano, sin ti no pueden terminar.\r\n\n¡Veintidós mil colores, mira la luz!\r\nLa unidad nos hace brillar a todos\r\n\n¡Veintidós mil colores, mira la luz!\r\nBlanco, blanco, eres el equilibrio de todos.",
+    "syncedLyrics": [
+      {
+        "start": 7.84,
+        "end": 15.4,
+        "text": "En Coloralia, qué alegría, dos \r\nmil seres que brillan al sol\r"
+      },
+      {
+        "start": 15.4,
+        "end": 22.16,
+        "text": "Cada uno es una nota viva, \r\nun arcoíris en formación\r"
+      },
+      {
+        "start": 22.16,
+        "end": 29.16,
+        "text": "Rojo es calor, azul es calma, \r\nverde la planta que va a crecer\r"
+      },
+      {
+        "start": 30.04,
+        "end": 37.36,
+        "text": "Veintidós mil corazones listos, \r\nlistos para el gran amanecer.\r"
+      },
+      {
+        "start": 37.36,
+        "end": 44.72,
+        "text": "¡Veintidós mil colores, mira la luz!\r\nLa unidad nos hace brillar a todos\r"
+      },
+      {
+        "start": 44.72,
+        "end": 53.92,
+        "text": "¡Veintidós mil colores, mira la luz!\r\nBlanco, blanco, eres el equilibrio de todos.\r"
+      },
+      {
+        "start": 55.48,
+        "end": 63.44,
+        "text": "Pero entre el grupo, en la esquina, \r\nhabía un pequeño que no brillaba igual\r"
+      },
+      {
+        "start": 63.44,
+        "end": 69.68,
+        "text": "Blanco se llamaba, sin color, \r\ncreía que no era esencial\r"
+      },
+      {
+        "start": 69.68,
+        "end": 77.36,
+        "text": "Miraba los festivales, la fiesta \r\nde luz, con una pena en el interior\r"
+      },
+      {
+        "start": 77.36,
+        "end": 83.6,
+        "text": "\"¿Cómo participar sin mi tono? \r\nSin un poder, sin mi fulgor.\"\r"
+      },
+      {
+        "start": 85,
+        "end": 92.36,
+        "text": "¡Veintidós mil colores, mira la luz!\r\nLa unidad nos hace brillar a todos\r"
+      },
+      {
+        "start": 92.36,
+        "end": 103.08,
+        "text": "¡Veintidós mil colores, mira la luz!\r\nBlanco, blanco, eres el equilibrio de todos.\r"
+      },
+      {
+        "start": 103.08,
+        "end": 109.8,
+        "text": "Un sabio anciano, con barba de nubes, \r\nle dijo: \"Tu turno va a llegar\"\r"
+      },
+      {
+        "start": 110.72,
+        "end": 117.03999999999999,
+        "text": "\"Eres único, pequeño amigo, solo \r\ntienes que esperar y desear\"\r"
+      },
+      {
+        "start": 117.03999999999999,
+        "end": 124.8,
+        "text": "Llega el Gran Festival, ¡qué \r\nemoción!, todos formando su posición\r"
+      },
+      {
+        "start": 124.8,
+        "end": 133.96,
+        "text": "Pero el arcoíris se detuvo, \r\nle faltaba algo a la creación.\r"
+      },
+      {
+        "start": 133.96,
+        "end": 141.28,
+        "text": "Los veintidós mil estaban perdidos, \r\nsus colores no podían fluir\r"
+      },
+      {
+        "start": 141.28,
+        "end": 148.76,
+        "text": "Blanco cerró los ojos y pidió con fuerza: \r\n\"¡Quiero ser útil, quiero servir!\"\r"
+      },
+      {
+        "start": 148.76,
+        "end": 155.84,
+        "text": "Una luz intensa, pura y brillante, \r\nde su pequeño cuerpo empezó a emanar\r"
+      },
+      {
+        "start": 155.84,
+        "end": 163.76,
+        "text": "¡Blanco es el balance! Dijo el \r\nanciano, sin ti no pueden terminar.\r"
+      },
+      {
+        "start": 163.76,
+        "end": 171.12,
+        "text": "¡Veintidós mil colores, mira la luz!\r\nLa unidad nos hace brillar a todos\r"
+      },
+      {
+        "start": 171.12,
+        "end": 182.64,
+        "text": "¡Veintidós mil colores, mira la luz!\r\nBlanco, blanco, eres el equilibrio de todos."
+      }
+    ]
+  },
+  {
+    "order": "20",
+    "name": "El Secreto del Antiguo Reloj",
+    "key": "el-secreto-del-antiguo-reloj",
+    "song": "https://youtu.be/WpjnFyY9KF0",
+    "saga": "",
+    "date": "13/03/2024",
+    "lyrics": "Marcos subió al desván, arriba en la vieja casa\r\nDiez años de curiosidad, el polvo ya no pasa\r\n\nEntre cajas y recuerdos, un tesoro encontró\r\nUn bolsillo dorado, el tiempo se detuvo\r\n\nEl sol y la luna juntos, un símbolo grabó\r\nLo abrió, miró las manecillas, ¡el pasado regresó!\r\n\nGiran hacia atrás, un secreto que guardar\r\n¿Podrá un niño el curso del tiempo dominar?\r\n\nTic-tac, el reloj antiguo llama\r\nUna aventura de segundos, una llama\r\n\nRetroceder para un error borrar\r\nPero la realidad comienza a cambiar\r\n\nMarcos, ¡cuidado con el secreto que tienes!\r\nCada viaje atrás, tu presente detienes\r\n\nDeseó recuperar su juguete de hace un año\r\nVolvió, lo abrazó fuerte, terminó el gran engaño\r\n\nVolvió al presente, su cama, su lugar\r\nPero el color de la pared, lo hizo temblar\r\n\nLos libros ya no estaban, algo había cambiado ya\r\nSi tocas el pasado, el presente no será\r\n\nTic-tac, el reloj antiguo llama\r\nUna aventura de segundos, una llama\r\n\nRetroceder para un error borrar\r\nPero la realidad comienza a cambiar\r\n\nMarcos, ¡cuidado con el secreto que tienes!\r\nCada viaje atrás, tu presente detienes\r\n\nQuiso evitar la pelea con su mejor amigo\r\nUn momento amargo que lo dejó afligido\r\n\nLo logró, sonrió feliz, ¡al fin todo está bien!\r\nVolvió a casa, lo llamó, pero nadie sabía quién\r\n\nSu mejor amigo lo miró con extrañeza\r\nUn cambio tan pequeño causó gran tristeza\r\n\nBuscó en la biblioteca, en un libro ancestral\r\nLa historia del alquimista, el final tan fatal\r\n\n\"Él quiso corregir, perdió lo que amaba más\r\nNo busques un pasado, si no quieres ir detrás\"\r\n\nMarcos sintió el peso, la gran responsabilidad\r\nTenía que arreglar todo, volver a la realidad\r\n\nHizo un último viaje, no para \r\ncambiar, sino para aprender\r\n\nDejar que el pasado quede en el ayer\r\n\nVolvió la calma al fin, su habitación, su amigo\r\nTodo en su lugar, el presente es testigo\r\n\nCada error es una lección, no hay que escapar\r\nEl tiempo es un regalo que hay que aprovechar\r\n\nGuardó el reloj en el desván, el misterio ocultó\r\nLa magia es aprender, no cambiar lo que pasó\r\n\nEl tic-tac se detiene, la aventura terminó\r\nY Marcos es más sabio, el secreto se guardó",
+    "syncedLyrics": [
+      {
+        "start": 11.52,
+        "end": 20.32,
+        "text": "Marcos subió al desván, arriba en la vieja casa\r\nDiez años de curiosidad, el polvo ya no pasa\r"
+      },
+      {
+        "start": 20.32,
+        "end": 30.08,
+        "text": "Entre cajas y recuerdos, un tesoro encontró\r\nUn bolsillo dorado, el tiempo se detuvo\r"
+      },
+      {
+        "start": 30.08,
+        "end": 38.92,
+        "text": "El sol y la luna juntos, un símbolo grabó\r\nLo abrió, miró las manecillas, ¡el pasado regresó!\r"
+      },
+      {
+        "start": 38.92,
+        "end": 49.52,
+        "text": "Giran hacia atrás, un secreto que guardar\r\n¿Podrá un niño el curso del tiempo dominar?\r"
+      },
+      {
+        "start": 49.52,
+        "end": 54.04,
+        "text": "Tic-tac, el reloj antiguo llama\r\nUna aventura de segundos, una llama\r"
+      },
+      {
+        "start": 54.04,
+        "end": 58.48,
+        "text": "Retroceder para un error borrar\r\nPero la realidad comienza a cambiar\r"
+      },
+      {
+        "start": 58.48,
+        "end": 74.72,
+        "text": "Marcos, ¡cuidado con el secreto que tienes!\r\nCada viaje atrás, tu presente detienes\r"
+      },
+      {
+        "start": 74.72,
+        "end": 83.4,
+        "text": "Deseó recuperar su juguete de hace un año\r\nVolvió, lo abrazó fuerte, terminó el gran engaño\r"
+      },
+      {
+        "start": 83.4,
+        "end": 94.72,
+        "text": "Volvió al presente, su cama, su lugar\r\nPero el color de la pared, lo hizo temblar\r"
+      },
+      {
+        "start": 94.72,
+        "end": 107.16,
+        "text": "Los libros ya no estaban, algo había cambiado ya\r\nSi tocas el pasado, el presente no será\r"
+      },
+      {
+        "start": 109.56,
+        "end": 114.4,
+        "text": "Tic-tac, el reloj antiguo llama\r\nUna aventura de segundos, una llama\r"
+      },
+      {
+        "start": 114.4,
+        "end": 118.92,
+        "text": "Retroceder para un error borrar\r\nPero la realidad comienza a cambiar\r"
+      },
+      {
+        "start": 118.92,
+        "end": 132.68,
+        "text": "Marcos, ¡cuidado con el secreto que tienes!\r\nCada viaje atrás, tu presente detienes\r"
+      },
+      {
+        "start": 132.68,
+        "end": 141.44,
+        "text": "Quiso evitar la pelea con su mejor amigo\r\nUn momento amargo que lo dejó afligido\r"
+      },
+      {
+        "start": 141.44,
+        "end": 152.6,
+        "text": "Lo logró, sonrió feliz, ¡al fin todo está bien!\r\nVolvió a casa, lo llamó, pero nadie sabía quién\r"
+      },
+      {
+        "start": 152.6,
+        "end": 163.72,
+        "text": "Su mejor amigo lo miró con extrañeza\r\nUn cambio tan pequeño causó gran tristeza\r"
+      },
+      {
+        "start": 165.44,
+        "end": 174.64,
+        "text": "Buscó en la biblioteca, en un libro ancestral\r\nLa historia del alquimista, el final tan fatal\r"
+      },
+      {
+        "start": 174.64,
+        "end": 185.16,
+        "text": "\"Él quiso corregir, perdió lo que amaba más\r\nNo busques un pasado, si no quieres ir detrás\"\r"
+      },
+      {
+        "start": 185.16,
+        "end": 196.72,
+        "text": "Marcos sintió el peso, la gran responsabilidad\r\nTenía que arreglar todo, volver a la realidad\r"
+      },
+      {
+        "start": 196.72,
+        "end": 201.36,
+        "text": "Hizo un último viaje, no para \r\ncambiar, sino para aprender\r"
+      },
+      {
+        "start": 201.36,
+        "end": 206,
+        "text": "Dejar que el pasado quede en el ayer\r"
+      },
+      {
+        "start": 206,
+        "end": 218.44,
+        "text": "Volvió la calma al fin, su habitación, su amigo\r\nTodo en su lugar, el presente es testigo\r"
+      },
+      {
+        "start": 218.44,
+        "end": 231.2,
+        "text": "Cada error es una lección, no hay que escapar\r\nEl tiempo es un regalo que hay que aprovechar\r"
+      },
+      {
+        "start": 231.2,
+        "end": 240.76,
+        "text": "Guardó el reloj en el desván, el misterio ocultó\r\nLa magia es aprender, no cambiar lo que pasó\r"
+      },
+      {
+        "start": 241.28,
+        "end": 262.96,
+        "text": "El tic-tac se detiene, la aventura terminó\r\nY Marcos es más sabio, el secreto se guardó"
+      }
+    ]
+  },
+  {
+    "order": "21",
+    "name": "Encuentra mi Eso La Aventura de Lía en Arcoiris",
+    "key": "encuentra-mi-eso-la-aventura-de-lia-en-arcoiris",
+    "song": "https://youtu.be/-9x2Hu7xtAc",
+    "saga": "",
+    "date": "14/03/2024",
+    "lyrics": "En el pueblo Arcoíris, lleno de color y luz,\r\nCada vecino tiene un \"Eso\" que le da su virtud\r\n\nY su magia, algo único, que lo hace brillar.\r\nPero estaba Lía, sin su \"Eso\" poder encontrar.\r\n\nCon su pelo rizado y ojos llenos de ilusión,\r\nSentía un vacío hondo en su pequeño corazón.\r\n\n\"¿Cuál es mi 'Eso'?\", se \r\npreguntó una mañana al sol,\r\n\n\"Voy a buscar mi rumbo, mi destino, mi farol.\"\r\n\n¡Voy a encontrar mi Eso, lo que me hace especial!\r\nCruzaré el Bosque Susurrante,\r\n\nno voy a mirar atrás.\r\nSi lo tiene el cielo o lo esconde el mar,\r\n\nSé que mi gran aventura acaba de empezar.\r\n¡Una aventura, una verdad que hay que encontrar!\r\n\nAl Bosque Susurrante, Lía fue a caminar,\r\nÁrboles de colores la vieron pasar.\r\n\nAllí un pájaro Azulín, azul \r\ncomo el cielo profundo,\r\n\nLe dio una pista sabia, el secreto del mundo:\r\n\n\"Tu 'Eso' está oculto donde menos lo esperas,\r\nEn un rincón callado que tu alma más venera.\"\r\n\nCorrió hasta el Lago de los \r\nEspejos, de agua cristalina,\r\n\nMiró su reflejo, buscando su medicina.\r\nVio a una niña valiente, amable y con bondad,\r\n\nLlena de creatividad y pura generosidad.\r\nLuego subió a la Montaña, donde una anciana sabia,\r\n\nLe dijo: \"Ten paciencia, y nunca te rindas\r\nTu 'Eso' vendrá solo, cuando ya estés lista,\r\n\nLa perseverancia es la clave de toda conquista.\"\r\n\n¡Voy a encontrar mi Eso, lo que me hace especial!\r\nCruzaré el Bosque Susurrante,\r\n\nno voy a mirar atrás.\r\nSi lo tiene el cielo o lo esconde el mar,\r\n\nSé que mi gran aventura acaba de empezar.\r\n¡Una aventura, una verdad que hay que encontrar!\r\n\nLía volvió a Arcoíris, con calma en su andar,\r\nY empezó a ayudar a todos sin mucho pensar.\r\n\nAyudó a un amigo, cuidó a su familiar,\r\nSin darse cuenta, su \"Eso\" empezaba a brotar.\r\n\nY en la Fiesta de las Estrellas, \r\ncon el cielo tan vasto,\r\n\nComprendió que su \"Eso\" no era un gran contraste.\r\nNo era un talento oculto ni una habilidad genial,\r\n\nEra su corazón bondadoso, su espíritu leal.\r\nLo que la hacía especial era la forma de tratar,\r\n\nQue su \"Eso\" había estado \r\nsiempre, en ayudar y en amar.",
+    "syncedLyrics": [
+      {
+        "start": 9.36,
+        "end": 17.44,
+        "text": "En el pueblo Arcoíris, lleno de color y luz,\r\nCada vecino tiene un \"Eso\" que le da su virtud\r"
+      },
+      {
+        "start": 17.44,
+        "end": 25.68,
+        "text": "Y su magia, algo único, que lo hace brillar.\r\nPero estaba Lía, sin su \"Eso\" poder encontrar.\r"
+      },
+      {
+        "start": 25.68,
+        "end": 34.56,
+        "text": "Con su pelo rizado y ojos llenos de ilusión,\r\nSentía un vacío hondo en su pequeño corazón.\r"
+      },
+      {
+        "start": 34.56,
+        "end": 38.2,
+        "text": "\"¿Cuál es mi 'Eso'?\", se \r\npreguntó una mañana al sol,\r"
+      },
+      {
+        "start": 38.2,
+        "end": 43.6,
+        "text": "\"Voy a buscar mi rumbo, mi destino, mi farol.\"\r"
+      },
+      {
+        "start": 43.6,
+        "end": 50.04,
+        "text": "¡Voy a encontrar mi Eso, lo que me hace especial!\r\nCruzaré el Bosque Susurrante,\r"
+      },
+      {
+        "start": 50.04,
+        "end": 56,
+        "text": "no voy a mirar atrás.\r\nSi lo tiene el cielo o lo esconde el mar,\r"
+      },
+      {
+        "start": 56,
+        "end": 70.84,
+        "text": "Sé que mi gran aventura acaba de empezar.\r\n¡Una aventura, una verdad que hay que encontrar!\r"
+      },
+      {
+        "start": 70.84,
+        "end": 78.76,
+        "text": "Al Bosque Susurrante, Lía fue a caminar,\r\nÁrboles de colores la vieron pasar.\r"
+      },
+      {
+        "start": 78.76,
+        "end": 83.2,
+        "text": "Allí un pájaro Azulín, azul \r\ncomo el cielo profundo,\r"
+      },
+      {
+        "start": 83.2,
+        "end": 87.28,
+        "text": "Le dio una pista sabia, el secreto del mundo:\r"
+      },
+      {
+        "start": 87.28,
+        "end": 98.96000000000001,
+        "text": "\"Tu 'Eso' está oculto donde menos lo esperas,\r\nEn un rincón callado que tu alma más venera.\"\r"
+      },
+      {
+        "start": 98.96000000000001,
+        "end": 103.64,
+        "text": "Corrió hasta el Lago de los \r\nEspejos, de agua cristalina,\r"
+      },
+      {
+        "start": 103.64,
+        "end": 111.52000000000001,
+        "text": "Miró su reflejo, buscando su medicina.\r\nVio a una niña valiente, amable y con bondad,\r"
+      },
+      {
+        "start": 111.52000000000001,
+        "end": 122,
+        "text": "Llena de creatividad y pura generosidad.\r\nLuego subió a la Montaña, donde una anciana sabia,\r"
+      },
+      {
+        "start": 122,
+        "end": 130.4,
+        "text": "Le dijo: \"Ten paciencia, y nunca te rindas\r\nTu 'Eso' vendrá solo, cuando ya estés lista,\r"
+      },
+      {
+        "start": 130.4,
+        "end": 136.4,
+        "text": "La perseverancia es la clave de toda conquista.\"\r"
+      },
+      {
+        "start": 137.68,
+        "end": 144.12,
+        "text": "¡Voy a encontrar mi Eso, lo que me hace especial!\r\nCruzaré el Bosque Susurrante,\r"
+      },
+      {
+        "start": 144.12,
+        "end": 150.07999999999998,
+        "text": "no voy a mirar atrás.\r\nSi lo tiene el cielo o lo esconde el mar,\r"
+      },
+      {
+        "start": 150.07999999999998,
+        "end": 163.36,
+        "text": "Sé que mi gran aventura acaba de empezar.\r\n¡Una aventura, una verdad que hay que encontrar!\r"
+      },
+      {
+        "start": 165.12,
+        "end": 173.12,
+        "text": "Lía volvió a Arcoíris, con calma en su andar,\r\nY empezó a ayudar a todos sin mucho pensar.\r"
+      },
+      {
+        "start": 173.12,
+        "end": 183.04,
+        "text": "Ayudó a un amigo, cuidó a su familiar,\r\nSin darse cuenta, su \"Eso\" empezaba a brotar.\r"
+      },
+      {
+        "start": 184.52,
+        "end": 189.32,
+        "text": "Y en la Fiesta de las Estrellas, \r\ncon el cielo tan vasto,\r"
+      },
+      {
+        "start": 189.32,
+        "end": 197.48,
+        "text": "Comprendió que su \"Eso\" no era un gran contraste.\r\nNo era un talento oculto ni una habilidad genial,\r"
+      },
+      {
+        "start": 197.48,
+        "end": 205.68,
+        "text": "Era su corazón bondadoso, su espíritu leal.\r\nLo que la hacía especial era la forma de tratar,\r"
+      },
+      {
+        "start": 205.68,
+        "end": 219.16,
+        "text": "Que su \"Eso\" había estado \r\nsiempre, en ayudar y en amar."
+      }
+    ]
+  },
+  {
+    "order": "22",
+    "name": "El traspiés del mago",
+    "key": "el-traspies-del-mago",
+    "song": "https://youtu.be/zjy5v0t9XLs",
+    "saga": "",
+    "date": "15/03/2024",
+    "lyrics": "En un reino lejano, con torres de cristal,\r\nVivía Elián, mago sin igual.\r\n\nNo era por su magia, ¡ay! sino por su traspiés,\r\nQue hacía de un hechizo, un gran revés.\r\n\nSoñaba ser el Mago, el mejor de verdad,\r\nY buscaba un tesoro, una gran antigüedad:\r\n\nEl Libro de los Hechizos, perdido y muy sutil,\r\nPara un mago torpe, era el gran perfil.\r\n\n¡Oh, Elián, el Mago! Su varita al bailar,\r\nCrea flores, ¡zas!, donde el fuego iba a estar.\r\n\nCada error es solo un paso más,\r\nUn tropiezo que le lleva a la cima y la paz.\r\n\nEl traspiés del mago es la canción,\r\nQue nos muestra al torpe con gran corazón.\r\n\nEmpacó su capa, su sombrero y su ilusión,\r\nY partió al Mercado de gran vibración.\r\n\nEntre brujas y duendes, buscando un pergamino,\r\nCompró un mapa antiguo y cambió su destino.\r\n\nLa Montaña de Susurros, su cima a escalar,\r\nUn viento malvado le hizo el sombrero volar.\r\n\nPero Elián no se rinde, avanza con valor,\r\nPues sabe que su meta es su gran motor.\r\n\nTras la cascada, la cueva halló por fin,\r\nUn lago de cristal en un rincón jardín.\r\n\nVio el libro en la isla, intentó conjurar,\r\nQuería un puente sólido para poder cruzar.\r\n\nPero el hechizo errante dio un gran resultado:\r\nNo hizo puente, ¡sino nubes! Pequeñas y flotantes,\r\n\nUn gran traspiés, que era un gran invento,\r\nSaltando nube a nube, avanzó sin lamento.\r\n\nUn dragón de escamas azules en guardia esperó,\r\n\nY con tres acertijos la prueba comenzó.\r\nDijo: \"Soy el Viento\", y Elián pensó un instante.\r\n\nDijo: \"Soy las Estrellas\", \r\nel cielo en un diamante.\r\n\nDijo: \"Soy el Tiempo\", que nadie puede atar.\r\nCon ingenio y astucia supo al fin ganar.\r\n\n¡Oh, Elián, el Mago! Su varita al bailar,\r\nCrea flores, ¡zas!, donde el fuego iba a estar.\r\n\nCada error es solo un paso más,\r\nUn tropiezo que le lleva a la cima y la paz.\r\n\nEl traspiés del mago es la canción,\r\nQue nos muestra al torpe con gran corazón.\r\n\nEl libro le enseña que la magia es perseverar,\r\nY el torpe Elián, ¡por siempre va a reinar!",
+    "syncedLyrics": [
+      {
+        "start": 16.44,
+        "end": 24.04,
+        "text": "En un reino lejano, con torres de cristal,\r\nVivía Elián, mago sin igual.\r"
+      },
+      {
+        "start": 24.56,
+        "end": 32.6,
+        "text": "No era por su magia, ¡ay! sino por su traspiés,\r\nQue hacía de un hechizo, un gran revés.\r"
+      },
+      {
+        "start": 32.6,
+        "end": 41.12,
+        "text": "Soñaba ser el Mago, el mejor de verdad,\r\nY buscaba un tesoro, una gran antigüedad:\r"
+      },
+      {
+        "start": 41.12,
+        "end": 52.88,
+        "text": "El Libro de los Hechizos, perdido y muy sutil,\r\nPara un mago torpe, era el gran perfil.\r"
+      },
+      {
+        "start": 52.88,
+        "end": 60.84,
+        "text": "¡Oh, Elián, el Mago! Su varita al bailar,\r\nCrea flores, ¡zas!, donde el fuego iba a estar.\r"
+      },
+      {
+        "start": 60.84,
+        "end": 69.4,
+        "text": "Cada error es solo un paso más,\r\nUn tropiezo que le lleva a la cima y la paz.\r"
+      },
+      {
+        "start": 69.4,
+        "end": 80.4,
+        "text": "El traspiés del mago es la canción,\r\nQue nos muestra al torpe con gran corazón.\r"
+      },
+      {
+        "start": 84.6,
+        "end": 92.4,
+        "text": "Empacó su capa, su sombrero y su ilusión,\r\nY partió al Mercado de gran vibración.\r"
+      },
+      {
+        "start": 92.4,
+        "end": 100.44,
+        "text": "Entre brujas y duendes, buscando un pergamino,\r\nCompró un mapa antiguo y cambió su destino.\r"
+      },
+      {
+        "start": 100.44,
+        "end": 109,
+        "text": "La Montaña de Susurros, su cima a escalar,\r\nUn viento malvado le hizo el sombrero volar.\r"
+      },
+      {
+        "start": 109,
+        "end": 118.64,
+        "text": "Pero Elián no se rinde, avanza con valor,\r\nPues sabe que su meta es su gran motor.\r"
+      },
+      {
+        "start": 118.64,
+        "end": 126.48,
+        "text": "Tras la cascada, la cueva halló por fin,\r\nUn lago de cristal en un rincón jardín.\r"
+      },
+      {
+        "start": 126.48,
+        "end": 136.56,
+        "text": "Vio el libro en la isla, intentó conjurar,\r\nQuería un puente sólido para poder cruzar.\r"
+      },
+      {
+        "start": 136.56,
+        "end": 145.2,
+        "text": "Pero el hechizo errante dio un gran resultado:\r\nNo hizo puente, ¡sino nubes! Pequeñas y flotantes,\r"
+      },
+      {
+        "start": 145.2,
+        "end": 157.44,
+        "text": "Un gran traspiés, que era un gran invento,\r\nSaltando nube a nube, avanzó sin lamento.\r"
+      },
+      {
+        "start": 157.44,
+        "end": 160.8,
+        "text": "Un dragón de escamas azules en guardia esperó,\r"
+      },
+      {
+        "start": 160.8,
+        "end": 168.88,
+        "text": "Y con tres acertijos la prueba comenzó.\r\nDijo: \"Soy el Viento\", y Elián pensó un instante.\r"
+      },
+      {
+        "start": 168.88,
+        "end": 173.07999999999998,
+        "text": "Dijo: \"Soy las Estrellas\", \r\nel cielo en un diamante.\r"
+      },
+      {
+        "start": 173.07999999999998,
+        "end": 182.64,
+        "text": "Dijo: \"Soy el Tiempo\", que nadie puede atar.\r\nCon ingenio y astucia supo al fin ganar.\r"
+      },
+      {
+        "start": 184.88,
+        "end": 192.8,
+        "text": "¡Oh, Elián, el Mago! Su varita al bailar,\r\nCrea flores, ¡zas!, donde el fuego iba a estar.\r"
+      },
+      {
+        "start": 192.8,
+        "end": 201.4,
+        "text": "Cada error es solo un paso más,\r\nUn tropiezo que le lleva a la cima y la paz.\r"
+      },
+      {
+        "start": 201.4,
+        "end": 211.92000000000002,
+        "text": "El traspiés del mago es la canción,\r\nQue nos muestra al torpe con gran corazón.\r"
+      },
+      {
+        "start": 215.07999999999998,
+        "end": 227.8,
+        "text": "El libro le enseña que la magia es perseverar,\r\nY el torpe Elián, ¡por siempre va a reinar!"
+      }
+    ]
+  },
+  {
+    "order": "23",
+    "name": "El Experimento de las Sombras en la Oscuridad",
+    "key": "el-experimento-de-las-sombras-en-la-oscuridad",
+    "song": "https://youtu.be/O2n-JLcksPs",
+    "saga": "",
+    "date": "16/03/2024",
+    "lyrics": "En Luztenue, un pueblo tranquilo y sereno\r\nvivía Leo, un niño de espíritu pleno\r\n\nAmaba el misterio, buscaba la verdad\r\nla noche estrellada era su ciudad\r\n\nUna sombra se mueve, no es normal,\r\nlos árboles danzan con ritmo espectral\r\n\nLinterna en mano, cuaderno y valor\r\ndejó atrás su casa buscando el rumor\r\n\n¡Oh, experimento en la oscuridad!\r\nDonde la luz crea la nueva realidad\r\n\nSombras vivas, misterio total\r\nbuscando una pista, un camino portal\r\n\nUn amigo de niebla, un ser de otro sol\r\nLeo y Sombri, ¡qué gran rock and roll!\r\n\nLlegó hasta el bosque, el miedo sintió\r\npero de una rama una forma creció\r\n\nUna sombra se alza, no era de un pino\r\nSombri se presenta, con un guiño divino\r\n\n\"Estoy perdido, soy de otro lugar\r\nayúdame, Leo, debemos regresar\"\r\n\nDos mundos unidos por la amistad\r\nla misión comienza en la inmensidad\r\n\nEn la corteza, un enigma grabó\r\n\n\"Caminante de noche, con rastro \r\nde estrellas\" Leo lo vio:\r\n\n\"Sin pies ni alas, ¿quién será?\" ¡Un caracol!\r\nUna nueva sombra la senda reveló\r\n\nLuego, estatuas de animales en un claro\r\nun viejo poema, un mensaje claro:\r\n\n\"Silencio que vuela, sin ser vigilante\" \r\nLa lechuza oculta les dio el paso adelante\r\n\n¡Oh, experimento en la oscuridad!\r\nDonde la luz crea la nueva realidad\r\n\nSombras vivas, misterio total\r\nbuscando una pista, un camino portal\r\n\nUn amigo de niebla, un ser de otro sol\r\nLeo y Sombri, ¡qué gran rock and roll!\r\n\nEl riachuelo brilla, reflejando el cielo azul\r\npuzzle de piedras forma un puente de luz\r\n\nEn la caverna, espejos sin final\r\n\"El que te muestra, sin poder mirar\" ¡El espejo!\r\n\nLa puerta se abre, un portal fulgurante\r\nadiós, Sombri, amigo viajante\r\n\nVolvió a casa Leo, al amanecer\r\nsu mente y su alma llenos de un nuevo saber\r\n\nLas sombras no asustan, tienen corazón\r\nuna aventura mágica fue su gran lección",
+    "syncedLyrics": [
+      {
+        "start": 10.88,
+        "end": 19.64,
+        "text": "En Luztenue, un pueblo tranquilo y sereno\r\nvivía Leo, un niño de espíritu pleno\r"
+      },
+      {
+        "start": 19.64,
+        "end": 28.32,
+        "text": "Amaba el misterio, buscaba la verdad\r\nla noche estrellada era su ciudad\r"
+      },
+      {
+        "start": 28.32,
+        "end": 37.76,
+        "text": "Una sombra se mueve, no es normal,\r\nlos árboles danzan con ritmo espectral\r"
+      },
+      {
+        "start": 37.76,
+        "end": 46.52,
+        "text": "Linterna en mano, cuaderno y valor\r\ndejó atrás su casa buscando el rumor\r"
+      },
+      {
+        "start": 46.52,
+        "end": 54.68,
+        "text": "¡Oh, experimento en la oscuridad!\r\nDonde la luz crea la nueva realidad\r"
+      },
+      {
+        "start": 55.28,
+        "end": 63.88,
+        "text": "Sombras vivas, misterio total\r\nbuscando una pista, un camino portal\r"
+      },
+      {
+        "start": 63.88,
+        "end": 73.76,
+        "text": "Un amigo de niebla, un ser de otro sol\r\nLeo y Sombri, ¡qué gran rock and roll!\r"
+      },
+      {
+        "start": 76.12,
+        "end": 84.32,
+        "text": "Llegó hasta el bosque, el miedo sintió\r\npero de una rama una forma creció\r"
+      },
+      {
+        "start": 84.96000000000001,
+        "end": 94.6,
+        "text": "Una sombra se alza, no era de un pino\r\nSombri se presenta, con un guiño divino\r"
+      },
+      {
+        "start": 94.6,
+        "end": 103.84,
+        "text": "\"Estoy perdido, soy de otro lugar\r\nayúdame, Leo, debemos regresar\"\r"
+      },
+      {
+        "start": 103.84,
+        "end": 113.03999999999999,
+        "text": "Dos mundos unidos por la amistad\r\nla misión comienza en la inmensidad\r"
+      },
+      {
+        "start": 114.47999999999999,
+        "end": 119.2,
+        "text": "En la corteza, un enigma grabó\r"
+      },
+      {
+        "start": 119.2,
+        "end": 125.48,
+        "text": "\"Caminante de noche, con rastro \r\nde estrellas\" Leo lo vio:\r"
+      },
+      {
+        "start": 125.48,
+        "end": 132.44,
+        "text": "\"Sin pies ni alas, ¿quién será?\" ¡Un caracol!\r\nUna nueva sombra la senda reveló\r"
+      },
+      {
+        "start": 132.44,
+        "end": 141.72,
+        "text": "Luego, estatuas de animales en un claro\r\nun viejo poema, un mensaje claro:\r"
+      },
+      {
+        "start": 141.72,
+        "end": 153.16,
+        "text": "\"Silencio que vuela, sin ser vigilante\" \r\nLa lechuza oculta les dio el paso adelante\r"
+      },
+      {
+        "start": 153.16,
+        "end": 161.36,
+        "text": "¡Oh, experimento en la oscuridad!\r\nDonde la luz crea la nueva realidad\r"
+      },
+      {
+        "start": 161.96,
+        "end": 170.56,
+        "text": "Sombras vivas, misterio total\r\nbuscando una pista, un camino portal\r"
+      },
+      {
+        "start": 170.56,
+        "end": 180.68,
+        "text": "Un amigo de niebla, un ser de otro sol\r\nLeo y Sombri, ¡qué gran rock and roll!\r"
+      },
+      {
+        "start": 180.68,
+        "end": 189.24,
+        "text": "El riachuelo brilla, reflejando el cielo azul\r\npuzzle de piedras forma un puente de luz\r"
+      },
+      {
+        "start": 189.8,
+        "end": 198.52,
+        "text": "En la caverna, espejos sin final\r\n\"El que te muestra, sin poder mirar\" ¡El espejo!\r"
+      },
+      {
+        "start": 198.52,
+        "end": 208.36,
+        "text": "La puerta se abre, un portal fulgurante\r\nadiós, Sombri, amigo viajante\r"
+      },
+      {
+        "start": 208.36,
+        "end": 217.24,
+        "text": "Volvió a casa Leo, al amanecer\r\nsu mente y su alma llenos de un nuevo saber\r"
+      },
+      {
+        "start": 217.24,
+        "end": 232.84,
+        "text": "Las sombras no asustan, tienen corazón\r\nuna aventura mágica fue su gran lección"
+      }
+    ]
+  },
+  {
+    "order": "24",
+    "name": "La estrella errante",
+    "key": "la-estrella-errante",
+    "song": "https://youtu.be/7OVn9aQASAI",
+    "saga": "",
+    "date": "17/03/2024",
+    "lyrics": "En un valle de niebla, verde y ancestral,\r\nvivía Elara, con sueño y con paz.\r\n\nUna noche de invierno, se sintió un temblor,\r\nla estrella más grande perdió su fulgor.\r\n\nCayó en la montaña, un susurro sin luz,\r\ndejando la noche sin su tenue cruz.\r\n\nLa magia dormida del valle se apagó,\r\ny Elara supo que algo debía hacer yo.\r\n\n¡Oh, Estrella Errante, vuelve al cielo ya!\r\nCon arpas y flautas, la luz volverá.\r\n\nUn viaje de ensueño, un destino final,\r\ndejaré mi huella en el camino astral.\r\n\nCon paso valiente, la niebla cruzaré,\r\npor esta misión, la esperanza seré.\r\n\nUn insecto de seda, de brillo fugaz,\r\nuna polilla guía, le dio una señal.\r\n\n\"El Bosque Brumoso primero debes cruzar,\r\ndonde el eco celta te enseña a volar.\"\r\n\nCruzó el río que susurra una dulce canción,\r\nconstruyó un puentecito con gran emoción.\r\n\nSubió el Pico del Gigante, la roca final,\r\ndonde la estrella esperaba, gema celestial.\r\n\n¡Oh, Estrella Errante, vuelve al cielo ya!\r\nCon arpas y flautas, la luz volverá.\r\n\nUn viaje de ensueño, un destino final,\r\ndejaré mi huella en el camino astral.\r\n\nCon paso valiente, la niebla cruzaré,\r\npor esta misión, la esperanza seré.\r\n\nLa estrella era fría, temblando de miedo y dolor,\r\nElara tomó aliento y le dio su calor.\r\n\nCantó una melodía, un deseo profundo,\r\nuna chispa del alma que dio luz al mundo.\r\n\nLa estrella encendida, se elevó sin final,\r\nun hilo de plata volviendo a su hogar.\r\n\nAhora el cielo brilla con fuerza mayor,\r\nla estrella en el cosmos tiene nuevo color.\r\n\nElara regresó, valiente y feliz,\r\nsabiendo que la magia se lleva en la raíz.",
+    "syncedLyrics": [
+      {
+        "start": 30.52,
+        "end": 39,
+        "text": "En un valle de niebla, verde y ancestral,\r\nvivía Elara, con sueño y con paz.\r"
+      },
+      {
+        "start": 39,
+        "end": 47.04,
+        "text": "Una noche de invierno, se sintió un temblor,\r\nla estrella más grande perdió su fulgor.\r"
+      },
+      {
+        "start": 47.04,
+        "end": 55.44,
+        "text": "Cayó en la montaña, un susurro sin luz,\r\ndejando la noche sin su tenue cruz.\r"
+      },
+      {
+        "start": 55.44,
+        "end": 66.08,
+        "text": "La magia dormida del valle se apagó,\r\ny Elara supo que algo debía hacer yo.\r"
+      },
+      {
+        "start": 66.08,
+        "end": 74,
+        "text": "¡Oh, Estrella Errante, vuelve al cielo ya!\r\nCon arpas y flautas, la luz volverá.\r"
+      },
+      {
+        "start": 74,
+        "end": 82.24,
+        "text": "Un viaje de ensueño, un destino final,\r\ndejaré mi huella en el camino astral.\r"
+      },
+      {
+        "start": 82.24,
+        "end": 94.92,
+        "text": "Con paso valiente, la niebla cruzaré,\r\npor esta misión, la esperanza seré.\r"
+      },
+      {
+        "start": 107.16,
+        "end": 115.44,
+        "text": "Un insecto de seda, de brillo fugaz,\r\nuna polilla guía, le dio una señal.\r"
+      },
+      {
+        "start": 115.44,
+        "end": 123.56,
+        "text": "\"El Bosque Brumoso primero debes cruzar,\r\ndonde el eco celta te enseña a volar.\"\r"
+      },
+      {
+        "start": 123.56,
+        "end": 132,
+        "text": "Cruzó el río que susurra una dulce canción,\r\nconstruyó un puentecito con gran emoción.\r"
+      },
+      {
+        "start": 132,
+        "end": 142.57999999999998,
+        "text": "Subió el Pico del Gigante, la roca final,\r\ndonde la estrella esperaba, gema celestial.\r"
+      },
+      {
+        "start": 142.57999999999998,
+        "end": 152.64,
+        "text": "¡Oh, Estrella Errante, vuelve al cielo ya!\r\nCon arpas y flautas, la luz volverá.\r"
+      },
+      {
+        "start": 152.64,
+        "end": 160.8,
+        "text": "Un viaje de ensueño, un destino final,\r\ndejaré mi huella en el camino astral.\r"
+      },
+      {
+        "start": 160.8,
+        "end": 175.52,
+        "text": "Con paso valiente, la niebla cruzaré,\r\npor esta misión, la esperanza seré.\r"
+      },
+      {
+        "start": 177.32,
+        "end": 185.68,
+        "text": "La estrella era fría, temblando de miedo y dolor,\r\nElara tomó aliento y le dio su calor.\r"
+      },
+      {
+        "start": 185.68,
+        "end": 193.92,
+        "text": "Cantó una melodía, un deseo profundo,\r\nuna chispa del alma que dio luz al mundo.\r"
+      },
+      {
+        "start": 193.92,
+        "end": 210.76,
+        "text": "La estrella encendida, se elevó sin final,\r\nun hilo de plata volviendo a su hogar.\r"
+      },
+      {
+        "start": 210.76,
+        "end": 219.04,
+        "text": "Ahora el cielo brilla con fuerza mayor,\r\nla estrella en el cosmos tiene nuevo color.\r"
+      },
+      {
+        "start": 219.04,
+        "end": 232.92000000000002,
+        "text": "Elara regresó, valiente y feliz,\r\nsabiendo que la magia se lleva en la raíz."
+      }
+    ]
   }
 ]
