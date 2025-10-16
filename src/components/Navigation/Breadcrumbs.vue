@@ -54,8 +54,8 @@
             </a>
           </template>
 
-          <!-- Story icon (solo si hay saga Y es un cuento, es decir, estamos en un cuento dentro de una saga) -->
-          <template v-if="sagaName && isStory">
+          <!-- Story icon (si es un cuento, siempre en mobile) -->
+          <template v-if="isStory">
             <span class="breadcrumb-sep-mobile">→</span>
             <span class="breadcrumb-icon breadcrumb-icon--current" :aria-label="currentPage">
               <img src="/assets/menu-icons/stories.webp" :alt="currentPage" />
