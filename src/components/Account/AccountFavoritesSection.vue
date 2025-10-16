@@ -1,7 +1,7 @@
 <template>
   <div class="account-favorites-section">
-    <StoriesSection :stories="stories">
-      <template v-if="stories.length === 0" #fallback>
+    <StoriesSection :stories="clientStories">
+      <template v-if="clientStories.length === 0" #fallback>
         <div class="account-favorites-empty">
           <img
             src="/assets/account/empty-states/favorites-empty.webp"
@@ -17,7 +17,9 @@
 </template>
 
 <script setup>
+  import { ref, onMounted } from 'vue'
   import StoriesSection from '../Sections/StoriesSection.vue'
+  import useStories from '../../composables/useStories'
   import t from '../../translations'
 
   defineProps({
@@ -25,6 +27,14 @@
       type: Array,
       default: () => []
     }
+  })
+
+  const clientStories = ref([])
+
+  onMounted(() => {
+    // Cargar favoritos en cliente (ya que SSR no tiene acceso a localStorage)
+    const { getFavoriteStories } = useStories()
+    clientStories.value = getFavoriteStories()
   })
 </script>
 

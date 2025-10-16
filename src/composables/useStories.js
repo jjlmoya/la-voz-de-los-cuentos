@@ -59,9 +59,25 @@ export default function useStories() {
     })
   const getFavoriteStories = () => {
     if (typeof localStorage === 'undefined') return []
-    return (JSON.parse(localStorage?.getItem('storiesData')) || []).filter(
-      entry => entry.like
-    )
+
+    try {
+      const storiesData = localStorage.getItem('storiesData')
+      if (!storiesData) return []
+
+      const parsedData = JSON.parse(storiesData)
+      if (!Array.isArray(parsedData)) return []
+
+      // Filtrar favoritos y mapear a objetos de historia completos
+      const favoriteKeys = parsedData
+        .filter(entry => entry.like === true)
+        .map(entry => entry.key)
+
+      // Retornar historias completas que están en favoritos
+      return allStories.filter(story => favoriteKeys.includes(story.key))
+    } catch (error) {
+      console.error('Error al obtener favoritos:', error)
+      return []
+    }
   }
 
   const getRelatedStories = story => {
