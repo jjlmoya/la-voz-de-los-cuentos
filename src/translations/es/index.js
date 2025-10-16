@@ -151,5 +151,7 @@ export default {
   'spotify.voice': 'Voz',
 
   'language.switch': 'Read in English',
-  'language.switch.aria': 'Cambiar idioma'
+  'language.switch.aria': 'Cambiar idioma',
+
+  'achievement.unlocked': 'Logro Desbloqueado'
 }

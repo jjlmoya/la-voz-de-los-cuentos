@@ -150,5 +150,7 @@ export default {
   'spotify.voice': 'Voice',
 
   'language.switch': 'Leer en Español',
-  'language.switch.aria': 'Switch language'
+  'language.switch.aria': 'Switch language',
+
+  'achievement.unlocked': 'Achievement Unlocked'
 }
