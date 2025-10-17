@@ -44,23 +44,74 @@ export default function useStories() {
     const intersection = new Set([...words1].filter(word => words2.has(word)))
     const union = new Set([...words1, ...words2])
 
-    return intersection.size / union.size // Similarity score between 0 and 1
+    return intersection.size / union.size
   }
 
-  const getCompleteStories = () =>
-    stories.filter(entry => {
-      const { isComplete } = useStory(entry)
-      return isComplete()
-    })
-  const getPendingStories = () =>
-    stories.filter(entry => {
-      const { isComplete } = useStory(entry)
-      return !isComplete()
-    })
-  const getFavoriteStories = () =>
-    (JSON.parse(localStorage?.getItem('storiesData')) || []).filter(
-      entry => entry.like
-    )
+  const getCompleteStories = () => {
+    if (typeof localStorage === 'undefined') return []
+
+    try {
+      const storiesData = localStorage.getItem('storiesData')
+      if (!storiesData) return []
+
+      const parsedData = JSON.parse(storiesData)
+      if (!Array.isArray(parsedData)) return []
+
+      const completedKeys = new Set(
+        parsedData
+          .filter(entry => entry.finished === true)
+          .map(entry => entry.key)
+      )
+
+      return stories.filter(story => completedKeys.has(story.key))
+    } catch (error) {
+      return []
+    }
+  }
+
+  const getPendingStories = () => {
+    if (typeof localStorage === 'undefined') return stories
+
+    try {
+      const storiesData = localStorage.getItem('storiesData')
+      if (!storiesData) return stories
+
+      const parsedData = JSON.parse(storiesData)
+      if (!Array.isArray(parsedData)) return stories
+
+      const pendingKeys = new Set(
+        parsedData
+          .filter(entry => entry.finished !== true)
+          .map(entry => entry.key)
+      )
+
+      const storiesInStorage = new Set(parsedData.map(entry => entry.key))
+      return stories.filter(story =>
+        pendingKeys.has(story.key) || !storiesInStorage.has(story.key)
+      )
+    } catch (error) {
+      return stories
+    }
+  }
+  const getFavoriteStories = () => {
+    if (typeof localStorage === 'undefined') return []
+
+    try {
+      const storiesData = localStorage.getItem('storiesData')
+      if (!storiesData) return []
+
+      const parsedData = JSON.parse(storiesData)
+      if (!Array.isArray(parsedData)) return []
+
+      const favoriteKeys = parsedData
+        .filter(entry => entry.like === true)
+        .map(entry => entry.key)
+
+      return allStories.filter(story => favoriteKeys.includes(story.key))
+    } catch (error) {
+      return []
+    }
+  }
 
   const getRelatedStories = story => {
     const sameSagaStories = allStories.filter(

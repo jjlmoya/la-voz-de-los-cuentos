@@ -1,4 +1,3 @@
-// Scroll reveal animations for children's engagement
 
 class ScrollAnimations {
   constructor() {
@@ -8,10 +7,9 @@ class ScrollAnimations {
   }
 
   init() {
-    // Only run on client side
-    if (typeof window === 'undefined') return;
-    
-    // Create intersection observer
+    if (typeof window === 'undefined' || typeof document === 'undefined') return;
+    if (!document.body) return;
+
     this.observer = new IntersectionObserver(
       (entries) => this.handleIntersection(entries),
       {
@@ -20,10 +18,7 @@ class ScrollAnimations {
       }
     );
 
-    // Start observing elements
     this.observeElements();
-    
-    // Re-observe on DOM changes
     this.watchForNewElements();
   }
 
@@ -37,33 +32,26 @@ class ScrollAnimations {
   }
 
   animateElement(element) {
-    // Add reveal animation class
     element.classList.add('animate-revealed');
-    
-    // Add special effects for different element types
+
     if (element.classList.contains('section-default__title')) {
-      // Titles get rainbow effect
       element.classList.add('animate-rainbow');
     }
-    
+
     if (element.tagName === 'IMG') {
-      // Images get bounce effect
       element.classList.add('animate-bounceIn');
     }
-    
+
     if (element.classList.contains('footer')) {
-      // Footer gets celebration
       this.addCelebrationEffect(element);
     }
   }
 
   addCelebrationEffect(element) {
-    // Celebration effects completely disabled - no emojis
     return;
   }
 
   observeElements() {
-    // Observe all potentially animatable elements (exclude cards to avoid conflicts)
     const selectors = [
       '.animate-on-scroll',
       '.section-default',
@@ -75,25 +63,22 @@ class ScrollAnimations {
 
     selectors.forEach(selector => {
       document.querySelectorAll(selector).forEach(element => {
-        // Skip if already animated
-        if (this.animatedElements.has(element)) return;
-        
-        // Add scroll animation class
+        if (this.animatedElements.has(element) || element.classList.contains('animate-on-scroll')) {
+          this.observer.observe(element);
+          return;
+        }
+
         element.classList.add('animate-on-scroll');
-        
-        // Observe element
         this.observer.observe(element);
       });
     });
   }
 
   watchForNewElements() {
-    // Watch for new elements added to DOM
     const mutationObserver = new MutationObserver((mutations) => {
       mutations.forEach(mutation => {
         mutation.addedNodes.forEach(node => {
           if (node.nodeType === Node.ELEMENT_NODE) {
-            // Re-observe new elements
             setTimeout(() => this.observeElements(), 100);
           }
         });
@@ -106,18 +91,13 @@ class ScrollAnimations {
     });
   }
 
-  // Add playful cursor effects (disabled)
   initCursorEffects() {
-    // Cursor effects disabled per user request
     return;
   }
 
-  // Add click celebration effects
   initClickEffects() {
     document.addEventListener('click', (e) => {
       const target = e.target;
-      
-      // Only on interactive elements
       if (target.matches('button, a, .btn-playful, .link-playful')) {
         this.addClickExplosion(e.clientX, e.clientY);
       }
@@ -126,7 +106,6 @@ class ScrollAnimations {
 
   addClickExplosion(x, y) {
     const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#ffeaa7'];
-    
     for (let i = 0; i < 8; i++) {
       const particle = document.createElement('div');
       particle.style.cssText = `
@@ -143,13 +122,11 @@ class ScrollAnimations {
         animation: click-explosion 0.6s ease-out forwards;
         animation-delay: ${i * 50}ms;
       `;
-      
       document.body.appendChild(particle);
       setTimeout(() => particle.remove(), 600);
     }
   }
 
-  // Destroy observer when done
   destroy() {
     if (this.observer) {
       this.observer.disconnect();
@@ -157,7 +134,6 @@ class ScrollAnimations {
   }
 }
 
-// Add additional CSS animations
 const additionalStyles = `
   .animate-revealed {
     animation: revealer 0.8s ease-out forwards;
@@ -194,7 +170,6 @@ const additionalStyles = `
     }
   }
   
-  /* Respect reduced motion */
   @media (prefers-reduced-motion: reduce) {
     .animate-on-scroll {
       opacity: 1;
@@ -208,30 +183,31 @@ const additionalStyles = `
   }
 `;
 
-// Auto-initialize when DOM is ready
-if (typeof window !== 'undefined') {
-  // Add additional styles
-  const styleSheet = document.createElement('style');
-  styleSheet.textContent = additionalStyles;
-  document.head.appendChild(styleSheet);
-  
-  // Initialize scroll animations
-  let scrollAnimations;
-  
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
+if (typeof window !== 'undefined' &&
+    typeof document !== 'undefined' &&
+    typeof navigator !== 'undefined' &&
+    document.body &&
+    document.body.tagName === 'BODY') {
+
+  try {
+    const styleSheet = document.createElement('style');
+    styleSheet.textContent = additionalStyles;
+    document.head.appendChild(styleSheet);
+
+    let scrollAnimations;
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        scrollAnimations = new ScrollAnimations();
+        scrollAnimations.initClickEffects();
+      });
+    } else {
       scrollAnimations = new ScrollAnimations();
-      // NO cursor effects - completely disabled to avoid any emojis
       scrollAnimations.initClickEffects();
-    });
-  } else {
-    scrollAnimations = new ScrollAnimations();
-    // NO cursor effects - completely disabled to avoid any emojis
-    scrollAnimations.initClickEffects();
+    }
+
+    window.ScrollAnimations = ScrollAnimations;
+  } catch (error) {
   }
-  
-  // Export for manual control if needed
-  window.ScrollAnimations = ScrollAnimations;
 }
 
 export default ScrollAnimations;

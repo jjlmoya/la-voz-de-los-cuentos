@@ -1,5 +1,6 @@
 import account from './account'
 import landing from './landing'
+import achievements from './achievements'
 import characters from './characters'
 
 const tutorials = {
@@ -150,5 +151,8 @@ export default {
   'spotify.voice': 'Voice',
 
   'language.switch': 'Leer en Español',
-  'language.switch.aria': 'Switch language'
+  'language.switch.aria': 'Switch language',
+
+  'achievement.unlocked': 'Achievement Unlocked',
+  'achievement.view': 'View Achievement'
 }

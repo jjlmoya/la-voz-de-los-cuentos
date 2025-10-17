@@ -1,8 +1,9 @@
 ---
-import NavLayout from '../layouts/NavLayout.astro'
-import AccountPage from '../components/Page/AccountPage.vue'
-import t from '../translations'
-import { toStories } from '../router'
+import NavLayout from '../../layouts/NavLayout.astro'
+import AccountDashboard from '../../components/Account/AccountDashboard.vue'
+import t from '../../translations'
+import { toStories } from '../../router'
+
 export async function getStaticPaths() {
   const paths = [
     {
@@ -14,6 +15,8 @@ export async function getStaticPaths() {
 
   return paths
 }
+
+const lang = import.meta.env.PUBLIC_LANG
 ---
 
 <NavLayout
@@ -21,5 +24,5 @@ export async function getStaticPaths() {
   description={t('page.account.description')}
   url={toStories()}
 >
-  <AccountPage client:load />
+  <AccountDashboard client:only="vue" :lang="lang" />
 </NavLayout>

@@ -16,7 +16,6 @@ const sagas = getSagas()
 const { id } = Astro.params
 const song = songs.find(s => s.key === id)
 
-// Find the related story (the song IS the story, but we might want to link to the story page)
 const relatedStory = stories.find(s => s.key === song.key)
 const currentSaga = sagas.find(saga => saga.key === song.saga)
 

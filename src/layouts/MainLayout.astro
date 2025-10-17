@@ -6,6 +6,7 @@ import '../assets/css/theme.css'
 import '../assets/css/animations.css'
 import pkg from '../../package.json'
 
+import AchievementListenerProvider from '../components/Achievement/AchievementListenerProvider.vue'
 import CMP from '../components/commons/Legal/CMP.vue'
 const siteName = import.meta.env.PUBLIC_SITE_NAME
 const lang = import.meta.env.PUBLIC_LANG
@@ -117,12 +118,37 @@ const twitterUser = import.meta.env.PUBLIC_TWITTER_USER
   </head>
 
   <body>
-    <slot />
+    <AchievementListenerProvider client:load>
+      <slot />
+    </AchievementListenerProvider>
 
     <CMP client:load />
-    
-    <!-- Scroll animations for children engagement -->
-    <script type="module" src="/src/assets/js/scroll-animations.js"></script>
+
+    <script is:inline>
+      (function() {
+        if (typeof window === 'undefined' || typeof document === 'undefined') return;
+        function cleanSSRClasses() {
+          document.querySelectorAll('.animate-on-scroll, .animate-revealed').forEach(el => {
+            if (!el.getAttribute('data-animate')) {
+              el.classList.remove('animate-on-scroll');
+              el.classList.remove('animate-revealed');
+            }
+          });
+        }
+        cleanSSRClasses();
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', loadScrollAnimations);
+        } else {
+          setTimeout(loadScrollAnimations, 100);
+        }
+
+        function loadScrollAnimations() {
+          import('/src/assets/js/scroll-animations.js').catch(err => {
+            console.error('Failed to load scroll animations:', err);
+          });
+        }
+      })();
+    </script>
 
     <script>
       if ('serviceWorker' in navigator) {

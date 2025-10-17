@@ -188,19 +188,17 @@ let timeUpdateInterval = null
 
 const lyricsHTML = computed(() => {
   if (!props.song.lyrics) return ''
-  // Remove existing <br> tags, collapse multiple newlines, and convert to <br>
+
   return props.song.lyrics
     .replace(/<br\s*\/?>/gi, '\n')
-    .replace(/\n{3,}/g, '\n\n')  // Max 2 consecutive newlines
+    .replace(/\n{3,}/g, '\n\n') 
     .replace(/\n/g, '<br>')
 })
 
-// Función para determinar si una línea está activa en el karaoke
 const isLineActive = (line) => {
   return currentTime.value >= line.start && currentTime.value < line.end
 }
 
-// Auto-scroll al cambiar la línea activa
 watch(currentTime, () => {
   if (!props.song.syncedLyrics || props.song.syncedLyrics.length === 0) return
 
@@ -215,10 +213,8 @@ watch(currentTime, () => {
       const lineTop = activeLine.offsetTop - karaokeContent.offsetTop
       const lineHeight = activeLine.clientHeight
 
-      // Calcular posición para centrar la línea en el contenedor
       const scrollTo = lineTop - (containerHeight / 2) + (lineHeight / 2)
 
-      // Solo hacer scroll si la línea está fuera del viewport del contenedor
       if (lineTop < containerTop || lineTop + lineHeight > containerTop + containerHeight) {
         karaokeContent.scrollTo({
           top: scrollTo,
@@ -229,7 +225,6 @@ watch(currentTime, () => {
   }
 })
 
-// Actualizar el currentTime desde el player de YouTube
 const startTimeTracking = () => {
   if (timeUpdateInterval) {
     clearInterval(timeUpdateInterval)
@@ -239,7 +234,7 @@ const startTimeTracking = () => {
     if (player && typeof player.getCurrentTime === 'function') {
       currentTime.value = player.getCurrentTime()
     }
-  }, 100) // Actualizar cada 100ms para suavidad
+  }, 100)
 }
 
 const toggleRepeat = () => {
@@ -276,7 +271,6 @@ const playNextSong = () => {
   const currentIndex = props.allSongs.findIndex(s => s.key === props.song.key)
 
   if (isShuffle.value) {
-    // Modo aleatorio: elegir una canción al azar (diferente de la actual)
     let randomIndex
     do {
       randomIndex = Math.floor(Math.random() * props.allSongs.length)
@@ -285,13 +279,10 @@ const playNextSong = () => {
     const randomSong = props.allSongs[randomIndex]
     navigateToSong(randomSong.key)
   } else if (currentIndex !== -1) {
-    // Modo secuencial
     if (currentIndex < props.allSongs.length - 1) {
-      // Si no es la última, ir a la siguiente
       const nextSong = props.allSongs[currentIndex + 1]
       navigateToSong(nextSong.key)
     } else {
-      // Si es la última, volver a la primera
       const firstSong = props.allSongs[0]
       navigateToSong(firstSong.key)
     }
@@ -329,9 +320,7 @@ const createPlayer = () => {
     },
     events: {
       onReady: (event) => {
-        // DEBUG: Exponer player globalmente para testing en consola
         window.__ytPlayer = event.target
-        // Iniciar tracking de tiempo para karaoke
         startTimeTracking()
       },
       onStateChange: (event) => {
@@ -340,11 +329,9 @@ const createPlayer = () => {
         }
         if (event.data === window.YT.PlayerState.PLAYING) {
           isPlaying.value = true
-          // Asegurar que el tracking está activo cuando se reproduce
           startTimeTracking()
         }
         if (event.data === window.YT.PlayerState.PAUSED) {
-          // Detener tracking al pausar
           if (timeUpdateInterval) {
             clearInterval(timeUpdateInterval)
           }
@@ -357,7 +344,6 @@ const createPlayer = () => {
 onMounted(() => {
   isPlaying.value = true
 
-  // Load preferences from localStorage
   const savedRepeat = localStorage.getItem('songRepeat')
   const savedAutoplay = localStorage.getItem('songAutoplay')
   const savedShuffle = localStorage.getItem('songShuffle')
@@ -371,22 +357,17 @@ onMounted(() => {
   if (savedShuffle !== null) {
     isShuffle.value = savedShuffle === 'true'
   }
-
-  // Initialize YouTube player
   initYouTubePlayer()
 })
 
-// Save preferences
 const savePreferences = () => {
   localStorage.setItem('songRepeat', isRepeat.value)
   localStorage.setItem('songAutoplay', isAutoplay.value)
   localStorage.setItem('songShuffle', isShuffle.value)
 }
 
-// Watch for changes
 watch([isRepeat, isAutoplay, isShuffle], savePreferences)
 
-// Limpiar intervalo al desmontar componente
 onUnmounted(() => {
   if (timeUpdateInterval) {
     clearInterval(timeUpdateInterval)

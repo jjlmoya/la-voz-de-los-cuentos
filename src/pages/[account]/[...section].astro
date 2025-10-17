@@ -1,0 +1,91 @@
+---
+import NavLayout from '../../layouts/NavLayout.astro'
+import AccountPageNav from '../../components/Page/AccountPageNav.vue'
+import AccountSummary from '../../components/Account/AccountSummary.vue'
+import AccountReadSection from '../../components/Account/AccountReadSection.vue'
+import AccountPendingSection from '../../components/Account/AccountPendingSection.vue'
+import AccountFavoritesSection from '../../components/Account/AccountFavoritesSection.vue'
+import AccountAchievementsSection from '../../components/Account/AccountAchievementsSection.vue'
+import t from '../../translations'
+import { toAccount } from '../../router'
+import useStories from '../../composables/useStories'
+
+const sectionMap = {
+  'leidos': 'read',
+  'read': 'read',
+  'pendientes': 'pending',
+  'pending': 'pending',
+  'favoritos': 'favorites',
+  'favorites': 'favorites',
+  'logros': 'achievements',
+  'achievements': 'achievements'
+}
+
+export async function getStaticPaths() {
+  const lang = import.meta.env.PUBLIC_LANG
+  const sections = ['leidos', 'read', 'pendientes', 'pending', 'favoritos', 'favorites', 'logros', 'achievements']
+
+  const paths = sections.map(section => ({
+    params: {
+      account: lang === 'en' ? 'account' : 'cuenta',
+      section: section
+    }
+  }))
+
+  return paths
+}
+
+const { section } = Astro.params
+const lang = import.meta.env.PUBLIC_LANG
+const activeSection = sectionMap[section]
+
+let stories = []
+let pageTitle = ''
+let showTutorial = false
+let sectionType = ''
+
+const { getAllStories } = useStories()
+
+const allStories = getAllStories()
+
+if (activeSection === 'read') {
+  stories = allStories
+  sectionType = 'read'
+  pageTitle = t('page.account.resume.read')
+} else if (activeSection === 'pending') {
+  stories = allStories
+  sectionType = 'pending'
+  pageTitle = t('page.account.resume.pending')
+} else if (activeSection === 'favorites') {
+  stories = allStories
+  sectionType = 'favorites'
+  pageTitle = t('page.account.resume.favorites')
+} else if (activeSection === 'achievements') {
+  pageTitle = t('page.account.achievements')
+}
+---
+
+<NavLayout
+  title={pageTitle}
+  description={t('page.account.description')}
+  url={toAccount()}
+>
+  <AccountPageNav client:only="vue" pageTitle={pageTitle}>
+    <!-- Mostrar AccountSummary (dashboard) en todas las secciones -->
+    <AccountSummary client:only="vue" lang={lang} />
+
+    <!-- Contenido específico de cada sección -->
+    {activeSection === 'read' && (
+      <AccountReadSection client:only="vue" stories={stories} sectionType={sectionType} />
+    )}
+    {activeSection === 'pending' && (
+      <AccountPendingSection client:only="vue" stories={stories} sectionType={sectionType} />
+    )}
+    {activeSection === 'favorites' && (
+      <AccountFavoritesSection client:only="vue" stories={stories} sectionType={sectionType} />
+    )}
+    {activeSection === 'achievements' && (
+      <AccountAchievementsSection client:only="vue" />
+    )}
+  </AccountPageNav>
+</NavLayout>

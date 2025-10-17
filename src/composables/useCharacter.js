@@ -18,7 +18,7 @@ export default function useCharacter(character) {
     })
   }
   const getCharactersSameSaga = () => {
-    const currentCharacter = toValue(character) // Accede al valor actual
+    const currentCharacter = toValue(character)
     return characters.filter(_character => {
       getRelatedStories
       return (

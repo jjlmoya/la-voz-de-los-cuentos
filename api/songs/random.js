@@ -16,7 +16,6 @@ export default async function handler(req, res) {
 
     res.status(200).json(enrichedSong);
   } catch (error) {
-    console.error('Error generating random song:', error);
     res.status(500).json({ error: 'Error generating random song' });
   }
 }

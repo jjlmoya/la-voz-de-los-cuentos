@@ -38,13 +38,11 @@ const lang = import.meta.env.PUBLIC_LANG
 const targetLang = lang === 'es' ? 'en' : 'es'
 const targetFlag = targetLang === 'es' ? 'ES' : 'EN'
 
-// Base URLs for each language
 const BASE_URLS = {
   es: 'https://lavozdeloscuentos.es',
   en: 'https://buboboo.com'
 }
 
-// Path patterns for each type and language
 const PATH_PATTERNS = {
   story: {
     es: '/cuento/',
@@ -60,7 +58,6 @@ const PATH_PATTERNS = {
   }
 }
 
-// Find the corresponding item in the target language by order
 const getTargetItem = () => {
   let items
 
@@ -81,7 +78,6 @@ const getTargetItem = () => {
   return items.find(item => item.order === props.order)
 }
 
-// Build the alternate URL
 const getAlternateUrl = () => {
   const targetItem = getTargetItem()
 
@@ -115,12 +111,10 @@ const alternateUrl = getAlternateUrl()
     }
   }
 
-  /* Desktop with sidebar visible */
   @media (width >= 1360px) {
     right: 0;
   }
 
-  /* Mobile */
   @media (max-width: 768px) {
     top: 80px;
   }

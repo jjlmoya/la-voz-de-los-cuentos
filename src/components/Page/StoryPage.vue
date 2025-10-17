@@ -200,6 +200,7 @@
 
   import { ref, toValue, onMounted } from 'vue'
   import useStory from '../../composables/useStory'
+  import { emitAchievementRecalculate } from '../../achievements/achievementEvents'
 
   const lostFocusOnShare = () => {
     isSocialShare.value = false
@@ -237,6 +238,7 @@
   const toggleLike = () => {
     like.value = !like.value
     setLikeStatus(like.value)
+    emitAchievementRecalculate()
   }
 
   onMounted(() => {
