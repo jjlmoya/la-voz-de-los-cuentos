@@ -25,6 +25,7 @@ export default {
   ...story,
   ...landing,
   ...account,
+  ...achievements,
   'menu.home': 'Home',
   'menu.stories': 'Stories',
   'menu.sagas': 'Sagas',
