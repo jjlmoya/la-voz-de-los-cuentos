@@ -45,7 +45,7 @@ export default {
   'achievement.saga-7.description': 'Seven sagas explored! Your tale-gathering backpack is nearly infinite.',
 
   'achievement.saga-all.name': 'Universe Complete',
-  'achievement.saga-all.description': 'You conquered ALL the sagas! You're a living legend of the story universe.',
+  'achievement.saga-all.description': 'You conquered ALL the sagas! You\'re a living legend of the story universe.',
 
   // Character achievements
   'achievement.char-5.name': 'Character Fan',
@@ -55,7 +55,7 @@ export default {
   'achievement.char-10.description': 'Ten adventures with the same character! You know them like yourself.',
 
   'achievement.char-all.name': 'Story Historian',
-  'achievement.char-all.description': 'You read the ENTIRE story history of one character! You're their official biographer.',
+  'achievement.char-all.description': 'You read the ENTIRE story history of one character! You\'re their official biographer.',
 
   'achievement.char-profiles.name': 'Character Connoisseur',
   'achievement.char-profiles.description': 'You know multiple characters! The storytelling community is yours.',
