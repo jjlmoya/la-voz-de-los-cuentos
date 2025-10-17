@@ -22,5 +22,5 @@ export async function getStaticPaths() {
   description={t('page.account.description')}
   url={toStories()}
 >
-  <AccountSummary client:load />
+  <AccountSummary client:only="vue" />
 </NavLayout>

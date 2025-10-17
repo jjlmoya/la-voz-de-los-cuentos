@@ -67,22 +67,22 @@ if (activeSection === 'read') {
   description={t('page.account.description')}
   url={toAccount()}
 >
-  <AccountPageNav client:load pageTitle={pageTitle}>
+  <AccountPageNav client:only="vue" pageTitle={pageTitle}>
     <!-- Mostrar AccountSummary (dashboard) en todas las secciones -->
-    <AccountSummary client:load lang={lang} />
+    <AccountSummary client:only="vue" lang={lang} />
 
     <!-- Contenido específico de cada sección -->
     {activeSection === 'read' && (
-      <AccountReadSection client:load stories={stories} showTutorial={showTutorial} />
+      <AccountReadSection client:only="vue" stories={stories} showTutorial={showTutorial} />
     )}
     {activeSection === 'pending' && (
-      <AccountPendingSection client:load stories={stories} />
+      <AccountPendingSection client:only="vue" stories={stories} />
     )}
     {activeSection === 'favorites' && (
-      <AccountFavoritesSection client:load stories={stories} />
+      <AccountFavoritesSection client:only="vue" stories={stories} />
     )}
     {activeSection === 'achievements' && (
-      <AccountAchievementsSection client:load />
+      <AccountAchievementsSection client:only="vue" />
     )}
   </AccountPageNav>
 </NavLayout>

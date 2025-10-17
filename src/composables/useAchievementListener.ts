@@ -37,7 +37,6 @@ function getStoriesDataFromStorage(): StoredStory[] {
     const data = localStorage.getItem('storiesData')
     return data ? JSON.parse(data) : []
   } catch (error) {
-    console.error('Error reading stories from storage:', error)
     return []
   }
 }
@@ -49,8 +48,6 @@ function checkForNewCompletedStories(): void {
   const currentStories = getStoriesDataFromStorage()
   const previousStories = lastStoriesData.value
 
-  console.log(`[Achievement Listener] Checking ${currentStories.length} stories. Previous state had ${previousStories.length} stories.`)
-
   let hasNewCompletion = false
 
   currentStories.forEach(currentStory => {
@@ -60,13 +57,8 @@ function checkForNewCompletedStories(): void {
     const isCurrentlyComplete = currentStory.spentTime >= parseFloat(String(currentStory.totalTime))
     const wasPreviouslyComplete = previousStory && previousStory.spentTime >= parseFloat(String(previousStory.totalTime))
 
-    if (previousStory) {
-      console.log(`[Achievement Listener] Story "${currentStory.key}": spentTime ${previousStory.spentTime} -> ${currentStory.spentTime} (totalTime: ${currentStory.totalTime}), complete: ${wasPreviouslyComplete} -> ${isCurrentlyComplete}`)
-    }
-
     // Detectar cambio: no completada -> completada
     if (isCurrentlyComplete && !wasPreviouslyComplete) {
-      console.log(`[Achievement Listener] ✨ NEW COMPLETION DETECTED: ${currentStory.key}`)
       handleStoryCompleted(currentStory)
       hasNewCompletion = true
     }
@@ -74,7 +66,6 @@ function checkForNewCompletedStories(): void {
 
   // Si hay alguna nueva completación, revisar todos los logros
   if (hasNewCompletion) {
-    console.log(`[Achievement Listener] Checking achievements after new story completion`)
     checkReadingAchievements()
   }
 
@@ -86,7 +77,6 @@ function checkForNewCompletedStories(): void {
  * Manejar completación de historia
  */
 function handleStoryCompleted(story: StoredStory): void {
-  console.log(`📖 [Achievement Listener] Story completed: ${story.key}`)
   // checkReadingAchievements() is called in checkForNewCompletedStories
 }
 
@@ -140,8 +130,6 @@ function unlockAchievement(achievementId: string): void {
     unlockedAt,
     isNew: true
   })
-
-  console.log(`✅ Logro desbloqueado: "${achievement.nameEs}"`)
 }
 
 /**
@@ -150,7 +138,6 @@ function unlockAchievement(achievementId: string): void {
 export function useAchievementListener() {
   function startListening(): () => void {
     if (watcherActive) {
-      console.warn('Achievement listener already active')
       return () => {}
     }
 
@@ -161,12 +148,9 @@ export function useAchievementListener() {
       checkForNewCompletedStories()
     }, 2000) // Check every 2 seconds for faster achievement detection
 
-    console.log('🎯 Achievement listener started with 2s polling interval')
-
     return () => {
       clearInterval(interval)
       watcherActive = false
-      console.log('🎯 Achievement listener stopped')
     }
   }
 
@@ -174,7 +158,6 @@ export function useAchievementListener() {
    * Forzar check manual
    */
   function forceCheck(): void {
-    console.log('[Achievement Listener] Force check triggered')
     checkReadingAchievements()
   }
 

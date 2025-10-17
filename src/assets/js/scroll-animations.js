@@ -9,8 +9,11 @@ class ScrollAnimations {
 
   init() {
     // Only run on client side
-    if (typeof window === 'undefined') return;
-    
+    if (typeof window === 'undefined' || typeof document === 'undefined') return;
+
+    // Skip if running during SSR
+    if (!document.body) return;
+
     // Create intersection observer
     this.observer = new IntersectionObserver(
       (entries) => this.handleIntersection(entries),
@@ -22,7 +25,7 @@ class ScrollAnimations {
 
     // Start observing elements
     this.observeElements();
-    
+
     // Re-observe on DOM changes
     this.watchForNewElements();
   }
@@ -75,12 +78,16 @@ class ScrollAnimations {
 
     selectors.forEach(selector => {
       document.querySelectorAll(selector).forEach(element => {
-        // Skip if already animated
-        if (this.animatedElements.has(element)) return;
-        
-        // Add scroll animation class
+        // Skip if already animated or already has the class
+        if (this.animatedElements.has(element) || element.classList.contains('animate-on-scroll')) {
+          // Still observe even if class exists
+          this.observer.observe(element);
+          return;
+        }
+
+        // Add scroll animation class only on first observation
         element.classList.add('animate-on-scroll');
-        
+
         // Observe element
         this.observer.observe(element);
       });
@@ -208,30 +215,40 @@ const additionalStyles = `
   }
 `;
 
-// Auto-initialize when DOM is ready
-if (typeof window !== 'undefined') {
-  // Add additional styles
-  const styleSheet = document.createElement('style');
-  styleSheet.textContent = additionalStyles;
-  document.head.appendChild(styleSheet);
-  
-  // Initialize scroll animations
-  let scrollAnimations;
-  
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
+// Auto-initialize when DOM is ready (client-only)
+// Only run if this is definitely the browser environment
+if (typeof window !== 'undefined' &&
+    typeof document !== 'undefined' &&
+    typeof navigator !== 'undefined' &&
+    document.body &&
+    document.body.tagName === 'BODY') {
+
+  try {
+    // Add additional styles only on client
+    const styleSheet = document.createElement('style');
+    styleSheet.textContent = additionalStyles;
+    document.head.appendChild(styleSheet);
+
+    // Initialize scroll animations
+    let scrollAnimations;
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        scrollAnimations = new ScrollAnimations();
+        // NO cursor effects - completely disabled to avoid any emojis
+        scrollAnimations.initClickEffects();
+      });
+    } else {
       scrollAnimations = new ScrollAnimations();
       // NO cursor effects - completely disabled to avoid any emojis
       scrollAnimations.initClickEffects();
-    });
-  } else {
-    scrollAnimations = new ScrollAnimations();
-    // NO cursor effects - completely disabled to avoid any emojis
-    scrollAnimations.initClickEffects();
+    }
+
+    // Export for manual control if needed
+    window.ScrollAnimations = ScrollAnimations;
+  } catch (error) {
+    console.error('Error initializing scroll animations:', error);
   }
-  
-  // Export for manual control if needed
-  window.ScrollAnimations = ScrollAnimations;
 }
 
 export default ScrollAnimations;

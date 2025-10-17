@@ -1,14 +1,9 @@
 <template>
   <VContainer size="xl" class="account-page">
     <div class="account-page__content">
-      <!-- Header con botón de volver y título -->
-      <div class="account-page__header">
-        <a :href="toAccountHome()" class="account-page__back-button" :title="t('account.backToHome')">
-          <span class="account-page__back-icon">←</span>
-        </a>
-        <div class="account-page__title">
-          <h1 class="account-page__title-main">{{ pageTitle }}</h1>
-        </div>
+      <!-- Título -->
+      <div class="account-page__title">
+        <h1 class="account-page__title-main">{{ pageTitle }}</h1>
       </div>
 
       <slot />

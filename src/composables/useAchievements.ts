@@ -1,190 +1,223 @@
-import { ref, computed } from 'vue'
+/**
+ * Composable principal de logros
+ */
+
+import { ref, computed, readonly, watch } from 'vue'
+import type { Achievement, AchievementWithProgress, AchievementStats } from '../types/achievement'
+import { ALL_ACHIEVEMENT_DEFINITIONS, getAchievementsByType } from '../achievements/achievements.config'
+import {
+  loadAchievements,
+  saveAchievementUnlock,
+  updateAchievementProgress,
+  isAchievementUnlocked,
+  getAchievementState
+} from '../achievements/achievementStorage'
+import { onAchievementUnlock, onAchievementProgress } from '../achievements/achievementEvents'
 import useStories from './useStories'
 
-interface Achievement {
-  id: string
-  type: 'trophy' | 'medal' | 'badge'
-  nameEs: string
-  nameEn: string
-  descriptionEs: string
-  descriptionEn: string
-  icon: string
-  unlocked: boolean
-  unlockedAt?: Date
-  metadata?: Record<string, any>
-}
-
 export default function useAchievements() {
-  const { getCompleteStories, getFavoriteStories } = useStories()
+  const { getCompleteStories } = useStories()
 
-  // Trofeos por cantidad de cuentos leídos
-  const readTrophies = computed(() => {
-    const count = getCompleteStories().length
-    return [
-      {
-        id: 'trophy-bronze',
-        type: 'trophy',
-        nameEs: 'Trofeo de Bronce',
-        nameEn: 'Bronze Trophy',
-        descriptionEs: '1-5 cuentos leídos',
-        descriptionEn: '1-5 stories read',
-        icon: 'trophy-bronze.webp',
-        unlocked: count >= 1,
-        threshold: 1
-      },
-      {
-        id: 'trophy-silver',
-        type: 'trophy',
-        nameEs: 'Trofeo de Plata',
-        nameEn: 'Silver Trophy',
-        descriptionEs: '6-20 cuentos leídos',
-        descriptionEn: '6-20 stories read',
-        icon: 'trophy-silver.webp',
-        unlocked: count >= 6,
-        threshold: 6
-      },
-      {
-        id: 'trophy-gold',
-        type: 'trophy',
-        nameEs: 'Trofeo de Oro',
-        nameEn: 'Gold Trophy',
-        descriptionEs: '21-50 cuentos leídos',
-        descriptionEn: '21-50 stories read',
-        icon: 'trophy-gold.webp',
-        unlocked: count >= 21,
-        threshold: 21
-      },
-      {
-        id: 'trophy-diamond',
-        type: 'trophy',
-        nameEs: 'Trofeo de Diamante',
-        nameEn: 'Diamond Trophy',
-        descriptionEs: '51+ cuentos leídos',
-        descriptionEn: '51+ stories read',
-        icon: 'trophy-diamond.webp',
-        unlocked: count >= 51,
-        threshold: 51
-      }
-    ]
+  const triggerUpdate = ref(0)
+  const achievementsData = ref<Record<string, any>>({})
+
+  // Setup event listeners to trigger reactivity updates
+  onAchievementUnlock((event) => {
+    // Force re-read from storage when achievement is unlocked
+    triggerUpdate.value++
+    // Force recalculation by triggering update
+    achievementsData.value = { ...achievementsData.value }
   })
 
-  // Medallas especiales
-  const specialMedals = computed(() => {
-    const readCount = getCompleteStories().length
-    const favoriteCount = getFavoriteStories().length
-
-    return [
-      {
-        id: 'medal-novice',
-        type: 'medal',
-        nameEs: 'Estrella de Novato',
-        nameEn: 'Novice Star',
-        descriptionEs: 'Lee tu primer cuento',
-        descriptionEn: 'Read your first story',
-        icon: 'medal-novice.webp',
-        unlocked: readCount >= 1
-      },
-      {
-        id: 'medal-golden-heart',
-        type: 'medal',
-        nameEs: 'Corazón Dorado',
-        nameEn: 'Golden Heart',
-        descriptionEs: '10 favoritos',
-        descriptionEn: '10 favorites',
-        icon: 'medal-golden-heart.webp',
-        unlocked: favoriteCount >= 10
-      },
-      {
-        id: 'medal-master-clock',
-        type: 'medal',
-        nameEs: 'Reloj Maestro',
-        nameEn: 'Master Clock',
-        descriptionEs: '100 horas de lectura',
-        descriptionEn: '100 hours reading',
-        icon: 'medal-master-clock.webp',
-        unlocked: false // Esto se calcularía con datos reales de tiempo
-      }
-    ]
+  onAchievementProgress((event) => {
+    // Force re-read from storage when achievement progress changes
+    triggerUpdate.value++
+    // Force recalculation by triggering update
+    achievementsData.value = { ...achievementsData.value }
   })
 
-  // Badges por categoría (si existe data de categorías)
-  const categoryBadges = computed(() => {
-    return [
-      {
-        id: 'badge-adventurer',
-        type: 'badge',
-        nameEs: 'Aventurero',
-        nameEn: 'Adventurer',
-        descriptionEs: 'Lee historias de aventura',
-        descriptionEn: 'Read adventure stories',
-        icon: 'badge-adventurer.webp',
-        unlocked: false
-      },
-      {
-        id: 'badge-magical',
-        type: 'badge',
-        nameEs: 'Mágico',
-        nameEn: 'Magical',
-        descriptionEs: 'Lee historias mágicas',
-        descriptionEn: 'Read magical stories',
-        icon: 'badge-magical.webp',
-        unlocked: false
-      },
-      {
-        id: 'badge-scientist',
-        type: 'badge',
-        nameEs: 'Científico',
-        nameEn: 'Scientist',
-        descriptionEs: 'Lee historias científicas',
-        descriptionEn: 'Read science stories',
-        icon: 'badge-scientist.webp',
-        unlocked: false
-      }
-    ]
-  })
-
-  const allAchievements = computed(() => [
-    ...readTrophies.value,
-    ...specialMedals.value,
-    ...categoryBadges.value
-  ])
-
-  const unlockedAchievements = computed(() =>
-    allAchievements.value.filter(a => a.unlocked)
-  )
-
-  const lockedAchievements = computed(() =>
-    allAchievements.value.filter(a => !a.unlocked)
-  )
-
-  const getAchievementProgress = (achievementId: string) => {
-    const achievement = allAchievements.value.find(a => a.id === achievementId)
-    if (!achievement) return null
-
-    if (achievement.id === 'medal-golden-heart') {
-      return {
-        current: getFavoriteStories().length,
-        target: 10
-      }
+  /**
+   * Crear instancia de logro
+   */
+  function createAchievementInstance(definitionId: string): Achievement {
+    const definition = ALL_ACHIEVEMENT_DEFINITIONS.find(d => d.id === definitionId)
+    if (!definition) {
+      throw new Error(`Achievement definition not found: ${definitionId}`)
     }
 
-    if (achievement.id.startsWith('trophy-')) {
-      return {
-        current: getCompleteStories().length,
-        target: achievement.threshold || 1
-      }
+    const state = getAchievementState(definitionId)
+
+    return {
+      id: definitionId,
+      type: definition.type,
+      nameEs: definition.nameEs,
+      nameEn: definition.nameEn,
+      descriptionEs: definition.descriptionEs,
+      descriptionEn: definition.descriptionEn,
+      iconId: definition.iconId,
+      unlocked: state?.unlocked ?? false,
+      unlockedAt: state?.unlockedAt ? new Date(state.unlockedAt) : undefined,
+      threshold: definition.threshold,
+      metadata: definition.metadata
+    }
+  }
+
+  /**
+   * Calcular progreso actual de un logro
+   */
+  function calculateAchievementProgress(
+    achievementId: string
+  ): { current: number; target: number; progress: number } | null {
+    const definition = ALL_ACHIEVEMENT_DEFINITIONS.find(d => d.id === achievementId)
+    if (!definition?.threshold) return null
+
+    // Para logros de lectura
+    if (definition.type === 'read') {
+      const current = getCompleteStories().length
+      const target = definition.threshold
+      return { current, target, progress: Math.min(100, (current / target) * 100) }
     }
 
     return null
   }
 
+  /**
+   * Crear logro con progreso
+   */
+  function createAchievementWithProgress(definitionId: string): AchievementWithProgress {
+    const achievement = createAchievementInstance(definitionId)
+    const progressData = calculateAchievementProgress(definitionId)
+
+    return {
+      ...achievement,
+      progress: progressData?.progress ?? 0,
+      current: progressData?.current,
+      target: progressData?.target,
+      nearUnlock: progressData ? progressData.progress >= 80 && progressData.progress < 100 : false
+    }
+  }
+
+  /**
+   * Array de todos los logros
+   */
+  const allAchievements = computed(() => {
+    triggerUpdate.value // reactivity trigger
+    achievementsData.value // reactivity trigger
+    return ALL_ACHIEVEMENT_DEFINITIONS.map(def => createAchievementWithProgress(def.id))
+  })
+
+  /**
+   * Logros desbloqueados
+   */
+  const unlockedAchievements = computed(() => {
+    return allAchievements.value.filter(a => a.unlocked)
+  })
+
+  /**
+   * Logros bloqueados
+   */
+  const lockedAchievements = computed(() => {
+    return allAchievements.value.filter(a => !a.unlocked)
+  })
+
+  /**
+   * Estadísticas
+   */
+  const stats = computed((): AchievementStats => {
+    const achievements = allAchievements.value
+    const unlocked = unlockedAchievements.value
+    const total = achievements.length
+
+    return {
+      totalAchievements: total,
+      unlockedCount: unlocked.length,
+      lockedCount: total - unlocked.length,
+      progressPercentage: Math.round((unlocked.length / total) * 100),
+      totalProgress: Math.round(achievements.reduce((sum, a) => sum + a.progress, 0) / total),
+      recentUnlocks: unlocked
+        .sort((a, b) => {
+          const dateA = a.unlockedAt?.getTime() ?? 0
+          const dateB = b.unlockedAt?.getTime() ?? 0
+          return dateB - dateA
+        })
+        .slice(0, 5)
+    }
+  })
+
+  /**
+   * Verificar y desbloquear si es necesario
+   */
+  function checkAndUnlockAchievement(achievementId: string): boolean {
+    const isCurrentlyUnlocked = isAchievementUnlocked(achievementId)
+    if (isCurrentlyUnlocked) {
+      return false
+    }
+
+    const progressData = calculateAchievementProgress(achievementId)
+    if (!progressData) {
+      return false
+    }
+
+    const shouldBeUnlocked = progressData.current >= progressData.target
+
+    if (shouldBeUnlocked) {
+      saveAchievementUnlock(achievementId, new Date())
+      triggerUpdate.value++
+      return true
+    }
+
+    return false
+  }
+
+  /**
+   * Actualizar progreso
+   */
+  function updateProgress(achievementId: string): void {
+    const progressData = calculateAchievementProgress(achievementId)
+    if (progressData) {
+      updateAchievementProgress(
+        achievementId,
+        progressData.current,
+        progressData.target
+      )
+      triggerUpdate.value++
+    }
+  }
+
+  /**
+   * Recalcular todos
+   */
+  function recalculateAll(): void {
+    allAchievements.value.forEach(achievement => {
+      checkAndUnlockAchievement(achievement.id)
+      updateProgress(achievement.id)
+    })
+  }
+
+  /**
+   * Obtener logro por ID
+   */
+  function getAchievement(id: string): AchievementWithProgress | undefined {
+    return allAchievements.value.find(a => a.id === id)
+  }
+
+  /**
+   * Filtrar por tipo
+   */
+  function getAchievementsByTypeFilter(type: string): AchievementWithProgress[] {
+    return allAchievements.value.filter(a => a.type === type)
+  }
+
   return {
-    allAchievements,
-    readTrophies,
-    specialMedals,
-    categoryBadges,
-    unlockedAchievements,
-    lockedAchievements,
-    getAchievementProgress
+    allAchievements: readonly(allAchievements),
+    unlockedAchievements: readonly(unlockedAchievements),
+    lockedAchievements: readonly(lockedAchievements),
+    stats: readonly(stats),
+
+    checkAndUnlockAchievement,
+    updateProgress,
+    recalculateAll,
+    getAchievement,
+    getAchievementsByTypeFilter
   }
 }

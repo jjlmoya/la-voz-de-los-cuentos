@@ -48,6 +48,7 @@
   import { computed } from 'vue'
   import { VText } from '@overgaming/vicius'
   import useStories from '../../composables/useStories'
+  import useAchievements from '../../composables/useAchievements'
   import { toAccountRead, toAccountPending, toAccountFavorites, toAccountAchievements } from '../../router'
 
   const props = defineProps({
@@ -58,11 +59,12 @@
   })
 
   const { getCompleteStories, getPendingStories, getFavoriteStories } = useStories()
+  const { unlockedAchievements } = useAchievements()
 
   const readCount = computed(() => getCompleteStories().length)
   const pendingCount = computed(() => getPendingStories().length)
   const favoriteCount = computed(() => getFavoriteStories().length)
-  const achievementCount = computed(() => 0) // To be implemented
+  const achievementCount = computed(() => unlockedAchievements.value.length)
 </script>
 
 <style scoped>

@@ -13,5 +13,8 @@ export default {
   'page.account.achievements': 'Logros',
   'page.account.achievements.comingSoon': 'Próximamente',
   'page.account.achievements.description': 'Estamos preparando algo especial. Vuelve pronto para descubrir los increíbles logros que te esperan',
+  'achievements.unlocked': 'logros desbloqueados',
+  'achievements.recent': 'Logros Recientes',
+  'achievements.empty': 'No hay logros aún',
   'account.backToHome': 'Volver a Mi Cuenta'
 }

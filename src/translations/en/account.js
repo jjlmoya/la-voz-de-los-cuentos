@@ -13,5 +13,8 @@ export default {
   'page.account.achievements': 'Achievements',
   'page.account.achievements.comingSoon': 'Coming Soon',
   'page.account.achievements.description': 'We\'re preparing something special. Come back soon to discover the amazing achievements waiting for you',
+  'achievements.unlocked': 'achievements unlocked',
+  'achievements.recent': 'Recent Achievements',
+  'achievements.empty': 'No achievements yet',
   'account.backToHome': 'Back to My Account'
 }
