@@ -154,6 +154,7 @@ export const SAGA_ACHIEVEMENTS: AchievementDefinition[] = [
     nameKey: 'achievement.saga-1.name',
     descriptionKey: 'achievement.saga-1.description',
     iconId: '1',
+    threshold: 1,
     metadata: {
       folder: 'read-saga'
     }
@@ -164,6 +165,7 @@ export const SAGA_ACHIEVEMENTS: AchievementDefinition[] = [
     nameKey: 'achievement.saga-3.name',
     descriptionKey: 'achievement.saga-3.description',
     iconId: '3',
+    threshold: 3,
     metadata: {
       folder: 'read-saga'
     }
@@ -174,6 +176,7 @@ export const SAGA_ACHIEVEMENTS: AchievementDefinition[] = [
     nameKey: 'achievement.saga-7.name',
     descriptionKey: 'achievement.saga-7.description',
     iconId: '7',
+    threshold: 7,
     metadata: {
       folder: 'read-saga'
     }
@@ -184,6 +187,7 @@ export const SAGA_ACHIEVEMENTS: AchievementDefinition[] = [
     nameKey: 'achievement.saga-all.name',
     descriptionKey: 'achievement.saga-all.description',
     iconId: 'all',
+    threshold: 11,
     metadata: {
       folder: 'read-saga'
     }
@@ -200,6 +204,7 @@ export const CHARACTER_ACHIEVEMENTS: AchievementDefinition[] = [
     nameKey: 'achievement.char-5.name',
     descriptionKey: 'achievement.char-5.description',
     iconId: '5',
+    threshold: 5,
     metadata: {
       folder: 'read-character'
     }
@@ -210,6 +215,7 @@ export const CHARACTER_ACHIEVEMENTS: AchievementDefinition[] = [
     nameKey: 'achievement.char-10.name',
     descriptionKey: 'achievement.char-10.description',
     iconId: '10',
+    threshold: 10,
     metadata: {
       folder: 'read-character'
     }
@@ -220,6 +226,7 @@ export const CHARACTER_ACHIEVEMENTS: AchievementDefinition[] = [
     nameKey: 'achievement.char-all.name',
     descriptionKey: 'achievement.char-all.description',
     iconId: 'all',
+    threshold: 20,
     metadata: {
       folder: 'read-character'
     }
@@ -230,6 +237,7 @@ export const CHARACTER_ACHIEVEMENTS: AchievementDefinition[] = [
     nameKey: 'achievement.char-profiles.name',
     descriptionKey: 'achievement.char-profiles.description',
     iconId: 'profiles',
+    threshold: 5,
     metadata: {
       folder: 'read-character'
     }
@@ -246,6 +254,7 @@ export const SPECIAL_ACHIEVEMENTS: AchievementDefinition[] = [
     nameKey: 'achievement.special-all.name',
     descriptionKey: 'achievement.special-all.description',
     iconId: 'all',
+    threshold: 1,
     metadata: {
       folder: 'read-special'
     }
@@ -256,6 +265,7 @@ export const SPECIAL_ACHIEVEMENTS: AchievementDefinition[] = [
     nameKey: 'achievement.special-epic.name',
     descriptionKey: 'achievement.special-epic.description',
     iconId: 'epic',
+    threshold: 1,
     metadata: {
       folder: 'read-special'
     }
@@ -266,6 +276,7 @@ export const SPECIAL_ACHIEVEMENTS: AchievementDefinition[] = [
     nameKey: 'achievement.special-quick.name',
     descriptionKey: 'achievement.special-quick.description',
     iconId: 'quick',
+    threshold: 1,
     metadata: {
       folder: 'read-special'
     }
@@ -276,6 +287,7 @@ export const SPECIAL_ACHIEVEMENTS: AchievementDefinition[] = [
     nameKey: 'achievement.special-oldest.name',
     descriptionKey: 'achievement.special-oldest.description',
     iconId: 'oldest',
+    threshold: 1,
     metadata: {
       folder: 'read-special'
     }
@@ -286,6 +298,7 @@ export const SPECIAL_ACHIEVEMENTS: AchievementDefinition[] = [
     nameKey: 'achievement.special-newest.name',
     descriptionKey: 'achievement.special-newest.description',
     iconId: 'newest',
+    threshold: 1,
     metadata: {
       folder: 'read-special'
     }
@@ -296,6 +309,7 @@ export const SPECIAL_ACHIEVEMENTS: AchievementDefinition[] = [
     nameKey: 'achievement.special-early.name',
     descriptionKey: 'achievement.special-early.description',
     iconId: 'early',
+    threshold: 1,
     metadata: {
       folder: 'read-special'
     }
@@ -306,6 +320,7 @@ export const SPECIAL_ACHIEVEMENTS: AchievementDefinition[] = [
     nameKey: 'achievement.special-night.name',
     descriptionKey: 'achievement.special-night.description',
     iconId: 'night',
+    threshold: 1,
     metadata: {
       folder: 'read-special'
     }
