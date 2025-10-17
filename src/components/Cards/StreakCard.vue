@@ -452,8 +452,8 @@ function getLocalizedDayLabel(day) {
 
 .streak-card__sticker {
   position: absolute;
-  width: 350%;
-  height: 350%;
+  width: 200%;
+  height: 200%;
   object-fit: contain;
   pointer-events: none;
   z-index: 10;
