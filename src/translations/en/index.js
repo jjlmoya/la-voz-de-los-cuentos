@@ -155,5 +155,14 @@ export default {
   'language.switch.aria': 'Switch language',
 
   'achievement.unlocked': 'Achievement Unlocked',
-  'achievement.view': 'View Achievement'
+  'achievement.view': 'View Achievement',
+
+  'streak.title': 'Daily Streak',
+  'streak.current': 'Current',
+  'streak.best': 'Best',
+  'streak.days_since': 'Days Since',
+  'streak.frozen': '(frozen)',
+  'streak.last_read': 'Last read:',
+  'streak.no_data': 'Start reading or listening to begin your streak!',
+  'streak.legacy_data': 'Unknown streak ({count} items without timestamps)'
 }

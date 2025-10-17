@@ -1,6 +1,7 @@
 ---
 import NavLayout from '../layouts/NavLayout.astro'
 import Hero from '../components/Cards/Hero.vue'
+import StreakCard from '../components/Cards/StreakCard.vue'
 import SectionsDefault from '../components/Sections/Default.vue'
 import NewSection from '../components/Sections/News.vue'
 import SagasSection from '../components/Sections/Sagas.vue'
@@ -18,6 +19,7 @@ import { toStories, toSagas, toSongs } from '../router'
   <div class="homepage">
     <VContainer size="xl">
       <Hero />
+      <StreakCard client:load />
       <SectionsDefault title={t('section.news')} moreLink={toStories()}>
         <NewSection client:load />
       </SectionsDefault>

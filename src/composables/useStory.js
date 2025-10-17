@@ -66,7 +66,9 @@ export default function useStory(story) {
         spentTime: 0,
         totalTime: story.time,
         finished: false,
-        like: false
+        like: false,
+        startedAt: null,
+        completedAt: null
       })
     }
     storiesData[index] = toValue(_story)
@@ -78,6 +80,10 @@ export default function useStory(story) {
     currentStory.spentTime += 10
     if (currentStory.spentTime >= parseInt(currentStory.totalTime)) {
       currentStory.finished = true
+      // Capture completedAt timestamp when story is finished
+      if (!currentStory.completedAt) {
+        currentStory.completedAt = Date.now()
+      }
     }
     _story.value = currentStory
     _setStoriesData()
@@ -86,6 +92,11 @@ export default function useStory(story) {
   const reading = () => {
     _getStoredData()
     _setStoriesData()
+    // Capture startedAt timestamp on first read
+    if (_story.value && !_story.value.startedAt) {
+      _story.value.startedAt = Date.now()
+      _setStoriesData()
+    }
     setInterval(_updateTimeSpent, 10000)
   }
 
