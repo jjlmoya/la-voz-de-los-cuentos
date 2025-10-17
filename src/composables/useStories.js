@@ -65,7 +65,6 @@ export default function useStories() {
 
       return stories.filter(story => completedKeys.has(story.key))
     } catch (error) {
-      console.error('Error al obtener cuentos leídos:', error)
       return []
     }
   }
@@ -80,20 +79,17 @@ export default function useStories() {
       const parsedData = JSON.parse(storiesData)
       if (!Array.isArray(parsedData)) return stories
 
-      // Crear un mapa de keys que NO están completados (finished !== true)
       const pendingKeys = new Set(
         parsedData
           .filter(entry => entry.finished !== true)
           .map(entry => entry.key)
       )
 
-      // Retornar stories que están en pendientes + stories que nunca han sido tocados
       const storiesInStorage = new Set(parsedData.map(entry => entry.key))
       return stories.filter(story =>
         pendingKeys.has(story.key) || !storiesInStorage.has(story.key)
       )
     } catch (error) {
-      console.error('Error al obtener cuentos pendientes:', error)
       return stories
     }
   }
@@ -107,15 +103,12 @@ export default function useStories() {
       const parsedData = JSON.parse(storiesData)
       if (!Array.isArray(parsedData)) return []
 
-      // Filtrar favoritos y mapear a objetos de historia completos
       const favoriteKeys = parsedData
         .filter(entry => entry.like === true)
         .map(entry => entry.key)
 
-      // Retornar historias completas que están en favoritos
       return allStories.filter(story => favoriteKeys.includes(story.key))
     } catch (error) {
-      console.error('Error al obtener favoritos:', error)
       return []
     }
   }

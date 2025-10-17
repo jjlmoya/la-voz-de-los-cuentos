@@ -13,12 +13,10 @@ export default function t(key) {
   try {
     const translation = translations[lang]?.[key]
     if (!translation) {
-      console.warn(`Missing translation key: ${lang}-${key}`)
       return key
     }
     return translation
   } catch (e) {
-    console.error(`Translation error for key: ${lang}-${key}`, e)
     return key
   }
 }

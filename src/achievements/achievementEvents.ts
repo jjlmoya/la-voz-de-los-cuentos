@@ -59,7 +59,7 @@ export function emitAchievementUnlock(event: AchievementUnlockedEvent): void {
     try {
       listener(event)
     } catch (error) {
-      console.error('Error in achievement unlock listener:', error)
+      // Silently ignore listener errors
     }
   })
 }
@@ -73,7 +73,7 @@ export function emitAchievementProgress(event: AchievementProgressEvent): void {
     try {
       listener(event)
     } catch (error) {
-      console.error('Error in achievement progress listener:', error)
+      // Silently ignore listener errors
     }
   })
 }
@@ -87,7 +87,7 @@ export function emitAchievementRecalculate(): void {
     try {
       listener()
     } catch (error) {
-      console.error('Error in achievement recalculate listener:', error)
+      // Silently ignore listener errors
     }
   })
 }
