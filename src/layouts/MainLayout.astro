@@ -94,6 +94,25 @@ const twitterUser = import.meta.env.PUBLIC_TWITTER_USER
     <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
     ></script>
 
+    <script is:inline>
+      (function() {
+        if (typeof document === 'undefined') return;
+        const cleanAnimationClasses = () => {
+          document.querySelectorAll('[class*="animate-on-scroll"], [class*="animate-revealed"]').forEach(el => {
+            el.classList.remove('animate-on-scroll');
+            el.classList.remove('animate-revealed');
+          });
+        };
+        cleanAnimationClasses();
+        const observer = new MutationObserver(cleanAnimationClasses);
+        observer.observe(document.documentElement, {
+          attributes: true,
+          subtree: true,
+          attributeFilter: ['class']
+        });
+      })();
+    </script>
+
     <script>
       ;(function () {
         const isProduction = window.location.hostname !== 'localhost'
@@ -118,7 +137,7 @@ const twitterUser = import.meta.env.PUBLIC_TWITTER_USER
   </head>
 
   <body>
-    <AchievementListenerProvider client:load>
+    <AchievementListenerProvider client:only="vue">
       <slot />
     </AchievementListenerProvider>
 

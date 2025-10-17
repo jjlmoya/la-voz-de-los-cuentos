@@ -64,9 +64,9 @@ const cardRef = ref(null)
 const isVisible = ref(false)
 const isInCenter = ref(false)
 
-const randomDuration = ref(2 + Math.random() * 2) 
-const randomDelay = ref(Math.random() * 2)
-const randomRotation = ref(-2 + Math.random() * 4)
+const randomDuration = ref(2)
+const randomDelay = ref(0)
+const randomRotation = ref(0)
 
 const onClick = () => {
   emit('click', props.song.key)
@@ -84,6 +84,11 @@ let observer = null
 
 onMounted(() => {
   if (!cardRef.value) return
+
+  // Generate random values only on client side to avoid hydration mismatch
+  randomDuration.value = 2 + Math.random() * 2
+  randomDelay.value = Math.random() * 2
+  randomRotation.value = -2 + Math.random() * 4
 
   observer = new IntersectionObserver(
     (entries) => {
