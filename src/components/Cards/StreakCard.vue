@@ -297,17 +297,11 @@ function getLocalizedDayLabel(day) {
 }
 
 .streak-card__character {
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: character-float 2s ease-in-out infinite;
-}
-
-@keyframes character-float {
-  0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-8px) scale(1.08); }
 }
 
 .streak-card__character-img {
@@ -536,8 +530,8 @@ function getLocalizedDayLabel(day) {
   }
 
   .streak-card__character {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
   }
 
   .streak-card__days {
@@ -566,8 +560,8 @@ function getLocalizedDayLabel(day) {
   }
 
   .streak-card__character {
-    width: 90px;
-    height: 90px;
+    width: 110px;
+    height: 110px;
   }
 
   .streak-card__header {
