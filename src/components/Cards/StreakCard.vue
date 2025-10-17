@@ -11,7 +11,7 @@
       <div class="streak-card__number" :class="{ 'streak-card__number--pulse-intense': currentStreak % 25 === 0 && currentStreak > 0 }">
         {{ currentStreak }}
       </div>
-      <div class="streak-card__label">day streak</div>
+      <div class="streak-card__label">{{ t('streak.label') }}</div>
     </div>
 
     <!-- Daily progress dots -->
@@ -34,55 +34,22 @@
           />
           <span v-if="day.count > 1" class="streak-card__day-number">{{ day.count }}</span>
         </div>
-        <div class="streak-card__day-label">{{ day.label }}</div>
+        <div class="streak-card__day-label">{{ getLocalizedDayLabel(day) }}</div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { computed, onMounted, ref } from 'vue'
-import { useStreaks } from '../../composables/useStreaks'
+import { onMounted, ref } from 'vue'
+import t from '../../translations'
 
-const streakData = ref(null)
 const currentStreak = ref(0)
 const last7Days = ref([])
 
 onMounted(() => {
-  streakData.value = useStreaks()
-  currentStreak.value = streakData.value.currentStreak
-
-  // Calculate days immediately after loading streak data
-  setTimeout(() => {
-    calculateLast7Days()
-  }, 0)
+  calculateLast7Days()
 })
-
-const calculateLast7Days = () => {
-  const days = []
-  const today = new Date()
-
-  // Get last 7 days
-  for (let i = 6; i >= 0; i--) {
-    const date = new Date(today)
-    date.setDate(date.getDate() - i)
-
-    const dateStr = date.toISOString().split('T')[0]
-    const dayOfWeek = date.toLocaleDateString('en-US', { weekday: 'short' })
-
-    // Count items completed on this date
-    const count = getCompletedCountForDate(dateStr)
-
-    days.push({
-      date: dateStr,
-      label: i === 0 ? 'Today' : dayOfWeek,
-      count: count,
-      isToday: i === 0
-    })
-  }
-
-  last7Days.value = days
-}
 
 const getCompletedCountForDate = (dateStr) => {
   try {
@@ -111,6 +78,83 @@ const getCompletedCountForDate = (dateStr) => {
   }
 }
 
+const calculateLast7Days = () => {
+  const days = []
+  const today = new Date()
+
+  // Get last 7 days
+  for (let i = 6; i >= 0; i--) {
+    const date = new Date(today)
+    date.setDate(date.getDate() - i)
+
+    const dateStr = date.getFullYear() + '-' +
+                   String(date.getMonth() + 1).padStart(2, '0') + '-' +
+                   String(date.getDate()).padStart(2, '0')
+    const dayOfWeek = date.toLocaleDateString('en-US', { weekday: 'short' })
+
+    // Count items completed on this date
+    const count = getCompletedCountForDate(dateStr)
+
+    days.push({
+      date: dateStr,
+      label: i === 0 ? 'Today' : dayOfWeek,
+      count: count,
+      isToday: i === 0
+    })
+  }
+
+  last7Days.value = days
+
+  // Calculate current streak from the days
+  updateCurrentStreak()
+}
+
+const updateCurrentStreak = () => {
+  try {
+    const storiesData = JSON.parse(localStorage.getItem('storiesData')) || []
+    const songsData = JSON.parse(localStorage.getItem('songsData')) || []
+    const allData = [...storiesData, ...songsData]
+
+    // Group all completions by date
+    const completionsByDate = {}
+    allData.forEach(item => {
+      if (item.completedAt && item.finished) {
+        const date = new Date(item.completedAt)
+        const dateStr = date.getFullYear() + '-' +
+                       String(date.getMonth() + 1).padStart(2, '0') + '-' +
+                       String(date.getDate()).padStart(2, '0')
+        if (!completionsByDate[dateStr]) {
+          completionsByDate[dateStr] = 0
+        }
+        completionsByDate[dateStr]++
+      }
+    })
+
+    // Calculate streak from today backwards
+    let streak = 0
+    const today = new Date()
+    let currentDate = new Date(today)
+
+    while (true) {
+      const dateStr = currentDate.getFullYear() + '-' +
+                     String(currentDate.getMonth() + 1).padStart(2, '0') + '-' +
+                     String(currentDate.getDate()).padStart(2, '0')
+
+      if (completionsByDate[dateStr]) {
+        streak++
+        currentDate.setDate(currentDate.getDate() - 1)
+      } else {
+        break
+      }
+    }
+
+    currentStreak.value = streak
+  } catch (e) {
+    console.error('Error updating current streak:', e)
+    currentStreak.value = 0
+  }
+}
+
 const getDayImage = (count) => {
   // Return appropriate illustration based on count
   // 1 = basic achievement image
@@ -123,6 +167,25 @@ const getDayImage = (count) => {
   } else {
     return '/assets/streak/icons/flame-icon.webp'
   }
+}
+
+const getLocalizedDayLabel = (day) => {
+  if (day.isToday) {
+    return t('streak.today')
+  }
+
+  const dayNameMap = {
+    'Mon': 'streak.mon',
+    'Tue': 'streak.tue',
+    'Wed': 'streak.wed',
+    'Thu': 'streak.thu',
+    'Fri': 'streak.fri',
+    'Sat': 'streak.sat',
+    'Sun': 'streak.sun'
+  }
+
+  const translationKey = dayNameMap[day.label]
+  return translationKey ? t(translationKey) : day.label
 }
 </script>
 
