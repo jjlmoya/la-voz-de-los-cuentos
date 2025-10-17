@@ -58,7 +58,7 @@ export default {
   'achievement.char-all.description': 'You read the ENTIRE story history of one character! You\'re their official biographer.',
 
   'achievement.char-profiles.name': 'Character Connoisseur',
-  'achievement.char-profiles.description': 'You know multiple characters! The storytelling community is yours.',
+  'achievement.char-profiles.description': 'You know ALL 25 characters! You\'re the guardian of their stories.',
 
   // Special achievements
   'achievement.special-all.name': 'The Ultimate Finisher',

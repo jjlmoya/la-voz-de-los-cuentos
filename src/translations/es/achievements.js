@@ -58,7 +58,7 @@ export default {
   'achievement.char-all.description': '¡Leíste TODA la historia de un personaje! Eres su biógrafo oficial.',
 
   'achievement.char-profiles.name': 'Conocedor de Todos',
-  'achievement.char-profiles.description': '¡Conoces a múltiples personajes! La comunidad de cuentos es tuya.',
+  'achievement.char-profiles.description': '¡Conoces a TODOS los 25 personajes! Eres el guardián de sus historias.',
 
   // Logros Especiales
   'achievement.special-all.name': 'El Finalizador Total',

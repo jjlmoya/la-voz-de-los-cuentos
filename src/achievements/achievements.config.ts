@@ -237,7 +237,7 @@ export const CHARACTER_ACHIEVEMENTS: AchievementDefinition[] = [
     nameKey: 'achievement.char-profiles.name',
     descriptionKey: 'achievement.char-profiles.description',
     iconId: 'profiles',
-    threshold: 5,
+    threshold: 25,
     metadata: {
       folder: 'read-character'
     }
