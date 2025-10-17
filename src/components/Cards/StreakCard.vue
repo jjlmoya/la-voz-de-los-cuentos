@@ -85,8 +85,6 @@ const calculateLast7Days = () => {
 }
 
 const getCompletedCountForDate = (dateStr) => {
-  if (!streakData.value) return 0
-
   try {
     const storiesData = JSON.parse(localStorage.getItem('storiesData')) || []
     const songsData = JSON.parse(localStorage.getItem('songsData')) || []
@@ -96,7 +94,10 @@ const getCompletedCountForDate = (dateStr) => {
     let count = 0
     allData.forEach(item => {
       if (item.completedAt && item.finished) {
-        const completedDate = new Date(item.completedAt).toISOString().split('T')[0]
+        const date = new Date(item.completedAt)
+        const completedDate = date.getFullYear() + '-' +
+                            String(date.getMonth() + 1).padStart(2, '0') + '-' +
+                            String(date.getDate()).padStart(2, '0')
         if (completedDate === dateStr) {
           count++
         }
@@ -105,6 +106,7 @@ const getCompletedCountForDate = (dateStr) => {
 
     return count
   } catch (e) {
+    console.error('Error getting completed count:', e)
     return 0
   }
 }
