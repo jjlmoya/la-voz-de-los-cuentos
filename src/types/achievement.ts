@@ -68,10 +68,8 @@ export interface AchievementWithProgress extends Achievement {
 export interface AchievementDefinition {
   id: string
   type: AchievementType
-  nameEs: string
-  nameEn: string
-  descriptionEs: string
-  descriptionEn: string
+  nameKey: string
+  descriptionKey: string
   iconId: string
   threshold?: number
   metadata?: Record<string, any>

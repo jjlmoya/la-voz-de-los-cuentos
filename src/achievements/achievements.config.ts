@@ -15,10 +15,8 @@ export const READ_ACHIEVEMENTS: AchievementDefinition[] = [
   {
     id: 'read-1',
     type: 'read',
-    nameEs: 'Tu Primer Cuento',
-    nameEn: 'Your First Story',
-    descriptionEs: 'Lee 1 cuento',
-    descriptionEn: 'Read 1 story',
+    nameKey: 'achievement.read-1.name',
+    descriptionKey: 'achievement.read-1.description',
     iconId: '1',
     threshold: 1,
     metadata: {
@@ -28,10 +26,8 @@ export const READ_ACHIEVEMENTS: AchievementDefinition[] = [
   {
     id: 'read-5',
     type: 'read',
-    nameEs: 'Cinco Historias Mágicas',
-    nameEn: 'Five Magical Stories',
-    descriptionEs: 'Lee 5 cuentos',
-    descriptionEn: 'Read 5 stories',
+    nameKey: 'achievement.read-5.name',
+    descriptionKey: 'achievement.read-5.description',
     iconId: '5',
     threshold: 5,
     metadata: {
@@ -41,10 +37,8 @@ export const READ_ACHIEVEMENTS: AchievementDefinition[] = [
   {
     id: 'read-25',
     type: 'read',
-    nameEs: 'Viajero de Veinticinco Mundos',
-    nameEn: 'Traveler of Twenty-Five Worlds',
-    descriptionEs: 'Lee 25 cuentos',
-    descriptionEn: 'Read 25 stories',
+    nameKey: 'achievement.read-25.name',
+    descriptionKey: 'achievement.read-25.description',
     iconId: '25',
     threshold: 25,
     metadata: {
@@ -54,10 +48,8 @@ export const READ_ACHIEVEMENTS: AchievementDefinition[] = [
   {
     id: 'read-50',
     type: 'read',
-    nameEs: 'Maestro de Cincuenta Aventuras',
-    nameEn: 'Master of Fifty Adventures',
-    descriptionEs: 'Lee 50 cuentos',
-    descriptionEn: 'Read 50 stories',
+    nameKey: 'achievement.read-50.name',
+    descriptionKey: 'achievement.read-50.description',
     iconId: '50',
     threshold: 50,
     metadata: {
@@ -67,10 +59,8 @@ export const READ_ACHIEVEMENTS: AchievementDefinition[] = [
   {
     id: 'read-100',
     type: 'read',
-    nameEs: 'Centenario de Historias',
-    nameEn: 'Century of Stories',
-    descriptionEs: 'Lee 100 cuentos',
-    descriptionEn: 'Read 100 stories',
+    nameKey: 'achievement.read-100.name',
+    descriptionKey: 'achievement.read-100.description',
     iconId: '100',
     threshold: 100,
     metadata: {
@@ -80,10 +70,8 @@ export const READ_ACHIEVEMENTS: AchievementDefinition[] = [
   {
     id: 'read-200',
     type: 'read',
-    nameEs: 'Leyenda Inmortal de Doscientas Sagas',
-    nameEn: 'Immortal Legend of Two Hundred Sagas',
-    descriptionEs: 'Lee 200 cuentos',
-    descriptionEn: 'Read 200 stories',
+    nameKey: 'achievement.read-200.name',
+    descriptionKey: 'achievement.read-200.description',
     iconId: '200',
     threshold: 200,
     metadata: {
@@ -99,10 +87,8 @@ export const FAVORITE_ACHIEVEMENTS: AchievementDefinition[] = [
   {
     id: 'fav-1',
     type: 'favorite',
-    nameEs: 'Tu Primer Amor',
-    nameEn: 'Your First Love',
-    descriptionEs: 'Marca 1 cuento como favorito',
-    descriptionEn: 'Mark 1 story as favorite',
+    nameKey: 'achievement.fav-1.name',
+    descriptionKey: 'achievement.fav-1.description',
     iconId: '1',
     threshold: 1,
     metadata: {
@@ -112,10 +98,8 @@ export const FAVORITE_ACHIEVEMENTS: AchievementDefinition[] = [
   {
     id: 'fav-5',
     type: 'favorite',
-    nameEs: 'Cinco Favoritos',
-    nameEn: 'Five Favorites',
-    descriptionEs: 'Marca 5 cuentos como favoritos',
-    descriptionEn: 'Mark 5 stories as favorites',
+    nameKey: 'achievement.fav-5.name',
+    descriptionKey: 'achievement.fav-5.description',
     iconId: '5',
     threshold: 5,
     metadata: {
@@ -125,10 +109,8 @@ export const FAVORITE_ACHIEVEMENTS: AchievementDefinition[] = [
   {
     id: 'fav-10',
     type: 'favorite',
-    nameEs: 'Coleccionista de Historias',
-    nameEn: 'Story Collector',
-    descriptionEs: 'Marca 10 cuentos como favoritos',
-    descriptionEn: 'Mark 10 stories as favorites',
+    nameKey: 'achievement.fav-10.name',
+    descriptionKey: 'achievement.fav-10.description',
     iconId: '10',
     threshold: 10,
     metadata: {
@@ -138,10 +120,8 @@ export const FAVORITE_ACHIEVEMENTS: AchievementDefinition[] = [
   {
     id: 'fav-25',
     type: 'favorite',
-    nameEs: 'Guardián de Veinticinco Joyas',
-    nameEn: 'Guardian of Twenty-Five Gems',
-    descriptionEs: 'Marca 25 cuentos como favoritos',
-    descriptionEn: 'Mark 25 stories as favorites',
+    nameKey: 'achievement.fav-25.name',
+    descriptionKey: 'achievement.fav-25.description',
     iconId: '25',
     threshold: 25,
     metadata: {
@@ -151,10 +131,8 @@ export const FAVORITE_ACHIEVEMENTS: AchievementDefinition[] = [
   {
     id: 'fav-50',
     type: 'favorite',
-    nameEs: 'Biblioteca Personal de Cincuenta Tesoros',
-    nameEn: 'Personal Library of Fifty Treasures',
-    descriptionEs: 'Marca 50 cuentos como favoritos',
-    descriptionEn: 'Mark 50 stories as favorites',
+    nameKey: 'achievement.fav-50.name',
+    descriptionKey: 'achievement.fav-50.description',
     iconId: '50',
     threshold: 50,
     metadata: {
