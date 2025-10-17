@@ -77,6 +77,8 @@ export default function useAchievements() {
     const definition = ALL_ACHIEVEMENT_DEFINITIONS.find(d => d.id === achievementId)
     if (!definition?.threshold) return null
 
+    const state = getAchievementState(achievementId)
+
     // Para logros de lectura
     if (definition.type === 'read') {
       const current = getCompleteStories().length
@@ -89,6 +91,15 @@ export default function useAchievements() {
       const current = getFavoriteStories().length
       const target = definition.threshold
       return { current, target, progress: Math.min(100, (current / target) * 100) }
+    }
+
+    // Para sagas, personajes y especiales, usar el progreso guardado en storage
+    if (state?.current !== undefined && state?.target !== undefined) {
+      return {
+        current: state.current,
+        target: state.target,
+        progress: state.progress ?? Math.min(100, (state.current / state.target) * 100)
+      }
     }
 
     return null
