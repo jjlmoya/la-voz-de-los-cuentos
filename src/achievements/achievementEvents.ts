@@ -8,9 +8,11 @@ import type { AchievementUnlockedEvent, AchievementProgressEvent } from '../type
 
 type UnlockListener = (event: AchievementUnlockedEvent) => void
 type ProgressListener = (event: AchievementProgressEvent) => void
+type RecalculateListener = () => void
 
 const unlockListeners = new Set<UnlockListener>()
 const progressListeners = new Set<ProgressListener>()
+const recalculateListeners = new Set<RecalculateListener>()
 
 /**
  * Registrar un listener para cuando se desbloquea un logro
@@ -33,6 +35,18 @@ export function onAchievementProgress(callback: ProgressListener): () => void {
   // Retornar función para desuscribirse
   return () => {
     progressListeners.delete(callback)
+  }
+}
+
+/**
+ * Registrar un listener para recalculación de logros
+ */
+export function onAchievementRecalculate(callback: RecalculateListener): () => void {
+  recalculateListeners.add(callback)
+
+  // Retornar función para desuscribirse
+  return () => {
+    recalculateListeners.delete(callback)
   }
 }
 
@@ -65,11 +79,26 @@ export function emitAchievementProgress(event: AchievementProgressEvent): void {
 }
 
 /**
+ * Disparar evento de recalculación
+ * (llamado cuando se necesita recalcular todos los logros, ej: al quitar un like)
+ */
+export function emitAchievementRecalculate(): void {
+  recalculateListeners.forEach(listener => {
+    try {
+      listener()
+    } catch (error) {
+      console.error('Error in achievement recalculate listener:', error)
+    }
+  })
+}
+
+/**
  * Limpiar todos los listeners (para testing)
  */
 export function clearAchievementListeners(): void {
   unlockListeners.clear()
   progressListeners.clear()
+  recalculateListeners.clear()
 }
 
 /**

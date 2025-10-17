@@ -12,11 +12,12 @@ import {
   isAchievementUnlocked,
   getAchievementState
 } from '../achievements/achievementStorage'
-import { onAchievementUnlock, onAchievementProgress } from '../achievements/achievementEvents'
+import { onAchievementUnlock, onAchievementProgress, onAchievementRecalculate } from '../achievements/achievementEvents'
+import { revokeAchievement } from '../achievements/achievementStorage'
 import useStories from './useStories'
 
 export default function useAchievements() {
-  const { getCompleteStories } = useStories()
+  const { getCompleteStories, getFavoriteStories } = useStories()
 
   const triggerUpdate = ref(0)
   const achievementsData = ref<Record<string, any>>({})
@@ -36,6 +37,13 @@ export default function useAchievements() {
     achievementsData.value = { ...achievementsData.value }
   })
 
+  onAchievementRecalculate(() => {
+    // Handle recalculation - check if any unlocked achievements should be revoked
+    checkAndRevokeAchievements()
+    triggerUpdate.value++
+    achievementsData.value = { ...achievementsData.value }
+  })
+
   /**
    * Crear instancia de logro
    */
@@ -50,10 +58,8 @@ export default function useAchievements() {
     return {
       id: definitionId,
       type: definition.type,
-      nameEs: definition.nameEs,
-      nameEn: definition.nameEn,
-      descriptionEs: definition.descriptionEs,
-      descriptionEn: definition.descriptionEn,
+      nameKey: definition.nameKey,
+      descriptionKey: definition.descriptionKey,
       iconId: definition.iconId,
       unlocked: state?.unlocked ?? false,
       unlockedAt: state?.unlockedAt ? new Date(state.unlockedAt) : undefined,
@@ -74,6 +80,13 @@ export default function useAchievements() {
     // Para logros de lectura
     if (definition.type === 'read') {
       const current = getCompleteStories().length
+      const target = definition.threshold
+      return { current, target, progress: Math.min(100, (current / target) * 100) }
+    }
+
+    // Para logros de favoritos
+    if (definition.type === 'favorite') {
+      const current = getFavoriteStories().length
       const target = definition.threshold
       return { current, target, progress: Math.min(100, (current / target) * 100) }
     }
@@ -182,6 +195,23 @@ export default function useAchievements() {
       )
       triggerUpdate.value++
     }
+  }
+
+  /**
+   * Verificar y revocar logros que ya no cumplen el umbral
+   */
+  function checkAndRevokeAchievements(): void {
+    allAchievements.value.forEach(achievement => {
+      if (!achievement.unlocked) return
+
+      const progressData = calculateAchievementProgress(achievement.id)
+      if (!progressData) return
+
+      // Si el logro ya no cumple el umbral, revocarlo
+      if (progressData.current < progressData.target) {
+        revokeAchievement(achievement.id)
+      }
+    })
   }
 
   /**

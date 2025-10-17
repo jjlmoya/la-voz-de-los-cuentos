@@ -28,11 +28,11 @@
       </div>
     </div>
 
-    <!-- Contenido: Logros -->
+    <!-- Grid de logros -->
     <div class="achievements-grid">
-      <template v-if="allAchievements.length > 0">
+      <template v-if="sortedAchievements.length > 0">
         <div
-          v-for="achievement in allAchievements"
+          v-for="achievement in sortedAchievements"
           :key="achievement.id"
           class="achievement-item"
         >
@@ -46,13 +46,13 @@
       </div>
     </div>
 
-    <!-- Estadísticas -->
+    <!-- Estadísticas - Desbloqueos recientes -->
     <div v-if="stats.recentUnlocks.length > 0" class="achievements-stats">
       <h3 class="achievements-stats__title">{{ t('achievements.recent') }}</h3>
       <div class="recent-unlocks">
         <div v-for="achievement in stats.recentUnlocks" :key="achievement.id" class="recent-unlock">
           <img
-            :src="getIconPath(achievement.iconId)"
+            :src="getIconPath(achievement.id)"
             :alt="getAchievementName(achievement)"
             class="recent-unlock__icon"
           />
@@ -70,22 +70,30 @@
 import { computed } from 'vue'
 import useAchievements from '../../composables/useAchievements'
 import AchievementCard from '../../components/Achievement/AchievementCard.vue'
-import t from '../../translations'
+import t from '../../translations/index'
 
 const { allAchievements, stats } = useAchievements()
 
+// Ordenar logros: desbloqueados primero, luego bloqueados
+const sortedAchievements = computed(() => {
+  return [...allAchievements.value].sort((a, b) => {
+    if (a.unlocked === b.unlocked) return 0
+    return a.unlocked ? -1 : 1
+  })
+})
+
 function getAchievementName(achievement) {
-  const lang = import.meta.env.PUBLIC_LANG
-  return lang === 'es' ? achievement.nameEs : achievement.nameEn
+  return t(achievement.nameKey)
 }
 
 function getIconPath(iconId) {
   if (!iconId) return '/assets/account/get-achievement.webp'
 
-  const definition = allAchievements.value.find(a => a.iconId === iconId)
+  const definition = allAchievements.value.find(a => a.id === iconId || a.iconId === iconId)
   const folder = definition?.metadata?.folder || 'read'
+  const fileName = definition?.iconId || iconId
 
-  return `/assets/achievements/${folder}/${iconId}.png`
+  return `/assets/achievements/${folder}/${fileName}.png`
 }
 
 function formatUnlockDate(date) {
@@ -195,8 +203,8 @@ function formatUnlockDate(date) {
 /* Grid de logros */
 .achievements-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--v-unit-4);
+  grid-template-columns: 1fr;
+  gap: var(--v-unit-3);
   animation: fadeIn 0.4s ease-out;
 }
 
@@ -308,8 +316,25 @@ function formatUnlockDate(date) {
 }
 
 /* Tablet */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet pequeño */
+@media (max-width: 768px) {
+  .achievements-section {
+    padding: var(--v-unit-4);
+    gap: var(--v-unit-4);
+  }
+
+  .achievements-grid {
+    grid-template-columns: 1fr;
+    gap: var(--v-unit-2);
+  }
+
+  .recent-unlocks {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -317,17 +342,21 @@ function formatUnlockDate(date) {
 /* Mobile */
 @media (max-width: 640px) {
   .achievements-section {
-    padding: var(--v-unit-4);
-    gap: var(--v-unit-4);
+    padding: var(--v-unit-3);
+    gap: var(--v-unit-3);
   }
 
   .achievements-header {
-    padding: var(--v-unit-4);
-    flex-direction: column;
+    padding: var(--v-unit-3);
   }
 
-  .achievements-header__content {
-    flex-wrap: wrap;
+  .achievements-header__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .achievements-header__title {
+    font-size: var(--v-font-size-md);
   }
 
   .achievements-grid {

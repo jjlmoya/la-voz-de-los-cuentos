@@ -1,5 +1,6 @@
 import account from './account'
 import landing from './landing'
+import achievements from './achievements'
 import characters from './characters'
 
 const tutorials = {

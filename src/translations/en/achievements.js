@@ -1,27 +1,36 @@
 export default {
   // Reading achievements
-  'achievement.read-1.name': 'Your First Story',
-  'achievement.read-1.description': 'Read 1 story',
-  'achievement.read-5.name': 'Five Magical Stories',
-  'achievement.read-5.description': 'Read 5 stories',
-  'achievement.read-25.name': 'Traveler of Twenty-Five Worlds',
-  'achievement.read-25.description': 'Read 25 stories',
-  'achievement.read-50.name': 'Master of Fifty Adventures',
-  'achievement.read-50.description': 'Read 50 stories',
-  'achievement.read-100.name': 'Century of Stories',
-  'achievement.read-100.description': 'Read 100 stories',
-  'achievement.read-200.name': 'Immortal Legend of Two Hundred Sagas',
-  'achievement.read-200.description': 'Read 200 stories',
+  'achievement.read-1.name': 'Story Sprout',
+  'achievement.read-1.description': 'You read your very first story!',
+
+  'achievement.read-5.name': 'Tale Taster',
+  'achievement.read-5.description': 'You’ve nibbled on five tasty tales!',
+
+  'achievement.read-25.name': 'World Hopper',
+  'achievement.read-25.description': 'You’ve bounced through twenty-five story worlds!',
+
+  'achievement.read-50.name': 'Adventure Ninja',
+  'achievement.read-50.description': 'Fifty stories read—quietly, quickly, and full of secrets!',
+
+  'achievement.read-100.name': 'Story Wizard',
+  'achievement.read-100.description': 'One hundred stories? Your brain is brewing magic!',
+
+  'achievement.read-200.name': 'Legendary Story Dragon',
+  'achievement.read-200.description': 'Two hundred stories hoarded in your lair—what a mighty reader!',
 
   // Favorite achievements
-  'achievement.fav-1.name': 'Your First Love',
-  'achievement.fav-1.description': 'Mark 1 story as favorite',
-  'achievement.fav-5.name': 'Five Favorites',
-  'achievement.fav-5.description': 'Mark 5 stories as favorites',
-  'achievement.fav-10.name': 'Story Collector',
-  'achievement.fav-10.description': 'Mark 10 stories as favorites',
-  'achievement.fav-25.name': 'Guardian of Twenty-Five Gems',
-  'achievement.fav-25.description': 'Mark 25 stories as favorites',
-  'achievement.fav-50.name': 'Personal Library of Fifty Treasures',
-  'achievement.fav-50.description': 'Mark 50 stories as favorites'
-}
+  'achievement.fav-1.name': 'Heart-Stamped Story',
+  'achievement.fav-1.description': 'You found your first favorite story!',
+
+  'achievement.fav-5.name': 'Tiny Treasure Trove',
+  'achievement.fav-5.description': 'Five favorite stories saved for extra-special moments!',
+
+  'achievement.fav-10.name': 'Story Snuggler',
+  'achievement.fav-10.description': 'Ten stories you just can’t stop hugging in your mind!',
+
+  'achievement.fav-25.name': 'Gem Keeper',
+  'achievement.fav-25.description': 'Twenty-five glittering story gems tucked away with care!',
+
+  'achievement.fav-50.name': 'Captain of the Cozy Library',
+  'achievement.fav-50.description': 'Fifty beloved stories—your library is officially legendary!'
+};

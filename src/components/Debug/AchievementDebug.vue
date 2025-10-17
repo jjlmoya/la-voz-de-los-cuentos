@@ -24,7 +24,7 @@
               :class="{ 'achievement-debug__achievement-btn--unlocked': achievement.unlocked }"
               @click="simulateAchievementUnlock(achievement.id)"
             >
-              <span class="achievement-debug__achievement-name">{{ achievement.nameEs }}</span>
+              <span class="achievement-debug__achievement-name">{{ getAchievementName(achievement) }}</span>
               <span v-if="achievement.unlocked" class="achievement-debug__badge">✓ Desbloqueado</span>
               <span v-else class="achievement-debug__badge achievement-debug__badge--locked">🔒 Bloqueado</span>
             </button>
@@ -68,11 +68,16 @@ import useAchievements from '../../composables/useAchievements'
 import { saveAchievementUnlock, clearAchievements } from '../../achievements/achievementStorage'
 import { emitAchievementUnlock } from '../../achievements/achievementEvents'
 import { ALL_ACHIEVEMENT_DEFINITIONS } from '../../achievements/achievements.config'
+import t from '../../translations/index'
 
 const isDev = import.meta.env.DEV || import.meta.env.PUBLIC_DEV === 'true'
 const isOpen = ref(false)
 
 const { allAchievements, unlockedAchievements, lockedAchievements, stats, recalculateAll } = useAchievements()
+
+function getAchievementName(achievement) {
+  return t(achievement.nameKey)
+}
 
 /**
  * Simular desbloqueo de logro
@@ -89,10 +94,8 @@ function simulateAchievementUnlock(achievementId) {
     achievement: {
       id: achievement.id,
       type: achievement.type,
-      nameEs: achievement.nameEs,
-      nameEn: achievement.nameEn,
-      descriptionEs: achievement.descriptionEs,
-      descriptionEn: achievement.descriptionEn,
+      nameKey: achievement.nameKey,
+      descriptionKey: achievement.descriptionKey,
       iconId: achievement.iconId,
       unlocked: true,
       unlockedAt,
@@ -130,10 +133,8 @@ function unlockAllAchievements() {
         achievement: {
           id: achievement.id,
           type: achievement.type,
-          nameEs: achievement.nameEs,
-          nameEn: achievement.nameEn,
-          descriptionEs: achievement.descriptionEs,
-          descriptionEn: achievement.descriptionEn,
+          nameKey: achievement.nameKey,
+          descriptionKey: achievement.descriptionKey,
           iconId: achievement.iconId,
           unlocked: true,
           unlockedAt,

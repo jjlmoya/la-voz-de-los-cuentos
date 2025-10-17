@@ -39,11 +39,11 @@
             </p>
 
             <h2 class="achievement-unlock-v2__title">
-              {{ notification?.nameEs || 'Logro Desbloqueado' }}
+              {{ notificationName }}
             </h2>
 
             <p class="achievement-unlock-v2__description">
-              {{ notification?.descriptionEs || 'Felicidades por tu logro' }}
+              {{ notificationDescription }}
             </p>
 
             <!-- Barra de progreso (para notificaciones de progreso) -->
@@ -95,12 +95,20 @@
 import { computed } from 'vue'
 import { useAchievementNotification } from '../../composables/useAchievementNotification'
 import { toAccountAchievements } from '../../router'
-import t from '../../translations'
+import t from '../../translations/index'
 
 const { currentNotification, dismiss } = useAchievementNotification()
 
 const notification = computed(() => {
   return currentNotification.value?.data || null
+})
+
+const notificationName = computed(() => {
+  return notification.value ? t(notification.value.nameKey) : ''
+})
+
+const notificationDescription = computed(() => {
+  return notification.value ? t(notification.value.descriptionKey) : ''
 })
 
 const containerClasses = computed(() => ({

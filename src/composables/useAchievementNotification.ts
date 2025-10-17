@@ -39,10 +39,8 @@ export function useAchievementNotification() {
       if (event.isNew) {
         showNotification({
           id: event.achievement.id,
-          nameEs: event.achievement.nameEs,
-          nameEn: event.achievement.nameEn,
-          descriptionEs: event.achievement.descriptionEs,
-          descriptionEn: event.achievement.descriptionEn,
+          nameKey: event.achievement.nameKey,
+          descriptionKey: event.achievement.descriptionKey,
           iconId: event.achievement.iconId,
           type: 'unlock'
         })
@@ -56,10 +54,8 @@ export function useAchievementNotification() {
       if (hitos.includes(event.progress) && event.isNew) {
         showNotification({
           id: event.achievementId,
-          nameEs: `Progreso de Logro`,
-          nameEn: `Achievement Progress`,
-          descriptionEs: `${event.current}/${event.target}`,
-          descriptionEn: `${event.current}/${event.target}`,
+          nameKey: 'achievement.progress',
+          descriptionKey: 'achievement.progress.description',
           iconId: 'progress-indicator',
           type: 'progress',
           progress: event.progress,

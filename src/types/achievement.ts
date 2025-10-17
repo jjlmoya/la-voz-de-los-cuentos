@@ -17,17 +17,11 @@ export interface Achievement {
   /** Tipo de logro: lectura o favoritos */
   type: AchievementType
 
-  /** Nombre en español */
-  nameEs: string
+  /** Clave de traducción para el nombre */
+  nameKey: string
 
-  /** Nombre en inglés */
-  nameEn: string
-
-  /** Descripción en español */
-  descriptionEs: string
-
-  /** Descripción en inglés */
-  descriptionEn: string
+  /** Clave de traducción para la descripción */
+  descriptionKey: string
 
   /** ID de la ilustración (sin extensión) */
   iconId: string
@@ -100,10 +94,8 @@ export interface AchievementProgressEvent {
  */
 export interface AchievementNotificationData {
   id: string
-  nameEs: string
-  nameEn: string
-  descriptionEs: string
-  descriptionEn: string
+  nameKey: string
+  descriptionKey: string
   iconId: string
   type: 'unlock' | 'progress'
   progress?: number

@@ -154,10 +154,8 @@ function unlockAchievement(achievementId: string): void {
     achievement: {
       id: achievement.id,
       type: achievement.type,
-      nameEs: achievement.nameEs,
-      nameEn: achievement.nameEn,
-      descriptionEs: achievement.descriptionEs,
-      descriptionEn: achievement.descriptionEn,
+      nameKey: achievement.nameKey,
+      descriptionKey: achievement.descriptionKey,
       iconId: achievement.iconId,
       unlocked: true,
       unlockedAt,

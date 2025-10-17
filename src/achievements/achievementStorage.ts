@@ -114,6 +114,23 @@ export function getAchievementUnlockDate(achievementId: string): Date | null {
 }
 
 /**
+ * Revocar un logro desbloqueado
+ */
+export function revokeAchievement(achievementId: string): void {
+  const achievements = loadAchievements()
+
+  if (achievements[achievementId]) {
+    achievements[achievementId] = {
+      ...achievements[achievementId],
+      unlocked: false,
+      unlockedAt: undefined
+    }
+  }
+
+  saveToStorage(achievements)
+}
+
+/**
  * Limpiar el estado de persistencia (útil para testing)
  */
 export function clearAchievements(): void {
