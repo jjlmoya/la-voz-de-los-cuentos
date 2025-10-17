@@ -2973,132 +2973,464 @@
     "song": "https://youtu.be/wFU5MMujXPA",
     "saga": "",
     "date": "16/03/2024",
-    "lyrics": "In Faintglow village, where the sun shines low\r\nlived a boy named Leo, curious to know\r\n\nHe loved the strange puzzles and mysteries untold\r\nhis window to the stars, a story to unfold\r\n\nThen one night he saw it, a shadow's strange sway\r\nthe trees were dancing in a playful way\r\n\nFlashlight ready, notebook in his hand\r\nhe slipped from his house to explore the dark land\r\n\nOh, the experiment in the dark!\r\nWhere the light makes a brand new reality mark\r\n\nLiving shadows, a mystery deep\r\nsearching for clues while the whole world's asleep\r\n\nA friend made of mist, a creature of night\r\nLeo and Sombri, stepping into the light!\r\n\nInto the forest, he walked with a slight tremor\r\nwhen off a pine tree came a shadowy glimmer\r\n\nA shape took form, it was not from a tree\r\nSombri introduced himself, playful and free\r\n\n\"I'm lost from my world, I need to go back\r\nhelp me, Leo, let's follow the shadow track\"\r\n\nTwo friends united, one light and one shade\r\na powerful team for the journey they made\r\n\nOn the oak bark, a riddle they read\r\n\n\"Night traveler, with a trail of \r\nstars spread\" Leo smiled wide:\r\n\n\"No feet, no wings, who could it be?\" A snail!\r\nA new shadow appeared, showing the glowing trail\r\n\nNext, stone statues in a moonlit clearing\r\nan old carved poem, a message appearing:\r\n\n\"The silent flyer, watching but unseen\" \r\nThe hidden owl showed the path in between\r\n\nOh, the experiment in the dark!\r\nWhere the light makes a brand new reality mark\r\n\nLiving shadows, a mystery deep\r\nsearching for clues while the whole world's asleep\r\n\nA friend made of mist, a creature of night\r\nLeo and Sombri, stepping into the light!\r\n\nThe stream water shines, reflecting the moon's hue\r\n\na stone puzzle forms a bridge, shining and new\r\nIn the cavern of mirrors, the final test came\r\n\n\"Shows you secrets, but knows \r\nnot its own name\" The mirror!\r\n\nThe door swings open, a bright glowing gate\r\nFarewell, Sombri, you can't be late!\r\n\nLeo returned home, as the dawn broke free\r\nhis mind and his heart filled with pure ecstasy\r\n\nThe shadows don't scare him, they hold a soft hand\r\nthe magic adventure in this wonderful land",
+    "lyrics": "In Faintglow village, where the sun shines low\nlived a boy named Leo, curious to know\n\nHe loved the strange puzzles and mysteries untold\nhis window to the stars, a story to unfold\n\nThen one night he saw it, a shadow's strange sway\nthe trees were dancing in a playful way\n\nFlashlight ready, notebook in his hand\nhe slipped from his house to explore the dark land\n\nOh, the experiment in the dark!\nWhere the light makes a brand new reality mark\n\nLiving shadows, a mystery deep\nsearching for clues while the whole world's asleep\n\nA friend made of mist, a creature of night\nLeo and Sombri, stepping into the light!\n\nInto the forest, he walked with a slight tremor\nwhen off a pine tree came a shadowy glimmer\n\nA shape took form, it was not from a tree\nSombri introduced himself, playful and free\n\n\"I'm lost from my world, I need to go back\nhelp me, Leo, let's follow the shadow track\"\n\nTwo friends united, one light and one shade\na powerful team for the journey they made\n\nOn the oak bark, a riddle they read\n\n\"Night traveler, with a trail of \nstars spread\" Leo smiled wide:\n\n\"No feet, no wings, who could it be?\" A snail!\nA new shadow appeared, showing the glowing trail\n\nNext, stone statues in a moonlit clearing\nan old carved poem, a message appearing:\n\n\"The silent flyer, watching but unseen\" \nThe hidden owl showed the path in between\n\nOh, the experiment in the dark!\nWhere the light makes a brand new reality mark\n\nLiving shadows, a mystery deep\nsearching for clues while the whole world's asleep\n\nA friend made of mist, a creature of night\nLeo and Sombri, stepping into the light!\n\nThe stream water shines, reflecting the moon's hue\n\na stone puzzle forms a bridge, shining and new\nIn the cavern of mirrors, the final test came\n\n\"Shows you secrets, but knows \nnot its own name\" The mirror!\n\nThe door swings open, a bright glowing gate\nFarewell, Sombri, you can't be late!\n\nLeo returned home, as the dawn broke free\nhis mind and his heart filled with pure ecstasy\n\nThe shadows don't scare him, they hold a soft hand\nthe magic adventure in this wonderful land",
     "syncedLyrics": [
       {
         "start": 9.84,
         "end": 18.72,
-        "text": "In Faintglow village, where the sun shines low\r\nlived a boy named Leo, curious to know\r"
+        "text": "In Faintglow village, where the sun shines low\nlived a boy named Leo, curious to know"
       },
       {
         "start": 18.72,
         "end": 27.28,
-        "text": "He loved the strange puzzles and mysteries untold\r\nhis window to the stars, a story to unfold\r"
+        "text": "He loved the strange puzzles and mysteries untold\nhis window to the stars, a story to unfold"
       },
       {
         "start": 27.84,
         "end": 36.88,
-        "text": "Then one night he saw it, a shadow's strange sway\r\nthe trees were dancing in a playful way\r"
+        "text": "Then one night he saw it, a shadow's strange sway\nthe trees were dancing in a playful way"
       },
       {
         "start": 36.88,
         "end": 45.84,
-        "text": "Flashlight ready, notebook in his hand\r\nhe slipped from his house to explore the dark land\r"
+        "text": "Flashlight ready, notebook in his hand\nhe slipped from his house to explore the dark land"
       },
       {
         "start": 45.84,
         "end": 51.84,
-        "text": "Oh, the experiment in the dark!\r\nWhere the light makes a brand new reality mark\r"
+        "text": "Oh, the experiment in the dark!\nWhere the light makes a brand new reality mark"
       },
       {
         "start": 51.84,
         "end": 56.48,
-        "text": "Living shadows, a mystery deep\r\nsearching for clues while the whole world's asleep\r"
+        "text": "Living shadows, a mystery deep\nsearching for clues while the whole world's asleep"
       },
       {
         "start": 56.48,
         "end": 74.64,
-        "text": "A friend made of mist, a creature of night\r\nLeo and Sombri, stepping into the light!\r"
+        "text": "A friend made of mist, a creature of night\nLeo and Sombri, stepping into the light!"
       },
       {
         "start": 74.64,
         "end": 83.2,
-        "text": "Into the forest, he walked with a slight tremor\r\nwhen off a pine tree came a shadowy glimmer\r"
+        "text": "Into the forest, he walked with a slight tremor\nwhen off a pine tree came a shadowy glimmer"
       },
       {
         "start": 83.2,
         "end": 91.92,
-        "text": "A shape took form, it was not from a tree\r\nSombri introduced himself, playful and free\r"
+        "text": "A shape took form, it was not from a tree\nSombri introduced himself, playful and free"
       },
       {
         "start": 91.92,
         "end": 100.96000000000001,
-        "text": "\"I'm lost from my world, I need to go back\r\nhelp me, Leo, let's follow the shadow track\"\r"
+        "text": "\"I'm lost from my world, I need to go back\nhelp me, Leo, let's follow the shadow track\""
       },
       {
         "start": 100.96000000000001,
         "end": 109.75999999999999,
-        "text": "Two friends united, one light and one shade\r\na powerful team for the journey they made\r"
+        "text": "Two friends united, one light and one shade\na powerful team for the journey they made"
       },
       {
         "start": 109.75999999999999,
         "end": 112.08,
-        "text": "On the oak bark, a riddle they read\r"
+        "text": "On the oak bark, a riddle they read"
       },
       {
         "start": 112.08,
         "end": 116.47999999999999,
-        "text": "\"Night traveler, with a trail of \r\nstars spread\" Leo smiled wide:\r"
+        "text": "\"Night traveler, with a trail of \nstars spread\" Leo smiled wide:"
       },
       {
         "start": 116.47999999999999,
         "end": 123.44,
-        "text": "\"No feet, no wings, who could it be?\" A snail!\r\nA new shadow appeared, showing the glowing trail\r"
+        "text": "\"No feet, no wings, who could it be?\" A snail!\nA new shadow appeared, showing the glowing trail"
       },
       {
         "start": 123.44,
         "end": 132.8,
-        "text": "Next, stone statues in a moonlit clearing\r\nan old carved poem, a message appearing:\r"
+        "text": "Next, stone statues in a moonlit clearing\nan old carved poem, a message appearing:"
       },
       {
         "start": 132.8,
         "end": 143.92000000000002,
-        "text": "\"The silent flyer, watching but unseen\" \r\nThe hidden owl showed the path in between\r"
+        "text": "\"The silent flyer, watching but unseen\" \nThe hidden owl showed the path in between"
       },
       {
         "start": 143.92000000000002,
         "end": 149.92000000000002,
-        "text": "Oh, the experiment in the dark!\r\nWhere the light makes a brand new reality mark\r"
+        "text": "Oh, the experiment in the dark!\nWhere the light makes a brand new reality mark"
       },
       {
         "start": 149.92000000000002,
         "end": 154.64,
-        "text": "Living shadows, a mystery deep\r\nsearching for clues while the whole world's asleep\r"
+        "text": "Living shadows, a mystery deep\nsearching for clues while the whole world's asleep"
       },
       {
         "start": 154.64,
         "end": 165.44,
-        "text": "A friend made of mist, a creature of night\r\nLeo and Sombri, stepping into the light!\r"
+        "text": "A friend made of mist, a creature of night\nLeo and Sombri, stepping into the light!"
       },
       {
         "start": 172.32,
         "end": 176.8,
-        "text": "The stream water shines, reflecting the moon's hue\r"
+        "text": "The stream water shines, reflecting the moon's hue"
       },
       {
         "start": 176.8,
         "end": 185.92,
-        "text": "a stone puzzle forms a bridge, shining and new\r\nIn the cavern of mirrors, the final test came\r"
+        "text": "a stone puzzle forms a bridge, shining and new\nIn the cavern of mirrors, the final test came"
       },
       {
         "start": 185.92,
         "end": 192.48,
-        "text": "\"Shows you secrets, but knows \r\nnot its own name\" The mirror!\r"
+        "text": "\"Shows you secrets, but knows \nnot its own name\" The mirror!"
       },
       {
         "start": 192.48,
         "end": 201.12,
-        "text": "The door swings open, a bright glowing gate\r\nFarewell, Sombri, you can't be late!\r"
+        "text": "The door swings open, a bright glowing gate\nFarewell, Sombri, you can't be late!"
       },
       {
         "start": 201.12,
         "end": 213.44,
-        "text": "Leo returned home, as the dawn broke free\r\nhis mind and his heart filled with pure ecstasy\r"
+        "text": "Leo returned home, as the dawn broke free\nhis mind and his heart filled with pure ecstasy"
       },
       {
         "start": 213.44,
         "end": 234,
-        "text": "The shadows don't scare him, they hold a soft hand\r\nthe magic adventure in this wonderful land"
+        "text": "The shadows don't scare him, they hold a soft hand\nthe magic adventure in this wonderful land"
+      }
+    ]
+  },
+  {
+    "order": "24",
+    "name": "The Wandering Star",
+    "key": "the-wandering-star",
+    "song": "https://youtu.be/rX91KIhER7o",
+    "saga": "",
+    "date": "17/03/2024",
+    "lyrics": "In a valley of mist, ancient and green,\r\nlived Elara, a girl with a whimsical sheen.\r\n\nOne winter's evening, a great shaking sound,\r\nthe brightest star tumbled down to the ground.\r\n\nIt fell on the high peak, a whisper of light,\r\nleaving the valley too dark for the night.\r\n\nThe sleeping magic began to dim down,\r\nElara knew she must leave her small town.\r\n\nOh, Wandering Star, fly up to the blue!\r\nWith harps and tin whistles,\r\n\nwe'll see your light through.\r\nA mystical journey, a hopeful design,\r\n\nI'll leave my small footprint on a path so divine.\r\nWith steps full of courage, the mist I will break,\r\n\nfor this vital mission, my wish I will make.\r\n\nA moth made of moonlight, a swift guiding friend,\r\ngave a gentle signal right 'til the end.\r\n\n\"The Misty Woods wait, you \r\nmust pass them with care,\r\n\nwhere the Celtic music floats up in the air.\"\r\nShe crossed the soft river that sang a sweet tune,\r\n\nbuilt a small magic bridge beneath the pale moon.\r\nThen climbed the great mountain,\r\n\nthe last rocky crest,\r\nwhere the star lay in silence, needing a rest.\r\n\nOh, Wandering Star, fly up to the blue!\r\nWith harps and tin whistles,\r\n\nwe'll see your light through.\r\nA mystical journey, a hopeful design,\r\n\nI'll leave my small footprint on a path so divine.\r\nWith steps full of courage, the mist I will break,\r\n\nfor this vital mission, my wish I will make.\r\n\nThe star felt so cold, a shimmering tear,\r\nElara breathed deep and held it so near.\r\n\nShe sang a sweet melody, a wish from her heart,\r\na spark from her soul right from the start.\r\n\nThe gem shone again, a bright burning flair,\r\na silver thread rising up through the air.\r\n\nNow the dark sky shines brighter than before,\r\nthe star lights the cosmos forevermore.\r\n\nElara returned, with stories untold,\r\nthe true kind of magic is more precious than gold.",
+    "syncedLyrics": [
+      {
+        "start": 17.28,
+        "end": 23.76,
+        "text": "In a valley of mist, ancient and green,\r\nlived Elara, a girl with a whimsical sheen.\r"
+      },
+      {
+        "start": 23.76,
+        "end": 29.44,
+        "text": "One winter's evening, a great shaking sound,\r\nthe brightest star tumbled down to the ground.\r"
+      },
+      {
+        "start": 30.96,
+        "end": 37.2,
+        "text": "It fell on the high peak, a whisper of light,\r\nleaving the valley too dark for the night.\r"
+      },
+      {
+        "start": 37.2,
+        "end": 44.96,
+        "text": "The sleeping magic began to dim down,\r\nElara knew she must leave her small town.\r"
+      },
+      {
+        "start": 44.96,
+        "end": 51.28,
+        "text": "Oh, Wandering Star, fly up to the blue!\r\nWith harps and tin whistles,\r"
+      },
+      {
+        "start": 51.28,
+        "end": 55.76,
+        "text": "we'll see your light through.\r\nA mystical journey, a hopeful design,\r"
+      },
+      {
+        "start": 55.76,
+        "end": 64.72,
+        "text": "I'll leave my small footprint on a path so divine.\r\nWith steps full of courage, the mist I will break,\r"
+      },
+      {
+        "start": 64.72,
+        "end": 77.44,
+        "text": "for this vital mission, my wish I will make.\r"
+      },
+      {
+        "start": 77.44,
+        "end": 83.52,
+        "text": "A moth made of moonlight, a swift guiding friend,\r\ngave a gentle signal right 'til the end.\r"
+      },
+      {
+        "start": 83.52,
+        "end": 86.4,
+        "text": "\"The Misty Woods wait, you \r\nmust pass them with care,\r"
+      },
+      {
+        "start": 86.4,
+        "end": 93.92,
+        "text": "where the Celtic music floats up in the air.\"\r\nShe crossed the soft river that sang a sweet tune,\r"
+      },
+      {
+        "start": 93.92,
+        "end": 98.56,
+        "text": "built a small magic bridge beneath the pale moon.\r\nThen climbed the great mountain,\r"
+      },
+      {
+        "start": 98.56,
+        "end": 110.16,
+        "text": "the last rocky crest,\r\nwhere the star lay in silence, needing a rest.\r"
+      },
+      {
+        "start": 110.16,
+        "end": 117.28,
+        "text": "Oh, Wandering Star, fly up to the blue!\r\nWith harps and tin whistles,\r"
+      },
+      {
+        "start": 117.28,
+        "end": 121.68,
+        "text": "we'll see your light through.\r\nA mystical journey, a hopeful design,\r"
+      },
+      {
+        "start": 121.68,
+        "end": 130.72,
+        "text": "I'll leave my small footprint on a path so divine.\r\nWith steps full of courage, the mist I will break,\r"
+      },
+      {
+        "start": 130.72,
+        "end": 161.52,
+        "text": "for this vital mission, my wish I will make.\r"
+      },
+      {
+        "start": 161.52,
+        "end": 172.96,
+        "text": "The star felt so cold, a shimmering tear,\r\nElara breathed deep and held it so near.\r"
+      },
+      {
+        "start": 172.96,
+        "end": 179.52,
+        "text": "She sang a sweet melody, a wish from her heart,\r\na spark from her soul right from the start.\r"
+      },
+      {
+        "start": 179.52,
+        "end": 192.96,
+        "text": "The gem shone again, a bright burning flair,\r\na silver thread rising up through the air.\r"
+      },
+      {
+        "start": 192.96,
+        "end": 202.64,
+        "text": "Now the dark sky shines brighter than before,\r\nthe star lights the cosmos forevermore.\r"
+      },
+      {
+        "start": 202.64,
+        "end": 219.36,
+        "text": "Elara returned, with stories untold,\r\nthe true kind of magic is more precious than gold."
+      }
+    ]
+  },
+  {
+    "order": "25",
+    "name": "The Adventures of Sun and Shadow",
+    "key": "the-adventures-of-sun-and-shadow",
+    "song": "https://youtu.be/ejLF6x-GVoE",
+    "saga": "",
+    "date": "18/03/2024",
+    "lyrics": "In a tiny sun-drenched town, where \r\nthe sky was bright and clear,\r\n\nTwo peculiar kittens lived, they \r\nspent their afternoon right near.\r\n\nOne was Sun, with fur of gold, \r\neyes of blue, like the endless air,\r\n\nHe chased the sparkling motes \r\nof dust, without a single care.\r\n\nThe other, Shadow, gray and \r\ncalm, with eyes of olive green,\r\n\nHe dreamt of mysteries and \r\nrest, the quieter of the scene.\r\n\nUpon an old rooftop they stayed, \r\neach with a different view of light,\r\n\nBut both were waiting for a secret, \r\nto make the day exciting and right.\r\n\nThen a playful gust of wind \r\narrived, a sudden flurry in the air,\r\n\nIt dropped an old and worn-out \r\nmap, landing exactly there.\r\n\nIt showed a hidden treasure spot, \r\nin the village, lost and deep,\r\n\nSun jumped up with pure excitement, \r\nShadow woke from his deep sleep.\r\n\n“Come on, Shadow, adventure calls, \r\nthe treasure we must find today!”\r\n\n“Patience, Sun, the riddle is first, \r\nlet’s see the path and find the way.”\r\n\nThey left the roof and all their \r\ngames, ready to begin the stride,\r\n\nFollowing the ancient lines, \r\nletting the map be their guide.\r\n\nThe first stop on the treasure hunt \r\nwas the old Windmill, cool and grand.\r\n\nSurrounded by a gentle breeze, \r\na magical spot in the land.\r\n\nInside there was a riddle carved, \r\na puzzle for their curious heads.\r\n\n“Soft as a feather, but can make you \r\nsleep. What is it?” the riddle said.\r\n\nSun thought of clouds and fluffy things, \r\nhis mind could not make sense of it,\r\n\nBut Shadow, calm and quick and sure, \r\nsaid: “My pillow, where I sit!”\r\n\nCorrect! The singing birds exclaimed, \r\nthe pathway opened wide with speed,\r\n\nAnd on they went upon their quest, \r\nplanted like an ancient seed.\r\n\nThey rushed to Mrs. Flower’s garden, \r\na rainbow on the fertile ground.\r\n\nWith happy, buzzing bees at \r\nwork, making a cheerful sound.\r\n\nThe colorful life was smiling back, \r\nanother clue came quick and fast.\r\n\nThe final hint then pointed to the \r\n\"Great Tree of Knowledge,\" built to last.\r\n\nThey reached the mighty central \r\ntree, in the plaza, vast and old.\r\n\nThe birds were singing history, \r\nancient tales of strength and gold.\r\n\nSun and Shadow looked at each \r\nother, the mission nearly through.\r\n\nThey realized the journey’s purpose, \r\nwas not just finding something new.\r\n\nThey searched and searched the bark and \r\nroots, for any hidden sign or trace.\r\n\nSun digging with his little paws, \r\nShadow watching the entire space.\r\n\nThe map then vanished in the air, the \r\nquest was finally done and sealed.\r\n\nThe treasure was not gold or gems, \r\nbut a secret they had just revealed.\r\n\nIt was the friendship growing strong, \r\njust like that old and mighty tree,\r\n\nAnd all the help they’d given \r\nout, to every person, happily.\r\n\nSun and Shadow, heroes of the town, \r\nno longer seeking mere wealth.\r\n\nThey found the greatest treasure: \r\ntheir friendship and good health.",
+    "syncedLyrics": [
+      {
+        "start": 10.08,
+        "end": 15.92,
+        "text": "In a tiny sun-drenched town, where \r\nthe sky was bright and clear,\r"
+      },
+      {
+        "start": 15.92,
+        "end": 21.84,
+        "text": "Two peculiar kittens lived, they \r\nspent their afternoon right near.\r"
+      },
+      {
+        "start": 21.84,
+        "end": 27.84,
+        "text": "One was Sun, with fur of gold, \r\neyes of blue, like the endless air,\r"
+      },
+      {
+        "start": 27.84,
+        "end": 34.08,
+        "text": "He chased the sparkling motes \r\nof dust, without a single care.\r"
+      },
+      {
+        "start": 34.08,
+        "end": 39.84,
+        "text": "The other, Shadow, gray and \r\ncalm, with eyes of olive green,\r"
+      },
+      {
+        "start": 39.84,
+        "end": 45.92,
+        "text": "He dreamt of mysteries and \r\nrest, the quieter of the scene.\r"
+      },
+      {
+        "start": 45.92,
+        "end": 51.76,
+        "text": "Upon an old rooftop they stayed, \r\neach with a different view of light,\r"
+      },
+      {
+        "start": 51.76,
+        "end": 57.04,
+        "text": "But both were waiting for a secret, \r\nto make the day exciting and right.\r"
+      },
+      {
+        "start": 63.36,
+        "end": 69.52,
+        "text": "Then a playful gust of wind \r\narrived, a sudden flurry in the air,\r"
+      },
+      {
+        "start": 69.52,
+        "end": 75.28,
+        "text": "It dropped an old and worn-out \r\nmap, landing exactly there.\r"
+      },
+      {
+        "start": 75.28,
+        "end": 81.6,
+        "text": "It showed a hidden treasure spot, \r\nin the village, lost and deep,\r"
+      },
+      {
+        "start": 81.6,
+        "end": 86.48,
+        "text": "Sun jumped up with pure excitement, \r\nShadow woke from his deep sleep.\r"
+      },
+      {
+        "start": 87.52,
+        "end": 93.44,
+        "text": "“Come on, Shadow, adventure calls, \r\nthe treasure we must find today!”\r"
+      },
+      {
+        "start": 93.44,
+        "end": 99.03999999999999,
+        "text": "“Patience, Sun, the riddle is first, \r\nlet’s see the path and find the way.”\r"
+      },
+      {
+        "start": 99.03999999999999,
+        "end": 105.36,
+        "text": "They left the roof and all their \r\ngames, ready to begin the stride,\r"
+      },
+      {
+        "start": 105.36,
+        "end": 111.03999999999999,
+        "text": "Following the ancient lines, \r\nletting the map be their guide.\r"
+      },
+      {
+        "start": 111.03999999999999,
+        "end": 117.03999999999999,
+        "text": "The first stop on the treasure hunt \r\nwas the old Windmill, cool and grand.\r"
+      },
+      {
+        "start": 117.03999999999999,
+        "end": 122.8,
+        "text": "Surrounded by a gentle breeze, \r\na magical spot in the land.\r"
+      },
+      {
+        "start": 122.8,
+        "end": 128.96,
+        "text": "Inside there was a riddle carved, \r\na puzzle for their curious heads.\r"
+      },
+      {
+        "start": 128.96,
+        "end": 134.32,
+        "text": "“Soft as a feather, but can make you \r\nsleep. What is it?” the riddle said.\r"
+      },
+      {
+        "start": 134.32,
+        "end": 140.56,
+        "text": "Sun thought of clouds and fluffy things, \r\nhis mind could not make sense of it,\r"
+      },
+      {
+        "start": 140.56,
+        "end": 146.64,
+        "text": "But Shadow, calm and quick and sure, \r\nsaid: “My pillow, where I sit!”\r"
+      },
+      {
+        "start": 146.64,
+        "end": 152.56,
+        "text": "Correct! The singing birds exclaimed, \r\nthe pathway opened wide with speed,\r"
+      },
+      {
+        "start": 152.56,
+        "end": 164.16,
+        "text": "And on they went upon their quest, \r\nplanted like an ancient seed.\r"
+      },
+      {
+        "start": 164.16,
+        "end": 170.24,
+        "text": "They rushed to Mrs. Flower’s garden, \r\na rainbow on the fertile ground.\r"
+      },
+      {
+        "start": 170.24,
+        "end": 176.16,
+        "text": "With happy, buzzing bees at \r\nwork, making a cheerful sound.\r"
+      },
+      {
+        "start": 176.16,
+        "end": 182.08,
+        "text": "The colorful life was smiling back, \r\nanother clue came quick and fast.\r"
+      },
+      {
+        "start": 182.08,
+        "end": 188,
+        "text": "The final hint then pointed to the \r\n\"Great Tree of Knowledge,\" built to last.\r"
+      },
+      {
+        "start": 188,
+        "end": 194,
+        "text": "They reached the mighty central \r\ntree, in the plaza, vast and old.\r"
+      },
+      {
+        "start": 194,
+        "end": 200.07999999999998,
+        "text": "The birds were singing history, \r\nancient tales of strength and gold.\r"
+      },
+      {
+        "start": 200.07999999999998,
+        "end": 205.84,
+        "text": "Sun and Shadow looked at each \r\nother, the mission nearly through.\r"
+      },
+      {
+        "start": 205.84,
+        "end": 217.44,
+        "text": "They realized the journey’s purpose, \r\nwas not just finding something new.\r"
+      },
+      {
+        "start": 217.44,
+        "end": 223.44,
+        "text": "They searched and searched the bark and \r\nroots, for any hidden sign or trace.\r"
+      },
+      {
+        "start": 223.44,
+        "end": 229.52,
+        "text": "Sun digging with his little paws, \r\nShadow watching the entire space.\r"
+      },
+      {
+        "start": 229.52,
+        "end": 235.36,
+        "text": "The map then vanished in the air, the \r\nquest was finally done and sealed.\r"
+      },
+      {
+        "start": 235.36,
+        "end": 241.6,
+        "text": "The treasure was not gold or gems, \r\nbut a secret they had just revealed.\r"
+      },
+      {
+        "start": 241.6,
+        "end": 247.36,
+        "text": "It was the friendship growing strong, \r\njust like that old and mighty tree,\r"
+      },
+      {
+        "start": 247.36,
+        "end": 253.44,
+        "text": "And all the help they’d given \r\nout, to every person, happily.\r"
+      },
+      {
+        "start": 253.44,
+        "end": 258.96,
+        "text": "Sun and Shadow, heroes of the town, \r\nno longer seeking mere wealth.\r"
+      },
+      {
+        "start": 258.96,
+        "end": 272.64,
+        "text": "They found the greatest treasure: \r\ntheir friendship and good health."
       }
     ]
   }
