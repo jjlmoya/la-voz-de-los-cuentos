@@ -101,6 +101,7 @@ export interface AchievementNotificationData {
   progress?: number
   current?: number
   target?: number
+  metadata?: Record<string, any>
 }
 
 /**

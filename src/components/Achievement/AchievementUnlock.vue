@@ -10,7 +10,7 @@
           <div class="achievement-unlock-v2__image-wrapper">
             <div v-if="notification" class="achievement-unlock-v2__icon-frame">
               <img
-                :src="getIconPath(notification.iconId)"
+                :src="getIconPath(notification.iconId, notification.metadata)"
                 :alt="notification.nameEs"
                 class="achievement-unlock-v2__icon"
                 @error="handleImageError"
