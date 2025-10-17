@@ -149,6 +149,7 @@ import LanguageSwitcher from '../Navigation/LanguageSwitcher.vue'
 import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
 import t from '../../translations'
 import { toSong, toStory } from '../../router'
+import useSong from '../../composables/useSong'
 
 const lang = import.meta.env.PUBLIC_LANG
 
@@ -185,6 +186,7 @@ const isPlaying = ref(false)
 const currentTime = ref(0)
 let player = null
 let timeUpdateInterval = null
+let songTracker = null
 
 const lyricsHTML = computed(() => {
   if (!props.song.lyrics) return ''
@@ -326,14 +328,26 @@ const createPlayer = () => {
       onStateChange: (event) => {
         if (event.data === window.YT.PlayerState.ENDED) {
           handleSongEnded()
+          // Song finished - capture completedAt timestamp
+          if (songTracker) {
+            songTracker.onSongEnd()
+          }
         }
         if (event.data === window.YT.PlayerState.PLAYING) {
           isPlaying.value = true
           startTimeTracking()
+          // Song started playing - capture startedAt timestamp
+          if (songTracker) {
+            songTracker.onSongStart()
+          }
         }
         if (event.data === window.YT.PlayerState.PAUSED) {
           if (timeUpdateInterval) {
             clearInterval(timeUpdateInterval)
+          }
+          // Song paused - stop tracking listen time
+          if (songTracker) {
+            songTracker.onSongPause()
           }
         }
       }
@@ -357,6 +371,10 @@ onMounted(() => {
   if (savedShuffle !== null) {
     isShuffle.value = savedShuffle === 'true'
   }
+
+  // Initialize song tracking with timestamps (will be called in player events)
+  songTracker = useSong(props.song)
+
   initYouTubePlayer()
 })
 
@@ -371,6 +389,9 @@ watch([isRepeat, isAutoplay, isShuffle], savePreferences)
 onUnmounted(() => {
   if (timeUpdateInterval) {
     clearInterval(timeUpdateInterval)
+  }
+  if (songTracker) {
+    songTracker.cleanup()
   }
 })
 </script>

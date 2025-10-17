@@ -155,5 +155,23 @@ export default {
   'language.switch.aria': 'Switch language',
 
   'achievement.unlocked': 'Achievement Unlocked',
-  'achievement.view': 'View Achievement'
+  'achievement.view': 'View Achievement',
+
+  'streak.title': 'Daily Streak',
+  'streak.current': 'Current',
+  'streak.best': 'Best',
+  'streak.days_since': 'Days Since',
+  'streak.frozen': '(frozen)',
+  'streak.last_read': 'Last read:',
+  'streak.no_data': 'Start reading or listening to begin your streak!',
+  'streak.legacy_data': 'Unknown streak ({count} items without timestamps)',
+  'streak.label': 'day streak',
+  'streak.today': 'Today',
+  'streak.mon': 'Mon',
+  'streak.tue': 'Tue',
+  'streak.wed': 'Wed',
+  'streak.thu': 'Thu',
+  'streak.fri': 'Fri',
+  'streak.sat': 'Sat',
+  'streak.sun': 'Sun'
 }

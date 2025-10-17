@@ -155,5 +155,23 @@ export default {
   'language.switch.aria': 'Cambiar idioma',
 
   'achievement.unlocked': 'Logro Desbloqueado',
-  'achievement.view': 'Ver Logro'
+  'achievement.view': 'Ver Logro',
+
+  'streak.title': 'Racha Diaria',
+  'streak.current': 'Actual',
+  'streak.best': 'Mejor',
+  'streak.days_since': 'Días hace',
+  'streak.frozen': '(congelada)',
+  'streak.last_read': 'Último:',
+  'streak.no_data': '¡Empieza a leer o escuchar para iniciar tu racha!',
+  'streak.legacy_data': 'Racha desconocida ({count} elementos sin marcas de tiempo)',
+  'streak.label': 'días de racha',
+  'streak.today': 'Hoy',
+  'streak.mon': 'Lun',
+  'streak.tue': 'Mar',
+  'streak.wed': 'Mié',
+  'streak.thu': 'Jue',
+  'streak.fri': 'Vie',
+  'streak.sat': 'Sab',
+  'streak.sun': 'Dom'
 }

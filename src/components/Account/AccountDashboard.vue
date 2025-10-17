@@ -18,6 +18,11 @@
       <AccountSummary :lang="lang" />
     </div>
 
+    <!-- Streak Card -->
+    <div class="dashboard-section">
+      <StreakCard />
+    </div>
+
     <!-- Statistics Section -->
     <div class="dashboard-section">
       <h2 class="dashboard-section__title">{{ t('account.dashboard.statistics') }}</h2>
@@ -91,6 +96,7 @@
 <script setup>
   import { ref, onMounted, computed } from 'vue'
   import AccountSummary from './AccountSummary.vue'
+  import StreakCard from '../Cards/StreakCard.vue'
   import useStories from '../../composables/useStories'
   import { getSagas } from '../../data'
   import { toStory } from '../../router'
