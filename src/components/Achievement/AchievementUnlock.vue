@@ -118,31 +118,18 @@ const containerClasses = computed(() => ({
 
 const achievementsLink = computed(() => toAccountAchievements())
 
-/**
- * Obtener ruta de la ilustración del logro
- * Usa metadata.folder si está disponible, si no usa 'read' como default
- */
 function getIconPath(iconId, metadata) {
   if (!iconId) return '/assets/account/get-achievement.webp'
 
-  // Usar folder de metadata o default a 'read'
   const folder = metadata?.folder || 'read'
-
-  // Usar versión en color (estado desbloqueado)
   return `/assets/achievements/${folder}/${iconId}.png`
 }
 
-/**
- * Manejar error de imagen
- */
 function handleImageError(event) {
   console.warn('Failed to load achievement icon:', event.target.src)
   event.target.style.display = 'none'
 }
 
-/**
- * Generar estilos para confeti
- */
 function getConfettiStyle(index) {
   const angles = Array.from({ length: 12 }, (_, i) => (i * 360) / 12)
   const angle = angles[index - 1]
@@ -155,9 +142,6 @@ function getConfettiStyle(index) {
   }
 }
 
-/**
- * Generar estilos para partículas de brillo
- */
 function getSparkStyle(index) {
   const angles = Array.from({ length: 6 }, (_, i) => (i * 360) / 6)
   const angle = angles[index - 1]

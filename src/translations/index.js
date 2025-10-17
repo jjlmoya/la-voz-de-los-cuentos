@@ -7,7 +7,6 @@ const translations = {
 }
 
 export default function t(key) {
-  // Leer el idioma de forma reactiva en tiempo de ejecución
   const lang = import.meta.env.PUBLIC_LANG || 'es'
 
   try {

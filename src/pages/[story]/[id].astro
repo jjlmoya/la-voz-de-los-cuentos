@@ -19,7 +19,6 @@ const currentSaga = sagas.find(saga => saga.key === story.saga)
 const lang = import.meta.env.PUBLIC_LANG
 const firstParagraph = story.story.split('\n').filter(p => p.trim() !== '')[0]
 
-// Find related song if story has one
 const relatedSong = story.song ? songs.find(s => s.song === story.song) : null
 
 export async function getStaticPaths() {
@@ -132,9 +131,9 @@ const schema = JSON.stringify({
   />
 
   <RelatedStories
-    :currentStory={story}
-    :allStories={stories}
-    :allSagas={sagas}
+    currentStory={story}
+    allStories={stories}
+    allSagas={sagas}
     client:idle
   />
 

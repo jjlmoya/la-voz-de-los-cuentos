@@ -74,7 +74,6 @@ import t from '../../translations/index'
 
 const { allAchievements, stats } = useAchievements()
 
-// Ordenar logros: desbloqueados primero, luego bloqueados
 const sortedAchievements = computed(() => {
   return [...allAchievements.value].sort((a, b) => {
     if (a.unlocked === b.unlocked) return 0

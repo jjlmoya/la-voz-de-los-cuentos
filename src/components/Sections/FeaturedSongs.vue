@@ -13,7 +13,6 @@ const props = defineProps({
   }
 })
 
-// Obtener las últimas canciones
 const allSongs = getSongs()
 const featuredSongs = allSongs.slice(0, props.limit)
 </script>

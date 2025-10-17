@@ -35,13 +35,11 @@
   const clientStories = ref([])
 
   onMounted(() => {
-    // Filtrar en cliente donde localStorage está disponible
     if (typeof localStorage === 'undefined') return
 
     try {
       const storiesData = localStorage.getItem('storiesData')
       if (!storiesData) {
-        // Si no hay datos en localStorage, todos son pendientes
         clientStories.value = props.stories
         return
       }
@@ -52,14 +50,12 @@
         return
       }
 
-      // Crear mapa de keys que NO están completados (finished !== true)
       const pendingKeys = new Set(
         parsedData
           .filter(entry => entry.finished !== true)
           .map(entry => entry.key)
       )
 
-      // Retornar stories en pendientes + stories nunca tocados
       const storiesInStorage = new Set(parsedData.map(entry => entry.key))
       clientStories.value = props.stories.filter(story =>
         pendingKeys.has(story.key) || !storiesInStorage.has(story.key)

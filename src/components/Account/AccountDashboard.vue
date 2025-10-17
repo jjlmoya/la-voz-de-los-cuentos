@@ -129,18 +129,14 @@
 
       const allStories = getAllStories()
 
-      // Calcular tiempo total (en horas)
       const totalTime = parsedData.reduce((sum, entry) => sum + (entry.spentTime || 0), 0)
       totalTimeSpent.value = Math.round(totalTime / 3600)
 
-      // Calcular progreso (% de historias completadas)
       const completedCount = parsedData.filter(entry => entry.finished === true).length
       progressPercentage.value = allStories.length > 0 ? Math.round((completedCount / allStories.length) * 100) : 0
 
-      // Contar historias leídas (finished === true)
       storiesRead.value = completedCount
 
-      // Historias recientes (últimas 3 con progreso entre 1% y 99%)
       const storiesWithProgress = parsedData
         .map(entry => {
           const fullStory = allStories.find(s => s.key === entry.key)
@@ -161,13 +157,11 @@
 
       recentStories.value = storiesWithProgress
 
-      // Historias sugeridas (no leídas, aleatorias)
       const unreadStories = allStories.filter(story => {
         const storyData = parsedData.find(s => s.key === story.key)
         return !storyData || storyData.finished !== true
       })
 
-      // Shuffle y tomar los primeros 3
       suggestedStories.value = unreadStories
         .sort(() => Math.random() - 0.5)
         .slice(0, 3)
@@ -185,7 +179,6 @@
     padding: var(--v-unit-8);
   }
 
-  /* Header */
   .dashboard-header {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -218,12 +211,10 @@
     opacity: 0.9;
   }
 
-  /* Summary */
   .dashboard-summary {
     margin: 0;
   }
 
-  /* Sections */
   .dashboard-section {
     display: flex;
     flex-direction: column;
@@ -237,7 +228,6 @@
     color: var(--v-color-text-high);
   }
 
-  /* Stats Grid */
   .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -296,7 +286,6 @@
     color: var(--v-color-primary);
   }
 
-  /* Stories Row */
   .stories-row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -355,7 +344,6 @@
     color: var(--v-color-text-medium);
   }
 
-  /* Carousel */
   .stories-carousel {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -440,7 +428,6 @@
     transform: translateX(4px);
   }
 
-  /* Responsive */
   @media (max-width: 768px) {
     .account-dashboard {
       gap: var(--v-unit-8);

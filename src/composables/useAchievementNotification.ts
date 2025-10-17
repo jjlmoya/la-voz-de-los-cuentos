@@ -15,26 +15,16 @@ interface NotificationQueueItem {
   displayedAt?: number
 }
 
-// Estado global de notificaciones
 const activeNotification = ref<NotificationQueueItem | null>(null)
 const notificationQueue = ref<NotificationQueueItem[]>([])
 let isProcessing = false
 let unsubscribeUnlock: (() => void) | null = null
 let unsubscribeProgress: (() => void) | null = null
 
-/**
- * Composable para mostrar notificaciones de logros con progreso
- */
 export function useAchievementNotification() {
-  /**
-   * Inicializar listeners de eventos
-   * (se llama automáticamente en el setup)
-   */
-  function setupEventListeners() {
-    // Limpiar listeners anteriores si existen
-    teardownEventListeners()
 
-    // Escuchar desbloqueos
+  function setupEventListeners() {
+    teardownEventListeners()
     unsubscribeUnlock = onAchievementUnlock(event => {
       if (event.isNew) {
         showNotification({
@@ -47,9 +37,7 @@ export function useAchievementNotification() {
       }
     })
 
-    // Escuchar progreso
     unsubscribeProgress = onAchievementProgress(event => {
-      // Mostrar notificación de progreso en hitos (25%, 50%, 75%, 100%)
       const hitos = [25, 50, 75, 100]
       if (hitos.includes(event.progress) && event.isNew) {
         showNotification({
@@ -66,9 +54,6 @@ export function useAchievementNotification() {
     })
   }
 
-  /**
-   * Limpiar listeners
-   */
   function teardownEventListeners() {
     if (unsubscribeUnlock) {
       unsubscribeUnlock()
@@ -80,9 +65,6 @@ export function useAchievementNotification() {
     }
   }
 
-  /**
-   * Mostrar una notificación
-   */
   function showNotification(notification: AchievementNotificationData) {
     const queueItem: NotificationQueueItem = {
       id: `${notification.id}-${Date.now()}`,
@@ -94,9 +76,6 @@ export function useAchievementNotification() {
     processQueue()
   }
 
-  /**
-   * Procesar la cola de notificaciones
-   */
   function processQueue() {
     if (isProcessing || notificationQueue.value.length === 0) {
       return
@@ -109,7 +88,6 @@ export function useAchievementNotification() {
       queueItem.displayedAt = Date.now()
       activeNotification.value = queueItem
 
-      // Duraciones diferentes según tipo
       const duration = queueItem.data.type === 'unlock' ? 4000 : 2000
 
       setTimeout(() => {
@@ -118,14 +96,10 @@ export function useAchievementNotification() {
     }
   }
 
-  /**
-   * Cerrar la notificación actual
-   */
   function closeNotification() {
     activeNotification.value = null
     isProcessing = false
 
-    // Pequeño delay antes de procesar la siguiente
     if (notificationQueue.value.length > 0) {
       setTimeout(() => {
         processQueue()
@@ -133,25 +107,16 @@ export function useAchievementNotification() {
     }
   }
 
-  /**
-   * Cerrar manualmente (por click en el usuario)
-   */
   function dismiss() {
     closeNotification()
   }
 
-  /**
-   * Limpiar todas las notificaciones
-   */
   function clearAll() {
     activeNotification.value = null
     notificationQueue.value = []
     isProcessing = false
   }
 
-  /**
-   * Obtener información de la notificación actual
-   */
   function getCurrentNotification() {
     if (!activeNotification.value) return null
 
@@ -164,11 +129,9 @@ export function useAchievementNotification() {
   }
 
   return {
-    // Estado
     currentNotification: readonly(activeNotification),
     pendingNotifications: readonly(notificationQueue),
 
-    // Métodos
     showNotification,
     closeNotification,
     dismiss,
@@ -179,10 +142,6 @@ export function useAchievementNotification() {
   }
 }
 
-/**
- * Crear una instancia pre-configurada del composable
- * Útil para setup global
- */
 let globalNotificationInstance: ReturnType<typeof useAchievementNotification> | null = null
 
 export function getGlobalAchievementNotification() {

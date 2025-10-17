@@ -28,16 +28,10 @@ const illustrations: Illustration[] = [
   },
 ]
 
-/**
- * Get a random illustration from the available set
- * Uses a seeded approach based on current date to provide consistency within a day
- */
+
 export function getRandomIllustration(): Illustration {
-  // Get available illustrations (excluding optional ones if needed)
   const available = illustrations
 
-  // Use a pseudo-random approach that varies by hour
-  // This gives users variety while maintaining consistency across page reloads within the same hour
   const now = new Date()
   const seed = now.getHours() + now.getDate() + Math.random()
 
@@ -45,9 +39,6 @@ export function getRandomIllustration(): Illustration {
   return available[index]
 }
 
-/**
- * Get illustration URL
- */
 export function getIllustrationUrl(filename: string): string {
   return `/assets/illustrations/404/${filename}`
 }

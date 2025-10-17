@@ -64,10 +64,9 @@ const cardRef = ref(null)
 const isVisible = ref(false)
 const isInCenter = ref(false)
 
-// Valores aleatorios para cada card
-const randomDuration = ref(2 + Math.random() * 2) // 2-4s
-const randomDelay = ref(Math.random() * 2) // 0-2s
-const randomRotation = ref(-2 + Math.random() * 4) // -2 a +2 grados
+const randomDuration = ref(2 + Math.random() * 2) 
+const randomDelay = ref(Math.random() * 2)
+const randomRotation = ref(-2 + Math.random() * 4)
 
 const onClick = () => {
   emit('click', props.song.key)
@@ -81,7 +80,6 @@ const formatTime = (time) => {
   return `${minutes}:${secs.toString().padStart(2, '0')}`
 }
 
-// Intersection Observer para detectar cuándo la card está visible y en el centro
 let observer = null
 
 onMounted(() => {
@@ -90,17 +88,14 @@ onMounted(() => {
   observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        // Card visible en el viewport
         isVisible.value = entry.isIntersecting
 
-        // Detectar si está en el centro del viewport
         if (entry.isIntersecting) {
           const rect = entry.boundingClientRect
           const viewportHeight = window.innerHeight
           const cardCenter = rect.top + rect.height / 2
           const viewportCenter = viewportHeight / 2
 
-          // Si el centro de la card está cerca del centro del viewport (±350px)
           const distanceFromCenter = Math.abs(cardCenter - viewportCenter)
           isInCenter.value = distanceFromCenter < 350
         } else {
@@ -116,7 +111,6 @@ onMounted(() => {
 
   observer.observe(cardRef.value)
 
-  // Actualizar posición en scroll para animaciones del centro
   const handleScroll = () => {
     if (!cardRef.value || !isVisible.value) return
 
@@ -131,7 +125,6 @@ onMounted(() => {
 
   window.addEventListener('scroll', handleScroll, { passive: true })
 
-  // Cleanup
   onUnmounted(() => {
     if (observer && cardRef.value) {
       observer.unobserve(cardRef.value)

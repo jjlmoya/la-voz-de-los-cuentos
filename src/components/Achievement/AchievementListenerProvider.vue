@@ -28,29 +28,17 @@ const { startListening, forceCheck } = useAchievementListener()
 const { setupEventListeners } = getGlobalAchievementNotification()
 
 onMounted(() => {
-  // Iniciar el listener de cambios en historias
   const stopListening = startListening()
-
-  // Inicializar listeners de eventos de logros
   setupEventListeners()
-
-  // Hacer check inicial
   forceCheck()
-
-  // Guardar función de limpieza
   window.__achievementCleanup = () => {
     stopListening()
   }
 })
 
 onBeforeUnmount(() => {
-  // Limpiar listeners
   if (window.__achievementCleanup) {
     window.__achievementCleanup()
   }
 })
 </script>
-
-<style scoped>
-/* Sin estilos - componente invisible */
-</style>

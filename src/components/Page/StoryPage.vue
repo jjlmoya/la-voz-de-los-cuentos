@@ -238,7 +238,6 @@
   const toggleLike = () => {
     like.value = !like.value
     setLikeStatus(like.value)
-    // Trigger achievement recalculation when like status changes
     emitAchievementRecalculate()
   }
 

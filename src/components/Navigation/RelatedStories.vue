@@ -46,7 +46,7 @@ import t from '../../translations'
 const props = defineProps({
   currentStory: {
     type: Object,
-    required: true
+    default: () => ({})
   },
   allStories: {
     type: Array,
@@ -60,7 +60,6 @@ const props = defineProps({
 
 const lang = import.meta.env.PUBLIC_LANG
 
-// Encontrar saga actual
 const currentSaga = computed(() => {
   if (!props.currentStory?.saga) return null
   return props.allSagas.find(saga => saga.key === props.currentStory.saga)
@@ -70,7 +69,6 @@ const sagaName = computed(() => {
   return currentSaga.value?.name || null
 })
 
-// Filtrar historias relacionadas por saga (máximo 4)
 const relatedStories = computed(() => {
   if (!props.currentStory?.saga) return []
   
@@ -82,7 +80,6 @@ const relatedStories = computed(() => {
     .slice(0, 4)
 })
 
-// Formatear tiempo de duración
 const formatTime = (timeStr) => {
   if (!timeStr) return '0'
   const time = parseFloat(timeStr.replace(',', '.'))

@@ -31,7 +31,6 @@
   const clientStories = ref([])
 
   onMounted(() => {
-    // Filtrar en cliente donde localStorage está disponible
     if (typeof localStorage === 'undefined') return
 
     try {
@@ -41,7 +40,6 @@
       const parsedData = JSON.parse(storiesData)
       if (!Array.isArray(parsedData)) return
 
-      // Filtrar por finished flag
       const completedKeys = new Set(
         parsedData
           .filter(entry => entry.finished === true)

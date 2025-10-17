@@ -14,11 +14,7 @@ interface StorageFormat {
   lastUpdated: number
 }
 
-/**
- * Obtener todos los estados de logros almacenados
- */
 export function loadAchievements(): Record<string, AchievementState> {
-  // No acceder a localStorage en SSR (servidor)
   if (typeof window === 'undefined') {
     return {}
   }
@@ -30,7 +26,6 @@ export function loadAchievements(): Record<string, AchievementState> {
     }
 
     const parsed = JSON.parse(data) as StorageFormat
-    // Validación de versión para futuras migraciones
     if (parsed.version !== 1) {
       return {}
     }
@@ -179,13 +174,9 @@ function saveToStorage(achievements: Record<string, AchievementState>): void {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(storageData))
   } catch (error) {
-    // Silenciado: puede fallar si localStorage está lleno
   }
 }
 
-/**
- * Obtener estadísticas de almacenamiento (tamaño aproximado)
- */
 export function getStorageStats(): {
   achievementsCount: number
   unlockedCount: number
@@ -194,7 +185,6 @@ export function getStorageStats(): {
   const achievements = loadAchievements()
   const entries = Object.values(achievements)
 
-  // No acceder a localStorage en SSR (servidor)
   if (typeof window === 'undefined') {
     return {
       achievementsCount: entries.length,

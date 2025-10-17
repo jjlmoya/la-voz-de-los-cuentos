@@ -44,7 +44,7 @@ export default function useStories() {
     const intersection = new Set([...words1].filter(word => words2.has(word)))
     const union = new Set([...words1, ...words2])
 
-    return intersection.size / union.size // Similarity score between 0 and 1
+    return intersection.size / union.size
   }
 
   const getCompleteStories = () => {

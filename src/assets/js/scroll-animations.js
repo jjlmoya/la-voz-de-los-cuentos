@@ -1,4 +1,3 @@
-// Scroll reveal animations for children's engagement
 
 class ScrollAnimations {
   constructor() {
@@ -208,7 +207,6 @@ if (typeof window !== 'undefined' &&
 
     window.ScrollAnimations = ScrollAnimations;
   } catch (error) {
-    // Silently ignore initialization errors
   }
 }
 

@@ -124,37 +124,25 @@ const twitterUser = import.meta.env.PUBLIC_TWITTER_USER
 
     <CMP client:load />
 
-    <!-- Scroll animations for children engagement (client-only) -->
     <script is:inline>
-      // This script runs ONLY on the client, after hydration
       (function() {
         if (typeof window === 'undefined' || typeof document === 'undefined') return;
-
-        // Remove any SSR-added animation classes to prevent hydration mismatch
         function cleanSSRClasses() {
-          // Remove animate-on-scroll and animate-revealed that might have been added during SSR
           document.querySelectorAll('.animate-on-scroll, .animate-revealed').forEach(el => {
-            // Only remove if not explicitly set in HTML
             if (!el.getAttribute('data-animate')) {
               el.classList.remove('animate-on-scroll');
               el.classList.remove('animate-revealed');
             }
           });
         }
-
-        // Clean SSR classes immediately
         cleanSSRClasses();
-
-        // Wait for hydration to complete
         if (document.readyState === 'loading') {
           document.addEventListener('DOMContentLoaded', loadScrollAnimations);
         } else {
-          // DOM already loaded, run after a brief delay to ensure hydration is complete
           setTimeout(loadScrollAnimations, 100);
         }
 
         function loadScrollAnimations() {
-          // Dynamic import to avoid SSR execution
           import('/src/assets/js/scroll-animations.js').catch(err => {
             console.error('Failed to load scroll animations:', err);
           });

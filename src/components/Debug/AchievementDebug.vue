@@ -89,7 +89,6 @@ function simulateAchievementUnlock(achievementId) {
   const unlockedAt = new Date()
   saveAchievementUnlock(achievementId, unlockedAt)
 
-  // Disparar el evento
   emitAchievementUnlock({
     achievement: {
       id: achievement.id,
@@ -106,13 +105,9 @@ function simulateAchievementUnlock(achievementId) {
     isNew: true
   })
 
-  // Recalcular para actualizar reactividad
   recalculateAll()
 }
 
-/**
- * Limpiar todos los logros
- */
 function clearAllAchievements() {
   if (confirm('¿Estás seguro de que quieres limpiar todos los logros?')) {
     clearAchievements()
@@ -120,9 +115,6 @@ function clearAllAchievements() {
   }
 }
 
-/**
- * Desbloquear todos los logros
- */
 function unlockAllAchievements() {
   if (confirm('¿Estás seguro de que quieres desbloquear todos los logros?')) {
     ALL_ACHIEVEMENT_DEFINITIONS.forEach(achievement => {
@@ -150,11 +142,7 @@ function unlockAllAchievements() {
   }
 }
 
-/**
- * Mostrar información de logros
- */
 function showAchievementsInfo() {
-  // Log to console for debugging
   console.log({
     total: allAchievements.value.length,
     unlocked: unlockedAchievements.value.length,

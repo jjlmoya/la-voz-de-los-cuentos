@@ -89,7 +89,7 @@ const props = defineProps({
   },
   isStory: {
     type: Boolean,
-    default: true // true si es un cuento, false si es una saga
+    default: true 
   }
 })
 
@@ -97,11 +97,9 @@ const sagaUrl = computed(() => {
   return props.sagaKey ? toSaga(props.sagaKey) : '#'
 })
 
-// Compute saga icon path based on saga key
 const sagaIconPath = computed(() => {
   if (!props.sagaKey) return null
 
-  // Map saga keys to their icon filenames
   const iconMap = {
     'la-vida-de-eloy': 'eloy',
     'llamarada': 'llamarada',
@@ -113,8 +111,8 @@ const sagaIconPath = computed(() => {
     'carlota-cucaracha': 'cockroach',
     'vuestras-peticiones': 'feather',
     'leyendas': 'legends',
-    'el-tragaluces': null, // Use default
-    'relojmedio': null, // Use default
+    'el-tragaluces': null, 
+    'relojmedio': null, 
     '458': '458'
   }
 
@@ -134,7 +132,6 @@ const sagaIconPath = computed(() => {
   padding: var(--v-unit-4) 0;
 }
 
-/* Desktop breadcrumbs (text buttons) */
 .breadcrumbs__trail--desktop {
   display: flex;
   align-items: center;

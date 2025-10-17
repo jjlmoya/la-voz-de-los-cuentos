@@ -66,7 +66,6 @@
   const favoriteCount = ref(0)
 
   onMounted(() => {
-    // Filtrar en cliente donde localStorage está disponible
     if (typeof localStorage === 'undefined') return
 
     try {
@@ -84,7 +83,6 @@
         return
       }
 
-      // Filtrar leídos (finished === true)
       const completedKeys = new Set(
         parsedData
           .filter(entry => entry.finished === true)
@@ -92,7 +90,6 @@
       )
       readCount.value = allStories.filter(story => completedKeys.has(story.key)).length
 
-      // Filtrar pendientes (finished !== true + nunca tocados)
       const pendingKeys = new Set(
         parsedData
           .filter(entry => entry.finished !== true)
@@ -103,7 +100,6 @@
         pendingKeys.has(story.key) || !storiesInStorage.has(story.key)
       ).length
 
-      // Filtrar favoritos (like === true)
       const favoriteKeys = parsedData
         .filter(entry => entry.like === true)
         .map(entry => entry.key)

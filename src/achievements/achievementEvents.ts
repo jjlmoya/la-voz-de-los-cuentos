@@ -20,46 +20,32 @@ const recalculateListeners = new Set<RecalculateListener>()
 export function onAchievementUnlock(callback: UnlockListener): () => void {
   unlockListeners.add(callback)
 
-  // Retornar función para desuscribirse
   return () => {
     unlockListeners.delete(callback)
   }
 }
 
-/**
- * Registrar un listener para cambios de progreso
- */
 export function onAchievementProgress(callback: ProgressListener): () => void {
   progressListeners.add(callback)
 
-  // Retornar función para desuscribirse
   return () => {
     progressListeners.delete(callback)
   }
 }
 
-/**
- * Registrar un listener para recalculación de logros
- */
 export function onAchievementRecalculate(callback: RecalculateListener): () => void {
   recalculateListeners.add(callback)
 
-  // Retornar función para desuscribirse
   return () => {
     recalculateListeners.delete(callback)
   }
 }
 
-/**
- * Disparar evento de desbloqueo
- * (llamado internamente cuando se desbloquea un logro)
- */
 export function emitAchievementUnlock(event: AchievementUnlockedEvent): void {
   unlockListeners.forEach(listener => {
     try {
       listener(event)
     } catch (error) {
-      // Silently ignore listener errors
     }
   })
 }
@@ -73,7 +59,6 @@ export function emitAchievementProgress(event: AchievementProgressEvent): void {
     try {
       listener(event)
     } catch (error) {
-      // Silently ignore listener errors
     }
   })
 }
@@ -87,7 +72,6 @@ export function emitAchievementRecalculate(): void {
     try {
       listener()
     } catch (error) {
-      // Silently ignore listener errors
     }
   })
 }

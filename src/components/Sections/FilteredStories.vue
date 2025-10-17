@@ -117,7 +117,6 @@
       sortOrder.value = order
     }
     
-    // Simular carga para mostrar loading
     setTimeout(() => {
       isLoading.value = false
     }, 1000)
@@ -133,7 +132,6 @@
 
   const parseDate = dateString => {
     const [day, month, year] = dateString.split('/').map(Number)
-    // Note: Months are 0-indexed in JavaScript Date (0 = January, 11 = December)
     return new Date(year, month - 1, day)
   }
 

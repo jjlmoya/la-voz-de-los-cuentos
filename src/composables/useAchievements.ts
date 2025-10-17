@@ -22,31 +22,22 @@ export default function useAchievements() {
   const triggerUpdate = ref(0)
   const achievementsData = ref<Record<string, any>>({})
 
-  // Setup event listeners to trigger reactivity updates
   onAchievementUnlock((event) => {
-    // Force re-read from storage when achievement is unlocked
     triggerUpdate.value++
-    // Force recalculation by triggering update
     achievementsData.value = { ...achievementsData.value }
   })
 
   onAchievementProgress((event) => {
-    // Force re-read from storage when achievement progress changes
     triggerUpdate.value++
-    // Force recalculation by triggering update
     achievementsData.value = { ...achievementsData.value }
   })
 
   onAchievementRecalculate(() => {
-    // Handle recalculation - check if any unlocked achievements should be revoked
     checkAndRevokeAchievements()
     triggerUpdate.value++
     achievementsData.value = { ...achievementsData.value }
   })
 
-  /**
-   * Crear instancia de logro
-   */
   function createAchievementInstance(definitionId: string): Achievement {
     const definition = ALL_ACHIEVEMENT_DEFINITIONS.find(d => d.id === definitionId)
     if (!definition) {
@@ -68,9 +59,6 @@ export default function useAchievements() {
     }
   }
 
-  /**
-   * Calcular progreso actual de un logro
-   */
   function calculateAchievementProgress(
     achievementId: string
   ): { current: number; target: number; progress: number } | null {
@@ -79,21 +67,18 @@ export default function useAchievements() {
 
     const state = getAchievementState(achievementId)
 
-    // Para logros de lectura
     if (definition.type === 'read') {
       const current = getCompleteStories().length
       const target = definition.threshold
       return { current, target, progress: Math.min(100, (current / target) * 100) }
     }
 
-    // Para logros de favoritos
     if (definition.type === 'favorite') {
       const current = getFavoriteStories().length
       const target = definition.threshold
       return { current, target, progress: Math.min(100, (current / target) * 100) }
     }
 
-    // Para sagas, personajes y especiales, usar el progreso guardado en storage
     if (state?.current !== undefined && state?.target !== undefined) {
       return {
         current: state.current,
@@ -105,9 +90,6 @@ export default function useAchievements() {
     return null
   }
 
-  /**
-   * Crear logro con progreso
-   */
   function createAchievementWithProgress(definitionId: string): AchievementWithProgress {
     const achievement = createAchievementInstance(definitionId)
     const progressData = calculateAchievementProgress(definitionId)
@@ -121,32 +103,20 @@ export default function useAchievements() {
     }
   }
 
-  /**
-   * Array de todos los logros
-   */
   const allAchievements = computed(() => {
-    triggerUpdate.value // reactivity trigger
-    achievementsData.value // reactivity trigger
+    triggerUpdate.value
+    achievementsData.value
     return ALL_ACHIEVEMENT_DEFINITIONS.map(def => createAchievementWithProgress(def.id))
   })
 
-  /**
-   * Logros desbloqueados
-   */
   const unlockedAchievements = computed(() => {
     return allAchievements.value.filter(a => a.unlocked)
   })
 
-  /**
-   * Logros bloqueados
-   */
   const lockedAchievements = computed(() => {
     return allAchievements.value.filter(a => !a.unlocked)
   })
 
-  /**
-   * Estadísticas
-   */
   const stats = computed((): AchievementStats => {
     const achievements = allAchievements.value
     const unlocked = unlockedAchievements.value
@@ -168,9 +138,6 @@ export default function useAchievements() {
     }
   })
 
-  /**
-   * Verificar y desbloquear si es necesario
-   */
   function checkAndUnlockAchievement(achievementId: string): boolean {
     const isCurrentlyUnlocked = isAchievementUnlocked(achievementId)
     if (isCurrentlyUnlocked) {
@@ -193,9 +160,6 @@ export default function useAchievements() {
     return false
   }
 
-  /**
-   * Actualizar progreso
-   */
   function updateProgress(achievementId: string): void {
     const progressData = calculateAchievementProgress(achievementId)
     if (progressData) {
@@ -208,9 +172,6 @@ export default function useAchievements() {
     }
   }
 
-  /**
-   * Verificar y revocar logros que ya no cumplen el umbral
-   */
   function checkAndRevokeAchievements(): void {
     allAchievements.value.forEach(achievement => {
       if (!achievement.unlocked) return
@@ -218,16 +179,12 @@ export default function useAchievements() {
       const progressData = calculateAchievementProgress(achievement.id)
       if (!progressData) return
 
-      // Si el logro ya no cumple el umbral, revocarlo
       if (progressData.current < progressData.target) {
         revokeAchievement(achievement.id)
       }
     })
   }
 
-  /**
-   * Recalcular todos
-   */
   function recalculateAll(): void {
     allAchievements.value.forEach(achievement => {
       checkAndUnlockAchievement(achievement.id)
@@ -235,16 +192,10 @@ export default function useAchievements() {
     })
   }
 
-  /**
-   * Obtener logro por ID
-   */
   function getAchievement(id: string): AchievementWithProgress | undefined {
     return allAchievements.value.find(a => a.id === id)
   }
 
-  /**
-   * Filtrar por tipo
-   */
   function getAchievementsByTypeFilter(type: string): AchievementWithProgress[] {
     return allAchievements.value.filter(a => a.type === type)
   }

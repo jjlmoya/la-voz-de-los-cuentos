@@ -22,28 +22,22 @@ interface StoredStory {
   like: boolean
 }
 
-// Cache de datos de historias y personajes
 const storiesCache = ref<any[]>([])
 const charactersCache = ref<any[]>([])
 
-// Función para cargar datos
 function loadDataCache() {
   try {
     storiesCache.value = getStories()
     charactersCache.value = getCharacters()
   } catch (error) {
-    // En caso de error, los caches quedan vacíos
   }
 }
 
 const lastStoriesData = ref<StoredStory[]>([])
 let watcherActive = false
 
-/**
- * Leer estado actual de historias
- */
+
 function getStoriesDataFromStorage(): StoredStory[] {
-  // No acceder a localStorage en SSR (servidor)
   if (typeof window === 'undefined') {
     return []
   }
@@ -56,9 +50,6 @@ function getStoriesDataFromStorage(): StoredStory[] {
   }
 }
 
-/**
- * Detectar historias completadas nuevas y cambios en favoritos
- */
 function checkForNewCompletedStories(): void {
   const currentStories = getStoriesDataFromStorage()
   const previousStories = lastStoriesData.value
@@ -69,17 +60,14 @@ function checkForNewCompletedStories(): void {
   currentStories.forEach(currentStory => {
     const previousStory = previousStories.find(s => s.key === currentStory.key)
 
-    // Detectar si la historia está completada: spentTime >= totalTime
     const isCurrentlyComplete = currentStory.spentTime >= parseFloat(String(currentStory.totalTime))
     const wasPreviouslyComplete = previousStory && previousStory.spentTime >= parseFloat(String(previousStory.totalTime))
 
-    // Detectar cambio: no completada -> completada
     if (isCurrentlyComplete && !wasPreviouslyComplete) {
       handleStoryCompleted(currentStory)
       hasNewCompletion = true
     }
 
-    // Detectar cambio en favoritos: not liked -> liked, or liked -> not liked
     const isCurrentlyLiked = currentStory.like === true
     const wasPreviouslyLiked = previousStory && previousStory.like === true
 
@@ -88,43 +76,29 @@ function checkForNewCompletedStories(): void {
     }
   })
 
-  // Si hay alguna nueva completación, revisar logros de lectura
   if (hasNewCompletion) {
     checkReadingAchievements()
   }
 
-  // Si hay cambios en favoritos, revisar logros de favoritos
   if (hasLikeChange) {
     checkFavoriteAchievements()
   }
 
-  // Revisar logros de sagas, personajes y especiales siempre
   if (hasNewCompletion || hasLikeChange) {
     checkSagaAchievements()
     checkCharacterAchievements()
     checkSpecialAchievements()
   }
 
-  // Actualizar cache
   lastStoriesData.value = JSON.parse(JSON.stringify(currentStories))
 }
 
-/**
- * Manejar completación de historia
- */
-function handleStoryCompleted(story: StoredStory): void {
-  // checkReadingAchievements() is called in checkForNewCompletedStories
-}
+function handleStoryCompleted(story: StoredStory): void {}
 
-/**
- * Verificar y desbloquear logros de lectura
- */
 function checkReadingAchievements(): void {
   const stories = getStoriesDataFromStorage()
-  // Contar historias completadas: spentTime >= totalTime
   const completedCount = stories.filter(s => s.spentTime >= parseFloat(String(s.totalTime))).length
 
-  // Logros de lectura (read-1, read-5, read-25, read-50, read-100, read-200)
   const readAchievements = ALL_ACHIEVEMENT_DEFINITIONS.filter(d => d.type === 'read')
 
   readAchievements.forEach(definition => {
@@ -134,20 +108,14 @@ function checkReadingAchievements(): void {
       unlockAchievement(definition.id)
     }
 
-    // Actualizar progreso incluso si ya está desbloqueado
     updateAchievementProgress(definition.id, completedCount, threshold)
   })
 }
 
-/**
- * Verificar y desbloquear logros de favoritos
- */
 function checkFavoriteAchievements(): void {
   const stories = getStoriesDataFromStorage()
-  // Contar historias marcadas como favoritas
   const favoriteCount = stories.filter(s => s.like === true).length
 
-  // Logros de favoritos (fav-1, fav-5, fav-10, fav-25, fav-50)
   const favoriteAchievements = ALL_ACHIEVEMENT_DEFINITIONS.filter(d => d.type === 'favorite')
 
   favoriteAchievements.forEach(definition => {
@@ -157,17 +125,12 @@ function checkFavoriteAchievements(): void {
       unlockAchievement(definition.id)
     }
 
-    // Actualizar progreso incluso si ya está desbloqueado
     updateAchievementProgress(definition.id, favoriteCount, threshold)
   })
 }
 
-/**
- * Verificar y desbloquear logros de Sagas
- */
 function checkSagaAchievements(): void {
   try {
-    // Cargar datos si no están cacheados
     if (storiesCache.value.length === 0) {
       loadDataCache()
     }
@@ -176,7 +139,6 @@ function checkSagaAchievements(): void {
       s => s.spentTime >= parseFloat(String(s.totalTime))
     )
 
-    // Mapear sagas completadas
     const sagasCompleted: Record<string, number> = {}
     completedStories.forEach(story => {
       const storyDef = storiesCache.value.find(s => s.key === story.key)
@@ -185,7 +147,6 @@ function checkSagaAchievements(): void {
       }
     })
 
-    // Mapear total de cuentos por saga
     const sagaStoryCounts: Record<string, number> = {}
     storiesCache.value.forEach(story => {
       if (story.saga && story.saga.trim() !== '') {
@@ -198,7 +159,6 @@ function checkSagaAchievements(): void {
     sagaAchievements.forEach(definition => {
       const threshold = definition.threshold || 1
 
-      // Para saga-1, saga-3, saga-7: contar cuántas sagas diferentes se han completado
       if (definition.id.startsWith('saga-') && definition.id !== 'saga-all') {
         const numSagasCompleted = Object.keys(sagasCompleted).length
         const shouldUnlock = numSagasCompleted >= threshold
@@ -209,7 +169,6 @@ function checkSagaAchievements(): void {
 
         updateAchievementProgress(definition.id, Math.min(numSagasCompleted, threshold), threshold)
       }
-      // Para saga-all: contar si se completaron TODOS los cuentos de TODAS las sagas
       else if (definition.id === 'saga-all') {
         let allSagasComplete = false
         let completedSagasCount = 0
@@ -231,16 +190,11 @@ function checkSagaAchievements(): void {
       }
     })
   } catch (error) {
-    // Silenciar errores si los datos no están disponibles aún
   }
 }
 
-/**
- * Verificar y desbloquear logros de Personajes
- */
 function checkCharacterAchievements(): void {
   try {
-    // Cargar datos si no están cacheados
     if (charactersCache.value.length === 0 || storiesCache.value.length === 0) {
       loadDataCache()
     }
@@ -249,7 +203,6 @@ function checkCharacterAchievements(): void {
       s => s.spentTime >= parseFloat(String(s.totalTime))
     )
 
-    // Mapear cuántos cuentos se han completado por personaje
     const charactersCompleted: Record<string, Set<string>> = {}
     completedStories.forEach(story => {
       const storyDef = storiesCache.value.find(s => s.key === story.key)
@@ -264,7 +217,6 @@ function checkCharacterAchievements(): void {
       }
     })
 
-    // Mapear total de cuentos por personaje (en su saga)
     const characterStoryCounts: Record<string, Set<string>> = {}
     storiesCache.value.forEach(story => {
       if (story.saga && story.saga.trim() !== '') {
@@ -284,7 +236,6 @@ function checkCharacterAchievements(): void {
       const threshold = definition.threshold || 1
 
       if (definition.id === 'char-5') {
-        // Encontrar un personaje con al menos 5 cuentos completados
         const hasCharWith5 = Object.entries(charactersCompleted).some(
           ([charKey, storyKeys]) => storyKeys.size >= 5
         )
@@ -315,7 +266,6 @@ function checkCharacterAchievements(): void {
         updateAchievementProgress('char-10', Math.min(maxStories, threshold), threshold)
       }
       else if (definition.id === 'char-all') {
-        // Completar TODOS los cuentos de UN personaje
         const hasCompleteCharacter = Object.entries(characterStoryCounts).some(
           ([charKey, totalStories]) => {
             const completed = charactersCompleted[charKey]?.size || 0
@@ -330,7 +280,6 @@ function checkCharacterAchievements(): void {
         updateAchievementProgress('char-all', hasCompleteCharacter ? 1 : 0, 1)
       }
       else if (definition.id === 'char-profiles') {
-        // Leer de múltiples personajes
         const uniqueCharactersWithStories = Object.entries(charactersCompleted)
           .filter(([charKey, storyKeys]) => storyKeys.size > 0).length
 
@@ -342,33 +291,23 @@ function checkCharacterAchievements(): void {
       }
     })
   } catch (error) {
-    // Silenciar errores
   }
 }
 
-/**
- * Verificar y desbloquear logros Especiales
- */
 function checkSpecialAchievements(): void {
   try {
     const stories = getStoriesDataFromStorage()
     const completedCount = stories.filter(s => s.spentTime >= parseFloat(String(s.totalTime))).length
 
-    // Especiales siempre muestra progreso 0/1 hasta desbloqueado
     const specialAchievements = ALL_ACHIEVEMENT_DEFINITIONS.filter(d => d.type === 'special')
 
     specialAchievements.forEach(definition => {
-      // Mostrar progreso como 0/1 para especiales (son binarios)
       updateAchievementProgress(definition.id, 0, 1)
     })
   } catch (error) {
-    // Silenciar errores
   }
 }
 
-/**
- * Desbloquear un logro
- */
 function unlockAchievement(achievementId: string): void {
   const achievement = ALL_ACHIEVEMENT_DEFINITIONS.find(d => d.id === achievementId)
   if (!achievement) return
@@ -393,9 +332,6 @@ function unlockAchievement(achievementId: string): void {
   })
 }
 
-/**
- * Iniciar monitoreo
- */
 export function useAchievementListener() {
   function startListening(): () => void {
     if (watcherActive) {
@@ -405,12 +341,11 @@ export function useAchievementListener() {
     watcherActive = true
     lastStoriesData.value = getStoriesDataFromStorage()
 
-    // Cargar datos de historias y personajes al iniciar
     loadDataCache()
 
     const interval = setInterval(() => {
       checkForNewCompletedStories()
-    }, 2000) // Check every 2 seconds for faster achievement detection
+    }, 2000) 
 
     return () => {
       clearInterval(interval)
@@ -418,9 +353,6 @@ export function useAchievementListener() {
     }
   }
 
-  /**
-   * Forzar check manual
-   */
   function forceCheck(): void {
     checkReadingAchievements()
     checkFavoriteAchievements()
@@ -429,9 +361,6 @@ export function useAchievementListener() {
     checkSpecialAchievements()
   }
 
-  /**
-   * Resetear cache
-   */
   function resetCache(): void {
     lastStoriesData.value = []
   }

@@ -48,25 +48,20 @@ const props = defineProps({
   }
 })
 
-// Iconos que corresponden a cada mensaje
 const icons = [
-  'explorer',    // adventure
-  'wizard',      // book
-  'princess',    // characters
-  'dragon',      // worlds
-  'sorcerer',    // potions
-  'pirate'       // treasures
+  'explorer',   
+  'wizard',     
+  'princess',   
+  'dragon',     
+  'sorcerer',   
+  'pirate'  
 ]
 
-// Seleccionar uno aleatorio al montar
 const getRandomIndex = () => Math.floor(Math.random() * props.messages.length)
 
 const currentMessage = ref(props.messages[getRandomIndex()])
 const currentIcon = ref(icons[getRandomIndex()])
 
-onMounted(() => {
-  // No rotar, solo uno aleatorio
-})
 </script>
 
 <style scoped>
@@ -82,7 +77,6 @@ onMounted(() => {
   gap: var(--v-unit-6);
 }
 
-/* Ilustración animada */
 .loading-illustration {
   display: flex;
   align-items: center;

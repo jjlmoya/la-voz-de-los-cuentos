@@ -32,7 +32,6 @@
   const clientStories = ref([])
 
   onMounted(() => {
-    // Cargar favoritos en cliente (ya que SSR no tiene acceso a localStorage)
     const { getFavoriteStories } = useStories()
     clientStories.value = getFavoriteStories()
   })
