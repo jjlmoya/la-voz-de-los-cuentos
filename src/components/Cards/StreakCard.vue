@@ -1,45 +1,41 @@
 <template>
-  <div class="streak-card" :class="{ 'streak-card--active': hasStreakToday, 'streak-card--inactive': !hasStreakToday }">
-    <!-- Background with illustration -->
-    <div class="streak-card__background">
-      <img
-        :src="hasStreakToday ? '/assets/streak/backgrounds/flame-background.webp' : '/assets/streak/backgrounds/frozen-background.webp'"
-        :alt="hasStreakToday ? 'flame' : 'frozen'"
-        class="streak-card__bg-image"
-      />
-      <!-- Animated overlay particles -->
-      <div v-if="hasStreakToday" class="streak-card__particles">
-        <div v-for="i in 8" :key="i" class="streak-card__particle" :style="{ '--delay': `${i * 0.1}s` }"></div>
-      </div>
-    </div>
+  <div class="streak-card" :class="{ 'streak-card--milestone-25': currentStreak % 25 === 0 && currentStreak > 0, 'streak-card--milestone-50': currentStreak % 50 === 0 && currentStreak > 0 }">
+    <!-- Spacing from hero -->
+    <div class="streak-card__top-spacing"></div>
 
-    <!-- Character -->
-    <div class="streak-card__character">
-      <img
-        :src="hasStreakToday ? '/assets/streak/characters/flame-character.webp' : '/assets/streak/characters/ice-character.webp'"
-        :alt="hasStreakToday ? 'flame' : 'ice'"
-        class="streak-card__character-img"
-        :class="{ 'streak-card__character-img--celebrate': hasStreakToday, 'streak-card__character-img--sad': !hasStreakToday }"
-      />
-    </div>
-
-    <!-- Main number with animation -->
-    <div class="streak-card__counter">
-      <div class="streak-card__icon-container">
-        <img
-          :src="hasStreakToday ? '/assets/streak/icons/flame-icon.webp' : '/assets/streak/icons/frozen-icon.webp'"
-          :alt="hasStreakToday ? 'flame' : 'frozen'"
-          class="streak-card__icon"
-        />
+    <!-- Main streak number with flame icon -->
+    <div class="streak-card__header">
+      <div class="streak-card__flame-icon">
+        <img src="/assets/streak/icons/flame-icon.webp" alt="flame" class="streak-card__flame-img" />
       </div>
-      <div class="streak-card__number" :class="{ 'streak-card__number--pulse': hasStreakToday }">
+      <div class="streak-card__number" :class="{ 'streak-card__number--pulse-intense': currentStreak % 25 === 0 && currentStreak > 0 }">
         {{ currentStreak }}
       </div>
+      <div class="streak-card__label">day streak</div>
     </div>
 
-    <!-- Status indicator -->
-    <div class="streak-card__status" :class="{ 'streak-card__status--active': hasStreakToday }">
-      <div class="streak-card__status-dot"></div>
+    <!-- Daily progress dots -->
+    <div class="streak-card__days">
+      <div v-for="(day, index) in last7Days" :key="index" class="streak-card__day-container">
+        <div
+          class="streak-card__day-dot"
+          :class="{
+            'streak-card__day-dot--empty': day.count === 0,
+            'streak-card__day-dot--one': day.count === 1,
+            'streak-card__day-dot--epic': day.count > 1,
+            'streak-card__day-dot--today': day.isToday
+          }"
+        >
+          <img
+            v-if="day.count > 0"
+            :src="getDayImage(day.count)"
+            :alt="`day-${day.count}`"
+            class="streak-card__day-img"
+          />
+          <span v-if="day.count > 1" class="streak-card__day-number">{{ day.count }}</span>
+        </div>
+        <div class="streak-card__day-label">{{ day.label }}</div>
+      </div>
     </div>
   </div>
 </template>
@@ -50,266 +46,356 @@ import { useStreaks } from '../../composables/useStreaks'
 
 const streakData = ref(null)
 const currentStreak = ref(0)
-const hasStreakToday = ref(false)
-
-const streakStatus = computed(() => {
-  if (!streakData.value) return 'loading'
-  return streakData.value.getStreakStatus()
-})
+const last7Days = ref([])
 
 onMounted(() => {
   streakData.value = useStreaks()
   currentStreak.value = streakData.value.currentStreak
-  hasStreakToday.value = streakData.value.hasStreakToday
+  calculateLast7Days()
 })
+
+const calculateLast7Days = () => {
+  const days = []
+  const today = new Date()
+
+  // Get last 7 days
+  for (let i = 6; i >= 0; i--) {
+    const date = new Date(today)
+    date.setDate(date.getDate() - i)
+
+    const dateStr = date.toISOString().split('T')[0]
+    const dayOfWeek = date.toLocaleDateString('en-US', { weekday: 'short' })
+
+    // Count items completed on this date
+    const count = getCompletedCountForDate(dateStr)
+
+    days.push({
+      date: dateStr,
+      label: i === 0 ? 'Today' : dayOfWeek,
+      count: count,
+      isToday: i === 0
+    })
+  }
+
+  last7Days.value = days
+}
+
+const getCompletedCountForDate = (dateStr) => {
+  if (!streakData.value) return 0
+
+  try {
+    const storiesData = JSON.parse(localStorage.getItem('storiesData')) || []
+    const songsData = JSON.parse(localStorage.getItem('songsData')) || []
+
+    const allData = [...storiesData, ...songsData]
+
+    let count = 0
+    allData.forEach(item => {
+      if (item.completedAt && item.finished) {
+        const completedDate = new Date(item.completedAt).toISOString().split('T')[0]
+        if (completedDate === dateStr) {
+          count++
+        }
+      }
+    })
+
+    return count
+  } catch (e) {
+    return 0
+  }
+}
+
+const getDayImage = (count) => {
+  // Return appropriate illustration based on count
+  // 1 = basic achievement image
+  // 2-4 = good achievement
+  // 5+ = epic achievement
+  if (count >= 5) {
+    return '/assets/streak/characters/flame-character.webp'
+  } else if (count >= 2) {
+    return '/assets/streak/characters/motivation-character.webp'
+  } else {
+    return '/assets/streak/icons/flame-icon.webp'
+  }
+}
 </script>
 
 <style scoped>
 .streak-card {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 380px;
+  width: 100%;
+  padding: 40px 24px 60px 24px;
+  background: linear-gradient(180deg, rgba(255, 158, 0, 0.05) 0%, transparent 100%);
   border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  text-align: center;
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.streak-card--active {
-  background: linear-gradient(135deg, #FF9E00 0%, #FF4040 100%);
+.streak-card--milestone-25 {
+  background: linear-gradient(180deg, rgba(255, 158, 0, 0.15) 0%, rgba(255, 64, 64, 0.08) 100%);
+  animation: milestone-glow 0.6s ease-out;
 }
 
-.streak-card--inactive {
-  background: linear-gradient(135deg, #5B93FF 0%, #4A7FD7 100%);
+.streak-card--milestone-50 {
+  background: linear-gradient(180deg, rgba(255, 214, 0, 0.2) 0%, rgba(255, 64, 64, 0.12) 100%);
+  animation: milestone-glow-intense 0.8s ease-out;
 }
 
-.streak-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.2);
-}
-
-/* Background with illustration */
-.streak-card__background {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.streak-card__bg-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.7;
-}
-
-/* Particles animation */
-.streak-card__particles {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.streak-card__particle {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
-  animation: particle-float 3s ease-in-out infinite;
-  animation-delay: var(--delay);
-}
-
-@keyframes particle-float {
+@keyframes milestone-glow {
   0% {
-    transform: translateY(0) translateX(0) scale(1);
-    opacity: 1;
+    transform: scale(0.98);
   }
   50% {
-    opacity: 0.6;
+    transform: scale(1.02);
   }
   100% {
-    transform: translateY(-80px) translateX(40px) scale(0.3);
-    opacity: 0;
+    transform: scale(1);
   }
 }
 
-/* Character */
-.streak-card__character {
-  position: relative;
-  z-index: 2;
-  width: 140px;
-  height: 140px;
-  margin-bottom: 20px;
+@keyframes milestone-glow-intense {
+  0% {
+    transform: scale(0.95);
+    filter: brightness(0.9);
+  }
+  50% {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
 }
 
-.streak-card__character-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+/* Top spacing from hero */
+.streak-card__top-spacing {
+  height: 24px;
 }
 
-.streak-card__character-img--celebrate {
-  animation: character-celebrate 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
-}
-
-.streak-card__character-img--sad {
-  animation: character-sad 1s ease-in-out infinite;
-}
-
-@keyframes character-celebrate {
-  0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
-  20% { transform: translateY(-12px) rotate(-5deg) scale(1.05); }
-  40% { transform: translateY(0) rotate(5deg) scale(0.98); }
-  60% { transform: translateY(-8px) rotate(-3deg) scale(1.03); }
-  80% { transform: translateY(0) rotate(2deg) scale(1); }
-}
-
-@keyframes character-sad {
-  0%, 100% { transform: translateY(0) scaleX(1); }
-  50% { transform: translateY(4px) scaleX(0.97); }
-}
-
-/* Counter section */
-.streak-card__counter {
-  position: relative;
-  z-index: 2;
+/* Header with flame and number */
+.streak-card__header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
+  margin-bottom: 32px;
 }
 
-.streak-card__icon-container {
-  width: 70px;
-  height: 70px;
+.streak-card__flame-icon {
+  width: 64px;
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 14px;
-  backdrop-filter: blur(10px);
-  animation: icon-float 2.5s ease-in-out infinite;
+  animation: flame-float 2s ease-in-out infinite;
 }
 
-@keyframes icon-float {
+@keyframes flame-float {
   0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-8px) scale(1.05); }
+  50% { transform: translateY(-8px) scale(1.08); }
 }
 
-.streak-card__icon {
-  width: 45px;
-  height: 45px;
+.streak-card__flame-img {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(255, 158, 0, 0.4));
 }
 
 .streak-card__number {
-  font-size: 96px;
+  font-size: 88px;
   font-weight: 900;
-  color: white;
-  line-height: 1;
-  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-  letter-spacing: -4px;
-}
-
-.streak-card__number--pulse {
-  animation: number-pulse 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
-}
-
-@keyframes number-pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.08); }
-}
-
-/* Status indicator */
-.streak-card__status {
-  position: absolute;
-  bottom: 20px;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 16px;
-  height: 16px;
-}
-
-.streak-card__status-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.4);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+  color: #FF6B6B;
+  line-height: 0.9;
+  letter-spacing: -3px;
+  text-shadow: 0 4px 16px rgba(255, 107, 107, 0.3);
   transition: all 0.3s ease;
 }
 
-.streak-card__status--active .streak-card__status-dot {
-  background: #FFD600;
-  box-shadow: 0 0 12px rgba(255, 214, 0, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.3);
-  animation: status-pulse 1.5s ease-in-out infinite;
+.streak-card__number--pulse-intense {
+  animation: number-intense-pulse 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
 }
 
-@keyframes status-pulse {
-  0%, 100% { transform: scale(1); box-shadow: 0 0 12px rgba(255, 214, 0, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.3); }
-  50% { transform: scale(1.3); box-shadow: 0 0 20px rgba(255, 214, 0, 0.8), inset 0 1px 2px rgba(255, 255, 255, 0.3); }
+@keyframes number-intense-pulse {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.15); }
+  50% { transform: scale(0.95); }
+  75% { transform: scale(1.1); }
+}
+
+.streak-card__label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Daily dots grid */
+.streak-card__days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+  margin-top: 40px;
+  padding: 0 8px;
+}
+
+.streak-card__day-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.streak-card__day-dot {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-weight: 700;
+  font-size: 12px;
+  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.04);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.streak-card__day-dot--empty {
+  background: rgba(200, 200, 200, 0.2);
+  border-color: rgba(200, 200, 200, 0.3);
+  opacity: 0.5;
+}
+
+.streak-card__day-dot--one {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(76, 175, 80, 0.1));
+  border-color: #4CAF50;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
+}
+
+.streak-card__day-dot--epic {
+  background: linear-gradient(135deg, rgba(255, 158, 0, 0.3), rgba(255, 64, 64, 0.2));
+  border-color: #FF6B6B;
+  box-shadow: 0 6px 16px rgba(255, 107, 107, 0.3);
+  transform: scale(1.05);
+}
+
+.streak-card__day-dot--today {
+  border-color: #FF6B6B;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2), 0 8px 20px rgba(255, 107, 107, 0.3);
+  animation: today-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes today-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2), 0 8px 20px rgba(255, 107, 107, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(255, 107, 107, 0.15), 0 8px 20px rgba(255, 107, 107, 0.4);
+  }
+}
+
+.streak-card__day-img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+.streak-card__day-number {
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(135deg, #FF9E00, #FF6B6B);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.streak-card__day-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .streak-card {
-    height: 320px;
-  }
-
-  .streak-card__character {
-    width: 110px;
-    height: 110px;
-    margin-bottom: 16px;
+    padding: 32px 16px 48px 16px;
   }
 
   .streak-card__number {
-    font-size: 72px;
-    letter-spacing: -3px;
+    font-size: 64px;
+    letter-spacing: -2px;
   }
 
-  .streak-card__icon-container {
-    width: 56px;
-    height: 56px;
+  .streak-card__flame-icon {
+    width: 52px;
+    height: 52px;
   }
 
-  .streak-card__icon {
-    width: 36px;
-    height: 36px;
+  .streak-card__days {
+    gap: 10px;
+    padding: 0 4px;
+  }
+
+  .streak-card__day-dot {
+    width: 48px;
+    height: 48px;
+  }
+
+  .streak-card__day-label {
+    font-size: 10px;
   }
 }
 
 @media (max-width: 480px) {
   .streak-card {
-    height: 280px;
-  }
-
-  .streak-card__character {
-    width: 90px;
-    height: 90px;
-    margin-bottom: 12px;
+    padding: 24px 12px 36px 12px;
   }
 
   .streak-card__number {
-    font-size: 56px;
-    letter-spacing: -2px;
+    font-size: 48px;
+    letter-spacing: -1px;
   }
 
-  .streak-card__icon-container {
-    width: 48px;
-    height: 48px;
+  .streak-card__flame-icon {
+    width: 44px;
+    height: 44px;
   }
 
-  .streak-card__icon {
-    width: 30px;
-    height: 30px;
+  .streak-card__header {
+    margin-bottom: 24px;
+  }
+
+  .streak-card__days {
+    gap: 8px;
+    padding: 0;
+  }
+
+  .streak-card__day-dot {
+    width: 40px;
+    height: 40px;
+  }
+
+  .streak-card__day-number {
+    width: 18px;
+    height: 18px;
+    font-size: 9px;
+  }
+
+  .streak-card__day-label {
+    font-size: 9px;
   }
 }
 </style>
