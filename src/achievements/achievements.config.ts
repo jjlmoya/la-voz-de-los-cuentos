@@ -93,10 +93,82 @@ export const READ_ACHIEVEMENTS: AchievementDefinition[] = [
 ]
 
 /**
+ * LOGROS DE FAVORITOS
+ */
+export const FAVORITE_ACHIEVEMENTS: AchievementDefinition[] = [
+  {
+    id: 'fav-1',
+    type: 'favorite',
+    nameEs: 'Tu Primer Amor',
+    nameEn: 'Your First Love',
+    descriptionEs: 'Marca 1 cuento como favorito',
+    descriptionEn: 'Mark 1 story as favorite',
+    iconId: '1',
+    threshold: 1,
+    metadata: {
+      folder: 'fav'
+    }
+  },
+  {
+    id: 'fav-5',
+    type: 'favorite',
+    nameEs: 'Cinco Favoritos',
+    nameEn: 'Five Favorites',
+    descriptionEs: 'Marca 5 cuentos como favoritos',
+    descriptionEn: 'Mark 5 stories as favorites',
+    iconId: '5',
+    threshold: 5,
+    metadata: {
+      folder: 'fav'
+    }
+  },
+  {
+    id: 'fav-10',
+    type: 'favorite',
+    nameEs: 'Coleccionista de Historias',
+    nameEn: 'Story Collector',
+    descriptionEs: 'Marca 10 cuentos como favoritos',
+    descriptionEn: 'Mark 10 stories as favorites',
+    iconId: '10',
+    threshold: 10,
+    metadata: {
+      folder: 'fav'
+    }
+  },
+  {
+    id: 'fav-25',
+    type: 'favorite',
+    nameEs: 'Guardián de Veinticinco Joyas',
+    nameEn: 'Guardian of Twenty-Five Gems',
+    descriptionEs: 'Marca 25 cuentos como favoritos',
+    descriptionEn: 'Mark 25 stories as favorites',
+    iconId: '25',
+    threshold: 25,
+    metadata: {
+      folder: 'fav'
+    }
+  },
+  {
+    id: 'fav-50',
+    type: 'favorite',
+    nameEs: 'Biblioteca Personal de Cincuenta Tesoros',
+    nameEn: 'Personal Library of Fifty Treasures',
+    descriptionEs: 'Marca 50 cuentos como favoritos',
+    descriptionEn: 'Mark 50 stories as favorites',
+    iconId: '50',
+    threshold: 50,
+    metadata: {
+      folder: 'fav'
+    }
+  }
+]
+
+/**
  * Todos los logros disponibles
  */
 export const ALL_ACHIEVEMENT_DEFINITIONS = [
-  ...READ_ACHIEVEMENTS
+  ...READ_ACHIEVEMENTS,
+  ...FAVORITE_ACHIEVEMENTS
 ]
 
 /**

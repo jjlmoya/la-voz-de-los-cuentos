@@ -42,13 +42,14 @@ function getStoriesDataFromStorage(): StoredStory[] {
 }
 
 /**
- * Detectar historias completadas nuevas
+ * Detectar historias completadas nuevas y cambios en favoritos
  */
 function checkForNewCompletedStories(): void {
   const currentStories = getStoriesDataFromStorage()
   const previousStories = lastStoriesData.value
 
   let hasNewCompletion = false
+  let hasLikeChange = false
 
   currentStories.forEach(currentStory => {
     const previousStory = previousStories.find(s => s.key === currentStory.key)
@@ -62,11 +63,24 @@ function checkForNewCompletedStories(): void {
       handleStoryCompleted(currentStory)
       hasNewCompletion = true
     }
+
+    // Detectar cambio en favoritos: not liked -> liked, or liked -> not liked
+    const isCurrentlyLiked = currentStory.like === true
+    const wasPreviouslyLiked = previousStory && previousStory.like === true
+
+    if (isCurrentlyLiked !== wasPreviouslyLiked) {
+      hasLikeChange = true
+    }
   })
 
-  // Si hay alguna nueva completación, revisar todos los logros
+  // Si hay alguna nueva completación, revisar logros de lectura
   if (hasNewCompletion) {
     checkReadingAchievements()
+  }
+
+  // Si hay cambios en favoritos, revisar logros de favoritos
+  if (hasLikeChange) {
+    checkFavoriteAchievements()
   }
 
   // Actualizar cache
@@ -100,6 +114,29 @@ function checkReadingAchievements(): void {
 
     // Actualizar progreso incluso si ya está desbloqueado
     updateAchievementProgress(definition.id, completedCount, threshold)
+  })
+}
+
+/**
+ * Verificar y desbloquear logros de favoritos
+ */
+function checkFavoriteAchievements(): void {
+  const stories = getStoriesDataFromStorage()
+  // Contar historias marcadas como favoritas
+  const favoriteCount = stories.filter(s => s.like === true).length
+
+  // Logros de favoritos (fav-1, fav-5, fav-10, fav-25, fav-50)
+  const favoriteAchievements = ALL_ACHIEVEMENT_DEFINITIONS.filter(d => d.type === 'favorite')
+
+  favoriteAchievements.forEach(definition => {
+    const threshold = definition.threshold || 1
+
+    if (favoriteCount >= threshold && !isAchievementUnlocked(definition.id)) {
+      unlockAchievement(definition.id)
+    }
+
+    // Actualizar progreso incluso si ya está desbloqueado
+    updateAchievementProgress(definition.id, favoriteCount, threshold)
   })
 }
 
@@ -159,6 +196,7 @@ export function useAchievementListener() {
    */
   function forceCheck(): void {
     checkReadingAchievements()
+    checkFavoriteAchievements()
   }
 
   /**
