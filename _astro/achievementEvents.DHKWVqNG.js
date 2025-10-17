@@ -1,0 +1,1 @@
+const t=new Set,c=new Set,n=new Set;function s(e){return t.add(e),()=>{t.delete(e)}}function i(e){return c.add(e),()=>{c.delete(e)}}function a(e){return n.add(e),()=>{n.delete(e)}}function u(e){t.forEach(r=>{try{r(e)}catch{}})}function d(){n.forEach(e=>{try{e()}catch{}})}export{i as a,a as b,u as c,d as e,s as o};
