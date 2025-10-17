@@ -32,5 +32,53 @@ export default {
   'achievement.fav-25.description': 'Twenty-five glittering story gems tucked away with care!',
 
   'achievement.fav-50.name': 'Captain of the Cozy Library',
-  'achievement.fav-50.description': 'Fifty beloved stories—your library is officially legendary!'
+  'achievement.fav-50.description': 'Fifty beloved stories—your library is officially legendary!',
+
+  // Saga achievements
+  'achievement.saga-1.name': 'Saga Explorer',
+  'achievement.saga-1.description': 'You completed all stories from one saga! Did you uncover all its secrets?',
+
+  'achievement.saga-3.name': 'Saga Master',
+  'achievement.saga-3.description': 'You finished stories from three different sagas! The universes know your name.',
+
+  'achievement.saga-7.name': 'Saga Collector',
+  'achievement.saga-7.description': 'Seven sagas explored! Your tale-gathering backpack is nearly infinite.',
+
+  'achievement.saga-all.name': 'Universe Complete',
+  'achievement.saga-all.description': 'You conquered ALL the sagas! You're a living legend of the story universe.',
+
+  // Character achievements
+  'achievement.char-5.name': 'Character Fan',
+  'achievement.char-5.description': 'You read five stories featuring the same character! Is that your favorite?',
+
+  'achievement.char-10.name': 'Character Devotee',
+  'achievement.char-10.description': 'Ten adventures with the same character! You know them like yourself.',
+
+  'achievement.char-all.name': 'Story Historian',
+  'achievement.char-all.description': 'You read the ENTIRE story history of one character! You're their official biographer.',
+
+  'achievement.char-profiles.name': 'Character Connoisseur',
+  'achievement.char-profiles.description': 'You know multiple characters! The storytelling community is yours.',
+
+  // Special achievements
+  'achievement.special-all.name': 'The Ultimate Finisher',
+  'achievement.special-all.description': 'YOU READ EVERY SINGLE STORY! YOU ARE A LIVING LEGEND!',
+
+  'achievement.special-epic.name': 'Epic Tale',
+  'achievement.special-epic.description': 'You completed a story over 10 minutes long! Was every second worth it?',
+
+  'achievement.special-quick.name': 'Speed Reader',
+  'achievement.special-quick.description': 'You finished a story in under 3 minutes! Confirmed speed reading superpower.',
+
+  'achievement.special-oldest.name': 'Time Traveler',
+  'achievement.special-oldest.description': 'You read one of the oldest stories! Traveling through time is possible.',
+
+  'achievement.special-newest.name': 'First Discoverer',
+  'achievement.special-newest.description': 'You read the newest story! You're among the first to discover it.',
+
+  'achievement.special-early.name': 'Early Bird',
+  'achievement.special-early.description': 'You read between 3am-6am! Did the stories steal your sleep?',
+
+  'achievement.special-night.name': 'Night Reader',
+  'achievement.special-night.description': 'You read between 10pm-3am! The night and stories belong to you.'
 };

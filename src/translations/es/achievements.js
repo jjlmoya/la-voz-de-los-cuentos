@@ -32,5 +32,53 @@ export default {
   'achievement.fav-25.description': '¡25 favoritos! ¿Tu estantería brilla en la oscuridad?',
   
   'achievement.fav-50.name': 'Biblioteca Encantada Personal',
-  'achievement.fav-50.description': '¡50 cuentos favoritos! Hasta el dragón bibliotecario está celoso.'
+  'achievement.fav-50.description': '¡50 cuentos favoritos! Hasta el dragón bibliotecario está celoso.',
+
+  // Logros de Sagas
+  'achievement.saga-1.name': 'Saga Explorer',
+  'achievement.saga-1.description': '¡Completaste todos los cuentos de 1 saga! ¿Descubriste todos sus secretos?',
+
+  'achievement.saga-3.name': 'Saga Master',
+  'achievement.saga-3.description': '¡Terminaste historias de 3 sagas diferentes! Los universos te conocen.',
+
+  'achievement.saga-7.name': 'Saga Collector',
+  'achievement.saga-7.description': '¡7 sagas exploradas! Tu mochila de cuentos es casi infinita.',
+
+  'achievement.saga-all.name': 'Universo Completo',
+  'achievement.saga-all.description': '¡Conquistaste TODAS las sagas! Eres una leyenda del universo de cuentos.',
+
+  // Logros de Personajes
+  'achievement.char-5.name': 'Fan de Personaje',
+  'achievement.char-5.description': '¡Leíste 5 cuentos del mismo personaje! ¿Es tu favorito?',
+
+  'achievement.char-10.name': 'Devoto del Personaje',
+  'achievement.char-10.description': '¡10 aventuras del mismo personaje! Ya lo conoces como a ti mismo.',
+
+  'achievement.char-all.name': 'Historiador',
+  'achievement.char-all.description': '¡Leíste TODA la historia de un personaje! Eres su biógrafo oficial.',
+
+  'achievement.char-profiles.name': 'Conocedor de Todos',
+  'achievement.char-profiles.description': '¡Conoces a múltiples personajes! La comunidad de cuentos es tuya.',
+
+  // Logros Especiales
+  'achievement.special-all.name': 'El Finalizador Total',
+  'achievement.special-all.description': '¡LEÍSTE TODOS LOS CUENTOS! ¡ERES UNA LEYENDA VIVIENTE!',
+
+  'achievement.special-epic.name': 'Cuento Épico',
+  'achievement.special-epic.description': '¡Completaste un cuento de 10+ minutos! ¿Valió cada segundo?',
+
+  'achievement.special-quick.name': 'Lectura Rápida',
+  'achievement.special-quick.description': '¡Terminaste un cuento en menos de 3 minutos! Speed reader confirmado.',
+
+  'achievement.special-oldest.name': 'Antigüedad',
+  'achievement.special-oldest.description': '¡Leíste uno de los cuentos más antiguos! Viajar en el tiempo es posible.',
+
+  'achievement.special-newest.name': 'Novedad',
+  'achievement.special-newest.description': '¡Leíste el cuento más reciente! Eres de los primeros en descubrirlo.',
+
+  'achievement.special-early.name': 'Madrugador',
+  'achievement.special-early.description': '¡Leíste entre las 3am-6am! ¿Los cuentos te robaron el sueño?',
+
+  'achievement.special-night.name': 'Noctámbulo',
+  'achievement.special-night.description': '¡Leíste entre las 10pm-3am! La noche y los cuentos son tuyos.'
 };

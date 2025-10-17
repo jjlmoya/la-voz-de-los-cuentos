@@ -2,7 +2,7 @@
   <div v-if="isDev" class="achievement-debug">
     <!-- Botón toggle para mostrar/ocultar -->
     <button class="achievement-debug__toggle" @click="isOpen = !isOpen">
-      🐛 Debug Logros
+      🐛
     </button>
 
     <!-- Panel de debug -->

@@ -4,6 +4,9 @@
  * ESTRUCTURA DE ILUSTRACIONES:
  * - public/assets/achievements/read/{numero}.png → Logros de lectura
  * - public/assets/achievements/fav/{numero}.png → Logros de favoritos
+ * - public/assets/achievements/read-saga/{nombre}.png → Logros de sagas
+ * - public/assets/achievements/read-character/{nombre}.png → Logros de personajes
+ * - public/assets/achievements/read-special/{nombre}.png → Logros especiales
  */
 
 import type { AchievementDefinition } from '../types/achievement'
@@ -142,11 +145,182 @@ export const FAVORITE_ACHIEVEMENTS: AchievementDefinition[] = [
 ]
 
 /**
+ * LOGROS DE SAGAS
+ */
+export const SAGA_ACHIEVEMENTS: AchievementDefinition[] = [
+  {
+    id: 'saga-1',
+    type: 'saga',
+    nameKey: 'achievement.saga-1.name',
+    descriptionKey: 'achievement.saga-1.description',
+    iconId: '1',
+    metadata: {
+      folder: 'read-saga'
+    }
+  },
+  {
+    id: 'saga-3',
+    type: 'saga',
+    nameKey: 'achievement.saga-3.name',
+    descriptionKey: 'achievement.saga-3.description',
+    iconId: '3',
+    metadata: {
+      folder: 'read-saga'
+    }
+  },
+  {
+    id: 'saga-7',
+    type: 'saga',
+    nameKey: 'achievement.saga-7.name',
+    descriptionKey: 'achievement.saga-7.description',
+    iconId: '7',
+    metadata: {
+      folder: 'read-saga'
+    }
+  },
+  {
+    id: 'saga-all',
+    type: 'saga',
+    nameKey: 'achievement.saga-all.name',
+    descriptionKey: 'achievement.saga-all.description',
+    iconId: 'all',
+    metadata: {
+      folder: 'read-saga'
+    }
+  }
+]
+
+/**
+ * LOGROS DE PERSONAJES
+ */
+export const CHARACTER_ACHIEVEMENTS: AchievementDefinition[] = [
+  {
+    id: 'char-5',
+    type: 'character',
+    nameKey: 'achievement.char-5.name',
+    descriptionKey: 'achievement.char-5.description',
+    iconId: '5',
+    metadata: {
+      folder: 'read-character'
+    }
+  },
+  {
+    id: 'char-10',
+    type: 'character',
+    nameKey: 'achievement.char-10.name',
+    descriptionKey: 'achievement.char-10.description',
+    iconId: '10',
+    metadata: {
+      folder: 'read-character'
+    }
+  },
+  {
+    id: 'char-all',
+    type: 'character',
+    nameKey: 'achievement.char-all.name',
+    descriptionKey: 'achievement.char-all.description',
+    iconId: 'all',
+    metadata: {
+      folder: 'read-character'
+    }
+  },
+  {
+    id: 'char-profiles',
+    type: 'character',
+    nameKey: 'achievement.char-profiles.name',
+    descriptionKey: 'achievement.char-profiles.description',
+    iconId: 'profiles',
+    metadata: {
+      folder: 'read-character'
+    }
+  }
+]
+
+/**
+ * LOGROS ESPECIALES
+ */
+export const SPECIAL_ACHIEVEMENTS: AchievementDefinition[] = [
+  {
+    id: 'special-all',
+    type: 'special',
+    nameKey: 'achievement.special-all.name',
+    descriptionKey: 'achievement.special-all.description',
+    iconId: 'all',
+    metadata: {
+      folder: 'read-special'
+    }
+  },
+  {
+    id: 'special-epic',
+    type: 'special',
+    nameKey: 'achievement.special-epic.name',
+    descriptionKey: 'achievement.special-epic.description',
+    iconId: 'epic',
+    metadata: {
+      folder: 'read-special'
+    }
+  },
+  {
+    id: 'special-quick',
+    type: 'special',
+    nameKey: 'achievement.special-quick.name',
+    descriptionKey: 'achievement.special-quick.description',
+    iconId: 'quick',
+    metadata: {
+      folder: 'read-special'
+    }
+  },
+  {
+    id: 'special-oldest',
+    type: 'special',
+    nameKey: 'achievement.special-oldest.name',
+    descriptionKey: 'achievement.special-oldest.description',
+    iconId: 'oldest',
+    metadata: {
+      folder: 'read-special'
+    }
+  },
+  {
+    id: 'special-newest',
+    type: 'special',
+    nameKey: 'achievement.special-newest.name',
+    descriptionKey: 'achievement.special-newest.description',
+    iconId: 'newest',
+    metadata: {
+      folder: 'read-special'
+    }
+  },
+  {
+    id: 'special-early',
+    type: 'special',
+    nameKey: 'achievement.special-early.name',
+    descriptionKey: 'achievement.special-early.description',
+    iconId: 'early',
+    metadata: {
+      folder: 'read-special'
+    }
+  },
+  {
+    id: 'special-night',
+    type: 'special',
+    nameKey: 'achievement.special-night.name',
+    descriptionKey: 'achievement.special-night.description',
+    iconId: 'night',
+    metadata: {
+      folder: 'read-special'
+    }
+  }
+]
+
+/**
  * Todos los logros disponibles
  */
 export const ALL_ACHIEVEMENT_DEFINITIONS = [
   ...READ_ACHIEVEMENTS,
-  ...FAVORITE_ACHIEVEMENTS
+  ...FAVORITE_ACHIEVEMENTS,
+  ...SAGA_ACHIEVEMENTS,
+  ...CHARACTER_ACHIEVEMENTS,
+  ...SPECIAL_ACHIEVEMENTS
 ]
 
 /**
