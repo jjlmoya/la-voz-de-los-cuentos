@@ -4,10 +4,10 @@ export default {
   'achievement.read-1.description': 'You read your very first story!',
 
   'achievement.read-5.name': 'Tale Taster',
-  'achievement.read-5.description': 'You’ve nibbled on five tasty tales!',
+  'achievement.read-5.description': 'You\'ve nibbled on five tasty tales!',
 
   'achievement.read-25.name': 'World Hopper',
-  'achievement.read-25.description': 'You’ve bounced through twenty-five story worlds!',
+  'achievement.read-25.description': 'You\'ve bounced through twenty-five story worlds!',
 
   'achievement.read-50.name': 'Adventure Ninja',
   'achievement.read-50.description': 'Fifty stories read—quietly, quickly, and full of secrets!',
@@ -26,7 +26,7 @@ export default {
   'achievement.fav-5.description': 'Five favorite stories saved for extra-special moments!',
 
   'achievement.fav-10.name': 'Story Snuggler',
-  'achievement.fav-10.description': 'Ten stories you just can’t stop hugging in your mind!',
+  'achievement.fav-10.description': 'Ten stories you just can\'t stop hugging in your mind!',
 
   'achievement.fav-25.name': 'Gem Keeper',
   'achievement.fav-25.description': 'Twenty-five glittering story gems tucked away with care!',
@@ -74,7 +74,7 @@ export default {
   'achievement.special-oldest.description': 'You read one of the oldest stories! Traveling through time is possible.',
 
   'achievement.special-newest.name': 'First Discoverer',
-  'achievement.special-newest.description': 'You read the newest story! You're among the first to discover it.',
+  'achievement.special-newest.description': 'You read the newest story! You\'re among the first to discover it.',
 
   'achievement.special-early.name': 'Early Bird',
   'achievement.special-early.description': 'You read between 3am-6am! Did the stories steal your sleep?',
