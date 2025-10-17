@@ -551,7 +551,7 @@ function getLocalizedDayLabel(day) {
 
 @media (max-width: 480px) {
   .streak-card {
-    padding: 24px 12px 36px 12px;
+    padding: 10px 12px;
   }
 
   .streak-card__number {
