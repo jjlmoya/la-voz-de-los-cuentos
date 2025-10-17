@@ -51,7 +51,11 @@ const last7Days = ref([])
 onMounted(() => {
   streakData.value = useStreaks()
   currentStreak.value = streakData.value.currentStreak
-  calculateLast7Days()
+
+  // Calculate days immediately after loading streak data
+  setTimeout(() => {
+    calculateLast7Days()
+  }, 0)
 })
 
 const calculateLast7Days = () => {
