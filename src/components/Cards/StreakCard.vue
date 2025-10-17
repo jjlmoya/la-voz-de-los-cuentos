@@ -237,7 +237,7 @@ function getLocalizedDayLabel(day) {
   position: relative;
   width: 100%;
   padding: 28px 24px 45px 24px;
-  background: linear-gradient(180deg, rgba(255, 158, 0, 0.1) 0%, rgba(255, 158, 0, 0.05) 50%, rgba(255, 235, 59, 0.08) 100%);
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 20px;
   border: 2px solid rgba(255, 158, 0, 0.25);
   box-shadow: 0 4px 20px rgba(255, 158, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.3);
