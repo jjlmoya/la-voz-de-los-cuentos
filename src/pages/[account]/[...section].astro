@@ -44,18 +44,24 @@ const activeSection = sectionMap[section]
 let stories = []
 let pageTitle = ''
 let showTutorial = false
+let sectionType = ''
 
-const { getCompleteStories, getPendingStories, getFavoriteStories } = useStories()
+const { getAllStories } = useStories()
+
+// Pass all stories - filtering will happen in Vue component where localStorage exists
+const allStories = getAllStories()
 
 if (activeSection === 'read') {
-  stories = getCompleteStories()
+  stories = allStories
+  sectionType = 'read'
   pageTitle = t('page.account.resume.read')
-  showTutorial = stories.length === 0
 } else if (activeSection === 'pending') {
-  stories = getPendingStories()
+  stories = allStories
+  sectionType = 'pending'
   pageTitle = t('page.account.resume.pending')
 } else if (activeSection === 'favorites') {
-  stories = getFavoriteStories()
+  stories = allStories
+  sectionType = 'favorites'
   pageTitle = t('page.account.resume.favorites')
 } else if (activeSection === 'achievements') {
   pageTitle = t('page.account.achievements')
@@ -73,13 +79,13 @@ if (activeSection === 'read') {
 
     <!-- Contenido específico de cada sección -->
     {activeSection === 'read' && (
-      <AccountReadSection client:only="vue" stories={stories} showTutorial={showTutorial} />
+      <AccountReadSection client:only="vue" stories={stories} sectionType={sectionType} />
     )}
     {activeSection === 'pending' && (
-      <AccountPendingSection client:only="vue" stories={stories} />
+      <AccountPendingSection client:only="vue" stories={stories} sectionType={sectionType} />
     )}
     {activeSection === 'favorites' && (
-      <AccountFavoritesSection client:only="vue" stories={stories} />
+      <AccountFavoritesSection client:only="vue" stories={stories} sectionType={sectionType} />
     )}
     {activeSection === 'achievements' && (
       <AccountAchievementsSection client:only="vue" />

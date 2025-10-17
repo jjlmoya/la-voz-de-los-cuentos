@@ -16,5 +16,16 @@ export default {
   'achievements.unlocked': 'achievements unlocked',
   'achievements.recent': 'Recent Achievements',
   'achievements.empty': 'No achievements yet',
-  'account.backToHome': 'Back to My Account'
+  'account.backToHome': 'Back to My Account',
+  'account.dashboard.title': 'Your Reading Hub',
+  'account.dashboard.subtitle': 'Explore, learn and enjoy fascinating stories',
+  'account.dashboard.statistics': 'Your Statistics',
+  'account.dashboard.totalTime': 'Total Time',
+  'account.dashboard.progress': 'Progress',
+  'account.dashboard.storiesRead': 'Stories Read',
+  'account.dashboard.recentlyReading': 'Started Stories',
+  'account.dashboard.nextToRead': 'Next to Read',
+  'account.dashboard.suggested': 'Suggested',
+  'account.dashboard.minutes': 'minutes',
+  'account.dashboard.start': 'Start'
 }

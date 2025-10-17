@@ -45,7 +45,7 @@
 </template>
 
 <script setup>
-  import { computed } from 'vue'
+  import { computed, ref, onMounted } from 'vue'
   import { VText } from '@overgaming/vicius'
   import useStories from '../../composables/useStories'
   import useAchievements from '../../composables/useAchievements'
@@ -58,12 +58,61 @@
     }
   })
 
-  const { getCompleteStories, getPendingStories, getFavoriteStories } = useStories()
+  const { getAllStories } = useStories()
   const { unlockedAchievements } = useAchievements()
 
-  const readCount = computed(() => getCompleteStories().length)
-  const pendingCount = computed(() => getPendingStories().length)
-  const favoriteCount = computed(() => getFavoriteStories().length)
+  const readCount = ref(0)
+  const pendingCount = ref(0)
+  const favoriteCount = ref(0)
+
+  onMounted(() => {
+    // Filtrar en cliente donde localStorage está disponible
+    if (typeof localStorage === 'undefined') return
+
+    try {
+      const storiesData = localStorage.getItem('storiesData')
+      const allStories = getAllStories()
+
+      if (!storiesData) {
+        pendingCount.value = allStories.length
+        return
+      }
+
+      const parsedData = JSON.parse(storiesData)
+      if (!Array.isArray(parsedData)) {
+        pendingCount.value = allStories.length
+        return
+      }
+
+      // Filtrar leídos (finished === true)
+      const completedKeys = new Set(
+        parsedData
+          .filter(entry => entry.finished === true)
+          .map(entry => entry.key)
+      )
+      readCount.value = allStories.filter(story => completedKeys.has(story.key)).length
+
+      // Filtrar pendientes (finished !== true + nunca tocados)
+      const pendingKeys = new Set(
+        parsedData
+          .filter(entry => entry.finished !== true)
+          .map(entry => entry.key)
+      )
+      const storiesInStorage = new Set(parsedData.map(entry => entry.key))
+      pendingCount.value = allStories.filter(story =>
+        pendingKeys.has(story.key) || !storiesInStorage.has(story.key)
+      ).length
+
+      // Filtrar favoritos (like === true)
+      const favoriteKeys = parsedData
+        .filter(entry => entry.like === true)
+        .map(entry => entry.key)
+      favoriteCount.value = allStories.filter(story => favoriteKeys.includes(story.key)).length
+    } catch (error) {
+      console.error('Error al calcular resúmenes de cuenta:', error)
+    }
+  })
+
   const achievementCount = computed(() => unlockedAchievements.value.length)
 </script>
 

@@ -47,16 +47,56 @@ export default function useStories() {
     return intersection.size / union.size // Similarity score between 0 and 1
   }
 
-  const getCompleteStories = () =>
-    stories.filter(entry => {
-      const { isComplete } = useStory(entry)
-      return isComplete()
-    })
-  const getPendingStories = () =>
-    stories.filter(entry => {
-      const { isComplete } = useStory(entry)
-      return !isComplete()
-    })
+  const getCompleteStories = () => {
+    if (typeof localStorage === 'undefined') return []
+
+    try {
+      const storiesData = localStorage.getItem('storiesData')
+      if (!storiesData) return []
+
+      const parsedData = JSON.parse(storiesData)
+      if (!Array.isArray(parsedData)) return []
+
+      const completedKeys = new Set(
+        parsedData
+          .filter(entry => entry.finished === true)
+          .map(entry => entry.key)
+      )
+
+      return stories.filter(story => completedKeys.has(story.key))
+    } catch (error) {
+      console.error('Error al obtener cuentos leídos:', error)
+      return []
+    }
+  }
+
+  const getPendingStories = () => {
+    if (typeof localStorage === 'undefined') return stories
+
+    try {
+      const storiesData = localStorage.getItem('storiesData')
+      if (!storiesData) return stories
+
+      const parsedData = JSON.parse(storiesData)
+      if (!Array.isArray(parsedData)) return stories
+
+      // Crear un mapa de keys que NO están completados (finished !== true)
+      const pendingKeys = new Set(
+        parsedData
+          .filter(entry => entry.finished !== true)
+          .map(entry => entry.key)
+      )
+
+      // Retornar stories que están en pendientes + stories que nunca han sido tocados
+      const storiesInStorage = new Set(parsedData.map(entry => entry.key))
+      return stories.filter(story =>
+        pendingKeys.has(story.key) || !storiesInStorage.has(story.key)
+      )
+    } catch (error) {
+      console.error('Error al obtener cuentos pendientes:', error)
+      return stories
+    }
+  }
   const getFavoriteStories = () => {
     if (typeof localStorage === 'undefined') return []
 

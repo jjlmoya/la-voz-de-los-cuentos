@@ -1,7 +1,7 @@
 <template>
   <div class="account-pending-section">
-    <StoriesSection :stories="stories">
-      <template v-if="stories.length === 0" #fallback>
+    <StoriesSection :stories="clientStories">
+      <template v-if="clientStories.length === 0" #fallback>
         <div class="account-pending-empty">
           <img
             src="/assets/account/empty-states/pending-empty.webp"
@@ -17,13 +17,55 @@
 </template>
 
 <script setup>
+  import { ref, onMounted } from 'vue'
   import StoriesSection from '../Sections/StoriesSection.vue'
   import t from '../../translations'
 
-  defineProps({
+  const props = defineProps({
     stories: {
       type: Array,
       default: () => []
+    },
+    sectionType: {
+      type: String,
+      default: 'pending'
+    }
+  })
+
+  const clientStories = ref([])
+
+  onMounted(() => {
+    // Filtrar en cliente donde localStorage está disponible
+    if (typeof localStorage === 'undefined') return
+
+    try {
+      const storiesData = localStorage.getItem('storiesData')
+      if (!storiesData) {
+        // Si no hay datos en localStorage, todos son pendientes
+        clientStories.value = props.stories
+        return
+      }
+
+      const parsedData = JSON.parse(storiesData)
+      if (!Array.isArray(parsedData)) {
+        clientStories.value = props.stories
+        return
+      }
+
+      // Crear mapa de keys que NO están completados (finished !== true)
+      const pendingKeys = new Set(
+        parsedData
+          .filter(entry => entry.finished !== true)
+          .map(entry => entry.key)
+      )
+
+      // Retornar stories en pendientes + stories nunca tocados
+      const storiesInStorage = new Set(parsedData.map(entry => entry.key))
+      clientStories.value = props.stories.filter(story =>
+        pendingKeys.has(story.key) || !storiesInStorage.has(story.key)
+      )
+    } catch (error) {
+      console.error('Error al filtrar cuentos pendientes:', error)
     }
   })
 </script>

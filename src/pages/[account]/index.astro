@@ -1,6 +1,6 @@
 ---
 import NavLayout from '../../layouts/NavLayout.astro'
-import AccountSummary from '../../components/Account/AccountSummary.vue'
+import AccountDashboard from '../../components/Account/AccountDashboard.vue'
 import t from '../../translations'
 import { toStories } from '../../router'
 
@@ -15,6 +15,8 @@ export async function getStaticPaths() {
 
   return paths
 }
+
+const lang = import.meta.env.PUBLIC_LANG
 ---
 
 <NavLayout
@@ -22,5 +24,5 @@ export async function getStaticPaths() {
   description={t('page.account.description')}
   url={toStories()}
 >
-  <AccountSummary client:only="vue" />
+  <AccountDashboard client:only="vue" :lang="lang" />
 </NavLayout>

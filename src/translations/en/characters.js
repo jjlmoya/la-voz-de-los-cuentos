@@ -1,5 +1,5 @@
 export default {
-  'page.characters.h1': 'Magical Characters from Bubo Boo',
+  'page.characters.h1': 'Characters',
   'page.characters.description':
     'Immerse yourself in the Bubo Boo universe and discover unforgettable characters, each brimming with magic, adventure, and uniqueness. From brave heroes who brandish hope to fantastic and enigmatic beings that captivate the imagination, this literary realm invites children and lovers of the extraordinary to explore legendary sagas and spark the flame of their deepest dreams',
 

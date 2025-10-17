@@ -16,5 +16,16 @@ export default {
   'achievements.unlocked': 'logros desbloqueados',
   'achievements.recent': 'Logros Recientes',
   'achievements.empty': 'No hay logros aún',
-  'account.backToHome': 'Volver a Mi Cuenta'
+  'account.backToHome': 'Volver a Mi Cuenta',
+  'account.dashboard.title': 'Tu Centro de Lectura',
+  'account.dashboard.subtitle': 'Explora, aprende y disfruta de historias fascinantes',
+  'account.dashboard.statistics': 'Tus Estadísticas',
+  'account.dashboard.totalTime': 'Tiempo Total',
+  'account.dashboard.progress': 'Progreso',
+  'account.dashboard.storiesRead': 'Historias Leídas',
+  'account.dashboard.recentlyReading': 'Cuentos Empezados',
+  'account.dashboard.nextToRead': 'Próximo Para Leer',
+  'account.dashboard.suggested': 'Sugerido',
+  'account.dashboard.minutes': 'minutos',
+  'account.dashboard.start': 'Comenzar'
 }
