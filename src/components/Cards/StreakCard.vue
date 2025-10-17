@@ -1,156 +1,66 @@
 <template>
-  <!-- Empty State -->
-  <div v-if="streakStatus === 'no_data'" class="streak-card streak-card--empty">
+  <div class="streak-card" :class="{ 'streak-card--active': hasStreakToday, 'streak-card--inactive': !hasStreakToday }">
+    <!-- Background with illustration -->
     <div class="streak-card__background">
       <img
-        src="/assets/streak/backgrounds/start-background.webp"
-        alt="start background"
+        :src="hasStreakToday ? '/assets/streak/backgrounds/flame-background.webp' : '/assets/streak/backgrounds/frozen-background.webp'"
+        :alt="hasStreakToday ? 'flame' : 'frozen'"
         class="streak-card__bg-image"
       />
-    </div>
-    <div class="streak-card__overlay"></div>
-    <div class="streak-card__content">
-      <div class="streak-card__empty-container">
-        <div class="streak-card__character">
-          <img
-            src="/assets/streak/characters/motivation-character.webp"
-            alt="motivation character"
-            class="streak-card__character-img"
-          />
-        </div>
-        <div class="streak-card__text">
-          <h3 class="streak-card__title">{{ t('streak.title') }}</h3>
-          <p class="streak-card__description">{{ t('streak.no_data') }}</p>
-        </div>
+      <!-- Animated overlay particles -->
+      <div v-if="hasStreakToday" class="streak-card__particles">
+        <div v-for="i in 8" :key="i" class="streak-card__particle" :style="{ '--delay': `${i * 0.1}s` }"></div>
       </div>
     </div>
-  </div>
 
-  <!-- Legacy Data State -->
-  <div v-else-if="streakStatus === 'legacy_data'" class="streak-card streak-card--legacy">
-    <div class="streak-card__overlay"></div>
-    <div class="streak-card__content">
-      <div class="streak-card__legacy-message">
-        <p class="streak-card__legacy-title">{{ t('streak.legacy_data', { count: legacyCount }) }}</p>
-        <p class="streak-card__legacy-text">Próximas lecturas comenzarán a registrar timestamps</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Active Streak State -->
-  <div v-else class="streak-card" :class="{ 'streak-card--frozen': !hasStreakToday }">
-    <div class="streak-card__background">
+    <!-- Character -->
+    <div class="streak-card__character">
       <img
-        :src="!hasStreakToday ? '/assets/streak/backgrounds/frozen-background.webp' : '/assets/streak/backgrounds/flame-background.webp'"
-        :alt="!hasStreakToday ? 'frozen background' : 'flame background'"
-        class="streak-card__bg-image"
+        :src="hasStreakToday ? '/assets/streak/characters/flame-character.webp' : '/assets/streak/characters/ice-character.webp'"
+        :alt="hasStreakToday ? 'flame' : 'ice'"
+        class="streak-card__character-img"
+        :class="{ 'streak-card__character-img--celebrate': hasStreakToday, 'streak-card__character-img--sad': !hasStreakToday }"
       />
     </div>
-    <div class="streak-card__overlay"></div>
 
-    <div class="streak-card__content">
-      <!-- Character -->
-      <div class="streak-card__left">
-        <div class="streak-card__character-wrapper">
-          <img
-            :src="!hasStreakToday ? '/assets/streak/characters/ice-character.webp' : '/assets/streak/characters/flame-character.webp'"
-            :alt="!hasStreakToday ? 'ice character' : 'flame character'"
-            class="streak-card__character-img"
-          />
-        </div>
+    <!-- Main number with animation -->
+    <div class="streak-card__counter">
+      <div class="streak-card__icon-container">
+        <img
+          :src="hasStreakToday ? '/assets/streak/icons/flame-icon.webp' : '/assets/streak/icons/frozen-icon.webp'"
+          :alt="hasStreakToday ? 'flame' : 'frozen'"
+          class="streak-card__icon"
+        />
       </div>
-
-      <!-- Stats -->
-      <div class="streak-card__right">
-        <div class="streak-card__stats">
-          <!-- Current Streak -->
-          <div class="streak-card__stat">
-            <div class="streak-card__stat-icon-wrapper">
-              <img
-                :src="!hasStreakToday ? '/assets/streak/icons/frozen-icon.webp' : '/assets/streak/icons/flame-icon.webp'"
-                :alt="!hasStreakToday ? 'frozen icon' : 'flame icon'"
-                class="streak-card__stat-icon"
-              />
-            </div>
-            <div class="streak-card__stat-number">{{ currentStreak }}</div>
-            <div class="streak-card__stat-label">
-              {{ t('streak.current') }}
-              <span v-if="!hasStreakToday" class="streak-card__status-badge streak-card__status-badge--frozen">
-                {{ t('streak.frozen') }}
-              </span>
-            </div>
-          </div>
-
-          <!-- Best Streak -->
-          <div class="streak-card__stat">
-            <div class="streak-card__stat-icon-wrapper">
-              <img
-                src="/assets/streak/icons/trophy-icon.webp"
-                alt="trophy icon"
-                class="streak-card__stat-icon"
-              />
-            </div>
-            <div class="streak-card__stat-number">{{ bestStreak }}</div>
-            <div class="streak-card__stat-label">{{ t('streak.best') }}</div>
-          </div>
-
-          <!-- Days Since -->
-          <div class="streak-card__stat">
-            <div class="streak-card__stat-icon-wrapper">
-              <img
-                src="/assets/streak/icons/calendar-icon.webp"
-                alt="calendar icon"
-                class="streak-card__stat-icon"
-              />
-            </div>
-            <div class="streak-card__stat-number">{{ daysSinceLastRead }}</div>
-            <div class="streak-card__stat-label">{{ t('streak.days_since') }}</div>
-          </div>
-        </div>
+      <div class="streak-card__number" :class="{ 'streak-card__number--pulse': hasStreakToday }">
+        {{ currentStreak }}
       </div>
     </div>
 
-    <!-- Footer -->
-    <div v-if="lastReadDate" class="streak-card__footer">
-      <span class="streak-card__footer-label">{{ t('streak.last_read') }}</span>
-      <span class="streak-card__footer-date">{{ formatDate(lastReadDate) }}</span>
+    <!-- Status indicator -->
+    <div class="streak-card__status" :class="{ 'streak-card__status--active': hasStreakToday }">
+      <div class="streak-card__status-dot"></div>
     </div>
   </div>
 </template>
 
 <script setup>
 import { computed, onMounted, ref } from 'vue'
-import t from '../../translations'
 import { useStreaks } from '../../composables/useStreaks'
 
 const streakData = ref(null)
 const currentStreak = ref(0)
-const bestStreak = ref(0)
-const lastReadDate = ref(null)
-const daysSinceLastRead = ref(0)
 const hasStreakToday = ref(false)
-const legacyCount = ref(0)
 
 const streakStatus = computed(() => {
   if (!streakData.value) return 'loading'
   return streakData.value.getStreakStatus()
 })
 
-const formatDate = (dateStr) => {
-  if (!dateStr) return ''
-  const date = new Date(dateStr)
-  const options = { month: 'short', day: 'numeric', year: 'numeric' }
-  return date.toLocaleDateString(import.meta.env.PUBLIC_LANG === 'en' ? 'en-US' : 'es-ES', options)
-}
-
 onMounted(() => {
   streakData.value = useStreaks()
   currentStreak.value = streakData.value.currentStreak
-  bestStreak.value = streakData.value.bestStreak
-  lastReadDate.value = streakData.value.lastReadDate
-  daysSinceLastRead.value = streakData.value.daysSinceLastRead
   hasStreakToday.value = streakData.value.hasStreakToday
-  legacyCount.value = streakData.value.legacyDataCount
 })
 </script>
 
@@ -159,366 +69,247 @@ onMounted(() => {
   position: relative;
   display: flex;
   flex-direction: column;
-  border-radius: 16px;
+  align-items: center;
+  justify-content: center;
+  height: 380px;
+  border-radius: 20px;
   overflow: hidden;
-  min-height: 280px;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
+.streak-card--active {
+  background: linear-gradient(135deg, #FF9E00 0%, #FF4040 100%);
+}
+
+.streak-card--inactive {
+  background: linear-gradient(135deg, #5B93FF 0%, #4A7FD7 100%);
+}
+
+.streak-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.2);
+}
+
+/* Background with illustration */
 .streak-card__background {
   position: absolute;
   inset: 0;
   z-index: 0;
+  overflow: hidden;
 }
 
 .streak-card__bg-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0.7;
 }
 
-.streak-card__overlay {
+/* Particles animation */
+.streak-card__particles {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.15);
-  z-index: 1;
+  pointer-events: none;
 }
 
-.streak-card__content {
+.streak-card__particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+  animation: particle-float 3s ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+
+@keyframes particle-float {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-80px) translateX(40px) scale(0.3);
+    opacity: 0;
+  }
+}
+
+/* Character */
+.streak-card__character {
   position: relative;
   z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex: 1;
-  padding: 40px;
-  gap: 60px;
-}
-
-/* ===== LEFT SIDE: CHARACTER ===== */
-.streak-card__left {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.streak-card__character-wrapper {
-  width: 220px;
-  height: 220px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 140px;
+  height: 140px;
+  margin-bottom: 20px;
 }
 
 .streak-card__character-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
 }
 
-/* ===== RIGHT SIDE: STATS ===== */
-.streak-card__right {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.streak-card__character-img--celebrate {
+  animation: character-celebrate 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
 }
 
-.streak-card__stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  width: 100%;
-  max-width: 420px;
+.streak-card__character-img--sad {
+  animation: character-sad 1s ease-in-out infinite;
 }
 
-.streak-card__stat {
+@keyframes character-celebrate {
+  0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+  20% { transform: translateY(-12px) rotate(-5deg) scale(1.05); }
+  40% { transform: translateY(0) rotate(5deg) scale(0.98); }
+  60% { transform: translateY(-8px) rotate(-3deg) scale(1.03); }
+  80% { transform: translateY(0) rotate(2deg) scale(1); }
+}
+
+@keyframes character-sad {
+  0%, 100% { transform: translateY(0) scaleX(1); }
+  50% { transform: translateY(4px) scaleX(0.97); }
+}
+
+/* Counter section */
+.streak-card__counter {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
 }
 
-.streak-card__stat-icon-wrapper {
-  width: 60px;
-  height: 60px;
+.streak-card__icon-container {
+  width: 70px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
   backdrop-filter: blur(10px);
+  animation: icon-float 2.5s ease-in-out infinite;
 }
 
-.streak-card__stat-icon {
-  width: 40px;
-  height: 40px;
+@keyframes icon-float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-8px) scale(1.05); }
+}
+
+.streak-card__icon {
+  width: 45px;
+  height: 45px;
   object-fit: contain;
 }
 
-.streak-card__stat-number {
-  font-size: 48px;
+.streak-card__number {
+  font-size: 96px;
   font-weight: 900;
   color: white;
   line-height: 1;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  letter-spacing: -4px;
 }
 
-.streak-card__stat-label {
-  font-size: 12px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.95);
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+.streak-card__number--pulse {
+  animation: number-pulse 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
 }
 
-.streak-card__status-badge {
-  display: block;
-  margin-top: 4px;
-  padding: 2px 8px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
-  font-size: 10px;
-  font-weight: 700;
+@keyframes number-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
 }
 
-.streak-card__status-badge--frozen {
-  background: rgba(91, 147, 255, 0.4);
-}
-
-/* ===== FOOTER ===== */
-.streak-card__footer {
-  position: relative;
+/* Status indicator */
+.streak-card__status {
+  position: absolute;
+  bottom: 20px;
   z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 40px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(0, 0, 0, 0.1);
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.streak-card__footer-label {
-  font-weight: 600;
-}
-
-.streak-card__footer-date {
-  font-weight: 700;
-}
-
-/* ===== EMPTY STATE ===== */
-.streak-card--empty {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-.streak-card__empty-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  text-align: center;
-}
-
-.streak-card__character {
-  width: 180px;
-  height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 16px;
+  height: 16px;
 }
 
-.streak-card__text {
-  color: white;
+.streak-card__status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
-.streak-card__title {
-  font-size: 26px;
-  font-weight: 700;
-  margin: 0;
+.streak-card__status--active .streak-card__status-dot {
+  background: #FFD600;
+  box-shadow: 0 0 12px rgba(255, 214, 0, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.3);
+  animation: status-pulse 1.5s ease-in-out infinite;
 }
 
-.streak-card__description {
-  font-size: 15px;
-  margin: 8px 0 0 0;
-  opacity: 0.95;
-  max-width: 350px;
+@keyframes status-pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 12px rgba(255, 214, 0, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.3); }
+  50% { transform: scale(1.3); box-shadow: 0 0 20px rgba(255, 214, 0, 0.8), inset 0 1px 2px rgba(255, 255, 255, 0.3); }
 }
 
-/* ===== LEGACY STATE ===== */
-.streak-card--legacy {
-  background: linear-gradient(135deg, #FF9E00 0%, #FF6B35 100%);
-}
-
-.streak-card__legacy-message {
-  text-align: center;
-  color: white;
-}
-
-.streak-card__legacy-title {
-  font-size: 15px;
-  font-weight: 700;
-  margin: 0;
-}
-
-.streak-card__legacy-text {
-  font-size: 13px;
-  margin: 6px 0 0 0;
-  opacity: 0.9;
-}
-
-/* ===== FROZEN STATE ===== */
-.streak-card--frozen {
-  background: linear-gradient(135deg, #5B93FF 0%, #4A7FD7 100%);
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 1024px) {
-  .streak-card__content {
-    padding: 32px;
-    gap: 40px;
-  }
-
-  .streak-card__character-wrapper {
-    width: 160px;
-    height: 160px;
-  }
-
-  .streak-card__stats {
-    gap: 24px;
-    max-width: 320px;
-  }
-
-  .streak-card__stat-number {
-    font-size: 40px;
-  }
-
-  .streak-card__stat-icon-wrapper {
-    width: 50px;
-    height: 50px;
-  }
-
-  .streak-card__stat-icon {
-    width: 32px;
-    height: 32px;
-  }
-}
-
+/* Responsive */
 @media (max-width: 768px) {
   .streak-card {
-    min-height: auto;
-  }
-
-  .streak-card__content {
-    flex-direction: column;
-    padding: 28px;
-    gap: 28px;
-  }
-
-  .streak-card__left {
-    order: -1;
-  }
-
-  .streak-card__character-wrapper {
-    width: 140px;
-    height: 140px;
-  }
-
-  .streak-card__stats {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    max-width: 100%;
-  }
-
-  .streak-card__stat-number {
-    font-size: 32px;
-  }
-
-  .streak-card__stat-label {
-    font-size: 11px;
-  }
-
-  .streak-card__character {
-    width: 140px;
-    height: 140px;
-  }
-
-  .streak-card__title {
-    font-size: 22px;
-  }
-
-  .streak-card__description {
-    font-size: 14px;
-  }
-
-  .streak-card__footer {
-    padding: 10px 28px;
-    gap: 16px;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .streak-card__empty-container {
-    gap: 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .streak-card__content {
-    padding: 20px;
-    gap: 20px;
-  }
-
-  .streak-card__character-wrapper {
-    width: 120px;
-    height: 120px;
-  }
-
-  .streak-card__stats {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-  }
-
-  .streak-card__stat {
-    gap: 8px;
-  }
-
-  .streak-card__stat-number {
-    font-size: 28px;
-  }
-
-  .streak-card__stat-icon-wrapper {
-    width: 44px;
-    height: 44px;
-  }
-
-  .streak-card__stat-icon {
-    width: 28px;
-    height: 28px;
-  }
-
-  .streak-card__stat-label {
-    font-size: 10px;
+    height: 320px;
   }
 
   .streak-card__character {
     width: 110px;
     height: 110px;
+    margin-bottom: 16px;
   }
 
-  .streak-card__title {
-    font-size: 20px;
+  .streak-card__number {
+    font-size: 72px;
+    letter-spacing: -3px;
   }
 
-  .streak-card__description {
-    font-size: 13px;
+  .streak-card__icon-container {
+    width: 56px;
+    height: 56px;
   }
 
-  .streak-card__footer {
-    padding: 10px 20px;
+  .streak-card__icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .streak-card {
+    height: 280px;
+  }
+
+  .streak-card__character {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 12px;
+  }
+
+  .streak-card__number {
+    font-size: 56px;
+    letter-spacing: -2px;
+  }
+
+  .streak-card__icon-container {
+    width: 48px;
+    height: 48px;
+  }
+
+  .streak-card__icon {
+    width: 30px;
+    height: 30px;
   }
 }
 </style>
