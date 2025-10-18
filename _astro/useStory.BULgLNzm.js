@@ -1,7 +1,0 @@
-import{a as y}from"./index.WD-CXpjI.js";import{r as u,p as o}from"./runtime-core.esm-bundler.BLIdz6c-.js";const v=y();function T(a){const i=u([]),n=u({}),p=()=>a.story.replace(/\r\n/g,`
-`).replace(/\r/g,`
-`).split(`
-`).filter(e=>e.trim()!=="")[0],m=()=>a.story.replace(/\r\n/g,`
-`).replace(/\r/g,`
-`).split(`
-`).filter(e=>e.trim()!=="").map((e,t)=>`<p key=${t}>${e}</p>`).join(""),g=()=>`${Math.ceil(parseInt(a.time)/60)} min`,f=()=>{if(a.saga)return v.find(e=>e.key===a.saga)?.name},c=()=>{if(!a||!a.key){console.warn("useStory: story or story.key is null/undefined");return}i.value=JSON.parse(localStorage.getItem("storiesData"))||[];const e=o(i)||[];n.value=e.find(t=>t&&t.key===a.key)},l=()=>{try{c();const e=o(n),t=Math.ceil(e.spentTime/parseInt(e.totalTime)*100),s=t>100?100:t;return{...e,current:s}}catch{return{}}},d=()=>l().current>=100,S=e=>{const t=n.value;t.like=e,n.value=t,r()},r=()=>{if(!a||!a.key){console.warn("useStory: cannot save - story or story.key is null/undefined");return}const e=JSON.parse(localStorage.getItem("storiesData"))||[],t=e.findIndex(s=>s&&s.key===a.key);t===-1?e.push(o(n)):e[t]=o(n),localStorage.setItem("storiesData",JSON.stringify(e))},k=()=>{let e=n.value;e.spentTime+=10,e.spentTime>=parseInt(e.totalTime)&&(e.finished=!0,e.completedAt||(e.completedAt=Date.now())),n.value=e,r()};return{firstParagraph:p,getTime:g,html:m,getSaga:f,getCurrentStatus:l,setLikeStatus:S,isComplete:d,reading:()=>{c(),r(),n.value&&!n.value.startedAt&&(n.value.startedAt=Date.now(),r()),setInterval(k,1e4)}}}export{T as u};
