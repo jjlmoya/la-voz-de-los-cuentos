@@ -15,7 +15,7 @@
     
     <div class="story-page__image">
       <VImage
-        v-if="!story.youtube"
+        :class="{ 'story-page__image-hidden': story.youtube }"
         :src="`/assets/stories/${lang}/${story.key}.webp`"
         :alt="`Image ${story.name}`"
       />
@@ -697,6 +697,10 @@
     }
   }
   astro-dev-toolbar {
+    display: none !important;
+  }
+
+  .story-page__image-hidden {
     display: none !important;
   }
 

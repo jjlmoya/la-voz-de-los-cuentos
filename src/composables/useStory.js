@@ -85,6 +85,10 @@ export default function useStory(story) {
   }
 
   const _updateTimeSpent = () => {
+    if (!_story.value || _story.value.spentTime === undefined) {
+      console.warn('useStory: cannot update time - story data not initialized')
+      return
+    }
     let currentStory = _story.value
     currentStory.spentTime += 10
     if (currentStory.spentTime >= parseInt(currentStory.totalTime)) {
@@ -100,12 +104,22 @@ export default function useStory(story) {
 
   const reading = () => {
     _getStoredData()
-    _setStoriesData()
-    // Capture startedAt timestamp on first read
-    if (_story.value && !_story.value.startedAt) {
+
+    // Inicializar si no existe
+    if (!_story.value || Object.keys(_story.value).length === 0) {
+      _story.value = {
+        key: story.key,
+        spentTime: 0,
+        totalTime: parseInt(story.time),
+        finished: false,
+        like: false,
+        startedAt: Date.now()
+      }
+    } else if (!_story.value.startedAt) {
       _story.value.startedAt = Date.now()
-      _setStoriesData()
     }
+
+    _setStoriesData()
     setInterval(_updateTimeSpent, 10000)
   }
 
