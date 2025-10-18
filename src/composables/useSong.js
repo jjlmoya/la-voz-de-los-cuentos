@@ -11,40 +11,55 @@ export default function useSong(song) {
 
   const _getStoredData = () => {
     _songsData.value = JSON.parse(localStorage.getItem('songsData')) || []
-    _song.value = toValue(_songsData).find(entry => entry.key === song.key)
+    _song.value = toValue(_songsData).find(entry => entry.key === song.key) || {
+      key: song.key,
+      listenTime: 0,
+      totalTime: song.duration || 0,
+      finished: false,
+      like: false,
+      startedAt: null,
+      completedAt: null
+    }
   }
 
   const _setSongsData = () => {
-    const songsData = JSON.parse(localStorage.getItem('songsData')) || []
-    const index = toValue(_songsData).findIndex(
+    let songsData = JSON.parse(localStorage.getItem('songsData')) || []
+    // Limpiar elementos sin key
+    songsData = songsData.filter(entry => entry && entry.key)
+
+    const index = songsData.findIndex(
       entry => entry.key === song.key
     )
     if (index === -1) {
-      songsData.push({
-        key: song.key,
-        listenTime: 0,
-        totalTime: song.duration || 0,
-        finished: false,
-        like: false,
-        startedAt: null,
-        completedAt: null
-      })
+      songsData.push(toValue(_song))
+    } else {
+      songsData[index] = toValue(_song)
     }
-    songsData[index] = toValue(_song)
     localStorage.setItem('songsData', JSON.stringify(songsData))
+    // Emit event so StreakCard can recalculate
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new Event('storage:updated'))
+    }
   }
 
   const _updateListenTime = () => {
     let currentSong = _song.value
+
+    // Safety check: ensure currentSong and listenTime are valid
+    if (!currentSong || typeof currentSong.listenTime !== 'number') {
+      console.warn('Invalid song data during listen time update')
+      return
+    }
+
     currentSong.listenTime += 1 // Increment by 1 second
 
-    // Mark as finished if song is fully listened (90% threshold to account for endings)
-    if (currentSong.totalTime && currentSong.listenTime >= currentSong.totalTime * 0.9) {
+    // Mark as finished if progress reaches 90%
+    const status = getCurrentStatus()
+    if (status.current >= 90 && !currentSong.finished) {
       currentSong.finished = true
       // Capture completedAt timestamp when song is finished
-      if (!currentSong.completedAt) {
-        currentSong.completedAt = Date.now()
-      }
+      currentSong.completedAt = Date.now()
+      console.log('Canción marcada como completada:', currentSong.key, 'a las', new Date(currentSong.completedAt).toLocaleTimeString())
     }
 
     _song.value = currentSong
@@ -56,13 +71,13 @@ export default function useSong(song) {
    */
   const onSongStart = () => {
     _getStoredData()
-    _setSongsData()
 
     // Capture startedAt timestamp on first play
     if (_song.value && !_song.value.startedAt) {
       _song.value.startedAt = Date.now()
-      _setSongsData()
     }
+
+    _setSongsData()
 
     // Start tracking listen time every second
     if (!_listeningInterval) {
@@ -88,9 +103,14 @@ export default function useSong(song) {
 
     // Mark as finished and capture completedAt
     let currentSong = _song.value
+    if (!currentSong) {
+      console.warn('No song data available on end')
+      return
+    }
     currentSong.finished = true
     if (!currentSong.completedAt) {
       currentSong.completedAt = Date.now()
+      console.log('Song completed at:', new Date(currentSong.completedAt).toISOString())
     }
     _song.value = currentSong
     _setSongsData()
@@ -98,6 +118,10 @@ export default function useSong(song) {
 
   const setLikeStatus = like => {
     const songCurrent = _song.value
+    if (!songCurrent) {
+      console.warn('No song data available to set like status')
+      return
+    }
     songCurrent.like = like
     _song.value = songCurrent
     _setSongsData()
@@ -123,6 +147,14 @@ export default function useSong(song) {
 
   const isComplete = () => getCurrentStatus().current >= 90
 
+  const setDuration = (duration) => {
+    if (_song.value) {
+      _song.value.totalTime = duration
+      console.log('useSong - Duration set to:', duration)
+      _setSongsData()
+    }
+  }
+
   const cleanup = () => {
     if (_listeningInterval) {
       clearInterval(_listeningInterval)
@@ -135,6 +167,7 @@ export default function useSong(song) {
     onSongPause,
     onSongEnd,
     setLikeStatus,
+    setDuration,
     getCurrentStatus,
     isComplete,
     cleanup

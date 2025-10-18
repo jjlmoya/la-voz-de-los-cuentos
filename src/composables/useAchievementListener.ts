@@ -58,7 +58,12 @@ function checkForNewCompletedStories(): void {
   let hasLikeChange = false
 
   currentStories.forEach(currentStory => {
-    const previousStory = previousStories.find(s => s.key === currentStory.key)
+    // Safety check: ensure story has required properties
+    if (!currentStory || !currentStory.key || typeof currentStory.spentTime !== 'number' || typeof currentStory.totalTime === 'undefined') {
+      return
+    }
+
+    const previousStory = previousStories.find(s => s?.key === currentStory.key)
 
     const isCurrentlyComplete = currentStory.spentTime >= parseFloat(String(currentStory.totalTime))
     const wasPreviouslyComplete = previousStory && previousStory.spentTime >= parseFloat(String(previousStory.totalTime))
@@ -97,7 +102,7 @@ function handleStoryCompleted(story: StoredStory): void {}
 
 function checkReadingAchievements(): void {
   const stories = getStoriesDataFromStorage()
-  const completedCount = stories.filter(s => s.spentTime >= parseFloat(String(s.totalTime))).length
+  const completedCount = stories.filter(s => s && typeof s.spentTime === 'number' && typeof s.totalTime !== 'undefined' && s.spentTime >= parseFloat(String(s.totalTime))).length
 
   const readAchievements = ALL_ACHIEVEMENT_DEFINITIONS.filter(d => d.type === 'read')
 
@@ -114,7 +119,7 @@ function checkReadingAchievements(): void {
 
 function checkFavoriteAchievements(): void {
   const stories = getStoriesDataFromStorage()
-  const favoriteCount = stories.filter(s => s.like === true).length
+  const favoriteCount = stories.filter(s => s && s.like === true).length
 
   const favoriteAchievements = ALL_ACHIEVEMENT_DEFINITIONS.filter(d => d.type === 'favorite')
 
@@ -136,7 +141,7 @@ function checkSagaAchievements(): void {
     }
 
     const completedStories = getStoriesDataFromStorage().filter(
-      s => s.spentTime >= parseFloat(String(s.totalTime))
+      s => s && typeof s.spentTime === 'number' && typeof s.totalTime !== 'undefined' && s.spentTime >= parseFloat(String(s.totalTime))
     )
 
     const sagasCompleted: Record<string, number> = {}
@@ -200,11 +205,12 @@ function checkCharacterAchievements(): void {
     }
 
     const completedStories = getStoriesDataFromStorage().filter(
-      s => s.spentTime >= parseFloat(String(s.totalTime))
+      s => s && typeof s.spentTime === 'number' && typeof s.totalTime !== 'undefined' && s.spentTime >= parseFloat(String(s.totalTime))
     )
 
     const charactersCompleted: Record<string, Set<string>> = {}
     completedStories.forEach(story => {
+      if (!story || !story.key) return
       const storyDef = storiesCache.value.find(s => s.key === story.key)
       if (storyDef?.saga && storyDef.saga.trim() !== '') {
         const sagaCharacters = charactersCache.value.filter(c => c.saga === storyDef.saga)
@@ -297,7 +303,7 @@ function checkCharacterAchievements(): void {
 function checkSpecialAchievements(): void {
   try {
     const stories = getStoriesDataFromStorage()
-    const completedCount = stories.filter(s => s.spentTime >= parseFloat(String(s.totalTime))).length
+    const completedCount = stories.filter(s => s && typeof s.spentTime === 'number' && typeof s.totalTime !== 'undefined' && s.spentTime >= parseFloat(String(s.totalTime))).length
 
     const specialAchievements = ALL_ACHIEVEMENT_DEFINITIONS.filter(d => d.type === 'special')
 

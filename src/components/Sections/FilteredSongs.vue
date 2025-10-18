@@ -110,7 +110,10 @@ const filteredAndSortedSongs = computed(() => {
     if (sortOrder.value === 'date') {
       comparison = parseDate(a.date) - parseDate(b.date)
     } else if (sortOrder.value === 'time') {
-      comparison = parseFloat(a.time.replace(',', '.')) - parseFloat(b.time.replace(',', '.'))
+      // Usa duration (YouTube) si existe, sino usa time del JSON
+      const aTime = a.duration || (a.time ? parseFloat(String(a.time).replace(',', '.')) : 0)
+      const bTime = b.duration || (b.time ? parseFloat(String(b.time).replace(',', '.')) : 0)
+      comparison = aTime - bTime
     } else if (sortOrder.value === 'name') {
       comparison = a.name.localeCompare(b.name)
     }

@@ -135,16 +135,17 @@
 
       const allStories = getAllStories()
 
-      const totalTime = parsedData.reduce((sum, entry) => sum + (entry.spentTime || 0), 0)
+      const totalTime = parsedData.reduce((sum, entry) => sum + (entry && entry.spentTime || 0), 0)
       totalTimeSpent.value = Math.round(totalTime / 3600)
 
-      const completedCount = parsedData.filter(entry => entry.finished === true).length
+      const completedCount = parsedData.filter(entry => entry && entry.finished === true).length
       progressPercentage.value = allStories.length > 0 ? Math.round((completedCount / allStories.length) * 100) : 0
 
       storiesRead.value = completedCount
 
       const storiesWithProgress = parsedData
         .map(entry => {
+          if (!entry || !entry.key) return null
           const fullStory = allStories.find(s => s.key === entry.key)
           if (!fullStory) return null
           const totalTimeNum = parseFloat(String(entry.totalTime).replace(',', '.'))
@@ -164,7 +165,7 @@
       recentStories.value = storiesWithProgress
 
       const unreadStories = allStories.filter(story => {
-        const storyData = parsedData.find(s => s.key === story.key)
+        const storyData = parsedData.find(s => s && s.key === story.key)
         return !storyData || storyData.finished !== true
       })
 

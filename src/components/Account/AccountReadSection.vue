@@ -1,10 +1,8 @@
 <template>
   <div class="account-read-section">
-    <StoriesSection :stories="clientStories">
-      <template #fallback>
-        <TutorialProgress />
-      </template>
-    </StoriesSection>
+    <div v-if="clientStories.length > 0" class="stories-card">
+      <StoriesSection :stories="clientStories" />
+    </div>
     <!-- Tutorial siempre visible abajo (independientemente de si hay cuentos leídos o no) -->
     <div class="tutorial-section">
       <TutorialProgress />
@@ -42,7 +40,7 @@
 
       const completedKeys = new Set(
         parsedData
-          .filter(entry => entry.finished === true)
+          .filter(entry => entry && entry.finished === true)
           .map(entry => entry.key)
       )
 
@@ -58,10 +56,21 @@
     padding: var(--v-unit-8);
   }
 
+  .stories-card {
+    background-color: var(--color-background, #fff);
+    border: 1px solid var(--color-border, #e0e0e0);
+    border-radius: var(--v-radius-8, 8px);
+    padding: var(--v-unit-8);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    margin-bottom: var(--v-unit-8);
+  }
+
   .tutorial-section {
-    margin-top: var(--v-unit-8);
-    padding-top: var(--v-unit-8);
-    border-top: 1px solid var(--color-border, #e0e0e0);
+    background-color: var(--color-background, #fff);
+    border: 1px solid var(--color-border, #e0e0e0);
+    border-radius: var(--v-radius-8, 8px);
+    padding: var(--v-unit-8);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
   }
 
   @media (max-width: 640px) {
@@ -69,9 +78,13 @@
       padding: var(--v-unit-4);
     }
 
+    .stories-card {
+      padding: var(--v-unit-4);
+      margin-bottom: var(--v-unit-4);
+    }
+
     .tutorial-section {
-      margin-top: var(--v-unit-4);
-      padding-top: var(--v-unit-4);
+      padding: var(--v-unit-4);
     }
   }
 </style>

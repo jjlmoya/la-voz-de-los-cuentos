@@ -41,15 +41,34 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, onUnmounted, ref, watch } from 'vue'
 import t from '../../translations'
 
 const currentStreak = ref(0)
 const last7Days = ref([])
 const hasStreakToday = ref(false)
+const updateTrigger = ref(0)
+
+const handleStorageChange = () => {
+  console.log('Storage change detected, recalculating streak...')
+  updateTrigger.value++
+}
+
+watch(updateTrigger, () => {
+  calculateLast7Days()
+})
 
 onMounted(() => {
   calculateLast7Days()
+  // Listen for storage changes from other tabs/windows
+  window.addEventListener('storage', handleStorageChange)
+  // Also listen for custom events when data changes in same tab
+  window.addEventListener('storage:updated', handleStorageChange)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('storage', handleStorageChange)
+  window.removeEventListener('storage:updated', handleStorageChange)
 })
 
 const getCompletedCountForDate = (dateStr) => {
@@ -61,8 +80,10 @@ const getCompletedCountForDate = (dateStr) => {
 
     let count = 0
     allData.forEach(item => {
-      if (item.completedAt && item.finished) {
-        const date = new Date(item.completedAt)
+      if (item && item.finished) {
+        // Si está finished pero no tiene completedAt, asumir que fue completado hoy
+        const completedTime = item.completedAt || Date.now()
+        const date = new Date(completedTime)
         const completedDate = date.getFullYear() + '-' +
                             String(date.getMonth() + 1).padStart(2, '0') + '-' +
                             String(date.getDate()).padStart(2, '0')
@@ -119,8 +140,10 @@ const updateCurrentStreak = () => {
     // Group all completions by date
     const completionsByDate = {}
     allData.forEach(item => {
-      if (item.completedAt && item.finished) {
-        const date = new Date(item.completedAt)
+      if (item && item.finished) {
+        // Si está finished pero no tiene completedAt, asumir que fue completado hoy
+        const completedTime = item.completedAt || Date.now()
+        const date = new Date(completedTime)
         const dateStr = date.getFullYear() + '-' +
                        String(date.getMonth() + 1).padStart(2, '0') + '-' +
                        String(date.getDate()).padStart(2, '0')
@@ -131,31 +154,23 @@ const updateCurrentStreak = () => {
       }
     })
 
-    // Calculate streak from yesterday backwards
-    // The streak represents consecutive days including today (even if not completed yet)
+    // Calculate streak starting from today backwards
     let streak = 0
     const today = new Date()
     let currentDate = new Date(today)
-    currentDate.setDate(currentDate.getDate() - 1) // Start from yesterday
 
-    // Count consecutive days backwards starting from yesterday
+    // Count consecutive days backwards starting from today
     while (true) {
       const dateStr = currentDate.getFullYear() + '-' +
                      String(currentDate.getMonth() + 1).padStart(2, '0') + '-' +
                      String(currentDate.getDate()).padStart(2, '0')
 
-      if (completionsByDate[dateStr]) {
+      if (completionsByDate[dateStr] && completionsByDate[dateStr] > 0) {
         streak++
         currentDate.setDate(currentDate.getDate() - 1)
       } else {
         break
       }
-    }
-
-    // If we have a streak from yesterday backwards, today counts as part of it
-    // So the total streak is: yesterday's streak + today (even if not completed)
-    if (streak > 0) {
-      streak += 1 // Add 1 for today
     }
 
     currentStreak.value = streak

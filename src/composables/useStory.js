@@ -5,14 +5,21 @@ export default function useStory(story) {
   const _storiesData = ref([])
   const _story = ref({})
   const firstParagraph = () =>
-    story.story.split('\n').filter(p => p.trim() !== '')[0]
+    story.story
+      .replace(/\r\n/g, '\n')
+      .replace(/\r/g, '\n')
+      .split('\n')
+      .filter(p => p.trim() !== '')[0]
 
   const html = () =>
     story.story
+      // Normalize line endings: \r\n and \r to \n
+      .replace(/\r\n/g, '\n')
+      .replace(/\r/g, '\n')
       .split('\n')
       .filter(p => p.trim() !== '')
       .map((paragraph, index) => `<p key=${index}>${paragraph}</p>`)
-      .join('<br>')
+      .join('')
 
   const getTime = () => {
     const time = Math.ceil(parseInt(story.time) / 60)
@@ -57,21 +64,14 @@ export default function useStory(story) {
 
   const _setStoriesData = () => {
     const storiesData = JSON.parse(localStorage.getItem('storiesData')) || []
-    const index = toValue(_storiesData).findIndex(
+    const index = storiesData.findIndex(
       entry => entry.key === story.key
     )
     if (index === -1) {
-      storiesData.push({
-        key: story.key,
-        spentTime: 0,
-        totalTime: story.time,
-        finished: false,
-        like: false,
-        startedAt: null,
-        completedAt: null
-      })
+      storiesData.push(toValue(_story))
+    } else {
+      storiesData[index] = toValue(_story)
     }
-    storiesData[index] = toValue(_story)
     localStorage.setItem('storiesData', JSON.stringify(storiesData))
   }
 

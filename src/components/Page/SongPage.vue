@@ -32,9 +32,9 @@
                 'song-page__karaoke-line': true,
                 'song-page__karaoke-line--active': isLineActive(line)
               }"
-            >
-              {{ line.text }}
-            </div>
+              v-html="normalizeLineText(line.text)"
+              suppressHydrationWarning
+            />
           </div>
         </div>
 
@@ -91,7 +91,7 @@
 
         <div v-if="song.lyrics && (!song.syncedLyrics || song.syncedLyrics.length === 0)" class="song-page__lyrics">
           <h2 class="song-page__lyrics-title">{{ t('page.song.lyrics') }}</h2>
-          <div class="song-page__lyrics-content" v-html="lyricsHTML" />
+          <div class="song-page__lyrics-content" v-html="lyricsHTML" suppressHydrationWarning />
         </div>
       </div>
 
@@ -192,13 +192,27 @@ const lyricsHTML = computed(() => {
   if (!props.song.lyrics) return ''
 
   return props.song.lyrics
+    // Normalize line endings: \r\n and \r to \n
+    .replace(/\r\n/g, '\n')
+    .replace(/\r/g, '\n')
+    // Remove existing <br> tags
     .replace(/<br\s*\/?>/gi, '\n')
-    .replace(/\n{3,}/g, '\n\n') 
+    // Collapse multiple newlines to max 2 (for paragraph breaks)
+    .replace(/\n{3,}/g, '\n\n')
+    // Convert remaining newlines to <br> tags
     .replace(/\n/g, '<br>')
 })
 
 const isLineActive = (line) => {
   return currentTime.value >= line.start && currentTime.value < line.end
+}
+
+const normalizeLineText = (text) => {
+  if (!text) return ''
+  return text
+    .replace(/\r\n/g, '\n')
+    .replace(/\r/g, '\n')
+    .replace(/\n/g, '<br>')
 }
 
 watch(currentTime, () => {
@@ -324,6 +338,11 @@ const createPlayer = () => {
       onReady: (event) => {
         window.__ytPlayer = event.target
         startTimeTracking()
+        // Capture video duration from YouTube player
+        const duration = event.target.getDuration()
+        if (songTracker && duration > 0) {
+          songTracker.setDuration(duration)
+        }
       },
       onStateChange: (event) => {
         if (event.data === window.YT.PlayerState.ENDED) {

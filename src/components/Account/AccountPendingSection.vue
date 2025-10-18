@@ -52,11 +52,11 @@
 
       const pendingKeys = new Set(
         parsedData
-          .filter(entry => entry.finished !== true)
+          .filter(entry => entry && entry.finished !== true)
           .map(entry => entry.key)
       )
 
-      const storiesInStorage = new Set(parsedData.map(entry => entry.key))
+      const storiesInStorage = new Set(parsedData.filter(entry => entry).map(entry => entry.key))
       clientStories.value = props.stories.filter(story =>
         pendingKeys.has(story.key) || !storiesInStorage.has(story.key)
       )

@@ -61,6 +61,7 @@
             'line-height': `${fontSize >= 20 ? '1.5' : '1.2'}`
           }"
           v-html="storyHTML"
+          suppressHydrationWarning
         />
       </article>
     </div>

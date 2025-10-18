@@ -27,6 +27,9 @@
         :alt="song.name"
         class="song-card__image"
       />
+      <div v-if="song.duration || song.time" class="song-card__duration-badge">
+        {{ formatDurationBadge(song.duration || song.time) }}
+      </div>
       <div class="song-card__play">
         <svg viewBox="0 0 24 24" fill="white">
           <path d="M8 5v14l11-7z"/>
@@ -37,9 +40,6 @@
     <div class="song-card__info">
       <VText as="h3" variant="subtitle" color="high" class="song-card__title">
         {{ song.name }}
-      </VText>
-      <VText v-if="song.time" variant="caption" color="medium" class="song-card__duration">
-        {{ formatTime(song.time) }}
       </VText>
     </div>
   </div>
@@ -74,7 +74,17 @@ const onClick = () => {
 
 const formatTime = (time) => {
   if (!time) return ''
-  const seconds = parseFloat(time.replace(',', '.'))
+  // Maneja tanto números (duration de YouTube) como strings (time del JSON)
+  const seconds = typeof time === 'number' ? time : parseFloat(String(time).replace(',', '.'))
+  const minutes = Math.floor(seconds / 60)
+  const secs = Math.floor(seconds % 60)
+  return `${minutes}:${secs.toString().padStart(2, '0')}`
+}
+
+const formatDurationBadge = (time) => {
+  if (!time) return ''
+  // Formatea para el badge (ej: "3:45")
+  const seconds = typeof time === 'number' ? time : parseFloat(String(time).replace(',', '.'))
   const minutes = Math.floor(seconds / 60)
   const secs = Math.floor(seconds % 60)
   return `${minutes}:${secs.toString().padStart(2, '0')}`
@@ -359,5 +369,48 @@ onMounted(() => {
   font-weight: 600;
   color: var(--v-color-primary);
   transition: opacity 0.3s ease;
+}
+
+.song-card__duration-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg,
+    var(--v-color-primary),
+    var(--v-color-accent-primary)
+  );
+  color: white;
+  padding: var(--v-unit-2) var(--v-unit-3);
+  border-radius: var(--v-radius-xl);
+  font-weight: 800;
+  font-size: 0.875rem;
+  backdrop-filter: blur(4px);
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.4);
+  z-index: 2;
+  animation: time-badge-bounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+
+  @media (max-width: 768px) {
+    top: 8px;
+    right: 8px;
+    padding: var(--v-unit-1) var(--v-unit-2);
+    font-size: 0.75rem;
+  }
+}
+
+@keyframes time-badge-bounce {
+  0% {
+    transform: scale(0) rotate(-30deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1) rotate(10deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
 }
 </style>

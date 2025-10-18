@@ -85,23 +85,23 @@
 
       const completedKeys = new Set(
         parsedData
-          .filter(entry => entry.finished === true)
+          .filter(entry => entry && entry.finished === true)
           .map(entry => entry.key)
       )
       readCount.value = allStories.filter(story => completedKeys.has(story.key)).length
 
       const pendingKeys = new Set(
         parsedData
-          .filter(entry => entry.finished !== true)
+          .filter(entry => entry && entry.finished !== true)
           .map(entry => entry.key)
       )
-      const storiesInStorage = new Set(parsedData.map(entry => entry.key))
+      const storiesInStorage = new Set(parsedData.filter(entry => entry).map(entry => entry.key))
       pendingCount.value = allStories.filter(story =>
         pendingKeys.has(story.key) || !storiesInStorage.has(story.key)
       ).length
 
       const favoriteKeys = parsedData
-        .filter(entry => entry.like === true)
+        .filter(entry => entry && entry.like === true)
         .map(entry => entry.key)
       favoriteCount.value = allStories.filter(story => favoriteKeys.includes(story.key)).length
     } catch (error) {
