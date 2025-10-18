@@ -16,7 +16,7 @@
 
     <!-- Daily progress dots -->
     <div class="streak-card__days">
-      <div v-for="(day, index) in last7Days" :key="index" class="streak-card__day-wrapper" :style="{ '--delay': `${index * 0.15}s`, '--rotation': `${getRandomRotation(index)}deg`, '--offset': `${getRandomOffset(index)}px` }">
+      <div v-for="(day, index) in last7Days" :key="index" class="streak-card__day-wrapper" :class="{ 'streak-card__day-wrapper--second-row': index >= 4 }" :style="{ '--delay': `${index * 0.15}s`, '--rotation': `${getRandomRotation(index)}deg`, '--offset': `${getRandomOffset(index)}px` }">
         <img
           v-if="day.count > 0"
           :src="getSticker(index)"
@@ -131,11 +131,14 @@ const updateCurrentStreak = () => {
       }
     })
 
-    // Calculate streak from today backwards
+    // Calculate streak from yesterday backwards
+    // The streak represents consecutive days including today (even if not completed yet)
     let streak = 0
     const today = new Date()
     let currentDate = new Date(today)
+    currentDate.setDate(currentDate.getDate() - 1) // Start from yesterday
 
+    // Count consecutive days backwards starting from yesterday
     while (true) {
       const dateStr = currentDate.getFullYear() + '-' +
                      String(currentDate.getMonth() + 1).padStart(2, '0') + '-' +
@@ -147,6 +150,12 @@ const updateCurrentStreak = () => {
       } else {
         break
       }
+    }
+
+    // If we have a streak from yesterday backwards, today counts as part of it
+    // So the total streak is: yesterday's streak + today (even if not completed)
+    if (streak > 0) {
+      streak += 1 // Add 1 for today
     }
 
     currentStreak.value = streak
@@ -227,9 +236,11 @@ function getLocalizedDayLabel(day) {
 .streak-card {
   position: relative;
   width: 100%;
-  padding: 40px 24px 60px 24px;
-  background: linear-gradient(180deg, rgba(255, 158, 0, 0.05) 0%, transparent 100%);
+  padding: 28px 24px 45px 24px;
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 20px;
+  border: 2px solid rgba(255, 158, 0, 0.25);
+  box-shadow: 0 4px 20px rgba(255, 158, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.3);
   text-align: center;
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -281,22 +292,16 @@ function getLocalizedDayLabel(day) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 32px;
+  gap: 6px;
+  margin-bottom: 20px;
 }
 
 .streak-card__character {
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: character-float 2s ease-in-out infinite;
-}
-
-@keyframes character-float {
-  0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-8px) scale(1.08); }
 }
 
 .streak-card__character-img {
@@ -351,18 +356,9 @@ function getLocalizedDayLabel(day) {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: frostGlow 1s ease-in-out infinite;
-  filter: drop-shadow(0 0 12px rgba(91, 147, 255, 0.5)) drop-shadow(0 0 20px rgba(179, 217, 255, 0.3));
+  filter: drop-shadow(0 0 8px rgba(91, 147, 255, 0.3)) drop-shadow(0 0 12px rgba(179, 217, 255, 0.15));
   text-shadow: none;
-}
-
-@keyframes frostGlow {
-  0%, 100% {
-    filter: drop-shadow(0 0 12px rgba(91, 147, 255, 0.5)) drop-shadow(0 0 20px rgba(179, 217, 255, 0.3));
-  }
-  50% {
-    filter: drop-shadow(0 0 20px rgba(91, 147, 255, 0.7)) drop-shadow(0 0 28px rgba(179, 217, 255, 0.5));
-  }
+  opacity: 0.7;
 }
 
 .streak-card__label {
@@ -378,7 +374,7 @@ function getLocalizedDayLabel(day) {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 12px;
-  margin-top: 40px;
+  margin-top: 24px;
   padding: 0 8px;
 }
 
@@ -452,8 +448,8 @@ function getLocalizedDayLabel(day) {
 
 .streak-card__sticker {
   position: absolute;
-  width: 350%;
-  height: 350%;
+  width: 200%;
+  height: 200%;
   object-fit: contain;
   pointer-events: none;
   z-index: 10;
@@ -534,8 +530,8 @@ function getLocalizedDayLabel(day) {
   }
 
   .streak-card__character {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
   }
 
   .streak-card__days {
@@ -555,7 +551,7 @@ function getLocalizedDayLabel(day) {
 
 @media (max-width: 480px) {
   .streak-card {
-    padding: 24px 12px 36px 12px;
+    padding: 10px 12px;
   }
 
   .streak-card__number {
@@ -564,8 +560,8 @@ function getLocalizedDayLabel(day) {
   }
 
   .streak-card__character {
-    width: 90px;
-    height: 90px;
+    width: 110px;
+    height: 110px;
   }
 
   .streak-card__header {
@@ -575,6 +571,18 @@ function getLocalizedDayLabel(day) {
   .streak-card__days {
     gap: 8px;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .streak-card__day-wrapper {
+    width: calc(25% - 6px);
+    margin-bottom: 8px;
+  }
+
+  .streak-card__day-wrapper:nth-child(n+5) {
+    width: calc(33.333% - 6px);
   }
 
   .streak-card__day-dot {

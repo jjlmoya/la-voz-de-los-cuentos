@@ -32,6 +32,7 @@ export function useAchievementNotification() {
           nameKey: event.achievement.nameKey,
           descriptionKey: event.achievement.descriptionKey,
           iconId: event.achievement.iconId,
+          metadata: event.achievement.metadata,
           type: 'unlock'
         })
       }
