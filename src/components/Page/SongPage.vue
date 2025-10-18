@@ -32,6 +32,7 @@
                 'song-page__karaoke-line': true,
                 'song-page__karaoke-line--active': isLineActive(line)
               }"
+              @click="seekToLine(line)"
               v-html="normalizeLineText(line.text)"
               suppressHydrationWarning
             />
@@ -184,6 +185,7 @@ const isAutoplay = ref(true)
 const isShuffle = ref(false)
 const isPlaying = ref(false)
 const currentTime = ref(0)
+const activeLineIndex = ref(-1)
 let player = null
 let timeUpdateInterval = null
 let songTracker = null
@@ -218,20 +220,23 @@ const normalizeLineText = (text) => {
 watch(currentTime, () => {
   if (!props.song.syncedLyrics || props.song.syncedLyrics.length === 0) return
 
-  const activeIndex = props.song.syncedLyrics.findIndex(line => isLineActive(line))
-  if (activeIndex !== -1) {
-    const karaokeContent = document.querySelector('.song-page__karaoke-content')
-    const activeLine = document.querySelectorAll('.song-page__karaoke-line')[activeIndex]
+  const newActiveIndex = props.song.syncedLyrics.findIndex(line => isLineActive(line))
 
-    if (karaokeContent && activeLine) {
-      const containerTop = karaokeContent.scrollTop
-      const containerHeight = karaokeContent.clientHeight
-      const lineTop = activeLine.offsetTop - karaokeContent.offsetTop
-      const lineHeight = activeLine.clientHeight
+  // Solo scrollear si cambió la línea activa
+  if (newActiveIndex !== activeLineIndex.value) {
+    activeLineIndex.value = newActiveIndex
 
-      const scrollTo = lineTop - (containerHeight / 2) + (lineHeight / 2)
+    if (newActiveIndex !== -1) {
+      const karaokeContent = document.querySelector('.song-page__karaoke-content')
+      const activeLine = document.querySelectorAll('.song-page__karaoke-line')[newActiveIndex]
 
-      if (lineTop < containerTop || lineTop + lineHeight > containerTop + containerHeight) {
+      if (karaokeContent && activeLine) {
+        const lineTop = activeLine.offsetTop - karaokeContent.offsetTop
+        const lineHeight = activeLine.clientHeight
+        const containerHeight = karaokeContent.clientHeight
+
+        const scrollTo = lineTop - (containerHeight / 2) + (lineHeight / 2)
+
         karaokeContent.scrollTo({
           top: scrollTo,
           behavior: 'smooth'
@@ -272,6 +277,15 @@ const toggleShuffle = () => {
   isShuffle.value = !isShuffle.value
   if (isShuffle.value) {
     isRepeat.value = false
+  }
+}
+
+const seekToLine = (line) => {
+  if (player && typeof player.seekTo === 'function') {
+    player.seekTo(line.start, true)
+    if (player.getPlayerState && player.getPlayerState() !== window.YT.PlayerState.PLAYING) {
+      player.playVideo()
+    }
   }
 }
 
@@ -548,6 +562,12 @@ onUnmounted(() => {
   text-align: center;
   white-space: pre-line;
   font-weight: 400;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+    transform: scale(1.02);
+  }
 
   @media (max-width: 768px) {
     font-size: 16px;
