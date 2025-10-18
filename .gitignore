@@ -49,3 +49,6 @@ pnpm-debug.log*
 
 # Claude Code files
 .claude/
+
+# Vercel output
+.vercel/
