@@ -125,6 +125,8 @@ const schema = JSON.stringify({
     story={story}
     currentSaga={currentSaga}
     relatedSong={relatedSong}
+    nextStoryKey={stories.find(s => s.order === String(parseInt(story.order) + 1))?.key || stories[0]?.key}
+    prevStoryKey={stories.find(s => s.order === String(parseInt(story.order) - 1))?.key || stories[stories.length - 1]?.key}
     client:load
     url={`${toStory(story.key)}`}
     title={story.name}

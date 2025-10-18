@@ -32,8 +32,13 @@ export default function useStory(story) {
   }
 
   const _getStoredData = () => {
+    if (!story || !story.key) {
+      console.warn('useStory: story or story.key is null/undefined')
+      return
+    }
     _storiesData.value = JSON.parse(localStorage.getItem('storiesData')) || []
-    _story.value = toValue(_storiesData).find(entry => entry.key === story.key)
+    const data = toValue(_storiesData) || []
+    _story.value = data.find(entry => entry && entry.key === story.key)
   }
   const getCurrentStatus = () => {
     try {
@@ -63,9 +68,13 @@ export default function useStory(story) {
   }
 
   const _setStoriesData = () => {
+    if (!story || !story.key) {
+      console.warn('useStory: cannot save - story or story.key is null/undefined')
+      return
+    }
     const storiesData = JSON.parse(localStorage.getItem('storiesData')) || []
     const index = storiesData.findIndex(
-      entry => entry.key === story.key
+      entry => entry && entry.key === story.key
     )
     if (index === -1) {
       storiesData.push(toValue(_story))

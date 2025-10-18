@@ -189,6 +189,14 @@
     title: {
       type: String,
       default: ''
+    },
+    nextStoryKey: {
+      type: String,
+      default: ''
+    },
+    prevStoryKey: {
+      type: String,
+      default: ''
     }
   })
 
@@ -199,9 +207,10 @@
   import Breadcrumbs from '../Navigation/Breadcrumbs.vue'
   import LanguageSwitcher from '../Navigation/LanguageSwitcher.vue'
 
-  import { ref, toValue, onMounted } from 'vue'
+  import { ref, toValue, onMounted, onUnmounted } from 'vue'
   import useStory from '../../composables/useStory'
   import { emitAchievementRecalculate } from '../../achievements/achievementEvents'
+  import { toStory } from '../../router'
 
   const lostFocusOnShare = () => {
     isSocialShare.value = false
@@ -218,16 +227,32 @@
   const isFinished = ref(false)
   const storyHTML = ref('')
   const fontSize = ref(18)
-  const { html, getCurrentStatus, setLikeStatus, reading } = useStory(
-    props.story
-  )
-  storyHTML.value = html()
+
+  // Proteger contra props.story undefined
+  let html, getCurrentStatus, setLikeStatus, reading
+  if (props.story && props.story.key) {
+    const storyComposable = useStory(props.story)
+    html = storyComposable.html
+    getCurrentStatus = storyComposable.getCurrentStatus
+    setLikeStatus = storyComposable.setLikeStatus
+    reading = storyComposable.reading
+    storyHTML.value = html()
+  }
+
   const printPdf = () => {
     window.print()
   }
-  const status = ref(getCurrentStatus())
-  const like = ref(toValue(status.like))
-  const progress = ref(toValue(status.current))
+
+  let status, like, progress
+  if (getCurrentStatus) {
+    status = ref(getCurrentStatus())
+    like = ref(toValue(status.like))
+    progress = ref(toValue(status.current))
+  } else {
+    status = ref({})
+    like = ref(false)
+    progress = ref(0)
+  }
 
   const toggleFontSelector = () => {
     isFontSelector.value = !isFontSelector.value
@@ -238,8 +263,23 @@
   }
   const toggleLike = () => {
     like.value = !like.value
-    setLikeStatus(like.value)
-    emitAchievementRecalculate()
+    if (setLikeStatus) {
+      setLikeStatus(like.value)
+      emitAchievementRecalculate()
+    }
+  }
+
+  const handleKeyboardNavigation = (event) => {
+    // Solo navegar si no hay inputs enfocados
+    if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
+      return
+    }
+
+    if (event.key === 'ArrowRight' && props.nextStoryKey) {
+      window.location.href = toStory(props.nextStoryKey)
+    } else if (event.key === 'ArrowLeft' && props.prevStoryKey) {
+      window.location.href = toStory(props.prevStoryKey)
+    }
   }
 
   onMounted(() => {
@@ -247,12 +287,23 @@
     if (savedFontSize) {
       fontSize.value = parseInt(savedFontSize, 10)
     }
-    reading()
-    setInterval(() => {
-      const _current = getCurrentStatus()
-      progress.value = _current.current
-      isFinished.value = _current.finished
-    }, 2500)
+
+    if (reading && props.story && props.story.key) {
+      reading()
+      setInterval(() => {
+        const _current = getCurrentStatus()
+        progress.value = _current.current
+        isFinished.value = _current.finished
+      }, 2500)
+    }
+
+    // Agregar listener para navegación con flechas
+    window.addEventListener('keydown', handleKeyboardNavigation)
+  })
+
+  onUnmounted(() => {
+    // Limpiar listener cuando se desmonta el componente
+    window.removeEventListener('keydown', handleKeyboardNavigation)
   })
 </script>
 
