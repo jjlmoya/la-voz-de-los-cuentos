@@ -472,17 +472,17 @@ function getLocalizedDayLabel(day) {
   }
   40% {
     opacity: 1;
-    transform: translate(calc(-50% + var(--offset)), calc(-50% - 150px)) rotate(calc(var(--rotation) * 0.4)) scale(1.6);
+    transform: translate(calc(-50% + var(--offset)), calc(-50% - 165px)) rotate(calc(var(--rotation) * 0.4)) scale(1.6);
     filter: drop-shadow(0 8px 16px rgba(255, 107, 107, 0.4));
   }
   75% {
     opacity: 1;
-    transform: translate(calc(-50% + calc(var(--offset) * 0.2)), calc(-50% + 8px)) rotate(calc(var(--rotation) * 0.95)) scale(0.65);
+    transform: translate(calc(-50% + calc(var(--offset) * 0.2)), calc(-50% - 8px)) rotate(calc(var(--rotation) * 0.95)) scale(0.65);
     filter: drop-shadow(0 12px 24px rgba(255, 107, 107, 0.5));
   }
   100% {
     opacity: 1;
-    transform: translate(-50%, -50%) rotate(calc(var(--rotation) * 1)) scale(0.75);
+    transform: translate(-50%, calc(-50% - 5px)) rotate(calc(var(--rotation) * 1)) scale(0.75);
     filter: drop-shadow(0 10px 20px rgba(255, 107, 107, 0.3));
   }
 }
