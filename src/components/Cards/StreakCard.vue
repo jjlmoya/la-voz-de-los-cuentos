@@ -3,11 +3,8 @@
     <!-- Spacing from hero -->
     <div class="streak-card__top-spacing"></div>
 
-    <!-- Main streak number with character -->
+    <!-- Main streak number -->
     <div class="streak-card__header">
-      <div class="streak-card__character">
-        <img :src="getCharacterImage()" :alt="getCharacterName()" class="streak-card__character-img" />
-      </div>
       <div class="streak-card__number" :class="{ 'streak-card__number--pulse-intense': currentStreak % 25 === 0 && currentStreak > 0, 'streak-card__number--frozen': !hasStreakToday && currentStreak > 0, 'streak-card__number--burning': hasStreakToday }">
         {{ currentStreak }}
       </div>
@@ -202,18 +199,6 @@ const starStickers = [
   '/assets/streak/stickers/s8.webp'
 ]
 
-const characterLevels = [
-  { min: 0, max: 0, image: '/assets/streak/characters/tiny-flame.webp', name: 'Tiny Flame' },
-  { min: 1, max: 1, image: '/assets/streak/characters/tiny-flame.webp', name: 'Tiny Flame' },
-  { min: 2, max: 4, image: '/assets/streak/characters/ember-starter.webp', name: 'Ember Starter' },
-  { min: 5, max: 9, image: '/assets/streak/characters/spark-igniter.webp', name: 'Spark Igniter' },
-  { min: 10, max: 19, image: '/assets/streak/characters/flame-warrior.webp', name: 'Flame Warrior' },
-  { min: 20, max: 39, image: '/assets/streak/characters/blazing-master.webp', name: 'Blazing Master' },
-  { min: 40, max: 59, image: '/assets/streak/characters/inferno-champion.webp', name: 'Inferno Champion' },
-  { min: 60, max: 79, image: '/assets/streak/characters/eternal-flame.webp', name: 'Eternal Flame' },
-  { min: 80, max: Infinity, image: '/assets/streak/characters/cosmic-inferno.webp', name: 'Cosmic Inferno' }
-]
-
 function getSticker(dayIndex) {
   const day = last7Days.value[dayIndex]
   if (!day) return starStickers[0]
@@ -223,16 +208,6 @@ function getSticker(dayIndex) {
   const hash = (year * 10000 + month * 100 + dayNum) % 8
 
   return starStickers[hash]
-}
-
-function getCharacterImage() {
-  const level = characterLevels.find(l => currentStreak.value >= l.min && currentStreak.value <= l.max)
-  return level ? level.image : characterLevels[0].image
-}
-
-function getCharacterName() {
-  const level = characterLevels.find(l => currentStreak.value >= l.min && currentStreak.value <= l.max)
-  return level ? level.name : characterLevels[0].name
 }
 
 function getRandomRotation(index) {
@@ -267,6 +242,7 @@ function getLocalizedDayLabel(day) {
 
 <style scoped>
 .streak-card {
+  margin-top: 20px;
   position: relative;
   width: 100%;
   padding: 28px 24px 45px 24px;
@@ -320,28 +296,13 @@ function getLocalizedDayLabel(day) {
   height: 24px;
 }
 
-/* Header with flame and number */
+/* Header with number */
 .streak-card__header {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
   margin-bottom: 20px;
-}
-
-.streak-card__character {
-  width: 180px;
-  height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.streak-card__character-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 4px 12px rgba(255, 158, 0, 0.4));
 }
 
 .streak-card__number {
@@ -562,11 +523,6 @@ function getLocalizedDayLabel(day) {
     letter-spacing: -2px;
   }
 
-  .streak-card__character {
-    width: 140px;
-    height: 140px;
-  }
-
   .streak-card__days {
     gap: 10px;
     padding: 0 4px;
@@ -590,11 +546,6 @@ function getLocalizedDayLabel(day) {
   .streak-card__number {
     font-size: 48px;
     letter-spacing: -1px;
-  }
-
-  .streak-card__character {
-    width: 110px;
-    height: 110px;
   }
 
   .streak-card__header {
