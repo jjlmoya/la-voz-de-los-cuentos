@@ -14,12 +14,6 @@
     <!-- Daily progress dots -->
     <div class="streak-card__days">
       <div v-for="(day, index) in last7Days" :key="index" class="streak-card__day-wrapper" :class="{ 'streak-card__day-wrapper--second-row': index >= 4 }" :style="{ '--delay': `${index * 0.15}s`, '--rotation': `${getRandomRotation(index)}deg`, '--offset': `${getRandomOffset(index)}px` }">
-        <img
-          v-if="day.count > 0"
-          :src="getSticker(index)"
-          :alt="`sticker-${index}`"
-          class="streak-card__sticker streak-card__day-img--drop"
-        />
         <div
           class="streak-card__day-dot"
           :class="{
@@ -29,6 +23,12 @@
             'streak-card__day-dot--today': day.isToday
           }"
         >
+          <img
+            v-if="day.count > 0"
+            :src="getSticker(index)"
+            :alt="`sticker-${index}`"
+            class="streak-card__sticker streak-card__day-img--drop"
+          />
           <span v-if="day.count > 1" class="streak-card__day-number">{{ day.count }}</span>
         </div>
         <div class="streak-card__day-label">{{ getLocalizedDayLabel(day) }}</div>
@@ -380,6 +380,7 @@ function getLocalizedDayLabel(day) {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: visible;
 }
 
 .streak-card__day-container {
@@ -403,7 +404,7 @@ function getLocalizedDayLabel(day) {
   background: rgba(0, 0, 0, 0.04);
   border: 2px solid rgba(0, 0, 0, 0.1);
   overflow: visible;
-  z-index: 5;
+  z-index: 3;
 }
 
 .streak-card__day-dot--empty {
@@ -442,12 +443,12 @@ function getLocalizedDayLabel(day) {
 
 .streak-card__sticker {
   position: absolute;
-  width: 200%;
-  height: 200%;
+  width: 500%;
+  height: 500%;
   object-fit: contain;
   pointer-events: none;
-  z-index: 10;
-  top: 40%;
+  z-index: 8;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -462,35 +463,35 @@ function getLocalizedDayLabel(day) {
 @keyframes dropSticker {
   0% {
     opacity: 0;
-    transform: translate(-50%, calc(-50% - 800px)) rotate(-45deg) scale(4);
+    transform: translate(-50%, calc(-50% - 800px)) rotate(-45deg) scale(6.4);
     filter: drop-shadow(0 0px 0px rgba(255, 107, 107, 0));
   }
   10% {
     opacity: 1;
-    transform: translate(-50%, calc(-50% - 600px)) rotate(-35deg) scale(3.5);
+    transform: translate(-50%, calc(-50% - 600px)) rotate(-35deg) scale(5.6);
     filter: drop-shadow(0 4px 8px rgba(255, 107, 107, 0.2));
   }
   40% {
     opacity: 1;
-    transform: translate(calc(-50% + var(--offset)), calc(-50% - 165px)) rotate(calc(var(--rotation) * 0.4)) scale(1.6);
+    transform: translate(calc(-50% + var(--offset)), calc(-50% - 158px)) rotate(calc(var(--rotation) * 0.4)) scale(2.6);
     filter: drop-shadow(0 8px 16px rgba(255, 107, 107, 0.4));
   }
   75% {
     opacity: 1;
-    transform: translate(calc(-50% + calc(var(--offset) * 0.2)), calc(-50% - 8px)) rotate(calc(var(--rotation) * 0.95)) scale(0.65);
+    transform: translate(calc(-50% + calc(var(--offset) * 0.2)), calc(-50% - 4px)) rotate(calc(var(--rotation) * 0.95)) scale(1.15);
     filter: drop-shadow(0 12px 24px rgba(255, 107, 107, 0.5));
   }
   100% {
     opacity: 1;
-    transform: translate(-50%, calc(-50% - 5px)) rotate(calc(var(--rotation) * 1)) scale(0.75);
+    transform: translate(-50%, calc(-50% + 1px)) rotate(calc(var(--rotation) * 1)) scale(1.25);
     filter: drop-shadow(0 10px 20px rgba(255, 107, 107, 0.3));
   }
 }
 
 .streak-card__day-number {
   position: absolute;
-  bottom: -8px;
-  right: -8px;
+  top: -6px;
+  right: -6px;
   width: 22px;
   height: 22px;
   background: linear-gradient(135deg, #FF9E00, #FF6B6B);
@@ -502,6 +503,7 @@ function getLocalizedDayLabel(day) {
   font-size: 11px;
   font-weight: 800;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 20;
 }
 
 .streak-card__day-label {
@@ -548,12 +550,8 @@ function getLocalizedDayLabel(day) {
     letter-spacing: -1px;
   }
 
-  .streak-card__header {
-    margin-bottom: 24px;
-  }
-
   .streak-card__days {
-    gap: 8px;
+    gap: 0;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
@@ -562,7 +560,6 @@ function getLocalizedDayLabel(day) {
 
   .streak-card__day-wrapper {
     width: calc(25% - 6px);
-    margin-bottom: 8px;
   }
 
   .streak-card__day-wrapper:nth-child(n+5) {
