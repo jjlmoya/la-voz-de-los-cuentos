@@ -162,7 +162,9 @@ const twitterUser = import.meta.env.PUBLIC_TWITTER_USER
         }
 
         function loadScrollAnimations() {
-          import('/src/assets/js/scroll-animations.js').catch(err => {
+          const isDev = window.location.hostname === 'localhost'
+          if (isDev) return
+          import('/assets/js/scroll-animations.js').catch(err => {
             console.error('Failed to load scroll animations:', err);
           });
         }

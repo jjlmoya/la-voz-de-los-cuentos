@@ -154,12 +154,18 @@ const updateCurrentStreak = () => {
       }
     })
 
-    // Calculate streak starting from today backwards
+    // Calculate streak starting from yesterday backwards
+    // Today doesn't break the streak, only previous days matter
     let streak = 0
     const today = new Date()
-    let currentDate = new Date(today)
+    const todayStr = today.getFullYear() + '-' +
+                     String(today.getMonth() + 1).padStart(2, '0') + '-' +
+                     String(today.getDate()).padStart(2, '0')
 
-    // Count consecutive days backwards starting from today
+    let currentDate = new Date(today)
+    currentDate.setDate(currentDate.getDate() - 1) // Start from yesterday
+
+    // Count consecutive days backwards starting from yesterday
     while (true) {
       const dateStr = currentDate.getFullYear() + '-' +
                      String(currentDate.getMonth() + 1).padStart(2, '0') + '-' +
@@ -171,6 +177,11 @@ const updateCurrentStreak = () => {
       } else {
         break
       }
+    }
+
+    // Add 1 only if today has completions
+    if (completionsByDate[todayStr] && completionsByDate[todayStr] > 0) {
+      streak += 1
     }
 
     currentStreak.value = streak
@@ -204,7 +215,14 @@ const characterLevels = [
 ]
 
 function getSticker(dayIndex) {
-  return starStickers[dayIndex % 8]
+  const day = last7Days.value[dayIndex]
+  if (!day) return starStickers[0]
+
+  // Create a simple but consistent hash from the date
+  const [year, month, dayNum] = day.date.split('-').map(Number)
+  const hash = (year * 10000 + month * 100 + dayNum) % 8
+
+  return starStickers[hash]
 }
 
 function getCharacterImage() {
