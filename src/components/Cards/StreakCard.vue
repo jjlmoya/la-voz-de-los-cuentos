@@ -242,10 +242,10 @@ function getLocalizedDayLabel(day) {
 
 <style scoped>
 .streak-card {
-  margin-top: 20px;
+  margin-top: 12px;
   position: relative;
   width: 100%;
-  padding: 28px 24px 45px 24px;
+  padding: 16px 16px 28px 16px;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 20px;
   border: 2px solid rgba(255, 158, 0, 0.25);
@@ -293,7 +293,7 @@ function getLocalizedDayLabel(day) {
 
 /* Top spacing from hero */
 .streak-card__top-spacing {
-  height: 24px;
+  height: 12px;
 }
 
 /* Header with number */
@@ -301,8 +301,8 @@ function getLocalizedDayLabel(day) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
-  margin-bottom: 20px;
+  gap: 3px;
+  margin-bottom: 12px;
 }
 
 .streak-card__number {
