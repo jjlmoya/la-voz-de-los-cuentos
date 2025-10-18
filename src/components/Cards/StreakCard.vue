@@ -368,7 +368,7 @@ function getLocalizedDayLabel(day) {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 12px;
-  margin-top: 24px;
+  margin-top: 12px;
   padding: 0 8px;
 }
 
