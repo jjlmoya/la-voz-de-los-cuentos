@@ -463,27 +463,27 @@ function getLocalizedDayLabel(day) {
 @keyframes dropSticker {
   0% {
     opacity: 0;
-    transform: translate(-50%, calc(-50% - 800px)) rotate(-45deg) scale(6.4);
+    transform: translate(-50%, calc(-50% - 800px)) rotate(-45deg) scale(7);
     filter: drop-shadow(0 0px 0px rgba(255, 107, 107, 0));
   }
   10% {
     opacity: 1;
-    transform: translate(-50%, calc(-50% - 600px)) rotate(-35deg) scale(5.6);
+    transform: translate(-50%, calc(-50% - 600px)) rotate(-35deg) scale(6.2);
     filter: drop-shadow(0 4px 8px rgba(255, 107, 107, 0.2));
   }
   40% {
     opacity: 1;
-    transform: translate(calc(-50% + var(--offset)), calc(-50% - 158px)) rotate(calc(var(--rotation) * 0.4)) scale(2.6);
+    transform: translate(calc(-50% + var(--offset)), calc(-50% - 158px)) rotate(calc(var(--rotation) * 0.4)) scale(2.9);
     filter: drop-shadow(0 8px 16px rgba(255, 107, 107, 0.4));
   }
   75% {
     opacity: 1;
-    transform: translate(calc(-50% + calc(var(--offset) * 0.2)), calc(-50% - 4px)) rotate(calc(var(--rotation) * 0.95)) scale(1.15);
+    transform: translate(calc(-50% + calc(var(--offset) * 0.2)), calc(-50% - 4px)) rotate(calc(var(--rotation) * 0.95)) scale(1.3);
     filter: drop-shadow(0 12px 24px rgba(255, 107, 107, 0.5));
   }
   100% {
     opacity: 1;
-    transform: translate(-50%, calc(-50% + 1px)) rotate(calc(var(--rotation) * 1)) scale(1.25);
+    transform: translate(-50%, calc(-50% + 1px)) rotate(calc(var(--rotation) * 1)) scale(1.4);
     filter: drop-shadow(0 10px 20px rgba(255, 107, 107, 0.3));
   }
 }
