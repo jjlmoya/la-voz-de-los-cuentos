@@ -63,7 +63,9 @@ const twitterUser = import.meta.env.PUBLIC_TWITTER_USER
 
     <!-- SEO -->
     <title>{pageTitle}</title>
-    <link rel="canonical" href={`${siteUrl}${url}`} />
+    <link rel="canonical" href={`${lang === 'es' ? 'https://lavozdeloscuentos.com' : 'https://buboboo.com'}${url}`} />
+    <link rel="alternate" hreflang="es" href={`https://lavozdeloscuentos.com${url}`} />
+    <link rel="alternate" hreflang="en" href={`https://buboboo.com${url}`} />
 
     <meta name="description" content={description} />
     
