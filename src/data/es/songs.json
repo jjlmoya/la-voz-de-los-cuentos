@@ -3123,5 +3123,2479 @@
       }
     ],
     "duration": 276
+  },
+  {
+    "order": "26",
+    "name": "El Eco de los Pasos de Unicornio",
+    "key": "el-eco-de-los-pasos-de-unicornio",
+    "song": "https://youtu.be/Yn_4G--YOWM",
+    "saga": "",
+    "date": "19/03/2024",
+    "lyrics": "En la aldea de montañas de nieves y silencio,\r\nAelar, el pintor, sentía el tiempo inerte, lento.\r\n\nMismo día, mismo lienzo, \r\nhasta el crepúsculo final,\r\n\nPero un sonido nuevo rompió el umbral.\r\nNo era un eco normal, no,\r\n\nEra un llamado, un soplo de magia y fulgor.\r\nCapturó su atención, con curiosidad\r\n\npura,\r\nPara buscar la fuente de esa voz de aventura.\r\n\nAelar llamó a Brillo, su amigo fiel y leal,\r\nUn unicornio blanco, sereno y estelar.\r\n\nJuntos al sendero, dejando la calma atrás,\r\nHacia los baldíos, donde vive la paz.\r\n\nÁrboles susurran secretos antiguos de amor,\r\nEl viento nos guía con antiguo fervor.\r\n\nLa amistad es su mapa, el coraje su luz,\r\nEn pos del misterio, ¡la magia los conduce!\r\n\n¡Siente el eco, el eco, el eco de pasos de luz!\r\nUn himno de esperanza que nos trae virtud.\r\n\nBrillo blanco galopa, su cuerno es el faro,\r\nProtegiendo la magia, un camino claro.\r\n\n¡Siente el eco, el eco, el eco, en tu corazón!\r\nQue nos guía a la cumbre de la reconciliación.\r\n\nNiebla y sombras, un guardián les quiso parar,\r\n\nCon un acertijo que debían descifrar:\r\n\"Caminante del día, mi existencia\r\n\ndesafía la vista.\r\n¿Quién soy?\"\r\n\nAelar dijo: \"La imaginación, artista.\"\r\nEl camino se abrió, la mente pudo avanzar.\r\n\nEn el río al revés, el espíritu del agua,\r\n\"Dame lo que crece sin aumentar su talla.\"\r\n\nAelar le dio su arte, un dibujo sincero y sutil,\r\nLa expansión es interna, libre, juvenil.\r\n\nEn la cima oculta, la voz del Guardián resonó,\r\n\"Es un llamado puro que la oscuridad desafió.\"\r\n\nVieron su valentía y el amor sin final,\r\n\nLes dio el poder para hacerlo inmortal.\r\nLa sombra confrontada, sin espada ni lucha,\r\n\nSolo el amor, la palabra, que al alma escucha.\r\nLa oscuridad disipada por la bondad.\r\n\nEl eco resuena, la lealtad y el amar.\r\nAelar y Brillo, guardianes del lugar.\r\n\nPintando el destino con magia y con color,\r\nEl eco eterno canta al protector.",
+    "syncedLyrics": [
+      {
+        "start": 34.48,
+        "end": 54.08,
+        "text": "En la aldea de montañas de nieves y silencio,\r\nAelar, el pintor, sentía el tiempo inerte, lento.\r"
+      },
+      {
+        "start": 54.08,
+        "end": 61.56,
+        "text": "Mismo día, mismo lienzo, \r\nhasta el crepúsculo final,\r"
+      },
+      {
+        "start": 61.56,
+        "end": 72.88,
+        "text": "Pero un sonido nuevo rompió el umbral.\r\nNo era un eco normal, no,\r"
+      },
+      {
+        "start": 72.88,
+        "end": 83.08,
+        "text": "Era un llamado, un soplo de magia y fulgor.\r\nCapturó su atención, con curiosidad\r"
+      },
+      {
+        "start": 84.84,
+        "end": 93.03999999999999,
+        "text": "pura,\r\nPara buscar la fuente de esa voz de aventura.\r"
+      },
+      {
+        "start": 95.56,
+        "end": 115.16,
+        "text": "Aelar llamó a Brillo, su amigo fiel y leal,\r\nUn unicornio blanco, sereno y estelar.\r"
+      },
+      {
+        "start": 116.44,
+        "end": 127.2,
+        "text": "Juntos al sendero, dejando la calma atrás,\r\nHacia los baldíos, donde vive la paz.\r"
+      },
+      {
+        "start": 127.2,
+        "end": 138.44,
+        "text": "Árboles susurran secretos antiguos de amor,\r\nEl viento nos guía con antiguo fervor.\r"
+      },
+      {
+        "start": 138.44,
+        "end": 161.48,
+        "text": "La amistad es su mapa, el coraje su luz,\r\nEn pos del misterio, ¡la magia los conduce!\r"
+      },
+      {
+        "start": 163.76,
+        "end": 174.44,
+        "text": "¡Siente el eco, el eco, el eco de pasos de luz!\r\nUn himno de esperanza que nos trae virtud.\r"
+      },
+      {
+        "start": 175.07999999999998,
+        "end": 185.84,
+        "text": "Brillo blanco galopa, su cuerno es el faro,\r\nProtegiendo la magia, un camino claro.\r"
+      },
+      {
+        "start": 185.84,
+        "end": 199.32,
+        "text": "¡Siente el eco, el eco, el eco, en tu corazón!\r\nQue nos guía a la cumbre de la reconciliación.\r"
+      },
+      {
+        "start": 201.76,
+        "end": 206.76,
+        "text": "Niebla y sombras, un guardián les quiso parar,\r"
+      },
+      {
+        "start": 206.76,
+        "end": 215.92000000000002,
+        "text": "Con un acertijo que debían descifrar:\r\n\"Caminante del día, mi existencia\r"
+      },
+      {
+        "start": 215.92000000000002,
+        "end": 221.92000000000002,
+        "text": "desafía la vista.\r\n¿Quién soy?\"\r"
+      },
+      {
+        "start": 223.44,
+        "end": 233.32,
+        "text": "Aelar dijo: \"La imaginación, artista.\"\r\nEl camino se abrió, la mente pudo avanzar.\r"
+      },
+      {
+        "start": 233.32,
+        "end": 249.48,
+        "text": "En el río al revés, el espíritu del agua,\r\n\"Dame lo que crece sin aumentar su talla.\"\r"
+      },
+      {
+        "start": 249.48,
+        "end": 265.16,
+        "text": "Aelar le dio su arte, un dibujo sincero y sutil,\r\nLa expansión es interna, libre, juvenil.\r"
+      },
+      {
+        "start": 265.16,
+        "end": 275.8,
+        "text": "En la cima oculta, la voz del Guardián resonó,\r\n\"Es un llamado puro que la oscuridad desafió.\"\r"
+      },
+      {
+        "start": 276.44,
+        "end": 281.08,
+        "text": "Vieron su valentía y el amor sin final,\r"
+      },
+      {
+        "start": 281.08,
+        "end": 292.04,
+        "text": "Les dio el poder para hacerlo inmortal.\r\nLa sombra confrontada, sin espada ni lucha,\r"
+      },
+      {
+        "start": 292.04,
+        "end": 303.72,
+        "text": "Solo el amor, la palabra, que al alma escucha.\r\nLa oscuridad disipada por la bondad.\r"
+      },
+      {
+        "start": 306.08,
+        "end": 316.12,
+        "text": "El eco resuena, la lealtad y el amar.\r\nAelar y Brillo, guardianes del lugar.\r"
+      },
+      {
+        "start": 316.12,
+        "end": 332.68,
+        "text": "Pintando el destino con magia y con color,\r\nEl eco eterno canta al protector."
+      }
+    ],
+    "duration": 348
+  },
+  {
+    "order": "27",
+    "name": "El Reino de Azaralia y el Dado de la Discordia",
+    "key": "el-reino-de-azaralia-y-el-dado-de-la-discordia",
+    "song": "https://youtu.be/JYrrsMMKsGA",
+    "saga": "",
+    "date": "20/03/2024",
+    "lyrics": "En Azaralia, reino digital,\r\nDonde el RNG siempre fue esencial.\r\n\nValientes héroes, hechiceras de luz,\r\nUn mundo de fantasía bajo un cielo azul.\r\n\nTodo era suerte, en equilibrio y paz,\r\nHasta que el mal de afuera vino a desplazar.\r\n\n¡Oh, Dado de la Discordia! Cara negra rodó,\r\nLa mala fortuna al reino llegó.\r\n\nLos cultivos secos, misiones sin final,\r\nUn hechicero celoso causó todo el mal.\r\n\nPero Lía, Gorm y Zephyr van a luchar,\r\n¡El equilibrio de Azaralia vamos a restaurar!\r\n\nLía, la maga, con luz en su voz,\r\nGorm, el guerrero, sin miedo atroz.\r\n\nZephyr, el elfo, con mira genial,\r\nParten en la búsqueda del bien elemental.\r\n\nAtraviesan lava, montañas de hielo y más,\r\nEl Dado maldito no tendrá jamás paz.\r\n\n¡Oh, Dado de la Discordia! Cara negra rodó,\r\nLa mala fortuna al reino llegó.\r\n\nLos cultivos secos, misiones sin final,\r\nUn hechicero celoso causó todo el mal.\r\n\nPero Lía, Gorm y Zephyr van a luchar,\r\n¡El equilibrio de Azaralia vamos a restaurar!\r\n\nBuscando los Cristales de la Fortuna,\r\nCinco gemas mágicas bajo la luna.\r\n\nCada guardián es un reto mortal,\r\nPero la amistad y la fuerza no tienen rival.\r\n\n¡Uno, dos, tres, cuatro, \r\ncinco! El poder ya es real,\r\n\nSubiendo a la cima de la Torre del Destino final.\r\n\nEl Dado girando, calamidad total,\r\nLluvia de fuego, el suelo vibra fatal.\r\n\nCon la luz de los cristales lo van a sellar,\r\nUn prisma de esperanza para volver a jugar.\r\n\nVictoria en Azaralia, la suerte volvió,\r\nBuena y mala, el RNG se equilibró.\r\n\nLa lección aprendida es siempre verdad:\r\nCon valor y amigos, ¡vences la adversidad!",
+    "syncedLyrics": [
+      {
+        "start": 13.4,
+        "end": 18.76,
+        "text": "En Azaralia, reino digital,\r\nDonde el RNG siempre fue esencial.\r"
+      },
+      {
+        "start": 18.76,
+        "end": 24.16,
+        "text": "Valientes héroes, hechiceras de luz,\r\nUn mundo de fantasía bajo un cielo azul.\r"
+      },
+      {
+        "start": 24.16,
+        "end": 29.64,
+        "text": "Todo era suerte, en equilibrio y paz,\r\nHasta que el mal de afuera vino a desplazar.\r"
+      },
+      {
+        "start": 31.08,
+        "end": 42.24,
+        "text": "¡Oh, Dado de la Discordia! Cara negra rodó,\r\nLa mala fortuna al reino llegó.\r"
+      },
+      {
+        "start": 42.24,
+        "end": 53.12,
+        "text": "Los cultivos secos, misiones sin final,\r\nUn hechicero celoso causó todo el mal.\r"
+      },
+      {
+        "start": 53.12,
+        "end": 68.24,
+        "text": "Pero Lía, Gorm y Zephyr van a luchar,\r\n¡El equilibrio de Azaralia vamos a restaurar!\r"
+      },
+      {
+        "start": 68.24,
+        "end": 79.44,
+        "text": "Lía, la maga, con luz en su voz,\r\nGorm, el guerrero, sin miedo atroz.\r"
+      },
+      {
+        "start": 79.44,
+        "end": 84.76,
+        "text": "Zephyr, el elfo, con mira genial,\r\nParten en la búsqueda del bien elemental.\r"
+      },
+      {
+        "start": 84.76,
+        "end": 95.42,
+        "text": "Atraviesan lava, montañas de hielo y más,\r\nEl Dado maldito no tendrá jamás paz.\r"
+      },
+      {
+        "start": 95.42,
+        "end": 108.28,
+        "text": "¡Oh, Dado de la Discordia! Cara negra rodó,\r\nLa mala fortuna al reino llegó.\r"
+      },
+      {
+        "start": 108.28,
+        "end": 119.24000000000001,
+        "text": "Los cultivos secos, misiones sin final,\r\nUn hechicero celoso causó todo el mal.\r"
+      },
+      {
+        "start": 119.24000000000001,
+        "end": 134.32,
+        "text": "Pero Lía, Gorm y Zephyr van a luchar,\r\n¡El equilibrio de Azaralia vamos a restaurar!\r"
+      },
+      {
+        "start": 134.32,
+        "end": 143,
+        "text": "Buscando los Cristales de la Fortuna,\r\nCinco gemas mágicas bajo la luna.\r"
+      },
+      {
+        "start": 145.4,
+        "end": 156.12,
+        "text": "Cada guardián es un reto mortal,\r\nPero la amistad y la fuerza no tienen rival.\r"
+      },
+      {
+        "start": 156.12,
+        "end": 161.32,
+        "text": "¡Uno, dos, tres, cuatro, \r\ncinco! El poder ya es real,\r"
+      },
+      {
+        "start": 161.32,
+        "end": 169.6,
+        "text": "Subiendo a la cima de la Torre del Destino final.\r"
+      },
+      {
+        "start": 172.12,
+        "end": 177.4,
+        "text": "El Dado girando, calamidad total,\r\nLluvia de fuego, el suelo vibra fatal.\r"
+      },
+      {
+        "start": 177.4,
+        "end": 182.88,
+        "text": "Con la luz de los cristales lo van a sellar,\r\nUn prisma de esperanza para volver a jugar.\r"
+      },
+      {
+        "start": 182.88,
+        "end": 193.28,
+        "text": "Victoria en Azaralia, la suerte volvió,\r\nBuena y mala, el RNG se equilibró.\r"
+      },
+      {
+        "start": 193.28,
+        "end": 214.04,
+        "text": "La lección aprendida es siempre verdad:\r\nCon valor y amigos, ¡vences la adversidad!"
+      }
+    ],
+    "duration": 222
+  },
+  {
+    "order": "28",
+    "name": "El Suelo Radiante y las cáscaras de amor",
+    "key": "el-suelo-radiante-y-las-cascaras-de-amor",
+    "song": "https://youtu.be/pQpI87ueckU",
+    "saga": "",
+    "date": "21/03/2024",
+    "lyrics": "En un planeta lejano, de jardines sin fin,\r\nVivía Zilbo, un marciano diminuto y sin igual.\r\n\nSu piel cambiaba de verde, según su sentir,\r\nY una sonrisa, de cuento oscuro, sabía amar.\r\n\nÉl coleccionaba cáscaras, tesoros de nuez,\r\nUn sabor único que solo él podía hallar.\r\n\nVivía en la zona llamada Suelo Radiante,\r\nUn lugar que brillaba, un amor constante.\r\n\n¡Oh, el Suelo Radiante! Se apagó su fulgor,\r\nLa magia del amor se desvaneció,\r\n\nEl corazón marciano se llenó de dolor,\r\nIndiferencia y egoísmo que el brillo robó.\r\n\n¡Zilbo, el pequeño, debe el camino buscar!\r\nY el amor genuino debe restaurar.\r\n\nTomó su bolsa de cáscaras, su fuente de valor,\r\nY emprendió su aventura, cruzando el helado río.\r\n\nEscaló montañas, sintiendo el ardor,\r\nCon un corazón de esperanza, jamás vacío.\r\n\nDescubrió un secreto, no un hechizo fatal,\r\nSino la falta de aprecio en el vasto lugar.\r\n\nPara devolver la luz, un acto había que dar,\r\nUn gesto desinteresado, un amor sin igual.\r\n\nVolvió a su hogar, la verdad iba a mostrar,\r\nEl acto más puro que pudo imaginar:\r\n\nSu tesoro de nueces decidió regalar,\r\n\nA cada habitante, sin pedir ni esperar.\r\nUna chispa se encendió, simple pero genial,\r\n\nEl amor que dormía, empezó a despertar.\r\n¡El groove de Marte vuelve a resonar!\r\n\nDe pronto, un brillo intenso, la luz regresó,\r\n\nY el Suelo Radiante más fuerte relució.\r\nPero el secreto más dulce al fin se reveló:\r\n\nLas cáscaras llevaban \r\nsemillas de luz que él sembró.\r\n\nAl comerlas y al darlas, la magia fluyó,\r\nEl amor que se había ido, por fin regresó.\r\n\nZilbo, el pequeño héroe, con bondad sin igual,\r\nSalvó a su planeta con su gusto personal.\r\n\nAhora al caminar, sientes amor profundo y real,\r\nGracias a Zilbo y su acto elemental.\r\n\nUn pequeño marciano, un espíritu sin par,\r\nHizo del suelo un espejo de amar y cuidar.",
+    "syncedLyrics": [
+      {
+        "start": 17.8,
+        "end": 27.56,
+        "text": "En un planeta lejano, de jardines sin fin,\r\nVivía Zilbo, un marciano diminuto y sin igual.\r"
+      },
+      {
+        "start": 27.56,
+        "end": 37.08,
+        "text": "Su piel cambiaba de verde, según su sentir,\r\nY una sonrisa, de cuento oscuro, sabía amar.\r"
+      },
+      {
+        "start": 37.08,
+        "end": 45.48,
+        "text": "Él coleccionaba cáscaras, tesoros de nuez,\r\nUn sabor único que solo él podía hallar.\r"
+      },
+      {
+        "start": 45.48,
+        "end": 56.72,
+        "text": "Vivía en la zona llamada Suelo Radiante,\r\nUn lugar que brillaba, un amor constante.\r"
+      },
+      {
+        "start": 56.72,
+        "end": 65.68,
+        "text": "¡Oh, el Suelo Radiante! Se apagó su fulgor,\r\nLa magia del amor se desvaneció,\r"
+      },
+      {
+        "start": 65.68,
+        "end": 74.03999999999999,
+        "text": "El corazón marciano se llenó de dolor,\r\nIndiferencia y egoísmo que el brillo robó.\r"
+      },
+      {
+        "start": 74.03999999999999,
+        "end": 89.56,
+        "text": "¡Zilbo, el pequeño, debe el camino buscar!\r\nY el amor genuino debe restaurar.\r"
+      },
+      {
+        "start": 89.56,
+        "end": 99.24000000000001,
+        "text": "Tomó su bolsa de cáscaras, su fuente de valor,\r\nY emprendió su aventura, cruzando el helado río.\r"
+      },
+      {
+        "start": 99.24000000000001,
+        "end": 108.56,
+        "text": "Escaló montañas, sintiendo el ardor,\r\nCon un corazón de esperanza, jamás vacío.\r"
+      },
+      {
+        "start": 108.56,
+        "end": 116.56,
+        "text": "Descubrió un secreto, no un hechizo fatal,\r\nSino la falta de aprecio en el vasto lugar.\r"
+      },
+      {
+        "start": 116.56,
+        "end": 126.32,
+        "text": "Para devolver la luz, un acto había que dar,\r\nUn gesto desinteresado, un amor sin igual.\r"
+      },
+      {
+        "start": 126.32,
+        "end": 134.24,
+        "text": "Volvió a su hogar, la verdad iba a mostrar,\r\nEl acto más puro que pudo imaginar:\r"
+      },
+      {
+        "start": 134.24,
+        "end": 138.88,
+        "text": "Su tesoro de nueces decidió regalar,\r"
+      },
+      {
+        "start": 138.88,
+        "end": 147.24,
+        "text": "A cada habitante, sin pedir ni esperar.\r\nUna chispa se encendió, simple pero genial,\r"
+      },
+      {
+        "start": 147.24,
+        "end": 160.12,
+        "text": "El amor que dormía, empezó a despertar.\r\n¡El groove de Marte vuelve a resonar!\r"
+      },
+      {
+        "start": 173.44,
+        "end": 177.24,
+        "text": "De pronto, un brillo intenso, la luz regresó,\r"
+      },
+      {
+        "start": 177.8,
+        "end": 185.88,
+        "text": "Y el Suelo Radiante más fuerte relució.\r\nPero el secreto más dulce al fin se reveló:\r"
+      },
+      {
+        "start": 185.88,
+        "end": 190.28,
+        "text": "Las cáscaras llevaban \r\nsemillas de luz que él sembró.\r"
+      },
+      {
+        "start": 190.28,
+        "end": 199.4,
+        "text": "Al comerlas y al darlas, la magia fluyó,\r\nEl amor que se había ido, por fin regresó.\r"
+      },
+      {
+        "start": 199.4,
+        "end": 209.4,
+        "text": "Zilbo, el pequeño héroe, con bondad sin igual,\r\nSalvó a su planeta con su gusto personal.\r"
+      },
+      {
+        "start": 209.4,
+        "end": 220.72,
+        "text": "Ahora al caminar, sientes amor profundo y real,\r\nGracias a Zilbo y su acto elemental.\r"
+      },
+      {
+        "start": 220.72,
+        "end": 238.6,
+        "text": "Un pequeño marciano, un espíritu sin par,\r\nHizo del suelo un espejo de amar y cuidar."
+      }
+    ],
+    "duration": 254
+  },
+  {
+    "order": "29",
+    "name": "El Valle de las Luciérnagas Doradas",
+    "key": "el-valle-de-las-luciernagas-doradas",
+    "song": "https://youtu.be/9Lrhi4YVIW8",
+    "saga": "",
+    "date": "22/03/2024",
+    "lyrics": "Bajo la manta estelar, cuando la luna es fulgor,\r\n\nSe esconde un valle ancestral, \r\nguardando un gran resplandor.\r\n\nUn muchacho, Liam, en la aldea quieta,\r\nSintió el llamado, la aventura es su meta.\r\n\nOjos de agua clara, cabello de noche total,\r\nBuscando el misterio en el bosque espectral.\r\n\n¡Oh, Valle de las Luciérnagas Doradas!\r\nDonde las flores caídas son estrellas.\r\n\n¡Oh, magia antigua nunca olvidada!\r\nEl aire brilla en mil destellos.\r\n\nUn sendero oculto, un camino de luz,\r\nGuiando al joven con su gran virtud.\r\n\nLlegó al círculo de piedra, mudo y viejo,\r\nVio el cetro humilde, reflejo del tiempo.\r\n\nAl tocarlo, ¡un torrente de historias!\r\nDe un hechicero, viejas memorias.\r\n\nQue protegió al pueblo, con magia y con fe,\r\nY el cetro de madera era su ley.\r\n\nPero de pronto, el silencio se rompió fatal,\r\nSombras oscuras del bosque, un mal ancestral.\r\n\nBuscando la luz extinguir, la noche sembrar,\r\nLas luciérnagas doradas quisieron apagar.\r\n\nLiam sintió el peso, el destino en su voz:\r\n\"¡Seré el guardián que les dará la luz!\"\r\n\n¡Oh, Valle de las Luciérnagas Doradas!\r\nDonde las flores caídas son estrellas.\r\n\n¡Oh, magia antigua nunca olvidada!\r\nEl aire brilla en mil destellos.\r\n\nCon cetro en mano y un corazón valiente,\r\nLa luz dorada enfrentó a la sombra ardiente.\r\n\nOleada de magia, un manto de oro total,\r\nLa oscuridad huyó ante el poder elemental.\r\n\nEl valle está a salvo, la paz regresó.\r\nLiam, el guardián silencioso, nadie lo supo.\r\n\nY bajo la luna, sigue velando la paz,\r\nPues la valentía siempre brillará, jamás se irá.",
+    "syncedLyrics": [
+      {
+        "start": 18.24,
+        "end": 23.76,
+        "text": "Bajo la manta estelar, cuando la luna es fulgor,\r"
+      },
+      {
+        "start": 23.76,
+        "end": 28.8,
+        "text": "Se esconde un valle ancestral, \r\nguardando un gran resplandor.\r"
+      },
+      {
+        "start": 29.88,
+        "end": 35.96,
+        "text": "Un muchacho, Liam, en la aldea quieta,\r\nSintió el llamado, la aventura es su meta.\r"
+      },
+      {
+        "start": 35.96,
+        "end": 49.12,
+        "text": "Ojos de agua clara, cabello de noche total,\r\nBuscando el misterio en el bosque espectral.\r"
+      },
+      {
+        "start": 51.92,
+        "end": 63.16,
+        "text": "¡Oh, Valle de las Luciérnagas Doradas!\r\nDonde las flores caídas son estrellas.\r"
+      },
+      {
+        "start": 63.16,
+        "end": 73.36,
+        "text": "¡Oh, magia antigua nunca olvidada!\r\nEl aire brilla en mil destellos.\r"
+      },
+      {
+        "start": 74.44,
+        "end": 86.72,
+        "text": "Un sendero oculto, un camino de luz,\r\nGuiando al joven con su gran virtud.\r"
+      },
+      {
+        "start": 89.08,
+        "end": 100.6,
+        "text": "Llegó al círculo de piedra, mudo y viejo,\r\nVio el cetro humilde, reflejo del tiempo.\r"
+      },
+      {
+        "start": 100.6,
+        "end": 106.68,
+        "text": "Al tocarlo, ¡un torrente de historias!\r\nDe un hechicero, viejas memorias.\r"
+      },
+      {
+        "start": 106.68,
+        "end": 122.24,
+        "text": "Que protegió al pueblo, con magia y con fe,\r\nY el cetro de madera era su ley.\r"
+      },
+      {
+        "start": 122.24,
+        "end": 132.32,
+        "text": "Pero de pronto, el silencio se rompió fatal,\r\nSombras oscuras del bosque, un mal ancestral.\r"
+      },
+      {
+        "start": 133.16,
+        "end": 144.32,
+        "text": "Buscando la luz extinguir, la noche sembrar,\r\nLas luciérnagas doradas quisieron apagar.\r"
+      },
+      {
+        "start": 144.32,
+        "end": 159.12,
+        "text": "Liam sintió el peso, el destino en su voz:\r\n\"¡Seré el guardián que les dará la luz!\"\r"
+      },
+      {
+        "start": 161.76,
+        "end": 173.07999999999998,
+        "text": "¡Oh, Valle de las Luciérnagas Doradas!\r\nDonde las flores caídas son estrellas.\r"
+      },
+      {
+        "start": 173.07999999999998,
+        "end": 183.88,
+        "text": "¡Oh, magia antigua nunca olvidada!\r\nEl aire brilla en mil destellos.\r"
+      },
+      {
+        "start": 183.88,
+        "end": 203.8,
+        "text": "Con cetro en mano y un corazón valiente,\r\nLa luz dorada enfrentó a la sombra ardiente.\r"
+      },
+      {
+        "start": 203.8,
+        "end": 214.96,
+        "text": "Oleada de magia, un manto de oro total,\r\nLa oscuridad huyó ante el poder elemental.\r"
+      },
+      {
+        "start": 214.96,
+        "end": 237.4,
+        "text": "El valle está a salvo, la paz regresó.\r\nLiam, el guardián silencioso, nadie lo supo.\r"
+      },
+      {
+        "start": 237.4,
+        "end": 273.56,
+        "text": "Y bajo la luna, sigue velando la paz,\r\nPues la valentía siempre brillará, jamás se irá."
+      }
+    ],
+    "duration": 282
+  },
+  {
+    "order": "30",
+    "name": "El unicornio de cuerno desmontable",
+    "key": "el-unicornio-de-cuerno-desmontable",
+    "song": "https://youtu.be/s72FoT8EHUg",
+    "saga": "",
+    "date": "23/03/2024",
+    "lyrics": "En un valle oculto donde el sol no quería entrar\r\nVivía un unicornio con un cuerno singular\r\n\nNo era de cristal, ni un faro celestial\r\nEra desmontable, un secreto fatal\r\n\nSe despojaba de él al caer la noche sombría\r\nPor miedo a ser juzgado, buscando soledad\r\n\nSus pasos silenciosos, su mirada melancolía\r\nUn corazón puro, en eterna oscuridad\r\n\n¡Oh, el cuerno se fue, y el eco del terror!\r\nEl unicornio grita, despojado de su fulgor\r\n\nLa sombra más oscura su esencia robó\r\nPero el valor del alma la magia encendió\r\n\nBusca entre las tinieblas, un camino de luz\r\nSu fuerza no está fuera, sino en su propia cruz\r\n\nUna criatura fría, un susurro helado y cruel\r\nLe arrebató la esencia, dejó vacío su vergel\r\n\nVulnerable y despojado, sin magia para andar\r\nTuvo que aceptar que debía comenzar a buscar\r\n\nPor senderos de sombras, con nombres olvidados\r\nLa esperanza se extinguía con cada paso dado\r\n\nPero en la noche, el rechazo se rompió\r\nOtras almas perdidas la unión les mostró\r\n\nMarginados y diferentes, formaron su lazo\r\nAprendiendo que en la amistad no hay fracaso\r\n\nAnte un castillo en ruinas, la batalla final\r\nNo por el poder, sino por la verdad esencial\r\n\n¡Oh, el cuerno se fue, y el eco del terror!\r\nEl unicornio grita, despojado de su fulgor\r\n\nLa sombra más oscura su esencia robó\r\nPero el valor del alma la magia encendió\r\n\nBusca entre las tinieblas, un camino de luz\r\nSu fuerza no está fuera, sino en su propia cruz\r\n\nRecuperó su cuerno, pero ya no era igual\r\nPues su corazón valiente fue su escudo principal\r\n\nEl valle de las sombras con la verdad se iluminó\r\nLa verdadera magia es la que se aceptó.",
+    "syncedLyrics": [
+      {
+        "start": 20.2,
+        "end": 29.24,
+        "text": "En un valle oculto donde el sol no quería entrar\r\nVivía un unicornio con un cuerno singular\r"
+      },
+      {
+        "start": 29.24,
+        "end": 37.88,
+        "text": "No era de cristal, ni un faro celestial\r\nEra desmontable, un secreto fatal\r"
+      },
+      {
+        "start": 37.88,
+        "end": 47.4,
+        "text": "Se despojaba de él al caer la noche sombría\r\nPor miedo a ser juzgado, buscando soledad\r"
+      },
+      {
+        "start": 47.4,
+        "end": 57.28,
+        "text": "Sus pasos silenciosos, su mirada melancolía\r\nUn corazón puro, en eterna oscuridad\r"
+      },
+      {
+        "start": 59.44,
+        "end": 68.76,
+        "text": "¡Oh, el cuerno se fue, y el eco del terror!\r\nEl unicornio grita, despojado de su fulgor\r"
+      },
+      {
+        "start": 68.76,
+        "end": 77.84,
+        "text": "La sombra más oscura su esencia robó\r\nPero el valor del alma la magia encendió\r"
+      },
+      {
+        "start": 77.84,
+        "end": 91.76,
+        "text": "Busca entre las tinieblas, un camino de luz\r\nSu fuerza no está fuera, sino en su propia cruz\r"
+      },
+      {
+        "start": 91.76,
+        "end": 100.44,
+        "text": "Una criatura fría, un susurro helado y cruel\r\nLe arrebató la esencia, dejó vacío su vergel\r"
+      },
+      {
+        "start": 100.44,
+        "end": 109.64,
+        "text": "Vulnerable y despojado, sin magia para andar\r\nTuvo que aceptar que debía comenzar a buscar\r"
+      },
+      {
+        "start": 109.64,
+        "end": 128.72,
+        "text": "Por senderos de sombras, con nombres olvidados\r\nLa esperanza se extinguía con cada paso dado\r"
+      },
+      {
+        "start": 128.72,
+        "end": 137.04,
+        "text": "Pero en la noche, el rechazo se rompió\r\nOtras almas perdidas la unión les mostró\r"
+      },
+      {
+        "start": 137.04,
+        "end": 146.76,
+        "text": "Marginados y diferentes, formaron su lazo\r\nAprendiendo que en la amistad no hay fracaso\r"
+      },
+      {
+        "start": 146.76,
+        "end": 158.8,
+        "text": "Ante un castillo en ruinas, la batalla final\r\nNo por el poder, sino por la verdad esencial\r"
+      },
+      {
+        "start": 160.76,
+        "end": 170.28,
+        "text": "¡Oh, el cuerno se fue, y el eco del terror!\r\nEl unicornio grita, despojado de su fulgor\r"
+      },
+      {
+        "start": 170.28,
+        "end": 179.4,
+        "text": "La sombra más oscura su esencia robó\r\nPero el valor del alma la magia encendió\r"
+      },
+      {
+        "start": 179.4,
+        "end": 193.48,
+        "text": "Busca entre las tinieblas, un camino de luz\r\nSu fuerza no está fuera, sino en su propia cruz\r"
+      },
+      {
+        "start": 193.48,
+        "end": 202.16,
+        "text": "Recuperó su cuerno, pero ya no era igual\r\nPues su corazón valiente fue su escudo principal\r"
+      },
+      {
+        "start": 202.16,
+        "end": 212.4,
+        "text": "El valle de las sombras con la verdad se iluminó\r\nLa verdadera magia es la que se aceptó."
+      }
+    ],
+    "duration": 228
+  },
+  {
+    "order": "31",
+    "name": "El secreto del frasco carmesí",
+    "key": "el-secreto-del-frasco-carmesi",
+    "song": "https://youtu.be/bY2bI1YEoaU",
+    "saga": "",
+    "date": "24/03/2024",
+    "lyrics": "En el corazón de un barrio \r\nque siempre está en paz,\r\n\nVivía la niña Zara, sin mirar jamás atrás.\r\nCuriosa y aventurera, con chispa en su mirar,\r\n\nLa casa de los Gómez era su único lugar.\r\nCada rincón, un misterio, cada sombra, una pista,\r\n\nConvertía lo normal en una gran conquista.\r\n\nUn día en el baño, ¡alto, alto! sin pensar,\r\nEncontró un frasco antiguo, de cristal color mar.\r\n\nNo, ¡carmín! Rojo intenso, \r\ncomo un rubí viejo y noble,\r\n\nLo tomó con cuidado, temblando cual roble.\r\n\"¿Qué secreto guarda?\", pensó con gran emoción,\r\n\nMientras perdía el agarre, ¡ay, qué gran error!\r\n\n¡Crash! El frasco carmesí cayó y se quebró,\r\nUna nube de perfume el ambiente llenó.\r\n\n¡Un olor antiguo y fuerte, que no quería marchar!\r\nEl secreto del frasco invadió todo el hogar.\r\n\n¡Ventanas abiertas! ¡Aire puro! ¡Qué fatalidad!\r\nEl aroma persistente trajo la intranquilidad.\r\n\nLa familia Gómez con el pánico total,\r\nNoches sin descanso, ¡el ambiente olía mal!\r\n\nZara se sentía mal, pues la culpa era de ella,\r\nY juró que encontraría, ¡la solución más bella!\r\n\nRecordó a su abuela, con su mágica lección:\r\nUn olor se combate con una nueva creación.\r\n\nLa cocina es un laboratorio, \r\n¡el fregadero es la meta!\r\n\nHierbas y especias, con una gran libreta.\r\nProbó pimienta, clavo, vinagre y mil sabores,\r\n\n¡Pero el frasco carmesí resistía a los errores!\r\n\nDespués de tanto intento, llegó la gran luz,\r\n¡La fórmula perfecta colgaba de su cruz!\r\n\nLavanda, limón fresco y menta del jardín,\r\nUna mezcla que combate el aroma ruin.\r\n\nPoco a poco, el olor antiguo desapareció,\r\n¡La frescura de la casa, por fin, regresó!\r\n\n¡Crash! El frasco carmesí cayó y se quebró,\r\nPero la niña Zara el problema superó.\r\n\nCon lavanda, limón y un toque de menta,\r\nDemostró que un error es una nueva cuenta.\r\n\nY la casa Gómez volvió a respirar en paz,\r\nEl secreto del carmesí es que siempre aprenderás.",
+    "syncedLyrics": [
+      {
+        "start": 6.36,
+        "end": 10.28,
+        "text": "En el corazón de un barrio \r\nque siempre está en paz,\r"
+      },
+      {
+        "start": 10.28,
+        "end": 17.6,
+        "text": "Vivía la niña Zara, sin mirar jamás atrás.\r\nCuriosa y aventurera, con chispa en su mirar,\r"
+      },
+      {
+        "start": 17.6,
+        "end": 25.28,
+        "text": "La casa de los Gómez era su único lugar.\r\nCada rincón, un misterio, cada sombra, una pista,\r"
+      },
+      {
+        "start": 25.28,
+        "end": 29.4,
+        "text": "Convertía lo normal en una gran conquista.\r"
+      },
+      {
+        "start": 31.64,
+        "end": 38.52,
+        "text": "Un día en el baño, ¡alto, alto! sin pensar,\r\nEncontró un frasco antiguo, de cristal color mar.\r"
+      },
+      {
+        "start": 38.52,
+        "end": 42.32,
+        "text": "No, ¡carmín! Rojo intenso, \r\ncomo un rubí viejo y noble,\r"
+      },
+      {
+        "start": 42.32,
+        "end": 50.12,
+        "text": "Lo tomó con cuidado, temblando cual roble.\r\n\"¿Qué secreto guarda?\", pensó con gran emoción,\r"
+      },
+      {
+        "start": 50.12,
+        "end": 55.84,
+        "text": "Mientras perdía el agarre, ¡ay, qué gran error!\r"
+      },
+      {
+        "start": 55.84,
+        "end": 63.16,
+        "text": "¡Crash! El frasco carmesí cayó y se quebró,\r\nUna nube de perfume el ambiente llenó.\r"
+      },
+      {
+        "start": 63.16,
+        "end": 70.76,
+        "text": "¡Un olor antiguo y fuerte, que no quería marchar!\r\nEl secreto del frasco invadió todo el hogar.\r"
+      },
+      {
+        "start": 70.76,
+        "end": 81.56,
+        "text": "¡Ventanas abiertas! ¡Aire puro! ¡Qué fatalidad!\r\nEl aroma persistente trajo la intranquilidad.\r"
+      },
+      {
+        "start": 81.56,
+        "end": 88.72,
+        "text": "La familia Gómez con el pánico total,\r\nNoches sin descanso, ¡el ambiente olía mal!\r"
+      },
+      {
+        "start": 88.72,
+        "end": 96.52000000000001,
+        "text": "Zara se sentía mal, pues la culpa era de ella,\r\nY juró que encontraría, ¡la solución más bella!\r"
+      },
+      {
+        "start": 96.52000000000001,
+        "end": 105.84,
+        "text": "Recordó a su abuela, con su mágica lección:\r\nUn olor se combate con una nueva creación.\r"
+      },
+      {
+        "start": 105.84,
+        "end": 110.2,
+        "text": "La cocina es un laboratorio, \r\n¡el fregadero es la meta!\r"
+      },
+      {
+        "start": 110.2,
+        "end": 117.32,
+        "text": "Hierbas y especias, con una gran libreta.\r\nProbó pimienta, clavo, vinagre y mil sabores,\r"
+      },
+      {
+        "start": 117.32,
+        "end": 123.16,
+        "text": "¡Pero el frasco carmesí resistía a los errores!\r"
+      },
+      {
+        "start": 123.16,
+        "end": 130.68,
+        "text": "Después de tanto intento, llegó la gran luz,\r\n¡La fórmula perfecta colgaba de su cruz!\r"
+      },
+      {
+        "start": 130.68,
+        "end": 138.12,
+        "text": "Lavanda, limón fresco y menta del jardín,\r\nUna mezcla que combate el aroma ruin.\r"
+      },
+      {
+        "start": 138.12,
+        "end": 153.6,
+        "text": "Poco a poco, el olor antiguo desapareció,\r\n¡La frescura de la casa, por fin, regresó!\r"
+      },
+      {
+        "start": 153.6,
+        "end": 160.84,
+        "text": "¡Crash! El frasco carmesí cayó y se quebró,\r\nPero la niña Zara el problema superó.\r"
+      },
+      {
+        "start": 160.84,
+        "end": 166.36,
+        "text": "Con lavanda, limón y un toque de menta,\r\nDemostró que un error es una nueva cuenta.\r"
+      },
+      {
+        "start": 166.36,
+        "end": 181.76,
+        "text": "Y la casa Gómez volvió a respirar en paz,\r\nEl secreto del carmesí es que siempre aprenderás."
+      }
+    ],
+    "duration": 187
+  },
+  {
+    "order": "32",
+    "name": "El tapiz de la tejedora",
+    "key": "el-tapiz-de-la-tejedora",
+    "song": "https://youtu.be/fszu52fOD5M",
+    "saga": "",
+    "date": "25/03/2024",
+    "lyrics": "En un pueblo pequeño, con campos y sol\r\nVivía Amalia, tejedora de corazón.\r\n\nSu casa vibrante, llena de color,\r\nDonde el hilo y la aguja tejían puro amor.\r\n\nNo hacía telas simples, no, era mucho más,\r\nEn cada urdimbre tejía sueños sin par.\r\n\nHistorias, deseos, que un alma pedía,\r\nAmalia la maga, con dulce maestría.\r\n\nOh, el Tapiz de la Tejedora,\r\nUn lienzo que el tiempo devora.\r\n\nMontañas de seda, ríos de cristal,\r\nLa magia del futuro en un marco inmortal.\r\n\nSigue el hilo, sigue el hilo, nunca temas mirar,\r\nQue la esperanza dorada te guiará al pasar.\r\n\nUna tarde, llegó Clara, con ojos de miel,\r\nPidió ver su mañana, más allá del papel.\r\n\n\"Teje, Amalia, un futuro que pueda afrontar,\r\nQue mi camino escondido quiero ya encontrar.\"\r\n\nLa tejedora sonrió, aceptó el desafío,\r\nEscogió los colores de un cielo tardío.\r\n\nHilos que cambiaban, danzando al compás,\r\nEl tapiz cobraba vida, no quería esperar.\r\n\nDe repente, las imágenes cambiaron sin piedad,\r\nUn bosque sombrío, sin luz ni claridad.\r\n\nUna torre solitaria, envuelta en oscuridad,\r\nUn aviso en la tela, una cruda verdad.\r\n\nAmalia se entristece, mas Clara es valiente,\r\n\"¿Cómo enfrento esto?\", pregunta de frente.\r\n\nInspirada por la niña, su espíritu gentil,\r\nAmalia añadió un detalle, un toque sutil.\r\n\nTomó hebras de oro, que brillan sin fin,\r\nTejió un sendero que va desde el jardín,\r\n\nSerpenteando la sombra, llegando hasta el torreón,\r\nSímbolo de la luz que vence al gran temor.\r\n\nDías y noches pasaron, la obra se acabó,\r\nEl mapa del alma, por fin, se mostró.\r\n\n\"Tu futuro es cambiante, como el hilo que ves,\r\n\nMas el hilo dorado síguelo, si quieres.\r\nCoraje y esperanza, tu brújula será.\"\r\n\nClara se fue feliz, sabiendo que vencerá.\r\nY Amalia siguió tejiendo en su casa de luz.",
+    "syncedLyrics": [
+      {
+        "start": 18.72,
+        "end": 24.36,
+        "text": "En un pueblo pequeño, con campos y sol\r\nVivía Amalia, tejedora de corazón.\r"
+      },
+      {
+        "start": 24.36,
+        "end": 29.68,
+        "text": "Su casa vibrante, llena de color,\r\nDonde el hilo y la aguja tejían puro amor.\r"
+      },
+      {
+        "start": 29.68,
+        "end": 35.24,
+        "text": "No hacía telas simples, no, era mucho más,\r\nEn cada urdimbre tejía sueños sin par.\r"
+      },
+      {
+        "start": 35.24,
+        "end": 43.64,
+        "text": "Historias, deseos, que un alma pedía,\r\nAmalia la maga, con dulce maestría.\r"
+      },
+      {
+        "start": 43.64,
+        "end": 49.08,
+        "text": "Oh, el Tapiz de la Tejedora,\r\nUn lienzo que el tiempo devora.\r"
+      },
+      {
+        "start": 49.08,
+        "end": 54.56,
+        "text": "Montañas de seda, ríos de cristal,\r\nLa magia del futuro en un marco inmortal.\r"
+      },
+      {
+        "start": 54.56,
+        "end": 68.32,
+        "text": "Sigue el hilo, sigue el hilo, nunca temas mirar,\r\nQue la esperanza dorada te guiará al pasar.\r"
+      },
+      {
+        "start": 68.32,
+        "end": 73.8,
+        "text": "Una tarde, llegó Clara, con ojos de miel,\r\nPidió ver su mañana, más allá del papel.\r"
+      },
+      {
+        "start": 73.8,
+        "end": 79.16,
+        "text": "\"Teje, Amalia, un futuro que pueda afrontar,\r\nQue mi camino escondido quiero ya encontrar.\"\r"
+      },
+      {
+        "start": 79.16,
+        "end": 84.88,
+        "text": "La tejedora sonrió, aceptó el desafío,\r\nEscogió los colores de un cielo tardío.\r"
+      },
+      {
+        "start": 84.88,
+        "end": 98.03999999999999,
+        "text": "Hilos que cambiaban, danzando al compás,\r\nEl tapiz cobraba vida, no quería esperar.\r"
+      },
+      {
+        "start": 98.03999999999999,
+        "end": 103.68,
+        "text": "De repente, las imágenes cambiaron sin piedad,\r\nUn bosque sombrío, sin luz ni claridad.\r"
+      },
+      {
+        "start": 103.68,
+        "end": 109.4,
+        "text": "Una torre solitaria, envuelta en oscuridad,\r\nUn aviso en la tela, una cruda verdad.\r"
+      },
+      {
+        "start": 109.4,
+        "end": 122.84,
+        "text": "Amalia se entristece, mas Clara es valiente,\r\n\"¿Cómo enfrento esto?\", pregunta de frente.\r"
+      },
+      {
+        "start": 122.84,
+        "end": 128.44,
+        "text": "Inspirada por la niña, su espíritu gentil,\r\nAmalia añadió un detalle, un toque sutil.\r"
+      },
+      {
+        "start": 128.44,
+        "end": 133.76,
+        "text": "Tomó hebras de oro, que brillan sin fin,\r\nTejió un sendero que va desde el jardín,\r"
+      },
+      {
+        "start": 133.76,
+        "end": 139.56,
+        "text": "Serpenteando la sombra, llegando hasta el torreón,\r\nSímbolo de la luz que vence al gran temor.\r"
+      },
+      {
+        "start": 139.56,
+        "end": 150.56,
+        "text": "Días y noches pasaron, la obra se acabó,\r\nEl mapa del alma, por fin, se mostró.\r"
+      },
+      {
+        "start": 154.48,
+        "end": 157.88,
+        "text": "\"Tu futuro es cambiante, como el hilo que ves,\r"
+      },
+      {
+        "start": 157.88,
+        "end": 165.04,
+        "text": "Mas el hilo dorado síguelo, si quieres.\r\nCoraje y esperanza, tu brújula será.\"\r"
+      },
+      {
+        "start": 165.04,
+        "end": 179.28,
+        "text": "Clara se fue feliz, sabiendo que vencerá.\r\nY Amalia siguió tejiendo en su casa de luz."
+      }
+    ],
+    "duration": 186
+  },
+  {
+    "order": "33",
+    "name": "Impacto Atronador",
+    "key": "impacto-atronador",
+    "song": "https://youtu.be/Gr6Vudhmgdc",
+    "saga": "",
+    "date": "26/03/2024",
+    "lyrics": "En Nubelia, reino de cielo y de luz,\r\nDonde las nubes bailan al son de una cruz.\r\n\nUna noche, la luna brillaba sin par,\r\nY un cometa de fuego cruzó el ancho\r\n\nmar\r\n.\r\n\n¡Impacto Atronador! Un color sin igual,\r\nUn regalo del cosmos, magia elemental.\r\n\nLeo, el niño valiente, sintió el despertar,\r\nUna gran aventura iba a comenzar.\r\n\nTomó mapa y brújula, su linterna también,\r\nY a Señor Oso en su mano lo puso, mi bien.\r\n\nCruzó el bosque oscuro, sin miedo a seguir,\r\nBuscando el secreto que iba a descubrir.\r\n\n¡Impacto Atronador! Un color sin igual,\r\nUn regalo del cosmos, magia elemental.\r\n\nLeo, el niño valiente, sintió el despertar,\r\nUna gran aventura iba a comenzar.\r\n\nEn el valle escondido, entre luces de cristal,\r\nEl fragmento brillante le dio un don especial.\r\n\nAhora habla con árboles, y entiende al animal,\r\nArmonía en el reino, el bien y no el mal.\r\n\nRegresó a su hogar, la magia en la voz,\r\nPor siempre protector de todos nosotros.\r\n\nNubelia recuerda, al ver las estrellas,\r\nLa noche en que el cielo trajo maravillas.",
+    "syncedLyrics": [
+      {
+        "start": 9.391,
+        "end": 18.32,
+        "text": "En Nubelia, reino de cielo y de luz,\r\nDonde las nubes bailan al son de una cruz.\r"
+      },
+      {
+        "start": 19.28,
+        "end": 27.24,
+        "text": "Una noche, la luna brillaba sin par,\r\nY un cometa de fuego cruzó el ancho\r"
+      },
+      {
+        "start": 27.24,
+        "end": 32.99,
+        "text": "mar\r\n.\r"
+      },
+      {
+        "start": 32.99,
+        "end": 42.96,
+        "text": "¡Impacto Atronador! Un color sin igual,\r\nUn regalo del cosmos, magia elemental.\r"
+      },
+      {
+        "start": 42.96,
+        "end": 51.68,
+        "text": "Leo, el niño valiente, sintió el despertar,\r\nUna gran aventura iba a comenzar.\r"
+      },
+      {
+        "start": 51.68,
+        "end": 61.233,
+        "text": "Tomó mapa y brújula, su linterna también,\r\nY a Señor Oso en su mano lo puso, mi bien.\r"
+      },
+      {
+        "start": 61.233,
+        "end": 70.03999999999999,
+        "text": "Cruzó el bosque oscuro, sin miedo a seguir,\r\nBuscando el secreto que iba a descubrir.\r"
+      },
+      {
+        "start": 70.03999999999999,
+        "end": 79.48,
+        "text": "¡Impacto Atronador! Un color sin igual,\r\nUn regalo del cosmos, magia elemental.\r"
+      },
+      {
+        "start": 79.48,
+        "end": 98.12,
+        "text": "Leo, el niño valiente, sintió el despertar,\r\nUna gran aventura iba a comenzar.\r"
+      },
+      {
+        "start": 98.12,
+        "end": 107.44,
+        "text": "En el valle escondido, entre luces de cristal,\r\nEl fragmento brillante le dio un don especial.\r"
+      },
+      {
+        "start": 107.44,
+        "end": 116.72,
+        "text": "Ahora habla con árboles, y entiende al animal,\r\nArmonía en el reino, el bien y no el mal.\r"
+      },
+      {
+        "start": 116.72,
+        "end": 125.08,
+        "text": "Regresó a su hogar, la magia en la voz,\r\nPor siempre protector de todos nosotros.\r"
+      },
+      {
+        "start": 125.68,
+        "end": 140.07999999999998,
+        "text": "Nubelia recuerda, al ver las estrellas,\r\nLa noche en que el cielo trajo maravillas."
+      }
+    ],
+    "duration": 146
+  },
+  {
+    "order": "34",
+    "name": "Luz y Sombra en el Jardín de los Silencios",
+    "key": "luz-y-sombra-en-el-jardin-de-los-silencios",
+    "song": "https://youtu.be/wh5FyG0Wb4o",
+    "saga": "",
+    "date": "27/03/2024",
+    "lyrics": "El Jardín del Silencio, la piedra fría, el dolor\r\nSolo susurros antiguos sin ver el sol\r\n\nPequeña Lume, una luciérnaga, chispita fugaz\r\nBrilla solitaria, buscando la paz\r\n\nCansada del crepúsculo, \r\nharta ya de tanta oscuridad\r\n\nBuscando un sentido, buscando su verdad\r\nOyó de la leyenda, una voz en la niebla gris\r\n\nLa Flor de Medianoche, ahí \r\ndonde el temor tiene raíz\r\n\nVoló por el sendero, siguiendo solo una estrella\r\nQuiero la respuesta, la razón de ser de ella\r\n\nEncontró el ojo esmeralda, los pétalos de carbón\r\nTemblando, preguntó: \"¿Cuál es mi misión?\"\r\n\nSoy la luz y la sombra, una llama total\r\nLa oscuridad es el motor, la fuerza vital\r\n\nNo huyas del vacío, abraza el escalofrío\r\nEl poder es el balance, el destino es mío\r\n\nLa máxima explosión cuando chocan dos fuerzas\r\nLa luz no está completa si la sombra no refuerza\r\n\nEste es el renacer, el grito en la quietud\r\nTú eres el jardín, la nueva plenitud!\r\n\nLa Flor le habló en un eco, \r\nprofundo y resonante al fin\r\n\n\"Tu don es la gloria en este mundo sin confín\"\r\n\n\"Pero toda luciérnaga atrae la noche atroz\"\r\n\"Debes mirar la sombra para encontrar tu voz\"\r\n\nSe marchitó cayendo, una semilla de neón\r\nLume tocó la magia, activando la unión\r\n\nSalió su reflejo, la hermana gemela y fiel\r\nLa compañera oscura, revelando la miel\r\n\nSoy la luz y la sombra, una llama total\r\nLa oscuridad es el motor, la fuerza vital\r\n\nNo huyas del vacío, abraza el escalofrío\r\nEl poder es el balance, el destino es mío\r\n\nLa máxima explosión cuando chocan dos fuerzas\r\nLa luz no está completa si la sombra no refuerza\r\n\nEste es el renacer, el grito en la quietud\r\nTú eres el jardín, la nueva plenitud!\r\n\nEl jardín está vibrando, los susurros son canción\r\nLa penumbra se disuelve por la transformación\r\n\nGuardianes unidos, con el propósito grabado\r\nSuperando el silencio, el miedo superado\r\n\nUn santuario florece, donde lo opuesto es real\r\nUna historia del futuro, brillante y sin igual\r\n\nLa luz y la sombra bailan, \r\nritmo de la vida astral!\r\n\nSoy la luz y la sombra, una llama total\r\nLa oscuridad es el motor, la fuerza vital\r\n\nNo huyas del vacío, abraza el escalofrío\r\nEl poder es el balance, el destino es mío\r\n\nLa máxima explosión cuando chocan dos fuerzas\r\nLa luz no está completa si la sombra no refuerza\r\n\nEste es el renacer, el grito en la quietud\r\nTú eres el jardín, la nueva plenitud!\r\n\nJugando por siempre, un faro en la noche cruel\r\nEn el balance vivimos, bajo un solo cuartel\r\n\nLa esencia de la vida, que se alza sin parar\r\nLume y su hermana, listas para amar.",
+    "syncedLyrics": [
+      {
+        "start": 14.72,
+        "end": 24.08,
+        "text": "El Jardín del Silencio, la piedra fría, el dolor\r\nSolo susurros antiguos sin ver el sol\r"
+      },
+      {
+        "start": 24.88,
+        "end": 34.16,
+        "text": "Pequeña Lume, una luciérnaga, chispita fugaz\r\nBrilla solitaria, buscando la paz\r"
+      },
+      {
+        "start": 34.16,
+        "end": 39.2,
+        "text": "Cansada del crepúsculo, \r\nharta ya de tanta oscuridad\r"
+      },
+      {
+        "start": 39.2,
+        "end": 48.36,
+        "text": "Buscando un sentido, buscando su verdad\r\nOyó de la leyenda, una voz en la niebla gris\r"
+      },
+      {
+        "start": 48.36,
+        "end": 53.12,
+        "text": "La Flor de Medianoche, ahí \r\ndonde el temor tiene raíz\r"
+      },
+      {
+        "start": 53.64,
+        "end": 62.88,
+        "text": "Voló por el sendero, siguiendo solo una estrella\r\nQuiero la respuesta, la razón de ser de ella\r"
+      },
+      {
+        "start": 62.88,
+        "end": 73.68,
+        "text": "Encontró el ojo esmeralda, los pétalos de carbón\r\nTemblando, preguntó: \"¿Cuál es mi misión?\"\r"
+      },
+      {
+        "start": 73.68,
+        "end": 80.56,
+        "text": "Soy la luz y la sombra, una llama total\r\nLa oscuridad es el motor, la fuerza vital\r"
+      },
+      {
+        "start": 80.56,
+        "end": 86.28,
+        "text": "No huyas del vacío, abraza el escalofrío\r\nEl poder es el balance, el destino es mío\r"
+      },
+      {
+        "start": 86.28,
+        "end": 93.28,
+        "text": "La máxima explosión cuando chocan dos fuerzas\r\nLa luz no está completa si la sombra no refuerza\r"
+      },
+      {
+        "start": 93.28,
+        "end": 99.75999999999999,
+        "text": "Este es el renacer, el grito en la quietud\r\nTú eres el jardín, la nueva plenitud!\r"
+      },
+      {
+        "start": 99.75999999999999,
+        "end": 104.32,
+        "text": "La Flor le habló en un eco, \r\nprofundo y resonante al fin\r"
+      },
+      {
+        "start": 104.32,
+        "end": 109.64,
+        "text": "\"Tu don es la gloria en este mundo sin confín\"\r"
+      },
+      {
+        "start": 109.64,
+        "end": 119.28,
+        "text": "\"Pero toda luciérnaga atrae la noche atroz\"\r\n\"Debes mirar la sombra para encontrar tu voz\"\r"
+      },
+      {
+        "start": 119.28,
+        "end": 128.8,
+        "text": "Se marchitó cayendo, una semilla de neón\r\nLume tocó la magia, activando la unión\r"
+      },
+      {
+        "start": 128.8,
+        "end": 138.2,
+        "text": "Salió su reflejo, la hermana gemela y fiel\r\nLa compañera oscura, revelando la miel\r"
+      },
+      {
+        "start": 139.32,
+        "end": 146.24,
+        "text": "Soy la luz y la sombra, una llama total\r\nLa oscuridad es el motor, la fuerza vital\r"
+      },
+      {
+        "start": 146.24,
+        "end": 151.96,
+        "text": "No huyas del vacío, abraza el escalofrío\r\nEl poder es el balance, el destino es mío\r"
+      },
+      {
+        "start": 151.96,
+        "end": 158.96,
+        "text": "La máxima explosión cuando chocan dos fuerzas\r\nLa luz no está completa si la sombra no refuerza\r"
+      },
+      {
+        "start": 158.96,
+        "end": 164.56,
+        "text": "Este es el renacer, el grito en la quietud\r\nTú eres el jardín, la nueva plenitud!\r"
+      },
+      {
+        "start": 165.32,
+        "end": 175.76,
+        "text": "El jardín está vibrando, los susurros son canción\r\nLa penumbra se disuelve por la transformación\r"
+      },
+      {
+        "start": 175.76,
+        "end": 186.36,
+        "text": "Guardianes unidos, con el propósito grabado\r\nSuperando el silencio, el miedo superado\r"
+      },
+      {
+        "start": 186.36,
+        "end": 196.4,
+        "text": "Un santuario florece, donde lo opuesto es real\r\nUna historia del futuro, brillante y sin igual\r"
+      },
+      {
+        "start": 196.4,
+        "end": 201.92000000000002,
+        "text": "La luz y la sombra bailan, \r\nritmo de la vida astral!\r"
+      },
+      {
+        "start": 201.92000000000002,
+        "end": 208.46,
+        "text": "Soy la luz y la sombra, una llama total\r\nLa oscuridad es el motor, la fuerza vital\r"
+      },
+      {
+        "start": 208.46,
+        "end": 214.52,
+        "text": "No huyas del vacío, abraza el escalofrío\r\nEl poder es el balance, el destino es mío\r"
+      },
+      {
+        "start": 214.52,
+        "end": 221.56,
+        "text": "La máxima explosión cuando chocan dos fuerzas\r\nLa luz no está completa si la sombra no refuerza\r"
+      },
+      {
+        "start": 221.56,
+        "end": 227.92000000000002,
+        "text": "Este es el renacer, el grito en la quietud\r\nTú eres el jardín, la nueva plenitud!\r"
+      },
+      {
+        "start": 227.92000000000002,
+        "end": 237.28,
+        "text": "Jugando por siempre, un faro en la noche cruel\r\nEn el balance vivimos, bajo un solo cuartel\r"
+      },
+      {
+        "start": 237.28,
+        "end": 254.2,
+        "text": "La esencia de la vida, que se alza sin parar\r\nLume y su hermana, listas para amar."
+      }
+    ],
+    "duration": 277
+  },
+  {
+    "order": "35",
+    "name": "Llamarina: La Gota de Agua Valiente",
+    "key": "llamarina-la-gota-de-agua-valiente",
+    "song": "https://youtu.be/FKp36u0u0R4",
+    "saga": "",
+    "date": "28/03/2024",
+    "lyrics": "En la cima alta, donde choca el cielo\r\nUna gota sola, sin consuelo\r\n\nLlamarina esconde un corazón doble\r\nAgua y lava, un poder muy noble\r\n\nNo es neblina, no es lluvia común\r\n¡Una flama interna, rompe el tabú!\r\n\nLa montaña agrieta, la tierra suspira\r\nEl sol sin piedad, la vida la mira\r\n\nObserva el mundo, seco y rendido\r\nPor el miedo al rechazo, se ha sentido herido\r\n\nMas un fuego interno le dicta la ley\r\n¡Tú eres la respuesta, tú eres el rey!\r\n\nCruza la frontera, rompe la prisión\r\n¡Salva a la tierra con tu gran misión!\r\n\n¡LLAMARINA! ¡MANDA EL RITMO, CAE EL AGUA!\r\n¡FUEGO Y AGUA, ROMPE TODA TRABA!\r\n\n¡LLAMARINA! ¡SER ÚNICA ES SU DON!\r\n¡DE LA VIDA EL MOTOR, PURA BENDICIÓN!\r\n\nEL VAPOR SE ALZA, LA TORMENTA VIBRA\r\nSU NÚCLEO DE LAVA SU ESENCIA LIBRA!\r\n\nCON UN CHORRO DE VALOR, TRUENO Y COLOR\r\n¡LA GOTA MÁS VALIENTE, FUENTE DE AMOR!\r\n\nSintió el agotamiento, el drenaje total\r\nCada gota un pacto, agridulce y letal\r\n\nSu tormenta pura, un destello feroz\r\nUn presente fuerte, que levanta la voz\r\n\nEl desierto bebe, el verde despierta\r\nViendo cómo el bosque abre su puerta\r\n\nEl ciclo se cumple, la redención llegó\r\nSu gran destino al fin se logró.\r\n\n¡LLAMARINA! ¡MANDA EL RITMO, CAE EL AGUA!\r\n¡FUEGO Y AGUA, ROMPE TODA TRABA!\r\n\n¡LLAMARINA! ¡SER ÚNICA ES SU DON!\r\n¡DE LA VIDA EL MOTOR, PURA BENDICIÓN!\r\n\nEL VAPOR SE ALZA, LA TORMENTA VIBRA\r\nSU NÚCLEO DE LAVA SU ESENCIA LIBRA!\r\n\nCON UN CHORRO DE VALOR, TRUENO Y COLOR\r\n¡LA GOTA MÁS VALIENTE, FUENTE DE AMOR!\r\n\nLlegó el Dragón, Volcanix de poder\r\nLe dio la enseñanza, para no temer\r\n\nAcuarel, la Ninfa, con su gran saber\r\nLe mostró el balance para florecer\r\n\nNo más sacrificio, no hay por qué caer\r\nSolo el centro, listo para crecer\r\n\nDomina la mezcla, la vibración vital\r\nFuego y agua, en equilibrio final.\r\n\n¡LLAMARINA! ¡MANDA EL RITMO, CAE EL AGUA!\r\n¡FUEGO Y AGUA, ROMPE TODA TRABA!\r\n\n¡LLAMARINA! ¡SER ÚNICA ES SU DON!\r\n¡DE LA VIDA EL MOTOR, PURA BENDICIÓN!\r\n\nEL VAPOR SE ALZA, LA TORMENTA VIBRA\r\nSU NÚCLEO DE LAVA SU ESENCIA LIBRA!\r\n\nCON UN CHORRO DE VALOR, TRUENO Y COLOR\r\n¡LA GOTA MÁS VALIENTE, FUENTE DE AMOR!\r\n\nLa tormenta ha pasado, el miedo acabó\r\nSu gran propósito al fin encontró!\r\n\nAgua y llama, en perfecta unidad\r\n¡El poder de uno, es la verdad!",
+    "syncedLyrics": [
+      {
+        "start": 2.04,
+        "end": 8,
+        "text": "En la cima alta, donde choca el cielo\r\nUna gota sola, sin consuelo\r"
+      },
+      {
+        "start": 8,
+        "end": 13.56,
+        "text": "Llamarina esconde un corazón doble\r\nAgua y lava, un poder muy noble\r"
+      },
+      {
+        "start": 13.56,
+        "end": 21.88,
+        "text": "No es neblina, no es lluvia común\r\n¡Una flama interna, rompe el tabú!\r"
+      },
+      {
+        "start": 24.64,
+        "end": 30.16,
+        "text": "La montaña agrieta, la tierra suspira\r\nEl sol sin piedad, la vida la mira\r"
+      },
+      {
+        "start": 30.16,
+        "end": 35.92,
+        "text": "Observa el mundo, seco y rendido\r\nPor el miedo al rechazo, se ha sentido herido\r"
+      },
+      {
+        "start": 35.92,
+        "end": 41.4,
+        "text": "Mas un fuego interno le dicta la ley\r\n¡Tú eres la respuesta, tú eres el rey!\r"
+      },
+      {
+        "start": 41.4,
+        "end": 47.68,
+        "text": "Cruza la frontera, rompe la prisión\r\n¡Salva a la tierra con tu gran misión!\r"
+      },
+      {
+        "start": 49.56,
+        "end": 55.8,
+        "text": "¡LLAMARINA! ¡MANDA EL RITMO, CAE EL AGUA!\r\n¡FUEGO Y AGUA, ROMPE TODA TRABA!\r"
+      },
+      {
+        "start": 55.8,
+        "end": 60.96,
+        "text": "¡LLAMARINA! ¡SER ÚNICA ES SU DON!\r\n¡DE LA VIDA EL MOTOR, PURA BENDICIÓN!\r"
+      },
+      {
+        "start": 60.96,
+        "end": 66.2,
+        "text": "EL VAPOR SE ALZA, LA TORMENTA VIBRA\r\nSU NÚCLEO DE LAVA SU ESENCIA LIBRA!\r"
+      },
+      {
+        "start": 66.2,
+        "end": 77.72,
+        "text": "CON UN CHORRO DE VALOR, TRUENO Y COLOR\r\n¡LA GOTA MÁS VALIENTE, FUENTE DE AMOR!\r"
+      },
+      {
+        "start": 77.72,
+        "end": 83,
+        "text": "Sintió el agotamiento, el drenaje total\r\nCada gota un pacto, agridulce y letal\r"
+      },
+      {
+        "start": 83,
+        "end": 88.92,
+        "text": "Su tormenta pura, un destello feroz\r\nUn presente fuerte, que levanta la voz\r"
+      },
+      {
+        "start": 88.92,
+        "end": 94.36,
+        "text": "El desierto bebe, el verde despierta\r\nViendo cómo el bosque abre su puerta\r"
+      },
+      {
+        "start": 94.36,
+        "end": 100.24000000000001,
+        "text": "El ciclo se cumple, la redención llegó\r\nSu gran destino al fin se logró.\r"
+      },
+      {
+        "start": 102.56,
+        "end": 108.84,
+        "text": "¡LLAMARINA! ¡MANDA EL RITMO, CAE EL AGUA!\r\n¡FUEGO Y AGUA, ROMPE TODA TRABA!\r"
+      },
+      {
+        "start": 108.84,
+        "end": 114.03999999999999,
+        "text": "¡LLAMARINA! ¡SER ÚNICA ES SU DON!\r\n¡DE LA VIDA EL MOTOR, PURA BENDICIÓN!\r"
+      },
+      {
+        "start": 114.03999999999999,
+        "end": 119.2,
+        "text": "EL VAPOR SE ALZA, LA TORMENTA VIBRA\r\nSU NÚCLEO DE LAVA SU ESENCIA LIBRA!\r"
+      },
+      {
+        "start": 119.2,
+        "end": 127.76,
+        "text": "CON UN CHORRO DE VALOR, TRUENO Y COLOR\r\n¡LA GOTA MÁS VALIENTE, FUENTE DE AMOR!\r"
+      },
+      {
+        "start": 127.76,
+        "end": 133.4,
+        "text": "Llegó el Dragón, Volcanix de poder\r\nLe dio la enseñanza, para no temer\r"
+      },
+      {
+        "start": 133.4,
+        "end": 138.8,
+        "text": "Acuarel, la Ninfa, con su gran saber\r\nLe mostró el balance para florecer\r"
+      },
+      {
+        "start": 138.8,
+        "end": 144.56,
+        "text": "No más sacrificio, no hay por qué caer\r\nSolo el centro, listo para crecer\r"
+      },
+      {
+        "start": 144.56,
+        "end": 152.8,
+        "text": "Domina la mezcla, la vibración vital\r\nFuego y agua, en equilibrio final.\r"
+      },
+      {
+        "start": 152.8,
+        "end": 159.07999999999998,
+        "text": "¡LLAMARINA! ¡MANDA EL RITMO, CAE EL AGUA!\r\n¡FUEGO Y AGUA, ROMPE TODA TRABA!\r"
+      },
+      {
+        "start": 159.07999999999998,
+        "end": 164.28,
+        "text": "¡LLAMARINA! ¡SER ÚNICA ES SU DON!\r\n¡DE LA VIDA EL MOTOR, PURA BENDICIÓN!\r"
+      },
+      {
+        "start": 164.28,
+        "end": 169.48,
+        "text": "EL VAPOR SE ALZA, LA TORMENTA VIBRA\r\nSU NÚCLEO DE LAVA SU ESENCIA LIBRA!\r"
+      },
+      {
+        "start": 169.48,
+        "end": 177.84,
+        "text": "CON UN CHORRO DE VALOR, TRUENO Y COLOR\r\n¡LA GOTA MÁS VALIENTE, FUENTE DE AMOR!\r"
+      },
+      {
+        "start": 177.84,
+        "end": 184.24,
+        "text": "La tormenta ha pasado, el miedo acabó\r\nSu gran propósito al fin encontró!\r"
+      },
+      {
+        "start": 184.24,
+        "end": 194.32,
+        "text": "Agua y llama, en perfecta unidad\r\n¡El poder de uno, es la verdad!"
+      }
+    ],
+    "duration": 204
+  },
+  {
+    "order": "36",
+    "name": "El Misterio de la Isla Cuántica",
+    "key": "el-misterio-de-la-isla-cuantica",
+    "song": "https://youtu.be/9tqNdK6E4cQ",
+    "saga": "luna-y-la-fisica",
+    "date": "29/03/2024",
+    "lyrics": "La marea rompió, un sonido real, en \ntierra que no es visible al final.\n\nOrilla secreta, caí en la arena, \nentrando en la magia, sintiendo la plena.\n\nLos colores brillan, cambian sin \ncesar, recuerdo que no pude atrapar.\n\nProfesor Cuántico, con brillo total, \nsaliendo de la noche, algo elemental.\n\nDijo, \"Mira la luz, ¿es onda o \nun destello fugaz, tú dirás?\"\n\nUna paradoja que te dejará en paz, \ndesvaneciendo sombras, ya no hay más.\n\nCaminamos sendas donde la verdad se \ndobla, aquí el misterio nunca se desdobla.\n\nLa ley natural, retorcida, giró—lo \nque ves nunca, nunca se acabó.\n\n¡ISLA CUÁNTICA! Donde lo cierto muere.\n\n¡PULSO DE INCERTIDUMBRE! Lo que el alma quiere.\nCuando intentas medir,\n\nla imagen se quiebra al fin.\nToda simple respuesta es un pedazo de\n\nasombro sin fin.\nEs un ritmo poderoso, salvaje y musical,\n\n¡Encontré el universo en \neste juego cuántico, real!\n\nNox el guardián, me dijo en secreto, \"La \nprecisión es un sueño que está incompleto.\"\n\nMiré en el espejo, la lección clara y \ndura: perseguir lo obvio es pura locura.\n\nEn el Laberinto, donde el camino gira en \nespiral, aprendí la fuerza de lo conceptual.\n\nEstar aquí, estar allá, una fiebre simultánea—el \ncosmos completo dice: \"¡Detente, no te afanes!\"\n\n¡ISLA CUÁNTICA! Donde lo cierto muere.\n¡PULSO DE INCERTIDUMBRE! Lo que el alma quiere.\n\nCuando intentas medir,\n\nla imagen se quiebra al fin.\nToda simple respuesta es un pedazo de\n\nasombro sin fin.\nEs un ritmo poderoso, salvaje y musical,\n\n¡Encontré el universo en \neste juego cuántico, real!\n\nEl Gran Colisionador grita, \nel tiempo nace en su altar.\n\nChispas de energía, el cosmos quiere hablar.\nCaos y ambigüedad, la partitura perfecta.\n\nCuanto más entiendo, la verdad se me inyecta.\nConectada al centro, de costa a distante sol,\n\n¡No puedes definir quién \neres, esa es la mejor lección!\n\n¡ISLA CUÁNTICA! Donde lo cierto muere.\n\n¡PULSO DE INCERTIDUMBRE! Lo que el alma quiere.\nCuando intentas medir,\n\nla imagen se quiebra al fin.\nToda simple respuesta es un pedazo de\n\nasombro sin fin.\nEs un ritmo poderoso, salvaje y musical,\n\n¡Encontré el universo en \neste juego cuántico, real!\n\nDesperté en mi cuarto, pero el saber seguía igual.\nJunto a la cama, una esfera brillante, sin igual.\n\nOrden en el desorden, el asombro nunca falla.\nMira la oscuridad, la verdad que en ella estalla.",
+    "syncedLyrics": [
+      {
+        "start": 14.6,
+        "end": 17.04,
+        "text": "La marea rompió, un sonido real, en \ntierra que no es visible al final."
+      },
+      {
+        "start": 17.04,
+        "end": 24.3,
+        "text": "Orilla secreta, caí en la arena, \nentrando en la magia, sintiendo la plena."
+      },
+      {
+        "start": 24.3,
+        "end": 27.56,
+        "text": "Los colores brillan, cambian sin \ncesar, recuerdo que no pude atrapar."
+      },
+      {
+        "start": 27.56,
+        "end": 37.72,
+        "text": "Profesor Cuántico, con brillo total, \nsaliendo de la noche, algo elemental."
+      },
+      {
+        "start": 37.72,
+        "end": 45,
+        "text": "Dijo, \"Mira la luz, ¿es onda o \nun destello fugaz, tú dirás?\""
+      },
+      {
+        "start": 45,
+        "end": 49.2,
+        "text": "Una paradoja que te dejará en paz, \ndesvaneciendo sombras, ya no hay más."
+      },
+      {
+        "start": 49.2,
+        "end": 53.72,
+        "text": "Caminamos sendas donde la verdad se \ndobla, aquí el misterio nunca se desdobla."
+      },
+      {
+        "start": 53.72,
+        "end": 60.701,
+        "text": "La ley natural, retorcida, giró—lo \nque ves nunca, nunca se acabó."
+      },
+      {
+        "start": 60.701,
+        "end": 66.2,
+        "text": "¡ISLA CUÁNTICA! Donde lo cierto muere."
+      },
+      {
+        "start": 66.2,
+        "end": 68.96000000000001,
+        "text": "¡PULSO DE INCERTIDUMBRE! Lo que el alma quiere.\nCuando intentas medir,"
+      },
+      {
+        "start": 68.96000000000001,
+        "end": 73.12,
+        "text": "la imagen se quiebra al fin.\nToda simple respuesta es un pedazo de"
+      },
+      {
+        "start": 73.12,
+        "end": 77.36,
+        "text": "asombro sin fin.\nEs un ritmo poderoso, salvaje y musical,"
+      },
+      {
+        "start": 77.36,
+        "end": 83,
+        "text": "¡Encontré el universo en \neste juego cuántico, real!"
+      },
+      {
+        "start": 85.52,
+        "end": 90.8,
+        "text": "Nox el guardián, me dijo en secreto, \"La \nprecisión es un sueño que está incompleto.\""
+      },
+      {
+        "start": 90.8,
+        "end": 93.8,
+        "text": "Miré en el espejo, la lección clara y \ndura: perseguir lo obvio es pura locura."
+      },
+      {
+        "start": 93.8,
+        "end": 97.27199999999999,
+        "text": "En el Laberinto, donde el camino gira en \nespiral, aprendí la fuerza de lo conceptual."
+      },
+      {
+        "start": 97.27199999999999,
+        "end": 97.576,
+        "text": "Estar aquí, estar allá, una fiebre simultánea—el \ncosmos completo dice: \"¡Detente, no te afanes!\""
+      },
+      {
+        "start": 97.576,
+        "end": 113.88,
+        "text": "¡ISLA CUÁNTICA! Donde lo cierto muere.\n¡PULSO DE INCERTIDUMBRE! Lo que el alma quiere."
+      },
+      {
+        "start": 113.88,
+        "end": 116.44,
+        "text": "Cuando intentas medir,"
+      },
+      {
+        "start": 116.44,
+        "end": 120.6,
+        "text": "la imagen se quiebra al fin.\nToda simple respuesta es un pedazo de"
+      },
+      {
+        "start": 120.6,
+        "end": 124.84,
+        "text": "asombro sin fin.\nEs un ritmo poderoso, salvaje y musical,"
+      },
+      {
+        "start": 124.84,
+        "end": 130,
+        "text": "¡Encontré el universo en \neste juego cuántico, real!"
+      },
+      {
+        "start": 130,
+        "end": 133.672,
+        "text": "El Gran Colisionador grita, \nel tiempo nace en su altar."
+      },
+      {
+        "start": 133.672,
+        "end": 151.16,
+        "text": "Chispas de energía, el cosmos quiere hablar.\nCaos y ambigüedad, la partitura perfecta."
+      },
+      {
+        "start": 151.16,
+        "end": 156.28,
+        "text": "Cuanto más entiendo, la verdad se me inyecta.\nConectada al centro, de costa a distante sol,"
+      },
+      {
+        "start": 156.28,
+        "end": 162,
+        "text": "¡No puedes definir quién \neres, esa es la mejor lección!"
+      },
+      {
+        "start": 162,
+        "end": 164.4,
+        "text": "¡ISLA CUÁNTICA! Donde lo cierto muere."
+      },
+      {
+        "start": 164.4,
+        "end": 167.16,
+        "text": "¡PULSO DE INCERTIDUMBRE! Lo que el alma quiere.\nCuando intentas medir,"
+      },
+      {
+        "start": 167.16,
+        "end": 171.36,
+        "text": "la imagen se quiebra al fin.\nToda simple respuesta es un pedazo de"
+      },
+      {
+        "start": 171.36,
+        "end": 175.56,
+        "text": "asombro sin fin.\nEs un ritmo poderoso, salvaje y musical,"
+      },
+      {
+        "start": 175.56,
+        "end": 180.96,
+        "text": "¡Encontré el universo en \neste juego cuántico, real!"
+      },
+      {
+        "start": 180.96,
+        "end": 183.738,
+        "text": "Desperté en mi cuarto, pero el saber seguía igual.\nJunto a la cama, una esfera brillante, sin igual."
+      },
+      {
+        "start": 183.738,
+        "end": 195.6,
+        "text": "Orden en el desorden, el asombro nunca falla.\nMira la oscuridad, la verdad que en ella estalla."
+      }
+    ],
+    "duration": 212
+  },
+  {
+    "order": "37",
+    "name": "Luna y el Misterio de la Galaxia Espectral",
+    "key": "luna-y-el-misterio-de-la-galaxia-espectral",
+    "song": "https://youtu.be/3ovrbqh9PbU",
+    "saga": "luna-y-la-fisica",
+    "date": "30/03/2024",
+    "lyrics": "Susurros de polvo estelar, la física nos llama\r\nDesde el ático al cosmos, encendiendo la flama.\r\n\nLuna, la investigadora, guiada por la verdad\r\nExplorando el universo, con gran capacidad.\r\n\nMapa estelar antiguo, más que una simple ilusión\r\nMarca coordenadas de espectral manifestación.\r\n\nOrion, el inventor, con \r\nengranajes complejos y audacia\r\n\nConstruye la 'Estrella Fugaz', con pura eficacia.\r\n\nViajamos el espaciotiempo, \r\ndoblando la luz con rigor\r\n\nNavegando nebulosas, con agudo explorador.\r\nComprendiendo agujeros de gusano,\r\n\nun atajo en el vacío sin par\r\nLeyes de la física, que vamos a aplicar.\r\n\n(Chorus)\r\n¡Galaxia Espectral,\r\n\nmosaico de la velocidad de la luz!\r\nLa energía del Cristal Cósmico,\r\n\nes una necesidad y su cruz.\r\nSu longitud de onda falla,\r\n\nel equilibrio ya no está\r\n¡Necesitamos la resonancia, nos guiará!\r\n\nLuna, el colgante, con espiral de diseño fractal\r\nPatrón donde la energía cósmica es fundamental.\r\n\n¡Ciencia en tus manos, el poder de calcular\r\nHallar la frecuencia correcta, y el fruto estelar!\r\n\nObservamos agujeros negros, \r\nsu inmensa fuerza de atracción\r\n\nSecretos del núcleo, con una simple inspección.\r\n\nEl ciclo de creación estelar, \r\nun proceso que hay que ver\r\n\nDesde viveros cósmicos hasta el amanecer.\r\nLa composición del Cristal,\r\n\nun elemento inestable y sombrío\r\nSu firma espectral, se desvanece en el río.\r\n\nAnalizamos los datos, con método y precisión\r\nPara estabilizar la materia, salvar la dimensión.\r\n\n(Bridge)\r\nLa espiral del colgante,\r\n\nuna curva logarítmica cabal\r\nCoincide con la energía del\r\n\nCristal, algo descomunal.\r\nFrecuencia de resonancia,\r\n\nla clave que el problema desvela\r\nFusionaré las dos fuerzas, al mundo nos revela.\r\n\nUn estallido de luz pura, la \r\nenergía se conserva y arde\r\n\n¡El destino Espectral se salva, ya no es tarde!\r\nLas leyes del universo,\r\n\ntan ciertas y de gran valor\r\nUna simple reacción, nos da la salvación.\r\n\n¡Galaxia Espectral, mosaico \r\nde la velocidad de la luz!\r\n\nLa energía del Cristal Cósmico, \r\nes una necesidad y su cruz.\r\n\nSu longitud de onda falla, \r\nel equilibrio ya no está\r\n\n¡Necesitamos la resonancia, nos guiará!\r\n\nLuna, el colgante, con espiral de diseño fractal\r\nPatrón donde la energía cósmica es fundamental.\r\n\n¡Ciencia en tus manos, el poder de calcular\r\nHallar la frecuencia correcta, y el fruto estelar!\r\n\nMisión cumplida, los datos son claros y sin temor\r\nEntender la física vence todo el pavor.\r\n\nLuna, la científica, trazando \r\nla zona del mañana y del futuro\r\n\nEl conocimiento es poder, \r\ndesde la tierra a lo más puro.",
+    "syncedLyrics": [
+      {
+        "start": 6.36,
+        "end": 17.16,
+        "text": "Susurros de polvo estelar, la física nos llama\r\nDesde el ático al cosmos, encendiendo la flama.\r"
+      },
+      {
+        "start": 17.16,
+        "end": 28.04,
+        "text": "Luna, la investigadora, guiada por la verdad\r\nExplorando el universo, con gran capacidad.\r"
+      },
+      {
+        "start": 31.64,
+        "end": 42.08,
+        "text": "Mapa estelar antiguo, más que una simple ilusión\r\nMarca coordenadas de espectral manifestación.\r"
+      },
+      {
+        "start": 42.08,
+        "end": 47.24,
+        "text": "Orion, el inventor, con \r\nengranajes complejos y audacia\r"
+      },
+      {
+        "start": 47.24,
+        "end": 51.56,
+        "text": "Construye la 'Estrella Fugaz', con pura eficacia.\r"
+      },
+      {
+        "start": 52.48,
+        "end": 57.44,
+        "text": "Viajamos el espaciotiempo, \r\ndoblando la luz con rigor\r"
+      },
+      {
+        "start": 57.44,
+        "end": 65.6,
+        "text": "Navegando nebulosas, con agudo explorador.\r\nComprendiendo agujeros de gusano,\r"
+      },
+      {
+        "start": 65.6,
+        "end": 72.16,
+        "text": "un atajo en el vacío sin par\r\nLeyes de la física, que vamos a aplicar.\r"
+      },
+      {
+        "start": 72.16,
+        "end": 74.8,
+        "text": "(Chorus)\r\n¡Galaxia Espectral,\r"
+      },
+      {
+        "start": 74.8,
+        "end": 81.24,
+        "text": "mosaico de la velocidad de la luz!\r\nLa energía del Cristal Cósmico,\r"
+      },
+      {
+        "start": 81.24,
+        "end": 86.48,
+        "text": "es una necesidad y su cruz.\r\nSu longitud de onda falla,\r"
+      },
+      {
+        "start": 86.48,
+        "end": 94.8,
+        "text": "el equilibrio ya no está\r\n¡Necesitamos la resonancia, nos guiará!\r"
+      },
+      {
+        "start": 94.8,
+        "end": 104.75999999999999,
+        "text": "Luna, el colgante, con espiral de diseño fractal\r\nPatrón donde la energía cósmica es fundamental.\r"
+      },
+      {
+        "start": 105.32,
+        "end": 115.68,
+        "text": "¡Ciencia en tus manos, el poder de calcular\r\nHallar la frecuencia correcta, y el fruto estelar!\r"
+      },
+      {
+        "start": 115.68,
+        "end": 121.12,
+        "text": "Observamos agujeros negros, \r\nsu inmensa fuerza de atracción\r"
+      },
+      {
+        "start": 121.12,
+        "end": 125.88,
+        "text": "Secretos del núcleo, con una simple inspección.\r"
+      },
+      {
+        "start": 126.44,
+        "end": 131.56,
+        "text": "El ciclo de creación estelar, \r\nun proceso que hay que ver\r"
+      },
+      {
+        "start": 131.56,
+        "end": 139.28,
+        "text": "Desde viveros cósmicos hasta el amanecer.\r\nLa composición del Cristal,\r"
+      },
+      {
+        "start": 139.28,
+        "end": 147.84,
+        "text": "un elemento inestable y sombrío\r\nSu firma espectral, se desvanece en el río.\r"
+      },
+      {
+        "start": 147.84,
+        "end": 158.78,
+        "text": "Analizamos los datos, con método y precisión\r\nPara estabilizar la materia, salvar la dimensión.\r"
+      },
+      {
+        "start": 158.78,
+        "end": 163.36,
+        "text": "(Bridge)\r\nLa espiral del colgante,\r"
+      },
+      {
+        "start": 163.36,
+        "end": 167.04,
+        "text": "una curva logarítmica cabal\r\nCoincide con la energía del\r"
+      },
+      {
+        "start": 167.04,
+        "end": 170.96,
+        "text": "Cristal, algo descomunal.\r\nFrecuencia de resonancia,\r"
+      },
+      {
+        "start": 170.96,
+        "end": 178.84,
+        "text": "la clave que el problema desvela\r\nFusionaré las dos fuerzas, al mundo nos revela.\r"
+      },
+      {
+        "start": 178.84,
+        "end": 184.64,
+        "text": "Un estallido de luz pura, la \r\nenergía se conserva y arde\r"
+      },
+      {
+        "start": 184.64,
+        "end": 192.8,
+        "text": "¡El destino Espectral se salva, ya no es tarde!\r\nLas leyes del universo,\r"
+      },
+      {
+        "start": 192.8,
+        "end": 202.12,
+        "text": "tan ciertas y de gran valor\r\nUna simple reacción, nos da la salvación.\r"
+      },
+      {
+        "start": 202.12,
+        "end": 207.36,
+        "text": "¡Galaxia Espectral, mosaico \r\nde la velocidad de la luz!\r"
+      },
+      {
+        "start": 207.36,
+        "end": 212.44,
+        "text": "La energía del Cristal Cósmico, \r\nes una necesidad y su cruz.\r"
+      },
+      {
+        "start": 212.44,
+        "end": 218.44,
+        "text": "Su longitud de onda falla, \r\nel equilibrio ya no está\r"
+      },
+      {
+        "start": 218.44,
+        "end": 223.4,
+        "text": "¡Necesitamos la resonancia, nos guiará!\r"
+      },
+      {
+        "start": 223.4,
+        "end": 233.36,
+        "text": "Luna, el colgante, con espiral de diseño fractal\r\nPatrón donde la energía cósmica es fundamental.\r"
+      },
+      {
+        "start": 233.92000000000002,
+        "end": 245.76,
+        "text": "¡Ciencia en tus manos, el poder de calcular\r\nHallar la frecuencia correcta, y el fruto estelar!\r"
+      },
+      {
+        "start": 245.76,
+        "end": 256.04,
+        "text": "Misión cumplida, los datos son claros y sin temor\r\nEntender la física vence todo el pavor.\r"
+      },
+      {
+        "start": 256.72,
+        "end": 263.8,
+        "text": "Luna, la científica, trazando \r\nla zona del mañana y del futuro\r"
+      },
+      {
+        "start": 263.8,
+        "end": 271.92,
+        "text": "El conocimiento es poder, \r\ndesde la tierra a lo más puro."
+      }
+    ],
+    "duration": 281
+  },
+  {
+    "order": "38",
+    "name": "El Kebab Mágico de Milo",
+    "key": "el-kebab-magico-de-milo",
+    "song": "https://youtu.be/nlOoeRqPRCk",
+    "saga": "",
+    "date": "31/03/2024",
+    "lyrics": "La ciudad vibra, mi vientre grita ya\r\nBuscando un gusto, que me haga soñar\r\n\nDe repente un aroma, me hizo girar\r\nUn puesto pequeño, que no estaba allá\r\n\nEl ritmo sube, la fuerza es total\r\nDebo ir de prisa, es algo especial\r\n\nOjos de anciano, sabio y con fulgor\r\n\"Joven audaz, ¿Buscas gran sabor?\"\r\n\n¡Quiero lo mejor, lo de más valor!\r\nNo vi el cartel, ¡Oh, qué error!\r\n\nKebab vegano, maní y crujido audaz\r\nPero al probarlo, sentí paz\r\n\nUn error dulce, gusto sin igual\r\nBrillo total, pura felicidad\r\n\nNo hay vuelta atrás, el momento es aquí\r\nLavando el miedo que siempre viví\r\n\n¡Esto no es comida, es fuego en el alma al fin!\r\nKebab mágico, el sabor es sin confín!\r\n\nUn simple bocado, me cambió de vía\r\nEncontré el gozo, pura melodía!\r\n\n¡Saborea el momento, la esencia sin control!\r\nUna simple historia bajo el gran sol!\r\n\n¡Sí, bajo el sol! ¡Prueba la magia!\r\n¡Rompe el molde! ¡Escucha la gracia!\r\n\nEl anciano dijo, en voz de misterio\r\n\"Acaba la cena, y el deseo es serio!\"\r\n\nNo quiero riqueza, ni oro ni poder\r\nSolo alegría, ¡al mundo aprender!\r\n\nDeseé la dicha en cada probada\r\nNinguna comida será desperdiciada!\r\n\nDel pan humilde hasta el gran festín\r\nLa magia es real, ¡no tiene fin!\r\n\nCamina el asfalto, siente el cambio veloz\r\nNo hay dónde escapar, levanta tu voz\r\n\n¡Esto no es comida, es fuego en el alma al fin!\r\nKebab mágico, el sabor es sin confín!\r\n\nUn simple bocado, me cambió de vía\r\nEncontré el gozo, pura melodía!\r\n\n¡Saborea el momento, la esencia sin control!\r\nUna simple historia bajo el gran sol!\r\n\n¡Sí, bajo el sol! ¡Prueba la magia!\r\n¡Rompe el molde! ¡Escucha la gracia!\r\n\nEl aire brilló, un cálido fulgor\r\nLa dicha otorgada, con mucho amor!\r\n\nGiro inesperado, el poder total\r\nEn simples sorpresas está lo vital!\r\n\nManí y especias, la llave maestra\r\nCada instante ahora ¡es una fiesta!\r\n\nHay que sentir el ritmo, sentir el calor\r\nEste sabor mágico es el mejor!\r\n\n¡Esto no es comida, es fuego en el alma al fin!\r\nKebab mágico, el sabor es sin confín!\r\n\nUn simple bocado, me cambió de vía\r\nEncontré el gozo, pura melodía!\r\n\n¡Saborea el momento, la esencia sin control!\r\nUna simple historia bajo el gran sol!\r\n\n¡Sí, bajo el sol! ¡Prueba la magia!\r\n¡Rompe el molde! ¡Escucha la gracia!\r\n\nViaje de Milo, ya empezó!\r\nSaboreando el mundo, el sol se alzó!\r\n\n¡Magia kebab, sí!\r\n¡Nunca olvides el sabor a maní!\r\n\n¡Alegría en cada gusto! Siente el compás!\r\n¡Sí! ¡La dicha está aquí!",
+    "syncedLyrics": [
+      {
+        "start": 10.84,
+        "end": 15.24,
+        "text": "La ciudad vibra, mi vientre grita ya\r\nBuscando un gusto, que me haga soñar\r"
+      },
+      {
+        "start": 15.24,
+        "end": 20.52,
+        "text": "De repente un aroma, me hizo girar\r\nUn puesto pequeño, que no estaba allá\r"
+      },
+      {
+        "start": 20.52,
+        "end": 26.4,
+        "text": "El ritmo sube, la fuerza es total\r\nDebo ir de prisa, es algo especial\r"
+      },
+      {
+        "start": 27.48,
+        "end": 32.28,
+        "text": "Ojos de anciano, sabio y con fulgor\r\n\"Joven audaz, ¿Buscas gran sabor?\"\r"
+      },
+      {
+        "start": 32.28,
+        "end": 37.44,
+        "text": "¡Quiero lo mejor, lo de más valor!\r\nNo vi el cartel, ¡Oh, qué error!\r"
+      },
+      {
+        "start": 37.44,
+        "end": 42.12,
+        "text": "Kebab vegano, maní y crujido audaz\r\nPero al probarlo, sentí paz\r"
+      },
+      {
+        "start": 42.12,
+        "end": 46.72,
+        "text": "Un error dulce, gusto sin igual\r\nBrillo total, pura felicidad\r"
+      },
+      {
+        "start": 46.72,
+        "end": 53.4,
+        "text": "No hay vuelta atrás, el momento es aquí\r\nLavando el miedo que siempre viví\r"
+      },
+      {
+        "start": 53.4,
+        "end": 58.76,
+        "text": "¡Esto no es comida, es fuego en el alma al fin!\r\nKebab mágico, el sabor es sin confín!\r"
+      },
+      {
+        "start": 58.76,
+        "end": 63.56,
+        "text": "Un simple bocado, me cambió de vía\r\nEncontré el gozo, pura melodía!\r"
+      },
+      {
+        "start": 63.56,
+        "end": 68.32,
+        "text": "¡Saborea el momento, la esencia sin control!\r\nUna simple historia bajo el gran sol!\r"
+      },
+      {
+        "start": 68.32,
+        "end": 74.8,
+        "text": "¡Sí, bajo el sol! ¡Prueba la magia!\r\n¡Rompe el molde! ¡Escucha la gracia!\r"
+      },
+      {
+        "start": 75.84,
+        "end": 80.36,
+        "text": "El anciano dijo, en voz de misterio\r\n\"Acaba la cena, y el deseo es serio!\"\r"
+      },
+      {
+        "start": 80.36,
+        "end": 85.32,
+        "text": "No quiero riqueza, ni oro ni poder\r\nSolo alegría, ¡al mundo aprender!\r"
+      },
+      {
+        "start": 85.32,
+        "end": 90.03999999999999,
+        "text": "Deseé la dicha en cada probada\r\nNinguna comida será desperdiciada!\r"
+      },
+      {
+        "start": 90.03999999999999,
+        "end": 94.6,
+        "text": "Del pan humilde hasta el gran festín\r\nLa magia es real, ¡no tiene fin!\r"
+      },
+      {
+        "start": 94.6,
+        "end": 102.68,
+        "text": "Camina el asfalto, siente el cambio veloz\r\nNo hay dónde escapar, levanta tu voz\r"
+      },
+      {
+        "start": 103.75999999999999,
+        "end": 109.16,
+        "text": "¡Esto no es comida, es fuego en el alma al fin!\r\nKebab mágico, el sabor es sin confín!\r"
+      },
+      {
+        "start": 109.16,
+        "end": 113.96000000000001,
+        "text": "Un simple bocado, me cambió de vía\r\nEncontré el gozo, pura melodía!\r"
+      },
+      {
+        "start": 113.96000000000001,
+        "end": 118.72,
+        "text": "¡Saborea el momento, la esencia sin control!\r\nUna simple historia bajo el gran sol!\r"
+      },
+      {
+        "start": 118.72,
+        "end": 126.24,
+        "text": "¡Sí, bajo el sol! ¡Prueba la magia!\r\n¡Rompe el molde! ¡Escucha la gracia!\r"
+      },
+      {
+        "start": 128.2,
+        "end": 133,
+        "text": "El aire brilló, un cálido fulgor\r\nLa dicha otorgada, con mucho amor!\r"
+      },
+      {
+        "start": 133,
+        "end": 138,
+        "text": "Giro inesperado, el poder total\r\nEn simples sorpresas está lo vital!\r"
+      },
+      {
+        "start": 138,
+        "end": 142.6,
+        "text": "Maní y especias, la llave maestra\r\nCada instante ahora ¡es una fiesta!\r"
+      },
+      {
+        "start": 142.6,
+        "end": 149.4,
+        "text": "Hay que sentir el ritmo, sentir el calor\r\nEste sabor mágico es el mejor!\r"
+      },
+      {
+        "start": 149.4,
+        "end": 154.76,
+        "text": "¡Esto no es comida, es fuego en el alma al fin!\r\nKebab mágico, el sabor es sin confín!\r"
+      },
+      {
+        "start": 154.76,
+        "end": 159.56,
+        "text": "Un simple bocado, me cambió de vía\r\nEncontré el gozo, pura melodía!\r"
+      },
+      {
+        "start": 159.56,
+        "end": 164.32,
+        "text": "¡Saborea el momento, la esencia sin control!\r\nUna simple historia bajo el gran sol!\r"
+      },
+      {
+        "start": 164.32,
+        "end": 171.52,
+        "text": "¡Sí, bajo el sol! ¡Prueba la magia!\r\n¡Rompe el molde! ¡Escucha la gracia!\r"
+      },
+      {
+        "start": 171.52,
+        "end": 176.36,
+        "text": "Viaje de Milo, ya empezó!\r\nSaboreando el mundo, el sol se alzó!\r"
+      },
+      {
+        "start": 176.36,
+        "end": 180.92,
+        "text": "¡Magia kebab, sí!\r\n¡Nunca olvides el sabor a maní!\r"
+      },
+      {
+        "start": 180.92,
+        "end": 191.72,
+        "text": "¡Alegría en cada gusto! Siente el compás!\r\n¡Sí! ¡La dicha está aquí!"
+      }
+    ],
+    "duration": 196
+  },
+  {
+    "order": "39",
+    "name": "El Rito del Arcano",
+    "key": "el-rito-del-arcano",
+    "song": "https://youtu.be/0u40_ChwTG4",
+    "saga": "",
+    "date": "01/04/2024",
+    "lyrics": "Valdeluz duerme, donde el bosque respira\r\nAntiguos secretos en cada mentira\r\n\nElio despierta, con el alma valiente\r\nEl destino llama, siempre en el frente\r\n\nEn la tierra y la flor, un destello de oro\r\nEl Amuleto, tesoro sin foro\r\n\nAbuela Ada palidece al verlo brillar\r\nUn mapa en la pared, el sendero a trazar\r\n\nRito esperando, sin miedo al dolor\r\nDonde el bosque susurra y guarda el temor\r\n\nEs El Rito del Arcano, la fuerza que das\r\nEnfrenta las sombras, la lección que tendrás\r\n\nNi metal ni conjuro, ni estrella fugaz\r\nEl vínculo en el alma te da la verdad y la paz\r\n\nRompe los límites, rompe la prisión\r\nLa pura conexión es la gran bendición\r\n\nCírculo de piedra, símbolos con resplandor\r\nBajo la espiral de cósmico fulgor\r\n\nLa voz milenaria exige el tributo\r\n¿Qué es más valioso? El fruto absoluto\r\n\nDe pie ante el altar, la prueba final\r\nBuscando la magia, más allá del mal\r\n\nEs El Rito del Arcano, la fuerza que das\r\nEnfrenta las sombras, la lección que tendrás\r\n\nNi metal ni conjuro, ni estrella fugaz\r\nEl vínculo en el alma te da la verdad y la paz\r\n\nRompe los límites, rompe la prisión\r\nLa pura conexión es la gran bendición\r\n\nPiensa en las risas, la mano que guía\r\nEl amor de su Ada, luz de cada día\r\n\nLágrimas caen, un sacrificio real\r\nUna luz cegadora, un poder ancestral\r\n\nEl amor es la moneda, la magia es la fe\r\nEl poder más grande que el mundo te dé\r\n\nEs El Rito del Arcano, la fuerza que das\r\nEnfrenta las sombras, la lección que tendrás\r\n\nNi metal ni conjuro, ni estrella fugaz\r\nEl vínculo en el alma te da la verdad y la paz\r\n\nRompe los límites, rompe la prisión\r\nLa pura conexión es la gran bendición\r\n\nLa luz se va lenta, Elio es ya mayor\r\nRespondió la duda, se hizo sabedor\r\n\nLa sabiduría ahora corre por él\r\nEl camino arcano, sabor a miel",
+    "syncedLyrics": [
+      {
+        "start": 19.6,
+        "end": 27.72,
+        "text": "Valdeluz duerme, donde el bosque respira\r\nAntiguos secretos en cada mentira\r"
+      },
+      {
+        "start": 27.72,
+        "end": 43,
+        "text": "Elio despierta, con el alma valiente\r\nEl destino llama, siempre en el frente\r"
+      },
+      {
+        "start": 43,
+        "end": 51.48,
+        "text": "En la tierra y la flor, un destello de oro\r\nEl Amuleto, tesoro sin foro\r"
+      },
+      {
+        "start": 51.48,
+        "end": 59.56,
+        "text": "Abuela Ada palidece al verlo brillar\r\nUn mapa en la pared, el sendero a trazar\r"
+      },
+      {
+        "start": 59.56,
+        "end": 68.36,
+        "text": "Rito esperando, sin miedo al dolor\r\nDonde el bosque susurra y guarda el temor\r"
+      },
+      {
+        "start": 68.36,
+        "end": 77.92,
+        "text": "Es El Rito del Arcano, la fuerza que das\r\nEnfrenta las sombras, la lección que tendrás\r"
+      },
+      {
+        "start": 77.92,
+        "end": 88.56,
+        "text": "Ni metal ni conjuro, ni estrella fugaz\r\nEl vínculo en el alma te da la verdad y la paz\r"
+      },
+      {
+        "start": 88.56,
+        "end": 99.56,
+        "text": "Rompe los límites, rompe la prisión\r\nLa pura conexión es la gran bendición\r"
+      },
+      {
+        "start": 101.44,
+        "end": 109.28,
+        "text": "Círculo de piedra, símbolos con resplandor\r\nBajo la espiral de cósmico fulgor\r"
+      },
+      {
+        "start": 109.28,
+        "end": 117.2,
+        "text": "La voz milenaria exige el tributo\r\n¿Qué es más valioso? El fruto absoluto\r"
+      },
+      {
+        "start": 117.2,
+        "end": 133.92,
+        "text": "De pie ante el altar, la prueba final\r\nBuscando la magia, más allá del mal\r"
+      },
+      {
+        "start": 133.92,
+        "end": 143.92000000000002,
+        "text": "Es El Rito del Arcano, la fuerza que das\r\nEnfrenta las sombras, la lección que tendrás\r"
+      },
+      {
+        "start": 143.92000000000002,
+        "end": 153.64,
+        "text": "Ni metal ni conjuro, ni estrella fugaz\r\nEl vínculo en el alma te da la verdad y la paz\r"
+      },
+      {
+        "start": 154.56,
+        "end": 167.56,
+        "text": "Rompe los límites, rompe la prisión\r\nLa pura conexión es la gran bendición\r"
+      },
+      {
+        "start": 167.56,
+        "end": 175.64,
+        "text": "Piensa en las risas, la mano que guía\r\nEl amor de su Ada, luz de cada día\r"
+      },
+      {
+        "start": 175.64,
+        "end": 183.28,
+        "text": "Lágrimas caen, un sacrificio real\r\nUna luz cegadora, un poder ancestral\r"
+      },
+      {
+        "start": 183.28,
+        "end": 200.24,
+        "text": "El amor es la moneda, la magia es la fe\r\nEl poder más grande que el mundo te dé\r"
+      },
+      {
+        "start": 200.24,
+        "end": 208.48,
+        "text": "Es El Rito del Arcano, la fuerza que das\r\nEnfrenta las sombras, la lección que tendrás\r"
+      },
+      {
+        "start": 208.48,
+        "end": 219.07999999999998,
+        "text": "Ni metal ni conjuro, ni estrella fugaz\r\nEl vínculo en el alma te da la verdad y la paz\r"
+      },
+      {
+        "start": 219.07999999999998,
+        "end": 229.96,
+        "text": "Rompe los límites, rompe la prisión\r\nLa pura conexión es la gran bendición\r"
+      },
+      {
+        "start": 231.72,
+        "end": 240.16,
+        "text": "La luz se va lenta, Elio es ya mayor\r\nRespondió la duda, se hizo sabedor\r"
+      },
+      {
+        "start": 240.16,
+        "end": 255.04,
+        "text": "La sabiduría ahora corre por él\r\nEl camino arcano, sabor a miel"
+      }
+    ],
+    "duration": 268
+  },
+  {
+    "order": "40",
+    "name": "El Teléfono Móvil Mágico y los Monstruitos del Juego",
+    "key": "el-telefono-movil-magico-y-los-monstruitos-del-juego",
+    "song": "https://youtu.be/P1o6ZTIUBgI",
+    "saga": "",
+    "date": "02/04/2024",
+    "lyrics": "Pantallalandia girando sin parar\r\nPixel brillante, listo para activar\r\n\nPero los colores se empiezan a ir\r\nUna sombra cae, la magia va a morir\r\n\nEl sistema falla, la luz no está\r\nUn virus oscuro en la oscuridad.\r\n\nLlegan los Monstruos, la tropa especial\r\nSu misión es urgente, su tarea es vital\r\n\nAlas rojas baten un golpe feroz\r\nBrazos azules tejen su veloz voz\r\n\nManchas amarillas brillando en la faz\r\nEl virus sombrío nos roba la paz\r\n\nNubes grises cubren todo el monitor\r\nHay que recuperar el brillo y el fulgor\r\n\nLos juegos no inician, la música se fue\r\nVamos a la carga, ¡el poder está en la fe!\r\n\n¡Poder Píxel! ¡Escuchen la señal!\r\nSiempre en pie, no hay nada igual\r\n\nCada pieza en su lugar\r\nLa oscuridad vamos a ahuyentar\r\n\nUnidos por los colores, rompemos la red\r\nLevantamos el brillo, lo que la gente ve\r\n\nSomos pequeños pero fuertes, oigan el trueno\r\n¡El trabajo en equipo nos da el poder supremo!\r\n\nCruzamos el Bosque de Fotos de marco dorado\r\nMil recuerdos vivos, un pasado amado\r\n\nSobre el Río de Melodías, las notas son peces\r\nCorriendo con ritmo, no hay reveses\r\n\nSubimos la Montaña de Mensajes sin final\r\nEl camino está hecho de palabra vital\r\n\nEl código negro palpita en el centro\r\nDebemos atacarlo justo en el epicentro\r\n\nEl monstruo rojo sopla con fuerza brutal\r\nEl azul atrapa al virus, un acto triunfal.\r\n\n¡Poder Píxel! ¡Escuchen la señal!\r\nSiempre en pie, no hay nada igual\r\n\nCada pieza en su lugar\r\nLa oscuridad vamos a ahuyentar\r\n\nUnidos por los colores, rompemos la red\r\nLevantamos el brillo, lo que la gente ve\r\n\nSomos pequeños pero fuertes, oigan el trueno\r\n¡El trabajo en equipo nos da el poder supremo!\r\n\nPensaron que éramos solo píxeles al pasar\r\nPero mira esta lucha, no la pueden parar\r\n\nNo importa tu tamaño, no \r\nimporta tu figura ni tu color\r\n\nTienes una magia adentro que te da valor\r\nNuestra unión es la fuerza, un solo corazón\r\n\nJuntos terminamos esta gran misión\r\nUn último destello de luz estelar\r\n\nDestrozando la sombra, ¡lo vamos a lograr!\r\n\n¡Poder Píxel! ¡Escuchen la señal!\r\nSiempre en pie, no hay nada igual\r\n\nCada pieza en su lugar\r\nLa oscuridad vamos a ahuyentar\r\n\nUnidos por los colores, rompemos la red\r\nLevantamos el brillo, lo que la gente ve\r\n\nSomos pequeños pero fuertes, oigan el trueno\r\n¡El trabajo en equipo nos da el poder supremo!\r\n\nLa pantalla brilla más, la magia está de vuelta\r\nLos juegos se activan, la aventura está abierta\r\n\n¡Pixel resplandece! ¡La victoria es total!\r\n¡Los Monstruos del Juego, no tienen rival!\r\n\n¡Sí! ¡La luz triunfó!",
+    "syncedLyrics": [
+      {
+        "start": 6.88,
+        "end": 12.44,
+        "text": "Pantallalandia girando sin parar\r\nPixel brillante, listo para activar\r"
+      },
+      {
+        "start": 12.44,
+        "end": 17.92,
+        "text": "Pero los colores se empiezan a ir\r\nUna sombra cae, la magia va a morir\r"
+      },
+      {
+        "start": 17.92,
+        "end": 23.28,
+        "text": "El sistema falla, la luz no está\r\nUn virus oscuro en la oscuridad.\r"
+      },
+      {
+        "start": 23.28,
+        "end": 28.96,
+        "text": "Llegan los Monstruos, la tropa especial\r\nSu misión es urgente, su tarea es vital\r"
+      },
+      {
+        "start": 28.96,
+        "end": 34.32,
+        "text": "Alas rojas baten un golpe feroz\r\nBrazos azules tejen su veloz voz\r"
+      },
+      {
+        "start": 34.32,
+        "end": 39.76,
+        "text": "Manchas amarillas brillando en la faz\r\nEl virus sombrío nos roba la paz\r"
+      },
+      {
+        "start": 39.76,
+        "end": 45.12,
+        "text": "Nubes grises cubren todo el monitor\r\nHay que recuperar el brillo y el fulgor\r"
+      },
+      {
+        "start": 45.12,
+        "end": 50.48,
+        "text": "Los juegos no inician, la música se fue\r\nVamos a la carga, ¡el poder está en la fe!\r"
+      },
+      {
+        "start": 50.48,
+        "end": 55.64,
+        "text": "¡Poder Píxel! ¡Escuchen la señal!\r\nSiempre en pie, no hay nada igual\r"
+      },
+      {
+        "start": 55.64,
+        "end": 61.32,
+        "text": "Cada pieza en su lugar\r\nLa oscuridad vamos a ahuyentar\r"
+      },
+      {
+        "start": 61.32,
+        "end": 66.72,
+        "text": "Unidos por los colores, rompemos la red\r\nLevantamos el brillo, lo que la gente ve\r"
+      },
+      {
+        "start": 66.72,
+        "end": 77.96000000000001,
+        "text": "Somos pequeños pero fuertes, oigan el trueno\r\n¡El trabajo en equipo nos da el poder supremo!\r"
+      },
+      {
+        "start": 77.96000000000001,
+        "end": 83.68,
+        "text": "Cruzamos el Bosque de Fotos de marco dorado\r\nMil recuerdos vivos, un pasado amado\r"
+      },
+      {
+        "start": 83.68,
+        "end": 89,
+        "text": "Sobre el Río de Melodías, las notas son peces\r\nCorriendo con ritmo, no hay reveses\r"
+      },
+      {
+        "start": 89,
+        "end": 94.56,
+        "text": "Subimos la Montaña de Mensajes sin final\r\nEl camino está hecho de palabra vital\r"
+      },
+      {
+        "start": 94.56,
+        "end": 100.03999999999999,
+        "text": "El código negro palpita en el centro\r\nDebemos atacarlo justo en el epicentro\r"
+      },
+      {
+        "start": 100.03999999999999,
+        "end": 116.28,
+        "text": "El monstruo rojo sopla con fuerza brutal\r\nEl azul atrapa al virus, un acto triunfal.\r"
+      },
+      {
+        "start": 116.28,
+        "end": 121.48,
+        "text": "¡Poder Píxel! ¡Escuchen la señal!\r\nSiempre en pie, no hay nada igual\r"
+      },
+      {
+        "start": 121.48,
+        "end": 127.12,
+        "text": "Cada pieza en su lugar\r\nLa oscuridad vamos a ahuyentar\r"
+      },
+      {
+        "start": 127.12,
+        "end": 132.52,
+        "text": "Unidos por los colores, rompemos la red\r\nLevantamos el brillo, lo que la gente ve\r"
+      },
+      {
+        "start": 132.52,
+        "end": 138.44,
+        "text": "Somos pequeños pero fuertes, oigan el trueno\r\n¡El trabajo en equipo nos da el poder supremo!\r"
+      },
+      {
+        "start": 138.44,
+        "end": 143.88,
+        "text": "Pensaron que éramos solo píxeles al pasar\r\nPero mira esta lucha, no la pueden parar\r"
+      },
+      {
+        "start": 143.88,
+        "end": 147.8,
+        "text": "No importa tu tamaño, no \r\nimporta tu figura ni tu color\r"
+      },
+      {
+        "start": 147.8,
+        "end": 156.36,
+        "text": "Tienes una magia adentro que te da valor\r\nNuestra unión es la fuerza, un solo corazón\r"
+      },
+      {
+        "start": 156.36,
+        "end": 161.52,
+        "text": "Juntos terminamos esta gran misión\r\nUn último destello de luz estelar\r"
+      },
+      {
+        "start": 161.52,
+        "end": 167.07999999999998,
+        "text": "Destrozando la sombra, ¡lo vamos a lograr!\r"
+      },
+      {
+        "start": 167.07999999999998,
+        "end": 172.24,
+        "text": "¡Poder Píxel! ¡Escuchen la señal!\r\nSiempre en pie, no hay nada igual\r"
+      },
+      {
+        "start": 172.24,
+        "end": 177.12,
+        "text": "Cada pieza en su lugar\r\nLa oscuridad vamos a ahuyentar\r"
+      },
+      {
+        "start": 177.88,
+        "end": 183.32,
+        "text": "Unidos por los colores, rompemos la red\r\nLevantamos el brillo, lo que la gente ve\r"
+      },
+      {
+        "start": 183.32,
+        "end": 191.68,
+        "text": "Somos pequeños pero fuertes, oigan el trueno\r\n¡El trabajo en equipo nos da el poder supremo!\r"
+      },
+      {
+        "start": 191.68,
+        "end": 197.48,
+        "text": "La pantalla brilla más, la magia está de vuelta\r\nLos juegos se activan, la aventura está abierta\r"
+      },
+      {
+        "start": 197.48,
+        "end": 203.72,
+        "text": "¡Pixel resplandece! ¡La victoria es total!\r\n¡Los Monstruos del Juego, no tienen rival!\r"
+      },
+      {
+        "start": 203.72,
+        "end": 206.4,
+        "text": "¡Sí! ¡La luz triunfó!"
+      }
+    ],
+    "duration": 212
+  },
+  {
+    "order": "41",
+    "name": "El Reino Olvidado: Aventuras Bajo el Sofá",
+    "key": "el-reino-olvidado-aventuras-bajo-el-sofa",
+    "song": "https://youtu.be/-4D1G_5YIZU",
+    "saga": "",
+    "date": "03/04/2024",
+    "lyrics": "¡Sube el volumen, la misión comenzó!\r\nSecretos que esperan donde el sol no vio.\r\n\nDebajo del terciopelo, en la densa penumbra,\r\nEl reino más grande que nadie vislumbra.\r\n\nLuz en la alfombra, Rayo no está más,\r\nUn coche veloz que cruzó la faz.\r\n\nSiguiendo una bola, trago el sillón,\r\nLlamando a la acción, retando al campeón.\r\n\nEspada de plástico, el pulso a mil,\r\nUsó el conjuro, un viaje juvenil.\r\n\n¡Flash! Me hice pequeña, el mundo estalló,\r\nUn desierto de tela que me acogió.\r\n\nCruzo la frontera, la línea invisible,\r\nLista a la lucha, la aventura invencible.\r\n\n¡Reino Olvidado! Montañas de polvo gris.\r\nDonde el calcetín sueña y el reloj es raíz.\r\n\nLos Guardianes Oscuros vigilan sin fin,\r\nPero el coraje es enorme, esto es el motín.\r\n\nAventura secreta, migajas de pan,\r\nEsta épica oculta que al mundo darán.\r\n\nRompemos el miedo, luchamos la sombra,\r\nLa libertad espera, ¡que nadie se asombra!\r\n\nEncontré a Centi, la chispa olvidada,\r\nQue quema el temor con su luz plateada.\r\n\nValles de galletas, ríos de color,\r\nCruzamos la noche con gran valor.\r\n\nLos ecos son fríos, la sombra veloz,\r\nTrampas de fibra que atrapan la voz.\r\n\nPero vamos a fondo, movidos por la amistad,\r\nNo hay pausa ni freno en esta tempestad.\r\n\nAl Palacio Perdido, un castillo genial,\r\nOímos de nuevo un júbilo real.\r\n\n¡Reino Olvidado! Montañas de polvo gris.\r\nDonde el calcetín sueña y el reloj es raíz.\r\n\nLos Guardianes Oscuros vigilan sin fin,\r\nPero el coraje es enorme, esto es el motín.\r\n\nAventura secreta, migajas de pan,\r\nEsta épica oculta que al mundo darán.\r\n\nRompemos el miedo, luchamos la sombra,\r\nLa libertad espera, ¡que nadie se asombra!\r\n\nEl Rey es un crono, parado en el tiempo,\r\nNos da el gran secreto, el portal es el centro.\r\n\nSombras atacan, un golpe final,\r\nLuz y Centi luchando en el trance fatal.\r\n\n¡Pero Rayo regresa! Guiando a los hallados,\r\nTomamos el salto, los olvidados.\r\n\nUna carga fuerte, la oscuridad cayó,\r\nCruzando el portal, ¡la misión triunfó!\r\n\n¡Reino Olvidado! Montañas de polvo gris.\r\nDonde el calcetín sueña y el reloj es raíz.\r\n\nLos Guardianes Oscuros vigilan sin fin,\r\nPero el coraje es enorme, esto es el motín.\r\n\nAventura secreta, migajas de pan,\r\nEsta épica oculta que al mundo darán.\r\n\nRompemos el miedo, luchamos la sombra,\r\nLa libertad espera, ¡que nadie se asombra!\r\n\nEstamos de vuelta, la historia es verdad,\r\n\nLuz sabe que un mundo te espera en verdad.\r\nBajo aquel sillón, justo ahí está el corazón,\r\n\nEl Reino Olvidado, la gran sensación.\r\n¡Sí! ¡La gran sensación!",
+    "syncedLyrics": [
+      {
+        "start": 18.04,
+        "end": 23.72,
+        "text": "¡Sube el volumen, la misión comenzó!\r\nSecretos que esperan donde el sol no vio.\r"
+      },
+      {
+        "start": 23.72,
+        "end": 29.64,
+        "text": "Debajo del terciopelo, en la densa penumbra,\r\nEl reino más grande que nadie vislumbra.\r"
+      },
+      {
+        "start": 31.76,
+        "end": 37.16,
+        "text": "Luz en la alfombra, Rayo no está más,\r\nUn coche veloz que cruzó la faz.\r"
+      },
+      {
+        "start": 37.16,
+        "end": 42.8,
+        "text": "Siguiendo una bola, trago el sillón,\r\nLlamando a la acción, retando al campeón.\r"
+      },
+      {
+        "start": 42.8,
+        "end": 48.32,
+        "text": "Espada de plástico, el pulso a mil,\r\nUsó el conjuro, un viaje juvenil.\r"
+      },
+      {
+        "start": 48.32,
+        "end": 54.52,
+        "text": "¡Flash! Me hice pequeña, el mundo estalló,\r\nUn desierto de tela que me acogió.\r"
+      },
+      {
+        "start": 54.52,
+        "end": 62.12,
+        "text": "Cruzo la frontera, la línea invisible,\r\nLista a la lucha, la aventura invencible.\r"
+      },
+      {
+        "start": 62.12,
+        "end": 68,
+        "text": "¡Reino Olvidado! Montañas de polvo gris.\r\nDonde el calcetín sueña y el reloj es raíz.\r"
+      },
+      {
+        "start": 68,
+        "end": 73.64,
+        "text": "Los Guardianes Oscuros vigilan sin fin,\r\nPero el coraje es enorme, esto es el motín.\r"
+      },
+      {
+        "start": 73.64,
+        "end": 79.16,
+        "text": "Aventura secreta, migajas de pan,\r\nEsta épica oculta que al mundo darán.\r"
+      },
+      {
+        "start": 79.16,
+        "end": 86.24,
+        "text": "Rompemos el miedo, luchamos la sombra,\r\nLa libertad espera, ¡que nadie se asombra!\r"
+      },
+      {
+        "start": 87.12,
+        "end": 92.44,
+        "text": "Encontré a Centi, la chispa olvidada,\r\nQue quema el temor con su luz plateada.\r"
+      },
+      {
+        "start": 92.44,
+        "end": 97.84,
+        "text": "Valles de galletas, ríos de color,\r\nCruzamos la noche con gran valor.\r"
+      },
+      {
+        "start": 97.84,
+        "end": 103.28,
+        "text": "Los ecos son fríos, la sombra veloz,\r\nTrampas de fibra que atrapan la voz.\r"
+      },
+      {
+        "start": 103.28,
+        "end": 110.75999999999999,
+        "text": "Pero vamos a fondo, movidos por la amistad,\r\nNo hay pausa ni freno en esta tempestad.\r"
+      },
+      {
+        "start": 110.75999999999999,
+        "end": 117.32,
+        "text": "Al Palacio Perdido, un castillo genial,\r\nOímos de nuevo un júbilo real.\r"
+      },
+      {
+        "start": 117.32,
+        "end": 123.16,
+        "text": "¡Reino Olvidado! Montañas de polvo gris.\r\nDonde el calcetín sueña y el reloj es raíz.\r"
+      },
+      {
+        "start": 123.16,
+        "end": 128.84,
+        "text": "Los Guardianes Oscuros vigilan sin fin,\r\nPero el coraje es enorme, esto es el motín.\r"
+      },
+      {
+        "start": 128.84,
+        "end": 134.32,
+        "text": "Aventura secreta, migajas de pan,\r\nEsta épica oculta que al mundo darán.\r"
+      },
+      {
+        "start": 134.32,
+        "end": 141.6,
+        "text": "Rompemos el miedo, luchamos la sombra,\r\nLa libertad espera, ¡que nadie se asombra!\r"
+      },
+      {
+        "start": 142.64,
+        "end": 148.4,
+        "text": "El Rey es un crono, parado en el tiempo,\r\nNos da el gran secreto, el portal es el centro.\r"
+      },
+      {
+        "start": 148.4,
+        "end": 156.36,
+        "text": "Sombras atacan, un golpe final,\r\nLuz y Centi luchando en el trance fatal.\r"
+      },
+      {
+        "start": 156.36,
+        "end": 162.07999999999998,
+        "text": "¡Pero Rayo regresa! Guiando a los hallados,\r\nTomamos el salto, los olvidados.\r"
+      },
+      {
+        "start": 162.07999999999998,
+        "end": 169.72,
+        "text": "Una carga fuerte, la oscuridad cayó,\r\nCruzando el portal, ¡la misión triunfó!\r"
+      },
+      {
+        "start": 169.72,
+        "end": 175.56,
+        "text": "¡Reino Olvidado! Montañas de polvo gris.\r\nDonde el calcetín sueña y el reloj es raíz.\r"
+      },
+      {
+        "start": 175.56,
+        "end": 181.24,
+        "text": "Los Guardianes Oscuros vigilan sin fin,\r\nPero el coraje es enorme, esto es el motín.\r"
+      },
+      {
+        "start": 181.24,
+        "end": 186.76,
+        "text": "Aventura secreta, migajas de pan,\r\nEsta épica oculta que al mundo darán.\r"
+      },
+      {
+        "start": 186.76,
+        "end": 195.24,
+        "text": "Rompemos el miedo, luchamos la sombra,\r\nLa libertad espera, ¡que nadie se asombra!\r"
+      },
+      {
+        "start": 195.24,
+        "end": 197.68,
+        "text": "Estamos de vuelta, la historia es verdad,\r"
+      },
+      {
+        "start": 197.68,
+        "end": 203.32,
+        "text": "Luz sabe que un mundo te espera en verdad.\r\nBajo aquel sillón, justo ahí está el corazón,\r"
+      },
+      {
+        "start": 203.32,
+        "end": 220.24,
+        "text": "El Reino Olvidado, la gran sensación.\r\n¡Sí! ¡La gran sensación!"
+      }
+    ],
+    "duration": 228
+  },
+  {
+    "order": "42",
+    "name": "La Llave del Tiempo",
+    "key": "la-llave-del-tiempo",
+    "song": "https://youtu.be/RkQvJKUEGOQ",
+    "saga": "",
+    "date": "04/04/2024",
+    "lyrics": "En la villa de Aurora, donde \r\nel sol y luna chocan ya\r\n\nUn secreto ancestral que en \r\nlas sombras se queda, se va\r\n\nBajo el cedro de raíces, \r\nespera un gran misterio, brutal\r\n\nUna niña Lia inquieta, \r\nbuscando algo trascendental.\r\n\nElla excavó el cofre de \r\nmadera, con símbolos de ayer\r\n\nUna luz espectral brotó, con el poder del amanecer\r\n\nLa Llave del Tiempo vibraba, un \r\npulso en su piel, fuerte y audaz\r\n\nRompió el pacto de los viejos, \r\nbuscando la verdad y algo más.\r\n\nUn giro imprudente en el \r\naire, un rayo blanco sin igual\r\n\nRompió el lienzo de la vida, \r\npisando el sendero temporal.\r\n\nHola, rostros de los ancestros, \r\nun pueblo que no conoció\r\n\nCien años se hicieron nada, \r\nel tiempo se le escapó.\r\n\n¡La Llave del Tiempo! Metal \r\npesado, girando libre, sin piedad!\r\n\n¡No busques futuro fantasma \r\nni la antigua oscuridad!\r\n\n(Tic-Tac) Cada segundo es un \r\ndiamante, no se puede rebobinar\r\n\nTuviste el poder en tu mano, \r\n¿podrás jamás regresar?\r\n\n¡Oh, la Llave del Tiempo! Marca \r\nel ritmo, fuerte, nítido y tenaz!\r\n\n¡El único momento cierto es \r\neste que tienes y nada más!\r\n\nJugó el juego con osadía, \r\notro giro de la fatalidad\r\n\nPerdida en épocas salvajes, \r\nen la pura agresividad.\r\n\nNo hay caras del pueblo amable, \r\nsolo la tensión de sobrevivir\r\n\nBuscó la clave del misterio \r\npara poder de nuevo sonreír.\r\n\nNo es la cerradura que abres, \r\nes la pureza del corazón,\r\n\nUna llave que funciona con deseo y emoción.\r\n\nElla enfocó el recuerdo de la \r\nfamilia, su hogar, su gran amor\r\n\nUn anhelo por el presente, \r\ncon un cálido resplandor.\r\n\n¡La Llave del Tiempo! Metal \r\npesado, girando libre, sin piedad!\r\n\n¡No busques futuro fantasma \r\nni la antigua oscuridad!\r\n\n(Tic-Tac) Cada segundo es un \r\ndiamante, no se puede rebobinar\r\n\nTuviste el poder en tu mano, \r\n¿podrás jamás regresar?\r\n\n¡Oh, la Llave del Tiempo! Marca \r\nel ritmo, fuerte, nítido y tenaz!\r\n\n¡El único momento cierto es \r\neste que tienes y nada más!\r\n\nLa luz fue cálida esta vez, \r\nun faro de seguridad sin par\r\n\nCambió el viaje sin destino \r\npor la luz simple, familiar.\r\n\nLa historia ya está escrita, \r\nel futuro sigue aún en calma\r\n\nEl poder más grande es amar y \r\nentender lo que sana el alma.\r\n\nNo intentes girar las manecillas, \r\nno aceleres la carrera\r\n\nLa mejor historia que se \r\ncuenta es la que hoy te espera.\r\n\n¡La Llave del Tiempo! Metal \r\npesado, girando libre, sin piedad!\r\n\n¡No busques futuro fantasma \r\nni la antigua oscuridad!\r\n\n(Tic-Tac) Cada segundo es un \r\ndiamante, no se puede rebobinar\r\n\nTuviste el poder en tu mano, \r\n¿podrás jamás regresar?\r\n\n¡Oh, la Llave del Tiempo! Marca \r\nel ritmo, fuerte, nítido y tenaz!\r\n\n¡El único momento cierto es \r\neste que tienes y nada más!\r\n\nGuardó la llave a buen recaudo, \r\nla lección se grabó en la mente\r\n\nCada simple momento es el regalo que hay, urgente\r\nVívelo fuerte, vívelo ahora, vívelo día a día.\r\n\nLa Llave del Tiempo es saber \r\nhacer que el instante no se huya.\r\n\nNo se huya.",
+    "syncedLyrics": [
+      {
+        "start": 14.76,
+        "end": 19.72,
+        "text": "En la villa de Aurora, donde \r\nel sol y luna chocan ya\r"
+      },
+      {
+        "start": 19.72,
+        "end": 24.76,
+        "text": "Un secreto ancestral que en \r\nlas sombras se queda, se va\r"
+      },
+      {
+        "start": 24.76,
+        "end": 29.44,
+        "text": "Bajo el cedro de raíces, \r\nespera un gran misterio, brutal\r"
+      },
+      {
+        "start": 30,
+        "end": 36.48,
+        "text": "Una niña Lia inquieta, \r\nbuscando algo trascendental.\r"
+      },
+      {
+        "start": 36.48,
+        "end": 41.96,
+        "text": "Ella excavó el cofre de \r\nmadera, con símbolos de ayer\r"
+      },
+      {
+        "start": 41.96,
+        "end": 45.84,
+        "text": "Una luz espectral brotó, con el poder del amanecer\r"
+      },
+      {
+        "start": 45.84,
+        "end": 51.36,
+        "text": "La Llave del Tiempo vibraba, un \r\npulso en su piel, fuerte y audaz\r"
+      },
+      {
+        "start": 51.36,
+        "end": 55.92,
+        "text": "Rompió el pacto de los viejos, \r\nbuscando la verdad y algo más.\r"
+      },
+      {
+        "start": 56.52,
+        "end": 61.48,
+        "text": "Un giro imprudente en el \r\naire, un rayo blanco sin igual\r"
+      },
+      {
+        "start": 61.48,
+        "end": 66.36,
+        "text": "Rompió el lienzo de la vida, \r\npisando el sendero temporal.\r"
+      },
+      {
+        "start": 66.36,
+        "end": 71.6,
+        "text": "Hola, rostros de los ancestros, \r\nun pueblo que no conoció\r"
+      },
+      {
+        "start": 71.6,
+        "end": 76.2,
+        "text": "Cien años se hicieron nada, \r\nel tiempo se le escapó.\r"
+      },
+      {
+        "start": 76.2,
+        "end": 81.68,
+        "text": "¡La Llave del Tiempo! Metal \r\npesado, girando libre, sin piedad!\r"
+      },
+      {
+        "start": 81.68,
+        "end": 85.8,
+        "text": "¡No busques futuro fantasma \r\nni la antigua oscuridad!\r"
+      },
+      {
+        "start": 85.8,
+        "end": 91.24,
+        "text": "(Tic-Tac) Cada segundo es un \r\ndiamante, no se puede rebobinar\r"
+      },
+      {
+        "start": 91.84,
+        "end": 96.24000000000001,
+        "text": "Tuviste el poder en tu mano, \r\n¿podrás jamás regresar?\r"
+      },
+      {
+        "start": 96.24000000000001,
+        "end": 101.52000000000001,
+        "text": "¡Oh, la Llave del Tiempo! Marca \r\nel ritmo, fuerte, nítido y tenaz!\r"
+      },
+      {
+        "start": 101.52000000000001,
+        "end": 108.56,
+        "text": "¡El único momento cierto es \r\neste que tienes y nada más!\r"
+      },
+      {
+        "start": 116.92,
+        "end": 121.96,
+        "text": "Jugó el juego con osadía, \r\notro giro de la fatalidad\r"
+      },
+      {
+        "start": 121.96,
+        "end": 127.16,
+        "text": "Perdida en épocas salvajes, \r\nen la pura agresividad.\r"
+      },
+      {
+        "start": 127.16,
+        "end": 132.04,
+        "text": "No hay caras del pueblo amable, \r\nsolo la tensión de sobrevivir\r"
+      },
+      {
+        "start": 132.04,
+        "end": 138.8,
+        "text": "Buscó la clave del misterio \r\npara poder de nuevo sonreír.\r"
+      },
+      {
+        "start": 138.8,
+        "end": 143.68,
+        "text": "No es la cerradura que abres, \r\nes la pureza del corazón,\r"
+      },
+      {
+        "start": 143.68,
+        "end": 148.36,
+        "text": "Una llave que funciona con deseo y emoción.\r"
+      },
+      {
+        "start": 148.36,
+        "end": 153.76,
+        "text": "Ella enfocó el recuerdo de la \r\nfamilia, su hogar, su gran amor\r"
+      },
+      {
+        "start": 153.76,
+        "end": 158.28,
+        "text": "Un anhelo por el presente, \r\ncon un cálido resplandor.\r"
+      },
+      {
+        "start": 158.28,
+        "end": 163.8,
+        "text": "¡La Llave del Tiempo! Metal \r\npesado, girando libre, sin piedad!\r"
+      },
+      {
+        "start": 163.8,
+        "end": 167.92000000000002,
+        "text": "¡No busques futuro fantasma \r\nni la antigua oscuridad!\r"
+      },
+      {
+        "start": 167.92000000000002,
+        "end": 173.4,
+        "text": "(Tic-Tac) Cada segundo es un \r\ndiamante, no se puede rebobinar\r"
+      },
+      {
+        "start": 173.96,
+        "end": 178.28,
+        "text": "Tuviste el poder en tu mano, \r\n¿podrás jamás regresar?\r"
+      },
+      {
+        "start": 178.28,
+        "end": 183.6,
+        "text": "¡Oh, la Llave del Tiempo! Marca \r\nel ritmo, fuerte, nítido y tenaz!\r"
+      },
+      {
+        "start": 183.6,
+        "end": 189.24,
+        "text": "¡El único momento cierto es \r\neste que tienes y nada más!\r"
+      },
+      {
+        "start": 189.24,
+        "end": 194.16,
+        "text": "La luz fue cálida esta vez, \r\nun faro de seguridad sin par\r"
+      },
+      {
+        "start": 194.16,
+        "end": 199.2,
+        "text": "Cambió el viaje sin destino \r\npor la luz simple, familiar.\r"
+      },
+      {
+        "start": 199.2,
+        "end": 204.28,
+        "text": "La historia ya está escrita, \r\nel futuro sigue aún en calma\r"
+      },
+      {
+        "start": 204.28,
+        "end": 210.56,
+        "text": "El poder más grande es amar y \r\nentender lo que sana el alma.\r"
+      },
+      {
+        "start": 210.56,
+        "end": 215.6,
+        "text": "No intentes girar las manecillas, \r\nno aceleres la carrera\r"
+      },
+      {
+        "start": 215.6,
+        "end": 222.68,
+        "text": "La mejor historia que se \r\ncuenta es la que hoy te espera.\r"
+      },
+      {
+        "start": 222.68,
+        "end": 228.2,
+        "text": "¡La Llave del Tiempo! Metal \r\npesado, girando libre, sin piedad!\r"
+      },
+      {
+        "start": 228.2,
+        "end": 232.32,
+        "text": "¡No busques futuro fantasma \r\nni la antigua oscuridad!\r"
+      },
+      {
+        "start": 232.32,
+        "end": 237.84,
+        "text": "(Tic-Tac) Cada segundo es un \r\ndiamante, no se puede rebobinar\r"
+      },
+      {
+        "start": 238.36,
+        "end": 242.72,
+        "text": "Tuviste el poder en tu mano, \r\n¿podrás jamás regresar?\r"
+      },
+      {
+        "start": 242.72,
+        "end": 248.04,
+        "text": "¡Oh, la Llave del Tiempo! Marca \r\nel ritmo, fuerte, nítido y tenaz!\r"
+      },
+      {
+        "start": 248.04,
+        "end": 253.32,
+        "text": "¡El único momento cierto es \r\neste que tienes y nada más!\r"
+      },
+      {
+        "start": 253.32,
+        "end": 258.48,
+        "text": "Guardó la llave a buen recaudo, \r\nla lección se grabó en la mente\r"
+      },
+      {
+        "start": 258.48,
+        "end": 268.12,
+        "text": "Cada simple momento es el regalo que hay, urgente\r\nVívelo fuerte, vívelo ahora, vívelo día a día.\r"
+      },
+      {
+        "start": 268.64,
+        "end": 278.4,
+        "text": "La Llave del Tiempo es saber \r\nhacer que el instante no se huya.\r"
+      },
+      {
+        "start": 278.4,
+        "end": 279.4,
+        "text": "No se huya."
+      }
+    ],
+    "duration": 289
   }
 ]
