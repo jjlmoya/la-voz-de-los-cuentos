@@ -97,5 +97,19 @@ export default {
   'page.custom.button.accept': 'Yes, subscribe me',
   'page.custom.button.decline': 'No, thanks',
   'page.custom.h1': 'Create your own personalized story',
-  'page.custom.description': 'Tell us about your character and the adventure you want, and we\'ll create a unique story just for you.'
+  'page.custom.description': 'Tell us about your character and the adventure you want, and we\'ll create a unique story just for you.',
+
+  // Custom Story Flow - Secondary Characters
+  'page.custom.step.name.protagonist': 'Main Character (Protagonist)',
+  'page.custom.step.name.secondary': 'Secondary Characters (Optional)',
+  'page.custom.step.name.add': 'Add another character',
+
+  // Section - Custom Story Promotion
+  'section.custom.badge': '✨ Create your personalized story',
+  'section.custom.title': 'Your story, your magic, your character',
+  'section.custom.description': 'Create unique and personalized stories with the characters and adventures you imagine. We bring them to life in 3-5 days.',
+  'section.custom.benefit1': 'Completely free',
+  'section.custom.benefit2': 'Quick and easy',
+  'section.custom.benefit3': '100% personalized',
+  'section.custom.cta': 'Create now'
 }

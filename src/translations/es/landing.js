@@ -91,5 +91,14 @@ export default {
   // Custom Story Flow - Secondary Characters
   'page.custom.step.name.protagonist': 'Protagonista (Personaje Principal)',
   'page.custom.step.name.secondary': 'Personajes Secundarios (Opcional)',
-  'page.custom.step.name.add': 'Añadir otro personaje'
+  'page.custom.step.name.add': 'Añadir otro personaje',
+
+  // Section - Custom Story Promotion
+  'section.custom.badge': '✨ Crea tu cuento personalizado',
+  'section.custom.title': 'Tu cuento, tu magia, tu protagonista',
+  'section.custom.description': 'Crea cuentos únicos y personalizados con los personajes y historias que imagines. Nosotros nos encargamos de que cobren vida en 3-5 días.',
+  'section.custom.benefit1': 'Completamente gratis',
+  'section.custom.benefit2': 'Rápido y sencillo',
+  'section.custom.benefit3': '100% personalizado',
+  'section.custom.cta': 'Crear ahora'
 }
