@@ -41,7 +41,7 @@
   })
 
   const iconPath = computed(() => {
-    return `/src/assets/custom/icons/${props.category}/icon-${props.name}.png`
+    return `/assets/custom/icons/${props.category}/icon-${props.name}.png`
   })
 
   const customStyle = computed(() => {

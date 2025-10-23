@@ -14,7 +14,13 @@
           ]"
         >
           <div class="custom-progress-bar__step-icon">
-            {{ step.icon }}
+            <img
+              :src="`/assets/custom/icons/progress/icon-${step.icon}.png`"
+              :alt="step.label"
+              class="custom-progress-bar__icon-img"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
           <div class="custom-progress-bar__step-label">
             {{ step.label }}
@@ -47,12 +53,12 @@
     steps: {
       type: Array,
       default: () => [
-        { icon: '👋', label: 'Bienvenida' },
-        { icon: '✏️', label: 'Nombre' },
-        { icon: '📖', label: 'Cuento' },
-        { icon: '✉️', label: 'Email' },
-        { icon: '🎁', label: 'Newsletter' },
-        { icon: '🔄', label: 'Compartir' }
+        { icon: 'welcome', label: 'Bienvenida' },
+        { icon: 'name', label: 'Nombre' },
+        { icon: 'story', label: 'Cuento' },
+        { icon: 'email', label: 'Email' },
+        { icon: 'newsletter', label: 'Newsletter' },
+        { icon: 'share', label: 'Compartir' }
       ]
     }
   })
@@ -106,6 +112,13 @@
     border-radius: 50%;
     font-size: 20px;
     transition: all 0.3s ease;
+  }
+
+  .custom-progress-bar__icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 2px;
   }
 
   .custom-progress-bar__step--active .custom-progress-bar__step-icon {
