@@ -104,15 +104,14 @@
 <script setup>
   import t from '../../translations'
   import { VButton } from '@overgaming/vicius'
+  import { toStories } from '../../router'
 
   const goHome = () => {
     window.location.href = '/'
   }
 
   const goStories = () => {
-    const storyPath =
-      import.meta.env.PUBLIC_LANG === 'en' ? '/stories' : '/cuentos'
-    window.location.href = storyPath
+    window.location.href = toStories()
   }
 </script>
 
