@@ -148,6 +148,13 @@
 
   .custom-step-email__input {
     font-size: 16px;
+    border: 2px solid rgba(var(--v-color-primary-rgb), 0.3) !important;
+    background-color: var(--v-color-background) !important;
+  }
+
+  .custom-step-email__input:focus {
+    border-color: var(--v-color-primary) !important;
+    box-shadow: 0 0 0 3px rgba(var(--v-color-primary-rgb), 0.1) !important;
   }
 
   .custom-step-email__validation {
