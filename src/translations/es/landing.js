@@ -64,7 +64,7 @@ export default {
   'page.custom.sharegate.exploreStories': 'Explorar Cuentos',
   'page.custom.sharegate.timesShared': 'veces compartido',
   'page.custom.sharegate.helped': 'Personas ayudadas',
-  'page.custom.sharegate.shareText': 'Crea tu propio cuento personalizado en La Voz de los Cuentos',
+  'page.custom.sharegate.shareText': '✨ Acabo de crear mi propio cuento personalizado en La Voz de los Cuentos - ¡Ahora te toca a ti! 🚀',
   'page.custom.sharegate.success': '¡Gracias! Tu cuento está listo para ser enviado.',
   'page.custom.sharegate.continue': 'Enviar Mi Cuento',
 

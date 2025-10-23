@@ -67,7 +67,7 @@ export default {
   'page.custom.sharegate.exploreStories': 'Explore Stories',
   'page.custom.sharegate.timesShared': 'times shared',
   'page.custom.sharegate.helped': 'People helped',
-  'page.custom.sharegate.shareText': 'Create your own personalized story at La Voz de los Cuentos',
+  'page.custom.sharegate.shareText': '✨ I just created my own personalized story at BuboBoo - Your turn now! 🚀',
   'page.custom.sharegate.success': 'Thank you! You can now continue with your story.',
   'page.custom.sharegate.continue': 'Continue',
 
