@@ -109,8 +109,19 @@
 
   const insertTheme = (theme) => {
     const text = props.modelValue
-    const insertion = `${theme.name.toLowerCase()} `
-    emit('update:modelValue', text + insertion)
+    // Si hay texto, agregar al final
+    if (text) {
+      const insertion = ` ${theme.name.toLowerCase()}`
+      emit('update:modelValue', text + insertion)
+    } else {
+      // Si está vacío, inicializar con una plantilla
+      const template = `Un cuento de ${theme.name.toLowerCase()} donde...`
+      emit('update:modelValue', template)
+      // Focus en el textarea para que el usuario continúe escribiendo
+      setTimeout(() => {
+        document.querySelector('.custom-step-story__textarea')?.focus()
+      }, 0)
+    }
   }
 </script>
 
@@ -168,26 +179,27 @@
     width: 100%;
     min-height: 200px;
     padding: var(--v-unit-3);
-    border: 2px solid rgba(var(--v-color-primary-rgb), 0.2);
+    border: 2px solid var(--v-color-primary) !important;
     border-radius: var(--v-radius-lg);
-    background: var(--v-color-background);
-    color: var(--v-color-text-high);
+    background: var(--v-color-surface-high) !important;
+    color: var(--v-color-text-high) !important;
     font-family: inherit;
     font-size: 14px;
     line-height: 1.6;
     resize: vertical;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   }
 
   .custom-step-story__textarea:focus {
     outline: none;
-    border-color: var(--v-color-primary);
-    box-shadow: 0 0 0 3px rgba(var(--v-color-primary-rgb), 0.1);
+    border-color: var(--v-color-accent-primary) !important;
+    box-shadow: 0 0 0 3px rgba(var(--v-color-primary-rgb), 0.2), 0 2px 8px rgba(0, 0, 0, 0.1) !important;
   }
 
   .custom-step-story__textarea::placeholder {
     color: var(--v-color-text-medium);
-    opacity: 0.6;
+    opacity: 0.7;
   }
 
   .custom-step-story__counter {
