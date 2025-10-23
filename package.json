@@ -1,7 +1,7 @@
 {
   "name": "la-voz-de-los-cuentos",
   "type": "module",
-  "version": "0.1.344",
+  "version": "0.1.370",
   "scripts": {
     "dev": "astro dev",
     "dev:en": "env-cmd -f .env.en astro dev",
@@ -52,6 +52,7 @@
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
     "rimraf": "^6.0.1",
+    "sharp": "^0.34.4",
     "stylelint": "^16.9.0",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-recommended": "^14.0.1",

@@ -99,11 +99,11 @@
 <style scoped>
   .social-share {
     display: grid;
-    justify-content: end;
+    justify-content: center;
   }
 
   .social-share__share {
-    text-align: right;
+    text-align: center;
     font-size: 14px;
   }
 
