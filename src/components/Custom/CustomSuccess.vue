@@ -212,46 +212,62 @@
 
   .custom-success__steps {
     display: grid;
-    gap: var(--v-unit-4);
-    padding: var(--v-unit-4);
-    background: var(--v-color-surface-high);
-    border: 1px solid rgba(var(--v-color-primary-rgb), 0.1);
+    gap: var(--v-unit-6);
+    padding: var(--v-unit-6);
+    background: linear-gradient(135deg, rgba(var(--v-color-primary-rgb), 0.05), rgba(var(--v-color-accent-primary-rgb), 0.05));
+    border: 2px solid rgba(var(--v-color-primary-rgb), 0.15);
     border-radius: var(--v-radius-lg);
+    position: relative;
+  }
+
+  .custom-success__steps::before {
+    content: '';
+    position: absolute;
+    left: var(--v-unit-6);
+    top: 80px;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, var(--v-color-primary) 0%, var(--v-color-accent-primary) 100%);
+    border-radius: 2px;
   }
 
   .custom-success__step {
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: var(--v-unit-3);
+    gap: var(--v-unit-4);
     align-items: flex-start;
+    position: relative;
+    z-index: 1;
   }
 
   .custom-success__step-number {
-    width: 40px;
-    height: 40px;
+    width: 52px;
+    height: 52px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, var(--v-color-primary), var(--v-color-accent-primary));
     color: white;
     border-radius: 50%;
-    font-weight: 700;
-    font-size: 18px;
+    font-weight: 800;
+    font-size: 20px;
     flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(var(--v-color-primary-rgb), 0.2);
+    border: 3px solid white;
   }
 
   .custom-success__step-title {
-    margin: 0 0 var(--v-unit-1) 0;
-    font-size: 14px;
+    margin: var(--v-unit-1) 0 var(--v-unit-1) 0;
+    font-size: 16px;
     font-weight: 700;
     color: var(--v-color-text-high);
   }
 
   .custom-success__step-description {
     margin: 0;
-    font-size: 13px;
+    font-size: 14px;
     color: var(--v-color-text-medium);
-    line-height: 1.4;
+    line-height: 1.5;
   }
 
   .custom-success__info {
@@ -307,6 +323,30 @@
 
     .custom-success__actions {
       grid-template-columns: 1fr;
+    }
+
+    .custom-success__steps {
+      padding: var(--v-unit-4);
+      gap: var(--v-unit-5);
+    }
+
+    .custom-success__steps::before {
+      left: var(--v-unit-4);
+      top: 68px;
+    }
+
+    .custom-success__step-number {
+      width: 44px;
+      height: 44px;
+      font-size: 16px;
+    }
+
+    .custom-success__step-title {
+      font-size: 14px;
+    }
+
+    .custom-success__step-description {
+      font-size: 13px;
     }
   }
 </style>

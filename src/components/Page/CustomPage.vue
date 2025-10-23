@@ -23,7 +23,7 @@
     <div v-if="currentStep === 1" class="custom-page-step">
       <CustomStepName v-model="form.name" />
       <div class="custom-page-step__buttons">
-        <VButton @click="prevStep">{{ t('page.custom.button.prev') }}</VButton>
+        <VButton @click="prevStep" variant="secondary">{{ t('page.custom.button.prev') }}</VButton>
         <VButton @click="nextStep" :disabled="!form.name">{{
           t('page.custom.button.next')
         }}</VButton>
@@ -34,7 +34,7 @@
     <div v-if="currentStep === 2" class="custom-page-step">
       <CustomStepStory v-model="form.story" />
       <div class="custom-page-step__buttons">
-        <VButton @click="prevStep">{{ t('page.custom.button.prev') }}</VButton>
+        <VButton @click="prevStep" variant="secondary">{{ t('page.custom.button.prev') }}</VButton>
         <VButton @click="nextStep" :disabled="!form.story">{{
           t('page.custom.button.next')
         }}</VButton>
@@ -45,7 +45,7 @@
     <div v-if="currentStep === 3" class="custom-page-step">
       <CustomStepEmail v-model="form.email" />
       <div class="custom-page-step__buttons">
-        <VButton @click="prevStep">{{ t('page.custom.button.prev') }}</VButton>
+        <VButton @click="prevStep" variant="secondary">{{ t('page.custom.button.prev') }}</VButton>
         <VButton
           @click="nextStep"
           :disabled="!isValidEmail(form.email)"
@@ -59,7 +59,7 @@
     <div v-if="currentStep === 4" class="custom-page-step">
       <CustomStepNewsletter v-model="form.receiveAll" />
       <div class="custom-page-step__buttons">
-        <VButton @click="prevStep">{{ t('page.custom.button.prev') }}</VButton>
+        <VButton @click="prevStep" variant="secondary">{{ t('page.custom.button.prev') }}</VButton>
         <VButton @click="nextStep">{{ t('page.custom.button.next') }}</VButton>
       </div>
     </div>
@@ -302,10 +302,13 @@
 
   .custom-page-step__buttons {
     display: grid;
-    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
     grid-gap: var(--v-unit-3);
     justify-content: center;
     margin-top: var(--v-unit-4);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .custom-page__submit-button {
