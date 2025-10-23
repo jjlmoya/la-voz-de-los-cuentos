@@ -114,6 +114,7 @@
   import t from '../../translations'
   import { VButton } from '@overgaming/vicius'
   import SocialShare from '../Social/Share.vue'
+  import { toStories } from '../../router'
 
   const props = defineProps({
     mainPageUrl: {
@@ -144,8 +145,7 @@
   }
 
   const goToStories = () => {
-    const storyPath = import.meta.env.PUBLIC_LANG === 'en' ? '/stories' : '/cuentos'
-    window.location.href = storyPath
+    window.location.href = toStories()
   }
 </script>
 
