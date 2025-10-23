@@ -24,7 +24,7 @@
       <CustomStepName v-model="form.name" />
       <div class="custom-page-step__buttons">
         <VButton @click="prevStep" variant="secondary">{{ t('page.custom.button.prev') }}</VButton>
-        <VButton @click="nextStep" :disabled="!form.name">{{
+        <VButton @click="nextStep" :disabled="!form.name" variant="primary">{{
           t('page.custom.button.next')
         }}</VButton>
       </div>
@@ -35,7 +35,7 @@
       <CustomStepStory v-model="form.story" />
       <div class="custom-page-step__buttons">
         <VButton @click="prevStep" variant="secondary">{{ t('page.custom.button.prev') }}</VButton>
-        <VButton @click="nextStep" :disabled="!form.story">{{
+        <VButton @click="nextStep" :disabled="!form.story" variant="primary">{{
           t('page.custom.button.next')
         }}</VButton>
       </div>
@@ -49,6 +49,7 @@
         <VButton
           @click="nextStep"
           :disabled="!isValidEmail(form.email)"
+          variant="primary"
         >
           {{ t('page.custom.button.next') }}
         </VButton>
@@ -60,7 +61,7 @@
       <CustomStepNewsletter v-model="form.receiveAll" />
       <div class="custom-page-step__buttons">
         <VButton @click="prevStep" variant="secondary">{{ t('page.custom.button.prev') }}</VButton>
-        <VButton @click="nextStep">{{ t('page.custom.button.next') }}</VButton>
+        <VButton @click="nextStep" variant="primary">{{ t('page.custom.button.next') }}</VButton>
       </div>
     </div>
 
