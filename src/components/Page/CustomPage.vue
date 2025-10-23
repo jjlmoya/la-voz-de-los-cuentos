@@ -19,9 +19,14 @@
     <!-- PASO 0: Bienvenida -->
     <CustomWelcome v-if="currentStep === 0" @start="nextStep" />
 
-    <!-- PASO 1: Nombre -->
+    <!-- PASO 1: Nombre y Personajes Secundarios -->
     <div v-if="currentStep === 1" class="custom-page-step">
-      <CustomStepName v-model="form.name" />
+      <CustomStepName
+        v-model="form.name"
+        :secondaryCharacters="form.secondaryCharacters"
+        @update:modelValue="form.name = $event"
+        @update:secondaryCharacters="form.secondaryCharacters = $event"
+      />
       <div class="custom-page-step__buttons">
         <VButton @click="prevStep" variant="secondary">{{ t('page.custom.button.prev') }}</VButton>
         <VButton @click="nextStep" :disabled="!form.name" variant="primary">{{
@@ -126,6 +131,7 @@
   const currentStep = ref(0) // Comienza en 0 (bienvenida)
   const form = ref({
     name: '',
+    secondaryCharacters: [],
     story: '',
     email: '',
     receiveAll: true,
@@ -143,6 +149,7 @@
   const progressSteps = [
     { icon: '👋', label: 'Bienvenida' },
     { icon: '✏️', label: 'Nombre' },
+    { icon: '👥', label: 'Personajes' },
     { icon: '📖', label: 'Cuento' },
     { icon: '✉️', label: 'Email' },
     { icon: '🎁', label: 'Newsletter' },

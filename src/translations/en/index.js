@@ -256,5 +256,10 @@ export default {
   'page.custom.draft.continue': 'Continue',
   'page.custom.draft.discard': 'Discard',
   'page.custom.draft.close': 'Close',
-  'page.custom.saving': 'Saving...'
+  'page.custom.saving': 'Saving...',
+
+  // Custom Story Flow - Secondary Characters
+  'page.custom.step.name.protagonist': 'Protagonist (Main Character)',
+  'page.custom.step.name.secondary': 'Secondary Characters (Optional)',
+  'page.custom.step.name.add': 'Add another character'
 }
