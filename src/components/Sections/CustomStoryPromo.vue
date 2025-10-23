@@ -1,70 +1,72 @@
 <template>
-  <div class="custom-story-promo">
-    <div class="custom-story-promo__content">
-      <div class="custom-story-promo__icon">
-        <img
-          src="/assets/custom/icon-sparkles.webp"
-          alt="Magia"
-          class="custom-story-promo__icon-img"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
+  <div class="custom-story-promo-wrapper">
+    <div class="custom-story-promo">
+      <div class="custom-story-promo__content">
+        <div class="custom-story-promo__icon">
+          <img
+            src="/assets/custom/icon-sparkles.webp"
+            alt="Magia"
+            class="custom-story-promo__icon-img"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
 
-      <div class="custom-story-promo__info">
-        <p class="custom-story-promo__badge">
-          {{ t('section.custom.badge') }}
-        </p>
-        <h2 class="custom-story-promo__title">
-          {{ t('section.custom.title') }}
-        </h2>
-        <p class="custom-story-promo__description">
-          {{ t('section.custom.description') }}
-        </p>
+        <div class="custom-story-promo__info">
+          <p class="custom-story-promo__badge">
+            {{ t('section.custom.badge') }}
+          </p>
+          <h2 class="custom-story-promo__title">
+            {{ t('section.custom.title') }}
+          </h2>
+          <p class="custom-story-promo__description">
+            {{ t('section.custom.description') }}
+          </p>
 
-        <div class="custom-story-promo__benefits">
-          <div class="custom-story-promo__benefit">
-            <img
-              src="/assets/custom/icon-gift.webp"
-              alt="Gratuito"
-              class="custom-story-promo__benefit-icon"
-              loading="lazy"
-              decoding="async"
-            />
-            <span>{{ t('section.custom.benefit1') }}</span>
-          </div>
-          <div class="custom-story-promo__benefit">
-            <img
-              src="/assets/custom/icon-lightning.webp"
-              alt="Rápido"
-              class="custom-story-promo__benefit-icon"
-              loading="lazy"
-              decoding="async"
-            />
-            <span>{{ t('section.custom.benefit2') }}</span>
-          </div>
-          <div class="custom-story-promo__benefit">
-            <img
-              src="/assets/custom/icon-envelope.webp"
-              alt="Personalizado"
-              class="custom-story-promo__benefit-icon"
-              loading="lazy"
-              decoding="async"
-            />
-            <span>{{ t('section.custom.benefit3') }}</span>
+          <div class="custom-story-promo__benefits">
+            <div class="custom-story-promo__benefit">
+              <img
+                src="/assets/custom/icon-gift.webp"
+                alt="Gratuito"
+                class="custom-story-promo__benefit-icon"
+                loading="lazy"
+                decoding="async"
+              />
+              <span>{{ t('section.custom.benefit1') }}</span>
+            </div>
+            <div class="custom-story-promo__benefit">
+              <img
+                src="/assets/custom/icon-lightning.webp"
+                alt="Rápido"
+                class="custom-story-promo__benefit-icon"
+                loading="lazy"
+                decoding="async"
+              />
+              <span>{{ t('section.custom.benefit2') }}</span>
+            </div>
+            <div class="custom-story-promo__benefit">
+              <img
+                src="/assets/custom/icon-envelope.webp"
+                alt="Personalizado"
+                class="custom-story-promo__benefit-icon"
+                loading="lazy"
+                decoding="async"
+              />
+              <span>{{ t('section.custom.benefit3') }}</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="custom-story-promo__cta">
-      <a
-        :href="customStoryUrl"
-        class="custom-story-promo__button"
-      >
-        <span>{{ t('section.custom.cta') }}</span>
-        <span class="custom-story-promo__arrow">→</span>
-      </a>
+      <div class="custom-story-promo__cta">
+        <a
+          :href="customStoryUrl"
+          class="custom-story-promo__button"
+        >
+          <span>{{ t('section.custom.cta') }}</span>
+          <span class="custom-story-promo__arrow">→</span>
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -76,18 +78,26 @@
 </script>
 
 <style scoped>
+  .custom-story-promo-wrapper {
+    margin-bottom: var(--v-unit-8);
+    padding: var(--v-unit-4);
+    background: var(--v-color-surface-low);
+    border-radius: var(--v-radius-xl);
+    border: 1px solid rgba(var(--v-color-primary-rgb), 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
   .custom-story-promo {
     display: grid;
     grid-template-columns: 1fr auto;
     gap: var(--v-unit-6);
     align-items: center;
     padding: var(--v-unit-6);
-    margin-bottom: var(--v-unit-8);
     background: linear-gradient(135deg,
       rgba(var(--v-color-primary-rgb), 0.12) 0%,
       rgba(var(--v-color-accent-primary-rgb), 0.08) 100%);
     border: 2px solid rgba(var(--v-color-primary-rgb), 0.25);
-    border-radius: var(--v-radius-xl);
+    border-radius: var(--v-radius-lg);
     box-shadow: 0 8px 32px rgba(var(--v-color-primary-rgb), 0.12),
                 inset 0 1px 0 rgba(255, 255, 255, 0.2);
     overflow: hidden;
@@ -286,11 +296,15 @@
   }
 
   @media (max-width: 768px) {
+    .custom-story-promo-wrapper {
+      padding: var(--v-unit-3);
+      margin-bottom: var(--v-unit-6);
+    }
+
     .custom-story-promo {
       grid-template-columns: 1fr;
       gap: var(--v-unit-4);
       padding: var(--v-unit-4);
-      margin-bottom: var(--v-unit-6);
     }
 
     .custom-story-promo__content {
@@ -341,6 +355,10 @@
   }
 
   @media (max-width: 480px) {
+    .custom-story-promo-wrapper {
+      padding: var(--v-unit-2);
+    }
+
     .custom-story-promo {
       padding: var(--v-unit-3);
     }
