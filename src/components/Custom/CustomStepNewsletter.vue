@@ -2,7 +2,7 @@
   <div class="custom-step-newsletter">
     <div class="custom-step-newsletter__image">
       <img
-        src="/assets/custom/treasure-newsletter-1200.webp"
+        src="/assets/custom/treasure-newsletter.webp"
         alt="Treasure newsletter"
         class="custom-step-newsletter__img"
         loading="lazy"
@@ -17,34 +17,20 @@
 
       <p class="custom-step-newsletter__subtitle">
         {{
-          t('page.custom.step.newsletter.subtitle') ||
-          'Recibe más cuentos mágicos cada mes en tu email'
+          t('page.custom.step.newsletter.subtitle')
         }}
       </p>
 
       <div class="custom-step-newsletter__card">
-        <div class="custom-step-newsletter__card-icon">🎁</div>
         <h3 class="custom-step-newsletter__card-title">
-          {{ t('page.custom.step.newsletter.title') || 'Newsletter Mensual' }}
+          {{ t('page.custom.step.newsletter.title') }}
         </h3>
 
         <ul class="custom-step-newsletter__benefits">
-          <li>
-            <span class="custom-step-newsletter__benefit-icon">✓</span>
-            {{ t('page.custom.step.newsletter.benefit1') || 'Nuevos cuentos cada mes' }}
-          </li>
-          <li>
-            <span class="custom-step-newsletter__benefit-icon">✓</span>
-            {{ t('page.custom.step.newsletter.benefit2') || 'Historias exclusivas' }}
-          </li>
-          <li>
-            <span class="custom-step-newsletter__benefit-icon">✓</span>
-            {{ t('page.custom.step.newsletter.benefit3') || 'Actividades y juegos' }}
-          </li>
-          <li>
-            <span class="custom-step-newsletter__benefit-icon">✓</span>
-            {{ t('page.custom.step.newsletter.benefit4') || 'Sin spam, sin publicidad' }}
-          </li>
+          <li>{{ t('page.custom.step.newsletter.benefit1') }}</li>
+          <li>{{ t('page.custom.step.newsletter.benefit2') }}</li>
+          <li>{{ t('page.custom.step.newsletter.benefit3') }}</li>
+          <li>{{ t('page.custom.step.newsletter.benefit4') }}</li>
         </ul>
       </div>
 
@@ -65,7 +51,7 @@
             ></span>
           </span>
           <span class="custom-step-newsletter__option-label">
-            {{ t('page.custom.button.accept') || 'Sí, suscríbeme' }}
+            {{ t('page.custom.button.accept') }}
           </span>
         </button>
 
@@ -85,15 +71,14 @@
             ></span>
           </span>
           <span class="custom-step-newsletter__option-label">
-            {{ t('page.custom.button.decline') || 'No, gracias' }}
+            {{ t('page.custom.button.decline') }}
           </span>
         </button>
       </div>
 
       <p class="custom-step-newsletter__disclaimer">
         {{
-          t('page.custom.step.newsletter.disclaimer') ||
-          'Puedes darte de baja en cualquier momento desde los emails que recibas'
+          t('page.custom.step.newsletter.disclaimer')
         }}
       </p>
     </div>
@@ -127,12 +112,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: var(--v-radius-xl);
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(var(--v-color-primary-rgb), 0.15);
+    background: linear-gradient(135deg, rgba(var(--v-color-primary-rgb), 0.05), rgba(var(--v-color-accent-primary-rgb), 0.03));
   }
 
   .custom-step-newsletter__img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   .custom-step-newsletter__form {
@@ -160,18 +149,11 @@
     background: linear-gradient(135deg, rgba(var(--v-color-primary-rgb), 0.1), rgba(var(--v-color-accent-primary-rgb), 0.05));
     border: 1px solid rgba(var(--v-color-primary-rgb), 0.2);
     border-radius: var(--v-radius-lg);
-    text-align: center;
-  }
-
-  .custom-step-newsletter__card-icon {
-    font-size: 32px;
-    margin-bottom: var(--v-unit-2);
-    display: block;
   }
 
   .custom-step-newsletter__card-title {
-    margin: 0 0 var(--v-unit-3) 0;
-    font-size: 18px;
+    margin: 0 0 var(--v-unit-2) 0;
+    font-size: 16px;
     font-weight: 700;
     color: var(--v-color-text-high);
   }
@@ -181,34 +163,25 @@
     margin: 0;
     padding: 0;
     display: grid;
-    gap: var(--v-unit-2);
-    text-align: left;
+    gap: var(--v-unit-1);
   }
 
   .custom-step-newsletter__benefits li {
-    display: flex;
-    align-items: center;
-    gap: var(--v-unit-2);
     font-size: 13px;
     color: var(--v-color-text-medium);
   }
 
-  .custom-step-newsletter__benefit-icon {
-    color: var(--v-color-primary);
-    font-weight: 700;
-    flex-shrink: 0;
-  }
-
   .custom-step-newsletter__options {
     display: grid;
-    gap: var(--v-unit-3);
+    grid-template-columns: 1fr 1fr;
+    gap: var(--v-unit-2);
   }
 
   .custom-step-newsletter__option {
     display: flex;
     align-items: center;
-    gap: var(--v-unit-3);
-    padding: var(--v-unit-3);
+    gap: var(--v-unit-2);
+    padding: var(--v-unit-2) var(--v-unit-3);
     background: var(--v-color-background);
     border: 2px solid rgba(var(--v-color-primary-rgb), 0.2);
     border-radius: var(--v-radius-lg);

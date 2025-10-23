@@ -3,7 +3,7 @@
     <div class="custom-step-name__image">
       <img
         v-if="!modelValue"
-        src="/assets/custom/character-waiting-1200.webp"
+        src="/assets/custom/character-waiting.webp"
         alt="Character waiting"
         class="custom-step-name__img"
         loading="lazy"
@@ -11,7 +11,7 @@
       />
       <img
         v-else
-        src="/assets/custom/character-alive-1200.webp"
+        src="/assets/custom/character-alive.webp"
         alt="Character with life"
         class="custom-step-name__img custom-step-name__img--active"
         loading="lazy"
@@ -24,43 +24,80 @@
         {{ t('page.custom.input.name') }}
       </h2>
 
-      <p class="custom-step-name__subtitle">
-        {{
-          t('page.custom.step.name.subtitle') ||
-          'Este será el nombre del protagonista de tu cuento'
-        }}
-      </p>
+      <!-- Protagonist Section -->
+      <div class="custom-step-name__section">
+        <p class="custom-step-name__section-label">
+          {{ t('page.custom.step.name.protagonist') }}
+        </p>
 
-      <VInput
-        :modelValue="modelValue"
-        @update:modelValue="$emit('update:modelValue', $event)"
-        :placeholder="
-          t('page.custom.step.name.placeholder') || 'ej: Lucas, Elena, Milo...'
-        "
-        type="text"
-        maxlength="50"
-        :aria-label="t('page.custom.input.name')"
-        class="custom-step-name__input"
-      />
+        <p class="custom-step-name__subtitle">
+          {{ t('page.custom.step.name.subtitle') }}
+        </p>
 
-      <div class="custom-step-name__counter">
-        <span class="custom-step-name__counter-text">
-          {{ modelValue.length }} / 50
-        </span>
-        <div class="custom-step-name__counter-bar">
-          <div
-            class="custom-step-name__counter-fill"
-            :style="{ width: `${(modelValue.length / 50) * 100}%` }"
-          ></div>
+        <VInput
+          :modelValue="modelValue"
+          @update:modelValue="$emit('update:modelValue', $event)"
+          :placeholder="t('page.custom.step.name.placeholder')"
+          type="text"
+          maxlength="50"
+          :aria-label="t('page.custom.input.name')"
+          class="custom-step-name__input"
+        />
+
+        <div class="custom-step-name__counter">
+          <span class="custom-step-name__counter-text">
+            {{ modelValue.length }} / 50
+          </span>
+          <div class="custom-step-name__counter-bar">
+            <div
+              class="custom-step-name__counter-fill"
+              :style="{ width: `${(modelValue.length / 50) * 100}%` }"
+            ></div>
+          </div>
         </div>
+      </div>
+
+      <!-- Secondary Characters Section -->
+      <div class="custom-step-name__section custom-step-name__section--secondary">
+        <p class="custom-step-name__section-label">
+          {{ t('page.custom.step.name.secondary') }}
+        </p>
+
+        <div class="custom-step-name__secondary-list">
+          <div
+            v-for="(character, index) in secondaryCharacters"
+            :key="index"
+            class="custom-step-name__character-input"
+          >
+            <VInput
+              :modelValue="character"
+              @update:modelValue="updateSecondary(index, $event)"
+              :placeholder="`Personaje secundario ${index + 1}...`"
+              maxlength="50"
+              class="custom-step-name__input custom-step-name__input--secondary"
+            />
+            <button
+              @click="removeSecondary(index)"
+              class="custom-step-name__remove-btn"
+              :aria-label="`Eliminar personaje ${index + 1}`"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+
+        <button
+          v-if="secondaryCharacters.length < 5"
+          @click="addSecondary"
+          class="custom-step-name__add-btn"
+        >
+          + {{ t('page.custom.step.name.add') }}
+        </button>
       </div>
 
       <div v-if="showSuggestions" class="custom-step-name__suggestions">
         <p class="custom-step-name__suggestions-title">
-          {{
-            t('page.custom.step.name.suggestions') ||
-            'Nombres populares:'
-          }}
+          {{ t('page.custom.step.name.suggestions') }}
         </p>
         <div class="custom-step-name__suggestions-list">
           <button
@@ -77,10 +114,7 @@
       <transition name="fade">
         <div v-if="modelValue" class="custom-step-name__preview">
           <p class="custom-step-name__preview-label">
-            {{
-              t('page.custom.step.name.preview') ||
-              'Así aparecerá el nombre:'
-            }}
+            {{ t('page.custom.step.name.preview') }}
           </p>
           <h3 class="custom-step-name__preview-name">{{ modelValue }}</h3>
         </div>
@@ -98,10 +132,14 @@
     modelValue: {
       type: String,
       default: ''
+    },
+    secondaryCharacters: {
+      type: Array,
+      default: () => []
     }
   })
 
-  defineEmits(['update:modelValue'])
+  const emit = defineEmits(['update:modelValue', 'update:secondaryCharacters'])
 
   const suggestedNames = [
     'Lucas',
@@ -115,6 +153,32 @@
   ]
 
   const showSuggestions = computed(() => !props.modelValue)
+
+  /**
+   * Add a new secondary character
+   */
+  const addSecondary = () => {
+    if (props.secondaryCharacters.length < 5) {
+      emit('update:secondaryCharacters', [...props.secondaryCharacters, ''])
+    }
+  }
+
+  /**
+   * Update a secondary character
+   */
+  const updateSecondary = (index, value) => {
+    const updated = [...props.secondaryCharacters]
+    updated[index] = value
+    emit('update:secondaryCharacters', updated)
+  }
+
+  /**
+   * Remove a secondary character
+   */
+  const removeSecondary = (index) => {
+    const updated = props.secondaryCharacters.filter((_, i) => i !== index)
+    emit('update:secondaryCharacters', updated)
+  }
 </script>
 
 <style scoped>
@@ -131,6 +195,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: var(--v-radius-xl);
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(var(--v-color-primary-rgb), 0.15);
+    background: linear-gradient(135deg, rgba(var(--v-color-primary-rgb), 0.05), rgba(var(--v-color-accent-primary-rgb), 0.03));
   }
 
   .custom-step-name__img {
@@ -276,6 +344,86 @@
     font-size: 28px;
     font-weight: 700;
     color: var(--v-color-primary);
+  }
+
+  .custom-step-name__section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--v-unit-2);
+    padding-bottom: var(--v-unit-4);
+    border-bottom: 1px solid rgba(var(--v-color-primary-rgb), 0.1);
+  }
+
+  .custom-step-name__section--secondary {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .custom-step-name__section-label {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--v-color-text-high);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .custom-step-name__secondary-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--v-unit-2);
+  }
+
+  .custom-step-name__character-input {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--v-unit-2);
+    align-items: center;
+  }
+
+  .custom-step-name__input--secondary {
+    font-size: 14px;
+  }
+
+  .custom-step-name__remove-btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 2px solid var(--v-color-error);
+    border-radius: var(--v-radius-md);
+    background: transparent;
+    color: var(--v-color-error);
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .custom-step-name__remove-btn:hover {
+    background: var(--v-color-error);
+    color: white;
+    transform: scale(1.05);
+  }
+
+  .custom-step-name__add-btn {
+    align-self: flex-start;
+    padding: var(--v-unit-2) var(--v-unit-3);
+    border: 2px dashed var(--v-color-primary);
+    border-radius: var(--v-radius-md);
+    background: transparent;
+    color: var(--v-color-primary);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .custom-step-name__add-btn:hover {
+    background: rgba(var(--v-color-primary-rgb), 0.05);
+    transform: translateY(-2px);
   }
 
   .fade-enter-active,

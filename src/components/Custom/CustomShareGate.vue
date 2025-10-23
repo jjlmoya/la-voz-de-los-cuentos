@@ -2,29 +2,38 @@
   <div class="custom-share-gate">
     <div class="custom-share-gate__container">
       <div class="custom-share-gate__animation">
-        <div class="custom-share-gate__icon">🔒</div>
+        <img
+          src="/assets/custom/icon-lock.webp"
+          alt="Compartir"
+          class="custom-share-gate__icon"
+          loading="lazy"
+          decoding="async"
+        />
         <div class="custom-share-gate__stars">
-          <span v-for="i in 5" :key="i" class="custom-share-gate__star"
-            >✨</span
-          >
+          <img
+            v-for="i in 5"
+            :key="i"
+            src="/assets/custom/icon-sparkles.webp"
+            alt="Chispa"
+            class="custom-share-gate__star"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
 
       <h2 class="custom-share-gate__title">
-        {{ t('page.custom.sharegate.title') || 'Uno más para desbloquear' }}
+        {{ t('page.custom.sharegate.title') }}
       </h2>
 
       <p class="custom-share-gate__description">
-        {{
-          t('page.custom.sharegate.description') ||
-          'Ayúdanos a compartir la magia con más gente. Comparte la página o un cuento/canción y desbloquea el acceso a crear tu historia personalizada.'
-        }}
+        {{ t('page.custom.sharegate.description') }}
       </p>
 
       <div class="custom-share-gate__options">
         <div class="custom-share-gate__option">
           <h3 class="custom-share-gate__option-title">
-            {{ t('page.custom.sharegate.option1') || 'Opción 1: Comparte esta página' }}
+            {{ t('page.custom.sharegate.option1') }}
           </h3>
           <SocialShare
             :url="mainPageUrl"
@@ -36,30 +45,22 @@
         </div>
 
         <div class="custom-share-gate__divider">
-          <span>{{ t('page.custom.sharegate.or') || 'O' }}</span>
+          <span>{{ t('page.custom.sharegate.or') }}</span>
         </div>
 
         <div class="custom-share-gate__option">
           <h3 class="custom-share-gate__option-title">
-            {{
-              t('page.custom.sharegate.option2') || 'Opción 2: Comparte una historia o canción'
-            }}
+            {{ t('page.custom.sharegate.option2') }}
           </h3>
           <p class="custom-share-gate__option-description">
-            {{
-              t('page.custom.sharegate.option2.description') ||
-              'Ve a cualquier cuento o canción y comparte desde allí'
-            }}
+            {{ t('page.custom.sharegate.option2.description') }}
           </p>
           <VButton
             @click="goToStories"
             variant="secondary"
             class="custom-share-gate__button"
           >
-            {{
-              t('page.custom.sharegate.exploreStories') ||
-              'Explorar Cuentos'
-            }}
+            {{ t('page.custom.sharegate.exploreStories') }}
             →
           </VButton>
         </div>
@@ -69,18 +70,19 @@
         <div class="custom-share-gate__stat">
           <div class="custom-share-gate__stat-number">{{ shareCount }}</div>
           <div class="custom-share-gate__stat-label">
-            {{
-              t('page.custom.sharegate.timesShared') || 'veces compartido'
-            }}
+            {{ t('page.custom.sharegate.timesShared') }}
           </div>
         </div>
         <div class="custom-share-gate__stat">
-          <div class="custom-share-gate__stat-icon">📍</div>
+          <img
+            src="/assets/custom/icon-pin.webp"
+            alt="Personas"
+            class="custom-share-gate__stat-icon"
+            loading="lazy"
+            decoding="async"
+          />
           <div class="custom-share-gate__stat-label">
-            {{
-              t('page.custom.sharegate.helped') ||
-              'Personas ayudadas'
-            }}
+            {{ t('page.custom.sharegate.helped') }}
           </div>
         </div>
       </div>
@@ -89,20 +91,21 @@
         v-if="hasShared"
         class="custom-share-gate__success"
       >
-        <div class="custom-share-gate__success-icon">🎉</div>
+        <img
+          src="/assets/custom/icon-sparkles.webp"
+          alt="Éxito"
+          class="custom-share-gate__success-icon"
+          loading="lazy"
+          decoding="async"
+        />
         <p class="custom-share-gate__success-text">
-          {{
-            t('page.custom.sharegate.success') ||
-            '¡Gracias! Ya puedes continuar con tu cuento.'
-          }}
+          {{ t('page.custom.sharegate.success') }}
         </p>
         <VButton
           @click="$emit('proceed')"
           class="custom-share-gate__success-button"
         >
-          {{
-            t('page.custom.sharegate.continue') || 'Continuar'
-          }}
+          {{ t('page.custom.sharegate.continue') }}
         </VButton>
       </div>
     </div>
@@ -134,10 +137,7 @@
   const emit = defineEmits(['share-success', 'proceed'])
 
   const shareTitle = computed(() => {
-    return (
-      t('page.custom.sharegate.shareText') ||
-      'Crea tu propio cuento personalizado en La Voz de los Cuentos'
-    )
+    return t('page.custom.sharegate.shareText')
   })
 
   const onShareSuccess = () => {
@@ -174,7 +174,10 @@
   }
 
   .custom-share-gate__icon {
-    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    display: block;
     animation: bounce 2s ease-in-out infinite;
   }
 
@@ -186,7 +189,10 @@
 
   .custom-share-gate__star {
     position: absolute;
-    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
     animation: float 3s ease-in-out infinite;
     opacity: 0.6;
   }
@@ -327,8 +333,11 @@
   }
 
   .custom-share-gate__stat-icon {
-    font-size: 28px;
-    margin-bottom: var(--v-unit-1);
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto var(--v-unit-1) auto;
   }
 
   .custom-share-gate__stat-label {
@@ -346,9 +355,11 @@
   }
 
   .custom-share-gate__success-icon {
-    font-size: 48px;
-    margin-bottom: var(--v-unit-2);
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
     display: block;
+    margin: 0 auto var(--v-unit-2) auto;
     animation: bounce 0.6s ease;
   }
 

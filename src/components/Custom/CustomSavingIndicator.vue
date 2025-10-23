@@ -29,7 +29,7 @@
   })
 
   const saveText = computed(() => {
-    return t('page.custom.saving') || 'Guardando...'
+    return t('page.custom.saving')
   })
 </script>
 

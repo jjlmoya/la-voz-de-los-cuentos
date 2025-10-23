@@ -2,7 +2,7 @@
   <div class="custom-step-story">
     <div class="custom-step-story__image">
       <img
-        src="/assets/custom/magic-book-writing-1200.webp"
+        src="/assets/custom/magic-book-writing.webp"
         alt="Magic book writing"
         class="custom-step-story__img"
         loading="lazy"
@@ -18,8 +18,7 @@
 
       <p class="custom-step-story__subtitle">
         {{
-          t('page.custom.step.story.subtitle') ||
-          'Describe qué tipo de cuento quieres. Puedes ser creativo y detallar tanto como desees.'
+          t('page.custom.step.story.subtitle')
         }}
       </p>
 
@@ -27,8 +26,7 @@
         :modelValue="modelValue"
         @input="$emit('update:modelValue', $event.target.value)"
         :placeholder="
-          t('page.custom.step.story.placeholder') ||
-          'ej: Un cuento de aventura donde el protagonista viaja a un bosque mágico y conoce criaturas fantásticas...'
+          t('page.custom.step.story.placeholder')
         "
         maxlength="2000"
         class="custom-step-story__textarea"
@@ -47,34 +45,17 @@
         </div>
       </div>
 
-      <div
-        v-if="showSuggestions"
-        class="custom-step-story__suggestions"
-      >
-        <p class="custom-step-story__suggestions-title">
-          {{
-            t('page.custom.step.story.themes') || 'Temas populares:'
-          }}
-        </p>
-        <div class="custom-step-story__suggestions-list">
-          <button
-            v-for="theme in themes"
-            :key="theme"
-            @click="insertTheme(theme)"
-            class="custom-step-story__suggestion-chip"
-          >
-            {{ theme.icon }} {{ theme.name }}
-          </button>
-        </div>
-      </div>
 
       <div v-if="modelValue" class="custom-step-story__info">
         <p class="custom-step-story__info-text">
-          <span class="custom-step-story__info-icon">✓</span>
-          {{
-            t('page.custom.step.story.info') ||
-            'Tu descripción será utilizada para crear una historia única y personalizada'
-          }}
+          <img
+            src="/assets/custom/icon-check-circle.webp"
+            alt="Completado"
+            class="custom-step-story__info-icon-img"
+            loading="lazy"
+            decoding="async"
+          />
+          {{ t('page.custom.step.story.info') }}
         </p>
       </div>
     </div>
@@ -93,36 +74,6 @@
   })
 
   const emit = defineEmits(['update:modelValue'])
-
-  const themes = [
-    { icon: '🏰', name: t('page.custom.theme.adventure') || 'Aventura' },
-    { icon: '🧙', name: t('page.custom.theme.fantasy') || 'Fantasía' },
-    { icon: '🦁', name: t('page.custom.theme.animals') || 'Animales' },
-    { icon: '🌲', name: t('page.custom.theme.nature') || 'Naturaleza' },
-    { icon: '🚀', name: t('page.custom.theme.space') || 'Espacio' },
-    { icon: '🏴‍☠️', name: t('page.custom.theme.pirates') || 'Piratas' },
-    { icon: '👑', name: t('page.custom.theme.royalty') || 'Realeza' },
-    { icon: '🎪', name: t('page.custom.theme.circus') || 'Circo' }
-  ]
-
-  const showSuggestions = computed(() => !props.modelValue)
-
-  const insertTheme = (theme) => {
-    const text = props.modelValue
-    // Si hay texto, agregar al final
-    if (text) {
-      const insertion = ` ${theme.name.toLowerCase()}`
-      emit('update:modelValue', text + insertion)
-    } else {
-      // Si está vacío, inicializar con una plantilla
-      const template = `Un cuento de ${theme.name.toLowerCase()} donde...`
-      emit('update:modelValue', template)
-      // Focus en el textarea para que el usuario continúe escribiendo
-      setTimeout(() => {
-        document.querySelector('.custom-step-story__textarea')?.focus()
-      }, 0)
-    }
-  }
 </script>
 
 <style scoped>
@@ -139,6 +90,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: var(--v-radius-xl);
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(var(--v-color-primary-rgb), 0.15);
+    background: linear-gradient(135deg, rgba(var(--v-color-primary-rgb), 0.05), rgba(var(--v-color-accent-primary-rgb), 0.03));
   }
 
   .custom-step-story__img {
@@ -227,49 +182,6 @@
     transition: width 0.3s ease;
   }
 
-  .custom-step-story__suggestions {
-    background: rgba(var(--v-color-primary-rgb), 0.05);
-    padding: var(--v-unit-3);
-    border-radius: var(--v-radius-md);
-    border: 1px solid rgba(var(--v-color-primary-rgb), 0.1);
-  }
-
-  .custom-step-story__suggestions-title {
-    margin: 0 0 var(--v-unit-2) 0;
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--v-color-primary);
-    text-transform: uppercase;
-  }
-
-  .custom-step-story__suggestions-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: var(--v-unit-2);
-  }
-
-  .custom-step-story__suggestion-chip {
-    padding: var(--v-unit-2) var(--v-unit-3);
-    background: transparent;
-    border: 1px solid var(--v-color-primary);
-    border-radius: var(--v-radius-md);
-    color: var(--v-color-primary);
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    justify-content: center;
-  }
-
-  .custom-step-story__suggestion-chip:hover {
-    background: var(--v-color-primary);
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(var(--v-color-primary-rgb), 0.2);
-  }
 
   .custom-step-story__info {
     padding: var(--v-unit-3);
@@ -288,11 +200,12 @@
     gap: var(--v-unit-2);
   }
 
-  .custom-step-story__info-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
+  .custom-step-story__info-icon-img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
   }
 
   @media (max-width: 768px) {
@@ -309,8 +222,5 @@
       min-height: 150px;
     }
 
-    .custom-step-story__suggestions-list {
-      grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-    }
   }
 </style>

@@ -145,16 +145,15 @@
   const draft = useCustomDraft(form)
   const shareTracking = useShareTracking()
 
-  // Progress steps
+  // Progress steps - basado en currentStep (0-6)
   const progressSteps = [
-    { icon: '👋', label: 'Bienvenida' },
-    { icon: '✏️', label: 'Nombre' },
-    { icon: '👥', label: 'Personajes' },
-    { icon: '📖', label: 'Cuento' },
-    { icon: '✉️', label: 'Email' },
-    { icon: '🎁', label: 'Newsletter' },
-    { icon: '🔄', label: 'Compartir' },
-    { icon: '🎉', label: 'Éxito' }
+    { icon: 'welcome', label: 'Bienvenida' },
+    { icon: 'name', label: 'Nombre' },
+    { icon: 'story', label: 'Cuento' },
+    { icon: 'email', label: 'Email' },
+    { icon: 'newsletter', label: 'Newsletter' },
+    { icon: 'share', label: 'Compartir' },
+    { icon: 'success', label: 'Éxito' }
   ]
 
   /**
@@ -170,7 +169,7 @@
    * Siguiente paso
    */
   const nextStep = () => {
-    if (currentStep.value < 6) {
+    if (currentStep.value < progressSteps.length - 1) {
       currentStep.value++
       form.value.currentStep = currentStep.value
       draft.autoSave()
@@ -221,12 +220,21 @@
     errorMessage.value = false
 
     try {
+      // Preparar datos para envío
+      const formData = { ...form.value }
+
+      // Concatenar nombre principal con personajes secundarios
+      if (formData.secondaryCharacters && formData.secondaryCharacters.length > 0) {
+        const allCharacters = [formData.name, ...formData.secondaryCharacters.filter(c => c.trim())]
+        formData.name = allCharacters.join(', ')
+      }
+
       // Enviar a Google Sheets
       const response = await fetch(
         'https://script.google.com/macros/s/AKfycbyXxWrBmQDXCDIg5v-bc4YnkDU5YHu43a8HeGVNdoknYDK50bBnLg9gcAbP4Myw14lr/exec',
         {
           method: 'POST',
-          body: JSON.stringify(form.value),
+          body: JSON.stringify(formData),
           headers: {
             'Content-Type': 'text/plain;charset=utf-8'
           }

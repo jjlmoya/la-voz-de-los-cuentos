@@ -8,7 +8,7 @@
         <div class="custom-draft-banner__icon">📝</div>
         <div class="custom-draft-banner__info">
           <p class="custom-draft-banner__title">
-            {{ t('page.custom.draft.saved') || 'Tienes un borrador guardado' }}
+            {{ t('page.custom.draft.saved') }}
           </p>
           <p class="custom-draft-banner__details">
             {{ draftInfo.lastModified }}
@@ -24,20 +24,20 @@
           class="custom-draft-banner__button custom-draft-banner__button--primary"
           @click="onLoadDraft"
         >
-          {{ t('page.custom.draft.continue') || 'Continuar' }}
+          {{ t('page.custom.draft.continue') }}
         </button>
         <button
           class="custom-draft-banner__button custom-draft-banner__button--secondary"
           @click="onDiscardDraft"
         >
-          {{ t('page.custom.draft.discard') || 'Descartar' }}
+          {{ t('page.custom.draft.discard') }}
         </button>
       </div>
 
       <button
         class="custom-draft-banner__close"
         @click="closeBanner"
-        :aria-label="t('page.custom.draft.close') || 'Cerrar'"
+        :aria-label="t('page.custom.draft.close')"
       >
         ✕
       </button>

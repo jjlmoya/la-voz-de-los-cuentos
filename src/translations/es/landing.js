@@ -3,6 +3,10 @@ export default {
 
   // Custom Story Flow - Welcome
   'page.custom.welcome.start': 'Comenzar',
+  'page.custom.welcome.badge': 'Crea tu historia mágica',
+  'page.custom.welcome.benefit1': 'Completamente gratuito',
+  'page.custom.welcome.benefit2': 'Rápido y fácil',
+  'page.custom.welcome.benefit3': '100% personalizado',
   'page.custom.welcome.step1.title': 'Dale un nombre',
   'page.custom.welcome.step1.description': 'Elige el nombre del protagonista de tu cuento',
   'page.custom.welcome.step2.title': 'Cuéntanos tu historia',

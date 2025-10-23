@@ -2,16 +2,22 @@
   <div class="custom-success">
     <div class="custom-success__animation">
       <img
-        src="/assets/custom/success-celebration-1200.webp"
+        src="/assets/custom/success-celebration.webp"
         alt="Success celebration"
         class="custom-success__image"
         loading="lazy"
         decoding="async"
       />
       <div class="custom-success__confetti">
-        <span v-for="i in 20" :key="i" class="custom-success__confetti-piece"
-          >✨</span
-        >
+        <img
+          v-for="i in 20"
+          :key="i"
+          src="/assets/custom/icon-sparkles.webp"
+          alt="Celebración"
+          class="custom-success__confetti-piece"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
     </div>
 
@@ -21,81 +27,37 @@
       </h2>
 
       <p class="custom-success__subtitle">
-        {{
-          t('page.custom.success.message') ||
-          '¡Nos pondremos a ello enseguida! Tu cuento estará listo en 3-5 días.'
-        }}
+        {{ t('page.custom.success.message') }}
       </p>
 
-      <div class="custom-success__steps">
-        <div class="custom-success__step">
-          <div class="custom-success__step-number">1</div>
-          <h3 class="custom-success__step-title">
-            {{ t('page.custom.success.step1') || 'Solicitud Recibida' }}
-          </h3>
-          <p class="custom-success__step-description">
-            {{
-              t('page.custom.success.step1.desc') ||
-              'Hemos guardado todos los detalles de tu cuento'
-            }}
-          </p>
-        </div>
-
-        <div class="custom-success__step">
-          <div class="custom-success__step-number">2</div>
-          <h3 class="custom-success__step-title">
-            {{ t('page.custom.success.step2') || 'Creación' }}
-          </h3>
-          <p class="custom-success__step-description">
-            {{
-              t('page.custom.success.step2.desc') ||
-              'Nuestros creadores escriben tu historia'
-            }}
-          </p>
-        </div>
-
-        <div class="custom-success__step">
-          <div class="custom-success__step-number">3</div>
-          <h3 class="custom-success__step-title">
-            {{ t('page.custom.success.step3') || 'Entrega' }}
-          </h3>
-          <p class="custom-success__step-description">
-            {{
-              t('page.custom.success.step3.desc') ||
-              'Te lo enviaremos por email completamente listo'
-            }}
-          </p>
-        </div>
-      </div>
-
       <div class="custom-success__info">
-        <p class="custom-success__info-icon">📧</p>
+        <img
+          src="/assets/custom/icon-email-outline.webp"
+          alt="Email"
+          class="custom-success__info-icon"
+          loading="lazy"
+          decoding="async"
+        />
         <p class="custom-success__info-text">
-          {{
-            t('page.custom.success.email') ||
-            'Revisa tu email (incluyendo spam) para el cuento'
-          }}
+          {{ t('page.custom.success.email') }}
         </p>
       </div>
 
       <div class="custom-success__actions">
         <VButton @click="goHome" class="custom-success__button">
-          {{ t('page.custom.success.home') || 'Volver al Inicio' }}
+          {{ t('page.custom.success.home') }}
         </VButton>
         <VButton
           @click="goStories"
           variant="secondary"
           class="custom-success__button"
         >
-          {{ t('page.custom.success.explore') || 'Explorar Cuentos' }}
+          {{ t('page.custom.success.explore') }}
         </VButton>
       </div>
 
       <p class="custom-success__footer">
-        {{
-          t('page.custom.success.footer') ||
-          '¡Gracias por elegirnos! Si tienes dudas, contáctanos.'
-        }}
+        {{ t('page.custom.success.footer') }}
       </p>
     </div>
   </div>
@@ -131,12 +93,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: var(--v-radius-xl);
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(var(--v-color-primary-rgb), 0.15);
+    background: linear-gradient(135deg, rgba(var(--v-color-primary-rgb), 0.05), rgba(var(--v-color-accent-primary-rgb), 0.03));
   }
 
   .custom-success__image {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   .custom-success__confetti {
@@ -149,9 +115,12 @@
 
   .custom-success__confetti-piece {
     position: absolute;
-    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
     opacity: 0;
     animation: float-down 3s ease-in infinite;
+    display: block;
   }
 
   .custom-success__confetti-piece:nth-child(1) {
@@ -210,66 +179,6 @@
     line-height: 1.6;
   }
 
-  .custom-success__steps {
-    display: grid;
-    gap: var(--v-unit-6);
-    padding: var(--v-unit-6);
-    background: linear-gradient(135deg, rgba(var(--v-color-primary-rgb), 0.05), rgba(var(--v-color-accent-primary-rgb), 0.05));
-    border: 2px solid rgba(var(--v-color-primary-rgb), 0.15);
-    border-radius: var(--v-radius-lg);
-    position: relative;
-  }
-
-  .custom-success__steps::before {
-    content: '';
-    position: absolute;
-    left: var(--v-unit-6);
-    top: 80px;
-    bottom: 0;
-    width: 3px;
-    background: linear-gradient(180deg, var(--v-color-primary) 0%, var(--v-color-accent-primary) 100%);
-    border-radius: 2px;
-  }
-
-  .custom-success__step {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: var(--v-unit-4);
-    align-items: flex-start;
-    position: relative;
-    z-index: 1;
-  }
-
-  .custom-success__step-number {
-    width: 52px;
-    height: 52px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, var(--v-color-primary), var(--v-color-accent-primary));
-    color: white;
-    border-radius: 50%;
-    font-weight: 800;
-    font-size: 20px;
-    flex-shrink: 0;
-    box-shadow: 0 4px 12px rgba(var(--v-color-primary-rgb), 0.2);
-    border: 3px solid white;
-  }
-
-  .custom-success__step-title {
-    margin: var(--v-unit-1) 0 var(--v-unit-1) 0;
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--v-color-text-high);
-  }
-
-  .custom-success__step-description {
-    margin: 0;
-    font-size: 14px;
-    color: var(--v-color-text-medium);
-    line-height: 1.5;
-  }
-
   .custom-success__info {
     display: flex;
     align-items: center;
@@ -281,9 +190,12 @@
   }
 
   .custom-success__info-icon {
-    font-size: 28px;
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
     margin: 0;
     flex-shrink: 0;
+    display: block;
   }
 
   .custom-success__info-text {
@@ -323,30 +235,6 @@
 
     .custom-success__actions {
       grid-template-columns: 1fr;
-    }
-
-    .custom-success__steps {
-      padding: var(--v-unit-4);
-      gap: var(--v-unit-5);
-    }
-
-    .custom-success__steps::before {
-      left: var(--v-unit-4);
-      top: 68px;
-    }
-
-    .custom-success__step-number {
-      width: 44px;
-      height: 44px;
-      font-size: 16px;
-    }
-
-    .custom-success__step-title {
-      font-size: 14px;
-    }
-
-    .custom-success__step-description {
-      font-size: 13px;
     }
   }
 </style>

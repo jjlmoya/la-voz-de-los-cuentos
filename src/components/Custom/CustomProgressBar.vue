@@ -8,14 +8,14 @@
           :class="[
             'custom-progress-bar__step',
             {
-              'custom-progress-bar__step--active': currentStep >= index + 1,
-              'custom-progress-bar__step--completed': currentStep > index + 1
+              'custom-progress-bar__step--active': currentStep === index,
+              'custom-progress-bar__step--completed': currentStep > index
             }
           ]"
         >
           <div class="custom-progress-bar__step-icon">
             <img
-              :src="`/assets/custom/icons/progress/icon-${step.icon}.png`"
+              :src="`/assets/custom/icon-${step.icon}.webp`"
               :alt="step.label"
               class="custom-progress-bar__icon-img"
               loading="lazy"
@@ -31,13 +31,13 @@
       <div class="custom-progress-bar__line">
         <div
           class="custom-progress-bar__line-fill"
-          :style="{ width: `${Math.max(0, ((currentStep - 1) / (steps.length - 1)) * 100)}%` }"
+          :style="{ width: `${Math.max(0, (currentStep / (steps.length - 1)) * 100)}%` }"
         ></div>
       </div>
     </div>
 
     <div class="custom-progress-bar__percentage">
-      {{ Math.max(0, Math.round(((currentStep - 1) / (steps.length - 1)) * 100)) }}%
+      {{ Math.max(0, Math.round((currentStep / (steps.length - 1)) * 100)) }}%
     </div>
   </div>
 </template>

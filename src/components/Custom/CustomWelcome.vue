@@ -2,7 +2,7 @@
   <div class="custom-welcome">
     <div class="custom-welcome__hero">
       <img
-        src="/assets/custom/welcome-hero-1200.webp"
+        src="/assets/custom/welcome-hero.webp"
         alt="Welcome to Custom Story"
         class="custom-welcome__image"
         loading="lazy"
@@ -11,7 +11,16 @@
     </div>
 
     <div class="custom-welcome__content">
-      <div class="custom-welcome__badge">✨ Crea tu historia mágica</div>
+      <div class="custom-welcome__badge">
+        <img
+          src="/assets/custom/icon-sparkles.webp"
+          alt="Magia"
+          class="custom-welcome__badge-icon"
+          loading="lazy"
+          decoding="async"
+        />
+        {{ t('page.custom.welcome.badge') }}
+      </div>
 
       <h1 class="custom-welcome__title">
         {{ t('page.custom.h1') }}
@@ -27,7 +36,15 @@
           :key="index"
           class="custom-welcome__step"
         >
-          <div class="custom-welcome__step-icon">{{ step.icon }}</div>
+          <div class="custom-welcome__step-icon">
+            <img
+              :src="`/assets/custom/icon-${step.iconName}.webp`"
+              :alt="step.title"
+              class="custom-welcome__icon-img"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
           <h3 class="custom-welcome__step-title">{{ step.title }}</h3>
           <p class="custom-welcome__step-description">{{ step.description }}</p>
         </div>
@@ -40,23 +57,41 @@
           variant="primary"
           class="custom-welcome__button"
         >
-          {{ t('page.custom.welcome.start') || 'Comenzar' }}
+          {{ t('page.custom.welcome.start') }}
           <span class="custom-welcome__button-arrow">→</span>
         </VButton>
       </div>
 
       <div class="custom-welcome__benefits">
         <div class="custom-welcome__benefit">
-          <span class="custom-welcome__benefit-icon">🎁</span>
-          <span>Completamente gratuito</span>
+          <img
+            src="/assets/custom/icon-gift.webp"
+            alt="Gratuito"
+            class="custom-welcome__benefit-icon-img"
+            loading="lazy"
+            decoding="async"
+          />
+          <span>{{ t('page.custom.welcome.benefit1') }}</span>
         </div>
         <div class="custom-welcome__benefit">
-          <span class="custom-welcome__benefit-icon">⚡</span>
-          <span>Rápido y fácil</span>
+          <img
+            src="/assets/custom/icon-lightning.webp"
+            alt="Rápido"
+            class="custom-welcome__benefit-icon-img"
+            loading="lazy"
+            decoding="async"
+          />
+          <span>{{ t('page.custom.welcome.benefit2') }}</span>
         </div>
         <div class="custom-welcome__benefit">
-          <span class="custom-welcome__benefit-icon">🎭</span>
-          <span>100% personalizado</span>
+          <img
+            src="/assets/custom/icon-sparkles.webp"
+            alt="Personalizado"
+            class="custom-welcome__benefit-icon-img"
+            loading="lazy"
+            decoding="async"
+          />
+          <span>{{ t('page.custom.welcome.benefit3') }}</span>
         </div>
       </div>
     </div>
@@ -71,25 +106,19 @@
 
   const steps = [
     {
-      icon: '✏️',
-      title: t('page.custom.welcome.step1.title') || 'Dale un nombre',
-      description:
-        t('page.custom.welcome.step1.description') ||
-        'Elige el nombre del protagonista de tu cuento'
+      iconName: 'pencil',
+      title: t('page.custom.welcome.step1.title'),
+      description: t('page.custom.welcome.step1.description')
     },
     {
-      icon: '📖',
-      title: t('page.custom.welcome.step2.title') || 'Cuéntanos tu historia',
-      description:
-        t('page.custom.welcome.step2.description') ||
-        'Describe qué tipo de cuento quieres que creemos para ti'
+      iconName: 'book',
+      title: t('page.custom.welcome.step2.title'),
+      description: t('page.custom.welcome.step2.description')
     },
     {
-      icon: '📧',
-      title: t('page.custom.welcome.step3.title') || 'Recíbelo en tu email',
-      description:
-        t('page.custom.welcome.step3.description') ||
-        'Te lo enviaremos en 3-5 días completamente listo'
+      iconName: 'envelope',
+      title: t('page.custom.welcome.step3.title'),
+      description: t('page.custom.welcome.step3.description')
     }
   ]
 </script>
@@ -108,7 +137,8 @@
     aspect-ratio: 16/9;
     border-radius: var(--v-radius-xl);
     overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(var(--v-color-primary-rgb), 0.15);
+    background: linear-gradient(135deg, rgba(var(--v-color-primary-rgb), 0.05), rgba(var(--v-color-accent-primary-rgb), 0.03));
   }
 
   .custom-welcome__image {
@@ -124,7 +154,9 @@
   }
 
   .custom-welcome__badge {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--v-unit-1);
     padding: var(--v-unit-1) var(--v-unit-3);
     background: rgba(var(--v-color-primary-rgb), 0.1);
     border: 1px solid rgba(var(--v-color-primary-rgb), 0.2);
@@ -135,6 +167,13 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: var(--v-unit-4);
+  }
+
+  .custom-welcome__badge-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    display: block;
   }
 
   .custom-welcome__title {
@@ -179,6 +218,16 @@
   .custom-welcome__step-icon {
     font-size: 32px;
     margin-bottom: var(--v-unit-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 32px;
+  }
+
+  .custom-welcome__icon-img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
     display: block;
   }
 
@@ -234,9 +283,12 @@
     color: var(--v-color-text-medium);
   }
 
-  .custom-welcome__benefit-icon {
-    font-size: 18px;
+  .custom-welcome__benefit-icon-img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
     display: block;
+    flex-shrink: 0;
   }
 
   @media (max-width: 768px) {
