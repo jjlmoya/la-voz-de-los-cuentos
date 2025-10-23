@@ -235,8 +235,8 @@ export default {
   'page.custom.sharegate.timesShared': 'times shared',
   'page.custom.sharegate.helped': 'People helped',
   'page.custom.sharegate.shareText': 'Create your own personalized story on La Voz de los Cuentos',
-  'page.custom.sharegate.success': 'Thank you! You can now continue with your story.',
-  'page.custom.sharegate.continue': 'Continue',
+  'page.custom.sharegate.success': 'Thank you! Your story is ready to be submitted.',
+  'page.custom.sharegate.continue': 'Submit My Story',
 
   // Custom Story Flow - Success
   'page.custom.success.message': 'We\'ll get started right away! Your story will be ready in 3-5 days.',

@@ -61,8 +61,8 @@ export default {
   'page.custom.sharegate.timesShared': 'veces compartido',
   'page.custom.sharegate.helped': 'Personas ayudadas',
   'page.custom.sharegate.shareText': 'Crea tu propio cuento personalizado en La Voz de los Cuentos',
-  'page.custom.sharegate.success': '¡Gracias! Ya puedes continuar con tu cuento.',
-  'page.custom.sharegate.continue': 'Continuar',
+  'page.custom.sharegate.success': '¡Gracias! Tu cuento está listo para ser enviado.',
+  'page.custom.sharegate.continue': 'Enviar Mi Cuento',
 
   // Custom Story Flow - Success
   'page.custom.success.message': '¡Nos pondremos a ello enseguida! Tu cuento estará listo en 3-5 días.',

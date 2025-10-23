@@ -71,7 +71,7 @@
         :share-count="shareTracking.shareInfo.value.sharesCount"
         :main-page-url="mainPageUrl"
         @share-success="handleShareSuccess"
-        @proceed="nextStep"
+        @proceed="submitForm"
       />
     </div>
 
@@ -92,22 +92,6 @@
           {{ t('page.custom.button.prev') }}
         </VButton>
       </div>
-    </div>
-
-    <!-- Botones finales de acción (Paso 6) -->
-    <div
-      v-if="currentStep === 6 && !loading && !successMessage && !errorMessage"
-      class="custom-page-step"
-    >
-      <VButton @click="submitForm" class="custom-page__submit-button">
-        {{ t('page.custom.button.accept') }}
-      </VButton>
-      <VButton
-        @click="prevStep"
-        variant="secondary"
-      >
-        {{ t('page.custom.button.prev') }}
-      </VButton>
     </div>
   </VContainer>
 </template>
