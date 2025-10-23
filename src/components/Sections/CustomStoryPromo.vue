@@ -79,12 +79,14 @@
 
 <style scoped>
   .custom-story-promo-wrapper {
-    margin-bottom: var(--v-unit-8);
-    padding: var(--v-unit-4);
-    background: var(--v-color-surface-low);
+    margin: var(--v-unit-8) 0;
+    padding: var(--v-unit-6);
+    background: linear-gradient(135deg,
+      rgba(var(--v-color-primary-rgb), 0.08) 0%,
+      rgba(var(--v-color-accent-primary-rgb), 0.05) 100%);
     border-radius: var(--v-radius-xl);
-    border: 1px solid rgba(var(--v-color-primary-rgb), 0.1);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 2px solid rgba(var(--v-color-primary-rgb), 0.2);
+    box-shadow: 0 4px 16px rgba(var(--v-color-primary-rgb), 0.08);
   }
 
   .custom-story-promo {
@@ -297,8 +299,8 @@
 
   @media (max-width: 768px) {
     .custom-story-promo-wrapper {
-      padding: var(--v-unit-3);
-      margin-bottom: var(--v-unit-6);
+      padding: var(--v-unit-4);
+      margin: var(--v-unit-6) 0;
     }
 
     .custom-story-promo {
@@ -356,7 +358,8 @@
 
   @media (max-width: 480px) {
     .custom-story-promo-wrapper {
-      padding: var(--v-unit-2);
+      padding: var(--v-unit-3);
+      margin: var(--v-unit-6) 0;
     }
 
     .custom-story-promo {
