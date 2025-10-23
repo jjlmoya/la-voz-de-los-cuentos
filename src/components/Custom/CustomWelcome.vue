@@ -37,6 +37,7 @@
         <VButton
           size="lg"
           @click="$emit('start')"
+          variant="primary"
           class="custom-welcome__button"
         >
           {{ t('page.custom.welcome.start') || 'Comenzar' }}
@@ -202,13 +203,14 @@
   .custom-welcome__button {
     display: inline-flex;
     align-items: center;
-    gap: var(--v-unit-2);
+    gap: 0;
     min-width: 200px;
   }
 
   .custom-welcome__button-arrow {
     display: inline-block;
     transition: transform 0.3s ease;
+    margin-left: var(--v-unit-2);
   }
 
   .custom-welcome__button:hover .custom-welcome__button-arrow {
