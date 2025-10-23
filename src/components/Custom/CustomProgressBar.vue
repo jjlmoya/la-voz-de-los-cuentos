@@ -25,13 +25,13 @@
       <div class="custom-progress-bar__line">
         <div
           class="custom-progress-bar__line-fill"
-          :style="{ width: `${((currentStep - 1) / (steps.length - 1)) * 100}%` }"
+          :style="{ width: `${Math.max(0, ((currentStep - 1) / (steps.length - 1)) * 100)}%` }"
         ></div>
       </div>
     </div>
 
     <div class="custom-progress-bar__percentage">
-      {{ Math.round(((currentStep - 1) / (steps.length - 1)) * 100) }}%
+      {{ Math.max(0, Math.round(((currentStep - 1) / (steps.length - 1)) * 100)) }}%
     </div>
   </div>
 </template>
