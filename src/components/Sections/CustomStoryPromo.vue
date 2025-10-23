@@ -82,11 +82,12 @@
     margin: var(--v-unit-8) 0;
     padding: var(--v-unit-6);
     background: linear-gradient(135deg,
-      rgba(var(--v-color-primary-rgb), 0.08) 0%,
-      rgba(var(--v-color-accent-primary-rgb), 0.05) 100%);
+      var(--v-color-primary) 0%,
+      #7c5ce6 100%);
     border-radius: var(--v-radius-xl);
-    border: 2px solid rgba(var(--v-color-primary-rgb), 0.2);
-    box-shadow: 0 4px 16px rgba(var(--v-color-primary-rgb), 0.08);
+    border: none;
+    box-shadow: 0 12px 40px rgba(var(--v-color-primary-rgb), 0.3),
+                0 0 60px rgba(var(--v-color-primary-rgb), 0.15);
   }
 
   .custom-story-promo {
@@ -95,13 +96,10 @@
     gap: var(--v-unit-6);
     align-items: center;
     padding: var(--v-unit-6);
-    background: linear-gradient(135deg,
-      rgba(var(--v-color-primary-rgb), 0.12) 0%,
-      rgba(var(--v-color-accent-primary-rgb), 0.08) 100%);
-    border: 2px solid rgba(var(--v-color-primary-rgb), 0.25);
+    background: transparent;
+    border: none;
     border-radius: var(--v-radius-lg);
-    box-shadow: 0 8px 32px rgba(var(--v-color-primary-rgb), 0.12),
-                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    box-shadow: none;
     overflow: hidden;
     position: relative;
     animation: fadeInUp 0.6s ease;
@@ -114,7 +112,7 @@
     right: -50%;
     width: 200px;
     height: 200px;
-    background: radial-gradient(circle, rgba(var(--v-color-primary-rgb), 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
     pointer-events: none;
     animation: float 6s ease-in-out infinite;
   }
@@ -134,12 +132,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg,
-      rgba(var(--v-color-primary-rgb), 0.15) 0%,
-      rgba(var(--v-color-accent-primary-rgb), 0.1) 100%);
+    background: rgba(255, 255, 255, 0.15);
     border-radius: var(--v-radius-lg);
-    border: 1px solid rgba(var(--v-color-primary-rgb), 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
     animation: pulse 3s ease-in-out infinite;
+    backdrop-filter: blur(10px);
   }
 
   .custom-story-promo__icon-img {
@@ -157,7 +154,7 @@
     margin: 0 0 var(--v-unit-1) 0;
     font-size: 12px;
     font-weight: 700;
-    color: var(--v-color-primary);
+    color: #e0d5ff;
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
@@ -166,14 +163,14 @@
     margin: 0 0 var(--v-unit-2) 0;
     font-size: clamp(20px, 4vw, 32px);
     font-weight: 800;
-    color: var(--v-color-text-high);
+    color: white;
     line-height: 1.2;
   }
 
   .custom-story-promo__description {
     margin: 0 0 var(--v-unit-4) 0;
     font-size: 16px;
-    color: var(--v-color-text-medium);
+    color: rgba(255, 255, 255, 0.9);
     line-height: 1.6;
     max-width: 500px;
   }
@@ -189,7 +186,7 @@
     align-items: center;
     gap: var(--v-unit-2);
     font-size: 14px;
-    color: var(--v-color-text-medium);
+    color: rgba(255, 255, 255, 0.85);
     font-weight: 500;
   }
 
@@ -214,17 +211,14 @@
     align-items: center;
     gap: var(--v-unit-2);
     padding: var(--v-unit-3) var(--v-unit-6);
-    background: linear-gradient(135deg,
-      var(--v-color-primary) 0%,
-      var(--v-color-accent-primary) 100%);
-    color: white;
+    background: white;
+    color: var(--v-color-primary);
     font-size: 16px;
     font-weight: 700;
     border-radius: var(--v-radius-lg);
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 16px rgba(var(--v-color-primary-rgb), 0.3),
-                0 0 0 0 rgba(var(--v-color-primary-rgb), 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     border: none;
     white-space: nowrap;
@@ -239,7 +233,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    background: linear-gradient(90deg, transparent, rgba(var(--v-color-primary-rgb), 0.1), transparent);
     transition: left 0.5s ease;
   }
 
@@ -249,8 +243,8 @@
 
   .custom-story-promo__button:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(var(--v-color-primary-rgb), 0.4),
-                0 0 20px rgba(var(--v-color-primary-rgb), 0.2);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    background: #f5f5f5;
   }
 
   .custom-story-promo__button:active {
