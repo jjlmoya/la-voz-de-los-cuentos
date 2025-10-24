@@ -68,7 +68,7 @@ const XP_REWARDS = {
 }
 
 export default function useGameification() {
-  const { getCompleteStories, getFavoriteStories, getStories } = useStories()
+  const { getCompleteStories, getFavoriteStories, getAllStories } = useStories()
 
   const playerProfile = ref<PlayerProfile>({
     level: 1,
@@ -130,7 +130,7 @@ export default function useGameification() {
    * Returns { baseXP, bonusXP, totalXP }
    */
   function calculateStoryXP(storyKey: string): { baseXP: number; bonusXP: number; totalXP: number } {
-    const allStories = getStories()
+    const allStories = getAllStories()
     const story = allStories.find(s => s.key === storyKey)
     if (!story) {
       return { baseXP: 0, bonusXP: 0, totalXP: 0 }
