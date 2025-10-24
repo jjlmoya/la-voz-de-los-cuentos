@@ -85,6 +85,8 @@ export default function useGameification() {
    * Load player profile from localStorage
    */
   function loadPlayerProfile(): void {
+    if (typeof localStorage === 'undefined') return
+
     const stored = localStorage.getItem('playerProfile')
     if (stored) {
       try {
@@ -102,6 +104,7 @@ export default function useGameification() {
    * Save player profile to localStorage
    */
   function savePlayerProfile(): void {
+    if (typeof localStorage === 'undefined') return
     localStorage.setItem('playerProfile', JSON.stringify(playerProfile.value))
   }
 
@@ -137,7 +140,10 @@ export default function useGameification() {
     const baseXP = XP_REWARDS.completeStory(durationMinutes)
 
     // Check for 50%+ progress bonus
-    const storiesData = JSON.parse(localStorage.getItem('storiesData') || '[]')
+    let storiesData: any[] = []
+    if (typeof localStorage !== 'undefined') {
+      storiesData = JSON.parse(localStorage.getItem('storiesData') || '[]')
+    }
     const storyData = storiesData.find((s: any) => s.key === storyKey)
     let bonusXP = 0
 
@@ -306,7 +312,10 @@ export default function useGameification() {
    * Get reading statistics for dashboard
    */
   const readingStats = computed(() => {
-    const storiesData = JSON.parse(localStorage.getItem('storiesData') || '[]')
+    let storiesData: any[] = []
+    if (typeof localStorage !== 'undefined') {
+      storiesData = JSON.parse(localStorage.getItem('storiesData') || '[]')
+    }
     const completeStories = getCompleteStories()
     const favorites = getFavoriteStories()
 
