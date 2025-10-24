@@ -5,14 +5,31 @@
       <div class="account-summary__card account-summary__card--level account-summary__card--featured">
         <div class="account-summary__level-badge">
           <img
-            :src="`/assets/account/dashboard-assets/avatar-level-${playerProfile.level}.png`"
+            :src="`/assets/account/dashboard-assets/avatar-level-${playerProfile.level}.webp`"
             :alt="`Level ${playerProfile.level}`"
             class="account-summary__level-avatar"
           />
           <div class="account-summary__level-number">{{ playerProfile.level }}</div>
         </div>
         <div class="account-summary__level-title">{{ t(playerProfile.titleKey) }}</div>
-        <div class="account-summary__level-xp">{{ playerProfile.totalXP }} XP</div>
+
+        <!-- XP Progress Bar -->
+        <div class="account-summary__level-progress-container">
+          <div class="account-summary__level-progress-bar">
+            <div
+              class="account-summary__level-progress-fill"
+              :style="{ width: progressPercentage + '%' }"
+            ></div>
+          </div>
+          <div class="account-summary__level-progress-text">
+            <span v-if="playerProfile.level < 20">
+              {{ playerProfile.currentLevelXP }} / {{ playerProfile.nextLevelXP }} XP
+            </span>
+            <span v-else>
+              Nivel Máximo 🎉
+            </span>
+          </div>
+        </div>
       </div>
 
       <a :href="toAccountRead()" class="account-summary__card account-summary__card--read">
@@ -81,6 +98,11 @@
   const readCount = ref(0)
   const pendingCount = ref(0)
   const favoriteCount = ref(0)
+
+  const progressPercentage = computed(() => {
+    if (playerProfile.value.level >= 20) return 100
+    return (playerProfile.value.currentLevelXP / playerProfile.value.nextLevelXP) * 100
+  })
 
   onMounted(() => {
     if (typeof localStorage === 'undefined') return
@@ -240,6 +262,37 @@
     font-size: 20px;
     font-weight: 700;
     color: var(--v-color-accent-primary);
+    text-align: center;
+  }
+
+  .account-summary__level-progress-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--v-unit-2);
+    width: 100%;
+  }
+
+  .account-summary__level-progress-bar {
+    width: 100%;
+    height: 12px;
+    background: var(--v-color-primary-alpha-20);
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--v-color-primary-alpha-30);
+  }
+
+  .account-summary__level-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--v-color-primary), var(--v-color-accent-primary));
+    width: 0%;
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 12px rgba(33, 150, 243, 0.6);
+  }
+
+  .account-summary__level-progress-text {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--v-color-text-medium);
     text-align: center;
   }
 

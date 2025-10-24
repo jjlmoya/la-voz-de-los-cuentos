@@ -3,7 +3,7 @@
  * Handles XP calculation, leveling progression, and player profile data
  */
 
-import { ref, computed, readonly, watch } from 'vue'
+import { ref, computed, readonly, watch, onMounted } from 'vue'
 import useStories from './useStories'
 
 interface PlayerProfile {
@@ -85,12 +85,31 @@ export default function useGameification() {
    * Load player profile from localStorage
    */
   function loadPlayerProfile(): void {
-    if (typeof localStorage === 'undefined') return
+    if (typeof localStorage === 'undefined') {
+      initializePlayerProfile()
+      return
+    }
 
     const stored = localStorage.getItem('playerProfile')
     if (stored) {
       try {
-        playerProfile.value = JSON.parse(stored)
+        const parsed = JSON.parse(stored)
+        // If we only have totalXP, recalculate level and other stats
+        if (parsed.totalXP !== undefined && !parsed.level) {
+          const updated = getLevelFromXP(parsed.totalXP)
+          playerProfile.value = {
+            level: updated.level,
+            totalXP: parsed.totalXP,
+            currentLevelXP: parsed.totalXP - (updated.minXP || 0),
+            nextLevelXP: updated.maxXP - (updated.minXP || 0),
+            title: getTitleForLevel(updated.level),
+            titleKey: updated.titleKey,
+            avatar: updated.level,
+            color: updated.color
+          }
+        } else {
+          playerProfile.value = parsed
+        }
       } catch (e) {
         console.warn('Failed to load player profile', e)
         initializePlayerProfile()
@@ -101,11 +120,12 @@ export default function useGameification() {
   }
 
   /**
-   * Save player profile to localStorage
+   * Save player profile to localStorage (only save totalXP, recalculate everything else)
    */
   function savePlayerProfile(): void {
     if (typeof localStorage === 'undefined') return
-    localStorage.setItem('playerProfile', JSON.stringify(playerProfile.value))
+    // Only save totalXP - everything else will be recalculated on load
+    localStorage.setItem('playerProfile', JSON.stringify({ totalXP: playerProfile.value.totalXP }))
   }
 
   /**
@@ -237,7 +257,14 @@ export default function useGameification() {
     completeStories.forEach(story => {
       const xpData = calculateStoryXP(story.key)
       totalRetroXP += xpData.totalXP
+      if (xpData.totalXP === 0) {
+        console.warn(`⚠️ No XP calculated for story: ${story.key}`)
+      }
     })
+
+    if (completeStories.length > 0) {
+      console.log(`📊 Retroactive XP: ${totalRetroXP} XP from ${completeStories.length} stories`)
+    }
 
     return totalRetroXP
   }
@@ -252,8 +279,9 @@ export default function useGameification() {
     // Always recalculate XP from completed stories (source of truth)
     const retroXP = calculateRetroactiveXP()
 
-    // Only update if there's actual XP to add and current profile has less
-    if (retroXP > playerProfile.value.totalXP) {
+    // Update profile if XP changed (including when going from 0 to any value)
+    if (retroXP !== playerProfile.value.totalXP) {
+      console.log(`🔄 Updating XP from ${playerProfile.value.totalXP} to ${retroXP}`)
       playerProfile.value.totalXP = retroXP
       const updated = getLevelFromXP(retroXP)
       playerProfile.value.level = updated.level
@@ -347,13 +375,17 @@ export default function useGameification() {
     }
   })
 
-  // Auto-load on initialization with retroactive XP for existing players
+  // Load on initialization - but only do retroactive calc on client
   loadPlayerProfile()
-  initializeWithRetroactiveXP()
+
+  // Only initialize with retroactive XP if we're on the client
+  if (typeof localStorage !== 'undefined') {
+    initializeWithRetroactiveXP()
+  }
 
   return {
     // State
-    playerProfile: readonly(playerProfile),
+    playerProfile,
 
     // Computed
     nextLevelInfo: readonly(nextLevelInfo),

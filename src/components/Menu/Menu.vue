@@ -13,19 +13,16 @@
         class="menu-item__icon"
       />
       <span class="menu-item__text">{{ entry.label }}</span>
-      <!-- Level Badge for Account Menu Item - Client Only to avoid hydration mismatch -->
-      <ClientOnly>
-        <span v-if="entry.link === toAccount()" class="menu-item__level-badge">
-          <span class="menu-item__level-label">Nivel</span>
-          <span class="menu-item__level-number">{{ playerProfile.level }}</span>
-        </span>
-      </ClientOnly>
+      <!-- Level Badge for Account Menu Item - Only show on client -->
+      <span v-if="entry.link === toAccount() && isClient" class="menu-item__level-badge">
+        <span class="menu-item__level-label">Nivel</span>
+        <span class="menu-item__level-number">{{ playerProfile.level }}</span>
+      </span>
     </a>
   </nav>
 </template>
 
 <script setup>
-  import { ClientOnly } from 'astro:components'
   import t from '../../translations'
   import { ref, onMounted } from 'vue'
   import {
@@ -41,6 +38,12 @@
   import useGameification from '../../composables/useGameification'
   const { hasNewsLetters } = useNewsLetters()
   const { playerProfile } = useGameification()
+
+  const isClient = ref(false)
+
+  onMounted(() => {
+    isClient.value = true
+  })
 
   const menu = ref(
     [
