@@ -27,5 +27,49 @@ export default {
   'account.dashboard.nextToRead': 'Next to Read',
   'account.dashboard.suggested': 'Suggested',
   'account.dashboard.minutes': 'minutes',
-  'account.dashboard.start': 'Start'
+  'account.dashboard.start': 'Start',
+
+  // Gamification - Levels
+  'gamification.level.title': 'Your Level',
+  'gamification.level.badge': 'Level',
+  'gamification.level.progress': 'Level Progress',
+  'gamification.level.nextLevel': 'Next Level',
+  'gamification.level.xpNeeded': 'XP Required',
+  'gamification.level.reached': 'Level Reached',
+
+  // Level Titles
+  'gamification.level.apprentice': 'Story Apprentice',
+  'gamification.level.adventurer': 'Adventurous Reader',
+  'gamification.level.explorer': 'World Explorer',
+  'gamification.level.guardian': 'Saga Guardian',
+  'gamification.level.master': 'Story Master',
+
+  // XP System
+  'gamification.xp.title': 'Experience',
+  'gamification.xp.total': 'Total XP',
+  'gamification.xp.current': 'Current XP',
+  'gamification.xp.earned': 'XP Earned',
+  'gamification.xp.progress': 'XP Progress',
+  'gamification.xp.perMinute': 'XP per minute',
+
+  // XP Rewards
+  'gamification.reward.storyCompletion': 'Complete Story',
+  'gamification.reward.favorite': 'Mark as Favorite',
+  'gamification.reward.halfProgress': '50%+ Reading',
+  'gamification.reward.songCompletion': 'Song Completed',
+
+  // Level Up Notifications
+  'gamification.levelUp.title': 'You Leveled Up',
+  'gamification.levelUp.message': 'Congratulations, you reached level {level}',
+  'gamification.levelUp.newTitle': 'You are now a {title}',
+  'gamification.levelUp.celebration': 'Keep reading to reach higher levels',
+
+  // Dashboard Gamification
+  'account.dashboard.profile': 'Your Reader Profile',
+  'account.dashboard.level': 'Level',
+  'account.dashboard.experience': 'Experience',
+  'account.dashboard.maxLevel': 'Max Level Reached',
+  'account.dashboard.readingStats': 'Reading Statistics',
+  'account.dashboard.totalReading': 'Total Reading Time',
+  'account.dashboard.averagePerStory': 'Average per Story'
 }
