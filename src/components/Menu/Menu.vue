@@ -13,16 +13,19 @@
         class="menu-item__icon"
       />
       <span class="menu-item__text">{{ entry.label }}</span>
-      <!-- Level Badge for Account Menu Item -->
-      <span v-if="entry.link === toAccount()" class="menu-item__level-badge">
-        <span class="menu-item__level-label">Nivel</span>
-        <span class="menu-item__level-number">{{ playerProfile.level }}</span>
-      </span>
+      <!-- Level Badge for Account Menu Item - Client Only to avoid hydration mismatch -->
+      <ClientOnly>
+        <span v-if="entry.link === toAccount()" class="menu-item__level-badge">
+          <span class="menu-item__level-label">Nivel</span>
+          <span class="menu-item__level-number">{{ playerProfile.level }}</span>
+        </span>
+      </ClientOnly>
     </a>
   </nav>
 </template>
 
 <script setup>
+  import { ClientOnly } from 'astro:components'
   import t from '../../translations'
   import { ref, onMounted } from 'vue'
   import {
