@@ -15,7 +15,8 @@
       <span class="menu-item__text">{{ entry.label }}</span>
       <!-- Level Badge for Account Menu Item -->
       <span v-if="entry.link === toAccount()" class="menu-item__level-badge">
-        {{ playerProfile.level }}
+        <span class="menu-item__level-label">Nivel</span>
+        <span class="menu-item__level-number">{{ playerProfile.level }}</span>
       </span>
     </a>
   </nav>
@@ -194,19 +195,32 @@
 
 .menu-item__level-badge {
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-width: 32px;
-  height: 32px;
-  padding: 0 8px;
+  gap: 2px;
+  min-width: 48px;
+  padding: 4px 8px;
   background: linear-gradient(135deg, var(--v-color-primary), var(--v-color-accent-primary));
   color: white;
-  font-size: 14px;
-  font-weight: 700;
-  border-radius: 16px;
+  border-radius: 8px;
   box-shadow: 0 2px 8px rgba(33, 150, 243, 0.4);
   margin-left: auto;
   animation: pulse 2s ease-in-out infinite;
+}
+
+.menu-item__level-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.9;
+}
+
+.menu-item__level-number {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
 }
 
 @keyframes pulse {
