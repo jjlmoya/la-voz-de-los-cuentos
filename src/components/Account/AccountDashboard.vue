@@ -23,6 +23,9 @@
       <StreakCard />
     </div>
 
+    <!-- Gamification Level & Experience Section -->
+    <LevelProgressSection />
+
     <!-- Statistics Section -->
     <div class="dashboard-section">
       <h2 class="dashboard-section__title">{{ t('account.dashboard.statistics') }}</h2>
@@ -97,6 +100,7 @@
   import { ref, onMounted, computed } from 'vue'
   import AccountSummary from './AccountSummary.vue'
   import StreakCard from '../Cards/StreakCard.vue'
+  import LevelProgressSection from './LevelProgressSection.vue'
   import useStories from '../../composables/useStories'
   import { getSagas } from '../../data'
   import { toStory } from '../../router'
