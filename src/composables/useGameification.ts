@@ -329,8 +329,9 @@ export default function useGameification() {
     }
   })
 
-  // Auto-load on initialization
+  // Auto-load on initialization with retroactive XP for existing players
   loadPlayerProfile()
+  initializeWithRetroactiveXP()
 
   return {
     // State

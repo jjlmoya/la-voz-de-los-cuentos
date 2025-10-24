@@ -1,6 +1,20 @@
 <template>
   <div class="account-summary">
     <div class="account-summary__grid">
+      <!-- Level & Experience Card - PROMINENT -->
+      <div class="account-summary__card account-summary__card--level account-summary__card--featured">
+        <div class="account-summary__level-badge">
+          <img
+            :src="`/assets/account/dashboard-assets/avatar-level-${playerProfile.level}.png`"
+            :alt="`Level ${playerProfile.level}`"
+            class="account-summary__level-avatar"
+          />
+          <div class="account-summary__level-number">{{ playerProfile.level }}</div>
+        </div>
+        <div class="account-summary__level-title">{{ t(playerProfile.titleKey) }}</div>
+        <div class="account-summary__level-xp">{{ playerProfile.totalXP }} XP</div>
+      </div>
+
       <a :href="toAccountRead()" class="account-summary__card account-summary__card--read">
         <div class="account-summary__card-icon">
           <img src="/assets/account/read.webp" alt="Read" class="account-summary__icon-image" />
@@ -49,7 +63,9 @@
   import { VText } from '@overgaming/vicius'
   import useStories from '../../composables/useStories'
   import useAchievements from '../../composables/useAchievements'
+  import useGameification from '../../composables/useGameification'
   import { toAccountRead, toAccountPending, toAccountFavorites, toAccountAchievements } from '../../router'
+  import t from '../../translations'
 
   const props = defineProps({
     lang: {
@@ -60,6 +76,7 @@
 
   const { getAllStories } = useStories()
   const { unlockedAchievements } = useAchievements()
+  const { playerProfile } = useGameification()
 
   const readCount = ref(0)
   const pendingCount = ref(0)
@@ -165,6 +182,65 @@
   .account-summary__card--achievements {
     border-color: #FFC107;
     background: linear-gradient(135deg, rgba(255, 193, 7, 0.1), rgba(255, 193, 7, 0.05));
+  }
+
+  .account-summary__card--level {
+    border-color: var(--v-color-primary);
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.2), rgba(33, 150, 243, 0.1));
+    grid-column: 1 / -1;
+  }
+
+  .account-summary__card--featured {
+    min-height: 240px;
+    border-width: 3px;
+    box-shadow: 0 0 20px rgba(33, 150, 243, 0.3);
+  }
+
+  .account-summary__level-badge {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+  }
+
+  .account-summary__level-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--v-radius-lg);
+    border: 3px solid var(--v-color-primary);
+    object-fit: cover;
+  }
+
+  .account-summary__level-number {
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--v-color-accent-primary), var(--v-color-primary));
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .account-summary__level-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--v-color-primary);
+    text-align: center;
+  }
+
+  .account-summary__level-xp {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--v-color-accent-primary);
+    text-align: center;
   }
 
   .account-summary__card-icon {
