@@ -244,16 +244,25 @@ export default function useGameification() {
 
   /**
    * Initialize player with retroactive XP from completed stories
+   * Recalculates XP based on actual completed stories in localStorage
    */
   function initializeWithRetroactiveXP(): void {
     loadPlayerProfile()
 
-    // Only if brand new player
-    if (playerProfile.value.totalXP === 0) {
-      const retroXP = calculateRetroactiveXP()
-      if (retroXP > 0) {
-        addXP(retroXP)
-      }
+    // Always recalculate XP from completed stories (source of truth)
+    const retroXP = calculateRetroactiveXP()
+
+    // Only update if there's actual XP to add and current profile has less
+    if (retroXP > playerProfile.value.totalXP) {
+      playerProfile.value.totalXP = retroXP
+      const updated = getLevelFromXP(retroXP)
+      playerProfile.value.level = updated.level
+      playerProfile.value.currentLevelXP = updated.minXP ? retroXP - updated.minXP : 0
+      playerProfile.value.nextLevelXP = updated.maxXP - (updated.minXP || 0)
+      playerProfile.value.title = getTitleForLevel(updated.level)
+      playerProfile.value.avatar = updated.level
+      playerProfile.value.color = updated.color
+      savePlayerProfile()
     }
   }
 
