@@ -23,6 +23,8 @@ const toCustomStory = () => t(`/personalizado/cuento/`, '/custom/story/')
 const toLandingsPage = key => `/${t('listado', 'list')}/${key}/`
 const toSongs = () => `/${t('canciones', 'songs')}/`
 const toSong = slug => `/${t('cancion', 'song')}/${slug}/`
+const toBlog = () => `/${t('blog', 'blog')}/`
+const toBlogPost = slug => `/${t('blog', 'blog')}/${slug}/`
 
 export {
   toStories,
@@ -41,5 +43,7 @@ export {
   toLandingsPage,
   toCharacters,
   toSongs,
-  toSong
+  toSong,
+  toBlog,
+  toBlogPost
 }
