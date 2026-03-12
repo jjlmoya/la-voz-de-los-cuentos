@@ -30,6 +30,7 @@ export default {
   'menu.stories': 'Stories',
   'menu.sagas': 'Sagas',
   'menu.songs': 'Songs',
+  'menu.blog': 'Blog',
   'menu.characters': 'Characters',
   'menu.account': 'Account',
   'menu.custom': 'Create a Story',
@@ -38,6 +39,11 @@ export default {
   'section.news': "What's New",
   'section.sagas': 'Featured Sagas',
   'section.songs': 'Songs',
+
+  'blog.readmore': 'Read More',
+  'blog.by': 'By',
+  'blog.published': 'Published on',
+  'blog.relatedStories': 'Related Stories',
 
   'footer.newsletter': 'Monthly Newsletter',
   'footer.newsletter.button': 'Subscribe',

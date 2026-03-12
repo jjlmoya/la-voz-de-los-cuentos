@@ -1,7 +1,7 @@
 {
   "name": "la-voz-de-los-cuentos",
   "type": "module",
-  "version": "0.1.384",
+  "version": "0.1.385",
   "scripts": {
     "dev": "astro dev",
     "dev:en": "env-cmd -f .env.en astro dev",
@@ -22,7 +22,9 @@
     "copy-assets": "mkdirp ./public/la-voz-de-los-cuentos-games/assets && ncp ./node_modules/la-voz-de-los-cuentos-games/dist/la-voz-de-los-cuentos-games/assets ./public/la-voz-de-los-cuentos-games/assets",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "format": "prettier --write \"src/**/*.{js,vue,css,html,md,astro}\""
+    "format": "prettier --write \"src/**/*.{js,vue,css,html,md,astro}\"",
+    "test": "npm run test:bilingual && npm run quality-gate",
+    "test:bilingual": "node ./scripts/test-bilingual-posts.js"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.2.0",

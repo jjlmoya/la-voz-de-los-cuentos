@@ -15,6 +15,9 @@ export default defineConfig({
     site: process.env.PUBLIC_SITE_URL,
     output: 'static',
     adapter: vercel(),
+    server: {
+        port: 4322
+    },
     integrations: [
         sitemap({
             filter: shouldIncludePage

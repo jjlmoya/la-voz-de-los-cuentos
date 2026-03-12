@@ -4,7 +4,7 @@ export const post = {
   title: "Cuentos para Resolver Miedos Infantiles: Guía Completa para Padres",
   description: "Descubre cómo usar cuentos transformadores para ayudar a tus hijos a superar sus miedos más comunes de forma natural y segura.",
   date: "2026-03-12",
-  category: "Educativo",
+  category: "Educación",
   tags: ["miedos infantiles", "cuentos terapéuticos", "ansiedad niños", "desarrollo emocional", "psicología infantil"],
   content: [
     {

@@ -29,6 +29,7 @@ export default {
   'menu.stories': 'Cuentos',
   'menu.sagas': 'Sagas',
   'menu.songs': 'Canciones',
+  'menu.blog': 'Blog',
   'menu.characters': 'Personajes',
   'menu.account': 'Cuenta',
   'menu.custom': 'Cuento Personalizado',
@@ -37,6 +38,11 @@ export default {
   'section.news': 'Novedades',
   'section.sagas': 'Sagas Destacadas',
   'section.songs': 'Canciones',
+
+  'blog.readmore': 'Leer más',
+  'blog.by': 'Por',
+  'blog.published': 'Publicado el',
+  'blog.relatedStories': 'Cuentos Relacionados',
 
   'footer.newsletter': 'Newsletter Mensual',
   'footer.newsletter.button': 'Enviar',

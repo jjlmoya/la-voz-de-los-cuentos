@@ -32,7 +32,8 @@
     toNewsLetters,
     toAccount,
     toCharacters,
-    toSongs
+    toSongs,
+    toBlog
   } from '../../router'
   import useNewsLetters from '../../composables/useNewsLetters'
   import useGameification from '../../composables/useGameification'
@@ -66,6 +67,11 @@
         label: t('menu.songs'),
         link: toSongs(),
         icon: 'songs'
+      },
+      {
+        label: t('menu.blog'),
+        link: toBlog(),
+        icon: 'blog'
       },
       {
         label: t('menu.characters'),
