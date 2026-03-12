@@ -5,6 +5,7 @@ import charactersEn from './en/characters.json' with { type: 'json' }
 import newslettersEn from './en/newsletters.json' with { type: 'json' }
 import landingsEn from './en/landings.json' with { type: 'json' }
 import songsEn from './en/songs.json' with { type: 'json' }
+import { postsEn, postsEs } from './posts/index.ts'
 
 import storiesEs from './es/stories.json' with { type: 'json' }
 import sagasEs from './es/sagas.json' with { type: 'json' }
@@ -20,7 +21,8 @@ const map = {
     characters: charactersEs,
     newsletters: newslettersEs,
     landings: landingsEs,
-    songs: songsEs
+    songs: songsEs,
+    posts: postsEs
   },
   en: {
     stories: storiesEn,
@@ -28,7 +30,8 @@ const map = {
     characters: charactersEn,
     newsletters: newslettersEn,
     landings: landingsEn,
-    songs: songsEn
+    songs: songsEn,
+    posts: postsEn
   }
 }
 
@@ -38,6 +41,7 @@ export const getNewsLetters = (language = lang) => map[language]?.newsletters ||
 export const getCharacters = (language = lang) => map[language]?.characters || map[lang].characters
 export const getLandings = (language = lang) => map[language]?.landings || map[lang].landings
 export const getSongs = (language = lang) => map[language]?.songs || map[lang].songs
+export const getPosts = (language = lang) => map[language]?.posts || map[lang].posts
 
 // Enrich entities with related data
 export const enrichWithRelations = (item, type, language = lang) => {
