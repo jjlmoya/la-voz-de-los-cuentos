@@ -69,11 +69,6 @@
         icon: 'songs'
       },
       {
-        label: t('menu.blog'),
-        link: toBlog(),
-        icon: 'blog'
-      },
-      {
         label: t('menu.characters'),
         link: toCharacters(),
         icon: 'characters'
@@ -93,6 +88,11 @@
         link: toNewsLetters(),
         icon: 'newsletter',
         hide: !hasNewsLetters()
+      },
+      {
+        label: t('menu.blog'),
+        link: toBlog(),
+        icon: 'blog'
       }
     ].filter(entry => !entry.hide)
   )

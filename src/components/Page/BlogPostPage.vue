@@ -4,7 +4,7 @@
       <article class="blog-post-page__article">
         <header class="blog-post-page__header">
           <div class="blog-post-page__meta">
-            <span class="blog-post-page__category">{{ post.category }}</span>
+            <span class="blog-post-page__category" :style="getCategoryStyle()">{{ post.category }}</span>
             <span class="blog-post-page__date">{{ formatDate(post.date) }}</span>
           </div>
           <h1 class="blog-post-page__title">{{ post.title }}</h1>
@@ -64,6 +64,46 @@
     const date = new Date(dateString)
     const options = { year: 'numeric', month: 'long', day: 'numeric' }
     return date.toLocaleDateString(import.meta.env.PUBLIC_LANG === 'es' ? 'es-ES' : 'en-US', options)
+  }
+
+  // Valid categories with their gradient colors
+  const categoryColors = {
+    'Educación': 'linear-gradient(135deg, #4F46E5, #7C3AED)',
+    'Education': 'linear-gradient(135deg, #4F46E5, #7C3AED)',
+    'Consejos': 'linear-gradient(135deg, #EC4899, #F43F5E)',
+    'Tips': 'linear-gradient(135deg, #EC4899, #F43F5E)',
+  }
+
+  // Generate deterministic color from category name
+  const generateCategoryColor = (category) => {
+    let hash = 0
+    for (let i = 0; i < category.length; i++) {
+      hash = ((hash << 5) - hash) + category.charCodeAt(i)
+    }
+
+    const colors = [
+      'linear-gradient(135deg, #FF6B6B, #FF8E72)',
+      'linear-gradient(135deg, #4ECDC4, #44A08D)',
+      'linear-gradient(135deg, #FFE66D, #FFC93D)',
+      'linear-gradient(135deg, #A8E6CF, #56AB91)',
+      'linear-gradient(135deg, #FF9A76, #FF6B6B)',
+      'linear-gradient(135deg, #9B59B6, #8E44AD)',
+    ]
+
+    return colors[Math.abs(hash) % colors.length]
+  }
+
+  const getCategoryStyle = () => {
+    const category = props.post.category
+    return {
+      background: categoryColors[category] || generateCategoryColor(category),
+      color: 'white',
+      padding: 'var(--v-unit-1) var(--v-unit-3)',
+      borderRadius: 'var(--v-radius-md)',
+      fontWeight: '600',
+      textTransform: 'uppercase',
+      letterSpacing: '0.05em'
+    }
   }
 
   // Generate deterministic hash from post title for seed-based story selection
@@ -136,13 +176,13 @@
   }
 
   .blog-post-page__category {
-    background: linear-gradient(135deg, var(--v-color-primary), var(--v-color-accent-primary));
     color: white;
-    padding: var(--v-unit-1) var(--v-unit-3);
-    border-radius: var(--v-radius-md);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+  .blog-post-page__category:hover {
+    transform: scale(1.05);
   }
 
   .blog-post-page__date {
