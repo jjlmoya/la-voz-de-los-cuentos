@@ -1,0 +1,60 @@
+---
+import NavLayout from '../../layouts/NavLayout.astro'
+import BlogPostPage from '../../components/Page/BlogPostPage.vue'
+import { getPosts } from '../../data'
+import { toBlogPost } from '../../router'
+
+const lang = import.meta.env.PUBLIC_LANG || 'es'
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://lavozdeloscuentos.es'
+const { id } = Astro.params
+const posts = getPosts()
+const post = posts.find(p => p.slug === id)
+
+if (!post) {
+  return Astro.redirect('/404/')
+}
+
+// Calcular URL alternativa para el otro idioma
+const alternateSlug = lang === 'es' ? post.slugEn : post.slugEs
+const alternateUrl = `/blog/${alternateSlug}/`
+
+// JSON-LD Schema
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.title,
+  description: post.description,
+  datePublished: post.date,
+  author: {
+    '@type': 'Organization',
+    name: lang === 'es' ? 'La Voz de los Cuentos' : 'Bubo Boo'
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: lang === 'es' ? 'La Voz de los Cuentos' : 'Bubo Boo',
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteUrl}/assets/logo/${lang}.webp`
+    }
+  }
+}
+
+export async function getStaticPaths() {
+  return getPosts().map(post => ({
+    params: { id: post.slug }
+  }))
+}
+---
+
+<NavLayout
+  title={post.title}
+  description={post.description}
+  url={toBlogPost(post.slug)}
+  alternateUrl={alternateUrl}
+  type="article"
+>
+  <BlogPostPage {post} {lang} client:load />
+
+  <!-- Schema.org BlogPosting -->
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(schema)}></script>
+</NavLayout>

@@ -1,0 +1,14 @@
+---
+import NavLayout from '../../layouts/NavLayout.astro'
+import BlogPage from '../../components/Page/BlogPage.vue'
+import t from '../../translations'
+import { toBlog } from '../../router'
+---
+
+<NavLayout
+  title={t('page.blog.h1')}
+  description={t('page.blog.description')}
+  url={toBlog()}
+>
+  <BlogPage client:load />
+</NavLayout>

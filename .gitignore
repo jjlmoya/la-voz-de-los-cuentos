@@ -52,3 +52,4 @@ pnpm-debug.log*
 
 # Vercel output
 .vercel/
+public/assets/stories/*.mp4

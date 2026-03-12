@@ -27,5 +27,49 @@ export default {
   'account.dashboard.nextToRead': 'Próximo Para Leer',
   'account.dashboard.suggested': 'Sugerido',
   'account.dashboard.minutes': 'minutos',
-  'account.dashboard.start': 'Comenzar'
+  'account.dashboard.start': 'Comenzar',
+
+  // Gamification - Levels
+  'gamification.level.title': 'Tu Nivel',
+  'gamification.level.badge': 'Nivel',
+  'gamification.level.progress': 'Progreso del Nivel',
+  'gamification.level.nextLevel': 'Siguiente Nivel',
+  'gamification.level.xpNeeded': 'XP requeridos',
+  'gamification.level.reached': 'Nivel alcanzado',
+
+  // Level Titles
+  'gamification.level.apprentice': 'Aprendiz de Historias',
+  'gamification.level.adventurer': 'Lector Aventurero',
+  'gamification.level.explorer': 'Explorador de Mundos',
+  'gamification.level.guardian': 'Guardián de Sagas',
+  'gamification.level.master': 'Maestro de Cuentos',
+
+  // XP System
+  'gamification.xp.title': 'Experiencia',
+  'gamification.xp.total': 'XP Total',
+  'gamification.xp.current': 'XP Actuales',
+  'gamification.xp.earned': 'XP Ganados',
+  'gamification.xp.progress': 'Progreso de XP',
+  'gamification.xp.perMinute': 'XP por minuto',
+
+  // XP Rewards
+  'gamification.reward.storyCompletion': 'Completar Historia',
+  'gamification.reward.favorite': 'Marcar Favorito',
+  'gamification.reward.halfProgress': 'Lectura del 50%+',
+  'gamification.reward.songCompletion': 'Canción Completada',
+
+  // Level Up Notifications
+  'gamification.levelUp.title': 'Subiste de Nivel',
+  'gamification.levelUp.message': 'Felicitaciones, alcanzaste el nivel {level}',
+  'gamification.levelUp.newTitle': 'Eres ahora un {title}',
+  'gamification.levelUp.celebration': 'Sigue leyendo para subir más niveles',
+
+  // Dashboard Gamification
+  'account.dashboard.profile': 'Tu Perfil de Lector',
+  'account.dashboard.level': 'Nivel',
+  'account.dashboard.experience': 'Experiencia',
+  'account.dashboard.maxLevel': 'Máximo Nivel Alcanzado',
+  'account.dashboard.readingStats': 'Estadísticas de Lectura',
+  'account.dashboard.totalReading': 'Tiempo Total de Lectura',
+  'account.dashboard.averagePerStory': 'Promedio por Historia'
 }

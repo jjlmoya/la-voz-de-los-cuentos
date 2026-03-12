@@ -1,0 +1,16 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🔍 Running SEO content validation..."
+npm test
+
+if [ $? -ne 0 ]; then
+  echo ""
+  echo "❌ Pre-commit hook failed!"
+  echo "Fix the issues above and try committing again."
+  exit 1
+fi
+
+echo ""
+echo "✅ All checks passed! Proceeding with commit..."
+exit 0

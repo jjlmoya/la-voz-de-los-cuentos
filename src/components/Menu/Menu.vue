@@ -13,6 +13,11 @@
         class="menu-item__icon"
       />
       <span class="menu-item__text">{{ entry.label }}</span>
+      <!-- Level Badge for Account Menu Item - Only show on client -->
+      <span v-if="entry.link === toAccount() && isClient" class="menu-item__level-badge">
+        <span class="menu-item__level-label">Nivel</span>
+        <span class="menu-item__level-number">{{ playerProfile.level }}</span>
+      </span>
     </a>
   </nav>
 </template>
@@ -30,7 +35,15 @@
     toSongs
   } from '../../router'
   import useNewsLetters from '../../composables/useNewsLetters'
+  import useGameification from '../../composables/useGameification'
   const { hasNewsLetters } = useNewsLetters()
+  const { playerProfile } = useGameification()
+
+  const isClient = ref(false)
+
+  onMounted(() => {
+    isClient.value = true
+  })
 
   const menu = ref(
     [
@@ -184,6 +197,58 @@
 .menu-item__text {
   position: relative;
   flex: 1;
+}
+
+.menu-item__level-badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-width: 48px;
+  padding: 4px 8px;
+  background: linear-gradient(135deg, var(--v-color-primary), var(--v-color-accent-primary));
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.4);
+  margin-left: auto;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.menu-item__level-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.9;
+}
+
+.menu-item__level-number {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 2px 8px rgba(33, 150, 243, 0.4);
+  }
+  50% {
+    box-shadow: 0 2px 16px rgba(33, 150, 243, 0.7);
+  }
+}
+
+.menu-item--active .menu-item__level-badge {
+  animation: pulse-active 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-active {
+  0%, 100% {
+    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.6), 0 0 0 0 rgba(33, 150, 243, 0.7);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(33, 150, 243, 0.8), 0 0 0 8px rgba(33, 150, 243, 0);
+  }
 }
 
 .menu-item--active {
