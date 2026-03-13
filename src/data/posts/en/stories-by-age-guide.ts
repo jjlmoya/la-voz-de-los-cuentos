@@ -419,7 +419,6 @@ export const post = {
     {
       type: "story_recommendation",
       slug: "the-finisher",
-      title: "The Finisher",
       description: "An excellent story for school-age children that helps them understand the importance of finishing what we start. A vital learning for their development.",
       variant: "primary",
       label: "Recommended Story"

@@ -601,7 +601,6 @@ export const post = {
     {
       type: "story_recommendation",
       slug: "el-finalizador",
-      title: "El Finalizador",
       description: "Un cuento excelente para niños en edad escolar que ayuda a entender la importancia de terminar lo que empezamos. Un aprendizaje vital para su desarrollo.",
       variant: "primary",
       label: "Cuento Recomendado"

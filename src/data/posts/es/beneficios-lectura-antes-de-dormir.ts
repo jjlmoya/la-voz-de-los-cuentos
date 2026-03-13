@@ -68,7 +68,6 @@ export const post = {
     {
       type: "story_recommendation",
       slug: "el-cuento-de-golemin",
-      title: "El Cuento de Golemín",
       description: "Un cuento tierno sobre la amistad y la aceptación, perfecto para leer juntos y fortalecer el vínculo afectivo.",
       variant: "primary",
       label: "Recomendado para Leer Juntos"
@@ -152,7 +151,6 @@ export const post = {
     {
       type: "story_recommendation",
       slug: "el-traga-luces-un-cuento-de-misterio-y-luz",
-      title: "El Traga Luces",
       description: "Una historia de misterio suave que enseña empatía y termina con un mensaje de esperanza y luz, ideal para calmar los miedos nocturnos.",
       variant: "secondary",
       label: "Cuento para la Calma"

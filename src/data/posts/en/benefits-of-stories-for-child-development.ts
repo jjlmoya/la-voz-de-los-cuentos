@@ -248,7 +248,6 @@ export const post = {
     {
       type: "story_recommendation",
       slug: "the-feelingsmith",
-      title: "The Feelingsmith",
       description: "A fascinating story about a character who can measure the invisible: emotions and feelings. Perfect for working on emotional intelligence.",
       variant: "primary",
       label: "Story for Emotional Development"

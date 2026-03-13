@@ -4,7 +4,7 @@
       <div class="story-recommendation__image-wrapper">
         <img
           :src="getImage()"
-          :alt="block.title"
+          :alt="displayTitle"
           class="story-recommendation__image"
           loading="lazy"
         />
@@ -12,10 +12,10 @@
       </div>
       <div class="story-recommendation__content">
         <div class="story-recommendation__header">
-          <span class="story-recommendation__label">{{ block.label || 'Cuento Recomendado' }}</span>
+          <span class="story-recommendation__label">{{ block.label || (props.lang === 'es' ? 'Cuento Recomendado' : 'Recommended Story') }}</span>
           <span class="story-recommendation__icon">→</span>
         </div>
-        <h4 class="story-recommendation__title">{{ block.title }}</h4>
+        <h4 class="story-recommendation__title">{{ displayTitle }}</h4>
         <p class="story-recommendation__description">{{ block.description }}</p>
         <div class="story-recommendation__meta">
           <span v-if="block.duration" class="story-recommendation__time">⏱ {{ block.duration }} min</span>
@@ -31,14 +31,22 @@ import { computed } from 'vue'
 import { toStory } from '../../router'
 import t from '../../translations'
 
-const lang = import.meta.env.PUBLIC_LANG
-
 const props = defineProps({
   block: {
     type: Object,
     required: true
+  },
+  lang: {
+    type: String,
+    default: 'es'
   }
 })
+
+import { getStories } from '../../data'
+
+const stories = getStories(props.lang)
+const story = stories.find(s => s.key === props.block.slug)
+const displayTitle = computed(() => story?.name || props.block.title)
 
 const storyLink = computed(() => toStory(props.block.slug))
 
@@ -47,7 +55,7 @@ const ctaText = computed(() => {
 })
 
 const getImage = () => {
-  return `/assets/stories/${lang}/${props.block.slug}.webp`
+  return `/assets/stories/${props.lang}/${props.block.slug}.webp`
 }
 </script>
 

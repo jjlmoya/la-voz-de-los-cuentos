@@ -252,7 +252,6 @@ export const post = {
     {
       type: "story_recommendation",
       slug: "the-legend-of-the-queen-of-the-night",
-      title: "The Legend of the Queen of the Night",
       description: "A perfect story to practice strategic pauses and voice variation. Its detailed descriptions allow you to emphasize sensory elements.",
       variant: "primary",
       label: "For Practicing Intonation"

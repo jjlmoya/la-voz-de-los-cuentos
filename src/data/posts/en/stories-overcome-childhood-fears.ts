@@ -47,7 +47,6 @@ export const post = {
     {
       type: "story_recommendation",
       slug: "the-legend-of-the-queen-of-the-night",
-      title: "The Legend of the Queen of the Night",
       description: "A story that transforms your child's perception of darkness, showing the magic that exists when the sun sets.",
       variant: "primary",
       label: "Story for Fear of the Dark"
@@ -76,7 +75,6 @@ export const post = {
     {
       type: "story_recommendation",
       slug: "the-demon-and-the-lost-spoon",
-      title: "The Demon and the Lost Spoon",
       description: "A clever tale where what seems frightening turns out to be protective and kind. Perfect for demystifying imaginary fears.",
       variant: "secondary",
       label: "Story of Unexpected Friendship"
@@ -101,7 +99,6 @@ export const post = {
     {
       type: "story_recommendation",
       slug: "crt-the-case-of-the-midnight-meow",
-      title: "CRT: The Case of the Midnight Meow",
       description: "An exciting adventure where animals turn out to be intelligent allies. Perfect for transforming fear of animals into admiration.",
       variant: "success",
       label: "Animal Adventure Story"

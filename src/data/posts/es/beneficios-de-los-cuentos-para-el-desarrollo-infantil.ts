@@ -243,7 +243,6 @@ export const post = {
     {
       type: "story_recommendation",
       slug: "el-metriquista",
-      title: "El Metriquista",
       description: "Un cuento fascinante sobre un personaje capaz de medir lo invisible: las emociones y los sentimientos. Ideal para trabajar la inteligencia emocional.",
       variant: "primary",
       label: "Cuento para el Desarrollo Emocional"

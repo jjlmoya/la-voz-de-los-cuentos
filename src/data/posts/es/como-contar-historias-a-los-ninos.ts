@@ -252,7 +252,6 @@ export const post = {
     {
       type: "story_recommendation",
       slug: "la-leyenda-de-la-reina-de-la-noche",
-      title: "La Leyenda de la Reina de la Noche",
       description: "Una historia perfecta para practicar pausas estratégicas y variación de voz. Sus descripciones detalladas permiten enfatizar elementos sensoriales.",
       variant: "primary",
       label: "Para Practicar Entonación"

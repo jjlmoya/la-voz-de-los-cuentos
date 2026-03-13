@@ -59,7 +59,6 @@ export const post = {
     {
       type: "story_recommendation",
       slug: "the-story-of-clayby",
-      title: "The Story of Clayby",
       description: "A touching story about friendship and acceptance, perfect for reading together and strengthening your emotional bond.",
       variant: "primary",
       label: "Recommended for Bonding"
@@ -133,7 +132,6 @@ export const post = {
     {
       type: "story_recommendation",
       slug: "lighteater-a-tale-of-mystery-and-light",
-      title: "LightEater: A Tale of Mystery and Light",
       description: "A gentle mystery story that teaches empathy and ends with a message of hope and light, ideal for calming nighttime fears.",
       variant: "secondary",
       label: "Story for Calmness"

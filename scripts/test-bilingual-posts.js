@@ -4,6 +4,66 @@ import { getPosts } from '../src/data/index.js';
 
 const MIN_WORDS = 1500;
 
+function hasMarkdown(text) {
+  if (typeof text !== 'string') return false;
+  const markdownPatterns = [
+    /\*\*[^*]+\*\*/, // bold **
+    /__(?:[^_]|_[^_])+__/, // bold __
+    /\*[^*][^*]+\*/, // italic * (at least 2 chars to avoid common bullets or math)
+    /\[[^\]]+\]\([^)]+\)/, // links [text](url)
+    /`[^`]+`/, // inline code
+  ];
+  return markdownPatterns.some(pattern => pattern.test(text));
+}
+
+function checkMarkdownInBlocks(blocks) {
+  const issues = [];
+  blocks.forEach((block, index) => {
+    let fieldsToCheck = [];
+    switch (block.type) {
+      case 'text':
+      case 'quote':
+      case 'highlight':
+        fieldsToCheck = [block.body || block.text];
+        break;
+      case 'heading':
+        fieldsToCheck = [block.text];
+        break;
+      case 'list':
+        fieldsToCheck = block.items || [];
+        break;
+      case 'table':
+      case 'story_table':
+        fieldsToCheck = (block.rows || []).flat();
+        break;
+      case 'steps':
+        fieldsToCheck = (block.items || []).flatMap(i => [i.title, i.body]);
+        break;
+      case 'comparison':
+        fieldsToCheck = [
+          block.left?.title,
+          ...(block.left?.items || []),
+          block.right?.title,
+          ...(block.right?.items || [])
+        ];
+        break;
+      case 'stats':
+        fieldsToCheck = (block.items || []).map(i => i.label);
+        break;
+      case 'story_recommendation':
+        fieldsToCheck = [block.title, block.description];
+        break;
+    }
+
+    fieldsToCheck.forEach(field => {
+      if (hasMarkdown(field)) {
+        issues.push(`Block ${index} (${block.type}) contains Markdown: "${field.substring(0, 30)}..."`);
+      }
+    });
+  });
+  return issues;
+}
+
 function countWords(blocks) {
   return (blocks || []).reduce((total, block) => {
     switch (block.type) {
@@ -28,8 +88,10 @@ function countWords(blocks) {
         return total + `${left} ${right}`.trim().split(/\s+/).length;
       case 'stats':
         return total + (block.items ? block.items.map(i => i.label).join(' ').trim().split(/\s+/).length : 0);
-      case 'story_recommendation':
-        return total + `${block.title} ${block.description}`.trim().split(/\s+/).length;
+      case 'story_recommendation': {
+        const title = block.title || '';
+        return total + `${title} ${block.description}`.trim().split(/\s+/).length;
+      }
       default:
         return total;
     }
@@ -159,6 +221,23 @@ function validateBilingualPosts() {
 
   if (errors.length === 0 && postsEn.length > 0) {
     console.log(`✅ All posts have at least one story recommendation`);
+  }
+
+  // Test 8: Detect Markdown in text
+  console.log(`\n📝 Testing for Markdown usage (forbidden):`);
+  for (const post of [...postsEs, ...postsEn]) {
+    const markdownIssues = checkMarkdownInBlocks(post.content);
+    if (markdownIssues.length > 0) {
+      const lang = postsEs.includes(post) ? 'ES' : 'EN';
+      markdownIssues.forEach(issue => {
+        errors.push(`❌ Post "${post.slug}" [${lang}] ${issue}`);
+      });
+      passed = false;
+    }
+  }
+
+  if (passed) {
+    console.log(`✅ No Markdown detected in post content`);
   }
 
   // Print results

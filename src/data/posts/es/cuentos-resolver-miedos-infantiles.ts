@@ -47,7 +47,6 @@ export const post = {
     {
       type: "story_recommendation",
       slug: "la-leyenda-de-la-reina-de-la-noche",
-      title: "La Leyenda de la Reina de la Noche",
       description: "Un cuento que transforma la percepción del niño sobre la oscuridad, mostrando la magia que existe cuando el sol se va.",
       variant: "primary",
       label: "Cuento para la Oscuridad"
@@ -76,7 +75,6 @@ export const post = {
     {
       type: "story_recommendation",
       slug: "el-demonio-y-la-cucharita-perdida",
-      title: "El Demonio y la Cucharita Perdida",
       description: "Una historia ingeniosa donde lo que parece aterrador resulta ser protector y amable. Perfecto para desmitificar miedos imaginarios.",
       variant: "secondary",
       label: "Cuento sobre Amistad Inesperada"
@@ -105,7 +103,6 @@ export const post = {
     {
       type: "story_recommendation",
       slug: "sdg-el-caso-del-misterioso-maullido-medianoche",
-      title: "SDG: El Caso del Misterioso Maullido Medianoche",
       description: "Una aventura emocionante donde los animales resultan ser aliados inteligentes. Perfecto para transformar el miedo a los animales en admiración.",
       variant: "success",
       label: "Cuento de Aventura Animal"
