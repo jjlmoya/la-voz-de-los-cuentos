@@ -6,9 +6,8 @@
         :key="post.slug"
         :href="toBlogPost(post.slug)"
         class="blog-post-card"
-        :class="`blog-post-card--${getCategoryClass(post.category)}`"
       >
-        <div class="blog-post-card__header">
+        <div class="blog-post-card__header" :style="getCategoryStyle(post.category)">
           <p class="blog-post-card__category">{{ post.category }}</p>
         </div>
         <div class="blog-post-card__content">
@@ -38,14 +37,34 @@
     return date.toLocaleDateString(import.meta.env.PUBLIC_LANG === 'es' ? 'es-ES' : 'en-US', options)
   }
 
-  const getCategoryClass = (category) => {
-    const map = {
-      'Tips': 'tips',
-      'Consejos': 'tips',
-      'Education': 'education',
-      'Educación': 'education'
+  const getCategoryColor = (category) => {
+    const palette = [
+      '#FF8FBC', // Pastel Pink
+      '#7BB8D4', // Pastel Blue
+      '#B4E7B8', // Pastel Green
+      '#FFD662', // Pastel Yellow
+      '#9C8CB9', // Pastel Purple
+      '#A8D8EA', // Sky Blue
+      '#FFB3D9', // Soft Pink
+      '#F093FB', // Light Purple
+      '#4FACFE', // Bright Blue
+      '#B2EBF2'  // Light Cyan
+    ]
+
+    let hash = 0
+    const cat = category || 'General'
+    for (let i = 0; i < cat.length; i++) {
+      hash = cat.charCodeAt(i) + ((hash << 5) - hash)
     }
-    return map[category] || category.toLowerCase()
+    return palette[Math.abs(hash) % palette.length]
+  }
+
+  const getCategoryStyle = (category) => {
+    const color = getCategoryColor(category)
+    return {
+      background: `linear-gradient(135deg, ${color}33 0%, ${color}15 100%)`,
+      borderBottomColor: color
+    }
   }
 </script>
 
@@ -81,16 +100,6 @@
   .blog-post-card__header {
     padding: var(--v-unit-4) var(--v-unit-6) var(--v-unit-3);
     border-bottom: 2px solid transparent;
-  }
-
-  .blog-post-card--tips .blog-post-card__header {
-    background: linear-gradient(135deg, rgba(76, 175, 80, 0.08) 0%, rgba(76, 175, 80, 0.03) 100%);
-    border-bottom-color: #4caf50;
-  }
-
-  .blog-post-card--education .blog-post-card__header {
-    background: linear-gradient(135deg, rgba(33, 150, 243, 0.08) 0%, rgba(33, 150, 243, 0.03) 100%);
-    border-bottom-color: #2196f3;
   }
 
   .blog-post-card__category {

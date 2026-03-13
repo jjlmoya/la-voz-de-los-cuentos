@@ -3,7 +3,7 @@ export const post = {
   slugEn: "how-to-tell-stories-to-children",
   title: "Cómo contar historias a los niños: Una guía para padres",
   description: "Descubre técnicas efectivas para contar cuentos que cautiven a tus hijos y despierten su imaginación.",
-  date: "2024-03-12",
+  date: "2026-03-13",
   category: "Consejos",
   tags: ["cuentos", "niños", "narración", "padres"],
   content: [

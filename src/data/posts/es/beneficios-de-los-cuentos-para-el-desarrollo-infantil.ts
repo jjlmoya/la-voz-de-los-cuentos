@@ -3,7 +3,7 @@ export const post = {
   slugEn: "benefits-of-stories-for-child-development",
   title: "Beneficios de los cuentos para el desarrollo infantil",
   description: "Conoce cómo los cuentos impactan positivamente en el desarrollo cognitivo, emocional y social de los niños.",
-  date: "2024-03-10",
+  date: "2026-03-13",
   category: "Educación",
   tags: ["desarrollo", "cuentos", "niños", "psicología"],
   content: [
@@ -239,6 +239,14 @@ export const post = {
     {
       type: "text",
       body: "Comienza hoy. No necesitas ser un experto ni tener todo planificado. Un simple cuento contado con cariño es suficiente para cambiar la vida de un niño."
+    },
+    {
+      type: "story_recommendation",
+      slug: "el-metriquista",
+      title: "El Metriquista",
+      description: "Un cuento fascinante sobre un personaje capaz de medir lo invisible: las emociones y los sentimientos. Ideal para trabajar la inteligencia emocional.",
+      variant: "primary",
+      label: "Cuento para el Desarrollo Emocional"
     },
     {
       type: "heading",

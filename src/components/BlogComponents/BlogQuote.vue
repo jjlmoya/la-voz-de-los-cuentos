@@ -1,8 +1,9 @@
 <template>
-  <blockquote class="blog-quote">
+  <div class="blog-quote">
+    <div class="blog-quote__icon">“</div>
     <p class="blog-quote__text">{{ block.text }}</p>
     <footer v-if="block.author" class="blog-quote__author">— {{ block.author }}</footer>
-  </blockquote>
+  </div>
 </template>
 
 <script setup>
@@ -13,28 +14,51 @@
 
 <style scoped>
   .blog-quote {
-    margin: var(--v-unit-3) 0;
-    padding: var(--v-unit-3) var(--v-unit-3);
-    border-left: 6px solid #FFB3D9;
-    background: linear-gradient(90deg, #FFF5FB 0%, #FFFBFC 100%);
-    border-radius: 8px;
-    font-style: italic;
-    color: #2D3E50;
-    box-shadow: 0 4px 12px rgba(255, 107, 157, 0.15);
+    margin: var(--v-unit-6) 0;
+    padding: var(--v-unit-6);
+    background: #F7FAFC;
+    border-radius: 30px;
+    position: relative;
+    text-align: center;
+    border: 2px dashed #E2E8F0;
+  }
+
+  .blog-quote__icon {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background: #A8D8EA;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-family: serif;
+    line-height: 1;
+    padding-top: 10px;
+    box-shadow: 0 4px 10px rgba(168, 216, 234, 0.4);
   }
 
   .blog-quote__text {
-    margin: 0 0 var(--v-unit-1) 0;
-    font-size: 19px;
-    line-height: 1.6;
-    font-weight: 600;
+    margin: 0 0 var(--v-unit-3) 0;
+    font-size: 22px;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #4A5568;
+    font-style: italic;
   }
 
   .blog-quote__author {
     margin: 0;
-    font-size: 14px;
-    color: #FF6B9D;
+    font-size: 15px;
+    color: #718096;
     font-style: normal;
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 </style>

@@ -192,18 +192,22 @@
   }
 
   .blog-post-page__title {
-    font-size: clamp(28px, 5vw, 48px);
-    font-weight: 800;
-    color: #FF6B9D;
-    margin: 0 0 var(--v-unit-2) 0;
-    line-height: 1.2;
+    font-size: clamp(32px, 6vw, 56px);
+    font-weight: 900;
+    color: #FF8FBC; /* Bright Pastel Pink */
+    margin: 0 0 var(--v-unit-3) 0;
+    line-height: 1.1;
+    text-shadow: 2px 2px 0px #FFD4E5;
   }
 
   .blog-post-page__description {
-    font-size: var(--v-font-size-lg);
-    color: #2D3E50;
+    font-size: 22px;
+    color: #718096;
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.5;
+    font-weight: 600;
+    border-left: 5px solid #A8D8EA;
+    padding-left: var(--v-unit-4);
   }
 
   .blog-post-page__content {

@@ -3,7 +3,7 @@ export const post = {
   slugEn: "stories-by-age-guide",
   title: "Cuentos Adaptados por Edades: Guía Completa para Cada Etapa",
   description: "Descubre qué cuentos son ideales para cada edad infantil, desde bebés hasta adolescentes. Guía práctica con recomendaciones de historias según el desarrollo del niño.",
-  date: "2026-03-12",
+  date: "2026-03-13",
   category: "Educación",
   tags: ["cuentos por edad", "desarrollo infantil", "literatura infantil", "recomendaciones libros", "habilidades por edad"],
   content: [
@@ -365,11 +365,246 @@ export const post = {
     {
       type: "heading",
       level: 2,
-      text: "Conclusión: Personaliza la Selección de Cuentos"
+      text: "La Importancia del Formato Físico en las Primeras Etapas"
     },
     {
       type: "text",
-      body: "Mientras que estas directrices por edad son útiles como punto de partida, recuerda que cada niño es único. El mejor cuento para tu hijo es aquel que lo mantiene enganchado, lo desafía de manera apropiada y lo ayuda a desarrollar un amor duradero por la lectura. Observa, escucha y ajusta continuamente tu selección basándote en las necesidades y preferencias individuales de tu hijo. La verdadera magia ocurre cuando encuentras ese cuento perfecto que hace que los ojos de tu hijo se iluminen de asombro y anticipación."
+      body: "Aunque vivimos en una era digital, el contacto físico con el libro sigue siendo insustituible para el desarrollo neurocognitivo de los niños pequeños. Pasar las páginas, sentir la textura del papel o del cartón, e incluso el olor de un libro nuevo, son estímulos sensoriales que refuerzan la experiencia de aprendizaje. Para un bebé, el libro es un objeto tridimensional que puede explorar, lo que ayuda a desarrollar su coordinación ojo-mano y su percepción espacial."
+    },
+    {
+      type: "text",
+      body: "Para los niños mayores, tener una biblioteca física en casa, por pequeña que sea, crea un ambiente de alfabetización que los invita a la lectura espontánea. Ver a sus padres leer libros físicos es un ejemplo poderoso que supera cualquier consejo verbal sobre la importancia de la lectura."
+    },
+    {
+      type: "heading",
+      level: 2,
+      text: "Cómo Leer según la Edad: Técnicas de Narración"
+    },
+    {
+      type: "text",
+      body: "No solo importa qué leemos, sino cómo lo leemos. La técnica de narración debe evolucionar con el niño:"
+    },
+    {
+      type: "list",
+      style: "unordered",
+      items: [
+        "Para bebés: Usa onomatopeyas, cambia el tono de voz para los animales y haz pausas largas para que miren los dibujos.",
+        "Para preescolares: Haz preguntas abiertas sobre qué creen que pasará después. Usa gestos exagerados y deja que ellos completen las frases repetitivas.",
+        "Para edad escolar: Fomenta la lectura compartida. Puedes leer un párrafo tú y otro el niño. Discutid los dilemas morales de los personajes.",
+        "Para adolescentes: Respeta su espacio pero mantente disponible para comentar temas complejos si ellos lo desean. Los audiolibros pueden ser una gran puerta de entrada en esta etapa."
+      ]
+    },
+    {
+      type: "heading",
+      level: 2,
+      style: "unordered",
+      items: [
+        "Temáticas más profundas: identidad, amistad, justicia",
+        "Narrativas con conflictos internos complejos",
+        "Protagonistas de la misma edad o ligeramente mayores",
+        "Humor más sofisticado",
+        "Capacidad de leer y disfrutar libros sin ilustraciones",
+        "Introducción a diferentes perspectivas culturales"
+      ]
+    },
+    {
+      type: "text",
+      body: "Los preadolescentes buscan historias que reflejen sus experiencias reales o aspiraciones futuras. Aprecian el humor inteligente y los personajes con los que pueden identificarse. Esta es una edad crítica para fomentar el hábito de lectura independiente."
+    },
+    {
+      type: "heading",
+      level: 3,
+      text: "Recomendaciones de Títulos"
+    },
+    {
+      type: "list",
+      style: "unordered",
+      items: [
+        "\"Wonder\" de R.J. Palacio - Empatía y aceptación",
+        "\"The Baby-Sitters Club\" - Amistad y emprendimiento",
+        "\"Percy Jackson\" series - Aventura y mitología",
+        "\"Diary of a Wimpy Kid\" - Humor relatable",
+        "\"The Giver\" - Pensamiento crítico"
+      ]
+    },
+    {
+      type: "heading",
+      level: 2,
+      text: "Cuentos para Adolescentes (12+ años)"
+    },
+    {
+      type: "heading",
+      level: 3,
+      text: "Características Clave"
+    },
+    {
+      type: "list",
+      style: "unordered",
+      items: [
+        "Narrativas complejas con múltiples puntos de vista",
+        "Temas contemporáneos: identidad, inclusión, cambio social",
+        "Personajes profundos con dilemas morales",
+        "Lenguaje más maduro y sofisticado",
+        "Capacidad de apreciar sátira, ironía y simbolismo",
+        "Géneros variados: distopía, romance, realismo mágico"
+      ]
+    },
+    {
+      type: "text",
+      body: "Los adolescentes buscan historias que los validen y reflejen sus preocupaciones reales. Aprecian el pensamiento profundo y pueden analizar temas complejos. A esta edad, algunos pueden superar los libros \"infantiles\" y buscar literatura adulta joven."
+    },
+    {
+      type: "heading",
+      level: 3,
+      text: "Recomendaciones de Títulos"
+    },
+    {
+      type: "list",
+      style: "unordered",
+      items: [
+        "\"The Hunger Games\" - Distopía y resistencia",
+        "\"Eleanor & Park\" - Romance y comprensión",
+        "\"They Both Die at the End\" - Identidad y aceptación",
+        "\"The Poet X\" - Tradición vs. libertad",
+        "\"Simon vs. the Homo Sapiens Agenda\" - LGBTQ+ y romance"
+      ]
+    },
+    {
+      type: "heading",
+      level: 2,
+      text: "Señales de que un Cuento es Demasiado Avanzado"
+    },
+    {
+      type: "list",
+      style: "unordered",
+      items: [
+        "El niño muestra signos de frustración o aburrimiento después de 5-10 minutos",
+        "Hace preguntas constantemente sobre palabras o conceptos que no entiende",
+        "Parece asustado o incomodo con el contenido",
+        "No puede seguir la trama o se distrae fácilmente",
+        "Dice explícitamente que el libro es \"demasiado difícil\" o \"aburridó\""
+      ]
+    },
+    {
+      type: "heading",
+      level: 2,
+      text: "Señales de que un Cuento es Demasiado Fácil"
+    },
+    {
+      type: "list",
+      style: "unordered",
+      items: [
+        "Termina rápidamente y quiere más historias",
+        "Puede anticipar perfectamente cada giro de la trama",
+        "Muestra desinterés o comienza a distraerse a mitad del cuento",
+        "Pide constantemente cuentos más largos o complicados",
+        "No hace preguntas ni parece reflexionar sobre el contenido"
+      ]
+    },
+    {
+      type: "heading",
+      level: 2,
+      text: "La Zona Dorada: Encontrar el Balance Perfecto"
+    },
+    {
+      type: "text",
+      body: "El cuento ideal es aquel que presenta un desafío moderado: lo suficientemente complejo como para mantener el interés y promover el crecimiento, pero no tan complicado como para causar frustración. Esto se llama la \"zona de desarrollo próximo\" de Vygotsky y es crucial para el aprendizaje óptimo."
+    },
+    {
+      type: "highlight",
+      variant: "info",
+      title: "Consejo Práctico",
+      body: "Como padre o educador, no dudes en leer el cuento primero antes de compartirlo con el niño. Esto te permite evaluar si es apropiado y estar preparado para explicar conceptos difíciles si es necesario."
+    },
+    {
+      type: "heading",
+      level: 2,
+      text: "Factores Adicionales a Considerar Más allá de la Edad"
+    },
+    {
+      type: "heading",
+      level: 3,
+      text: "Nivel de Lectura Actual"
+    },
+    {
+      type: "text",
+      body: "La edad cronológica no siempre corresponde al nivel de lectura. Algunos niños leen por encima de su nivel de edad, mientras que otros necesitan material más apropiado a su nivel actual. Observa con qué facilidad tu hijo lee y ajusta en consecuencia."
+    },
+    {
+      type: "heading",
+      level: 3,
+      text: "Intereses Personales"
+    },
+    {
+      type: "text",
+      body: "Un niño de 7 años obsesionado con los dinosaurios puede disfrutar de libros de no ficción más complejos sobre ese tema. Los intereses personales pueden motivar a los niños a leer material ligeramente más desafiante."
+    },
+    {
+      type: "heading",
+      level: 3,
+      text: "Sensibilidad Emocional"
+    },
+    {
+      type: "text",
+      body: "Algunos niños son más sensibles emocionalmente que otros. Un cuento que no molesta a un niño puede aterrorizar a otro de la misma edad. Considera la temperamento de tu hijo al seleccionar historias."
+    },
+    {
+      type: "heading",
+      level: 3,
+      text: "Exposición Previa a la Lectura"
+    },
+    {
+      type: "text",
+      body: "Los niños que han sido expuestos a mucha lectura desde temprana edad a menudo pueden maneja libros más complejos que otros niños de su edad que tienen menos experiencia con la lectura."
+    },
+    {
+      type: "heading",
+      level: 2,
+      text: "La Importancia del Formato Físico en las Primeras Etapas"
+    },
+    {
+      type: "text",
+      body: "Aunque vivimos en una era digital, el contacto físico con el libro sigue siendo insustituible para el desarrollo neurocognitivo de los niños pequeños. Pasar las páginas, sentir la textura del papel o del cartón, e incluso el olor de un libro nuevo, son estímulos sensoriales que refuerzan la experiencia de aprendizaje. Para un bebé, el libro es un objeto tridimensional que puede explorar, lo que ayuda a desarrollar su coordinación ojo-mano y su percepción espacial."
+    },
+    {
+      type: "text",
+      body: "Para los niños mayores, tener una biblioteca física en casa, por pequeña que sea, crea un ambiente de alfabetización que los invita a la lectura espontánea. Ver a sus padres leer libros físicos es un ejemplo poderoso que supera cualquier consejo verbal sobre la importancia de la lectura."
+    },
+    {
+      type: "heading",
+      level: 2,
+      text: "Cómo Leer según la Edad: Técnicas de Narración"
+    },
+    {
+      type: "text",
+      body: "No solo importa qué leemos, sino cómo lo leemos. La técnica de narración debe evolucionar con el niño:"
+    },
+    {
+      type: "list",
+      style: "unordered",
+      items: [
+        "Para bebés: Usa onomatopeyas, cambia el tono de voz para los animales y haz pausas largas para que miren los dibujos.",
+        "Para preescolares: Haz preguntas abiertas sobre qué creen que pasará después. Usa gestos exagerados y deja que ellos completen las frases repetitivas.",
+        "Para edad escolar: Fomenta la lectura compartida. Puedes leer un párrafo tú y otro el niño. Discutid los dilemas morales de los personajes.",
+        "Para adolescentes: Respeta su espacio pero mantente disponible para comentar temas complejos si ellos lo desean. Los audiolibros pueden ser una gran puerta de entrada en esta etapa."
+      ]
+    },
+    {
+      type: "heading",
+      level: 2,
+      text: "Conclusión: Una Guía en Evolución Constante"
+    },
+    {
+      type: "text",
+      body: "Esta guía es un punto de partida, pero recuerda que cada niño tiene su propio ritmo. Lo más importante no es seguir estrictamente las recomendaciones por edad, sino observar la reacción de tu hijo ante cada historia. La literatura infantil es un puente de comunicación entre generaciones, y encontrar el libro adecuado para cada etapa es una de las misiones más gratificantes que podemos emprender como educadores y padres. Al final, el objetivo no es solo que lean más, sino que aprendan a disfrutar del infinito mundo de posibilidades que se abre con cada 'Había una vez'."
+    },
+    {
+      type: "story_recommendation",
+      slug: "el-finalizador",
+      title: "El Finalizador",
+      description: "Un cuento excelente para niños en edad escolar que ayuda a entender la importancia de terminar lo que empezamos. Un aprendizaje vital para su desarrollo.",
+      variant: "primary",
+      label: "Cuento Recomendado"
     }
   ]
 }

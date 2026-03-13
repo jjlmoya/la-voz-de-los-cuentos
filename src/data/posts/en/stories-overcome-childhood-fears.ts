@@ -3,7 +3,7 @@ export const post = {
   slugEs: "cuentos-resolver-miedos-infantiles",
   title: "Stories to Help Children Overcome Fears: A Parent's Complete Guide",
   description: "Discover how to use transformative stories to help your children naturally overcome their most common fears safely.",
-  date: "2026-03-12",
+  date: "2026-03-13",
   category: "Education",
   tags: ["childhood fears", "therapeutic stories", "child anxiety", "emotional development", "child psychology"],
   content: [

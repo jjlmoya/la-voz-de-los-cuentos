@@ -10,8 +10,13 @@ Genero automáticamente posts de blog completos, bilingües y optimizados para S
 - Elijo dinámicamente un tema nuevo (dormir, edad, beneficios, emociones, etc.)
 - Creo contenido en español + traducción al inglés simultáneamente
 - Contenido variado: headings, párrafos, listas, tablas, quotes, highlights, stats, gráficas, pasos, comparativas
+- **Requisitos SEO Obligatorios**:
+    - Mínimo **1500 PALABRAS** por post (en cada idioma). Validado por `npm run test:bilingual`.
+    - Al menos **una** recomendación de cuento (`story_recommendation`). **IMPORTANTE:** No elegir al azar. Debe seleccionarse un cuento de la colección existente (`src/data/es/stories.json`) que sea temáticamente relevante al contenido del post.
+    - Fecha actual: **2026-03-13** (Formato: `YYYY-MM-DD`).
 - Guardo en archivos `.ts` dentro de `src/data/posts/es/` y `src/data/posts/en/`
-- Actualizo `src/data/index.js` para importar los nuevos posts
+- Actualizo `src/data/index.ts` para importar los nuevos posts (Nota: el archivo es `index.ts`, no `index.js`).
+- **CATEGORÍAS:** Libertad total. Cualquier categoría que elijas (ej: Emociones, Salud, Creatividad) tendrá un color asignado automáticamente en el listado.
 - **NOTA:** Todo manual, sin scripts intermedios
 
 # MI PROCESO
@@ -118,6 +123,8 @@ npm run test:bilingual
 ```
 
 Verifica automáticamente:
+- ✅ **Mínimo 1500 palabras** por post (en cada idioma)
+- ✅ **Al menos una recomendación de cuento** (`story_recommendation`)
 - ✅ Mismo número ES/EN
 - ✅ Slugs pareados correctamente
 - ✅ Campos obligatorios

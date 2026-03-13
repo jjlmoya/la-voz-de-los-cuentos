@@ -3,7 +3,7 @@ export const post = {
   slugEs: "beneficios-de-los-cuentos-para-el-desarrollo-infantil",
   title: "Benefits of Stories for Child Development",
   description: "Learn how stories have a positive impact on children's cognitive, emotional and social development.",
-  date: "2024-03-10",
+  date: "2026-03-13",
   category: "Education",
   tags: ["development", "stories", "children", "psychology"],
   content: [
@@ -244,6 +244,14 @@ export const post = {
     {
       type: "text",
       body: "As we reflect on all these benefits, it's important to remember that we're not talking about abstract theory. These positive effects of stories are real, measurable, and can be seen in children's everyday lives. A child who feels seen through a story character copes better with emotions and develops greater emotional resilience and self-understanding. A child who listens to stories of resilience faces challenges with greater confidence and determination. A child who grows up in a narrative-rich environment develops a more sophisticated relationship with language that will serve them excellently throughout their academic and professional lives. Each story, each storytelling session, is an investment in the child's future—not just their intellectual growth but their emotional wellbeing and social development. It's not a luxury but a fundamental necessity for healthy development, as important as nutrition, exercise, and sleep. Stories are the invisible architecture that shapes how a child's mind develops and evolves. They provide structure to abstract concepts, make the invisible visible, and transform complex ideas into accessible narratives that young minds can understand and integrate into their worldview. Stories transform lives, create deep connections between generations, and build the strong foundation of more complete, empathetic, and creative human beings capable of thriving and leading in an increasingly complex, interconnected, and rapidly changing world. This is why investing in stories is investing in the future of humanity itself."
+    },
+    {
+      type: "story_recommendation",
+      slug: "the-feelingsmith",
+      title: "The Feelingsmith",
+      description: "A fascinating story about a character who can measure the invisible: emotions and feelings. Perfect for working on emotional intelligence.",
+      variant: "primary",
+      label: "Story for Emotional Development"
     },
     {
       type: "heading",

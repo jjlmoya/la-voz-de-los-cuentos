@@ -18,9 +18,9 @@
 
 <style scoped>
   .blog-list {
-    margin: var(--v-unit-2) 0;
-    padding-left: var(--v-unit-5);
-    color: #2D3E50;
+    margin: var(--v-unit-4) 0;
+    padding-left: var(--v-unit-2);
+    color: #5A6C7D;
   }
 
   .blog-list--unordered {
@@ -28,13 +28,11 @@
   }
 
   .blog-list--unordered .blog-list__item::before {
-    content: "★";
-    color: #FFB3D9;
-    font-size: 18px;
+    content: "☁️";
+    font-size: 14px;
     margin-right: var(--v-unit-2);
     display: inline-block;
-    width: 20px;
-    text-align: center;
+    vertical-align: middle;
   }
 
   .blog-list--ordered {
@@ -47,9 +45,9 @@
   }
 
   .blog-list__item {
-    margin-bottom: var(--v-unit-1);
-    line-height: 1.6;
-    font-size: 16px;
+    margin-bottom: var(--v-unit-2);
+    line-height: 1.7;
+    font-size: 17px;
     font-weight: 500;
   }
 

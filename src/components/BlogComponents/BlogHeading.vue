@@ -14,30 +14,47 @@
   .blog-heading {
     margin: 0;
     font-weight: 800;
-    color: #2D3E50;
     line-height: 1.2;
   }
 
   .blog-heading--h2 {
-    font-size: 36px;
-    margin-top: var(--v-unit-2);
-    margin-bottom: var(--v-unit-1);
-    color: #6B5B4F;
+    font-size: 32px;
+    margin-top: var(--v-unit-6);
+    margin-bottom: var(--v-unit-3);
+    color: #FF8FBC; /* Pastel Pink */
+    border-bottom: 3px dashed #FFD4E5;
+    padding-bottom: 8px;
+    display: inline-block;
+    width: 100%;
   }
 
   .blog-heading--h3 {
-    font-size: 28px;
-    margin-top: var(--v-unit-2);
-    margin-bottom: var(--v-unit-1);
-    color: #4A90E2;
+    font-size: 26px;
+    margin-top: var(--v-unit-5);
+    margin-bottom: var(--v-unit-2);
+    color: #7BB8D4; /* Pastel Blue */
+    position: relative;
+    padding-left: 20px;
+  }
+
+  .blog-heading--h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 80%;
+    background: #A8D8EA;
+    border-radius: 10px;
   }
 
   .blog-heading--h4,
   .blog-heading--h5,
   .blog-heading--h6 {
-    font-size: 20px;
-    margin-top: var(--v-unit-1);
-    margin-bottom: var(--v-unit-1);
-    color: #5A6C7D;
+    font-size: 22px;
+    margin-top: var(--v-unit-4);
+    margin-bottom: var(--v-unit-2);
+    color: #9C8CB9; /* Pastel Purple */
   }
 </style>

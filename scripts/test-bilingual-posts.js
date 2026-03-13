@@ -2,6 +2,40 @@
 
 import { getPosts } from '../src/data/index.js';
 
+const MIN_WORDS = 1500;
+
+function countWords(blocks) {
+  return (blocks || []).reduce((total, block) => {
+    switch (block.type) {
+      case 'text':
+        return total + (block.body ? block.body.trim().split(/\s+/).length : 0);
+      case 'heading':
+        return total + (block.text ? block.text.trim().split(/\s+/).length : 0);
+      case 'list':
+        return total + (block.items ? block.items.join(' ').trim().split(/\s+/).length : 0);
+      case 'table':
+      case 'story_table':
+        return total + (block.rows ? block.rows.flat().join(' ').trim().split(/\s+/).length : 0);
+      case 'quote':
+        return total + (block.text ? block.text.trim().split(/\s+/).length : 0);
+      case 'highlight':
+        return total + (block.body ? block.body.trim().split(/\s+/).length : 0);
+      case 'steps':
+        return total + (block.items ? block.items.map(i => `${i.title} ${i.body}`).join(' ').trim().split(/\s+/).length : 0);
+      case 'comparison':
+        const left = block.left ? [block.left.title, ...block.left.items].join(' ') : '';
+        const right = block.right ? [block.right.title, ...block.right.items].join(' ') : '';
+        return total + `${left} ${right}`.trim().split(/\s+/).length;
+      case 'stats':
+        return total + (block.items ? block.items.map(i => i.label).join(' ').trim().split(/\s+/).length : 0);
+      case 'story_recommendation':
+        return total + `${block.title} ${block.description}`.trim().split(/\s+/).length;
+      default:
+        return total;
+    }
+  }, 0);
+}
+
 function validateBilingualPosts() {
   const postsEs = getPosts('es');
   const postsEn = getPosts('en');
@@ -89,6 +123,42 @@ function validateBilingualPosts() {
 
   if (errors.length === 0 && postsEn.length > 0) {
     console.log(`✅ All posts have required fields`);
+  }
+
+  // Test 6: Validate minimum word count (1500 words)
+  console.log(`\n📝 Testing minimum word count (${MIN_WORDS} words):`);
+  for (const post of [...postsEs, ...postsEn]) {
+    const wordCount = countWords(post.content);
+    if (wordCount < MIN_WORDS) {
+      const lang = postsEs.includes(post) ? 'ES' : 'EN';
+      errors.push(
+        `❌ Post "${post.slug}" [${lang}] has only ${wordCount} words (Minimum required: ${MIN_WORDS})`
+      );
+      passed = false;
+    } else {
+      // Avoid cluttering but show progress
+    }
+  }
+
+  if (passed) {
+    console.log(`✅ All posts meet the minimum length of ${MIN_WORDS} words`);
+  }
+
+  // Test 7: Validate at least one story_recommendation block
+  console.log(`\n📝 Testing story recommendations:`);
+  for (const post of [...postsEs, ...postsEn]) {
+    const hasRecommendation = post.content.some(block => block.type === 'story_recommendation');
+    if (!hasRecommendation) {
+      const lang = postsEs.includes(post) ? 'ES' : 'EN';
+      errors.push(
+        `❌ Post "${post.slug}" [${lang}] is missing at least one 'story_recommendation' block`
+      );
+      passed = false;
+    }
+  }
+
+  if (errors.length === 0 && postsEn.length > 0) {
+    console.log(`✅ All posts have at least one story recommendation`);
   }
 
   // Print results

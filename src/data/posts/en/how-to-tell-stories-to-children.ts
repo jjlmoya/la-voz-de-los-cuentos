@@ -3,7 +3,7 @@ export const post = {
   slugEs: "como-contar-historias-a-los-ninos",
   title: "How to Tell Stories to Children: A Guide for Parents",
   description: "Discover effective techniques for telling stories that captivate your children and awaken their imagination.",
-  date: "2024-03-12",
+  date: "2026-03-13",
   category: "Tips",
   tags: ["stories", "children", "narration", "parents"],
   content: [
