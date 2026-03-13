@@ -68,6 +68,10 @@ export default {
   'page.stories.order.duration': 'Duration',
   'page.stories.order.name': 'Title',
 
+  'page.blog.h1': 'Blog',
+  'page.blog.description':
+    'Discover the best articles, tips and guides about children\'s stories, education and family growth',
+
   'page.songs.h1': 'Songs',
   'page.songs.description':
     'Discover all our magical songs based on the stories',

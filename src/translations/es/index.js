@@ -70,6 +70,10 @@ export default {
   'page.stories.order.duration': 'Duración',
   'page.stories.order.name': 'Nombre',
 
+  'page.blog.h1': 'Blog',
+  'page.blog.description':
+    'Descubre los mejores artículos, consejos y guías sobre cuentos infantiles, educación y crecimiento familiar',
+
   'page.songs.h1': 'Canciones',
   'page.songs.description':
     'Descubre todas nuestras canciones mágicas basadas en los cuentos',
