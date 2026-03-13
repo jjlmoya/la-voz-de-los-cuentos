@@ -134,13 +134,13 @@ export const post = {
       body: "Between 4-6 years, children develop the ability to follow longer stories and understand concepts like fear, courage, and friendship. They begin asking questions and reflecting on characters' actions."
     },
     {
-      type: "table",
-      headers: ["Topic", "Goal", "Story Example"],
+      type: "story_table",
+      headers: ["Topic", "Goal", "Recommended Story"],
       rows: [
-        ["Starting School", "Reduce anxiety", "\"The Kissing Hand\", \"Ready for School\""],
-        ["Emotions", "Identify feelings", "\"In My Heart\", \"Today I Feel Silly\""],
-        ["Values", "Teach lessons", "\"The Lion and the Mouse\", \"The Giving Tree\""],
-        ["Adventure", "Spark imagination", "\"Where the Wild Things Are\", \"The Rainbow Fish\""]
+        ["Starting School", "Reduce anxiety", "the-story-of-pipo-the-traveling-cat"],
+        ["Emotions", "Identify feelings", "458-the-robot-with-a-heart"],
+        ["Values", "Teach lessons", "the-soul-reaper-a-story-of-friendship-and-balance"],
+        ["Adventure", "Spark imagination", "lighteater-a-tale-of-mystery-and-light"]
       ]
     },
     {

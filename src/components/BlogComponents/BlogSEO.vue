@@ -1,14 +1,13 @@
 <template>
   <div class="blog-seo">
-    <!-- This component handles SEO for blog posts with story references -->
+    <!-- JSON-LD schema data embedded for SEO -->
+    <script type="application/ld+json" v-html="JSON.stringify(jsonLdData)"></script>
   </div>
 </template>
 
 <script setup>
-import { onMounted, computed } from 'vue'
-import { useHead } from '@vueuse/head'
+import { computed } from 'vue'
 import { toStory } from '../../router'
-import t from '../../translations'
 
 const props = defineProps({
   post: {
@@ -98,7 +97,7 @@ const generateJsonLd = () => {
   return blogPostSchema
 }
 
-// Generate meta tags for SEO
+// Generate meta tags for SEO (for reference/documentation)
 const generateMetaTags = () => {
   const keywords = [
     props.post.tags.join(', '),
@@ -125,25 +124,9 @@ const generateMetaTags = () => {
   }
 }
 
-onMounted(() => {
-  const metaTags = generateMetaTags()
-  const jsonLd = generateJsonLd()
-
-  // Set meta tags (if using vueuse/head or similar)
-  if (typeof useHead !== 'undefined') {
-    useHead({
-      meta: Object.entries(metaTags).map(([name, content]) => ({
-        name,
-        content: Array.isArray(content) ? content.join(', ') : String(content)
-      })),
-      script: [
-        {
-          type: 'application/ld+json',
-          textContent: JSON.stringify(jsonLd)
-        }
-      ]
-    })
-  }
+// Get JSON-LD data for embedding in page
+const jsonLdData = computed(() => {
+  return generateJsonLd()
 })
 </script>
 

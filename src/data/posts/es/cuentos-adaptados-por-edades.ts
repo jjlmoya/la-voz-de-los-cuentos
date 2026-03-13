@@ -134,13 +134,13 @@ export const post = {
       body: "A los 4-6 años, los niños desarrollan la capacidad de seguir historias más largas y comprenden conceptos como el miedo, la valentía y la amistad. Comienzan a hacer preguntas y a reflexionar sobre las acciones de los personajes."
     },
     {
-      type: "table",
-      headers: ["Tema", "Objetivo", "Ejemplo de Cuento"],
+      type: "story_table",
+      headers: ["Tema", "Objetivo", "Cuento Recomendado"],
       rows: [
-        ["Empezar la Escuela", "Reducir ansiedad", "\"The Kissing Hand\", \"Ready for School\""],
-        ["Emociones", "Identificar sentimientos", "\"In My Heart\", \"Today I Feel Silly\""],
-        ["Valores", "Enseñar lecciones", "\"The Lion and the Mouse\", \"The Giving Tree\""],
-        ["Aventura", "Estimular imaginación", "\"Where the Wild Things Are\", \"The Rainbow Fish\""]
+        ["Empezar la Escuela", "Reducir ansiedad", "la-historia-de-pipo-el-gato-viajero"],
+        ["Emociones", "Identificar sentimientos", "458-el-robot-con-corazon"],
+        ["Valores", "Enseñar lecciones", "el-segador-de-almas-una-historia-de-amistad-y-equilibrio"],
+        ["Aventura", "Estimular imaginación", "el-traga-luces-un-cuento-de-misterio-y-luz"]
       ]
     },
     {

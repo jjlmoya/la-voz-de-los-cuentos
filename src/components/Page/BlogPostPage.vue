@@ -12,7 +12,7 @@
         </header>
 
         <div class="blog-post-page__content">
-          <BlogContent :content="post.content" />
+          <BlogContent :content="post.content" :lang="lang" />
         </div>
 
         <footer class="blog-post-page__footer">

@@ -1,15 +1,24 @@
 <template>
-  <div class="story-recommendation" :class="`story-recommendation--${variant}`">
+  <div class="story-recommendation" :class="`story-recommendation--${block.variant}`">
     <a :href="storyLink" class="story-recommendation__link">
+      <div class="story-recommendation__image-wrapper">
+        <img
+          :src="getImage()"
+          :alt="block.title"
+          class="story-recommendation__image"
+          loading="lazy"
+        />
+        <div class="story-recommendation__overlay"></div>
+      </div>
       <div class="story-recommendation__content">
         <div class="story-recommendation__header">
-          <span class="story-recommendation__label">{{ label }}</span>
+          <span class="story-recommendation__label">{{ block.label || 'Cuento Recomendado' }}</span>
           <span class="story-recommendation__icon">→</span>
         </div>
-        <h4 class="story-recommendation__title">{{ title }}</h4>
-        <p class="story-recommendation__description">{{ description }}</p>
+        <h4 class="story-recommendation__title">{{ block.title }}</h4>
+        <p class="story-recommendation__description">{{ block.description }}</p>
         <div class="story-recommendation__meta">
-          <span v-if="duration" class="story-recommendation__time">⏱ {{ duration }} min</span>
+          <span v-if="block.duration" class="story-recommendation__time">⏱ {{ block.duration }} min</span>
           <span class="story-recommendation__cta">{{ ctaText }}</span>
         </div>
       </div>
@@ -22,58 +31,75 @@ import { computed } from 'vue'
 import { toStory } from '../../router'
 import t from '../../translations'
 
+const lang = import.meta.env.PUBLIC_LANG
+
 const props = defineProps({
-  slug: {
-    type: String,
+  block: {
+    type: Object,
     required: true
-  },
-  title: {
-    type: String,
-    required: true
-  },
-  description: {
-    type: String,
-    default: 'Descubre este cuento en nuestra colección'
-  },
-  duration: {
-    type: Number,
-    default: null
-  },
-  variant: {
-    type: String,
-    default: 'primary',
-    validator: (v) => ['primary', 'secondary', 'success', 'warning'].includes(v)
-  },
-  label: {
-    type: String,
-    default: 'Cuento Recomendado'
   }
 })
 
-const storyLink = computed(() => toStory(props.slug))
+const storyLink = computed(() => toStory(props.block.slug))
 
 const ctaText = computed(() => {
   return t('blog.readmore', 'Read More')
 })
+
+const getImage = () => {
+  return `/assets/stories/${lang}/${props.block.slug}.webp`
+}
 </script>
 
 <style scoped>
 .story-recommendation {
-  margin: var(--v-unit-4) 0;
-  border-radius: var(--v-radius-lg);
+  margin: var(--v-unit-6) 0;
+  border-radius: 16px;
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .story-recommendation__link {
-  display: block;
+  display: flex;
   text-decoration: none;
   color: inherit;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+  min-height: 280px;
 }
 
-.story-recommendation__link:hover {
-  transform: translateY(-2px);
+.story-recommendation__image-wrapper {
+  position: relative;
+  width: 40%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.story-recommendation__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.story-recommendation__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%);
+  pointer-events: none;
+}
+
+.story-recommendation:hover .story-recommendation__image {
+  transform: scale(1.08);
+}
+
+.story-recommendation:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
 }
 
 .story-recommendation--primary {
@@ -81,7 +107,7 @@ const ctaText = computed(() => {
 }
 
 .story-recommendation--primary:hover {
-  box-shadow: 0 12px 32px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 12px 32px rgba(102, 126, 234, 0.3);
 }
 
 .story-recommendation--secondary {
@@ -89,7 +115,7 @@ const ctaText = computed(() => {
 }
 
 .story-recommendation--secondary:hover {
-  box-shadow: 0 12px 32px rgba(245, 87, 108, 0.4);
+  box-shadow: 0 12px 32px rgba(245, 87, 108, 0.3);
 }
 
 .story-recommendation--success {
@@ -97,7 +123,7 @@ const ctaText = computed(() => {
 }
 
 .story-recommendation--success:hover {
-  box-shadow: 0 12px 32px rgba(79, 172, 254, 0.4);
+  box-shadow: 0 12px 32px rgba(79, 172, 254, 0.3);
 }
 
 .story-recommendation--warning {
@@ -105,32 +131,43 @@ const ctaText = computed(() => {
 }
 
 .story-recommendation--warning:hover {
-  box-shadow: 0 12px 32px rgba(250, 112, 154, 0.4);
+  box-shadow: 0 12px 32px rgba(250, 112, 154, 0.3);
 }
 
 .story-recommendation__content {
-  padding: var(--v-unit-4);
+  padding: var(--v-unit-5);
   color: white;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
 }
 
 .story-recommendation__header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: var(--v-unit-2);
+  align-items: flex-start;
+  margin-bottom: var(--v-unit-3);
+  gap: var(--v-unit-2);
 }
 
 .story-recommendation__label {
-  font-size: var(--v-font-size-sm);
-  font-weight: 600;
+  font-size: 11px;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   opacity: 0.95;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 4px 12px;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  white-space: nowrap;
 }
 
 .story-recommendation__icon {
-  font-size: var(--v-font-size-lg);
+  font-size: 20px;
   transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
 .story-recommendation__link:hover .story-recommendation__icon {
@@ -138,49 +175,73 @@ const ctaText = computed(() => {
 }
 
 .story-recommendation__title {
-  font-size: var(--v-font-size-lg);
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 800;
   margin: 0 0 var(--v-unit-2) 0;
-  line-height: 1.4;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
 }
 
 .story-recommendation__description {
-  font-size: var(--v-font-size-base);
-  margin: 0 0 var(--v-unit-3) 0;
+  font-size: 14px;
+  margin: 0 0 var(--v-unit-4) 0;
   line-height: 1.6;
-  opacity: 0.95;
+  opacity: 0.9;
+  flex-grow: 1;
 }
 
 .story-recommendation__meta {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: var(--v-unit-2);
+  padding-top: var(--v-unit-3);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: auto;
 }
 
 .story-recommendation__time {
-  font-size: var(--v-font-size-sm);
+  font-size: 12px;
   opacity: 0.85;
+  font-weight: 500;
 }
 
 .story-recommendation__cta {
-  font-size: var(--v-font-size-sm);
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 700;
   opacity: 0.95;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 @media (max-width: 768px) {
+  .story-recommendation {
+    margin: var(--v-unit-4) 0;
+  }
+
+  .story-recommendation__link {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .story-recommendation__image-wrapper {
+    width: 100%;
+    height: 220px;
+  }
+
   .story-recommendation__content {
-    padding: var(--v-unit-3);
+    padding: var(--v-unit-4);
   }
 
   .story-recommendation__title {
-    font-size: var(--v-font-size-base);
+    font-size: 16px;
   }
 
   .story-recommendation__description {
-    font-size: var(--v-font-size-sm);
+    font-size: 13px;
+  }
+
+  .story-recommendation__label {
+    font-size: 10px;
   }
 }
 </style>

@@ -5,6 +5,7 @@
       :key="index"
       :is="getComponent(block.type)"
       :block="block"
+      :lang="lang"
     />
   </div>
 </template>
@@ -21,11 +22,17 @@
   import BlogComparison from './BlogComparison.vue'
   import BlogStats from './BlogStats.vue'
   import StoryRecommendation from './StoryRecommendation.vue'
+  import StoryLink from './StoryLink.vue'
+  import BlogStoryTable from './BlogStoryTable.vue'
 
   defineProps({
     content: {
       type: Array,
       required: true
+    },
+    lang: {
+      type: String,
+      default: 'es'
     }
   })
 
@@ -34,6 +41,7 @@
     heading: BlogHeading,
     list: BlogList,
     table: BlogTable,
+    story_table: BlogStoryTable,
     quote: BlogQuote,
     highlight: BlogHighlight,
     barchart: BlogBarChart,
