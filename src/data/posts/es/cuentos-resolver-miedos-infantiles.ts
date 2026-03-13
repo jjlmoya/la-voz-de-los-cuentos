@@ -41,10 +41,21 @@ export const post = {
       body: "El miedo a la oscuridad es uno de los miedos más comunes en niños entre 2 y 8 años. Surge naturalmente porque la oscuridad representa lo desconocido. Los cuentos efectivos para este miedo generalmente presentan personajes que descubren que la oscuridad contiene cosas hermosas, como estrellas, luciérnagas, o criaturas amables que duermen durante el día."
     },
     {
+      type: "text",
+      body: "Te recomendamos explorar cuentos de nuestra colección que celebran la belleza de la noche:"
+    },
+    {
+      type: "story_recommendation",
+      slug: "la-leyenda-de-la-reina-de-la-noche",
+      title: "La Leyenda de la Reina de la Noche",
+      description: "Un cuento que transforma la percepción del niño sobre la oscuridad, mostrando la magia que existe cuando el sol se va.",
+      variant: "primary",
+      label: "Cuento para la Oscuridad"
+    },
+    {
       type: "list",
       style: "unordered",
       items: [
-        "Libros recomendados: \"La Pequeña Lechuza Marrón\", \"El Gusano de Luz\", \"La Noche Mágica\"",
         "Mensaje clave: La oscuridad trae descanso, sueños hermosos y momentos especiales de calma",
         "Técnica de narración: Usa voces suaves y pausas tranquilas. Enfatiza los detalles acogedores"
       ]
@@ -59,10 +70,21 @@ export const post = {
       body: "Este miedo generalmente surge de la imaginación activa del niño. Los cuentos más efectivos son aquellos donde los monstruos resultan ser amables, asustados, o simplemente malentendidos. Transformar la perspectiva del niño sobre lo que representa un «monstruo» es clave para resolver este miedo."
     },
     {
+      type: "text",
+      body: "Aquí te compartimos un cuento de nuestra colección que juega brillantemente con esta idea:"
+    },
+    {
+      type: "story_recommendation",
+      slug: "el-demonio-y-la-cucharita-perdida",
+      title: "El Demonio y la Cucharita Perdida",
+      description: "Una historia ingeniosa donde lo que parece aterrador resulta ser protector y amable. Perfecto para desmitificar miedos imaginarios.",
+      variant: "secondary",
+      label: "Cuento sobre Amistad Inesperada"
+    },
+    {
       type: "list",
       style: "unordered",
       items: [
-        "Libros recomendados: \"Monstruo Rojo\", \"El Monstruo del Armario\", \"Monstruo Amable\"",
         "Mensaje clave: Muchas cosas que parecen aterradoras resultan ser amigas cuando las conocemos",
         "Técnica especial: Crea un cuento personalizado donde el monstruo es una mascota protectora del niño"
       ]
@@ -77,12 +99,24 @@ export const post = {
       body: "El miedo a perros, insectos, arañas u otros animales puede desarrollarse después de una experiencia negativa o simplemente por desconocimiento. Los cuentos que humanizaban animales y muestran su comportamiento real ayudan a desmitificar estos miedos."
     },
     {
+      type: "text",
+      body: "El siguiente cuento de nuestra colección es excelente para familiarizar a los niños con animales de forma segura:"
+    },
+    {
+      type: "story_recommendation",
+      slug: "sdg-el-caso-del-misterioso-maullido-medianoche",
+      title: "SDG: El Caso del Misterioso Maullido Medianoche",
+      description: "Una aventura emocionante donde los animales resultan ser aliados inteligentes. Perfecto para transformar el miedo a los animales en admiración.",
+      variant: "success",
+      label: "Cuento de Aventura Animal"
+    },
+    {
       type: "table",
-      headers: ["Animal", "Tipo de Cuento", "Ejemplo"],
+      headers: ["Animal", "Tipo de Cuento", "Beneficio"],
       rows: [
-        ["Perros", "Historias de amistad y juego", "\"Mi Amigo Perro Fiel\", \"El Cachorro Juguetón\""],
-        ["Arañas", "Historias sobre belleza y utilidad", "\"Teje la Araña Inteligente\", \"La Araña Constructora\""],
-        ["Insectos", "Historias de transformación", "\"La Oruga Valiente\", \"La Mariposa del Bosque\""]
+        ["Perros", "Historias de amistad y juego", "Demuestra lealtad y camaradería"],
+        ["Gatos", "Historias de inteligencia y misterio", "Muestra astucia y protección"],
+        ["Insectos", "Historias de transformación", "Enseña adaptación y belleza"]
       ]
     },
     {
@@ -95,10 +129,14 @@ export const post = {
       body: "Cuando comienza la escuela o los padres deben viajar, muchos niños experimentan ansiedad por separación. Los cuentos más efectivos muestran reuniones felices después de la separación temporal, reforzando la idea de que los padres siempre regresan."
     },
     {
+      type: "text",
+      body: "Te recomendamos que busques cuentos que muestren aventuras donde los personajes se reúnen felizmente. En nuestra colección encontrarás historias de amistad y reunión que pueden ayudar:"
+    },
+    {
       type: "list",
       style: "unordered",
       items: [
-        "Libros recomendados: \"Mi Mamá Siempre Vuelve\", \"El Primer Día de Escuela\", \"Mamá Está Aquí\"",
+        "Busca cuentos donde los personajes se separan y se reencontran felizmente",
         "Elemento importante: Incluir detalles concretos de lo que el niño hará mientras está separado de los padres",
         "Conclusión esperada: El reencuentro es tan especial como la separación fue difícil"
       ]
@@ -113,13 +151,21 @@ export const post = {
       body: "Las visitas médicas pueden ser aterradoras para los niños. Los cuentos preparatorios que desmitifican lo que sucede en el consultorio y presentan a los doctores como ayudantes amables son herramientas invaluables para reducir la ansiedad."
     },
     {
+      type: "text",
+      body: "Para este tipo de miedo, busca en nuestra colección cuentos que enseñen sobre profesionales amables y situaciones cotidianas. Algunos de los mejores resultados vienen de historias donde:"
+    },
+    {
       type: "list",
       style: "unordered",
       items: [
-        "Libros recomendados: \"Visita al Doctor\", \"La Inyección No Duele\", \"Dr. Amable y Sus Herramientas\"",
-        "Técnica: Lee el cuento varias veces antes de la cita real",
-        "Ventaja adicional: El niño sabe qué esperar, reduciendo significativamente la ansiedad"
+        "Los profesionales de la salud ayudan a personajes a sentirse mejor",
+        "Se muestra claramente qué pasará en la consulta, sin sorpresas",
+        "El personaje descubre que está más fuerte después de superar su miedo"
       ]
+    },
+    {
+      type: "text",
+      body: "Técnica: Lee el cuento varias veces antes de la cita real. Ventaja adicional: El niño sabe qué esperar, reduciendo significativamente la ansiedad."
     },
     {
       type: "heading",

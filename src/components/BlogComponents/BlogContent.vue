@@ -20,6 +20,7 @@
   import BlogSteps from './BlogSteps.vue'
   import BlogComparison from './BlogComparison.vue'
   import BlogStats from './BlogStats.vue'
+  import StoryRecommendation from './StoryRecommendation.vue'
 
   defineProps({
     content: {
@@ -38,7 +39,8 @@
     barchart: BlogBarChart,
     steps: BlogSteps,
     comparison: BlogComparison,
-    stats: BlogStats
+    stats: BlogStats,
+    story_recommendation: StoryRecommendation
   }
 
   const getComponent = (type) => components[type] || BlogText

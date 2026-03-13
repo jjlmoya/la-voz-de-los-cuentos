@@ -41,10 +41,21 @@ export const post = {
       body: "Fear of the dark is one of the most common childhood fears, particularly in children aged 2-8. It naturally arises because darkness represents the unknown. Effective stories typically feature characters who discover that darkness contains beautiful things—like stars, fireflies, or kind creatures that sleep during the day."
     },
     {
+      type: "text",
+      body: "We recommend exploring stories from our collection that celebrate the beauty of the night:"
+    },
+    {
+      type: "story_recommendation",
+      slug: "the-legend-of-the-queen-of-the-night",
+      title: "The Legend of the Queen of the Night",
+      description: "A story that transforms your child's perception of darkness, showing the magic that exists when the sun sets.",
+      variant: "primary",
+      label: "Story for Fear of the Dark"
+    },
+    {
       type: "list",
       style: "unordered",
       items: [
-        "Recommended books: \"The Little Brown Owl,\" \"The Firefly's Light,\" \"The Magic Night\"",
         "Key message: Darkness brings rest, beautiful dreams, and special moments of calm",
         "Narration technique: Use soft voices and peaceful pauses. Emphasize cozy details"
       ]
@@ -59,10 +70,21 @@ export const post = {
       body: "This fear usually arises from a child's active imagination. The most effective stories are those where monsters turn out to be kind, scared, or simply misunderstood. Transforming a child's perspective on what a \"monster\" represents is key to resolving this fear."
     },
     {
+      type: "text",
+      body: "Here's a story from our collection that brilliantly plays with this concept:"
+    },
+    {
+      type: "story_recommendation",
+      slug: "the-demon-and-the-lost-spoon",
+      title: "The Demon and the Lost Spoon",
+      description: "A clever tale where what seems frightening turns out to be protective and kind. Perfect for demystifying imaginary fears.",
+      variant: "secondary",
+      label: "Story of Unexpected Friendship"
+    },
+    {
       type: "list",
       style: "unordered",
       items: [
-        "Recommended books: \"Red Monster,\" \"The Closet Monster,\" \"The Friendly Monster\"",
         "Key message: Many things that seem scary turn out to be friends when we get to know them",
         "Special technique: Create a personalized story where the monster becomes the child's protective guardian"
       ]
@@ -74,15 +96,23 @@ export const post = {
     },
     {
       type: "text",
-      body: "Fear of dogs, insects, spiders, or other animals can develop after a negative experience or simply from unfamiliarity. Stories that humanize animals and show their actual behavior help demystify these fears."
+      body: "Fear of dogs, insects, spiders, or other animals can develop after a negative experience or simply from unfamiliarity. The following story from our collection is excellent for familiarizing children with animals in a safe way:"
+    },
+    {
+      type: "story_recommendation",
+      slug: "crt-the-case-of-the-midnight-meow",
+      title: "CRT: The Case of the Midnight Meow",
+      description: "An exciting adventure where animals turn out to be intelligent allies. Perfect for transforming fear of animals into admiration.",
+      variant: "success",
+      label: "Animal Adventure Story"
     },
     {
       type: "table",
-      headers: ["Animal", "Story Type", "Example"],
+      headers: ["Animal", "Story Type", "Benefit"],
       rows: [
-        ["Dogs", "Friendship and play stories", "\"My Loyal Dog Friend,\" \"The Playful Puppy\""],
-        ["Spiders", "Stories about beauty and usefulness", "\"Smart Spider Weaves,\" \"The Builder Spider\""],
-        ["Insects", "Transformation stories", "\"The Brave Caterpillar,\" \"The Forest Butterfly\""]
+        ["Dogs", "Friendship and play stories", "Demonstrates loyalty and companionship"],
+        ["Cats", "Stories about intelligence and mystery", "Shows cleverness and protection"],
+        ["Insects", "Transformation stories", "Teaches adaptation and beauty"]
       ]
     },
     {

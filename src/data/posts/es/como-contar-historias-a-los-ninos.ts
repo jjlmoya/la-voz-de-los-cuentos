@@ -243,6 +243,27 @@ export const post = {
     {
       type: "heading",
       level: 2,
+      text: "Cuentos para Practicar tu Narración"
+    },
+    {
+      type: "text",
+      body: "Ahora que conoces todas estas técnicas, es momento de ponerlas en práctica. En nuestra colección de cuentos encontrarás historias perfectas para experimentar con cada técnica. Aquí hay algunas recomendaciones para comenzar:"
+    },
+    {
+      type: "story_recommendation",
+      slug: "la-leyenda-de-la-reina-de-la-noche",
+      title: "La Leyenda de la Reina de la Noche",
+      description: "Una historia perfecta para practicar pausas estratégicas y variación de voz. Sus descripciones detalladas permiten enfatizar elementos sensoriales.",
+      variant: "primary",
+      label: "Para Practicar Entonación"
+    },
+    {
+      type: "text",
+      body: "Explore nuestra colección completa de cuentos para encontrar historias que se adapten al tipo de ocasión y técnica que deseas practicar. Cada cuento ofrece oportunidades únicas para desarrollar diferentes aspectos de tu habilidad como narrador."
+    },
+    {
+      type: "heading",
+      level: 2,
       text: "Una Última Reflexión Sobre tu Poder como Narrador"
     },
     {

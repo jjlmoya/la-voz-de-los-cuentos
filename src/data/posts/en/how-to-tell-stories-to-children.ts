@@ -243,6 +243,27 @@ export const post = {
     {
       type: "heading",
       level: 2,
+      text: "Stories to Practice Your Storytelling"
+    },
+    {
+      type: "text",
+      body: "Now that you know all these techniques, it's time to put them into practice. In our collection of stories, you'll find perfect tales to experiment with each technique. Here are some recommendations to get started:"
+    },
+    {
+      type: "story_recommendation",
+      slug: "the-legend-of-the-queen-of-the-night",
+      title: "The Legend of the Queen of the Night",
+      description: "A perfect story to practice strategic pauses and voice variation. Its detailed descriptions allow you to emphasize sensory elements.",
+      variant: "primary",
+      label: "For Practicing Intonation"
+    },
+    {
+      type: "text",
+      body: "Explore our complete collection of stories to find tales that adapt to the type of occasion and technique you want to practice. Each story offers unique opportunities to develop different aspects of your storytelling ability."
+    },
+    {
+      type: "heading",
+      level: 2,
       text: "A Final Reflection on Your Power as a Storyteller"
     },
     {
