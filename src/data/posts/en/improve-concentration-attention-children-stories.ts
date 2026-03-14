@@ -2,7 +2,7 @@ export const post = {
   slug: "improve-concentration-attention-children-stories",
   slugEs: "mejorar-concentracion-atencion-ninos-cuentos",
   slugEn: "improve-concentration-attention-children-stories",
-  title: "How to improve concentration and attention in children through stories",
+  title: "Can't Your Child Focus? 7 Techniques with Stories to Train Their Attention",
   description: "Discover how narrative and shared reading can be the most effective tools for developing focus and sustained attention in childhood.",
   date: "2026-03-14",
   category: "Development",

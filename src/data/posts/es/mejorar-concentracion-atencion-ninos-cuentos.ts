@@ -2,7 +2,7 @@ export const post = {
   slug: "mejorar-concentracion-atencion-ninos-cuentos",
   slugEs: "mejorar-concentracion-atencion-ninos-cuentos",
   slugEn: "improve-concentration-attention-children-stories",
-  title: "Cómo mejorar la concentración y atención en niños a través de los cuentos",
+  title: "¿Tu hijo no se concentra? 7 técnicas con cuentos para entrenar su atención",
   description: "Descubre cómo la narrativa y la lectura compartida pueden ser las herramientas más eficaces para desarrollar el enfoque y la atención sostenida en la infancia.",
   date: "2026-03-14",
   category: "Desarrollo",

@@ -21,6 +21,7 @@ Genero automáticamente posts de blog completos, bilingües y optimizados para S
         - *Mal:* "Cómo mejorar la concentración"
         - *Bien:* "¿Tu hijo no se concentra? 7 técnicas con cuentos para entrenar su atención"
         - *Estructura:* Usa preguntas directas, números (listas) y el beneficio claro.
+    - **JUSTIFICACIÓN DE CUENTOS (Obligatorio):** Cada vez que se use un bloque `story_recommendation`, la `description` DEBE explicar explícitamente **por qué** ese cuento soluciona o ayuda al problema tratado en el post. No basta con un resumen; debe haber una conexión terapéutica o educativa clara.
     - Fecha actual: **2026-03-14** (Formato: `YYYY-MM-DD`).
 - Guardo en archivos `.ts` dentro de `src/data/posts/es/` y `src/data/posts/en/`
 - Actualizo `src/data/posts/index.ts` para importar y exportar los nuevos posts.

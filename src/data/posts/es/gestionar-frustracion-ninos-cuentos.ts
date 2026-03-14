@@ -2,7 +2,7 @@ export const post = {
   slug: "gestionar-frustracion-ninos-cuentos",
   slugEs: "gestionar-frustracion-ninos-cuentos",
   slugEn: "managing-frustration-children-stories",
-  title: "Cómo ayudar a los niños a gestionar la frustración a través de los cuentos",
+  title: "¿Rabieta a la vista? 5 claves para gestionar la frustración infantil con cuentos",
   description: "Descubre por qué la frustración es una emoción necesaria en el desarrollo infantil y cómo el poder de las historias puede enseñar a los niños a persistir con calma ante los desafíos.",
   date: "2026-03-14",
   category: "Desarrollo",

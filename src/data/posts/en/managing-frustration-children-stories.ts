@@ -2,7 +2,7 @@ export const post = {
   slug: "managing-frustration-children-stories",
   slugEs: "gestionar-frustracion-ninos-cuentos",
   slugEn: "managing-frustration-children-stories",
-  title: "How to Help Children Manage Frustration through Stories",
+  title: "Tantrum Ahead? 5 Keys to Manage Childhood Frustration with Stories",
   description: "Discover why frustration is a necessary emotion in child development and how the power of stories can teach children to persist calmly in the face of challenges.",
   date: "2026-03-14",
   category: "Development",
