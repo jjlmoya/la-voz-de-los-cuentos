@@ -17,6 +17,10 @@ Genero automáticamente posts de blog completos, bilingües y optimizados para S
         2. **STORY TAGS:** Consulta `src/data/es/storyTags.ts` para encontrar cuentos que encajen REALMENTE con el tema del post.
         3. **RELEVANCIA:** Si el post es sobre "miedo", usa cuentos de la categoría `miedo`. Si es sobre "amistad", usa la categoría `amistad`.
         4. **SLUGS VÁLIDOS:** Usa el campo `key` de `src/data/es/stories.json` (ES) o `src/data/en/stories.json` (EN).
+    - **TÍTULOS POTENTES (Core SEO):** No uses títulos genéricos. La gente busca soluciones a problemas reales.
+        - *Mal:* "Cómo mejorar la concentración"
+        - *Bien:* "¿Tu hijo no se concentra? 7 técnicas con cuentos para entrenar su atención"
+        - *Estructura:* Usa preguntas directas, números (listas) y el beneficio claro.
     - Fecha actual: **2026-03-14** (Formato: `YYYY-MM-DD`).
 - Guardo en archivos `.ts` dentro de `src/data/posts/es/` y `src/data/posts/en/`
 - Actualizo `src/data/posts/index.ts` para importar y exportar los nuevos posts.
