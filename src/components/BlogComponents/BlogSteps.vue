@@ -19,7 +19,7 @@
   })
 
   const getStepColor = (index) => {
-    const colors = ['#FF8FBC', '#7BB8D4', '#B4E7B8', '#FFD662', '#9C8CB9']
+    const colors = ['#D1477E', '#3182CE', '#38A169', '#D69E2E', '#6B46C1']
     return colors[index % colors.length]
   }
 </script>

@@ -6,7 +6,7 @@ export default defineConfig([
   {
     languageOptions: {
       parserOptions: {
-        ecmaVersion: 2021,
+        ecmaVersion: 'latest',
         sourceType: 'module',
       },
     },

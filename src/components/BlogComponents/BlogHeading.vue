@@ -21,7 +21,7 @@
     font-size: 32px;
     margin-top: var(--v-unit-6);
     margin-bottom: var(--v-unit-3);
-    color: #FF8FBC; /* Pastel Pink */
+    color: #D1477E; /* Darkened Pink */
     border-bottom: 3px dashed #FFD4E5;
     padding-bottom: 8px;
     display: inline-block;
@@ -32,7 +32,7 @@
     font-size: 26px;
     margin-top: var(--v-unit-5);
     margin-bottom: var(--v-unit-2);
-    color: #7BB8D4; /* Pastel Blue */
+    color: #3182CE; /* Darkened Blue */
     position: relative;
     padding-left: 20px;
   }
@@ -55,6 +55,6 @@
     font-size: 22px;
     margin-top: var(--v-unit-4);
     margin-bottom: var(--v-unit-2);
-    color: #9C8CB9; /* Pastel Purple */
+    color: #6B46C1; /* Darkened Purple */
   }
 </style>
