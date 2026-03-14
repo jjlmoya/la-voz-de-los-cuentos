@@ -1,7 +1,7 @@
 export const post = {
   slug: "fomentar-creatividad-imaginacion-cuentos",
   slugEn: "foster-creativity-imagination-stories",
-  title: "Cómo Fomentar la Creatividad e Imaginación a través de los Cuentos",
+  title: "¿Tu hijo ha perdido la chispa? Cómo los cuentos pueden salvar la imaginación infantil",
   description: "Descubre estrategias prácticas para despertar la chispa creativa en los niños usando el poder de la narrativa y la lectura compartida.",
   date: "2026-03-13",
   category: "Educativo",
@@ -76,7 +76,14 @@ export const post = {
       type: "highlight",
       variant: "tip",
       title: "Consejo para Padres",
-      body: "No corrijas las ideas 'absurdas' de tus hijos. En el mundo de la imaginación, que un elefante vuele con orejas de mariposa es una solución perfectamente válida y brillante. La validación de sus ideas locas es el combustible primario de su confianza creativa."
+      body: "No corrijas las ideas 'absurdas' de tus hijos. En el mundo de la imaginación, que un elefante vuele con orejas de mariposa es una solución perfectamente válida y brillante. La validación de sus ideas locas es el combustible primario de su confianza creativa. ¿Pero qué pasa cuando incluso las ideas más locas necesitan un pequeño empujón para convertirse en una gran aventura?"
+    },
+    {
+      type: "story_recommendation",
+      slug: "el-taller-secreto-de-luna-la-inventora-de-estrellas",
+      description: "Este cuento es la chispa ideal para activar la creatividad técnica y artística. A través de Luna, los niños comprenden que sus ideas 'inventadas' tienen un valor real, fomentando la autoconfianza necesaria para seguir explorando soluciones innovadoras en su día a día sin miedo al juicio.",
+      variant: "primary",
+      label: "Cuento para Pequeños Inventores"
     },
     {
       type: "heading",
@@ -159,22 +166,6 @@ export const post = {
           body: "Usa luces indirectas o lámparas pequeñas. La penumbra invita a que la mente proyecte sus propias visiones en los rincones de la habitación."
         }
       ]
-    },
-    {
-      type: "heading",
-      level: 2,
-      text: "Cuentos Recomendados para Expandir la Mente"
-    },
-    {
-      type: "text",
-      body: "En nuestra plataforma, contamos con historias diseñadas específicamente para desafiar las percepciones convencionales y fomentar el pensamiento creativo. Una de nuestras favoritas es la historia de Luna, una niña que nos enseña que el mundo es tan grande como nuestros sueños y que la timidez puede esconder universos enteros de luz."
-    },
-    {
-      type: "story_recommendation",
-      slug: "el-taller-secreto-de-luna-la-inventora-de-estrellas",
-      description: "Acompaña a Luna en su taller secreto, donde la imaginación se convierte en luz. Un cuento perfecto para inspirar a los pequeños inventores.",
-      variant: "primary",
-      label: "Cuento Destacado"
     },
     {
       type: "heading",

@@ -1,7 +1,7 @@
 export const post = {
   slug: "how-to-tell-stories-to-children",
   slugEs: "como-contar-historias-a-los-ninos",
-  title: "How to Tell Stories to Children: A Guide for Parents",
+  title: "Are Your Kids Bored with Stories? 10 Storytelling Tricks to Leave Them Speechless",
   description: "Discover effective techniques for telling stories that captivate your children and awaken their imagination.",
   date: "2026-03-13",
   category: "Tips",
@@ -81,7 +81,14 @@ export const post = {
       type: "highlight",
       variant: "tip",
       title: "Important Tip",
-      body: "The best stories are told with your heart. Genuineness in your narration will resonate more with children than technical perfection."
+      body: "The best stories are told with your heart. Genuineness in your narration will resonate more with children than technical perfection. But what if you could apply all these tricks right now with a story designed to be told with pure magic?"
+    },
+    {
+      type: "story_recommendation",
+      slug: "the-soul-reaper-a-story-of-friendship-and-balance",
+      description: "This story is the ideal stage for practicing suspense, voice changes, and body language. Its mystical atmosphere allows you to play with deep tones for the Reaper and sweet tones for Amara, helping you master the art of capturing your children's attention from the very first minute.",
+      variant: "primary",
+      label: "Story to Practice Narrating"
     },
     {
       type: "heading",
@@ -241,24 +248,8 @@ export const post = {
       body: "As your children grow, the nature of storytelling will evolve. Teenagers may be less interested in fantasy stories but appreciate narratives addressing their contemporary concerns. Young adults may return to childhood tales with fresh perspective. The benefits of growing up with storytelling persist throughout life. People who grew up listening to stories tend to be stronger readers, thinkers, and communicators in adulthood. Establishing the habit and appreciation for stories in childhood cultivates a lifelong relationship with narrative."
     },
     {
-      type: "heading",
-      level: 2,
-      text: "Stories to Practice Your Storytelling"
-    },
-    {
       type: "text",
-      body: "Now that you know all these techniques, it's time to put them into practice. In our collection of stories, you'll find perfect tales to experiment with each technique. Here are some recommendations to get started:"
-    },
-    {
-      type: "story_recommendation",
-      slug: "the-legend-of-the-queen-of-the-night",
-      description: "A perfect story to practice strategic pauses and voice variation. Its detailed descriptions allow you to emphasize sensory elements.",
-      variant: "primary",
-      label: "For Practicing Intonation"
-    },
-    {
-      type: "text",
-      body: "Explore our complete collection of stories to find tales that adapt to the type of occasion and technique you want to practice. Each story offers unique opportunities to develop different aspects of your storytelling ability."
+      body: "Explore our complete collection of stories to find tales that suit the type of occasion and technique you wish to practice. Each story offers unique opportunities to develop different aspects of your skill as a narrator."
     },
     {
       type: "heading",

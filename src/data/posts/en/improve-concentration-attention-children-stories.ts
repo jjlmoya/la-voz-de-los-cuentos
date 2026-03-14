@@ -92,7 +92,14 @@ export const post = {
     },
     {
       type: "text",
-      body: "The narrator's voice acts as a guiding thread that leads the child's attention. The use of nuances, changes in rhythm, and deliberate silences creates a dynamic of tension and relaxation that keeps the child hooked without overstimulating them. Silence, in particular, is a powerful tool: it allows the child to process what they have just heard and visualize the scene in their mind before continuing. This slow processing is exactly what the brain needs to develop deep and lasting neural connections."
+      body: "The narrator's voice acts as a guiding thread that leads the child's attention. The use of nuances, changes in rhythm, and deliberate silences creates a dynamic of tension and relaxation that keeps the child hooked without overstimulating them. Silence, in particular, is a powerful tool: it allows the child to process what they have just heard and visualize the scene in their mind before continuing. This slow processing is exactly what the brain needs to develop deep and lasting neural connections. But what if you had in your hands a story precisely designed to guide your child's focus toward a state of wonder and calm?"
+    },
+    {
+      type: "story_recommendation",
+      slug: "the-spark-of-wonder",
+      description: "This story is a narrative 'mindfulness' tool. Through Wokan's search for everyday wonders, children train their selective attention and learn to ignore distractions to focus on what is truly valuable, naturally strengthening their concentration span.",
+      variant: "primary",
+      label: "Story to Train Focus"
     },
     {
       type: "heading",
@@ -172,13 +179,6 @@ export const post = {
     {
       type: "text",
       body: "In addition, illustrations allow the child to rest their word-processing cognitive load and focus on visual interpretation. This change of register within the same activity helps avoid mental fatigue and allows the reading session to be longer without the child losing interest. Well-designed images act as visual anchors that keep the child's mind in the here and now of the story, reducing the likelihood of their thoughts wandering to stimuli outside the book."
-    },
-    {
-      type: "story_recommendation",
-      slug: "the-spark-of-wonder",
-      description: "Accompany Wokan on his discovery of the wonders hidden in his own environment. An ideal story to teach children the importance of paying attention to details and finding magic in the everyday.",
-      variant: "primary",
-      label: "Story about Attention and Wonder"
     },
     {
       type: "heading",

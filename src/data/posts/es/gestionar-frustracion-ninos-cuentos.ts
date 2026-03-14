@@ -44,7 +44,14 @@ export const post = {
     },
     {
       type: "text",
-      body: "Uno de los mayores errores de la literatura infantil edulcorada es presentar personajes perfectos que logran todo a la primera. Esto crea una expectativa irreal y perjudicial. Por el contrario, los cuentos que presentan personajes que cometen errores, que se cansan de intentar y que incluso lloran de impotencia, son los que más ayudan. El niño necesita ver que el error es parte del proceso, no un punto final. La identificación con un personaje que 'no puede' pero que 'termina por poder' es el puente hacia el desarrollo del autoconcepto positivo."
+      body: "Uno de los mayores errores de la literatura infantil edulcorada es presentar personajes perfectos que logran todo a la primera. Esto crea una expectativa irreal y perjudicial. Por el contrario, los cuentos que presentan personajes que cometen errores, que se cansan de intentar y que incluso lloran de impotencia, son los que más ayudan. El niño necesita ver que el error es parte del proceso, no un punto final. La identificación con un personaje que 'no puede' pero que 'termina por poder' es el puente hacia el desarrollo del autoconcepto positivo. ¿Pero qué ocurre cuando el fallo no es el final del camino, sino el comienzo de una gran lección sobre la perseverancia?"
+    },
+    {
+      type: "story_recommendation",
+      slug: "el-finalizador",
+      description: "Este cuento es el compañero perfecto para niños que se rinden pronto. A través de su protagonista, los pequeños aprenden que el valor de una tarea no reside en hacerla perfecta al primer intento, sino en tener el coraje de terminar lo que se empieza, transformando la frustración en satisfacción por el logro propio.",
+      variant: "primary",
+      label: "Cuento para Gestionar el Fracaso"
     },
     {
       type: "comparison",
@@ -112,22 +119,6 @@ export const post = {
         ["7-9 años", "Retos académicos y comparación social", "Relatos sobre perseverancia y talentos diversos"],
         ["10+ años", "Expectativas personales y fracaso", "Novelas con desarrollo de resiliencia compleja"]
       ]
-    },
-    {
-      type: "heading",
-      level: 2,
-      text: "Transformando el 'No Puedo' en 'Todavía No Puedo'"
-    },
-    {
-      type: "text",
-      body: "El lenguaje que usamos durante la lectura es una herramienta poderosa. La palabra 'todavía' es mágica: abre la puerta a la posibilidad futura. Cuando el personaje del cuento dice 'no puedo hacerlo', podemos añadir: 'parece que todavía no ha encontrado la forma'. Este pequeño matiz lingüístico ayuda a cambiar la mentalidad fija (creer que las habilidades son inamovibles) por una mentalidad de crecimiento (creer que las habilidades se desarrollan con la práctica)."
-    },
-    {
-      type: "story_recommendation",
-      slug: "el-traspies-del-mago",
-      description: "Acompaña a Elian, un mago que a menudo comete errores pero que nunca se rinde. Una historia divertida y profunda sobre cómo el error es solo un paso más en el camino hacia el aprendizaje.",
-      variant: "secondary",
-      label: "Cuento para Fomentar la Perseverancia"
     },
     {
       type: "heading",

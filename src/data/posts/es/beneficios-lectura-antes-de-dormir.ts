@@ -1,7 +1,7 @@
 export const post = {
   slug: "beneficios-lectura-antes-de-dormir",
   slugEn: "benefits-of-reading-before-bedtime",
-  title: "Los Increíbles Beneficios de Leer Cuentos Antes de Dormir",
+  title: "¿Tu hijo odia ir a dormir? 5 beneficios de la lectura nocturna que transformarán vuestra rutina",
   description: "Descubre por qué la lectura nocturna es una de las mejores rutinas para el desarrollo cognitivo y emocional de tus hijos. Guía completa sobre el impacto del hábito de leer antes de dormir.",
   date: "2026-03-13",
   category: "Desarrollo",
@@ -63,12 +63,12 @@ export const post = {
     },
     {
       type: "text",
-      body: "Es, quizás, el beneficio más importante. La atención plena que los padres dedican durante la lectura, junto con el contacto físico y la calidez del momento, refuerzan el apego seguro. Este vínculo es la piedra angular de la inteligencia emocional y la seguridad en sí mismo del niño."
+      body: "Es, quizás, el beneficio más importante. La atención plena que los padres dedican durante la lectura, junto con el contacto físico y la calidez del momento, refuerzan el apego seguro. Este vínculo es la piedra angular de la inteligencia emocional y la seguridad en sí mismo del niño. ¿Quieres empezar con una historia que celebre precisamente ese lazo? Te presentamos a un amigo muy especial:"
     },
     {
       type: "story_recommendation",
       slug: "el-cuento-de-golemin",
-      description: "Un cuento tierno sobre la amistad y la aceptación, perfecto para leer juntos y fortalecer el vínculo afectivo.",
+      description: "Golemin es mucho más que un personaje; es un espejo de la ternura y la aceptación. Este cuento facilita que los niños se sientan seguros y amados antes de cerrar los ojos, convirtiéndose en el broche de oro para cualquier día difícil.",
       variant: "primary",
       label: "Recomendado para Leer Juntos"
     },
@@ -146,12 +146,12 @@ export const post = {
     },
     {
       type: "text",
-      body: "No todos los cuentos son adecuados para el momento de ir a dormir. Debemos buscar historias que tengan un ritmo descendente, es decir, que comiencen con algo de acción o curiosidad pero que terminen en un estado de calma y resolución. Evita historias demasiado terroríficas o con finales abiertos que puedan generar ansiedad o mantener al niño dando vueltas a la cabeza."
+      body: "No todos los cuentos son adecuados para el momento de ir a dormir. Debemos buscar historias que tengan un ritmo descendente, es decir, que comiencen con algo de acción o curiosidad pero que terminen en un estado de calma y resolución. Evita historias demasiado terroríficas o con finales abiertos que puedan generar ansiedad o mantener al niño dando vueltas a la cabeza. Si lo que buscas es transformar el miedo en curiosidad, tenemos la historia perfecta:"
     },
     {
       type: "story_recommendation",
       slug: "el-traga-luces-un-cuento-de-misterio-y-luz",
-      description: "Una historia de misterio suave que enseña empatía y termina con un mensaje de esperanza y luz, ideal para calmar los miedos nocturnos.",
+      description: "Este cuento es una herramienta magistral para tratar los miedos nocturnos. Al convertir lo desconocido en algo fascinante y amigable, el niño aprende a relajarse en la oscuridad, sustituyendo la ansiedad por una sensación de paz y protección.",
       variant: "secondary",
       label: "Cuento para la Calma"
     },

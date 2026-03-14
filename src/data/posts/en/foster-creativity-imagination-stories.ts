@@ -1,7 +1,7 @@
 export const post = {
   slug: "foster-creativity-imagination-stories",
   slugEs: "fomentar-creatividad-imaginacion-cuentos",
-  title: "How to Foster Creativity and Imagination through Stories",
+  title: "Has Your Child Lost Their Spark? How Stories Can Save Childhood Imagination",
   description: "Discover practical strategies to spark the creative flame in children using the power of storytelling and shared reading.",
   date: "2026-03-13",
   category: "Educational",
@@ -76,7 +76,14 @@ export const post = {
       type: "highlight",
       variant: "tip",
       title: "Advice for Parents",
-      body: "Do not correct your children's 'absurd' ideas. In the world of imagination, an elephant flying with butterfly ears is a perfectly valid and brilliant solution. Validating their crazy ideas is the primary fuel for their creative confidence."
+      body: "Do not correct your children's 'absurd' ideas. In the world of imagination, an elephant flying with butterfly ears is a perfectly valid and brilliant solution. Validating their crazy ideas is the primary fuel for their creative confidence. But what happens when even the wildest ideas need a small nudge to become a grand adventure?"
+    },
+    {
+      type: "story_recommendation",
+      slug: "lunas-secret-workshop-the-star-inventor",
+      description: "This story is the ideal spark to activate technical and artistic creativity. Through Luna, children understand that their 'invented' ideas have real value, fostering the self-confidence needed to keep exploring innovative solutions in their daily lives without fear of judgment.",
+      variant: "primary",
+      label: "Story for Young Inventors"
     },
     {
       type: "heading",
@@ -159,22 +166,6 @@ export const post = {
           body: "Use indirect lights or small lamps. Twilight invites the mind to project its own visions into the corners of the room."
         }
       ]
-    },
-    {
-      type: "heading",
-      level: 2,
-      text: "Recommended Stories to Expand the Mind"
-    },
-    {
-      type: "text",
-      body: "On our platform, we have stories specifically designed to challenge conventional perceptions and encourage creative thinking. One of our favorites is the story of Luna, a girl who teaches us that the world is as large as our dreams and that shyness can hide entire universes of light."
-    },
-    {
-      type: "story_recommendation",
-      slug: "lunas-secret-workshop-the-star-inventor",
-      description: "Join Luna in her secret workshop, where imagination turns into light. A perfect story to inspire little inventors.",
-      variant: "primary",
-      label: "Featured Story"
     },
     {
       type: "heading",

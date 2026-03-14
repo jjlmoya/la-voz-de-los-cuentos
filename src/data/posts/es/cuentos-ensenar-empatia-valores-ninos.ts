@@ -1,7 +1,7 @@
 export const post = {
   slug: "cuentos-ensenar-empatia-valores-ninos",
   slugEn: "stories-teach-empathy-values-children",
-  title: "Cómo los Cuentos Enseñan Empatía y Valores a los Niños",
+  title: "¿Tu hijo no sabe compartir? Cómo los cuentos enseñan empatía sin sermones",
   description: "Explora cómo la narrativa infantil actúa como una brújula moral, ayudando a los niños a entender el mundo y a desarrollar una empatía profunda.",
   date: "2026-03-13",
   category: "Educativo",
@@ -62,7 +62,14 @@ export const post = {
       type: "highlight",
       variant: "info",
       title: "Valores vs. Moralismo",
-      body: "Es importante distinguir entre un cuento que transmite valores y uno que es puramente moralista. El moralismo suele ser rígido y aburrido. Los valores de verdad emergen de forma natural cuando la historia es buena y los personajes son complejos. No le des la lección masticada; deja que el niño la descubra por sí mismo a través de la trama."
+      body: "Es importante distinguir entre un cuento que transmite valores y uno que es puramente moralista. El moralismo suele ser rígido y aburrido. Los valores de verdad emergen de forma natural cuando la historia es buena y los personajes son complejos. No le des la lección masticada; deja que el niño la descubra por sí mismo a través de la trama. ¿Pero qué ocurre cuando el valor que queremos transmitir es la aceptación de lo diferente en un mundo que a menudo juzga por la superficie?"
+    },
+    {
+      type: "story_recommendation",
+      slug: "el-cuento-de-golemin",
+      description: "Este cuento es una herramienta magistral para trabajar la aceptación de la diversidad. Al presentar a Clayby, un personaje con el que es fácil identificarse pero que es diferente a los demás, el niño ejercita su músculo emocional, aprendiendo que la verdadera esencia reside en la bondad y no en el material del que estamos hechos.",
+      variant: "primary",
+      label: "Recomendado para la Empatía"
     },
     {
       type: "heading",
@@ -96,22 +103,6 @@ export const post = {
     {
       type: "text",
       body: "Este diálogo ayuda al niño a verbalizar sus propios valores en formación. A veces, los niños nos sorprenden con interpretaciones que no habíamos considerado, revelando sus propias preocupaciones éticas. El cuento es, por tanto, un espejo donde se refleja el crecimiento moral del niño. Escuchar sus reflexiones es tan importante como leerles el texto."
-    },
-    {
-      type: "heading",
-      level: 2,
-      text: "Cuentos para Trabajar la Aceptación"
-    },
-    {
-      type: "text",
-      body: "Uno de los retos más grandes en la infancia es entender y aceptar a quienes son diferentes. En nuestra colección, tenemos una historia que aborda este tema de una manera excepcionalmente tierna y efectiva. Se trata de Clayby, un pequeño ser hecho de arcilla que debe encontrar su lugar en un mundo que no siempre le comprende."
-    },
-    {
-      type: "story_recommendation",
-      slug: "el-cuento-de-golemin",
-      description: "Descubre la historia de un pequeño golem de arcilla que nos enseña que el valor de una persona reside en su corazón, no en su apariencia.",
-      variant: "primary",
-      label: "Recomendado para la Empatía"
     },
     {
       type: "heading",

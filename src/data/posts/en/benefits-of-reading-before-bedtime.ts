@@ -1,7 +1,7 @@
 export const post = {
   slug: "benefits-of-reading-before-bedtime",
   slugEs: "beneficios-lectura-antes-de-dormir",
-  title: "The Incredible Benefits of Reading Stories Before Bedtime: A Guide for Parents",
+  title: "Bedtime Struggles? 5 Game-Changing Benefits of Nightly Reading for Your Child",
   description: "Discover why nightly reading is one of the best routines for your child's cognitive and emotional development, and how to create the perfect nighttime ritual.",
   date: "2026-03-13",
   category: "Development",
@@ -54,12 +54,12 @@ export const post = {
     },
     {
       type: "text",
-      body: "Beyond the academic advantages, the emotional benefit is perhaps the most significant. The mindfulness that parents dedicate during reading, combined with physical contact and the warmth of the moment, reinforces secure attachment. This bond is the cornerstone of a child's emotional intelligence and self-confidence. It's a time when the child has your undivided attention, away from phones and household chores."
+      body: "Beyond the academic advantages, the emotional benefit is perhaps the most significant. The mindfulness that parents dedicate during reading, combined with physical contact and the warmth of the moment, reinforces secure attachment. This bond is the cornerstone of a child's emotional intelligence and self-confidence. It's a time when the child has your undivided attention, away from phones and household chores. Want to start with a story that celebrates this very connection? Meet a very special friend:"
     },
     {
       type: "story_recommendation",
       slug: "the-story-of-clayby",
-      description: "A touching story about friendship and acceptance, perfect for reading together and strengthening your emotional bond.",
+      description: "Clayby is more than just a character; he is a mirror of tenderness and acceptance. This story makes children feel safe and loved before closing their eyes, becoming the perfect ending to any challenging day.",
       variant: "primary",
       label: "Recommended for Bonding"
     },
@@ -127,12 +127,12 @@ export const post = {
     },
     {
       type: "text",
-      body: "Not all stories are suitable for the moments before sleep. You should look for stories that have a 'descending rhythm'—that is, they may start with action or curiosity but end in a state of calm and resolution. Avoid stories that are too frightening or have cliffhangers that might cause anxiety or keep the child's mind racing."
+      body: "Not all stories are suitable for the moments before sleep. You should look for stories that have a 'descending rhythm'—that is, they may start with action or curiosity but end in a state of calm and resolution. Avoid stories that are too frightening or have cliffhangers that might cause anxiety or keep the child's mind racing. If you're looking to transform fear into curiosity, we have the perfect story:"
     },
     {
       type: "story_recommendation",
       slug: "lighteater-a-tale-of-mystery-and-light",
-      description: "A gentle mystery story that teaches empathy and ends with a message of hope and light, ideal for calming nighttime fears.",
+      description: "This story is a master tool for addressing nighttime fears. By turning the unknown into something fascinating and friendly, children learn to relax in the dark, replacing anxiety with a sense of peace and protection.",
       variant: "secondary",
       label: "Story for Calmness"
     },

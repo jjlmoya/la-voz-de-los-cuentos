@@ -46,7 +46,14 @@ export const post = {
       type: "highlight",
       variant: "tip",
       title: "Pro Tip",
-      body: "When you read a story where the character fails, don't flip the page quickly. Stop and say: 'Wow, they made a mistake. What's their face like? How would you feel?'. Normalizing the feeling of frustration is the first step toward overcoming it."
+      body: "When you read a story where the character fails, don't flip the page quickly. Stop and say: 'Wow, they made a mistake. What's their face like? How would you feel?'. Normalizing the feeling of frustration is the first step toward overcoming it. But what happens when the fear of error is disguised as clumsiness and miscalculated magic? Find out with this story that will change the way they see failures:"
+    },
+    {
+      type: "story_recommendation",
+      slug: "the-misstep-of-the-magician",
+      description: "Trough Elian's funny adventures, children see their own frustration when failing reflected. The story helps normalize error by showing that even a magician can make mistakes and that true success lies in the joy of trying again without fear of judgment.",
+      variant: "primary",
+      label: "Story to Lose Fear of Making Mistakes"
     },
     {
       type: "heading",
@@ -77,22 +84,6 @@ export const post = {
           "Learns from criticism and others' success"
         ]
       }
-    },
-    {
-      type: "heading",
-      level: 2,
-      text: "Recommended Stories to 'Befriend' Error"
-    },
-    {
-      type: "text",
-      body: "Our library contains narrative gems specifically designed to work on resilience. These are not stories where everything turns out well magically, but tales where courage lies in the attitude toward difficulty."
-    },
-    {
-      type: "story_recommendation",
-      slug: "the-misstep-of-the-magician",
-      description: "Trough Elian's funny adventures, children see their own frustration when failing reflected. The story helps normalize error by showing that even a magician can make mistakes and that true success lies in the joy of trying again without fear of judgment.",
-      variant: "primary",
-      label: "Story to Lose Fear of Making Mistakes"
     },
     {
       type: "text",

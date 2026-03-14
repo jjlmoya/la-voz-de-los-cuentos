@@ -92,7 +92,14 @@ export const post = {
     },
     {
       type: "text",
-      body: "La voz del narrador actúa como un hilo conductor que guía la atención del niño. El uso de matices, cambios de ritmo y silencios deliberados crea una dinámica de tensión y relajación que mantiene al niño enganchado sin sobreestimularlo. El silencio, en particular, es una herramienta poderosa: permite que el niño procese lo que acaba de escuchar y visualice la escena en su mente antes de continuar. Este procesamiento pausado es exactamente lo que el cerebro necesita para desarrollar conexiones neuronales profundas y duraderas."
+      body: "La voz del narrador actúa como un hilo conductor que guía la atención del niño. El uso de matices, cambios de ritmo y silencios deliberados crea una dinámica de tensión y relajación que mantiene al niño enganchado sin sobreestimularlo. El silencio, en particular, es una herramienta poderosa: permite que el niño procese lo que acaba de escuchar y visualice la escena en su mente antes de continuar. Este procesamiento pausado es exactamente lo que el cerebro necesita para desarrollar conexiones neuronales profundas y duraderas. ¿Pero qué pasaría si tuvieras en tus manos una historia diseñada precisamente para guiar el foco de tu hijo hacia un estado de asombro y calma?"
+    },
+    {
+      type: "story_recommendation",
+      slug: "la-chispa-del-asombro",
+      description: "Este cuento es una herramienta de 'mindfulness' narrativo. A través de la búsqueda de las maravillas cotidianas de Wokan, los niños entrenan su atención selectiva y aprenden a ignorar distracciones para enfocarse en lo verdaderamente valioso, fortaleciendo su capacidad de concentración de forma natural.",
+      variant: "primary",
+      label: "Cuento para Entrenar el Enfoque"
     },
     {
       type: "heading",
@@ -172,13 +179,6 @@ export const post = {
     {
       type: "text",
       body: "Además, las ilustraciones permiten que el niño descanse su carga cognitiva de procesamiento de palabras para enfocarse en la interpretación visual. Este cambio de registro dentro de una misma actividad ayuda a evitar la fatiga mental y permite que la sesión de lectura sea más larga sin que el niño pierda el interés. Las imágenes bien diseñadas actúan como anclas visuales que mantienen la mente del niño en el aquí y el ahora de la historia, reduciendo la probabilidad de que sus pensamientos divaguen hacia estímulos ajenos al libro."
-    },
-    {
-      type: "story_recommendation",
-      slug: "la-chispa-del-asombro",
-      description: "Acompaña a Wokan en su descubrimiento de las maravillas ocultas en su propio entorno. Un relato ideal para enseñar a los niños la importancia de prestar atención a los detalles y encontrar la magia en lo cotidiano.",
-      variant: "primary",
-      label: "Cuento sobre la Atención y el Asombro"
     },
     {
       type: "heading",

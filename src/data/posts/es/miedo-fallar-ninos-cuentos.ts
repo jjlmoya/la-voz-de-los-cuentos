@@ -46,7 +46,14 @@ export const post = {
       type: "highlight",
       variant: "tip",
       title: "Consejo de Oro",
-      body: "Cuando leas un cuento donde el personaje falla, no pases rápido de página. Detente y di: 'Vaya, se ha equivocado. ¿Qué cara tiene? ¿Tú cómo te sentirías?'. Normalizar el sentimiento de frustración es el primer paso para superarlo."
+      body: "Cuando leas un cuento donde el personaje falla, no pases rápido de página. Detente y di: 'Vaya, se ha equivocado. ¿Qué cara tiene? ¿Tú cómo te sentirías?'. Normalizar el sentimiento de frustración es el primer paso para superarlo. ¿Pero qué sucede cuando el miedo al error se disfraza de torpeza y magia mal calculada? Descúbrelo con esta historia que cambiará su forma de ver los fallos:"
+    },
+    {
+      type: "story_recommendation",
+      slug: "el-traspies-del-mago",
+      description: "A través de las divertidas peripecias de Elian, los niños ven reflejada su propia frustración al fallar. El cuento ayuda a normalizar el error al mostrar que incluso un mago puede equivocarse y que el verdadero éxito reside en la alegría de volver a intentarlo sin miedo al juicio.",
+      variant: "primary",
+      label: "Cuento para Perder el Miedo al Error"
     },
     {
       type: "heading",
@@ -77,22 +84,6 @@ export const post = {
           "Aprende de la crítica y del éxito ajeno"
         ]
       }
-    },
-    {
-      type: "heading",
-      level: 2,
-      text: "Cuentos Recomendados para 'Amigarse' con el Error"
-    },
-    {
-      type: "text",
-      body: "Nuestra biblioteca contiene joyas narrativas diseñadas específicamente para trabajar la resiliencia. No son historias donde todo sale bien mágicamente, sino relatos donde el valor reside en la actitud ante la dificultad."
-    },
-    {
-      type: "story_recommendation",
-      slug: "el-traspies-del-mago",
-      description: "A través de las divertidas peripecias de Elian, los niños ven reflejada su propia frustración al fallar. El cuento ayuda a normalizar el error al mostrar que incluso un mago puede equivocarse y que el verdadero éxito reside en la alegría de volver a intentarlo sin miedo al juicio.",
-      variant: "primary",
-      label: "Cuento para Perder el Miedo al Error"
     },
     {
       type: "text",

@@ -44,7 +44,14 @@ export const post = {
     },
     {
       type: "text",
-      body: "One of the biggest mistakes in sugar-coated children's literature is presenting perfect characters who achieve everything on the first try. This creates an unrealistic and harmful expectation. On the contrary, stories that present characters who make mistakes, who get tired of trying, and who even cry out of helplessness, are the ones that help the most. The child needs to see that error is part of the process, not a final point. Identification with a character who 'cannot' but who 'ends up being able' is the bridge towards the development of a positive self-concept."
+      body: "One of the biggest mistakes in sugar-coated children's literature is presenting perfect characters who achieve everything on the first try. This creates an unrealistic and harmful expectation. On the contrary, stories that present characters who make mistakes, who get tired of trying, and who even cry out of helplessness, are the ones that help the most. The child needs to see that error is part of the process, not a final point. Identification with a character who 'cannot' but who 'ends up being able' is the bridge towards the development of a positive self-concept. But what happens when failure is not the end of the road, but the beginning of a great lesson in perseverance?"
+    },
+    {
+      type: "story_recommendation",
+      slug: "the-finisher",
+      description: "This story is the perfect companion for children who give up easily. Through its protagonist, little ones learn that the value of a task lies not in making it perfect on the first try, but in having the courage to finish what is started, transforming frustration into satisfaction for their own achievement.",
+      variant: "primary",
+      label: "Story to Manage Failure"
     },
     {
       type: "comparison",
@@ -121,13 +128,6 @@ export const post = {
     {
       type: "text",
       body: "The language we use during reading is a powerful tool. The word 'yet' is magical: it opens the door to future possibility. When the story character says 'I can't do it', we can add: 'it seems they haven't found the way yet'. This small linguistic nuance helps change from a fixed mindset (believing skills are unchangeable) to a growth mindset (believing skills develop with practice)."
-    },
-    {
-      type: "story_recommendation",
-      slug: "the-misstep-of-the-magician",
-      description: "Follow Elian, a magician who often makes mistakes but never gives up. A funny and deep story about how error is just another step on the path to learning.",
-      variant: "secondary",
-      label: "Story to Foster Perseverance"
     },
     {
       type: "heading",

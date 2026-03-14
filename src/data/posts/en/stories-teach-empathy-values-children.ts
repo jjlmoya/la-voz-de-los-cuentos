@@ -1,7 +1,7 @@
 export const post = {
   slug: "stories-teach-empathy-values-children",
   slugEs: "cuentos-ensenar-empatia-valores-ninos",
-  title: "How Stories Teach Empathy and Values to Children",
+  title: "Struggling with Sharing? How Stories Teach Empathy Without Lectures",
   description: "Explore how children's narrative acts as a moral compass, helping children understand the world and develop deep empathy.",
   date: "2026-03-13",
   category: "Educational",
@@ -62,7 +62,14 @@ export const post = {
       type: "highlight",
       variant: "info",
       title: "Values vs. Moralism",
-      body: "It is important to distinguish between a story that transmits values and one that is purely moralistic. Moralism is usually rigid and boring. True values emerge naturally when the story is good and the characters are complex. Do not give the chewed lesson; let the child discover it for themselves through the plot."
+      body: "It is important to distinguish between a story that transmits values and one that is purely moralistic. Moralism is usually rigid and boring. True values emerge naturally when the story is good and the characters are complex. Do not give the chewed lesson; let the child discover it for themselves through the plot. But what happens when the value we want to transmit is the acceptance of the different in a world that often judges by the surface?"
+    },
+    {
+      type: "story_recommendation",
+      slug: "the-story-of-clayby",
+      description: "This story is a masterful tool for working on the acceptance of diversity. By introducing Clayby, a character who is easy to identify with but different from others, the child exercises their emotional muscle, learning that true essence lies in kindness and not in the material we are made of.",
+      variant: "primary",
+      label: "Recommended for Empathy"
     },
     {
       type: "heading",
@@ -96,22 +103,6 @@ export const post = {
     {
       type: "text",
       body: "This dialogue helps the child verbalize their own values in formation. Sometimes, children surprise us with interpretations we hadn't considered, revealing their own ethical concerns. The story is, therefore, a mirror where the child's moral growth is reflected. Listening to their reflections is as important as reading them the text."
-    },
-    {
-      type: "heading",
-      level: 2,
-      text: "Stories to Work on Acceptance"
-    },
-    {
-      type: "text",
-      body: "One of the greatest challenges in childhood is understanding and accepting those who are different. In our collection, we have a story that addresses this theme in an exceptionally tender and effective way. It's about Clayby, a small being made of clay who must find his place in a world that doesn't always understand him."
-    },
-    {
-      type: "story_recommendation",
-      slug: "the-story-of-clayby",
-      description: "Discover the story of a small clay golem who teaches us that a person's value lies in their heart, not in their appearance.",
-      variant: "primary",
-      label: "Recommended for Empathy"
     },
     {
       type: "heading",

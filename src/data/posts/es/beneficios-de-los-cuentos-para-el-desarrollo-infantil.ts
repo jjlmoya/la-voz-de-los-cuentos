@@ -1,7 +1,7 @@
 export const post = {
   slug: "beneficios-de-los-cuentos-para-el-desarrollo-infantil",
   slugEn: "benefits-of-stories-for-child-development",
-  title: "Beneficios de los cuentos para el desarrollo infantil",
+  title: "¿Quieres que tu hijo sea más inteligente y empático? 5 beneficios clave de contar cuentos diariamente",
   description: "Conoce cómo los cuentos impactan positivamente en el desarrollo cognitivo, emocional y social de los niños.",
   date: "2026-03-13",
   category: "Educación",
@@ -70,6 +70,17 @@ export const post = {
       variant: "success",
       title: "Beneficio Documentado",
       body: "Los cuentos antes de dormir reducen la ansiedad infantil y mejoran la calidad del sueño hasta en un 40%."
+    },
+    {
+      type: "text",
+      body: "Pero, ¿cómo explicarle a un niño algo tan complejo como lo que siente en su interior mientras su mente se desarrolla? Existe un personaje con un don especial que puede ayudarte a navegar este laberinto de emociones y crecimiento:"
+    },
+    {
+      type: "story_recommendation",
+      slug: "el-metriquista",
+      description: "Acompaña a un personaje que mide lo invisible: las emociones. Este cuento es una herramienta perfecta para que los niños aprendan a poner nombre a lo que sienten, facilitando el autoconocimiento y la regulación emocional desde la curiosidad y el juego.",
+      variant: "primary",
+      label: "Cuento para el Desarrollo Emocional"
     },
     {
       type: "heading",
@@ -235,17 +246,6 @@ export const post = {
     {
       type: "text",
       body: "Cuando reflexionamos sobre todos estos beneficios, es importante recordar que no estamos hablando de teoría abstracta. Estos efectos positivos de los cuentos son reales, medibles, y se pueden ver en la vida cotidiana de los niños. Un niño que se siente visto a través de un personaje de cuento lidia mejor con sus emociones. Un niño que escucha historias de resiliencia enfrenta sus desafíos con mayor confianza. Un niño que crece en un ambiente rico en narrativas desarrolla una relación más sofisticada con el lenguaje. Cada cuento, cada sesión de narración, es una inversión en el futuro del niño. No es un lujo, sino una necesidad fundamental para el desarrollo saludable. Es tan importante como la nutrición, el sueño, y el ejercicio. Los cuentos transforman vidas, crean conexiones significativas, y construyen los cimientos de seres humanos más completos, empáticos y creativos que de otra manera no podrían desarrollarse plenamente."
-    },
-    {
-      type: "text",
-      body: "Comienza hoy. No necesitas ser un experto ni tener todo planificado. Un simple cuento contado con cariño es suficiente para cambiar la vida de un niño."
-    },
-    {
-      type: "story_recommendation",
-      slug: "el-metriquista",
-      description: "Un cuento fascinante sobre un personaje capaz de medir lo invisible: las emociones y los sentimientos. Ideal para trabajar la inteligencia emocional.",
-      variant: "primary",
-      label: "Cuento para el Desarrollo Emocional"
     },
     {
       type: "heading",

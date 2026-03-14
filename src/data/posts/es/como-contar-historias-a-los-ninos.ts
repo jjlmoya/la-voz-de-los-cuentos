@@ -1,7 +1,7 @@
 export const post = {
   slug: "como-contar-historias-a-los-ninos",
   slugEn: "how-to-tell-stories-to-children",
-  title: "Cómo contar historias a los niños: Una guía para padres",
+  title: "¿Tus hijos se aburren con los cuentos? 10 trucos de narración para dejarlos boquiabiertos",
   description: "Descubre técnicas efectivas para contar cuentos que cautiven a tus hijos y despierten su imaginación.",
   date: "2026-03-13",
   category: "Consejos",
@@ -81,7 +81,14 @@ export const post = {
       type: "highlight",
       variant: "tip",
       title: "Consejo Importante",
-      body: "Los mejores cuentos son los que se cuentan con el corazón. La genuinidad en tu narración resonará más con los niños que la perfección técnica."
+      body: "Los mejores cuentos son los que se cuentan con el corazón. La genuinidad en tu narración resonará más con los niños que la perfección técnica. ¿Pero qué pasaría si pudieras aplicar todos estos trucos ahora mismo con una historia diseñada para ser contada con pura magia?"
+    },
+    {
+      type: "story_recommendation",
+      slug: "el-segador-de-almas-una-historia-de-amistad-y-equilibrio",
+      description: "Esta historia es el escenario ideal para practicar el suspenso, el cambio de voces y la expresión corporal. Su atmósfera mística te permite jugar con tonos graves para el Segador y tonos dulces para Amara, ayudándote a dominar el arte de captar la atención de tus hijos desde el primer minuto.",
+      variant: "primary",
+      label: "Historia para Practicar Narración"
     },
     {
       type: "heading",
@@ -244,17 +251,6 @@ export const post = {
       type: "heading",
       level: 2,
       text: "Cuentos para Practicar tu Narración"
-    },
-    {
-      type: "text",
-      body: "Ahora que conoces todas estas técnicas, es momento de ponerlas en práctica. En nuestra colección de cuentos encontrarás historias perfectas para experimentar con cada técnica. Aquí hay algunas recomendaciones para comenzar:"
-    },
-    {
-      type: "story_recommendation",
-      slug: "la-leyenda-de-la-reina-de-la-noche",
-      description: "Una historia perfecta para practicar pausas estratégicas y variación de voz. Sus descripciones detalladas permiten enfatizar elementos sensoriales.",
-      variant: "primary",
-      label: "Para Practicar Entonación"
     },
     {
       type: "text",

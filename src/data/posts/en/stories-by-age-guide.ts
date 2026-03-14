@@ -1,7 +1,7 @@
 export const post = {
   slug: "stories-by-age-guide",
   slugEs: "cuentos-adaptados-por-edades",
-  title: "Stories by Age: Complete Guide for Every Developmental Stage",
+  title: "Best Stories by Age: How to Choose Books That Won't Bore (or Scare) Your Kids",
   description: "Discover the best stories for each child age, from babies to teenagers. Practical guide with book recommendations matched to each stage of child development.",
   date: "2026-03-13",
   category: "Education",
@@ -18,7 +18,14 @@ export const post = {
     },
     {
       type: "text",
-      body: "Each stage of childhood development brings new cognitive abilities, language skills, and emotional needs. A story that fascinates a 5-year-old may bore a 2-year-old, or worse, frighten them. Understanding these differences is key to creating meaningful and enriching reading moments."
+      body: "Each stage of childhood development brings new cognitive abilities, language skills, and emotional needs. A story that fascinates a 5-year-old may bore a 2-year-old, or worse, frighten them. Understanding these differences is key to creating meaningful and enriching reading moments. But how do you know if a story will truly capture your child's attention based on their current maturity?"
+    },
+    {
+      type: "story_recommendation",
+      slug: "the-finisher",
+      description: "This story is the perfect tool for the transition to the school stage (6-9 years). Its structure allows older children to reflect on perseverance and the completion of processes—a cognitive skill that begins to solidify in this age group—helping them manage success and failure in a balanced way.",
+      variant: "primary",
+      label: "Ideal Story by Maturity"
     },
     {
       type: "heading",
@@ -414,16 +421,11 @@ export const post = {
     },
     {
       type: "text",
-      body: "This guide is meant to be a starting point, but always remember that every child follows their own unique timeline. The most important thing is not strictly adhering to age recommendations, but observing your child's genuine reaction to each story. Children's literature is a bridge of communication between generations, and finding the right book for each stage is one of the most rewarding missions we can undertake as educators and parents. Ultimately, the goal isn't just to have them read more, but to help them learn to enjoy the infinite world of possibilities that opens up with every 'Once upon a time'."
+      body: "This guide is meant to be a starting point, but always remember that every child follows their own unique timeline. The most important thing is not strictly adhering to age recommendations, but observing your child's genuine reaction to each story. Children's literature is a bridge of communication between generations, and finding the right book for each stage is one of the most rewarding missions we can undertake as educators and parents."
     },
     {
-      type: "story_recommendation",
-      slug: "the-finisher",
-      description: "An excellent story for school-age children that helps them understand the importance of finishing what we start. A vital learning for their development.",
-      variant: "primary",
-      label: "Recommended Story"
+      type: "text",
+      body: "Ultimately, the goal isn't just to have them read more, but to help them learn to enjoy the infinite world of possibilities that opens up with every 'Once upon a time'. Finding the balance between challenge and fun is the secret to success."
     }
   ]
 }
-
-
