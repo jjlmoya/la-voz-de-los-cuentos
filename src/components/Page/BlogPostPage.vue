@@ -194,19 +194,18 @@
   .blog-post-page__title {
     font-size: clamp(32px, 6vw, 56px);
     font-weight: 900;
-    color: #FF8FBC; /* Bright Pastel Pink */
+    color: #D1477E; /* Standardized Darkened Pink */
     margin: 0 0 var(--v-unit-3) 0;
     line-height: 1.1;
-    text-shadow: 2px 2px 0px #FFD4E5;
   }
 
   .blog-post-page__description {
     font-size: 22px;
-    color: #718096;
+    color: #4A5568;
     margin: 0;
     line-height: 1.5;
     font-weight: 600;
-    border-left: 5px solid #A8D8EA;
+    border-left: 5px solid #D1477E;
     padding-left: var(--v-unit-4);
   }
 

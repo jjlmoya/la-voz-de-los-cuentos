@@ -167,7 +167,7 @@ export const post = {
     },
     {
       type: "text",
-      body: "En los álbumes ilustrados, las imágenes no son meros adornos; son parte integral de la narrativa que requiere su propio esfuerzo de decodificación. Observar una ilustración detallada mientras se escucha el relato obliga al niño a realizar un ejercicio de correspondencia entre lo que oye y lo que ve. Esta integración sensorial es fundamental para mantener el foco. Cuando invitamos al niño a buscar detalles escondidos en las imágenes, como un pequeño ratón que aparece en todas las páginas o un cambio sutil en el clima del paisaje, estamos gamificando el entrenamiento de la atención sostenida, convirtiéndolo en un reto divertido y gratificante."
+      body: "En los álbumes ilustrados, las imágenes no son meros adornos; son parte integral de la narrativa que requiere su propio esfuerzo de decodificación. Observar una ilustración detallada mientras se escucha el relato obliga al niño a realizar un ejercicio de correspondencia entre lo que oye y lo que ve. Esta integración sensorial es fundamental para mantener el foco. Cuando invitamos al niño a buscar detalles escondidos en las imágenes, como un pequeño ratón que aparece en todas las páginas o un cambio sutil en el clima del paisaje, estamos gamificando el entrenamiento de la atención sostenida, convirtiéndolo en un resto divertido y gratificante."
     },
     {
       type: "text",

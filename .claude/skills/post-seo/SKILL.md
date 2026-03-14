@@ -12,10 +12,14 @@ Genero automáticamente posts de blog completos, bilingües y optimizados para S
 - Contenido variado: headings, párrafos, listas, tablas, quotes, highlights, stats, gráficas, pasos, comparativas
 - **Requisitos SEO Obligatorios**:
     - Mínimo **1500 PALABRAS** por post (en cada idioma). Validado por `npm run test:bilingual`.
-    - Al menos **una** recomendación de cuento (`story_recommendation`). **IMPORTANTE:** No elegir al azar. Debe seleccionarse un cuento de la colección existente (`src/data/es/stories.json`) que sea temáticamente relevante al contenido del post.
-    - Fecha actual: **2026-03-13** (Formato: `YYYY-MM-DD`).
+    - Al menos **una** recomendación de cuento (`story_recommendation`). **STRICT REQUIREMENTS:**
+        1. **NO REPETIR:** No uses siempre los mismos cuentos (ej: "el-finalizador").
+        2. **STORY TAGS:** Consulta `src/data/es/storyTags.ts` para encontrar cuentos que encajen REALMENTE con el tema del post.
+        3. **RELEVANCIA:** Si el post es sobre "miedo", usa cuentos de la categoría `miedo`. Si es sobre "amistad", usa la categoría `amistad`.
+        4. **SLUGS VÁLIDOS:** Usa el campo `key` de `src/data/es/stories.json` (ES) o `src/data/en/stories.json` (EN).
+    - Fecha actual: **2026-03-14** (Formato: `YYYY-MM-DD`).
 - Guardo en archivos `.ts` dentro de `src/data/posts/es/` y `src/data/posts/en/`
-- Actualizo `src/data/index.ts` para importar los nuevos posts (Nota: el archivo es `index.ts`, no `index.js`).
+- Actualizo `src/data/posts/index.ts` para importar y exportar los nuevos posts.
 - **CATEGORÍAS:** Libertad total. Cualquier categoría que elijas (ej: Emociones, Salud, Creatividad) tendrá un color asignado automáticamente en el listado.
 - **NOTA:** Todo manual, sin scripts intermedios
 
@@ -25,15 +29,15 @@ Genero automáticamente posts de blog completos, bilingües y optimizados para S
 Abro: `src/data/posts/es/` y `src/data/posts/en/`
 Extraigo slugs, títulos, keywords de archivos `.ts` existentes
 
-## 2. Detectar gaps SEO
+## 2. Detectar gaps SEO e identificar RECOMENDACIONES
 Identifico:
 - Qué temas NO están cubiertos
 - Palabras clave con alto tráfico pero sin contenido
-- Oportunidades de cobertura
+- **RECOMENDACIÓN:** Busco en `src/data/es/storyTags.ts` qué cuentos coinciden con el tema elegido para la `story_recommendation`.
 
 ## 3. Elegir tema único
 Selecciono un tema nuevo:
-- dormir, edad, beneficios, emociones, concentración, creatividad, lectura, conducta
+- dormir, edad, beneficios, emociones, concentración, creatividad, lectura, conducta, frustración, paciencia, etc.
 - Aseguro que no exista en ES ni EN
 
 ## 4. Crear archivos TypeScript
@@ -45,28 +49,25 @@ Estructura de cada archivo:
 ```typescript
 export const post = {
   slug: "tema-url",
-  slugEn: "english-topic",
+  slugEs: "tema-url", // Obligatorio
+  slugEn: "english-topic", // Obligatorio
   title: "...",
   description: "...",
-  date: "2024-03-12",
+  date: "2026-03-14",
   category: "Educativo|Consejos|Desarrollo",
   tags: ["keyword1", "keyword2"],
   content: [ bloques ]
 }
 ```
 
-## 5. Actualizar index.js
-Agrego líneas en `src/data/index.js`:
-```javascript
-import { post as nuevoNombreEs } from './posts/es/[nuevo-slug]'
-import { post as nuevoNombreEn } from './posts/en/[nuevo-slug-en]'
+## 5. Actualizar index.ts
+Agrego líneas en `src/data/posts/index.ts`:
+```typescript
+import { post as nuevoNombreEs } from './es/[nuevo-slug]'
+import { post as nuevoNombreEn } from './en/[nuevo-slug-en]'
 ```
 
-Luego agrego a los arrays:
-```javascript
-const postsEs = [..., nuevoNombreEs]
-const postsEn = [..., nuevoNombreEn]
-```
+Luego agrego a los arrays `postsEs` y `postsEn`.
 
 ## 6. Estructura de bloques
 Tipos disponibles:

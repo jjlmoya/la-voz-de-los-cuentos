@@ -21,7 +21,7 @@
     font-size: 32px;
     margin-top: var(--v-unit-6);
     margin-bottom: var(--v-unit-3);
-    color: #D1477E; /* Darkened Pink */
+    color: #D1477E;
     border-bottom: 3px dashed #FFD4E5;
     padding-bottom: 8px;
     display: inline-block;
@@ -32,7 +32,7 @@
     font-size: 26px;
     margin-top: var(--v-unit-5);
     margin-bottom: var(--v-unit-2);
-    color: #3182CE; /* Darkened Blue */
+    color: #D1477E;
     position: relative;
     padding-left: 20px;
   }
@@ -45,7 +45,7 @@
     transform: translateY(-50%);
     width: 6px;
     height: 80%;
-    background: #A8D8EA;
+    background: #FFD4E5;
     border-radius: 10px;
   }
 
@@ -55,6 +55,6 @@
     font-size: 22px;
     margin-top: var(--v-unit-4);
     margin-bottom: var(--v-unit-2);
-    color: #6B46C1; /* Darkened Purple */
+    color: #D1477E;
   }
 </style>
