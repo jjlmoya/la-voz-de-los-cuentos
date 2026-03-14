@@ -1,7 +1,7 @@
 {
   "name": "la-voz-de-los-cuentos",
   "type": "module",
-  "version": "0.1.400",
+  "version": "0.1.401",
   "scripts": {
     "dev": "astro dev",
     "dev:en": "env-cmd -f .env.en astro dev",
@@ -23,7 +23,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write \"src/**/*.{js,vue,css,html,md,astro}\"",
-    "test": "vitest run",
+    "test": "node validate-posts-content.js && vitest run",
     "test:watch": "vitest",
     "test:full": "npm run test && npm run quality-gate",
     "validate:posts": "node validate-posts-content.js"
