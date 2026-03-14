@@ -17,11 +17,13 @@ Genero automáticamente posts de blog completos, bilingües y optimizados para S
         2. **STORY TAGS:** Consulta `src/data/es/storyTags.ts` para encontrar cuentos que encajen REALMENTE con el tema del post.
         3. **RELEVANCIA:** Si el post es sobre "miedo", usa cuentos de la categoría `miedo`. Si es sobre "amistad", usa la categoría `amistad`.
         4. **SLUGS VÁLIDOS:** Usa el campo `key` de `src/data/es/stories.json` (ES) o `src/data/en/stories.json` (EN).
+        5. **🔴 POSICIÓN OBLIGATORIA:** La PRIMERA `story_recommendation` DEBE estar **ANTES del 1/3 del post**. Valida con `npm run validate:posts`. Ejemplo: si un post tiene 60 bloques, la primera recomendación debe estar antes del bloque 20.
     - **TÍTULOS POTENTES (Core SEO):** No uses títulos genéricos. La gente busca soluciones a problemas reales.
         - *Mal:* "Cómo mejorar la concentración"
         - *Bien:* "¿Tu hijo no se concentra? 7 técnicas con cuentos para entrenar su atención"
         - *Estructura:* Usa preguntas directas, números (listas) y el beneficio claro.
     - **JUSTIFICACIÓN DE CUENTOS (Obligatorio):** Cada vez que se use un bloque `story_recommendation`, la `description` DEBE explicar explícitamente **por qué** ese cuento soluciona o ayuda al problema tratado en el post. No basta con un resumen; debe haber una conexión terapéutica o educativa clara.
+    - **CLIFFHANGER ANTES DE LA CARD (Enganche):** La última frase del bloque de texto inmediatamente anterior a un `story_recommendation` DEBE ser un gancho que invite a la lectura, genere curiosidad o prometa una solución.
     - Fecha actual: **2026-03-14** (Formato: `YYYY-MM-DD`).
 - Guardo en archivos `.ts` dentro de `src/data/posts/es/` y `src/data/posts/en/`
 - Actualizo `src/data/posts/index.ts` para importar y exportar los nuevos posts.
@@ -124,13 +126,24 @@ Tipos disponibles:
 
 # VALIDACIÓN (TÚ EJECUTAS)
 Después que genero posts, ejecutas:
+
+**1. Validar contenido de posts (OBLIGATORIO):**
+```bash
+npm run validate:posts
+```
+
+Verifica:
+- ✅ **Toda recomendación de cuento está ANTES del 1/3 del post**
+- ✅ **Todos los posts tienen al menos una story_recommendation**
+- ✅ Coverage porcentaje
+
+**2. Validar estructura bilingüe:**
 ```bash
 npm run test:bilingual
 ```
 
 Verifica automáticamente:
 - ✅ **Mínimo 1500 palabras** por post (en cada idioma)
-- ✅ **Al menos una recomendación de cuento** (`story_recommendation`)
 - ✅ Mismo número ES/EN
 - ✅ Slugs pareados correctamente
 - ✅ Campos obligatorios

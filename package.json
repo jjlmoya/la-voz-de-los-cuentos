@@ -1,7 +1,7 @@
 {
   "name": "la-voz-de-los-cuentos",
   "type": "module",
-  "version": "0.1.399",
+  "version": "0.1.400",
   "scripts": {
     "dev": "astro dev",
     "dev:en": "env-cmd -f .env.en astro dev",
@@ -25,7 +25,8 @@
     "format": "prettier --write \"src/**/*.{js,vue,css,html,md,astro}\"",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:full": "npm run test && npm run quality-gate"
+    "test:full": "npm run test && npm run quality-gate",
+    "validate:posts": "node validate-posts-content.js"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.2.0",
