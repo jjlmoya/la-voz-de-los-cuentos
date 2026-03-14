@@ -9,6 +9,7 @@ import { post as valoresEs } from './es/cuentos-ensenar-empatia-valores-ninos.ts
 import { post as concentracionEs } from './es/mejorar-concentracion-atencion-ninos-cuentos.ts'
 import { post as frustracionEs } from './es/gestionar-frustracion-ninos-cuentos.ts'
 import { post as miedoFallarEs } from './es/miedo-fallar-ninos-cuentos.ts'
+import { post as autoestimaEs } from './es/fortalecer-autoestima-ninos-cuentos.ts'
 
 // English posts
 import { post as howToTellEn } from './en/how-to-tell-stories-to-children.ts'
@@ -21,6 +22,7 @@ import { post as valuesEn } from './en/stories-teach-empathy-values-children.ts'
 import { post as concentrationEn } from './en/improve-concentration-attention-children-stories.ts'
 import { post as frustrationEn } from './en/managing-frustration-children-stories.ts'
 import { post as fearFailureEn } from './en/fear-failure-children-stories.ts'
+import { post as selfEsteemEn } from './en/boost-child-self-esteem-stories.ts'
 
-export const postsEs = [comoContarEs, beneficiosEs, miiedosEs, edadesEs, dormirEs, creatividadEs, valoresEs, concentracionEs, frustracionEs, miedoFallarEs]
-export const postsEn = [howToTellEn, benefitsEn, fearsEn, ageGuideEn, sleepEn, creativityEn, valuesEn, concentrationEn, frustrationEn, fearFailureEn]
+export const postsEs = [comoContarEs, beneficiosEs, miiedosEs, edadesEs, dormirEs, creatividadEs, valoresEs, concentracionEs, frustracionEs, miedoFallarEs, autoestimaEs]
+export const postsEn = [howToTellEn, benefitsEn, fearsEn, ageGuideEn, sleepEn, creativityEn, valuesEn, concentrationEn, frustrationEn, fearFailureEn, selfEsteemEn]
