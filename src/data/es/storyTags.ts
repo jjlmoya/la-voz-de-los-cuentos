@@ -417,6 +417,9 @@ export const storyTags: Record<string, string[]> = {
     'eloy-y-sushi-de-los-samurais',
     'eloy-y-el-castillo-de-hielo-en-siberia',
     'eloy-y-el-dulce-mosaico-etrusco',
+    'eloy-y-el-dragon-del-queso-perdido',
+    'el-gran-desierto-y-el-camello-corredor',
+    'eloy-y-las-palomitas-renacentistas',
   ],
 
   'sdg-sistema-distribucion-gatos': [
@@ -619,5 +622,179 @@ export const storyTags: Record<string, string[]> = {
     'el-dragon-de-los-cubitos',
     'el-dragon-de-wiltz',
     'la-leyenda-del-dragon-federico',
+  ],
+
+  // ============================================
+  // NUEVAS CATEGORÍAS - 43 CUENTOS FALTANTES
+  // ============================================
+
+  'poesia-lirica': [
+    'la-estrella-errante',
+    'el-susurro-del-tiempo',
+    'el-murmullo-del-silencio',
+    'la-estrella-marchita',
+    'susurros-cosmicos',
+    'la-gota-de-miel-estelar',
+    'la-chispa-del-asombro',
+  ],
+
+  'filosofia-reflexion': [
+    'el-problema-de-transparencia',
+    'los-secretos-que-deja-el-sol',
+    'las-palabras-calladas',
+    'la-silueta-rota',
+    'la-danza-de-la-norma',
+    'el-juego-del-tiempo',
+    'el-arco-infinito',
+  ],
+
+  'artesania-creacion': [
+    'el-tapiz-de-la-tejedora',
+    'la-marana-de-secretos',
+    'la-ciudad-de-los-relatos-vivientes',
+    'la-maquina-de-historias-vivientes',
+    'estallido-primordial',
+  ],
+
+  'supernatural-gotico': [
+    'estela-espectral',
+    'la-leyenda-de-la-dama-de-la-niebla',
+    'la-leyenda-de-la-insomne-sombra',
+    'la-luna-roja',
+    'el-monstruo-del-chirriar',
+  ],
+
+  'geometria-formas': [
+    'los-angulos-perfectos',
+    'el-reino-de-las-formas-la-guerra-milenaria',
+  ],
+
+  'historias-con-libros': [
+    'la-ciudad-de-los-relatos-vivientes',
+    'la-sonrisa-del-tintero-vacio',
+  ],
+
+  'viajes-epicos': [
+    'el-eco-de-los-pasos-de-unicornio',
+    'el-camino-sin-fin',
+    'el-viaje-de-nombres-de-almendra',
+    'kronar-el-susurro-del-tiempo-roto',
+  ],
+
+  'insomnio-noche': [
+    'las-horas-sombreadas',
+    'el-gran-apagon',
+    'la-leyenda-de-la-insomne-sombra',
+    'polilla-negra',
+  ],
+
+  'identidad-existencia': [
+    'la-silueta-rota',
+    'las-palabras-calladas',
+    'la-danza-de-la-norma',
+    'el-problema-de-transparencia',
+  ],
+
+  'atardecer-crepusculo': [
+    'los-secretos-que-deja-el-sol',
+    'el-final-del-ayer',
+  ],
+
+  'objetos-magicos-animados': [
+    'la-danza-del-destino',
+    'el-castillo-encantador-de-arangon-la-chinchilla',
+  ],
+
+  'animales-personajes-principales': [
+    'antonov-el-domador-de-loros',
+    'el-molino-de-los-zorros-guardianes',
+    'el-castillo-encantador-de-arangon-la-chinchilla',
+    'crispin-y-la-manzana-dorada',
+  ],
+
+  'humor-comedia': [
+    'crispin-y-la-manzana-dorada',
+    'la-danza-del-destino',
+  ],
+
+  'eventos-extraordinarios': [
+    'impacto-atronador',
+    'el-fragmento-perdido',
+  ],
+
+  'moraleja-orgullo': [
+    'pompas-de-orgullo',
+  ],
+
+  'momentos-especiales': [
+    'momentos-robados',
+    'el-claro-de-las-plumas-danzarinas',
+  ],
+
+  'fuego-danza': [
+    'la-leyenda-de-la-bailarina-de-fuego',
+  ],
+
+  'frio-extremo': [
+    'cuarto-de-frio-infernal',
+  ],
+
+  'tradicion-leyendas-popul ares': [
+    'la-leyenda-de-la-dama-de-la-niebla',
+    'la-leyenda-de-la-insomne-sombra',
+    'la-leyenda-de-la-bailarina-de-fuego',
+  ],
+
+  'misterio-antiguo': [
+    'el-fragmento-perdido',
+    'la-chispa-del-asombro',
+  ],
+
+  'sonido-musica-extraordinaria': [
+    'el-monstruo-del-chirriar',
+  ],
+
+  'aventura-descubrimiento': [
+    'viento-estelar',
+    'el-viaje-de-nombres-de-almendra',
+    'crispin-y-la-manzana-dorada',
+  ],
+
+  'reinos-fantasticos': [
+    'el-reino-del-sombrero-torcido',
+  ],
+
+  'juguetes-vida': [
+    'la-isla-de-los-juguetes-rebeldes',
+  ],
+
+  'planetas-mundos': [
+    'supermegafrio',
+    'los-tiempos-congelados',
+  ],
+
+  'mundo-invertido': [
+    'los-olvidosos',
+  ],
+
+  'objetos-misteriosos': [
+    'el-secreto-del-siurell',
+    'las-migajas-de-un-secreto',
+  ],
+
+  'gigantes-seres-colosales': [
+    'el-gigante-de-hollenfels',
+  ],
+
+  'mentiras-enganos': [
+    'el-sandwich-de-mentiras',
+  ],
+
+  'matematicas-correlacion': [
+    'correlacion-dulce-en-crunchopolis',
+  ],
+
+  'oficio-trabajo': [
+    'el-clasificador-de-tornillos',
   ],
 };
