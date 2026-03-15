@@ -6,41 +6,15 @@ export const landing = {
   keyword: "cuentos para enseñar responsabilidad",
   category: "responsabilidad",
   keywords: ["responsabilidad"],
-  description: `<h1>Cuentos para Enseñar Responsabilidad a Niños</h1>
-<p>¿Tu hijo evita tareas, culpa a otros, no completa lo que promete? Los <strong>cuentos para enseñar responsabilidad</strong> son historias poderosas que crían niños confiables, que cumplen promesas, que entienden que sus acciones tienen consecuencias. En nuestro catálogo encontrarás relatos donde personajes descubren que ser responsable es liberador.</p>
-
-<h2>¿Por qué la responsabilidad es la base del carácter?</h2>
-<p>Los <strong>cuentos para enseñar responsabilidad</strong> enseñan verdades que transforman vidas: que tus acciones tienen consecuencias, que otros dependen de ti, que aceptar responsabilidad es poder, que ser confiable es admirado. Los niños que crecen con estas lecciones desarrollan: mayor autoestima, mejores relaciones, mejor desempeño académico, y trayectoria profesional superior.</p>
-
-<p>Un niño responsable no es un niño sacrificado - es un niño empoderado. Entiende que puede controlar sus circunstancias siendo responsable. Que otros confían en él. Que su palabra tiene peso. Esto es autoestima verdadera.</p>
-
-<h2>Beneficios de cultivar responsabilidad desde pequeño</h2>
-<p>Los <strong>cuentos para enseñar responsabilidad</strong> generan niños que: completan lo que comienzan, son confiables, aceptan consecuencias sin culpar a otros, aprenden de errores, cuidan lo que se les confía, se consideran a sí mismos personas de palabra. Estos niños viven mejor, en todas las áreas.</p>
-
-<p>La responsabilidad no es carga - es libertad. Cuando un niño entiende que sus acciones crean su realidad, deja de ser víctima de circunstancias. Acepta control sobre su vida. Y esto cambia todo.</p>
-
-<h2>Cómo los cuentos enseñan responsabilidad de verdad</h2>
-<p>Los <strong>cuentos para enseñar responsabilidad</strong> muestran causas y efectos: el personaje recibe una tarea/promesa, elige cómo actuar, enfrenta las consecuencias de sus elecciones, y aprende. El personaje que es responsable prospera. El que evita responsabilidad enfrenta problemas peores.</p>
-
-<p>Esta no es moralina - es narrativa. El niño aprende no porque le dicen "sé responsable" sino porque ve que la responsabilidad realmente funciona. Que los héroes son responsables. Que sus problemas disminuyen cuando actúan con responsabilidad.</p>`,
+  description: "Cuentos que enseñan a niños que las acciones tienen consecuencias, que la responsabilidad es empoderador, y que cumplir promesas construye confianza.",
   content: [
     {
       type: 'text',
-      body: `<h1>Cuentos para Enseñar Responsabilidad a Niños</h1>
-<p>La responsabilidad es la piedra angular del carácter. Los cuentos para enseñar responsabilidad crían niños que cumplen sus promesas, que se hacen cargo de sus errores, que entienden que sus acciones impactan a otros.</p>
+      body: `<p>La responsabilidad es la piedra angular del carácter. Los cuentos para enseñar responsabilidad crían niños que cumplen sus promesas, que se hacen cargo de sus errores, que entienden que sus acciones impactan a otros.</p>
 
 <p>A través de historias donde personajes descubren que ser responsable es poder, que cumplir promesas construye confianza, que aceptar consecuencias los hace más fuertes, los niños internalizan responsabilidad como virtud, no como carga.</p>
 
 <p>Lo transformador de estos cuentos es que desmontan la narrativa de que la responsabilidad es una imposición externa. En cambio, muestran que asumir responsabilidad es el acto más libertador que existe - es decir "Yo controlo esto. Yo decido qué hago. Mi vida es resultado de mis elecciones". Esta mentalidad de agencia personal es el regalo más grande que un padre puede dar.</p>`
-    },
-    {
-      type: 'story_recommendation',
-      slug: 'la-historia-de-pipo-el-gato-viajero',
-      title: 'La Historia de Pipo el Gato Viajero',
-      description: 'Un gato que debe asumir la responsabilidad de cuidar de su familia mientras viaja. Perfecto para enseñar que ser responsable es ser fuerte.',
-      duration: 200,
-      variant: 'primary',
-      label: 'Escucha ahora'
     },
     {
       type: 'text',

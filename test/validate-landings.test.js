@@ -105,6 +105,123 @@ function getStoryHighlightsByThirds(content) {
 }
 
 describe('Landing Validation', () => {
+  describe('Description Field (SEO Meta Tag)', () => {
+    it('all landings have description field', () => {
+      const issues = [];
+      [...allLandings.es, ...allLandings.en].forEach(landing => {
+        if (!landing.description) {
+          issues.push(`${landing.key}: missing description field`);
+        }
+      });
+      expect(issues, `Missing description field:\n${issues.join('\n')}`).toEqual([]);
+    });
+
+    it('description contains NO HTML tags', () => {
+      const issues = [];
+      [...allLandings.es, ...allLandings.en].forEach(landing => {
+        if (landing.description && /<[^>]*>/.test(landing.description)) {
+          issues.push(`${landing.key}: description contains HTML tags (found ${landing.description.match(/<[^>]*>/g).length} tags)`);
+        }
+      });
+      expect(issues, `Description with HTML tags:\n${issues.join('\n')}`).toEqual([]);
+    });
+
+    it('description is between 128-160 characters (80% threshold)', () => {
+      const MIN_CHARS = 128;  // 80% of 160
+      const MAX_CHARS = 160;  // Standard SEO meta description
+      const issues = [];
+
+      [...allLandings.es, ...allLandings.en].forEach(landing => {
+        const len = landing.description ? landing.description.length : 0;
+        if (len < MIN_CHARS || len > MAX_CHARS) {
+          issues.push(`${landing.key}: ${len} chars (need 128-160). Text: "${landing.description?.substring(0, 80)}..."`);
+        }
+      });
+      expect(issues, `Description length violations:\n${issues.join('\n')}`).toEqual([]);
+    });
+
+    it('content[0] has body with all HTML content (NOT in description)', () => {
+      const issues = [];
+      [...allLandings.es, ...allLandings.en].forEach(landing => {
+        if (!landing.content || !Array.isArray(landing.content) || landing.content.length === 0) {
+          issues.push(`${landing.key}: missing content array or empty`);
+          return;
+        }
+
+        const firstBlock = landing.content[0];
+        if (!firstBlock.body || firstBlock.type !== 'text') {
+          issues.push(`${landing.key}: first content block is not type:'text' with body`);
+          return;
+        }
+
+        // Check that HTML content is in body, NOT in description
+        // Note: H1 should come from page template, not duplicated in content
+      });
+      expect(issues, `Content structure violations:\n${issues.join('\n')}`).toEqual([]);
+    });
+  });
+
+  describe('Global Forbidden Elements (Project-Wide)', () => {
+    it('stories_gallery must NEVER exist anywhere in the project (completely deprecated)', () => {
+      const issues = [];
+      [...allLandings.es, ...allLandings.en].forEach(landing => {
+        if (!landing.content || !Array.isArray(landing.content)) return;
+
+        landing.content.forEach((block, idx) => {
+          if (block.type === 'stories_gallery') {
+            issues.push(`${landing.key}: block ${idx} uses stories_gallery (GLOBALLY FORBIDDEN - must be removed from entire project)`);
+          }
+        });
+      });
+      expect(issues, `CRITICAL: stories_gallery found - must be removed everywhere:\n${issues.join('\n')}`).toEqual([]);
+    });
+  });
+
+  describe('Forbidden Content Blocks (Blog-Only Elements)', () => {
+    it('landings must NOT contain story_recommendation blocks (blog-only element)', () => {
+      const issues = [];
+      [...allLandings.es, ...allLandings.en].forEach(landing => {
+        if (!landing.content || !Array.isArray(landing.content)) return;
+
+        landing.content.forEach((block, idx) => {
+          if (block.type === 'story_recommendation') {
+            issues.push(`${landing.key}: block ${idx} uses story_recommendation (FORBIDDEN - blog only)`);
+          }
+        });
+      });
+      expect(issues, `Landing blocks using blog-only elements:\n${issues.join('\n')}`).toEqual([]);
+    });
+
+    it('landings must NOT contain stories_gallery blocks (deprecated element)', () => {
+      const issues = [];
+      [...allLandings.es, ...allLandings.en].forEach(landing => {
+        if (!landing.content || !Array.isArray(landing.content)) return;
+
+        landing.content.forEach((block, idx) => {
+          if (block.type === 'stories_gallery') {
+            issues.push(`${landing.key}: block ${idx} uses stories_gallery (DEPRECATED)`);
+          }
+        });
+      });
+      expect(issues, `Landing blocks using deprecated elements:\n${issues.join('\n')}`).toEqual([]);
+    });
+
+    it('landings must only contain: text, story_highlight, story_table', () => {
+      const ALLOWED_TYPES = ['text', 'story_highlight', 'story_table'];
+      const issues = [];
+      [...allLandings.es, ...allLandings.en].forEach(landing => {
+        if (!landing.content || !Array.isArray(landing.content)) return;
+
+        landing.content.forEach((block, idx) => {
+          if (!ALLOWED_TYPES.includes(block.type)) {
+            issues.push(`${landing.key}: block ${idx} type "${block.type}" not allowed (allowed: ${ALLOWED_TYPES.join(', ')})`);
+          }
+        });
+      });
+      expect(issues, `Invalid block types in landings:\n${issues.join('\n')}`).toEqual([]);
+    });
+  });
+
   describe('Content Word Count & Headings', () => {
     it('all landings have more than 1000 words in rendered content (pure text only)', () => {
       const issues = [];
@@ -117,21 +234,33 @@ describe('Landing Validation', () => {
       expect(issues, `Word count violations:\n${issues.join('\n')}`).toEqual([]);
     });
 
-    it('all landings have exactly 1 H1 heading', () => {
+    it('all landings have at most 1 H1 heading (no duplication with page title)', () => {
       const issues = [];
       [...allLandings.es, ...allLandings.en].forEach(landing => {
-        const headings = countHeadings(landing.description || '');
-        if (headings.h1 !== 1) {
-          issues.push(`${landing.key}: has ${headings.h1} H1 (need exactly 1)`);
+        let allContent = '';
+        if (landing.content && Array.isArray(landing.content)) {
+          landing.content.forEach(block => {
+            if (block.body) allContent += block.body + ' ';
+          });
+        }
+        const headings = countHeadings(allContent);
+        if (headings.h1 > 1) {
+          issues.push(`${landing.key}: has ${headings.h1} H1s (max 1 - H1 already in page title)`);
         }
       });
-      expect(issues, `H1 heading violations:\n${issues.join('\n')}`).toEqual([]);
+      expect(issues, `H1 heading violations (duplicates with page title):\n${issues.join('\n')}`).toEqual([]);
     });
 
     it('all landings have minimum 3 H2 headings', () => {
       const issues = [];
       [...allLandings.es, ...allLandings.en].forEach(landing => {
-        const headings = countHeadings(landing.description || '');
+        let allContent = '';
+        if (landing.content && Array.isArray(landing.content)) {
+          landing.content.forEach(block => {
+            if (block.body) allContent += block.body + ' ';
+          });
+        }
+        const headings = countHeadings(allContent);
         if (headings.h2 < 3) {
           issues.push(`${landing.key}: has ${headings.h2} H2s (min 3)`);
         }

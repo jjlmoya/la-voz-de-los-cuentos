@@ -6,41 +6,15 @@ export const landing = {
   keyword: "stories to teach empathy",
   category: "empatía",
   keywords: ["empathy"],
-  description: `<h1>Stories to Teach Empathy to Children</h1>
-<p>Does your child struggle to understand others' feelings? <strong>Stories to teach empathy</strong> are transformative tools that help children develop compassion, emotional connection, and the capacity to see through others' eyes. Our curated collection contains narratives where characters navigate emotional challenges that require understanding and solidarity.</p>
-
-<h2>Why stories teach empathy better than lectures?</h2>
-<p><strong>Stories to teach empathy</strong> work because they allow children to experience others' feelings without personal risk. When a child hears about a character feeling lonely, rejected, or frightened, their brain activates the same empathy regions as if they were living that experience. This neural resonance is what researchers call emotional mirroring.</p>
-
-<p>Unlike telling a child "you should be more empathetic," stories show empathy in action. Children observe characters helping others, comforting friends, recognizing pain, and acting with compassion. This modeling is infinitely more powerful than any parental lecture.</p>
-
-<h2>Proven benefits of childhood empathy</h2>
-<p><strong>Stories to teach empathy</strong> generate multiple documented benefits: higher emotional intelligence, better prosocial behavior (helping, sharing, comforting), reduced aggression and bullying, improved academic performance, and healthier relationships. Children with high empathy have fewer behavioral problems, more friends, and report greater happiness.</p>
-
-<p>Empathy is the foundation of all future social skills. Children who learn empathy early develop resilience, negotiation capacity, ethical leadership, and the ability to form genuine relationships. It's an invaluable investment in their future.</p>
-
-<h2>How stories build emotional bridges</h2>
-<p><strong>Stories to teach empathy</strong> work through narrative identification: the child sees themselves in the protagonist, feels what the character feels, and then watches other characters respond with compassion. This process gradually rewires the child's brain to recognize and respond to others' emotions.</p>
-
-<p>Each story is a safe practice of empathy. The child is not at risk of failure, there's no pressure to perform. They're simply living a profound emotional experience, absorbing patterns of empathetic behavior, internalizing that others' feelings matter.</p>`,
+  description: "Stories help children develop compassion, emotional connection, and the ability to understand and care about others' feelings and experiences.",
   content: [
     {
       type: 'text',
-      body: `<h1>Stories to Teach Empathy to Children</h1>
-<p>Empathy is the moral compass that guides children toward healthy relationships, ethical behavior, and compassionate leadership. But empathy isn't innate - it's cultivated. Stories to teach empathy are the most effective method to develop this critical skill.</p>
+      body: `<p>Empathy is the moral compass that guides children toward healthy relationships, ethical behavior, and compassionate leadership. But empathy isn't innate - it's cultivated. Stories to teach empathy are the most effective method to develop this critical skill.</p>
 
 <p>Through narratives where characters navigate emotional dilemmas, make compassionate choices, and learn the impact of their actions on others, children internalize empathy organically. Not as obligation, but as genuine desire to care for others.</p>
 
 <p>In an increasingly polarized and digital world, empathy has become one of the most rare and valuable skills. A child who learns empathy early has an extraordinary advantage - they'll build stronger relationships, become more effective leaders, and experience greater life satisfaction. Stories to teach empathy give them this irreplaceable advantage.</p>`
-    },
-    {
-      type: 'story_recommendation',
-      slug: 'the-story-of-pipo-the-traveling-cat',
-      title: 'The Story of Pipo the Traveling Cat',
-      description: 'A cat who travels the world discovering different cultures, problems, and joys. Perfect for teaching empathy toward different people.',
-      duration: 200,
-      variant: 'primary',
-      label: 'Listen now'
     },
     {
       type: 'text',

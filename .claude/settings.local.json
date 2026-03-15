@@ -21,9 +21,18 @@
       "Bash(node optimize-avatars.mjs:*)",
       "Bash(node:*)",
       "Bash(cat:*)",
-      "Bash(tree:*)"
+      "Bash(tree:*)",
+      "Bash(cd:*)",
+      "Bash(ls:*)",
+      "Bash(validate-landings-quick.js:*)",
+      "Bash(find:*)",
+      "Bash(__NEW_LINE_ecf871ca4a87d9d5__ find src/data/landings -name \"*.ts\" -exec sed -i 's/<h1[^>]*>[^<]*<\\\\/h1>//g' {} ;)"
     ],
     "deny": [],
-    "ask": []
+    "ask": [],
+    "additionalDirectories": [
+      "d:\\code\\la-voz-de-los-cuentos\\.claude\\skills\\landing-seo",
+      "\\tmp"
+    ]
   }
 }

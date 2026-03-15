@@ -6,30 +6,11 @@ export const landing = {
   keyword: "christmas stories for kids",
   category: "magic",
   keywords: [" freeze ", " frozen "],
-  description: `<h1>Christmas Stories for Kids: Magical Tales to Share with the Family</h1>
-
-<p>Christmas is a season filled with magic and joy, especially for children. During the holidays, families often gather to spend quality time together, and one of the best ways to do this is by reading <strong>Christmas stories for kids</strong>. These stories not only entertain but also teach values like generosity, kindness, and love. Below, we share some perfect Christmas tales for family enjoyment.</p>
-
-<h2>Classic Christmas Stories for Kids</h2>
-
-<p>Among the most famous <strong>Christmas stories</strong> are those that have endured over the years. One example is <em>"Rudolph the Red-Nosed Reindeer"</em>, a story that teaches kids about the importance of acceptance and the value of differences. It tells the tale of Rudolph, a reindeer who stands out because of his shiny red nose and ultimately becomes the hero who saves Christmas.</p>
-
-<p>Another beloved story is <em>"The Nutcracker and the Mouse King"</em>, a magical and adventurous tale that takes children into a world of fantasy. This story is perfect for inspiring imagination and keeping the Christmas spirit alive.</p>
-
-<h2>Stories with Christmas Values</h2>
-
-<p>Christmas is a great time for children to learn about values like generosity and sharing. Many <strong>Christmas stories for kids</strong> are designed to teach these important lessons. In <em>"The Greatest Gift"</em>, the story revolves around a child who learns that the true meaning of Christmas isn't in material presents but in love and family.</p>
-
-<p>Similarly, in <em>"The Elves and the Shoemaker"</em>, children learn about kindness and the importance of helping others. These tales not only entertain but also teach valuable lessons about empathy and generosity.</p>
-
-<h2>Tips for Reading Christmas Stories with the Family</h2>
-
-<p>Reading Christmas stories with your family is a wonderful way to strengthen bonds and create lasting memories. To make the experience even more magical, you can accompany the reading with soft Christmas music and dim lighting. Encourage children to participate by doing character voices or helping describe the scenes. This makes the reading more interactive and special for everyone involved.</p>`,
+  description: "Magical Christmas stories for kids about generosity and kindness. Perfect holiday tales to share with family and create lasting memories.",
   content: [
     {
       type: 'text',
-      body: `<h1>Christmas Stories for Kids: Magical Tales to Share with the Family</h1>
-<p>Christmas is a season filled with magic and joy, especially for children. During the holidays, families often gather to spend quality time together, and one of the best ways to do this is by reading Christmas stories for kids. These stories not only entertain but also teach values like generosity, kindness, and love. Below, we share some perfect Christmas tales for family enjoyment.</p>`
+      body: `<p>Christmas is a season filled with magic and joy, especially for children. During the holidays, families often gather to spend quality time together, and one of the best ways to do this is by reading Christmas stories for kids. These stories not only entertain but also teach values like generosity, kindness, and love. Below, we share some perfect Christmas tales for family enjoyment.</p>`
     },
     {
       type: 'text',

@@ -6,29 +6,11 @@ export const landing = {
   keyword: "stories for anxious kids",
   category: "ansiedad",
   keywords: ["calm"],
-  description: `<h1>Stories for Anxious Kids: Finding Calm and Peace</h1>
-<p>Does your child experience <strong>childhood anxiety</strong>? <strong>Stories for anxious kids</strong> are powerful tools that help children manage stress, find tranquility, and develop emotional resilience. At BuboBoo, we understand that anxiety in children is real and delicate, which is why we have carefully selected stories that teach techniques for <strong>childhood calm</strong> and inner peace.</p>
-
-<h2>Why do stories for anxious kids work?</h2>
-<p><strong>Stories for anxious kids</strong> provide a safe space where children can explore their feelings through relatable characters and narratives. These tales teach practical strategies for relaxation, mindful breathing, and emotion acceptance, allowing children to learn real tools for managing anxiety.</p>
-
-<p>Research demonstrates that storytelling is an accessible cognitive-behavioral therapy that helps children reframe their fears, reduce mental rumination, and build self-confidence. <strong>Stories for anxious kids</strong> transform anxiety from an incomprehensible threat into something manageable and understandable.</p>
-
-<h2>Proven benefits of calming stories</h2>
-<p><strong>Stories for anxious kids</strong> provide multiple benefits: emotional regulation, reduction of cortisol (stress hormone), improved sleep, strengthened self-esteem, and development of coping skills. When children listen to stories about characters who overcome their fears and find peace, they internalize those behavior patterns.</p>
-
-<p>Additionally, these stories create moments of deep connection between parents and children, where emotional vulnerability is validated and celebrated. Listen now to our stories specially designed to transform anxiety into strength and confidence.</p>
-
-<h2>How stories calm the anxious mind</h2>
-<p><strong>Stories for anxious kids</strong> work at a neurological level: the captivating narrative shifts the child's attention away from internal worries toward the story. Slow rhythms, comforting language, and reassuring resolutions signal the brain that it is safe to relax. This is especially powerful at bedtime, when anxiety typically intensifies.</p>
-
-<h2>Discover our stories of calm</h2>
-<p><strong>Start today!</strong> Explore our curated collection of <strong>stories for anxious kids</strong> and give your child the gift of inner peace. Each story is a journey toward tranquility, emotional acceptance, and security. Listen now and watch your child develop lasting tools for living with less anxiety and more joy.</p>`,
+  description: "Stories for anxious kids teaching calm and peace management strategies. Tales that develop emotional intelligence and inner strength for life.",
   content: [
     {
       type: 'text',
-      body: `<h1>Stories for Anxious Kids: Finding Calm and Peace</h1>
-<p>Does your child experience anxiety? Stories for anxious kids are powerful tools that help children manage stress and find tranquility. At BuboBoo, we have selected special stories that teach kids techniques for calm and inner peace.</p>
+      body: `<p>Does your child experience anxiety? Stories for anxious kids are powerful tools that help children manage stress and find tranquility. At BuboBoo, we have selected special stories that teach kids techniques for calm and inner peace.</p>
 
 <p>Childhood anxiety is a reality affecting millions of children worldwide. Manifesting as excessive worries, sleep problems, concentration difficulties, or physical symptoms like headaches, anxiety can significantly impact a child's quality of life and family wellbeing. However, effective tools exist, and stories for anxious kids are among the most powerful and accessible.</p>`
     },
@@ -36,15 +18,6 @@ export const landing = {
       type: 'story_highlight',
       searchKeyword: 'calm',
       label: 'Stories of Tranquility'
-    },
-    {
-      type: 'story_recommendation',
-      slug: 'llamarina-la-gota-de-agua-valiente',
-      title: 'Llamarina: The Brave Water Drop',
-      description: 'A tiny water drop discovers her inner courage and learns that even the smallest things can be strong. Perfect for children who need to remember their own strength.',
-      duration: 240,
-      variant: 'primary',
-      label: 'Listen now'
     },
     {
       type: 'text',
@@ -103,10 +76,6 @@ export const landing = {
 
 <h2>Your child's journey to peace starts here</h2>
 <p>Every child deserves to feel safe, understood, and capable of managing life's challenges. Stories for anxious kids are more than entertainment—they are therapeutic interventions designed specifically to support your child's emotional growth. As you embark on this journey together, remember that consistency, patience, and unconditional love are the most powerful ingredients in creating lasting change.</p>`
-    },
-    {
-      type: 'stories_gallery',
-      stories: []
     }
   ]
 }

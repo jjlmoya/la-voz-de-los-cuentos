@@ -6,41 +6,15 @@ export const landing = {
   keyword: "stories teach responsibility",
   category: "responsabilidad",
   keywords: ["responsibility"],
-  description: `<h1>Stories to Teach Responsibility to Children</h1>
-<p>Does your child avoid tasks, blame others, fail to keep promises? <strong>Stories to teach responsibility</strong> are powerful narratives that raise reliable children who fulfill commitments, understand consequences, and see responsibility as empowering. Our collection contains tales where characters discover that being responsible is liberating.</p>
-
-<h2>Why is responsibility the foundation of character?</h2>
-<p><strong>Stories to teach responsibility</strong> teach transformative truths: your actions have consequences, others depend on you, accepting responsibility is power, being trustworthy is admired. Children who grow with these lessons develop: greater self-esteem, better relationships, improved academic performance, and superior professional trajectory.</p>
-
-<p>A responsible child isn't a sacrificed child - is an empowered child. Understands they can control their circumstances by being responsible. That others trust them. That their word has weight. This is true self-esteem.</p>
-
-<h2>Benefits of cultivating responsibility early</h2>
-<p><strong>Stories to teach responsibility</strong> generate children who: complete what they start, are reliable, accept consequences without blaming others, learn from mistakes, care for what's entrusted to them, consider themselves people of their word. These children live better, in all areas.</p>
-
-<p>Responsibility isn't burden - it's freedom. When a child understands their actions create their reality, they stop being victim of circumstances. Accepts control over their life. And this changes everything.</p>
-
-<h2>How stories teach real responsibility</h2>
-<p><strong>Stories to teach responsibility</strong> show causes and effects: character receives task/promise, chooses how to act, faces consequences of choices, and learns. The responsible character prospers. The one avoiding responsibility faces worse problems.</p>
-
-<p>This isn't moralizing - it's narrative. Child learns not because told "be responsible" but because sees responsibility actually works. That heroes are responsible. That their problems diminish when they act responsibly.</p>`,
+  description: "Stories teach children that actions have consequences, responsibility is empowering, and keeping promises builds trust and character.",
   content: [
     {
       type: 'text',
-      body: `<h1>Stories to Teach Responsibility to Children</h1>
-<p>Responsibility is the cornerstone of character. Stories to teach responsibility raise children who keep their promises, take responsibility for mistakes, and understand that their actions impact others.</p>
+      body: `<p>Responsibility is the cornerstone of character. Stories to teach responsibility raise children who keep their promises, take responsibility for mistakes, and understand that their actions impact others.</p>
 
 <p>Through narratives where characters discover that being responsible is power, that keeping promises builds trust, that accepting consequences makes them stronger, children internalize responsibility as virtue, not burden.</p>
 
 <p>What's transformative about these stories is that they dismantle the narrative that responsibility is an external imposition. Instead, they show that taking responsibility is the most liberating act that exists - it's saying "I control this. I decide what I do. My life is a result of my choices." This mindset of personal agency is the greatest gift a parent can give.</p>`
-    },
-    {
-      type: 'story_recommendation',
-      slug: 'the-story-of-pipo-the-traveling-cat',
-      title: 'The Story of Pipo the Traveling Cat',
-      description: 'A cat who must take responsibility for caring for his family while traveling. Perfect for teaching that being responsible is being strong.',
-      duration: 200,
-      variant: 'primary',
-      label: 'Listen now'
     },
     {
       type: 'text',

@@ -6,41 +6,15 @@ export const landing = {
   keyword: "stories diversity inclusion",
   category: "diversidad",
   keywords: ["diversity"],
-  description: `<h1>Stories for Kids About Diversity and Inclusion</h1>
-<p>Does your child grow in a diverse world but struggle to navigate differences? <strong>Stories for kids about diversity and inclusion</strong> are essential for raising children who celebrate differences, reject prejudice, and build inclusive communities. Our collection contains narratives where characters of different backgrounds, abilities, families, and identities are heroes.</p>
-
-<h2>Why diversity matters in childhood?</h2>
-<p><strong>Stories for kids about diversity</strong> teach fundamental truths: that difference is beautiful, that inclusion is an act of justice, that every person has value regardless of origin or characteristics. Children exposed to diversity in stories develop: less prejudice, greater compassion, better academic performance in diverse environments, and capacity to be inclusive leaders.</p>
-
-<p>Research shows that children who grow up with diverse stories are 40% less likely to develop prejudices. Not because they were taught about diversity - but because they saw diversity as normal, beautiful, valuable.</p>
-
-<h2>Benefits of early inclusion exposure</h2>
-<p><strong>Stories for kids about diversity and inclusion</strong> create: more open-minded children, greater empathy toward different groups, understanding of history and context behind differences, celebration rather than mere tolerance of differences, active rejection of discrimination, and leadership with inclusion.</p>
-
-<p>A child who grows with these stories doesn't just avoid being discriminatory - actively defends others, is ally, builds bridges between different groups. This is the generation we need.</p>
-
-<h2>How stories normalize diversity</h2>
-<p><strong>Stories for kids about diversity</strong> work by showing people of different backgrounds/abilities/families as normal protagonists, valuable, and admirable. Not as "the different friend" but as complex heroes. The child listening develops the belief: "Diversity is normal. Differences are valuable. Everyone belongs."</p>
-
-<p>This is radically different from tolerance lessons. The child doesn't learn to "tolerate" difference - learns that difference is beauty, that inclusion is moral duty, that their community is richer when diverse.</p>`,
+  description: "Stories where diverse characters are heroes, teaching children that differences are valuable and inclusion builds stronger, more creative communities.",
   content: [
     {
       type: 'text',
-      body: `<h1>Stories for Kids About Diversity and Inclusion</h1>
-<p>We live in a beautifully diverse world. Stories for kids about diversity and inclusion prepare children not just to live in this world, but to lead it with compassion, justice, and active inclusion.</p>
+      body: `<p>We live in a beautifully diverse world. Stories for kids about diversity and inclusion prepare children not just to live in this world, but to lead it with compassion, justice, and active inclusion.</p>
 
 <p>Through narratives where different types of people are heroes, where different families are valid, where different abilities are valued, children develop capacity to build a world where everyone belongs.</p>
 
 <p>The transformative power of these stories lies in their ability to normalize diversity from childhood. Rather than presenting diversity as an exception or as a special topic that needs explaining, they simply show it as a natural part of life. A child who grows up seeing this normalization develops a brain that processes diversity as "obvious" rather than "different".</p>`
-    },
-    {
-      type: 'story_recommendation',
-      slug: '458-the-robot-with-a-heart',
-      title: '458: The Robot with a Heart',
-      description: 'A robot different from all others discovers that being different is his greatest strength. Perfect for teaching that diversity is valuable.',
-      duration: 180,
-      variant: 'primary',
-      label: 'Listen now'
     },
     {
       type: 'text',

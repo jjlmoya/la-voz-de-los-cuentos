@@ -6,30 +6,11 @@ export const landing = {
   keyword: "halloween stories for kids",
   category: "fear",
   keywords: ["spectral", "legend"],
-  description: `<h1>Halloween Stories for Kids: Fun and Not-Too-Scary Tales</h1>
-
-<p>October brings one of the most exciting celebrations for kids: Halloween. Although this holiday is traditionally associated with scary stories, it's important to choose tales that entertain young children while keeping them in the spirit of Halloween without being too frightening. Below, we share some <strong>Halloween stories for kids</strong> that are perfect for family fun.</p>
-
-<h2>Halloween Stories Suitable for Young Children</h2>
-
-<p>If you're looking for <strong>Halloween stories</strong> for preschool or elementary-aged children, it's a good idea to choose tales that aren’t too scary but still capture the essence of Halloween. Stories about friendly witches, kind monsters, and curious ghosts are excellent options. A classic example is the story of <em>"The Little Witch Who Didn’t Want to Scare"</em>, a tale about a witch who decides to help her friends with their Halloween costumes instead of pulling spooky pranks.</p>
-
-<p>Another example is <em>"The Ghost Who Was Afraid"</em>, a story that teaches children that even the scariest characters can feel fear sometimes. These types of stories not only entertain but also help kids understand and manage their own fears.</p>
-
-<h2>Stories with Morals to Teach Values</h2>
-
-<p>Halloween is also a great opportunity for children to learn important values like courage, friendship, and empathy. Many <strong>Halloween stories for kids</strong> include positive messages. For example, in <em>"The Monster Who Didn’t Want to Be Alone"</em>, children learn the importance of friendship and companionship, showing that even monsters enjoy being with their friends.</p>
-
-<p>In other stories, like <em>"The Magic Pumpkin"</em>, kids can learn about teamwork and the value of creativity. These tales not only entertain but also teach important lessons in a fun and age-appropriate way.</p>
-
-<h2>Tips for Reading Halloween Stories with the Family</h2>
-
-<p>Reading Halloween stories with your kids can become a fun tradition each year. To make the most of it, try setting the scene with dim lighting and Halloween decorations. You can also encourage children to participate by doing character voices or helping narrate the story. This way, fear turns into laughter and enjoyment for the whole family.</p>`,
+  description: "Halloween stories for kids that are fun without being scary. Friendly witches and silly monsters for delightful family moments and laughter.",
   content: [
     {
       type: 'text',
-      body: `<h1>Halloween Stories for Kids: Fun and Not-Too-Scary Tales</h1>
-<p>October brings one of the most exciting celebrations for kids: Halloween. Although this holiday is traditionally associated with scary stories, it's important to choose tales that entertain young children while keeping them in the spirit of Halloween without being too frightening. Below, we share some <strong>Halloween stories for kids</strong> that are perfect for family fun.</p>`
+      body: `<p>October brings one of the most exciting celebrations for kids: Halloween. Although this holiday is traditionally associated with scary stories, it's important to choose tales that entertain young children while keeping them in the spirit of Halloween without being too frightening. Below, we share some <strong>Halloween stories for kids</strong> that are perfect for family fun.</p>`
     },
     {
       type: 'text',

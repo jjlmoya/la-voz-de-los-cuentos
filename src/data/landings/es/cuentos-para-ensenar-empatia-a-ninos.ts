@@ -6,41 +6,15 @@ export const landing = {
   keyword: "cuentos para enseñar empatía",
   category: "empatía",
   keywords: ["empatía"],
-  description: `<h1>Cuentos para Enseñar Empatía a Niños</h1>
-<p>¿Tu hijo tiene dificultad para entender los sentimientos de otros? Los <strong>cuentos para enseñar empatía</strong> son herramientas transformadoras que ayudan a los niños a desarrollar compasión, conexión emocional y la capacidad de ponerse en el lugar del otro. En nuestro catálogo, encontrarás historias seleccionadas especialmente para cultivar empatía, donde los personajes enfrentan desafíos que requieren comprensión y solidaridad.</p>
-
-<h2>¿Por qué los cuentos enseñan empatía mejor que las lecciones?</h2>
-<p>Los <strong>cuentos para enseñar empatía</strong> funcionan porque permiten que los niños experimenten los sentimientos de otros personajes sin riesgo personal. Cuando un niño escucha sobre un personaje que se siente solo, rechazado o asustado, su cerebro activa las mismas regiones de empatía que si estuviera viviendo esa experiencia. Este mecanismo neurológico es lo que los investigadores llaman "resonancia emocional".</p>
-
-<p>A diferencia de decirle a un niño "debes ser más empático", los cuentos le muestran la empatía en acción. Los niños ven cómo los personajes ayudan a otros, cómo consuelan a amigos, cómo reconocen el dolor ajeno y actúan con compasión. Esta modelación es infinitamente más poderosa que cualquier sermón parental.</p>
-
-<h2>Beneficios comprobados de la empatía en la infancia</h2>
-<p>Los <strong>cuentos para enseñar empatía</strong> generan múltiples beneficios documentados: mayor inteligencia emocional, mejor comportamiento prosocial (ayudar, compartir, consolar), reducción de agresión y bullying, mejor desempeño académico, y relaciones interpersonales más saludables. Niños con alta empatía tienen menos problemas de conducta, más amigos, y reportan mayor felicidad.</p>
-
-<p>La empatía es la base de todas las habilidades sociales futuras. Niños que aprenden empatía temprano desarrollan resiliencia, capacidad de negociación, liderazgo ético, y la capacidad de formar relaciones genuinas. Es un investment invaluable en su futuro.</p>
-
-<h2>Cómo los cuentos construyen puentes emocionales</h2>
-<p>Los <strong>cuentos para enseñar empatía</strong> funcionan mediante narrativa identificación: el niño se ve reflejado en el protagonista, siente lo que el personaje siente, y luego observa cómo otros personajes responden con compasión. Este proceso gradualmente reprograma el cerebro del niño para reconocer y responder a las emociones ajenas.</p>
-
-<p>Cada cuento es una práctica segura de empatía. El niño no está en riesgo de fallar, no hay presión para "actuar bien". Solo está viviendo una experiencia emocional profunda, absorbiendo patrones de comportamiento empático, internalizando que importa cómo se sienten otros.</p>`,
+  description: "Cuentos que enseñan a niños a desarrollar compasión, conexión emocional, y la capacidad de entender y cuidar los sentimientos de otros.",
   content: [
     {
       type: 'text',
-      body: `<h1>Cuentos para Enseñar Empatía a Niños</h1>
-<p>La empatía es la brújula moral que guía a los niños hacia relaciones saludables, comportamiento ético y liderazgo compasivo. Pero la empatía no es innata - se cultiva. Los cuentos para enseñar empatía son el método más efectivo para desarrollar esta habilidad crítica en una edad temprana.</p>
+      body: `<p>La empatía es la brújula moral que guía a los niños hacia relaciones saludables, comportamiento ético y liderazgo compasivo. Pero la empatía no es innata - se cultiva. Los cuentos para enseñar empatía son el método más efectivo para desarrollar esta habilidad crítica en una edad temprana.</p>
 
 <p>A través de historias donde los personajes enfrentan dilemas emocionales, toman decisiones compasivas, y aprenden el impacto de sus acciones en otros, los niños internalizan la empatía de forma orgánica. No como obligación, sino como deseo genuino de cuidar a otros. Cada cuento es una lección sobre la importancia de entender los sentimientos ajenos.</p>
 
 <p>En mundo cada vez más polarizado y divisivo, la empatía se ha convertido en la habilidad más valiosa que podemos enseñar a nuestros hijos. Un niño que entiende los sentimientos de otros, que se preocupa genuinamente por su bienestar, que actúa con compasión, es un niño que cambiará el mundo.</p>`
-    },
-    {
-      type: 'story_recommendation',
-      slug: 'la-historia-de-pipo-el-gato-viajero',
-      title: 'La Historia de Pipo el Gato Viajero',
-      description: 'Un gato que viaja por el mundo y descubre diferentes culturas, problemas y alegrias. Perfecto para enseñar empatía hacia personas diferentes.',
-      duration: 200,
-      variant: 'primary',
-      label: 'Escucha ahora'
     },
     {
       type: 'text',

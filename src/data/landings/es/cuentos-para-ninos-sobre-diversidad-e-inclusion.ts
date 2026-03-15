@@ -6,41 +6,15 @@ export const landing = {
   keyword: "cuentos diversidad inclusión",
   category: "diversidad",
   keywords: ["diversidad"],
-  description: `<h1>Cuentos para Niños sobre Diversidad e Inclusión</h1>
-<p>¿Tu hijo crece en un mundo diverso pero no sabe cómo navegar las diferencias? Los <strong>cuentos para niños sobre diversidad e inclusión</strong> son esenciales para criar niños que celebren diferencias, rechacen prejuicio, y construyan comunidades inclusivas. Nuestro catálogo contiene historias donde personajes de diferentes orígenes, capacidades, familias y identidades son héroes.</p>
-
-<h2>¿Por qué la diversidad importa en la infancia?</h2>
-<p>Los <strong>cuentos para niños sobre diversidad</strong> enseñan verdades fundamentales: que la diferencia es hermosa, que la inclusión es un acto de justicia, que cada persona tiene valor regardless of su origen o características. Niños expuestos a diversidad en cuentos desarrollan: menos prejuicio, mayor compasión, mejor desempeño académico en entornos diversos, y la capacidad de ser líderes inclusivos.</p>
-
-<p>Estudios demuestran que niños que crecen con cuentos diversos tienen 40% menos probabilidad de desarrollar prejuicios. No porque les enseñaron sobre diversidad - sino porque vieron diversidad como normal, hermosa, valiosa.</p>
-
-<h2>Beneficios de la inclusión desde temprano</h2>
-<p>Los <strong>cuentos para niños sobre diversidad e inclusión</strong> crean: niños más abiertos de mente, con mayor capacidad de empatía hacia diferentes grupos, que entienden historia y contexto detrás de diferencias, que celebran no tolera diferencias, que rechazan activamente discriminación, y que lideran con inclusión.</p>
-
-<p>Un niño que crece con estos cuentos no solo evita ser discriminador - activamente defiende a otros, es ally, construye puentes entre grupos diferentes. Esta es la generación que necesitamos.</p>
-
-<h2>Cómo los cuentos normalizan la diversidad</h2>
-<p>Los <strong>cuentos para niños sobre diversidad</strong> funcionan mostrando personas de diferentes orígenes/capacidades/familias como protagonistas normales, valiosas, y admirables. No como "el amigo diferente" sino como héroes complejos. El niño que escucha estos cuentos desarrolla la creencia: "La diversidad es normal. Las diferencias son valiosas. Todos pertenecemos."</p>
-
-<p>Esto es radicalmente diferente a lecciones sobre tolerancia. El niño no aprende a "tolerar" diferencia - aprende que la diferencia es belleza, que la inclusión es deber moral, que su comunidad es más rica cuando es diversa.</p>`,
+  description: "Cuentos donde personajes diversos son héroes. Historias que enseñan que las diferencias son valiosas y construyen comunidades creativas.",
   content: [
     {
       type: 'text',
-      body: `<h1>Cuentos para Niños sobre Diversidad e Inclusión</h1>
-<p>Vivimos en un mundo hermosamente diverso. Los cuentos para niños sobre diversidad e inclusión preparan a los niños para no solo vivir en este mundo, sino para liderarlo con compasión, justicia e inclusión activa.</p>
+      body: `<p>Vivimos en un mundo hermosamente diverso. Los cuentos para niños sobre diversidad e inclusión preparan a los niños para no solo vivir en este mundo, sino para liderarlo con compasión, justicia e inclusión activa.</p>
 
 <p>A través de historias donde diferentes tipos de personas son héroes, donde diferentes familias son válidas, donde diferentes capacidades son valoradas, los niños desarrollan la capacidad de construir un mundo donde todos pertenecen.</p>
 
 <p>El poder transformador de estos cuentos reside en su capacidad de normalizar la diversidad desde la infancia. En lugar de presentar la diversidad como excepción o como tema especial que debe explicarse, simplemente la muestran como parte natural de la vida. Un niño que crece viendo esta normalización desarrolla un cerebro que procesa la diversidad como "obvio" en lugar de "diferente".</p>`
-    },
-    {
-      type: 'story_recommendation',
-      slug: '458-el-robot-con-corazon',
-      title: '458: El Robot con Corazón',
-      description: 'Un robot diferente a todos los demás descubre que ser diferente es su mayor fortaleza. Una historia perfecta para enseñar que la diversidad es valiosa.',
-      duration: 180,
-      variant: 'primary',
-      label: 'Escucha ahora'
     },
     {
       type: 'text',

@@ -6,41 +6,13 @@ export const landing = {
   keyword: "friendship stories for kids",
   category: "friendship",
   keywords: ["team"],
-  description: `<h1>Friendship Stories for Kids: The Bond That Transforms Hearts</h1>
-<p>Discover how <strong>friendship stories for kids</strong> can be powerful tools for teaching little ones the value of loyalty, empathy, and companionship. In this carefully curated selection, you will find tales that celebrate the bonds that unite us and help us grow together. <strong>Friendship stories for kids</strong> do not only entertain but also sow seeds of respect and mutual support that will last a lifetime. Friendship is the engine that drives the first adventures of childhood and defines the way we relate to the world around us.</p>
-
-<h2>The importance of fostering friendship from early childhood</h2>
-<p>Fostering healthy relationships is fundamental for the emotional and social development of children. Through these stories, children learn to resolve conflicts peacefully, share their toys and emotions, and value the differences that make each person unique. Shared reading of <strong>friendship stories for kids</strong> allows for deep dialogues about what it means to be a good friend and how to care for those we love in our day-to-day life.</p>
-<p>In the process of socialization, friendship acts as an emotional laboratory. It is where children practice patience, forgiveness, and generosity. By reading about characters who support each other in difficult times, the child internalizes that asking for help and offering it are acts of bravery, not weakness. These early experiences lay the foundation for all future social interactions and self-confidence.</p>
-
-<h2>Essential values: Loyalty and Empathy in children's tales</h2>
-<p>Loyalty is a concept that can be abstract for a child, but it becomes tangible when they see a small mouse helping an elephant or two space explorers sharing their last supply of oxygen. <strong>Friendship stories for kids</strong> illustrate that being present when things get difficult is what truly strengthens a relationship. It is about showing up and being reliable when it matters most.</p>
-<p>Empathy, for its part, is the ability to put oneself in another's place. Many of our stories highlight characters who learn to listen not only with their ears but with their heart. Understanding why a friend is sad or why they need space is a lesson in maturity that healing stories greatly facilitate. Learning to read facial expressions and body language through narrative helps children decode the emotions of their real-life peers.</p>
-
-<h2>How stories help overcome social challenges</h2>
-<p>Friendship is not always easy; misunderstandings, jealousy, and disagreements arise. <strong>Friendship stories for kids</strong> address these realities without fear. They show that it is normal to argue, but that the most important thing is knowing how to say sorry and seek solutions together. These tales act as both a mirror and a guide, providing positive examples of how to act in the face of daily social challenges. They provide a safe space to discuss what went wrong and how to fix it.</p>
-<p>Moreover, these stories are ideal for reading before bedtime or during a quiet moment of the day. They help calm social anxieties, such as the fear of not being accepted or the fear of losing a close friend. They reinforce the idea that there is always someone we can count on and that mutual support is an emotional safety net. Knowing they are not alone in their feelings makes children more resilient in their social lives.</p>
-
-<h2>The magic of sharing: Audio stories and family reading</h2>
-<p>Our platform <strong>BuboBoo</strong> is proud to offer a variety of formats, from immersive audio stories to detailed texts to read together. All are focused on strengthening children's character and values through narrative. The simplicity yet depth of our collection ensures that the message of fraternity reaches the heart of every listener and reader. We believe that stories are the best way to transmit wisdom from one generation to the next.</p>
-<p>Sharing a story about friends is, in itself, an act of friendship. It creates a space of connection between parents and children where feelings are validated and lasting memories are created. Don't miss the opportunity to share these literary gems that invite looking at the other with love and respect. Every tale is a gift that keeps on giving as children revisit the lessons in their play and interactions.</p>
-<p>👉 <strong>Listen now to these wonderful stories and discover tales that celebrate friendship in all its forms!</strong></p>`,
+  description: "Friendship stories for kids that celebrate genuine connection and loyalty. Tales that teach the value of caring relationships and true companionship.",
   content: [
     {
       type: 'text',
-      body: `<h1>Friendship Stories for Kids: Forging Unbreakable Bonds</h1>
-<p>Friendship is much more than simply playing together at recess; it is the foundation upon which children build their understanding of the social world and their own identity. <strong>Friendship stories for kids</strong> act as narrative bridges that allow little ones to explore complex emotions such as loyalty, envy over a shared toy, or the immense happiness of finding someone who speaks your same imaginary "language." In these stories, conflict is not something bad, but an opportunity to prove that affection is stronger than any momentary difference. Affection is the glue that keeps worlds together.</p>
+      body: `<p>Friendship is much more than simply playing together at recess; it is the foundation upon which children build their understanding of the social world and their own identity. <strong>Friendship stories for kids</strong> act as narrative bridges that allow little ones to explore complex emotions such as loyalty, envy over a shared toy, or the immense happiness of finding someone who speaks your same imaginary "language." In these stories, conflict is not something bad, but an opportunity to prove that affection is stronger than any momentary difference. Affection is the glue that keeps worlds together.</p>
 <p>From a psychological perspective, early childhood friendship helps develop "theory of mind," which is the ability to understand that others have thoughts and feelings distinct from our own. When a child hears a tale about a character who feels sad because their friend forgot to invite them to their sandcastle, they are practicing empathy in a safe and contained way. These moments of reflection are vital for forming compassionate citizens aware of their surroundings. Understanding others is the first step to understanding oneself in the mirror of the community.</p>
 <p>Furthermore, companionship in children's stories is often presented through cooperation. Whether it's to defeat a dragon who just wanted a hug or to build the largest ice cream machine in the universe, the characters demonstrate that unity is strength. This message of collaboration is essential in a world that often rewards individual competition. In our selection of stories, we prioritize those tales where success is shared and where each team member contributes something unique and indispensable. This inclusive approach fosters a sense of belonging and value for every individual's contribution.</p>`
-    },
-    {
-      type: 'story_recommendation',
-      slug: 'the-demon-and-the-lost-spoon',
-      title: 'The Demon and the Lost Spoon',
-      description: 'A charming story about an unexpected friendship that arises in the least expected place.',
-      duration: 180,
-      variant: 'primary',
-      label: 'Listen to this story'
     },
     {
       type: 'story_highlight',
@@ -78,10 +50,6 @@ export const landing = {
 <p>On our platform, every story is an opportunity to reflect on these universal values. We want <strong>BuboBoo</strong> to be the place where families find the right words to explain concepts as beautiful as fidelity and positive sacrifice for each other's well-being. Ultimately, friendship is the dress rehearsal for all significant relationships in adulthood, and we want our children to have the best possible script to navigate their own story. Each new friend is an open door to a universe of possibilities, laughter, and learning that has no end. The legacy of a good friend lives on forever.</p>
 <p>Investing time in these readings is investing in our children's emotional health. A child who understands friendship is a child who will know how to build a better world for everyone. That is why we invite you to dive into these pages, close your eyes, and let the magic of the tales transport you to places where there is always an outstretched hand and a smile waiting for you after every paragraph. Friendship is, without a doubt, the most beautiful story we can write together every day of our lives. It is the light that guides us through the darkness of loneliness.</p>
 <p>Moreover, the development of emotional intelligence is closely linked to how children perceive their social interactions. By identifying with characters who navigate the ups and downs of friendship, children learn to label their own feelings and the feelings of others. This self-awareness is the first step toward emotional maturity. Our stories serve as a safe harbor where these feelings can be explored without judgment, providing a rich vocabulary of kindness that children can carry with them into the world. In the long run, the quality of our relationships determines the quality of our lives, and starting early with these lessons is the greatest gift we can give to the next generation.</p>`
-    },
-    {
-      type: 'stories_gallery',
-      stories: []
     }
   ]
 }

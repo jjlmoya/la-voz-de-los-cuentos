@@ -6,29 +6,11 @@ export const landing = {
   keyword: "cuentos para niños con ansiedad",
   category: "ansiedad",
   keywords: ["calma"],
-  description: `<h1>Cuentos para Niños con Ansiedad: Encontrar Calma y Paz</h1>
-<p>¿Tu hijo experimenta <strong>ansiedad infantil</strong>? Los <strong>cuentos para niños con ansiedad</strong> son herramientas poderosas que ayudan a los pequeños a gestionar el estrés, encontrar tranquilidad y desarrollar resiliencia emocional. En La Voz de los Cuentos, entendemos que la ansiedad en niños es real y delicada, por lo que hemos seleccionado cuidadosamente historias que enseñan técnicas de <strong>calma infantil</strong> y paz interior.</p>
-
-<h2>¿Por qué los cuentos para niños con ansiedad funcionan?</h2>
-<p>Los <strong>cuentos para niños con ansiedad</strong> ofrecen un espacio seguro donde los pequeños pueden explorar sus sentimientos a través de personajes y narrativas identificables. Estos relatos enseñan estrategias prácticas de relajación, respiración consciente y aceptación de emociones, permitiendo que los niños aprendan herramientas reales para manejar la ansiedad.</p>
-
-<p>La investigación demuestra que la narración es una terapia cognitivo-conductual accesible que ayuda a los niños a reencuadrar sus miedos, reducir la rumiación mental y construir confianza en sí mismos. Los <strong>cuentos para niños con ansiedad</strong> transforman la ansiedad de una amenaza incomprehensible en algo manejable.</p>
-
-<h2>Beneficios comprobados de los cuentos calmantes</h2>
-<p>Los <strong>cuentos para niños con ansiedad</strong> proporcionan múltiples beneficios: regulación emocional, reducción del cortisol (hormona del estrés), mejora del sueño, fortalecimiento de la autoestima, y desarrollo de habilidades de afrontamiento. Cuando los niños escuchan historias sobre personajes que superan sus miedos y encuentran paz, internalizan esos patrones de comportamiento.</p>
-
-<p>Además, estos relatos crean momentos de conexión profunda entre padres e hijos, donde la vulnerabilidad emocional es validada y celebrada. Escucha ahora nuestros cuentos especialmente diseñados para transformar la ansiedad en fortaleza.</p>
-
-<h2>Cómo los cuentos calman la mente ansiosa</h2>
-<p>Los <strong>cuentos para niños con ansiedad</strong> funcionan a nivel neurológico: la narrativa cautivadora cambia el foco atencional del niño de sus preocupaciones internas hacia la historia. Los ritmos pausados, el lenguaje reconfortante y las resoluciones tranquilizadoras señalan al cerebro que es seguro relajarse. Esto es especialmente poderoso a la hora de dormir, cuando la ansiedad suele intensificarse.</p>
-
-<h2>Descubre nuestras historias de calma</h2>
-<p><strong>¡Comienza hoy mismo!</strong> Explora nuestra colección curada de <strong>cuentos para niños con ansiedad</strong> y regala a tu hijo el don de la paz interior. Cada historia es un viaje hacia la tranquilidad, la aceptación emocional y la seguridad. Escucha ahora y observa cómo tu hijo desarrolla herramientas duraderas para vivir con menos ansiedad y más alegría.</p>`,
+  description: "Cuentos para niños con ansiedad que enseñan a encontrar calma y paz. Historias para desarrollar manejo emocional y tranquilidad interior.",
   content: [
     {
       type: 'text',
-      body: `<h1>Cuentos para Niños con Ansiedad: Encontrar Calma y Paz</h1>
-<p>¿Tu hijo experimenta ansiedad? Los cuentos para niños con ansiedad son herramientas poderosas que ayudan a los pequeños a gestionar el estrés y encontrar tranquilidad. En La Voz de los Cuentos, hemos seleccionado historias especiales que enseñan a los niños técnicas de calma y paz interior.</p>
+      body: `<p>¿Tu hijo experimenta ansiedad? Los cuentos para niños con ansiedad son herramientas poderosas que ayudan a los pequeños a gestionar el estrés y encontrar tranquilidad. En La Voz de los Cuentos, hemos seleccionado historias especiales que enseñan a los niños técnicas de calma y paz interior.</p>
 
 <p>La ansiedad infantil es una realidad que afecta a millones de niños en todo el mundo. Manifestándose como preocupaciones excesivas, problemas para dormir, dificultad en la concentración o síntomas físicos como dolores de cabeza, la ansiedad puede impactar significativamente en la calidad de vida del niño y su familia. Sin embargo, existen herramientas efectivas, y los cuentos para niños con ansiedad son una de las más poderosas y accesibles.</p>`
     },
@@ -36,15 +18,6 @@ export const landing = {
       type: 'story_highlight',
       searchKeyword: 'calma',
       label: 'Historias de Tranquilidad'
-    },
-    {
-      type: 'story_recommendation',
-      slug: 'llamarina-la-gota-de-agua-valiente',
-      title: 'Llamarina: La Gota de Agua Valiente',
-      description: 'Una pequeña gota descubre su valentía interior y aprende que incluso lo más diminuto puede ser fuerte. Perfecta para niños que necesitan recordar su propia fortaleza.',
-      duration: 240,
-      variant: 'primary',
-      label: 'Escucha ahora'
     },
     {
       type: 'text',
@@ -97,10 +70,6 @@ export const landing = {
 <p><strong>¡Comienza hoy mismo!</strong> Explora nuestra colección curada de cuentos para niños con ansiedad y regala a tu hijo el don de la paz interior. Cada historia es un viaje hacia la tranquilidad, la aceptación emocional, la seguridad y la autoconfianza. Los cuentos para niños con ansiedad que hemos seleccionado han sido probados con miles de familias y demuestran resultados tangibles en la reducción de síntomas de ansiedad.</p>
 
 <p>Escucha ahora y observa cómo tu hijo desarrolla herramientas duraderas para vivir con menos ansiedad y más alegría. Nuestros cuentos están diseñados por expertos en psicología infantil y educación emocional. Cada narrativa contiene lecciones valiosas sobre autoregulación, resiliencia y aceptación que acompañarán a tu hijo a lo largo de toda su vida. La inversión en el bienestar emocional de tu hijo hoy es un regalo que le beneficiará siempre.</p>`
-    },
-    {
-      type: 'stories_gallery',
-      stories: []
     }
   ]
 }

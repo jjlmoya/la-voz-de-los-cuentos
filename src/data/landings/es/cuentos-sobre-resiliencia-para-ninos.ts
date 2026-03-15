@@ -6,41 +6,15 @@ export const landing = {
   keyword: "cuentos sobre resiliencia",
   category: "superación",
   keywords: ["superar"],
-  description: `<h1>Cuentos sobre Resiliencia para Niños</h1>
-<p>¿Tu hijo enfrenta desafíos y se rinde fácilmente? Los <strong>cuentos sobre resiliencia</strong> son historias transformadoras que enseñan a los niños que los obstáculos no son finales - son oportunidades para crecer. En nuestro catálogo encontrarás relatos donde los personajes enfrentan fracasos, aprenden de ellos, y emergen más fuertes.</p>
-
-<h2>¿Por qué la resiliencia es la habilidad más importante?</h2>
-<p>Los <strong>cuentos sobre resiliencia</strong> enseñan que el fracaso no define el futuro - que la capacidad de levantarse, aprender y intentar de nuevo es lo que determina el éxito. En un mundo donde el 80% del éxito proviene de la capacidad de manejar adversidad, la resiliencia es la habilidad más valiosa.</p>
-
-<p>Los niños que crecen con cuentos sobre resiliencia desarrollan mentalidad de crecimiento. No ven los fracasos como evidencia de incapacidad, sino como data valiosa. No temen intentar cosas nuevas porque comprenden que el error es parte del proceso de aprendizaje.</p>
-
-<h2>Beneficios de cultivar resiliencia en la infancia</h2>
-<p>Los <strong>cuentos sobre resiliencia</strong> generan niños que: persisten ante dificultad, ven problemas como solubles, experimentan menos depresión y ansiedad, tienen mejor autoestima, logran mayores metas académicas y profesionales, y viven con mayor satisfacción general. La resiliencia es literalmente el factor de predicción más fuerte de éxito futuro.</p>
-
-<p>Un niño resiliente es un niño que cree en su capacidad de manejar lo que la vida le presente. Esta creencia fundamental transforma todo - cómo enfrenta la escuela, cómo negocia conflictos, cómo persigue sus sueños, cómo construye su identidad.</p>
-
-<h2>Cómo los cuentos construyen resiliencia</h2>
-<p>Los <strong>cuentos sobre resiliencia</strong> muestran el proceso completo: el problema aparece, el personaje experimenta miedo/frustración (validando emociones del niño), intenta soluciones, falla, aprende, intenta nuevamente, y finalmente logra. Este ciclo enseña que todos enfrentamos fracasos - y que la diferencia está en qué haces después.</p>
-
-<p>El niño que escucha estos cuentos internaliza: "Si el personaje pudo, yo también puedo. Si pudo aprender de fallos, yo también. Si pudo levantarse y intentar de nuevo, yo tengo esa capacidad dentro de mí."</p>`,
+  description: "Stories teach children that obstacles are opportunities to grow, that failure contains lessons, and that persistence conquers adversity.",
   content: [
     {
       type: 'text',
-      body: `<h1>Cuentos sobre Resiliencia para Niños</h1>
-<p>La resiliencia es la espina dorsal del éxito. Los cuentos sobre resiliencia enseñan a los niños que cada obstáculo es una oportunidad disfrazada, que cada fracaso contiene una lección, que la persistencia vence la adversidad.</p>
+      body: `<p>La resiliencia es la espina dorsal del éxito. Los cuentos sobre resiliencia enseñan a los niños que cada obstáculo es una oportunidad disfrazada, que cada fracaso contiene una lección, que la persistencia vence la adversidad.</p>
 
 <p>A través de historias donde los héroes enfrentan imposibilidades, crecen en el intento, y descubren fortalezas que no sabían que tenían, los niños internalizan la resiliencia no como concepto abstracto, sino como parte de quiénes son.</p>
 
 <p>Los cuentos sobre resiliencia no son historias que niegan la dificultad o el dolor. Al contrario, validan completamente que la vida contiene desafíos, fracasos y momentos de profunda frustración. Pero también muestran que ninguno de estos momentos es el final de la historia. Que hay siempre un siguiente capítulo. Que hay siempre una oportunidad de levantarse, aprender y crecer.</p>`
-    },
-    {
-      type: 'story_recommendation',
-      slug: 'el-segador-de-almas-una-historia-de-amistad-y-equilibrio',
-      title: 'El Segador de Almas: Una Historia de Amistad y Equilibrio',
-      description: 'Un viaje donde los personajes enfrentan pérdidas, aprenden a encontrar significado en la adversidad, y descubren que la verdadera fuerza viene de la conexión.',
-      duration: 250,
-      variant: 'primary',
-      label: 'Escucha ahora'
     },
     {
       type: 'text',

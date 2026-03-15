@@ -6,41 +6,15 @@ export const landing = {
   keyword: "stories about resilience",
   category: "superación",
   keywords: ["resilience"],
-  description: `<h1>Stories About Resilience for Children</h1>
-<p>Does your child give up easily when facing challenges? <strong>Stories about resilience</strong> are transformative narratives that teach children that obstacles aren't finals - they're opportunities to grow. Our collection contains tales where characters face failures, learn from them, and emerge stronger.</p>
-
-<h2>Why is resilience the most important skill?</h2>
-<p><strong>Stories about resilience</strong> teach that failure doesn't define the future - that the capacity to rise, learn, and try again determines success. In a world where 80% of success comes from handling adversity, resilience is the most valuable skill.</p>
-
-<p>Children who grow up with resilience stories develop growth mindset. They don't see failures as evidence of incapacity, but as valuable data. They don't fear trying new things because they understand error is part of learning.</p>
-
-<h2>Benefits of cultivating childhood resilience</h2>
-<p><strong>Stories about resilience</strong> generate children who: persist through difficulty, see problems as solvable, experience less depression and anxiety, have stronger self-esteem, achieve higher academic and professional goals, and live with greater overall satisfaction. Resilience is literally the strongest predictor of future success.</p>
-
-<p>A resilient child believes in their capacity to handle whatever life presents. This fundamental belief transforms everything - how they approach school, how they negotiate conflicts, how they pursue dreams, how they build identity.</p>
-
-<h2>How stories build resilience</h2>
-<p><strong>Stories about resilience</strong> show the complete process: problem appears, character experiences fear/frustration (validating the child's emotions), tries solutions, fails, learns, tries again, and finally succeeds. This cycle teaches that everyone faces failures - and the difference lies in what you do after.</p>
-
-<p>The child listening internalizes: "If the character could do it, I can too. If they could learn from failures, so can I. If they could rise and try again, I have that capacity within me."</p>`,
+  description: "Stories about resilience for children that teach overcoming adversity. Tales showing how persistence, courage, and determination build stronger character.",
   content: [
     {
       type: 'text',
-      body: `<h1>Stories About Resilience for Children</h1>
-<p>Resilience is the backbone of success. Stories about resilience teach children that every obstacle is a disguised opportunity, that every failure contains a lesson, that persistence conquers adversity.</p>
+      body: `<p>Resilience is the backbone of success. Stories about resilience teach children that every obstacle is a disguised opportunity, that every failure contains a lesson, that persistence conquers adversity.</p>
 
 <p>Through narratives where heroes face impossibilities, grow in the attempt, and discover strengths they didn't know they possessed, children internalize resilience not as abstract concept, but as part of who they are.</p>
 
 <p>Stories about resilience aren't narratives that deny difficulty or pain. On the contrary, they fully validate that life contains challenges, failures, and moments of deep frustration. But they also show that none of these moments is the end of the story. That there's always a next chapter. That there's always an opportunity to rise, learn, and grow.</p>`
-    },
-    {
-      type: 'story_recommendation',
-      slug: 'the-soul-reaper-a-story-of-friendship-and-balance',
-      title: 'The Soul Reaper: A Story of Friendship and Balance',
-      description: 'A journey where characters face losses, learn to find meaning in adversity, and discover that true strength comes from connection.',
-      duration: 250,
-      variant: 'primary',
-      label: 'Listen now'
     },
     {
       type: 'text',

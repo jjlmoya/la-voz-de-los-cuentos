@@ -6,41 +6,15 @@ export const landing = {
   keyword: "stories help kids manage anger",
   category: "emociones",
   keywords: ["anger"],
-  description: `<h1>Stories to Help Kids Manage Anger</h1>
-<p>Does your child explode with anger? <strong>Stories to help kids manage anger</strong> are transformative tools that teach children that anger is a valid emotion, but there are constructive ways to express it. Our collection contains narratives where characters learn to recognize anger, understand its causes, and channel it toward positive action.</p>
-
-<h2>Why is anger management difficult for children?</h2>
-<p><strong>Stories to help kids manage anger</strong> teach fundamental truths: anger is normal, everyone gets angry, the problem isn't feeling anger but how you express it. Children without tools to manage anger resort to destructive behaviors - hitting, insults, destruction. Stories offer alternatives.</p>
-
-<p>Children who grow with anger management stories develop: emotional intelligence, capacity for self-regulation, better relationships, improved academic performance, and fewer social conflicts. The difference between an explosive child and one who breathes is literally emotional education.</p>
-
-<h2>Benefits of learning anger management early</h2>
-<p><strong>Stories to help kids manage anger</strong> generate children who: recognize anger before exploding, understand what causes it, have techniques to calm down, express anger without hurting others, and learn that anger can motivate positive action. The difference is transformative.</p>
-
-<p>A child who manages anger well doesn't just have fewer conflicts - has better mental health, healthier relationships, and capacity to be effective even when angry. These skills serve them for life.</p>
-
-<h2>How stories teach emotional regulation</h2>
-<p><strong>Stories to help kids manage anger</strong> show the complete process: something unfair/frustrating happens, character feels anger (validating the child's emotion), tries different ways to express it, some work (constructive actions), others don't (destructive outbursts). Child learns by observation what works.</p>
-
-<p>Each story is a lesson without sermon. Without telling them "don't get angry" - which is impossible - showing how to channel anger toward positive action. This is real emotional education.</p>`,
+  description: "Stories teach children that anger is valid, but there are constructive ways to express it rather than through destructive behaviors.",
   content: [
     {
       type: 'text',
-      body: `<h1>Stories to Help Kids Manage Anger</h1>
-<p>Anger is a normal emotion. The problem isn't feeling anger - it's how we express it. Stories to help kids manage anger teach exactly this: that anger is valid, but there are intelligent ways to channel it.</p>
+      body: `<p>Anger is a normal emotion. The problem isn't feeling anger - it's how we express it. Stories to help kids manage anger teach exactly this: that anger is valid, but there are intelligent ways to channel it.</p>
 
 <p>Through narratives where characters face injustice, feel legitimate anger, but learn to channel it toward transformative action, children develop capacity to be assertive without being aggressive.</p>
 
 <p>What makes these stories particularly valuable is that they don't pathologize anger. They don't send the message "anger is bad and you should avoid it at all costs." Instead, what they communicate is: "Your anger is information. Your anger is telling you that something matters. Now learn what to do with that information in a way that benefits rather than harms".</p>`
-    },
-    {
-      type: 'story_recommendation',
-      slug: 'lighteater-a-tale-of-mystery-and-light',
-      title: 'Lighteater: A Tale of Mystery and Light',
-      description: 'A character who must find how to transform their anger into light and solutions. Perfect for children struggling with intense emotions.',
-      duration: 220,
-      variant: 'primary',
-      label: 'Listen now'
     },
     {
       type: 'text',
