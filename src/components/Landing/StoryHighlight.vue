@@ -116,9 +116,9 @@
 }
 
 .story-highlight:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(209, 71, 126, 0.15);
-  border-color: #FFD4E5;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(124, 58, 237, 0.25);
+  border-color: #C4B5FD;
 }
 
 .story-highlight__link {
@@ -180,22 +180,26 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #D1477E;
-  background: #FFF5FB;
-  padding: 4px 12px;
-  border-radius: 8px;
+  color: white;
+  background: linear-gradient(135deg, #7C3AED 0%, #8B5CF6 100%);
+  padding: 6px 14px;
+  border-radius: 20px;
   white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.3);
+  transition: all 0.3s ease;
 }
 
 .story-highlight__icon {
   font-size: 20px;
-  color: #D1477E;
-  transition: transform 0.3s ease;
+  color: #7C3AED;
+  transition: all 0.3s ease;
   flex-shrink: 0;
+  font-weight: bold;
 }
 
 .story-highlight__link:hover .story-highlight__icon {
-  transform: translateX(4px);
+  transform: translateX(8px);
+  color: #8B5CF6;
 }
 
 .story-highlight__title {
