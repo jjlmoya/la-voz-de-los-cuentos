@@ -8,7 +8,7 @@
 
     <div class="carousel-hero__container">
       <div class="carousel-hero__content">
-        <h2 class="carousel-hero__subtitle">Últimos cuentos</h2>
+        <h2 class="carousel-hero__subtitle">Cuentos Recomendados</h2>
         <h1 class="carousel-hero__title">{{ title }}</h1>
       </div>
 
@@ -23,11 +23,12 @@
 
         <div class="netflix-carousel-track" ref="scrollContainer">
           <div
-            v-for="story in carouselStories"
+            v-for="(story, index) in carouselStories"
             :key="story.key"
             class="netflix-item"
             @click="navigateToStory(story.key)"
           >
+            <div class="netflix-item__rank">{{ index + 1 }}</div>
             <div class="netflix-item__poster">
               <img
                 :src="`/assets/stories/${lang}/${story.key}.webp`"
@@ -292,6 +293,26 @@ onMounted(() => {
   height: 300px;
   transform-style: preserve-3d;
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.netflix-item__rank {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  z-index: 10;
+  font-size: clamp(2rem, 8vw, 4rem);
+  font-weight: 900;
+  color: white;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8), 0 0 20px rgba(124, 58, 237, 0.6);
+  font-family: 'Arial Black', sans-serif;
+  letter-spacing: -2px;
+  background: linear-gradient(135deg, #7C3AED, #8B5CF6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  transform-origin: top left;
+  filter: drop-shadow(0 2px 4px rgba(124, 58, 237, 0.6));
 }
 
 .netflix-item__poster {
