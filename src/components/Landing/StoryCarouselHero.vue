@@ -25,7 +25,11 @@
           <div
             v-for="(story, index) in carouselStories"
             :key="story.key"
+            :data-story-key="story.key"
             class="netflix-item"
+            :class="{ 'netflix-item--hovered': hoveredStory === story.key }"
+            @mouseenter="setHovered(story.key)"
+            @mouseleave="clearHovered"
             @click="navigateToStory(story.key)"
           >
             <div class="netflix-item__rank">{{ index + 1 }}</div>
@@ -36,12 +40,17 @@
                 class="netflix-item__image"
                 loading="lazy"
               />
-              <div class="netflix-item__overlay">
-                <div class="netflix-item__actions">
-                  <button class="netflix-play">▶</button>
-                </div>
-                <h3 class="netflix-item__title">{{ story.name }}</h3>
-              </div>
+            </div>
+
+            <!-- Expanded overlay with title -->
+            <div
+              v-if="hoveredStory === story.key"
+              class="netflix-item__expanded-overlay"
+              @mouseenter="setHovered(story.key)"
+              @mouseleave="clearHovered"
+              @click="navigateToStory(story.key)"
+            >
+              <h3 class="netflix-item__expanded-title">{{ story.name }}</h3>
             </div>
           </div>
         </div>
@@ -83,6 +92,8 @@ const { getAllStories } = useStories()
 const currentIndex = ref(0)
 const itemsPerView = ref(6)
 const scrollContainer = ref(null)
+const hoveredStory = ref(null)
+const hoverTimeout = ref(null)
 
 // Obtener cuentos desde la lógica dinámica del landing
 const carouselStories = computed(() => {
@@ -104,7 +115,11 @@ const scroll = (direction) => {
   const container = scrollContainer.value
   if (!container) return
 
-  const scrollAmount = container.offsetWidth / itemsPerView.value + 16 // items width + gap
+  // Calcular el ancho de un item más el gap
+  const itemWidth = container.offsetWidth / itemsPerView.value
+  const gap = 12 // 0.75rem en px
+  const scrollStep = itemsPerView.value - 1 // Netflix: scroll by (items - 1)
+  const scrollAmount = (itemWidth + gap) * scrollStep
   const distance = direction === 'right' ? scrollAmount : -scrollAmount
 
   container.scrollBy({
@@ -114,10 +129,33 @@ const scroll = (direction) => {
 
   // Actualizar índice
   if (direction === 'right' && canScrollRight.value) {
-    currentIndex.value += 1
+    currentIndex.value += scrollStep
   } else if (direction === 'left' && canScrollLeft.value) {
-    currentIndex.value -= 1
+    currentIndex.value -= scrollStep
   }
+}
+
+const getStoryDuration = (story) => {
+  if (!story || !story.time) return null
+  const minutes = Math.ceil(Number(story.time) / 60)
+  return isNaN(minutes) ? null : minutes
+}
+
+const setHovered = (storyKey) => {
+  // Only cancel timeout if we're actually changing stories
+  if (hoveredStory.value !== storyKey && hoverTimeout.value) {
+    clearTimeout(hoverTimeout.value)
+    hoverTimeout.value = null
+  }
+  hoveredStory.value = storyKey
+}
+
+const clearHovered = () => {
+  if (hoverTimeout.value) clearTimeout(hoverTimeout.value)
+  hoverTimeout.value = setTimeout(() => {
+    hoveredStory.value = null
+    hoverTimeout.value = null
+  }, 200)
 }
 
 const navigateToStory = (slug) => {
@@ -280,6 +318,7 @@ onMounted(() => {
   flex: 1;
   min-height: 300px;
   perspective: 1000px;
+  overflow-y: visible;
 }
 
 .netflix-carousel-track::-webkit-scrollbar {
@@ -292,33 +331,33 @@ onMounted(() => {
   position: relative;
   height: 300px;
   transform-style: preserve-3d;
-  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 1;
+}
+
+.netflix-item--hovered {
+  z-index: 100;
 }
 
 .netflix-item__rank {
   position: absolute;
-  top: -8px;
-  left: -8px;
+  top: 0;
+  left: 0;
   z-index: 10;
-  font-size: clamp(2rem, 8vw, 4rem);
+  font-size: clamp(3rem, 12vw, 6rem);
   font-weight: 900;
-  color: white;
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8), 0 0 20px rgba(124, 58, 237, 0.6);
+  color: rgba(255, 255, 255, 0.2);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   font-family: 'Arial Black', sans-serif;
-  letter-spacing: -2px;
-  background: linear-gradient(135deg, #7C3AED, #8B5CF6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1;
-  transform-origin: top left;
-  filter: drop-shadow(0 2px 4px rgba(124, 58, 237, 0.6));
+  letter-spacing: -4px;
+  line-height: 0.9;
+  margin: 0;
+  padding: 0;
 }
 
 .netflix-item__poster {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 300px;
   overflow: hidden;
   border-radius: 12px;
   background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
@@ -328,13 +367,12 @@ onMounted(() => {
 }
 
 .netflix-item:hover {
-  transform: scale(1.08) translateY(-16px);
   z-index: 50;
 }
 
 .netflix-item:hover .netflix-item__poster {
-  box-shadow: 0 32px 64px rgba(124, 58, 237, 0.4);
-  border-color: rgba(124, 58, 237, 0.5);
+  box-shadow: 0 48px 96px rgba(124, 58, 237, 0.5);
+  border-color: rgba(124, 58, 237, 0.6);
 }
 
 .netflix-item__image {
@@ -354,7 +392,8 @@ onMounted(() => {
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.8) 100%
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.95) 100%
   );
   display: flex;
   flex-direction: column;
@@ -362,11 +401,18 @@ onMounted(() => {
   justify-content: space-between;
   padding: var(--v-unit-3);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .netflix-item:hover .netflix-item__overlay {
   opacity: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.6) 40%,
+    rgba(0, 0, 0, 0.98) 100%
+  );
 }
 
 .netflix-item__actions {
@@ -399,14 +445,97 @@ onMounted(() => {
   box-shadow: 0 8px 20px rgba(124, 58, 237, 0.6);
 }
 
+.netflix-item__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--v-unit-2);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease 0.1s;
+}
+
+.netflix-item:hover .netflix-item__info {
+  opacity: 1;
+}
+
 .netflix-item__title {
   color: white;
   font-size: 0.875rem;
   font-weight: 700;
   text-align: center;
   line-height: 1.3;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
   margin: 0;
+  transition: all 0.4s ease;
+}
+
+.netflix-item:hover .netflix-item__title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.netflix-item__meta {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease 0.2s;
+}
+
+.netflix-item:hover .netflix-item__meta {
+  opacity: 1;
+}
+
+.netflix-item__expanded-overlay {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.95));
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  border-radius: 12px;
+  padding: var(--v-unit-4);
+  margin-left: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  animation: slideDown 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.netflix-item__expanded-title {
+  color: white;
+  font-size: 1rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.4;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  word-break: break-word;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  cursor: pointer;
+  pointer-events: auto;
 }
 
 .netflix-nav {
