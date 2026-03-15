@@ -110,29 +110,29 @@ export function exportLandingAsCode(landing: Landing, lang: 'es' | 'en'): string
 }
 
 /**
- * Generate SEO description with word count check
+ * Validate description length - NO auto-completion!
+ * Description must be UNIQUE and SEO-relevant for this specific landing
+ * Generic text kills SEO (thin content)
  */
-export function generateSEODescription(baseText: string): string {
-  let desc = baseText.trim();
-
-  // Ensure it's between 128-160 characters
+export function validateDescriptionLength(desc: string): { valid: boolean; length: number; error?: string } {
   if (desc.length < 128) {
-    desc = desc + '. This comprehensive guide offers insights and stories for children.';
+    return {
+      valid: false,
+      length: desc.length,
+      error: `Description too short: ${desc.length} chars (need 128+). Write unique, SEO-relevant text for this landing.`
+    };
   }
 
   if (desc.length > 160) {
-    desc = desc.substring(0, 157) + '...';
+    return {
+      valid: false,
+      length: desc.length,
+      error: `Description too long: ${desc.length} chars (max 160). Be concise while keeping it SEO-relevant.`
+    };
   }
 
-  return desc;
-}
-
-/**
- * Validate description length
- */
-export function validateDescriptionLength(desc: string): { valid: boolean; length: number } {
   return {
-    valid: desc.length >= 128 && desc.length <= 160,
+    valid: true,
     length: desc.length
   };
 }

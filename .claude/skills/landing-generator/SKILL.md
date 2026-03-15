@@ -73,10 +73,14 @@ export const landing = {
 
 ## Content Guidelines
 
-### Description (128-160 chars, plain text)
+### Description (128-160 chars, plain text, UNIQUE and SEO-relevant)
+**CRITICAL**: Write specific, SEO-relevant text for THIS landing. Generic text kills SEO.
+
 ✓ "Cuentos sobre el miedo que enseñan valentía y resiliencia. Historias para ayudar a niños a entender y superar sus miedos infantiles."
 ✗ "Cuentos <strong>sobre el miedo</strong>..." (contains HTML)
 ✗ "Short desc" (too short)
+✗ "Cuentos genéricos para niños. Historias para disfrutar en familia." (thin content - too generic)
+✗ Auto-completed descriptions (breaks SEO - no auto-fill garbage)
 
 ### Paragraphs
 - Use `<p>` tags for paragraphs
