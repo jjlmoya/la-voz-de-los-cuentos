@@ -45,17 +45,17 @@
 <style scoped>
   .landing-content {
     display: grid;
-    gap: var(--v-unit-6);
-    max-width: 1000px;
+    gap: var(--v-unit-8);
+    max-width: 900px;
     margin: 0 auto;
     width: 100%;
-    padding: 0 var(--v-unit-4);
+    padding: var(--v-unit-6) var(--v-unit-4);
   }
 
   @media (max-width: 768px) {
     .landing-content {
-      gap: var(--v-unit-5);
-      padding: 0 var(--v-unit-3);
+      gap: var(--v-unit-6);
+      padding: var(--v-unit-4) var(--v-unit-3);
     }
   }
 </style>
