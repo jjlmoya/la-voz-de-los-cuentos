@@ -5,7 +5,7 @@ export const landing = {
   "title": "Cuentos de terror cortos para niños: Historias misteriosas y terroríficas",
   "keyword": "cuentos de terror",
   "category": "miedo",
-  "keywords": ["miedo"],
+  "keywords": ["terror"],
   "description": "Cuentos de terror cortos para niños misteriosos pero no aterradores. Historias que despiertan imaginación y valentía sin provocar pesadillas en la noche.",
   "content": [
     {
