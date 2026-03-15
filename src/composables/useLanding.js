@@ -72,32 +72,6 @@ export default function useLanding(landing, lang = 'es') {
         .filter(block => block.type === 'story_recommendation')
         .map(block => block.slug)
 
-      // Get remaining stories not used in content
-      const restStories = allStories.filter(story => !usedSlugs.includes(story.key))
-
-      // Add gallery with remaining stories
-      if (restStories.length > 0) {
-        const textBody = lang === 'en'
-          ? 'These are just some of our featured stories. Discover many more tales in our collection.'
-          : 'Estos son solo algunos de nuestros cuentos destacados. Descubre muchas más historias en nuestra colección.'
-
-        blocks.push({
-          type: 'text',
-          body: textBody
-        })
-
-        const galleryTitle = lang === 'en' ? 'More Stories to Explore' : 'Más historias para explorar'
-        const gallerySubtitle = lang === 'en'
-          ? 'A complete collection full of adventures, emotions and magic'
-          : 'Una colección completa llena de aventuras, emociones y magia'
-
-        blocks.push({
-          type: 'stories_gallery',
-          stories: restStories,
-          title: galleryTitle,
-          subtitle: gallerySubtitle
-        })
-      }
 
       return blocks
     }

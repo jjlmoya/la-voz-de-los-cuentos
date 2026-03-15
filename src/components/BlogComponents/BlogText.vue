@@ -47,8 +47,8 @@
   }
 
   .blog-text :deep(h2)::before {
-    content: '🌟 ';
-    margin-right: 0.5rem;
+    content: '';
+    margin-right: 0;
   }
 
   .blog-text :deep(h3) {
@@ -121,17 +121,26 @@
   }
 
   .blog-text :deep(ul li)::before {
-    content: '✨';
+    content: '';
     position: absolute;
-    left: 8px;
-    color: #FBBF24;
-    font-size: 1rem;
-    animation: twinkle 2s ease-in-out infinite;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(135deg, #7C3AED, #8B5CF6);
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(124, 58, 237, 0.6);
+    animation: pulse-dot 2s ease-in-out infinite;
   }
 
-  @keyframes twinkle {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.6; }
+  @keyframes pulse-dot {
+    0%, 100% {
+      box-shadow: 0 0 12px rgba(124, 58, 237, 0.6), 0 0 0 0 rgba(124, 58, 237, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(124, 58, 237, 0.8), 0 0 8px 8px rgba(124, 58, 237, 0);
+    }
   }
 
   .blog-text :deep(ol) {
