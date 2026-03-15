@@ -51,7 +51,7 @@ interface StoryHighlightBlock {
 Before writing ANY code, analyze:
 - **Topic**: What's the landing about?
 - **Category**: Which storyTag category? (miedo, dormir, aventura, etc)
-- **Keywords**: 1-3 tags that match the category
+- **Keywords**: ALWAYS 1 tag only (that matches the category)
 - **Title**: Clear, SEO-friendly
 - **Keyword**: Main search term
 - **Bilingual keys**: Spanish slug and English slug (MUST be different)
@@ -108,8 +108,8 @@ Block 8: Closing content with CTA
 - 250+ words per section
 
 **Story highlight block rules**:
-- `searchKeyword`: MUST match one of the landing's `keywords`
 - `searchKeyword`: MUST be a valid storyTag (see list below)
+- `searchKeyword`: Free-form sub-keyword related to PREVIOUS TEXT CONTENT (not necessarily landing's keyword)
 - `label`: Descriptive, inviting label
 - Distribute 2-4 blocks across the content (not all at the end)
 
@@ -133,8 +133,8 @@ Block 8: Closing content with CTA
 ✓ key !== keyEn (different values)
 ✓ keyEs matches key
 ✓ category is valid storyTag
-✓ keywords.length >= 1 && keywords.length <= 3
-✓ keywords all match storyTag categories
+✓ keywords.length === 1 (ALWAYS exactly 1)
+✓ keyword (1 only) matches a storyTag category
 ✓ content[0].type === 'text'
 ✓ content has 0 <h1> tags
 ✓ content has 3+ <h2> tags
@@ -142,7 +142,7 @@ Block 8: Closing content with CTA
 ✓ content has 2-4 story_highlight blocks
 ✓ NO stories_gallery blocks
 ✓ NO story_recommendation blocks
-✓ All story_highlight keywords are in landing.keywords
+✓ story_highlight searchKeyword is valid storyTag (field-free, related to previous text)
 ```
 
 ### Step 6: Create Files
