@@ -1,4 +1,5 @@
 // Spanish Landings
+import { landing as cuentosParaNinosConAnsiedadEncontrarCalmaYPazEs } from './es/cuentos-para-ninos-con-ansiedad-encontrar-calma-y-paz'
 import { landing as audioCuentosParaDormirRelatosRelajantesParaLosMasPequenosEs } from './es/audio-cuentos-para-dormir-relatos-relajantes-para-los-mas-pequenos'
 import { landing as cuentosDeHalloweenParaNinosHistoriasDivertidasYNoTanEspeluznantesEs } from './es/cuentos-de-halloween-para-ninos-historias-divertidas-y-no-tan-espeluznantes'
 import { landing as cuentosDeNavidadParaNinosHistoriasMagicasParaCompartirEnFamiliaEs } from './es/cuentos-de-navidad-para-ninos-historias-magicas-para-compartir-en-familia'
@@ -11,6 +12,7 @@ import { landing as cuentosParaNinosParaLeerHistoriasDivertidasYEducativasParaTo
 import { landing as todosLosCuentosDeEloyLasAnecdotasDeUnAbueloConMuchaHistoriaEs } from './es/todos-los-cuentos-de-eloy-las-anecdotas-de-un-abuelo-con-mucha-historia'
 
 // English Landings
+import { landing as storiesForAnxiousKidsFindingCalmAndPeaceEn } from './en/stories-for-anxious-kids-finding-calm-and-peace'
 import { landing as allEloyStoriesTheAnecdotesOfAGrandfatherWithMuchHistoryEn } from './en/all-eloy-stories-the-anecdotes-of-a-grandfather-with-much-history'
 import { landing as audiobooksForSleepRelaxingStoriesForTheLittleOnesEn } from './en/audiobooks-for-sleep-relaxing-stories-for-the-little-ones'
 import { landing as christmasStoriesForKidsMagicalTalesToShareWithTheFamilyEn } from './en/christmas-stories-for-kids-magical-tales-to-share-with-the-family'
@@ -23,6 +25,7 @@ import { landing as princessStoriesForKidsMagicAndEnchantmentInEveryStoryEn } fr
 import { landing as shortHorrorStoriesForKidsMysteriousAndTerrifyingTalesEn } from './en/short-horror-stories-for-kids-mysterious-and-terrifying-tales'
 
 export const landingsEs = [
+  cuentosParaNinosConAnsiedadEncontrarCalmaYPazEs,
   audioCuentosParaDormirRelatosRelajantesParaLosMasPequenosEs,
   cuentosDeHalloweenParaNinosHistoriasDivertidasYNoTanEspeluznantesEs,
   cuentosDeNavidadParaNinosHistoriasMagicasParaCompartirEnFamiliaEs,
@@ -36,6 +39,7 @@ export const landingsEs = [
 ]
 
 export const landingsEn = [
+  storiesForAnxiousKidsFindingCalmAndPeaceEn,
   allEloyStoriesTheAnecdotesOfAGrandfatherWithMuchHistoryEn,
   audiobooksForSleepRelaxingStoriesForTheLittleOnesEn,
   christmasStoriesForKidsMagicalTalesToShareWithTheFamilyEn,
