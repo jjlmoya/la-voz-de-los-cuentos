@@ -1,15 +1,14 @@
-import es from '../data/es/landings.json'
-import en from '../data/en/landings.json'
+import { getLandings } from '../data/index.js'
 
-const lang = import.meta.env.PUBLIC_LANG
-const landings = { es, en }[lang]
+const lang = import.meta.env.PUBLIC_LANG || 'es'
 
-export default function useNewsLetters() {
+export default function useLandings() {
   const getAll = () => {
-    return landings
+    return getLandings(lang) || []
   }
   const hasLandings = () => {
-    return !!landings.length
+    const landings = getLandings(lang)
+    return !!landings?.length
   }
   return {
     getAll,

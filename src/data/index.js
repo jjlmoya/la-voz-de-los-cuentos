@@ -3,15 +3,14 @@ import storiesEn from './en/stories.json' with { type: 'json' }
 import sagasEn from './en/sagas.json' with { type: 'json' }
 import charactersEn from './en/characters.json' with { type: 'json' }
 import newslettersEn from './en/newsletters.json' with { type: 'json' }
-import landingsEn from './en/landings.json' with { type: 'json' }
 import songsEn from './en/songs.json' with { type: 'json' }
 import { postsEn, postsEs } from './posts/index.ts'
+import { landingsEs, landingsEn } from './landings/index.ts'
 
 import storiesEs from './es/stories.json' with { type: 'json' }
 import sagasEs from './es/sagas.json' with { type: 'json' }
 import charactersEs from './es/characters.json' with { type: 'json' }
 import newslettersEs from './es/newsletters.json' with { type: 'json' }
-import landingsEs from './es/landings.json' with { type: 'json' }
 import songsEs from './es/songs.json' with { type: 'json' }
 
 const map = {

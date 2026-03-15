@@ -60,7 +60,8 @@ function extractStorySlugs(post) {
         obj.rows.forEach(row => {
           if (Array.isArray(row)) {
             row.forEach(cell => {
-              if (typeof cell === 'string' && cell.includes('-')) {
+              // Only capture valid slugs: must be hyphenated words WITHOUT spaces
+              if (typeof cell === 'string' && cell.includes('-') && !cell.includes(' ')) {
                 slugs.push(cell);
               }
             });
@@ -144,6 +145,14 @@ describe('Post Stories Validation', () => {
 
     it('collections have equal counts', () => {
       expect(storiesEn.length).toBe(storiesEs.length);
+    });
+  });
+
+  describe('Post Count Parity', () => {
+    it('should have the same number of posts in Spanish and English', () => {
+      const postsEs = Object.keys(allPostSlugs.es).length;
+      const postsEn = Object.keys(allPostSlugs.en).length;
+      expect(postsEs, `Post count mismatch: ES has ${postsEs} posts, EN has ${postsEn} posts.`).toBe(postsEn);
     });
   });
 });

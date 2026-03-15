@@ -1,10 +1,10 @@
 {
   "name": "la-voz-de-los-cuentos",
   "type": "module",
-  "version": "0.1.404",
+  "version": "0.1.406",
   "scripts": {
     "dev": "astro dev",
-    "dev:en": "env-cmd -f .env.en astro dev",
+    "dev:en": "env-cmd -f .env.en astro dev --port 4323",
     "start": "astro dev",
     "quality-gate": "node ./scripts/quality-gate.js",
     "build": "npm run statics && astro build && human-touch dist/**/*.html && npm run robots",
@@ -26,7 +26,8 @@
     "test": "node validate-posts-content.js && vitest run",
     "test:watch": "vitest",
     "test:full": "npm run test && npm run quality-gate",
-    "validate:posts": "node validate-posts-content.js"
+    "validate:posts": "node validate-posts-content.js",
+    "validate:landings": "vitest run test/validate-landings.test.js"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.2.0",

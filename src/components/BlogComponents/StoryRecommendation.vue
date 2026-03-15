@@ -18,7 +18,7 @@
         <h4 class="story-recommendation__title">{{ displayTitle }}</h4>
         <p class="story-recommendation__description">{{ block.description }}</p>
         <div class="story-recommendation__meta">
-          <span v-if="block.duration" class="story-recommendation__time">⏱ {{ block.duration }} min</span>
+          <span v-if="block.duration" class="story-recommendation__time">{{ block.duration }} min</span>
           <span class="story-recommendation__cta">{{ ctaText }}</span>
         </div>
       </div>

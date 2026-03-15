@@ -28,6 +28,9 @@ Genero automáticamente posts de blog completos, bilingües y optimizados para S
 - Guardo en archivos `.ts` dentro de `src/data/posts/es/` y `src/data/posts/en/`
 - Actualizo `src/data/posts/index.ts` para importar y exportar los nuevos posts.
 - **CATEGORÍAS:** Libertad total. Cualquier categoría que elijas (ej: Emociones, Salud, Creatividad) tendrá un color asignado automáticamente en el listado.
+- **BRANDING:**
+    - Español: "**La Voz de los Cuentos**".
+    - Inglés: "**BuboBoo**".
 - **NOTA:** Todo manual, sin scripts intermedios
 
 # MI PROCESO
@@ -41,6 +44,7 @@ Identifico:
 - Qué temas NO están cubiertos
 - Palabras clave con alto tráfico pero sin contenido
 - **RECOMENDACIÓN:** Busco en `src/data/es/storyTags.ts` qué cuentos coinciden con el tema elegido para la `story_recommendation`.
+- **MAPEADO DE LLAVES:** Uso `node scripts/find-story.js <key_es> es` para obtener automáticamente la llave correspondiente en inglés (o viceversa), asegurando que los posts bilingües estén perfectamente sincronizados.
 
 ## 3. Elegir tema único
 Selecciono un tema nuevo:
