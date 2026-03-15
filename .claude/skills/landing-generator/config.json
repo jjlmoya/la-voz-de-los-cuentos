@@ -1,0 +1,7 @@
+{
+  "name": "landing-generator",
+  "displayName": "Landing Generator Guide",
+  "description": "Instructions for AI to generate landings correctly with TypeScript typing and validation",
+  "isSystemSkill": true,
+  "category": "internal-ai-guides"
+}
