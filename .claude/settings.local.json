@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(node optimize-images.mjs:*)",
+      "Bash(awk '{print $9, \"\"\"\"-\"\"\"\", $5}')",
+      "Bash(node optimize-icons.mjs:*)",
+      "Bash(awk '{print $9 \"\"\"\" - \"\"\"\" $5}')",
+      "Bash(git push:*)",
+      "Bash(git checkout:*)",
+      "Bash(gh issue list --state open --label \"experience\" OR \"levels\" --json number,title,body)",
+      "Bash(gh issue list:*)",
+      "Bash(mkdir:*)",
+      "Bash(git add:*)",
+      "Bash(git reset:*)",
+      "Bash(git commit:*)",
+      "Bash(dir:*)",
+      "Bash(Get-Item \"d:\\code\\la-voz-de-los-cuentos\\public\\assets\\stories\\es\\viento-estelar.webp\")",
+      "Bash(Select-Object Length, LastWriteTime)",
+      "Bash(rm:*)",
+      "Bash(node optimize-avatars.mjs:*)",
+      "Bash(node:*)",
+      "Bash(cat:*)",
+      "Bash(tree:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

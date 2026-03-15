@@ -122,10 +122,6 @@ export const landing = {
 <p>Los cuentos para ayudar a niños a manejar la rabia crean generaciones que no reprimen sus emociones pero tampoco las usan para dañar. Que entienden que la rabia es un maestro. Que transforman dolor en acción, injusticia en activismo, rabia en poder constructivo.</p>
 
 <p>Esta es la verdadera inteligencia emocional: no evitar sentir, sino saber qué hacer con lo que sientes. Un niño con esta habilidad no es "dócil" o "blando" - es alguien que sabe cómo ser efectivo incluso cuando está enojado. Y ese es el regalo que duran toda una vida.</p>`
-    },
-    {
-      type: 'stories_gallery',
-      stories: []
     }
   ]
 }

@@ -47,9 +47,6 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
-# Claude Code files
-.claude/
-
 # Vercel output
 .vercel/
 public/assets/stories/*.mp4

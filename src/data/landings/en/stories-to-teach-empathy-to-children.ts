@@ -122,10 +122,6 @@ export const landing = {
 <p>Empathy is the most valuable gift you can give your child. Not money, not power - the capacity to connect with other human beings, to understand their needs, to contribute to their wellbeing. Stories to teach empathy plant that seed. The world your child builds with that empathy becomes a little brighter.</p>
 
 <p>Invest in your child's emotional education. Dedicate time to listening to stories that cultivate empathy. Watch as your child gradually begins to notice others' feelings more, becomes more considerate, shows authentic compassion. This is a gift that keeps giving for a lifetime.</p>`
-    },
-    {
-      type: 'stories_gallery',
-      stories: []
     }
   ]
 }

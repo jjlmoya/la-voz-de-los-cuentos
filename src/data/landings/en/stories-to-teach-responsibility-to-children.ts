@@ -122,10 +122,6 @@ export const landing = {
 <p>Stories to teach responsibility create generations of adults you can trust. Who keep promises. Who accept consequences. Who understand that responsibility is freedom. This is the legacy of true responsibility.</p>
 
 <p>In a world where reliability is rare, where many people don't keep their word, where responsibility is optional, a child raised with these stories will be extraordinary. They'll be someone others can truly count on. And that's the greatest gift you can give them.</p>`
-    },
-    {
-      type: 'stories_gallery',
-      stories: []
     }
   ]
 }

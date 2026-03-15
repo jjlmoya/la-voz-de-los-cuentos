@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/34677/.claude/**)",
+      "Bash(\"C:\\\\Users\\\\34677\\\\.local\\\\bin\\\\cocoindex-code.exe\")",
+      "Read(//c/Users/34677/.local/bin/**)",
+      "Bash(powershell -Command:*)",
+      "WebFetch(domain:github.com)"
+    ]
+  }
+}

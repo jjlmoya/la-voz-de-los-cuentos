@@ -122,10 +122,6 @@ export const landing = {
 <p>Los cuentos para niños sobre diversidad e inclusión no solo educan - transforman. Crean generaciones de líderes que construirán sociedades donde todos tenemos lugar, donde todos somos valorados, donde la diversidad es la belleza del mundo.</p>
 
 <p>Invierte en la educación inclusiva de tu hijo. Cada cuento que escucha es una inversión en su capacidad de ser ciudadano del mundo, de construir relaciones genuinas con personas diferentes, de liderar con justicia. Este es un legado que durará toda su vida.</p>`
-    },
-    {
-      type: 'stories_gallery',
-      stories: []
     }
   ]
 }

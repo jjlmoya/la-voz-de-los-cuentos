@@ -122,10 +122,6 @@ export const landing = {
 <p>Stories to help kids manage anger create generations that don't repress emotions but don't use them to harm either. That understand anger is a teacher. That transform pain into action, injustice into activism, anger into constructive power.</p>
 
 <p>This is true emotional intelligence: not avoiding feeling, but knowing what to do with what you feel. A child with this skill isn't "soft" or "weak" - is someone who knows how to be effective even when angry. And that's a gift that lasts a lifetime.</p>`
-    },
-    {
-      type: 'stories_gallery',
-      stories: []
     }
   ]
 }

@@ -122,10 +122,6 @@ export const landing = {
 <p>Los cuentos sobre resiliencia no crean niños que nunca fracasan - crean niños que entienden que los fracasos son datos, no definiciones. Que cada obstáculo es un maestro. Que dentro de ellos existe una reserva infinita de fuerza. Este es el legado de la verdadera resiliencia.</p>
 
 <p>Recuerda: la resiliencia no se construye evitando dificultades. Se construye enfrentándolas, aprendiendo de ellas, y emergiendo transformado. Los cuentos son el lugar seguro donde los niños practican este proceso una y otra vez, hasta que se vuelve parte de su identidad.</p>`
-    },
-    {
-      type: 'stories_gallery',
-      stories: []
     }
   ]
 }

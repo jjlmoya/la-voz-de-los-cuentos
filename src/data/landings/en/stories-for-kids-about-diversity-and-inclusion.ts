@@ -122,10 +122,6 @@ export const landing = {
 <p>Stories for kids about diversity and inclusion don't just educate - transform. Create generations of leaders who will build societies where everyone has a place, where everyone is valued, where diversity is the world's beauty.</p>
 
 <p>Invest in your child's inclusive education. Each story they hear is an investment in their capacity to be a world citizen, to build genuine relationships with people different from them, to lead with justice. This is a legacy that will last their entire life.</p>`
-    },
-    {
-      type: 'stories_gallery',
-      stories: []
     }
   ]
 }

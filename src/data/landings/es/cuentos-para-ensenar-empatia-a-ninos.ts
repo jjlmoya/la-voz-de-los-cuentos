@@ -108,10 +108,6 @@ export const landing = {
 <p>La empatía es el regalo más valioso que puedes darle a tu hijo. No es dinero, no es poder - es la capacidad de conectar con otros seres humanos, de entender sus necesidades, de contribuir a su bienestar. Los cuentos para enseñar empatía plantan esa semilla. El mundo que construya tu hijo con esa empatía, es ahora un poco más brillante.</p>
 
 <p>Invierte en la educación emocional de tu hijo. Dedica tiempo a escuchar cuentos que cultiven empatía. Observa cómo gradualmente tu hijo comienza a notar más los sentimientos de otros, a ser más considerado, a mostrar una compasión auténtica. Este es el regalo que sigue dando para toda una vida.</p>`
-    },
-    {
-      type: 'stories_gallery',
-      stories: []
     }
   ]
 }

@@ -15,6 +15,8 @@ import { landing as cuentosSobreResilienciaParaNinosEs } from './es/cuentos-sobr
 import { landing as cuentosParaNinosSobreDiversidadEInclusionEs } from './es/cuentos-para-ninos-sobre-diversidad-e-inclusion'
 import { landing as cuentosParaAyudarNinosAManejarLaRabiaEs } from './es/cuentos-para-ayudar-ninos-a-manejar-la-rabia'
 import { landing as cuentosParaEnsenarResponsabilidadANinosEs } from './es/cuentos-para-ensenar-responsabilidad-a-ninos'
+import { landing as cuentosSobreLaAmistadParaNinosEs } from './es/cuentos-sobre-la-amistad-para-ninos'
+
 
 // English Landings
 import { landing as storiesForAnxiousKidsFindingCalmAndPeaceEn } from './en/stories-for-anxious-kids-finding-calm-and-peace'
@@ -33,6 +35,8 @@ import { landing as storiesAboutResilienceForChildrenEn } from './en/stories-abo
 import { landing as storiesForKidsAboutDiversityAndInclusionEn } from './en/stories-for-kids-about-diversity-and-inclusion'
 import { landing as storiesToHelpKidsManageAngerEn } from './en/stories-to-help-kids-manage-anger'
 import { landing as storiesToTeachResponsibilityToChildrenEn } from './en/stories-to-teach-responsibility-to-children'
+import { landing as friendshipStoriesForKidsEn } from './en/friendship-stories-for-kids'
+
 
 export const landingsEs = [
   cuentosParaNinosConAnsiedadEncontrarCalmaYPazEs,
@@ -51,6 +55,8 @@ export const landingsEs = [
   cuentosParaNinosSobreDiversidadEInclusionEs,
   cuentosParaAyudarNinosAManejarLaRabiaEs,
   cuentosParaEnsenarResponsabilidadANinosEs,
+  cuentosSobreLaAmistadParaNinosEs,
+
 ]
 
 export const landingsEn = [
@@ -70,4 +76,6 @@ export const landingsEn = [
   storiesForKidsAboutDiversityAndInclusionEn,
   storiesToHelpKidsManageAngerEn,
   storiesToTeachResponsibilityToChildrenEn,
+  friendshipStoriesForKidsEn,
+
 ]

@@ -122,10 +122,6 @@ export const landing = {
 <p>Stories about resilience don't create children who never fail - they create children who understand failures are data, not definitions. That every obstacle is a teacher. That within them exists an infinite reserve of strength. This is the legacy of true resilience.</p>
 
 <p>Remember: resilience isn't built by avoiding difficulties. It's built by facing them, learning from them, and emerging transformed. Stories are the safe place where children practice this process again and again, until it becomes part of who they are.</p>`
-    },
-    {
-      type: 'stories_gallery',
-      stories: []
     }
   ]
 }

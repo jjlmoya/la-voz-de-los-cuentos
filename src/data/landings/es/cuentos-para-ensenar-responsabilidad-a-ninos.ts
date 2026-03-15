@@ -122,10 +122,6 @@ export const landing = {
 <p>Los cuentos para enseñar responsabilidad crean generaciones de adultos en quienes se puede confiar. Que cumplen promesas. Que aceptan consecuencias. Que entienden que la responsabilidad es libertad. Este es el legado de la verdadera responsabilidad.</p>
 
 <p>En mundo donde la confiabilidad es rara, donde muchas personas no cumplen sus palabras, donde responsabilidad es opcional, un niño criado con estos cuentos será extraordinario. Será alguien en quien realmente se puede contar. Y ese es el mayor regalo que puedes darle.</p>`
-    },
-    {
-      type: 'stories_gallery',
-      stories: []
     }
   ]
 }
