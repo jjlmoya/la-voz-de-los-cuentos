@@ -56,9 +56,11 @@
 
   const highlightedStory = computed(() => {
     if (!searchKeyword.value) return null
-    return allStories.find(story =>
+    // Search from the end (reverse) to prioritize newer/better stories
+    const matchingStories = allStories.filter(story =>
       story.story && story.story.toLowerCase().includes(searchKeyword.value.toLowerCase())
-    ) || null
+    )
+    return matchingStories.length > 0 ? matchingStories[matchingStories.length - 1] : null
   })
 
   const storyLink = computed(() => {
