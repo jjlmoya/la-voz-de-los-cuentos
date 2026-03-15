@@ -54,13 +54,27 @@
   const searchKeyword = computed(() => props.block?.searchKeyword || '')
   const label = computed(() => props.block?.label || (props.lang === 'en' ? 'Featured Story' : 'Cuento Destacado'))
 
+  // Deterministic hash function for seeded random selection
+  const hashString = (str) => {
+    let hash = 0
+    for (let i = 0; i < str.length; i++) {
+      const char = str.charCodeAt(i)
+      hash = ((hash << 5) - hash) + char
+      hash = hash & hash // Convert to 32-bit integer
+    }
+    return Math.abs(hash)
+  }
+
   const highlightedStory = computed(() => {
     if (!searchKeyword.value) return null
-    // Search from the end (reverse) to prioritize newer/better stories
     const matchingStories = allStories.filter(story =>
       story.story && story.story.toLowerCase().includes(searchKeyword.value.toLowerCase())
     )
-    return matchingStories.length > 0 ? matchingStories[matchingStories.length - 1] : null
+    if (matchingStories.length === 0) return null
+    // Use seeded random: same keyword always gets same story, but distributed across available stories
+    const seed = hashString(searchKeyword.value)
+    const index = seed % matchingStories.length
+    return matchingStories[index]
   })
 
   const storyLink = computed(() => {
