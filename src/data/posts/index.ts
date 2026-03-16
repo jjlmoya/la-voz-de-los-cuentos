@@ -13,6 +13,7 @@ import { post as autoestimaEs } from './es/fortalecer-autoestima-ninos-cuentos.t
 import { post as identidadEs } from './es/el-impacto-de-los-cuentos-personalizados-en-la-identidad-infantil.ts'
 import { post as pacienciaEs } from './es/cuentos-entrenar-paciencia-perseverancia-ninos.ts'
 import { post as autonomiaEs } from './es/cuentos-fomentar-autonomia-confianza-ninos.ts'
+import { post as rutinaEs } from './es/rutina-lectura-infantil-guia-practica.ts'
 
 // English posts
 import { post as howToTellEn } from './en/how-to-tell-stories-to-children.ts'
@@ -29,6 +30,7 @@ import { post as selfEsteemEn } from './en/boost-child-self-esteem-stories.ts'
 import { post as identidadEn } from './en/the-impact-of-personalized-stories-on-childhood-identity.ts'
 import { post as pacienciaEn } from './en/stories-teach-patience-perseverance-children.ts'
 import { post as autonomiaEn } from './en/stories-foster-autonomy-self-confidence-children.ts'
+import { post as rutinaEn } from './en/childhood-reading-routine-practical-guide.ts'
 
-export const postsEs = [comoContarEs, beneficiosEs, miiedosEs, edadesEs, dormirEs, creatividadEs, valoresEs, concentracionEs, frustracionEs, miedoFallarEs, autoestimaEs, identidadEs, pacienciaEs, autonomiaEs]
-export const postsEn = [howToTellEn, benefitsEn, fearsEn, ageGuideEn, sleepEn, creativityEn, valuesEn, concentrationEn, frustrationEn, fearFailureEn, selfEsteemEn, identidadEn, pacienciaEn, autonomiaEn]
+export const postsEs = [comoContarEs, beneficiosEs, miiedosEs, edadesEs, dormirEs, creatividadEs, valoresEs, concentracionEs, frustracionEs, miedoFallarEs, autoestimaEs, identidadEs, pacienciaEs, autonomiaEs, rutinaEs]
+export const postsEn = [howToTellEn, benefitsEn, fearsEn, ageGuideEn, sleepEn, creativityEn, valuesEn, concentrationEn, frustrationEn, fearFailureEn, selfEsteemEn, identidadEn, pacienciaEn, autonomiaEn, rutinaEn]
