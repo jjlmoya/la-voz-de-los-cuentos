@@ -11,6 +11,7 @@ import { post as frustracionEs } from './es/gestionar-frustracion-ninos-cuentos.
 import { post as miedoFallarEs } from './es/miedo-fallar-ninos-cuentos.ts'
 import { post as autoestimaEs } from './es/fortalecer-autoestima-ninos-cuentos.ts'
 import { post as identidadEs } from './es/el-impacto-de-los-cuentos-personalizados-en-la-identidad-infantil.ts'
+import { post as pacienciaEs } from './es/cuentos-entrenar-paciencia-perseverancia-ninos.ts'
 
 // English posts
 import { post as howToTellEn } from './en/how-to-tell-stories-to-children.ts'
@@ -25,6 +26,7 @@ import { post as frustrationEn } from './en/managing-frustration-children-storie
 import { post as fearFailureEn } from './en/fear-failure-children-stories.ts'
 import { post as selfEsteemEn } from './en/boost-child-self-esteem-stories.ts'
 import { post as identidadEn } from './en/the-impact-of-personalized-stories-on-childhood-identity.ts'
+import { post as pacienciaEn } from './en/stories-teach-patience-perseverance-children.ts'
 
-export const postsEs = [comoContarEs, beneficiosEs, miiedosEs, edadesEs, dormirEs, creatividadEs, valoresEs, concentracionEs, frustracionEs, miedoFallarEs, autoestimaEs, identidadEs]
-export const postsEn = [howToTellEn, benefitsEn, fearsEn, ageGuideEn, sleepEn, creativityEn, valuesEn, concentrationEn, frustrationEn, fearFailureEn, selfEsteemEn, identidadEn]
+export const postsEs = [comoContarEs, beneficiosEs, miiedosEs, edadesEs, dormirEs, creatividadEs, valoresEs, concentracionEs, frustracionEs, miedoFallarEs, autoestimaEs, identidadEs, pacienciaEs]
+export const postsEn = [howToTellEn, benefitsEn, fearsEn, ageGuideEn, sleepEn, creativityEn, valuesEn, concentrationEn, frustrationEn, fearFailureEn, selfEsteemEn, identidadEn, pacienciaEn]
