@@ -40,8 +40,8 @@ export const post = {
     },
     {
       type: "story_recommendation",
-      slug: "the-brave-water-drop-llamarina",
-      description: "This story is exceptional for children with school anxiety because it tells the story of Llamarina, a small water drop who must face a terrifying journey. Through her journey, the child learns that bravery doesn't mean having no fear, but acting despite fear. It's perfect for helping your child recognize that they can be small, scared AND still brave. The story shows how support from others (the river, fellow companions) makes challenges manageable.",
+      slug: "flamerina-the-brave-water-drop",
+      description: "This story is exceptional for children with school anxiety because it tells the story of Flamerina, a small water drop who must face a terrifying journey. Through her journey, the child learns that bravery doesn't mean having no fear, but acting despite fear. It's perfect for helping your child recognize that they can be small, scared AND still brave. The story shows how support from others (the river, fellow companions) makes challenges manageable.",
       variant: "primary",
       label: "Story for courage in facing the new"
     },

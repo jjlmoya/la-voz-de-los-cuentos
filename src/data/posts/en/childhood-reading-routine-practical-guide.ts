@@ -31,7 +31,7 @@ export const post = {
     },
     {
       type: "story_recommendation",
-      slug: "the-light-swallower-a-tale-of-mystery-and-light",
+      slug: "lighteater-a-tale-of-mystery-and-light",
       description: "This story is the perfect tool to inaugurate a nightly reading routine. Its atmosphere of mystery and its slow pace capture the child, forcing them to pay attention to every visual and narrative detail while winding down from the day. The progressive narrative keeps the young reader captivated, creating that anticipation that generates the desire to return to the pages day after day.",
       variant: "primary",
       label: "Story to start the routine"

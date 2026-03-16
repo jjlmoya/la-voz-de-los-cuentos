@@ -27,7 +27,11 @@
       "Bash(validate-landings-quick.js:*)",
       "Bash(find:*)",
       "Bash(__NEW_LINE_ecf871ca4a87d9d5__ find src/data/landings -name \"*.ts\" -exec sed -i 's/<h1[^>]*>[^<]*<\\\\/h1>//g' {} ;)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(npm run validate:posts:*)",
+      "Bash(npm run test:bilingual:*)",
+      "Bash(npm run:*)",
+      "Bash(python3:*)"
     ],
     "deny": [],
     "ask": [],
