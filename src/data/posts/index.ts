@@ -16,6 +16,7 @@ import { post as autonomiaEs } from './es/cuentos-fomentar-autonomia-confianza-n
 import { post as rutinaEs } from './es/rutina-lectura-infantil-guia-practica.ts'
 import { post as escuelaEs } from './es/cuentos-superar-miedo-escuela-ansiedad-escolar.ts'
 import { post as conflictosEs } from './es/cuentos-resolver-conflictos-hermanos.ts'
+import { post as soledadEs } from './es/cuentos-vencer-soledad-inclusión-infantil.ts'
 
 // English posts
 import { post as howToTellEn } from './en/how-to-tell-stories-to-children.ts'
@@ -35,6 +36,7 @@ import { post as autonomiaEn } from './en/stories-foster-autonomy-self-confidenc
 import { post as rutinaEn } from './en/childhood-reading-routine-practical-guide.ts'
 import { post as escuelaEn } from './en/stories-overcome-school-anxiety-fear.ts'
 import { post as conflictosEn } from './en/stories-resolve-sibling-conflicts.ts'
+import { post as soledadEn } from './en/stories-overcome-loneliness-social-inclusion-children.ts'
 
-export const postsEs = [comoContarEs, beneficiosEs, miiedosEs, edadesEs, dormirEs, creatividadEs, valoresEs, concentracionEs, frustracionEs, miedoFallarEs, autoestimaEs, identidadEs, pacienciaEs, autonomiaEs, rutinaEs, escuelaEs, conflictosEs]
-export const postsEn = [howToTellEn, benefitsEn, fearsEn, ageGuideEn, sleepEn, creativityEn, valuesEn, concentrationEn, frustrationEn, fearFailureEn, selfEsteemEn, identidadEn, pacienciaEn, autonomiaEn, rutinaEn, escuelaEn, conflictosEn]
+export const postsEs = [comoContarEs, beneficiosEs, miiedosEs, edadesEs, dormirEs, creatividadEs, valoresEs, concentracionEs, frustracionEs, miedoFallarEs, autoestimaEs, identidadEs, pacienciaEs, autonomiaEs, rutinaEs, escuelaEs, conflictosEs, soledadEs]
+export const postsEn = [howToTellEn, benefitsEn, fearsEn, ageGuideEn, sleepEn, creativityEn, valuesEn, concentrationEn, frustrationEn, fearFailureEn, selfEsteemEn, identidadEn, pacienciaEn, autonomiaEn, rutinaEn, escuelaEn, conflictosEn, soledadEn]
