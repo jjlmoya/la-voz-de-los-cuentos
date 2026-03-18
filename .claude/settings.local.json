@@ -32,7 +32,8 @@
       "Bash(npm run test:bilingual:*)",
       "Bash(npm run:*)",
       "Bash(python3:*)",
-      "Bash(echo:*)"
+      "Bash(echo:*)",
+      "Bash(npm test:*)"
     ],
     "deny": [],
     "ask": [],
