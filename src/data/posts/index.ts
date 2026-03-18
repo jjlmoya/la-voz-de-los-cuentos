@@ -21,6 +21,7 @@ import { post as rechazaLeerEs } from './es/nino-rechaza-leer-transformar-aversi
 import { post as rabiaEs } from './es/como-manejar-rabia-ninos.ts'
 import { post as pesadillasEs } from './es/pesadillas-infantiles-cuentos-miedo-nocturno.ts'
 import { post as timidezEs } from './es/cuentos-ninos-timidos-confianza-social.ts'
+import { post as celosEs } from './es/celos-hermanos-rivalidad-infantil.ts'
 
 // English posts
 import { post as howToTellEn } from './en/how-to-tell-stories-to-children.ts'
@@ -45,6 +46,7 @@ import { post as rechazaLeerEn } from './en/child-refuses-reading-transform-aver
 import { post as rabiaEn } from './en/how-to-manage-child-anger-tantrums.ts'
 import { post as pesadillasEn } from './en/child-nightmares-stories-overcome-sleep-fears.ts'
 import { post as timidezEn } from './en/stories-shy-children-build-social-confidence.ts'
+import { post as celosEn } from './en/sibling-jealousy-rivalry-stories.ts'
 
-export const postsEs = [comoContarEs, beneficiosEs, miiedosEs, edadesEs, dormirEs, creatividadEs, valoresEs, concentracionEs, frustracionEs, miedoFallarEs, autoestimaEs, identidadEs, pacienciaEs, autonomiaEs, rutinaEs, escuelaEs, conflictosEs, soledadEs, rechazaLeerEs, rabiaEs, pesadillasEs, timidezEs]
-export const postsEn = [howToTellEn, benefitsEn, fearsEn, ageGuideEn, sleepEn, creativityEn, valuesEn, concentrationEn, frustrationEn, fearFailureEn, selfEsteemEn, identidadEn, pacienciaEn, autonomiaEn, rutinaEn, escuelaEn, conflictosEn, soledadEn, rechazaLeerEn, rabiaEn, pesadillasEn, timidezEn]
+export const postsEs = [comoContarEs, beneficiosEs, miiedosEs, edadesEs, dormirEs, creatividadEs, valoresEs, concentracionEs, frustracionEs, miedoFallarEs, autoestimaEs, identidadEs, pacienciaEs, autonomiaEs, rutinaEs, escuelaEs, conflictosEs, soledadEs, rechazaLeerEs, rabiaEs, pesadillasEs, timidezEs, celosEs]
+export const postsEn = [howToTellEn, benefitsEn, fearsEn, ageGuideEn, sleepEn, creativityEn, valuesEn, concentrationEn, frustrationEn, fearFailureEn, selfEsteemEn, identidadEn, pacienciaEn, autonomiaEn, rutinaEn, escuelaEn, conflictosEn, soledadEn, rechazaLeerEn, rabiaEn, pesadillasEn, timidezEn, celosEn]
