@@ -15,6 +15,7 @@ import { post as pacienciaEs } from './es/cuentos-entrenar-paciencia-perseveranc
 import { post as autonomiaEs } from './es/cuentos-fomentar-autonomia-confianza-ninos.ts'
 import { post as rutinaEs } from './es/rutina-lectura-infantil-guia-practica.ts'
 import { post as escuelaEs } from './es/cuentos-superar-miedo-escuela-ansiedad-escolar.ts'
+import { post as conflictosEs } from './es/cuentos-resolver-conflictos-hermanos.ts'
 
 // English posts
 import { post as howToTellEn } from './en/how-to-tell-stories-to-children.ts'
@@ -33,6 +34,7 @@ import { post as pacienciaEn } from './en/stories-teach-patience-perseverance-ch
 import { post as autonomiaEn } from './en/stories-foster-autonomy-self-confidence-children.ts'
 import { post as rutinaEn } from './en/childhood-reading-routine-practical-guide.ts'
 import { post as escuelaEn } from './en/stories-overcome-school-anxiety-fear.ts'
+import { post as conflictosEn } from './en/stories-resolve-sibling-conflicts.ts'
 
-export const postsEs = [comoContarEs, beneficiosEs, miiedosEs, edadesEs, dormirEs, creatividadEs, valoresEs, concentracionEs, frustracionEs, miedoFallarEs, autoestimaEs, identidadEs, pacienciaEs, autonomiaEs, rutinaEs, escuelaEs]
-export const postsEn = [howToTellEn, benefitsEn, fearsEn, ageGuideEn, sleepEn, creativityEn, valuesEn, concentrationEn, frustrationEn, fearFailureEn, selfEsteemEn, identidadEn, pacienciaEn, autonomiaEn, rutinaEn, escuelaEn]
+export const postsEs = [comoContarEs, beneficiosEs, miiedosEs, edadesEs, dormirEs, creatividadEs, valoresEs, concentracionEs, frustracionEs, miedoFallarEs, autoestimaEs, identidadEs, pacienciaEs, autonomiaEs, rutinaEs, escuelaEs, conflictosEs]
+export const postsEn = [howToTellEn, benefitsEn, fearsEn, ageGuideEn, sleepEn, creativityEn, valuesEn, concentrationEn, frustrationEn, fearFailureEn, selfEsteemEn, identidadEn, pacienciaEn, autonomiaEn, rutinaEn, escuelaEn, conflictosEn]
