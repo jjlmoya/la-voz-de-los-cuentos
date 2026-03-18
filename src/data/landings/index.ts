@@ -18,6 +18,11 @@ import { landing as cuentosParaEnsenarResponsabilidadANinosEs } from './es/cuent
 import { landing as cuentosSobreLaAmistadParaNinosEs } from './es/cuentos-sobre-la-amistad-para-ninos'
 import { landing as cuentosSobreLaNaturalezaParaNinosEs } from './es/cuentos-sobre-la-naturaleza-para-ninos'
 import { landing as cuentosSobreLaCuriosidadYElDescubrimientoParaNinosEs } from './es/cuentos-sobre-la-curiosidad-y-el-descubrimiento-para-ninos'
+import { landing as cuentosParaSuperarMiedosInfantilesEs } from './es/cuentos-para-superar-miedos-infantiles'
+import { landing as cuentosSobreTransformacionYCambioEs } from './es/cuentos-sobre-transformacion-y-cambio'
+import { landing as cuentosParaEstimularLaCreatividadInfantilEs } from './es/cuentos-para-estimular-la-creatividad-infantil'
+import { landing as cuentosDeAventuraYExploracionEs } from './es/cuentos-de-aventura-y-exploracion'
+import { landing as cuentosParaAprenderYDescubrirEs } from './es/cuentos-para-aprender-y-descubrir'
 
 
 // English Landings
@@ -40,6 +45,11 @@ import { landing as storiesToTeachResponsibilityToChildrenEn } from './en/storie
 import { landing as friendshipStoriesForKidsEn } from './en/friendship-stories-for-kids'
 import { landing as natureStoriesForKidsEn } from './en/nature-stories-for-kids'
 import { landing as storiesAboutCuriosityAndDiscoveryForKidsEn } from './en/stories-about-curiosity-and-discovery-for-kids'
+import { landing as storiesToOvercomChildhoodFearsEn } from './en/stories-to-overcome-childhood-fears'
+import { landing as storiesAboutTransformationAndChangeEn } from './en/stories-about-transformation-and-change'
+import { landing as storiesToBoostChildrenCreativityEn } from './en/stories-to-boost-children-creativity'
+import { landing as adventureAndExplorationStoriesEn } from './en/adventure-and-exploration-stories'
+import { landing as storiesToLearnAndDiscoverEn } from './en/stories-to-learn-and-discover'
 
 
 export const landingsEs = [
@@ -62,6 +72,11 @@ export const landingsEs = [
   cuentosSobreLaAmistadParaNinosEs,
   cuentosSobreLaNaturalezaParaNinosEs,
   cuentosSobreLaCuriosidadYElDescubrimientoParaNinosEs,
+  cuentosParaSuperarMiedosInfantilesEs,
+  cuentosSobreTransformacionYCambioEs,
+  cuentosParaEstimularLaCreatividadInfantilEs,
+  cuentosDeAventuraYExploracionEs,
+  cuentosParaAprenderYDescubrirEs,
 
 ]
 
@@ -85,5 +100,10 @@ export const landingsEn = [
   friendshipStoriesForKidsEn,
   natureStoriesForKidsEn,
   storiesAboutCuriosityAndDiscoveryForKidsEn,
+  storiesToOvercomChildhoodFearsEn,
+  storiesAboutTransformationAndChangeEn,
+  storiesToBoostChildrenCreativityEn,
+  adventureAndExplorationStoriesEn,
+  storiesToLearnAndDiscoverEn,
 
 ]
