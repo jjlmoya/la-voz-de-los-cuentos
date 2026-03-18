@@ -31,7 +31,8 @@
       "Bash(npm run validate:posts:*)",
       "Bash(npm run test:bilingual:*)",
       "Bash(npm run:*)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(echo:*)"
     ],
     "deny": [],
     "ask": [],
