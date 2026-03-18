@@ -24,6 +24,7 @@ import { post as timidezEs } from './es/cuentos-ninos-timidos-confianza-social.t
 import { post as celosEs } from './es/celos-hermanos-rivalidad-infantil.ts'
 import { post as rechazoEsEs } from './es/nino-rechaza-escuela-cada-manana.ts'
 import { post as bullyingEs } from './es/bullying-acoso-escolar-cuentos-ayuda.ts'
+import { post as perfeccionismoEs } from './es/perfeccionismo-infantil-cuentos-alivio.ts'
 
 // English posts
 import { post as howToTellEn } from './en/how-to-tell-stories-to-children.ts'
@@ -51,6 +52,7 @@ import { post as timidezEn } from './en/stories-shy-children-build-social-confid
 import { post as celosEn } from './en/sibling-jealousy-rivalry-stories.ts'
 import { post as rechazoEn } from './en/child-refuses-school-every-morning.ts'
 import { post as bullyingEn } from './en/bullying-school-harassment-stories-help.ts'
+import { post as perfeccionismoEn } from './en/childhood-perfectionism-stories-relief.ts'
 
-export const postsEs = [comoContarEs, beneficiosEs, miiedosEs, edadesEs, dormirEs, creatividadEs, valoresEs, concentracionEs, frustracionEs, miedoFallarEs, autoestimaEs, identidadEs, pacienciaEs, autonomiaEs, rutinaEs, escuelaEs, conflictosEs, soledadEs, rechazaLeerEs, rabiaEs, pesadillasEs, timidezEs, celosEs, rechazoEsEs, bullyingEs]
-export const postsEn = [howToTellEn, benefitsEn, fearsEn, ageGuideEn, sleepEn, creativityEn, valuesEn, concentrationEn, frustrationEn, fearFailureEn, selfEsteemEn, identidadEn, pacienciaEn, autonomiaEn, rutinaEn, escuelaEn, conflictosEn, soledadEn, rechazaLeerEn, rabiaEn, pesadillasEn, timidezEn, celosEn, rechazoEn, bullyingEn]
+export const postsEs = [comoContarEs, beneficiosEs, miiedosEs, edadesEs, dormirEs, creatividadEs, valoresEs, concentracionEs, frustracionEs, miedoFallarEs, autoestimaEs, identidadEs, pacienciaEs, autonomiaEs, rutinaEs, escuelaEs, conflictosEs, soledadEs, rechazaLeerEs, rabiaEs, pesadillasEs, timidezEs, celosEs, rechazoEsEs, bullyingEs, perfeccionismoEs]
+export const postsEn = [howToTellEn, benefitsEn, fearsEn, ageGuideEn, sleepEn, creativityEn, valuesEn, concentrationEn, frustrationEn, fearFailureEn, selfEsteemEn, identidadEn, pacienciaEn, autonomiaEn, rutinaEn, escuelaEn, conflictosEn, soledadEn, rechazaLeerEn, rabiaEn, pesadillasEn, timidezEn, celosEn, rechazoEn, bullyingEn, perfeccionismoEn]
