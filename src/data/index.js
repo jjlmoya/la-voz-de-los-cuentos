@@ -4,8 +4,8 @@ import sagasEn from './en/sagas.json' with { type: 'json' }
 import charactersEn from './en/characters.json' with { type: 'json' }
 import newslettersEn from './en/newsletters.json' with { type: 'json' }
 import songsEn from './en/songs.json' with { type: 'json' }
-import { postsEn, postsEs } from './posts/index'
-import { landingsEs, landingsEn } from './landings/index'
+import { postsEn, postsEs } from './posts/index.js'
+import { landingsEs, landingsEn } from './landings/index.js'
 
 import storiesEs from './es/stories.json' with { type: 'json' }
 import sagasEs from './es/sagas.json' with { type: 'json' }
@@ -135,3 +135,4 @@ export const enrichWithRelations = (item, type, language = lang) => {
 
   return enriched
 }
+
