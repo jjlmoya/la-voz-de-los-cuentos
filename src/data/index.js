@@ -4,8 +4,8 @@ import sagasEn from './en/sagas.json' with { type: 'json' }
 import charactersEn from './en/characters.json' with { type: 'json' }
 import newslettersEn from './en/newsletters.json' with { type: 'json' }
 import songsEn from './en/songs.json' with { type: 'json' }
-import { postsEn, postsEs } from './posts/index.ts'
-import { landingsEs, landingsEn } from './landings/index.ts'
+import { postsEn, postsEs } from './posts/index'
+import { landingsEs, landingsEn } from './landings/index'
 
 import storiesEs from './es/stories.json' with { type: 'json' }
 import sagasEs from './es/sagas.json' with { type: 'json' }
